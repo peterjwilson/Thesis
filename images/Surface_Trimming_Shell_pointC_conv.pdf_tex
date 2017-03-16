@@ -1,0 +1,72 @@
+%% Creator: Inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Surface_Trimming_Shell_pointC_conv.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{209.6bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.86259542)%
+    \put(0,0){\includegraphics[width=\unitlength]{Surface_Trimming_Shell_pointC_conv.pdf}}%
+    \put(0.18206107,0.80877863){\makebox(0,0)[rb]{\smash{-3.00}}}%
+    \put(0.18206107,0.69656489){\makebox(0,0)[rb]{\smash{-2.50}}}%
+    \put(0.18206107,0.58435115){\makebox(0,0)[rb]{\smash{-2.00}}}%
+    \put(0.18206107,0.4721374){\makebox(0,0)[rb]{\smash{-1.50}}}%
+    \put(0.18206107,0.35954198){\makebox(0,0)[rb]{\smash{-1.00}}}%
+    \put(0.18206107,0.24732824){\makebox(0,0)[rb]{\smash{-0.50}}}%
+    \put(0.18206107,0.1351145){\makebox(0,0)[rb]{\smash{0.00}}}%
+    \put(0.20305344,0.08931298){\makebox(0,0)[b]{\smash{$ 10^1$}}}%
+    \put(0.38664122,0.08931298){\makebox(0,0)[b]{\smash{$ 10^2$}}}%
+    \put(0.56984733,0.08931298){\makebox(0,0)[b]{\smash{$ 10^3$}}}%
+    \put(0.75343511,0.08931298){\makebox(0,0)[b]{\smash{$ 10^4$}}}%
+    \put(0.93664122,0.08931298){\makebox(0,0)[b]{\smash{$ 10^5$}}}%
+    \put(0.04465649,0.48320611){\rotatebox{90}{\makebox(0,0)[b]{\smash{z-displacement}}}}%
+    \put(0.56984733,0.02061069){\makebox(0,0)[b]{\smash{Number of degrees of freedom}}}%
+    \put(0.61984733,0.31832061){\makebox(0,0)[lb]{\smash{  p=2}}}%
+    \put(0.61984733,0.27251908){\makebox(0,0)[lb]{\smash{  p=3}}}%
+    \put(0.61984733,0.22671756){\makebox(0,0)[lb]{\smash{  p=5}}}%
+    \put(0.61984733,0.18091603){\makebox(0,0)[lb]{\smash{  ANSYS}}}%
+  \end{picture}%
+\endgroup%

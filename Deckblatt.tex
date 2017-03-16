@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUM-Vorlage: Deckblatt für Wissenschaftliche Arbeiten
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Rechteinhaber:
+%     Technische Universität München
+%     https://www.tum.de
+% 
+% Gestaltung:
+%     ediundsepp Gestaltungsgesellschaft, München
+%     http://www.ediundsepp.de
+% 
+% Technische Umsetzung:
+%     eWorks GmbH, Frankfurt am Main
+%     http://www.eworks.de
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{./Ressourcen/Praeambel.tex} % !!! NICHT ENTFERNEN ODER ÄNDERN !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Die Inhalte der folgenden Befehle müssen vollständig und korrekt durch die
+% tatsächlichen Informationen ersetzt werden:
+%TOEDIT
+\newcommand{\Titel}{%
+    Titel der Arbeit}
+\newcommand{\Untertitel}{%
+    Untertitel}
+\newcommand{\Grad}{%
+    B.Sc./M.Sc. }
+
+\newcommand{\BetreutVonPerson}{%
+	Mitarbeiter \\
+    Prof. Dr.-Ing. Kai-Uwe Bletzinger}
+\newcommand{\EingereichtVon}{%
+    Martin Mustermann\\
+    Musterweg 20\\
+    80999 München\\
+    +49 89 123 456 89}
+\newcommand{\EingereichtAmDatum}{%
+    Datum}
+\newcommand{\Ort}{%
+    Ort}
+\newcommand{\Datum}{%
+    Datum}
+
+
+%don't change the following
+\ifx\lan\deutsch 
+\newcommand{\Fakultaet}{%
+	Ingenieurfakultät Bau Geo Umwelt}
+\else
+\newcommand{\Fakultaet}{%
+	Department of Civil, Geo and Environmental Engineering}
+\fi
+
+\ifx\lan\deutsch 
+\newcommand{\BetreutVonLehrstuhl}{%
+	Lehrstuhl für Statik}
+\else
+\newcommand{\BetreutVonLehrstuhl}{%
+	Chair of Structural Analysis}
+\fi
+
+\ifx\lan\deutsch 
+\newcommand{\cover}{%
+	cover_dt}
+\else
+\newcommand{\cover}{%
+	cover}
+\fi
+
+\ifx\lan\deutsch 
+\newcommand{\ErklaerungUeberschrift}{%
+	Anhang I}
+\else
+\newcommand{\ErklaerungUeberschrift}{%
+	Appendix I}
+\fi
+
+\ifx\lan\deutsch 
+\newcommand{\Unterschrift}{%
+	Unterschrift}
+\else
+\newcommand{\Unterschrift}{%
+	Signature}
+\fi
+
+\ifx\lan\deutsch 
+\usepackage[hidelinks,pdfusetitle,pdfkeywords=\schluesselwoerter,pdfsubject=\Thema]{hyperref}
+\else
+\usepackage[hidelinks,pdfusetitle,pdfkeywords=\keywords,pdfsubject=\Thema]{hyperref}
+\fi
+
+%\usepackage[hidelinks,pdftex,
+%pdfauthor=\author,
+%pdftitle=\title,
+%pdfsubject=\Thema,
+%pdfkeywords=\keywords,
+%pdfproducer={Latex with hyperref},
+%pdfcreator={pdflatex}]{hyperref}
+%\makeatletter
+%\hypersetup{pdftitle={\@title},pdfauthor={\@author}}
+%\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{./Ressourcen/Dokument.tex} % !!! NICHT ENTFERNEN ODER ÄNDERN !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

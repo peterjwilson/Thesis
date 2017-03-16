@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUM-Vorlage: Wissenschaftliche Arbeit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Rechteinhaber:
+%     Technische Universität München
+%     https://www.tum.de
+% 
+% Gestaltung:
+%     ediundsepp Gestaltungsgesellschaft, München
+%     http://www.ediundsepp.de
+% 
+% Technische Umsetzung:
+%     eWorks GmbH, Frankfurt am Main
+%     http://www.eworks.de
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TOEDIT
+%choose one of the following languages and comment the other. You might compile twice when changing the language
+%\def\lan{deutsch}		
+\def\lan{english}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Ressourcen/Praeambel.tex} % !!! DO NOT REMOVE !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%TOEDIT
+%Please rename this file according to your thesis 
+% BA_LastName_Title  for a bachelor thesis
+% MA_LastName_Title  for a master thesis
+\title{Thema der Arbeit}
+\author{Name}
+\date{Datum}
+\newcommand{\keywords}{%
+	FEM; Optimization; Isogeometric Analysis}
+\newcommand{\schluesselwoerter}{%
+	FEM; Optimierung; Isogeometrische Analyse}
+
+\renewcommand{\Thema}{%
+	Thema der Arbeit (optional)}
+
+%TOEDIT further declarations in Deckblatt.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Ressourcen/Anfang.tex} % !!! DO NOT REMOVE !!!
+\input{./Deckblatt.tex} % !!! DO NOT REMOVE !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% best results for vector graphics, e.g. with inkscape
+% width: 14.8cm or 7.3cm  or 4.8cm recommended for figures in separated rows
+\graphicspath{ {images/}}
+
+\begin{document}
+%TOEDIT you have to change the text in the corresponding .svg-file and save it as pdf. You can add a figure on the front page. Exmaples are provided in the computer room 
+\includepdf[pages={1}]{frontcover/\cover.pdf} % !!! DO NOT REMOVE !!!
+\input{./Ressourcen/Deckblatt_Text.tex} % !!! DO NOT REMOVE !!!
+\pagenumbering{gobble}
+\include{chapters/Abstract}
+\include{chapters/Kurzfassung}
+\include{chapters/Acknowledgements}	%optional
+\newpage
+\pagenumbering{Roman}
+\tableofcontents % Inhaltsverzeichnis
+
+\mainmatter 
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+%TOEDIT create different files for your chapter an include them here in the main file
+\input{./chapters/Chapter_TUM.tex}
+\input{./chapters/Chapter_1}
+
+\onehalfspacing
+
+\input{./Ressourcen/Tabellenvarianten.tex}
+
+\input{./chapters/Conclusions}
+\appendix
+\include{chapters/Appendix}
+\backmatter
+\listoffigures % Abbildungsverzeichnis
+
+\ifx\lan\deutsch 
+\printacronyms[title={Abkürzungsverzeichnis}] % Abkürzungsverzeichnis
+\else
+\printacronyms[title={Index of Abbreviations}] % Abkürzungsverzeichnis
+\fi
+
+\listoftables % Tabellenverzeichnis
+
+\bibliographystyle{unsrt} % Literaturverzeichnis
+%\bibliographystyle{alpha} % Literaturverzeichnis
+\bibliography{bib}
+
+\input{./chapters/Declaration.tex}
+\end{document}

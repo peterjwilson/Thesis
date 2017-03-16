@@ -1,0 +1,14 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% automatic svg-to-pdf creation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Open texmaker ->option ->configure
+% Replace in PdfLaTex 
+  pdflatex -synctex=1 -interaction=nonstopmode %.tex
+% by
+  pdflatex -synctex=1 -interaction=nonstopmode -shell-escape %.tex
+  
+  (see also figure 1)
+  
+% add inkscape-folder to enviroment variable PATH
+% restart your computer

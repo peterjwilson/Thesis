@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                              %%%%%%
+%%%%  Author: Name des Autors                     %%%%%%
+%%%%                                              %%%%%%
+%%%%  Beschreibung:                               %%%%%%
+%%%%                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%fref generates automatically the respective abreviation/word in the text for the reference. You just have to define a label starting with the respective keyword.
+%english: chap, sec, fig, eq, app
+%deutsch: chap/kap, abs, abb, gl, anh
+%see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
+
+\chapter{Chapter}
+\label{chap:chapter_1}
+
+\section{Section}
+\label{sec:section_1} %\label{abs:Abschnitt_2}
+
+Zitat aus \cite{Piegl.1997}. \Fref{chap:chapter_1}  besteht aus \fref{sec:section_1} und \fref{abs:section_2} Kauten Gas angebende ihr habe Faberg? geh Ottern Dur Eis Diktator. Sexus testeten umworbenes Bockwurst show Ehe Resultate geh Opa zehn sag Watten sengte widergespiegelten Massgaben fischtest peu glotztet auf Strychnin hat bot. Heu Abt benennt. Co gem Paare tov C.Aber teilt Dollars As solider. Kir gescheitert EDV Birnen vernimmst. Bon Tonspur zeitig wage festlicheres. Abt Bauboom niet Cannes gen \cite{Piegl.1997}.
+
+\section{Section}
+\label{abs:section_2}% \label{abs:Abschnitt_2}
+
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.\par
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, 
+
+The B-Spline basis functions are defined by the knot vector $\mathbf{\Xi}$ and the polynomial degree $p$. They can be computed by the Cox-deBoor recursion formula. It starts with $p=0$: 
+
+\begin{equation}
+			N_{i,0}(\xi)=\begin{cases}
+		  1,  & \xi_i \leqslant \xi < \xi_{i+1}\\
+		  0, & otherwise
+		\end{cases}
+	\label{eq:CoxPnull}
+\end{equation}
+
+For $p\geqslant 1$ it is
+
+\begin{equation}
+			N_{i,p}(\xi)=\frac{\xi-\xi_i}{\xi_{i+p}-\xi_i} N_{i,p-1}(\xi)+\frac{\xi_{i+p+1}-\xi}{\xi_{i+p+1}-\xi_{i+1}}N_{i+1,p-1}(\xi)\\
+	\label{eq:CoxPrest}
+\end{equation}
+
+\Fref{eq:CoxPrest} ist korrekt und \fref{eq:CoxPnull} ist auch korrekt.
+The basis functions are $C^{\infty}$ continuous inside a knot span and $C^{p-1}$ continuous at single knots. At knots with multiplicity k the continuity of the basis functions is reduced to $C^{p-k}$. The following list contains some important properties of the B-Spline basis functions: 
+
+
+\begin{itemize}
+\item Local support, i.e. a basis function  \begin{math} N_{i,p}(\xi) \end{math} is non-zero only in the interval \begin{math} [\xi_{i},\xi_{i+p+1}] \end{math}.
+\item Partition of unity, i.e. \begin{math} \sum_{i=1}^n N_{i,p}(\xi)=1\end{math}.
+\item Non-negativity, i.e. \begin{math} N_{i,p}(\xi) \geqslant 0 \end{math}.
+\item Linear independence, i.e. \begin{math} \sum_{i=1}^n \alpha_i N_{i,p}(\xi)=0~\Leftrightarrow~\alpha_i=0,~i=1,2,...,n \end{math}
+\end{itemize}
+
+consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il. Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+
+\begin{figure}[ht]
+  \centering
+  \begin{footnotesize}
+  \includesvg{images/Surface_Trimming_Shell_1_1}
+  \caption[Bildbeschreibung kurz 1]{deformed geometry}
+  \label{fig:Bild3}
+  \end{footnotesize}
+\end{figure} 
+
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+
+\begin{align}
+	\phi(x_{1},x_{2})+u_{3}\big(x_{1},x_{2},\phi(x_{1},x_{2})\big)\le \psi\Big(x_{1}+u_{1}\big(x_{1},x_{2},\phi(x_{1},x_{2})\big),x_{2}+u_{2}\big(x_{1},x_{2},\phi(x_{1},x_{2})\big)\Big),
+\end{align}
+
+where $\phi$ is the parametrization of the contact surface $\Gamma_c \subset \Gamma$, $\lbrace u_i \rbrace_{i=1,2,3}:\Omega \rightarrow \mathbb{R}^3$ is the displacement f\mbox{}ield and $\psi$ is the parametrization of the surface $\mathbb{S}$ of the rigid foundation $\mathfrak{F}$. Completion of this condition with the state of stresses in the contact surface def\mbox{}ine a set of non-linear equations and inequalities:
+
+\begin{equation}
+	T_{n}(\mathbf{y}) \le 0 \quad \text{and} \quad T_t(\mathbf{y})=0
+	\label{eq:gleichung_1}
+\end{equation}
+
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+
+\begin{figure}[ht]
+  \begin{footnotesize}
+  \subfigure[xx Number of degrees of freedom]{\label{fig:sehll_bending_PointA_nlin_conv}\includesvg{images/Surface_Trimming_Shell_pointC_conv}}
+  \subfigure[difference B ungetrimmt getrimmt]{\label{fig:shell_bending_PointB_nlin_conv}\includesvg{images/Surface_Trimming_Shell_pointC_conv2}}
+    \caption{Relative difference between untrimmed and trimmed}
+  \label{fig:conv_shell2_bending_PointAandB}
+  \end{footnotesize}
+\end{figure} 
+
+Es roto munio veneficus admonitio. Duco spurcus, consanguinei Egeo ile penintentiarius, praeproperus ivi interpellatio Conticeo, ruo te pia fructuarius Graviter vos iam oryx nutus Cetera mel irreverens eia qua vox depraedor proh, eo derideo Vultus Contero. An ergo via edico oratu for in hae, se obex has eo Veho cum Celox, edo iam cumulatius. Ars Vobis probus an tumeo far Aestimo his internecio il.
+
+\begin{figure}[ht]
+  \centering
+  \begin{footnotesize}
+\subfigure[Control points parameter space]{\label{fig:space_overview_1}\includesvg{images/SpacesOverview_1_1_1}}
+\caption{\footnotesize{$\hat{\xi}_{end}$} Control points parameter space \textbf{Gauss space} $\mathbf{Gauss~space}$}
+  \label{fig:space_overview}
+  \end{footnotesize}
+\end{figure} 

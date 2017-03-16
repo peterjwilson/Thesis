@@ -1,0 +1,49 @@
+%\documentclass[varwidth=\maxdimen]{standalone}
+%\documentclass[paper=14.8cm:8.5cm,pagesize,20pt]{scrbook}
+%\documentclass[paper=15cm:21cm,pagesize,10pt]{scrbook}
+\documentclass[paper=7.4cm:6.4cm,pagesize,10pt]{scrbook}
+%\documentclass[paper=7.4cm:6.5cm,pagesize,20pt]{scrbook}
+\usepackage[vmargin={0mm,0mm},hmargin={0mm,0mm}]{geometry}
+
+
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{floatrow}
+\floatsetup[figure]{font=small}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage[ansinew]{inputenc}  %for Space Overview
+% Get support for floating figures
+\usepackage{graphicx}
+\usepackage{import}
+% Get support for coloring parts of the text
+\usepackage{xcolor}
+
+\graphicspath{{svg/}}
+
+\newcommand{\executeiffilenewer}[3]{%
+\ifnum\pdfstrcmp{\pdffilemoddate{#1}}%
+{\pdffilemoddate{#2}}>0%
+{\immediate\write18{#3}}\fi%
+}
+
+\newcommand{\includesvg}[1]{%
+\executeiffilenewer{#1.svg}{#1.pdf}%
+{inkscape -z -C --file=#1.svg %
+--export-pdf=#1.pdf --export-latex}%
+\input{#1.pdf_tex}%
+}
+
+\begin{document}
+%% ++++++++++++++++++++++
+%%    the one figure 
+%% ++++++++++++++++++++++
+\begin{figure}[H]
+  \centering
+  %\begin{footnotesize}
+  \includesvg{Surface_Trimming_Shell_pointC_conv}
+  %\end{footnotesize}
+\end{figure}
+\end{document}

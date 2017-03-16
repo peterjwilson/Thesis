@@ -1,0 +1,336 @@
+%
+% Master thesis
+% ===========================================================================
+%
+
+%
+% A. DOCUMENTCLASS
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Define the document class.
+%     We use the KOMA-Script class 'scrbook' for a book.
+%     Define the Layouts
+%
+\documentclass[%
+    pdftex,%              We use PDFTex because we will create a PDF.
+    a4paper,%             We use A4 paper.
+    oneside,%             Single-sided printing.
+    11pt,%                Big font, more suitable for A4.
+    %halfparskip,%        Half line spacing between paragraphs.
+    headsepline,%         Line after the header.
+    bibtotocnumbered%     Numbered insert the bibliography in the table of contents.
+    %idxtotoc%            Adding an index into the table of contents.
+]{scrbook}
+
+%
+%  2. Set the character encoding of the document and the character set.
+%     We use 'latin1' (ISO-8859-1) for the document,
+%     and the 'T1' coding for the font.
+%
+%\usepackage[latin1]{inputenc} %for unixoide and also Windows systems
+\usepackage[ansinew]{inputenc} %for windows
+\usepackage[T1]{fontenc}
+
+%
+%  3. Load the package for the index creation.
+%
+\usepackage{makeidx}
+
+%
+%  4. Load the package for localization in German.
+%     With 'ngerman' we use new German spelling.
+%
+\usepackage[english]{babel}
+
+
+%
+%  5. Load package for quotation marks.
+%     We set the style to 'swiss', and so use the Swiss quotation marks.
+%
+\usepackage[style=swiss]{csquotes}
+
+
+%
+%  6. Package for advanced table properties.
+%
+\usepackage{array}
+
+%
+%  7. Package to be able to embed graphics in the document.
+%     Im the PDF is possible to embed GIF, PNG, und PDF graphics.
+%
+\usepackage[pdftex]{graphicx}
+
+%
+%  8. Packages for mathematical typesetting.
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+
+%
+%  9. Package to rotate parts of the text.
+%
+\usepackage{rotating}
+
+%
+% 10. Package for colors at different locations.
+%     We define additional named colors.
+%
+\usepackage{color}
+
+%
+% 11. Package for special PDF features.
+%
+\usepackage[%
+    pdftitle={xxx},%                         Title of the PDF document.
+    pdfauthor={Name des Autors},%            Autor of the PDF document.
+    pdfsubject={Inhalt},%                    Subject of the PDF document.
+    pdfcreator={Texmaker, LaTeX with hyperref and KOMA-Script},% Producers of the PDF document.
+    pdfkeywords={Keywords,xxx,sdadf,},%      Keywords for the PDF. (For searching algorithms)
+    pdfpagemode=UseOutlines,%                Show table of contents when opening
+    pdfdisplaydoctitle=true,%                Show document title instead of file name.
+    pdflang=en%                              Language of the document.
+]{hyperref}
+
+%
+% 12. Using the option 'savemem' we delay the loading of the
+%     different programming languages ??at a later date.
+%
+\usepackage[savemem]{listings}
+
+
+% 13. Use of the font 'Latin Modern Family'.
+%     Use this package if you compile DML itself.
+%
+
+\usepackage{lmodern}
+
+%
+% 14. Loading of Typewriter font LuxiMono.
+%
+\usepackage[scaled=.85]{luximono}
+
+%
+% 15. Layout
+%
+% The header and footer layout fit better for the document class KOMA-Script (scrbook) as the Pake fancyhdr, otherwise fairly equivalent
+\usepackage{scrpage2}   
+\usepackage[a4paper,vmargin={27mm,23mm},hmargin={25mm,25mm}]{geometry}
+
+%
+% 15. Compact list
+%
+\usepackage{paralist}         
+
+
+% 
+% B. SETTINGS
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Define your own named colors.
+%     For the use later in the document, we define individual named colors.
+%
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+\definecolor{ListingBackground}{rgb}{0.85,0.85,0.85}
+
+%
+%  2. KOMA-Script Option, Line break in captions.
+%
+\setcapindent{1em}
+
+%
+%  3. The style of the header and footer.
+%     We activate with 'headings' ongoing title page.
+%
+%\pagestyle{headings}
+
+%
+%  4. The style of the headings on normal font.
+%     We use for the headers the same font as the text.
+%
+\setkomafont{sectioning}{\normalfont\bfseries}       % Title with normal font
+\setkomafont{captionlabel}{\normalfont\bfseries}     % Bold labels 
+\setkomafont{pageheadfoot}{\normalfont\itshape}      % Italic page title
+\setkomafont{descriptionlabel}{\normalfont\bfseries} % Bold description title
+
+%
+%  5. Color settings for the links in the PDF document.
+%
+\hypersetup{%
+    colorlinks=true,%        Enabling colored links in the document (no frames)
+    linkcolor=LinkColor,%    Specify the color.
+    citecolor=black,%        Specify the color.
+    filecolor=LinkColor,%    Specify the color.
+    menucolor=LinkColor,%    Specify the color.
+    urlcolor=LinkColor,%     Color from URL's in the document.
+    linkcolor=black,%        Color of internal links
+    bookmarksnumbered=true%  Show heading numbering in PDF contents.
+}
+
+%
+%  6. Settings for the 'listings' package.
+%
+\lstloadlanguages{TeX} %     TeX language loading, it is required for option 'savemem'
+\lstset{%
+    language=[LaTeX]TeX,     % The language of the source code is TeX
+    numbers=left,            % Row numbers on the left
+    stepnumber=1,            % Numbering of each line.
+    numbersep=5pt,           % 5pt distance for the source code
+    numberstyle=\tiny,       % Character size 'tiny' for the numbers.
+    breaklines=true,         % Wrap lines if necessary.
+    breakautoindent=true,    % After the line break row indent..
+    postbreak=\space,        % Break up at spaces.
+    tabsize=2,               % Tab size 2.
+    basicstyle=\ttfamily\footnotesize, % Non-proportional font, small for the source code.
+    showspaces=false,        % Does not show spaces.
+    showstringspaces=false,  % Do not show spaces also in strings ('').
+    extendedchars=true,      % Show all characters from the Latin1 font.
+    backgroundcolor=\color{ListingBackground}} % Background color of the source code.
+    
+%
+% Flowcharts
+%
+\usepackage{import}
+\usepackage{scrhack}
+\usepackage{floatrow}
+\floatsetup[figure]{font=normalsize}   %{font=small} 
+\usepackage{subfigure}                      % Several pictures next to each.
+%
+% Literature and other references
+%    
+
+% \usepackage{cite}              % Sorted and summarized citation numbers 
+% \usepackage{varioref}          % Improved references
+%\usepackage{natbib}             % You need for natdin.bst (references in the text by name and year)
+
+%\setcitestyle{square,aysep={}}  %Square brackets to quote
+
+\usepackage{longtable}             % Provides tables that exceed the page break (see List of Symbols)
+%
+
+%
+% Your own settings
+%    
+\usepackage{indentfirst}         % Indent first line after heading
+\parindent 0pt
+\parskip 3pt
+
+\usepackage{pdfpages}            % Inserting pdf pages
+
+\usepackage{exscale}             % Customizing sums and integral characters to the Font Size:
+
+% C. NEW MACROS AND SURROUNDINGS
+% ---------------------------------------------------------------------------
+
+
+%
+%  1. Setting for change list with a special bullet character.
+%
+\newenvironment{ListChanges}%
+    {\begin{list}{$\diamondsuit$}{}}%
+    {\end{list}}
+
+%
+%  2. Replacement for the \ LaTeX and \ TeX commands for correct representation.
+%     We use the 'Latin Modern Family' ('lm') as font, as this compared to 
+%     'Computer Modern' ('cm') also offer PostScript files, which leads to a more beautiful
+%     presentation in PDF.
+
+\newcommand{\DMLLaTeX}{{\fontfamily{lmr}\selectfont\LaTeX}}
+\newcommand{\DMLTeX}{{\fontfamily{lmr}\selectfont\TeX}}
+
+\def\AmS{$\mathcal{A}$\kern-.1667em\lower.5ex\hbox{$\mathcal{M}$}\kern-.125em$\mathcal{S}$}
+\def\AmSmath{\AmS{}math}
+
+%----------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% New- and Renew-Commands
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\renewcommand{\headfont}{\normalfont\sffamily}             % Kolumnentitel serifenlos
+%\renewcommand{\pnumfont}{\normalfont\sffamily\bfseries}    % Page numbers typewriter and in bold 
+\pagestyle{scrheadings}                                                                         
+\clearscrheadings                                           % To delete page number below
+\clearscrplain
+\ihead[]{\headmark}                                         % Columns title always on top inside
+\ohead[\pagemark]{\pagemark}                                % Page numbers always on top outside
+\lefoot[]{} 
+\rofoot[]{}                                                 % Delete page numbers in the footer
+
+\renewcommand{\bibname}{Literatur}                          % References to literature 
+\renewcommand{\figurename}{Bild}                            % Figure to image
+\renewcommand{\listfigurename}{Bildverzeichnis}
+
+\newcommand {\jkarray}[1]{\ensuremath{\underline{#1}}}     % so is a unique command
+\newcommand {\jkmatrix}[1]{\ensuremath{\underline{\underline{#1}}}} % so is a unique command
+\newcommand {\einheit}[1]{\ensuremath{\mathrm{\left[#1\right]}}} 
+
+\newcommand {\lived}[2]{($\ast$#1, $\dagger$#2)}  %
+
+% andere Schrift
+%\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{helvet}
+
+
+\def\TReg{\textsuperscript{\textregistered}}
+\def\TCop{\textsuperscript{\textcopyright}}
+\def\TTra{\textsuperscript{\texttrademark}}
+%
+% D. ACTIONS
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Create the index.
+%
+\makeindex
+
+%
+% E. HYPHENATION
+% ---------------------------------------------------------------------------
+%
+
+\hyphenation{De-zi-mal-trenn-zeichen In-stal-la-ti-ons-as-sis-tent}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%Style definition of listings, setting of parameters in different packages
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}              % Code application environment
+\usepackage{multicol}
+\usepackage[svgnames,table,hyperref]{xcolor}
+
+
+% svg figures
+\newcommand{\executeiffilenewer}[3]{%
+\ifnum\pdfstrcmp{\pdffilemoddate{#1}}%
+{\pdffilemoddate{#2}}>0%
+{\immediate\write18{#3}}\fi%
+}
+\newcommand{\includesvg}[1]{%
+\executeiffilenewer{#1.svg}{#1.pdf}%
+{inkscape -z -C --file=#1.svg %
+--export-pdf=#1.pdf --export-latex}%
+\input{#1.pdf_tex}%
+}
+
+\newcommand{\includegp}[1]{%
+%\immediate\write18{wgnuplot #1.gp}%
+\executeiffilenewer{#1.plt}{#1.eps}%
+{gnuplot #1.plt}%
+\ifpdf\executeiffilenewer{#1.eps}{#1.pdf}%
+{epstopdf #1.eps}\fi%
+\input{#1.tex}%
+}

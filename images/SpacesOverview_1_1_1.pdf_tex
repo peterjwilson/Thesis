@@ -1,0 +1,112 @@
+%% Creator: Inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'SpacesOverview_1_1_1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{425.19682617bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.40000007)%
+    \put(0,0){\includegraphics[width=\unitlength]{SpacesOverview_1_1_1.pdf}}%
+    \put(0.4210213,0.01277559){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-1}}}%
+    \put(0.51906083,0.01277559){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+1}}}%
+    \put(0.40693833,0.02687306){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-1}}}%
+    \put(0.4012939,0.12876547){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+1}}}%
+    \put(0.55321953,0.07288899){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\xi_G$}}}%
+    \put(0.46962102,0.15695788){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\eta_G$}}}%
+    \put(0.67939655,0.30958001){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\xi}$}}}%
+    \put(0.47818262,0.51380313){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\eta}$}}}%
+    \put(0.18493376,1.36576309){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{Geometry space}}}}%
+    \put(0.26590431,0.53407429){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{Subparameter spaces}}}}%
+    \put(0.29760579,0.30979913){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\xi}$}}}%
+    \put(0.09639275,0.51402229){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\eta}$}}}%
+    \put(0.4210311,0.18764767){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{Gauss space}}}}%
+    \put(0.05330496,0.48094417){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\eta}_{end}$}}}%
+    \put(0.05058471,0.31670332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\eta}_{start}$}}}%
+    \put(0.09378078,0.29325772){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\xi}_{start}$}}}%
+    \put(0.24900981,0.29441639){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\xi}_{end}$}}}%
+    \put(0.42989343,0.48189889){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\eta}_{end}$}}}%
+    \put(0.42989343,0.31389506){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\eta}_{start}$}}}%
+    \put(0.47888492,0.29530174){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\xi}_{start}$}}}%
+    \put(0.63956084,0.29646046){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hat{\xi}_{end}$}}}%
+    \put(0.12986179,0.99486337){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{y}}}%
+    \put(0.06481827,0.96653586){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{x}}}%
+    \put(0.08849361,1.04121864){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{z}}}%
+    \put(0.10861938,1.02737826){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb R^3$}}}%
+    \put(0.95929516,0.8147143){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\xi$}}}%
+    \put(0.65684411,1.13070411){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\eta$}}}%
+    \put(0.60628102,0.81466324){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0,0,0}}}%
+    \put(0.61236642,0.87317112){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.25}}}%
+    \put(0.61254284,0.93598655){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.50}}}%
+    \put(0.61236642,0.99953231){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.75}}}%
+    \put(0.60934579,1.0630781){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1,1,1}}}%
+    \put(0.65167984,0.79536453){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0,0,0}}}%
+    \put(0.70843636,0.79536453){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.25}}}%
+    \put(0.76895255,0.79536453){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.50}}}%
+    \put(0.8292924,0.79536453){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.75}}}%
+    \put(0.88899885,0.79536453){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1,1,1}}}%
+    \put(0.45336788,1.18974741){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{S}(\xi,\eta)=\sum_{i,j}R_{i,j}(\xi,\eta)\mathbf{P}_{i,j}$}}}%
+    \put(0.38006904,1.04559197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{  $R_{i,j}(\xi,\eta)=\frac{N_{i}(\xi) M_{j}(\eta)w_{i,j}}{\sum_{\hat{i}\hat{j}} N_{\hat{i}}(\xi) M_{\hat{j}}(\eta)}$}}}%
+    \put(0.71177048,1.14310605){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{Parameter space}}}}%
+    \put(0.07858298,0.63549188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{\hat{S}}(\hat{\xi},\hat{\eta})=\sum_{i,j}\hat{R}_{i,j}(\hat{\xi},\hat{\eta})\mathbf{Q}_{i,j}$}}}%
+    \put(0.0341028,0.58714023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{  $\hat{R}_{i,j}(\hat{\xi},\hat{\eta})=\frac{N_{i}(\hat{\xi}) M_{j}(\hat{\eta})w_{i,j}}{\sum_{\hat{i}\hat{j}} N_{\hat{i}}(\hat{\xi}) M_{\hat{j}}(\hat{\eta})}$}}}%
+    \put(0.92005335,1.05776213){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb R^2$}}}%
+    \put(0.65285963,0.48659581){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb R^2$}}}%
+    \put(0.26941217,0.48610083){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb R^2$}}}%
+    \put(0.67229183,0.10520346){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{P}_{i,j} = \text{Control points geometry space}$}}}%
+    \put(0.67229183,0.07034459){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{Q}_{i,j} = \text{Control points parameter space}$}}}%
+    \put(0.02411543,0.68014168){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\text{Additional mapping for trimmed knot spans}}}}%
+    \put(0.74412499,0.47684516){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\text{Standard mapping}}}}%
+    \put(0.74635663,0.45164819){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\text{for untrimmed knot spans}}}}%
+    \put(0.41006001,0.92570248){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_1$}}}%
+    \put(0.43041087,1.10737186){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_1$}}}%
+    \put(0.59608372,1.134217){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_1$}}}%
+    \put(0.74488247,0.70622881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_2$}}}%
+    \put(0.91745836,0.59271224){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_3$}}}%
+    \put(0.58074364,0.23452142){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_3$}}}%
+    \put(0.29388418,0.22148233){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_3$}}}%
+    \put(0.51631531,0.75915209){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$J_2$}}}%
+  \end{picture}%
+\endgroup%

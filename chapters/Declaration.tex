@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                              %%%%%%
+%%%%  Author: Name des Autors                     %%%%%%
+%%%%                                              %%%%%%
+%%%%  Beschreibung:                               %%%%%%
+%%%%                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EINSTELLUNGEN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Seitenränder:
+\renewcommand{\SeitenrandOben}{43.5mm}
+\renewcommand{\SeitenrandRechts}{20mm}
+\renewcommand{\SeitenrandLinks}{20mm}
+\renewcommand{\SeitenrandUnten}{10mm}
+
+\newgeometry{
+	top=\SeitenrandOben,
+	bottom=\SeitenrandUnten,
+	inner=\SeitenrandLinks,
+	outer=\SeitenrandRechts,
+	foot=0cm,
+	head=0cm
+}
+
+\textblockorigin{\SeitenrandLinks}{\SeitenrandOben} % Ursprung für Positionierung
+
+%\setlength{\parindent}{0pt}
+%%\setlength{\baselineskip}{32pt}
+%\setlength{\parskip}{\baselineskip}
+%\TabPositions{4cm}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{document}
+
+\vspace*{-17.21mm}
+\fontsize{19pt}{21pt}\selectfont
+%\ErklaerungUeberschrift
+
+%\vspace*{-15.8mm}
+%\fontsize{19pt}{21pt}\selectfont
+%\ErklaerungUeberschrift
+
+\vspace{25.3mm}
+\ifx\lan\deutsch 
+Erkl\"arung
+
+\normalsize\selectfont
+\vspace{13.2mm}
+Ich versichere hiermit, dass ich die von mir eingereichte Abschlussarbeit selbstst\"andig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Zudem erkl\"are ich, dass ich die vorliegende Arbeit dem Lehrstuhl f\"ur Statik zu akademischen Zwecken zur Verf\"ugung stelle und in diesem Zusammenhang auch einer Weitergabe zu akademischen Zwecken zustimme.
+
+\else
+Declaration
+
+\normalsize\selectfont
+\vspace{13.2mm}
+I hereby declare that the thesis submitted is my own unaided work. All direct or indirect sources used are acknowledged as references.
+In addition, I declare that I make the present work available to the Chair of Structural Analysis for academic purposes and in this connection also approve of dissemination for academic purposes.
+
+
+\fi
+
+
+\vspace{18.1mm}
+\rule[-3.7mm]{\linewidth}{0.5pt}
+\Ort{}, \Datum{}, \Unterschrift{}
+
+%\end{document}
+
+\renewcommand{\SeitenrandOben}{25.8mm}
+\renewcommand{\SeitenrandRechts}{21mm}
+\renewcommand{\SeitenrandLinks}{40mm}
+\renewcommand{\SeitenrandUnten}{24.8mm}
+
+\restoregeometry

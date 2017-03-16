@@ -1,0 +1,116 @@
+\documentclass[%
+    fontsize=11pt, % Schriftgröße
+    twoside=off % kein einseitiges Layout
+]{scrbook} % Dokumentenklasse: KOMA-Script Book
+\usepackage{scrlayer-scrpage} % Anpassbare Kopf- und Fußzeilen
+
+%\usepackage[ansinew]{inputenc}
+%\usepackage[latin1]{inputenc}
+%\usepackage[applemac]{inputenc}
+\usepackage[utf8]{inputenc} % Textkodierung: UTF-8
+\usepackage[T1]{fontenc} % Zeichensatzkodierung
+
+\def\deutsch{deutsch}
+\def\english{english}
+\ifx\lan\deutsch 
+\usepackage[ngerman]{babel} % Deutsche Lokalisierung
+\else
+\usepackage[english]{babel} % Englische Lokalisierung
+\addto\captionsenglish{\renewcommand*\contentsname{Table of Contents} }
+\fi
+%\usepackage[ngerman]{babel} % Deutsche Lokalisierung
+\usepackage{graphicx} % Grafiken
+
+% Schriftart Helvetica:
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Silbentrennung:
+\usepackage{hyphenat}
+\hyphenation{TUM in-te-res-siert} % Eigene Silbentrennung
+%\tolerance 2414
+%\hbadness 2414
+%\emergencystretch 1.5em
+%\hfuzz 0.3pt
+%\widowpenalty=10000     % Hurenkinder
+%\clubpenalty=10000      % Schusterjungen
+%\vfuzz \hfuzz
+
+%\usepackage[hidelinks]{hyperref} % Hyperlinks
+\usepackage[onehalfspacing]{setspace} % 1,5facher Zeilenabstand
+\usepackage{calc} % Berechnungen
+\usepackage{enumitem} % Mehr Kontrolle über itemize-, enumerate- und description-Umgebungen
+\usepackage{relsize} % Schriftgröße in Abhängigkeit von aktueller anpassen
+\usepackage{tabularx} % Flexiblere Tabellen
+\usepackage{caption} % Anpassen von Beschriftungen
+
+% Nummerierung von Abbildungen & Tabellen durchgängig, statt nach Kapiteln:
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% Abkürzungen, Glossare:
+\usepackage[%
+    xindy,% xindy zum Indexieren verwenden
+    acronym,% Separates Akronym-Verzeichnis
+    nopostdot,% Kein Punkt am Ende einer Beschreibung im Glossar
+]{glossaries}
+
+% Spezielle Befehlsdefinitionen:
+\newcommand{\Thema}{}
+
+\usepackage[absolute]{textpos} % Positionierung
+\usepackage{tabto} % Tabulatoren
+\usepackage{parskip}
+\usepackage{pdfpages}            % Inserting pdf pages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+
+\let\fref\undefined
+\usepackage[plain]{fancyref}
+\frefformat{plain}{\fancyrefeqlabelprefix}{Eq. (#1)}	
+\frefformat{plain}{\fancyreffiglabelprefix}{Fig.\fancyreftightspacing#1} 
+\frefformat{plain}{\fancyrefseclabelprefix}{Section \fancyreftightspacing#1}
+\frefformat{plain}{\fancyrefchaplabelprefix}{Chapter \fancyreftightspacing#1}
+\newcommand*{\fancyrefapplabelprefix}{app}
+\frefformat{plain}{\fancyrefapplabelprefix}{Appendix \fancyreftightspacing#1} 
+
+%Deutscher Text / german text:
+\newcommand*{\fancyrefabblabelprefix}{abb}
+\frefformat{plain}{\fancyrefabblabelprefix}{Abb. \fancyreftightspacing#1} % figure / Abbildung
+\newcommand*{\fancyrefgllabelprefix}{gl}
+\frefformat{plain}{\fancyrefgllabelprefix}{Gl. \fancyreftightspacing#1} % equation / Gleichung
+\newcommand*{\fancyrefabslabelprefix}{abs}
+\frefformat{plain}{\fancyrefabslabelprefix}{Abschnitt \fancyreftightspacing#1} % section / Abschnitt
+\newcommand*{\fancyrefanhlabelprefix}{anh}
+\frefformat{plain}{\fancyrefanhlabelprefix}{Anhang \fancyreftightspacing#1} % appendix / Anhang
+\newcommand*{\fancyrefkaplabelprefix}{kap}
+\frefformat{plain}{\fancyrefkaplabelprefix}{Kapitel \fancyreftightspacing#1} % chapter / Kpaitel
+
+% svg figures
+\newcommand{\executeiffilenewer}[3]{%
+	\ifnum\pdfstrcmp{\pdffilemoddate{#1}}%
+	{\pdffilemoddate{#2}}>0%
+	{\immediate\write18{#3}}\fi%
+}
+\newcommand{\includesvg}[1]{%
+	\executeiffilenewer{#1.svg}{#1.pdf}%
+	{inkscape -z -C --file=#1.svg %
+		--export-pdf=#1.pdf --export-latex}%
+	\input{#1.pdf_tex}%
+}
+
+\newcommand{\includegp}[1]{%
+	%\immediate\write18{wgnuplot #1.gp}%
+	\executeiffilenewer{#1.plt}{#1.eps}%
+	{gnuplot #1.plt}%
+	\ifpdf\executeiffilenewer{#1.eps}{#1.pdf}%
+	{epstopdf #1.eps}\fi%
+	\input{#1.tex}%
+}
+
+% Debugging:
+%\usepackage{showframe} % Layout-Boxen anzeigen
+%\usepackage{layout} % Layout-Informationen
+%\usepackage{printlen} % Längenwerte ausgeben
