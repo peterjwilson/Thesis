@@ -35,8 +35,7 @@
 \newcommand{\schluesselwoerter}{%
 	FEM; Optimierung; Isogeometrische Analyse}
 
-\renewcommand{\Thema}{%
-	Thema der Arbeit (optional)}
+\renewcommand{\Thema}{\ }
 
 %TOEDIT further declarations in Deckblatt.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,6 +49,8 @@
 \graphicspath{ {images/}}
 
 \begin{document}
+	
+\renewcommand{\Thema}{\ }
 %TOEDIT you have to change the text in the corresponding .svg-file and save it as pdf. You can add a figure on the front page. Exmaples are provided in the computer room 
 \includepdf[pages={1}]{frontcover/cover.pdf} % title page
 \input{./Ressourcen/Deckblatt_Text.tex} % cover sheet
@@ -58,18 +59,20 @@
 %\include{chapters/Acknowledgements}	%optional
 \newpage
 \pagenumbering{Roman}
+\setcounter{tocdepth}{1}
+\renewcommand{\cftchapafterpnum}{\vspace{\cftbeforechapskip}}
 \tableofcontents
-
 \mainmatter %turns on chapter numbering, resets page numbering
 \pagenumbering{arabic}
 \pagestyle{headings}
 
 %TOEDIT create different files for your chapter an include them here in the main file
+
 \input{./chapters/Chapter_1} %intro
 \input{./chapters/Chapter_2} %shells
 \input{./chapters/Chapter_3} %thick tri
 \input{./chapters/Chapter_4} %thin quad
-
+\input{./chapters/Chapter_5} %benchmarking
 
 \onehalfspacing
 

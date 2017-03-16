@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  16 MAR 2017 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  16 MAR 2017 23:05
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -1722,6 +1722,50 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 Package: placeins 2005/04/18  v 2.2
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\here.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip92
+\cftbeforetoctitleskip=\skip93
+\cftaftertoctitleskip=\skip94
+\cftbeforepartskip=\skip95
+\cftpartnumwidth=\skip96
+\cftpartindent=\skip97
+\cftbeforechapskip=\skip98
+\cftchapindent=\skip99
+\cftchapnumwidth=\skip100
+\cftbeforesecskip=\skip101
+\cftsecindent=\skip102
+\cftsecnumwidth=\skip103
+\cftbeforesubsecskip=\skip104
+\cftsubsecindent=\skip105
+\cftsubsecnumwidth=\skip106
+\cftbeforesubsubsecskip=\skip107
+\cftsubsubsecindent=\skip108
+\cftsubsubsecnumwidth=\skip109
+\cftbeforeparaskip=\skip110
+\cftparaindent=\skip111
+\cftparanumwidth=\skip112
+\cftbeforesubparaskip=\skip113
+\cftsubparaindent=\skip114
+\cftsubparanumwidth=\skip115
+\cftbeforeloftitleskip=\skip116
+\cftafterloftitleskip=\skip117
+\cftbeforefigskip=\skip118
+\cftfigindent=\skip119
+\cftfignumwidth=\skip120
+\cftbeforelottitleskip=\skip121
+\cftafterlottitleskip=\skip122
+\cftbeforetabskip=\skip123
+\cfttabindent=\skip124
+\cfttabnumwidth=\skip125
+\cftbeforesubfigskip=\skip126
+\cftsubfigindent=\skip127
+\cftsubfignumwidth=\skip128
+\cftbeforesubtabskip=\skip129
+\cftsubtabindent=\skip130
+\cftsubtabnumwidth=\skip131
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
@@ -1821,7 +1865,7 @@ Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks58
 \@dtl@tmpcount=\count397
-\dtl@tmplength=\skip92
+\dtl@tmplength=\skip132
 \dtl@sortresult=\count398
 \@dtl@numgrpsepcount=\count399
 \@dtl@datatype=\count400
@@ -1847,7 +1891,7 @@ File: glossaries-english.ldf 2014/11/23 v1.0
 )
 \gls@level=\count404
 \@gls@tmpb=\toks59
-\gls@tmplen=\skip93
+\gls@tmplen=\skip133
 \glskeylisttok=\toks60
 \glslabeltok=\toks61
 \glsshorttok=\toks62
@@ -1858,16 +1902,16 @@ File: glossaries-english.ldf 2014/11/23 v1.0
 Package: glossary-hypernav 2017/01/19 v4.29 (NLCT)
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.sty"
 Package: glossary-list 2017/01/19 v4.29 (NLCT)
-\glslistdottedwidth=\skip94
+\glslistdottedwidth=\skip134
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.sty"
 Package: glossary-long 2017/01/19 v4.29 (NLCT)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip95
-\LTright=\skip96
-\LTpre=\skip97
-\LTpost=\skip98
+\LTleft=\skip135
+\LTright=\skip136
+\LTpre=\skip137
+\LTpost=\skip138
 \LTchunksize=\count405
 \LTcapwidth=\dimen283
 \LT@head=\box79
@@ -1881,8 +1925,8 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks64
 )
 Class scrbook Info: longtable captions redefined on input line 43.
-\glsdescwidth=\skip99
-\glspagelistwidth=\skip100
+\glsdescwidth=\skip139
+\glspagelistwidth=\skip140
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.sty"
 Package: glossary-super 2017/01/19 v4.29 (NLCT)
@@ -1891,9 +1935,9 @@ Package: glossary-super 2017/01/19 v4.29 (NLCT)
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count410
 \ST@wd=\dimen284
-\ST@rightskip=\skip101
-\ST@leftskip=\skip102
-\ST@parfillskip=\skip103
+\ST@rightskip=\skip141
+\ST@leftskip=\skip142
+\ST@parfillskip=\skip143
 \ST@pageleft=\dimen285
 \ST@headht=\dimen286
 \ST@tailht=\dimen287
@@ -1908,7 +1952,7 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty"
 Package: glossary-tree 2017/01/19 v4.29 (NLCT)
-\glstreeindent=\skip104
+\glstreeindent=\skip144
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\textpos\textpos.sty"
 Package: textpos 2016/06/07 v1.8
@@ -1993,7 +2037,7 @@ Package glossaries Info: Writing glossary file WissenschaftlicheArbeit.acn on i
 nput line 203.
 
 (Abkuerzungen.tex)
-\@glsdotsep=\skip105
+\@glsdotsep=\skip145
 ) (Deckblatt.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
@@ -2087,7 +2131,7 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip106
+\Hy@SectionHShift=\skip146
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -2120,49 +2164,49 @@ LaTeX Warning: Label `bendplusmemequalshell' multiply defined.
 )
 \openout1 = `WissenschaftlicheArbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 52.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 52.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 51.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 51.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omltxmi.fd"
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 52.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 51.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omstxsy.fd"
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 52.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 51.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 51.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omxtxex.fd"
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 52.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 52.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 51.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 51.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxexa.fd"
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 52.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 51.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 52.
+(Font)              scaled to size 10.40245pt on input line 51.
 
 
 Package scrlayer-scrpage Warning: Very small head height detected!
@@ -2205,7 +2249,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 52.
+ on input line 51.
 
 \c@lstlisting=\count430
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -2219,8 +2263,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'WissenschaftlicheArbeit.bbl' found.
 (WissenschaftlicheArbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 52.
-Package biblatex Info: Reference segment=0 on input line 52.
+Package biblatex Info: Reference section=0 on input line 51.
+Package biblatex Info: Reference segment=0 on input line 51.
 \AtBeginShipoutBox=\box87
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
@@ -2241,12 +2285,12 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `newfloat' on input line 52.
+Package caption Info: We need package `newfloat' on input line 51.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
-LaTeX Info: Redefining \microtypecontext on input line 52.
+LaTeX Info: Redefining \microtypecontext on input line 51.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2295,7 +2339,7 @@ Package microtype Info: Loading generic settings for font family
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 52.
+Package hyperref Info: Link coloring OFF on input line 51.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2305,50 +2349,50 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count431
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 52.
-LaTeX Info: Redefining \pageref on input line 52.
-LaTeX Info: Redefining \nameref on input line 52.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
 (WissenschaftlicheArbeit.out) (WissenschaftlicheArbeit.out)
 \@outlinefile=\write9
 \openout9 = `WissenschaftlicheArbeit.out'.
 
-LaTeX Info: Redefining \Ref on input line 52.
+LaTeX Info: Redefining \Ref on input line 51.
 
-<frontcover/cover.pdf, id=170, 597.50829pt x 845.0471pt>
+<frontcover/cover.pdf, id=78, 597.50829pt x 845.0471pt>
 File: frontcover/cover.pdf Graphic file (type pdf)
 
 <use frontcover/cover.pdf>
-Package pdftex.def Info: frontcover/cover.pdf used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf used on input line 55.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: frontcover/cover.pdf Graphic file (type pdf)
  <use frontcover/cover.pdf>
-Package pdftex.def Info: frontcover/cover.pdf used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf used on input line 55.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-<frontcover/cover.pdf, id=173, page=1, 597.50829pt x 845.0471pt>
+<frontcover/cover.pdf, id=81, page=1, 597.50829pt x 845.0471pt>
 File: frontcover/cover.pdf Graphic file (type pdf)
 
 <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 55.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: frontcover/cover.pdf Graphic file (type pdf)
  <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 55.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: frontcover/cover.pdf Graphic file (type pdf)
 
 <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 55.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: frontcover/cover.pdf Graphic file (type pdf)
  <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 55.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: frontcover/cover.pdf Graphic file (type pdf)
 
 <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 54.
+Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 55.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [1
 
@@ -2390,7 +2434,7 @@ Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 54.
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-<./Ressourcen/Universitaet_Logo_RGB.pdf, id=199, 54.02504pt x 28.452pt>
+<./Ressourcen/Universitaet_Logo_RGB.pdf, id=107, 54.02504pt x 28.452pt>
 File: ./Ressourcen/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 
 <use ./Ressourcen/Universitaet_Logo_RGB.pdf>
@@ -2526,19 +2570,19 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 14.24995pt on input line 15.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 57.
+(Font)              scaled to size 8.54997pt on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 57.
+(Font)              <9> on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 57.
+(Font)              <7> on input line 58.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 57.
+(Font)              <5> on input line 58.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 
 
 Package scrlayer-scrpage Warning: \headheight to low.
@@ -2549,15 +2593,15 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=19.11pt'.
 (scrlayer-scrpage)                I'll also decrease \topmargin on input line 5
-7.
+8.
 
 
 Overfull \vbox (19.11pt too high) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 57.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 57.
+(Font)              scaled to size 8.54997pt on input line 58.
 
 
 Package scrlayer-scrpage Warning: \footheight to low.
@@ -2568,65 +2612,39 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{38.22002pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 57
+(scrlayer-scrpage)                I'll also increase \footskip on input line 58
 .
 
 [1
 
 
 
-]
-Package tocbasic Info: character protrusion at toc deactivated on input line 61
-.
-
-Setting numwidth of `part' to 28.33583pt
-Setting indent of `part' to \z@
-Setting numwidth of `part' to 28.33583pt
-Setting indent of `part' to \z@
-Setting numwidth of `chapter' to 28.33583pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `chapter' to 28.33583pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `section' to 28.33583pt
-Setting indent of `section' to \z@
-Setting numwidth of `section' to 28.33583pt
-Setting indent of `section' to \z@
-Setting numwidth of `subsection' to 28.33583pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsection' to 28.33583pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsubsection' to 28.33583pt
-Setting indent of `subsubsection' to \z@
-Setting numwidth of `subsubsection' to 28.33583pt
-Setting indent of `subsubsection' to \z@
-Setting numwidth of `paragraph' to 28.33583pt
-Setting indent of `paragraph' to \z@
-Setting numwidth of `paragraph' to 28.33583pt
-Setting indent of `paragraph' to \z@
-Setting numwidth of `subparagraph' to 28.33583pt
-Setting indent of `subparagraph' to \z@
-Setting numwidth of `subparagraph' to 28.33583pt
-Setting indent of `subparagraph' to \z@
-Setting numwidth of `chapter' to 28.33583pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `chapter' to 28.33583pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `section' to 28.33583pt
-Setting indent of `section' to \z@
-Setting numwidth of `section' to 28.33583pt
-Setting indent of `section' to \z@
-Setting numwidth of `subsection' to 28.33583pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsection' to 28.33583pt
-Setting indent of `subsection' to \z@
-(WissenschaftlicheArbeit.toc)
+] (WissenschaftlicheArbeit.toc
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
+Package tocbasic Info: Using my definition of `\numberline' on input line 54.
+Package tocbasic Info: Using my definition of `\numberline' on input line 58.
+Package tocbasic Info: Using my definition of `\numberline' on input line 60.
+Package tocbasic Info: Using my definition of `\numberline' on input line 62.
+Package tocbasic Info: Using my definition of `\numberline' on input line 64.
+Package tocbasic Info: Using my definition of `\numberline' on input line 68.
+Package tocbasic Info: Using my definition of `\numberline' on input line 74.
+Package tocbasic Info: Using my definition of `\numberline' on input line 76.
+Package tocbasic Info: Using my definition of `\numberline' on input line 88.
+Package tocbasic Info: Using my definition of `\numberline' on input line 92.
+Package tocbasic Info: Using my definition of `\numberline' on input line 102.
+Package tocbasic Info: Using my definition of `\numberline' on input line 106.
+)
 \tf@toc=\write10
 \openout10 = `WissenschaftlicheArbeit.toc'.
 
  [1
 
-
-] [2] (chapters/Chapter_1.tex
+] (chapters/Chapter_1.tex
 chapter 1.
 ) (chapters/Chapter_2.texpdfTeX warning (ext4): destination with the same ident
 ifier (name{page.1}) has been already used, duplicate ignored
@@ -2639,136 +2657,53 @@ l.17 \chapter
 ]
 chapter 2.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 20.
+(Font)              scaled to size 10.40245pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 37.09024pt on input line 20.
+(Font)              scaled to size 37.09024pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 53.08348pt on input line 20.
+(Font)              scaled to size 53.08348pt on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 20.
+(Font)              scaled to size 10.40245pt on input line 22.
+<images/degenerateshell.png, id=167, 2075.95575pt x 1061.76675pt>
+File: images/degenerateshell.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
+<use images/degenerateshell.png>
+Package pdftex.def Info: images/degenerateshell.png used on input line 32.
+(pdftex.def)             Requested size: 341.43306pt x 174.61691pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 33.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 33.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 
-      [2
+l.35 \end{figure}
+                  [2
 
-] <images/degenerateshell.png, id=293, 2075.95575pt x 1061.76675pt>
-File: images/degenerateshell.png Graphic file (type png)
-
-<use images/degenerateshell.png>
-Package pdftex.def Info: images/degenerateshell.png used on input line 30.
-(pdftex.def)             Requested size: 341.43306pt x 174.61691pt.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 31.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 31.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 31.
-
-<images/shellModels.png, id=295, 1068.99374pt x 569.7285pt>
+]
+<images/shellModels.png, id=174, 1068.99374pt x 569.7285pt>
 File: images/shellModels.png Graphic file (type png)
 
 <use images/shellModels.png>
-Package pdftex.def Info: images/shellModels.png used on input line 44.
+Package pdftex.def Info: images/shellModels.png used on input line 46.
 (pdftex.def)             Requested size: 341.43306pt x 181.9691pt.
  [3 <./images/degenerateshell.png>]
-<images/shellsconfig.png, id=306, 2051.86575pt x 1093.08376pt>
+<images/shellsconfig.png, id=186, 2051.86575pt x 1093.08376pt>
 File: images/shellsconfig.png Graphic file (type png)
 
 <use images/shellsconfig.png>
-Package pdftex.def Info: images/shellsconfig.png used on input line 54.
+Package pdftex.def Info: images/shellsconfig.png used on input line 56.
 (pdftex.def)             Requested size: 341.43306pt x 181.88551pt.
  [4 <./images/shellModels.png> <./images/shellsconfig.png>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 62.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 62.
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-[5] <images/bernoullie.png, id=331, 471.56175pt x 183.084pt>
-File: images/bernoullie.png Graphic file (type png)
-
-<use images/bernoullie.png>
-Package pdftex.def Info: images/bernoullie.png used on input line 171.
-(pdftex.def)             Requested size: 227.62204pt x 88.37657pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
-
- []
-
-[6 <./images/bernoullie.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--207
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
-
- []
-
-[8] <images/timoshenkobeam.png, id=368, 1477.9215pt x 714.2685pt>
-File: images/timoshenkobeam.png Graphic file (type png)
-
-<use images/timoshenkobeam.png>
-Package pdftex.def Info: images/timoshenkobeam.png used on input line 329.
-(pdftex.def)             Requested size: 227.62204pt x 110.00204pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
-
- []
-
-[9 <./images/timoshenkobeam.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
-
- []
-
-[10] <images/eigenvaluespectra.png, id=388, 1668.2325pt x 1061.1645pt>
-File: images/eigenvaluespectra.png Graphic file (type png)
-
-<use images/eigenvaluespectra.png>
-Package pdftex.def Info: images/eigenvaluespectra.png used on input line 442.
-(pdftex.def)             Requested size: 341.43306pt x 217.1839pt.
- [11 <./images/eigenvaluespectra.png>]
-Overfull \hbox (5.45822pt too wide) detected at line 516
-[] \OMS/lmsy/m/n/10.95   \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \OT1/lmr/m/n/
-10.95 [] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 \OT1/lmr/m/n/10.95 []) = 
-\OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 ([] + []) = [][] [] : [][] : \OML/lmm
-/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
-  + [][] [] : \OML/lmm/m/it/10.95 Gt\OT1/lmr/bx/n/10.95 I \OT1/lmr/m/n/10.95 :
- \OML/lmm/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
-
- []
+(Font)              scaled to size 11.39996pt on input line 64.
 
 
 Package scrlayer-scrpage Warning: \headheight to low.
@@ -2778,8 +2713,8 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=21.03394pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 5
-21.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 1
+14.
 
 
 Overfull \vbox (1.92393pt too high) has occurred while \output is active []
@@ -2794,107 +2729,135 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{42.06789pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 52
-1.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 11
+4.
 
-[12] <images/membranelocking.png, id=403, 2107.875pt x 741.972pt>
+[5] <images/bernoullie.png, id=212, 471.56175pt x 183.084pt>
+File: images/bernoullie.png Graphic file (type png)
+
+<use images/bernoullie.png>
+Package pdftex.def Info: images/bernoullie.png used on input line 176.
+(pdftex.def)             Requested size: 227.62204pt x 88.37657pt.
+ [6] [7 <./images/bernoullie.png>] [8]
+<images/timoshenkobeam.png, id=247, 1477.9215pt x 714.2685pt>
+File: images/timoshenkobeam.png Graphic file (type png)
+
+<use images/timoshenkobeam.png>
+Package pdftex.def Info: images/timoshenkobeam.png used on input line 334.
+(pdftex.def)             Requested size: 227.62204pt x 110.00204pt.
+ [9] [10 <./images/timoshenkobeam.png>] [11]
+<images/eigenvaluespectra.png, id=277, 1668.2325pt x 1061.1645pt>
+File: images/eigenvaluespectra.png Graphic file (type png)
+
+<use images/eigenvaluespectra.png>
+Package pdftex.def Info: images/eigenvaluespectra.png used on input line 447.
+(pdftex.def)             Requested size: 341.43306pt x 217.1839pt.
+ [12 <./images/eigenvaluespectra.png>]
+[13]
+Overfull \hbox (5.45822pt too wide) detected at line 521
+[] \OMS/lmsy/m/n/10.95   \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \OT1/lmr/m/n/
+10.95 [] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 \OT1/lmr/m/n/10.95 []) = 
+\OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 ([] + []) = [][] [] : [][] : \OML/lmm
+/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
+  + [][] [] : \OML/lmm/m/it/10.95 Gt\OT1/lmr/bx/n/10.95 I \OT1/lmr/m/n/10.95 :
+ \OML/lmm/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
+
+ []
+
+<images/membranelocking.png, id=289, 2107.875pt x 741.972pt>
 File: images/membranelocking.png Graphic file (type png)
 
 <use images/membranelocking.png>
-Package pdftex.def Info: images/membranelocking.png used on input line 530.
+Package pdftex.def Info: images/membranelocking.png used on input line 535.
 (pdftex.def)             Requested size: 398.33858pt x 140.20627pt.
- [13 <./images/membranelocking.png>]
-<images/shearlockingredint.png, id=413, 3047.385pt x 1310.496pt>
+ [14] [15 <./images/membranelocking.png>]
+<images/shearlockingredint.png, id=309, 3047.385pt x 1310.496pt>
 File: images/shearlockingredint.png Graphic file (type png)
 
 <use images/shearlockingredint.png>
-Package pdftex.def Info: images/shearlockingredint.png used on input line 556.
+Package pdftex.def Info: images/shearlockingredint.png used on input line 561.
 (pdftex.def)             Requested size: 398.33858pt x 171.2903pt.
- [14] [15 <./images/shearlockingredint.png>] <images/mitc4.png, id=437, 3502.68
-6pt x 1310.496pt>
+ [16 <./images/shearlockingredint.png>]
+<images/mitc4.png, id=328, 3502.686pt x 1310.496pt>
 File: images/mitc4.png Graphic file (type png)
  <use images/mitc4.png>
-Package pdftex.def Info: images/mitc4.png used on input line 575.
+Package pdftex.def Info: images/mitc4.png used on input line 580.
 (pdftex.def)             Requested size: 455.24408pt x 170.31047pt.
 
-Overfull \hbox (31.298pt too wide) in paragraph at lines 575--576
+Overfull \hbox (31.298pt too wide) in paragraph at lines 580--581
  [][] 
  []
 
-[16 <./images/mitc4.png>] <images/DSG.png, id=458, 1547.7825pt x 773.89125pt>
+[17 <./images/mitc4.png>] <images/DSG.png, id=352, 1547.7825pt x 773.89125pt>
 File: images/DSG.png Graphic file (type png)
 
 <use images/DSG.png>
-Package pdftex.def Info: images/DSG.png used on input line 593.
+Package pdftex.def Info: images/DSG.png used on input line 598.
 (pdftex.def)             Requested size: 227.62204pt x 113.81142pt.
- [17 <./images/DSG.png>]
-<images/8nodeseren.png, id=473, 1070.8005pt x 287.8755pt>
+ [18 <./images/DSG.png>]
+<images/8nodeseren.png, id=368, 1070.8005pt x 287.8755pt>
 File: images/8nodeseren.png Graphic file (type png)
 
 <use images/8nodeseren.png>
-Package pdftex.def Info: images/8nodeseren.png used on input line 607.
+Package pdftex.def Info: images/8nodeseren.png used on input line 612.
 (pdftex.def)             Requested size: 426.79134pt x 114.73964pt.
 
-Overfull \hbox (2.84526pt too wide) in paragraph at lines 607--608
+Overfull \hbox (2.84526pt too wide) in paragraph at lines 612--613
  [][] 
  []
 
-[18 <./images/8nodeseren.png>]
-<images/drillingDOF.png, id=492, 401.0985pt x 334.851pt>
+[19 <./images/8nodeseren.png>]
+<images/drillingDOF.png, id=388, 401.0985pt x 334.851pt>
 File: images/drillingDOF.png Graphic file (type png)
 
 <use images/drillingDOF.png>
-Package pdftex.def Info: images/drillingDOF.png used on input line 645.
+Package pdftex.def Info: images/drillingDOF.png used on input line 650.
 (pdftex.def)             Requested size: 227.62204pt x 190.02399pt.
- [19 <./images/drillingDOF.png>]
-Underfull \hbox (badness 2065) in paragraph at lines 680--680
+ [20]
+Underfull \hbox (badness 2065) in paragraph at lines 686--686
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 680--680
+Underfull \hbox (badness 2065) in paragraph at lines 686--686
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 680--680
+Underfull \hbox (badness 5847) in paragraph at lines 686--686
 []|\T1/phv/m/n/10.95 (+20) Node num-ber-ing de-pen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--680
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 \T1/phv/m/n/10.95 (+20) men-ta-tion and pos-si-bly
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 680--680
+Underfull \hbox (badness 2065) in paragraph at lines 686--686
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Overfull \hbox (10.40245pt too wide) in paragraph at lines 680--681
+Overfull \hbox (10.40245pt too wide) in paragraph at lines 686--687
 [][] 
  []
 
-[20]
-Overfull \vbox (5.76631pt too high) has occurred while \output is active []
-
-
-[21]
-Overfull \hbox (10.40245pt too wide) in paragraph at lines 708--709
+[21 <./images/drillingDOF.png>] [22]
+Overfull \hbox (10.40245pt too wide) in paragraph at lines 717--718
 [][] 
  []
 
-) (chapters/Chapter_3.tex [22]
+) (chapters/Chapter_3.tex [23]
 chapter 3.
-[23
+[24
 
-] [24]
+] [25]
 Overfull \hbox (24.09605pt too wide) in paragraph at lines 135--135
 [] 
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
@@ -2904,9 +2867,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
-[26]) (chapters/Chapter_4.tex [27]
+[27]) (chapters/Chapter_4.tex [28]
 chapter 4.
-<images/bendplusmemequalshell.png, id=566, 861.2175pt x 426.99525pt>
+<images/bendplusmemequalshell.png, id=466, 861.2175pt x 426.99525pt>
 File: images/bendplusmemequalshell.png Graphic file (type png)
 
 <use images/bendplusmemequalshell.png>
@@ -2922,32 +2885,27 @@ File: images/bernoullie.png Graphic file (type png)
 <use images/bernoullie.png>
 Package pdftex.def Info: images/bernoullie.png used on input line 40.
 (pdftex.def)             Requested size: 170.71652pt x 66.28174pt.
- [28
+ [29
 
  <./images/bendplusmemequalshell.png>]
-<images/reissner.png, id=573, 548.0475pt x 261.3765pt>
+<images/reissner.png, id=473, 548.0475pt x 261.3765pt>
 File: images/reissner.png Graphic file (type png)
 
 <use images/reissner.png>
 Package pdftex.def Info: images/reissner.png used on input line 50.
 (pdftex.def)             Requested size: 284.52756pt x 135.70117pt.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 57.
-
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 62.
-[29 <./images/reissner.png>] [30]
+ [30 <./images/reissner.png>] [31]
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-[31
+[32
 
-] [32]
+] [33]
 Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
@@ -2957,13 +2915,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
-[33]
+[34]
 Overfull \hbox (2.45512pt too wide) detected at line 290
 [][] \OT1/lmr/m/n/10.95 = [] \OML/lmm/m/it/10.95 where \OT1/lmr/bx/n/10.95 H \O
 T1/lmr/m/n/10.95 = []  \OML/lmm/m/it/10.95 and [] \OT1/lmr/m/n/10.95 = []
  []
 
-[34]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
@@ -2973,12 +2931,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
-[35] [36] [37]
+[36] [37] [38]
 Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
-[38]
+[39]
 File: images/8nodeseren.png Graphic file (type png)
  <use images/8nodeseren.png>
 Package pdftex.def Info: images/8nodeseren.png used on input line 493.
@@ -2988,7 +2946,7 @@ Overfull \hbox (2.84526pt too wide) in paragraph at lines 493--494
  [][] 
  []
 
-[39]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
@@ -2998,12 +2956,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
-[40]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
-[41] [42] [43]
+[42] [43] [44]
 Underfull \hbox (badness 10000) in paragraph at lines 735--736
 
  []
@@ -3022,7 +2980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
-[44]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 739--740
 \T1/phv/m/n/10.95 (+20) and
  []
@@ -3047,7 +3005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 743--744
 
  []
 
-[45]
+[46]
 Overfull \hbox (232.32095pt too wide) in paragraph at lines 786--787
 \T1/phv/m/n/10.95 (-20) of the el-e-ment stiff-ness cal-cu-la-tion, it-self cal
 l-ing three key meth-ods: $[]$
@@ -3073,27 +3031,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
  []
 
-[46] <images/scordelisroof.png, id=723, 769.07326pt x 428.802pt>
+[47] <images/scordelisroof.png, id=628, 769.07326pt x 428.802pt>
 File: images/scordelisroof.png Graphic file (type png)
 
 <use images/scordelisroof.png>
 Package pdftex.def Info: images/scordelisroof.png used on input line 832.
 (pdftex.def)             Requested size: 227.62204pt x 126.9077pt.
- [47 <./images/scordelisroof.png>]
-<images/pinchedcylinder.png, id=733, 794.36775pt x 459.51675pt>
+ [48 <./images/scordelisroof.png>]
+<images/pinchedcylinder.png, id=639, 794.36775pt x 459.51675pt>
 File: images/pinchedcylinder.png Graphic file (type png)
 
 <use images/pinchedcylinder.png>
 Package pdftex.def Info: images/pinchedcylinder.png used on input line 869.
 (pdftex.def)             Requested size: 227.62204pt x 131.6718pt.
- [48 <./images/pinchedcylinder.png>]
-<images/pinchedhemisphere.png, id=742, 791.95876pt x 393.26926pt>
+ [49 <./images/pinchedcylinder.png>]
+<images/pinchedhemisphere.png, id=649, 791.95876pt x 393.26926pt>
 File: images/pinchedhemisphere.png Graphic file (type png)
 
 <use images/pinchedhemisphere.png>
 Package pdftex.def Info: images/pinchedhemisphere.png used on input line 907.
 (pdftex.def)             Requested size: 227.62204pt x 113.03102pt.
- [49 <./images/pinchedhemisphere.png>]
+ [50 <./images/pinchedhemisphere.png>]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 937.
 
 
@@ -3103,117 +3061,36 @@ File: omsphv.fd
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 937.
 )
-(chapters/Conclusions.tex [50]
+(chapters/Chapter_5.tex [51]
 chapter 6.
-) [51
+) (chapters/Conclusions.tex [52
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 82
-.
+chapter 7.
+) [53
 
-Setting numwidth of `part' to 49.14061pt
-Setting indent of `part' to \z@
-Setting numwidth of `part' to 49.14061pt
-Setting indent of `part' to \z@
-Setting numwidth of `chapter' to 49.14061pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `chapter' to 49.14061pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `section' to 49.14061pt
-Setting indent of `section' to \z@
-Setting numwidth of `section' to 49.14061pt
-Setting indent of `section' to \z@
-Setting numwidth of `subsection' to 49.14061pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsection' to 49.14061pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsubsection' to 49.14061pt
-Setting indent of `subsubsection' to \z@
-Setting numwidth of `subsubsection' to 49.14061pt
-Setting indent of `subsubsection' to \z@
-Setting numwidth of `paragraph' to 49.14061pt
-Setting indent of `paragraph' to \z@
-Setting numwidth of `paragraph' to 49.14061pt
-Setting indent of `paragraph' to \z@
-Setting numwidth of `subparagraph' to 49.14061pt
-Setting indent of `subparagraph' to \z@
-Setting numwidth of `subparagraph' to 49.14061pt
-Setting indent of `subparagraph' to \z@
-Setting numwidth of `chapter' to 49.14061pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `chapter' to 49.14061pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `section' to 49.14061pt
-Setting indent of `section' to \z@
-Setting numwidth of `section' to 49.14061pt
-Setting indent of `section' to \z@
-Setting numwidth of `subsection' to 49.14061pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsection' to 49.14061pt
-Setting indent of `subsection' to \z@
-(WissenschaftlicheArbeit.lof)
+] (WissenschaftlicheArbeit.lof
+Overfull \hbox (107.18991pt too wide) in paragraph at lines 30--30
+ [][] [][]\T1/phv/m/n/10.95 (-20) Construction of shell DOFs from bend-ing and 
+mem-brane DOFs (source: http://www.edwilson.org/BOOK- 
+ []
+
+)
 \tf@lof=\write11
 \openout11 = `WissenschaftlicheArbeit.lof'.
 
 
 No file WissenschaftlicheArbeit.acr.
-[52
-
-
-]
-Package tocbasic Info: character protrusion at lot deactivated on input line 90
-.
-
-Setting numwidth of `part' to 38.43669pt
-Setting indent of `part' to \z@
-Setting numwidth of `part' to 38.43669pt
-Setting indent of `part' to \z@
-Setting numwidth of `chapter' to 38.43669pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `chapter' to 38.43669pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `section' to 38.43669pt
-Setting indent of `section' to \z@
-Setting numwidth of `section' to 38.43669pt
-Setting indent of `section' to \z@
-Setting numwidth of `subsection' to 38.43669pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsection' to 38.43669pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsubsection' to 38.43669pt
-Setting indent of `subsubsection' to \z@
-Setting numwidth of `subsubsection' to 38.43669pt
-Setting indent of `subsubsection' to \z@
-Setting numwidth of `paragraph' to 38.43669pt
-Setting indent of `paragraph' to \z@
-Setting numwidth of `paragraph' to 38.43669pt
-Setting indent of `paragraph' to \z@
-Setting numwidth of `subparagraph' to 38.43669pt
-Setting indent of `subparagraph' to \z@
-Setting numwidth of `subparagraph' to 38.43669pt
-Setting indent of `subparagraph' to \z@
-Setting numwidth of `chapter' to 38.43669pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `chapter' to 38.43669pt
-Setting indent of `chapter' to \z@
-Setting numwidth of `section' to 38.43669pt
-Setting indent of `section' to \z@
-Setting numwidth of `section' to 38.43669pt
-Setting indent of `section' to \z@
-Setting numwidth of `subsection' to 38.43669pt
-Setting indent of `subsection' to \z@
-Setting numwidth of `subsection' to 38.43669pt
-Setting indent of `subsection' to \z@
 (WissenschaftlicheArbeit.lot)
 \tf@lot=\write12
 \openout12 = `WissenschaftlicheArbeit.lot'.
 
- [53
+ [54
 
-] [54
+] [55] [56
 
-] [55] [56] (chapters/Declaration.tex
-[57]
+] [57] [58]
+(chapters/Declaration.tex [59]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -3248,17 +3125,17 @@ Setting indent of `subsection' to \z@
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-[58
+[60
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
  (WissenschaftlicheArbeit.aux (chapters/Abstract.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `WissenschaftlicheArbeit.out' has not changed
 .
-(rerunfilecheck)             Checksum: B57091E222C1E890B1E229A414A255F2;3101.
+(rerunfilecheck)             Checksum: 3461949FE7FC8406E5EDD6AEB4C3026D;1241.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3268,13 +3145,13 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52756 strings out of 493333
- 1144863 string characters out of 3139194
- 1809166 words of memory out of 3000000
- 54799 multiletter control sequences out of 15000+200000
+ 52971 strings out of 493333
+ 1148048 string characters out of 3139194
+ 1813837 words of memory out of 3000000
+ 55008 multiletter control sequences out of 15000+200000
  129275 words of font info for 268 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 66i,21n,100p,8958b,2925s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,21n,100p,8958b,2771s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
@@ -3295,9 +3172,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfon
 ts/txsya.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (63 pages, 5087099 bytes).
+Output written on WissenschaftlicheArbeit.pdf (64 pages, 5076987 bytes).
 PDF statistics:
- 961 PDF objects out of 1000 (max. 8388607)
- 251 named destinations out of 1000 (max. 500000)
- 43971 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 250 named destinations out of 1000 (max. 500000)
+ 43787 words of extra memory for PDF output out of 51595 (max. 10000000)
 
