@@ -1,9 +1,1077 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{Piegl.1997}
-Les Piegl and Wayne Tiller.
-\newblock {\em The NURBS Book}.
-\newblock Monographs in Visual Communication. {Springer Berlin Heidelberg},
-  second edition edition, 1997.
+\sortlist[entry]{nty/global/}
+  \entry{Bar12}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=BFR}{%
+         family={Barrales},
+         familyi={B\bibinitperiod},
+         given={Fabian\bibnamedelima Rojas},
+         giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BFR1}
+    \strng{fullhash}{BFR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Development of a nonlinear quadrilateral layered membrane
+  element with drilling degrees of freedom and a nonlinear quadrilateral thin
+  flat layered shell element for the modeling of reinforced concrete walls}
+    \list{location}{1}{%
+      {Los Angeles, California}%
+    }
+    \list{institution}{1}{%
+      {University of Southern California}%
+    }
+    \field{type}{Dissertation}
+    \field{year}{2012}
+  \endentry
 
-\end{thebibliography}
+  \entry{Bathe86}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BKJ}{%
+         family={Bathe},
+         familyi={B\bibinitperiod},
+         given={Klaus-Jürgen},
+         giveni={K\bibinitperiod-J\bibinitperiod},
+      }}%
+      {{hash=DEN}{%
+         family={Dvorkin},
+         familyi={D\bibinitperiod},
+         given={Eduardo\bibnamedelima N.},
+         giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BKJDEN1}
+    \strng{fullhash}{BKJDEN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{3}
+    \field{pages}{697\bibrangedash 722}
+    \field{title}{A formulation of general shell elements—the use of mixed
+  interpolation of tensorial components}
+    \field{volume}{22}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1986}
+  \endentry
+
+  \entry{Batoz1980}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BJL}{%
+         family={Batoz},
+         familyi={B\bibinitperiod},
+         given={Jean-Louis},
+         giveni={J\bibinitperiod-L\bibinitperiod},
+      }}%
+      {{hash=BKJ}{%
+         family={Bathe},
+         familyi={B\bibinitperiod},
+         given={Klaus-JÜRgen},
+         giveni={K\bibinitperiod-J\bibinitperiod},
+      }}%
+      {{hash=HLW}{%
+         family={Ho},
+         familyi={H\bibinitperiod},
+         given={Lee-Wing},
+         giveni={L\bibinitperiod-W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Ltd}%
+    }
+    \strng{namehash}{BJLBKJHLW1}
+    \strng{fullhash}{BJLBKJHLW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{12}
+    \field{pages}{1771\bibrangedash 1812}
+    \field{title}{A study of three-node triangular plate bending elements}
+    \field{volume}{15}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1980}
+  \endentry
+
+  \entry{Bat82}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BJL}{%
+         family={Batoz},
+         familyi={B\bibinitperiod},
+         given={Jean-Louis},
+         giveni={J\bibinitperiod-L\bibinitperiod},
+      }}%
+      {{hash=TMB}{%
+         family={Tahar},
+         familyi={T\bibinitperiod},
+         given={Mabrouk\bibnamedelima Ben},
+         giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJLTMB1}
+    \strng{fullhash}{BJLTMB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{11}
+    \field{pages}{1655\bibrangedash 1677}
+    \field{title}{Evaluation of a new quadrilateral thin plate bending element}
+    \field{volume}{18}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1982}
+  \endentry
+
+  \entry{Bel85}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BT}{%
+         family={Belytschko},
+         familyi={B\bibinitperiod},
+         given={Ted},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Stolarski},
+         familyi={S\bibinitperiod},
+         given={Henryk},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LW}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={{Wing Kam}},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=CN}{%
+         family={Carpenter},
+         familyi={C\bibinitperiod},
+         given={Nicholas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=OJ}{%
+         family={Ong},
+         familyi={O\bibinitperiod},
+         given={{Jame S J}},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BT+1}
+    \strng{fullhash}{BTSHLWCNOJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{1-3}
+    \field{pages}{221\bibrangedash 258}
+    \field{title}{Stress projection for membrane and shear locking in shell
+  finite elements}
+    \field{volume}{51}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{1985}
+  \endentry
+
+  \entry{Bergan84}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BPG}{%
+         family={Bergan},
+         familyi={B\bibinitperiod},
+         given={P.\bibnamedelima G.},
+         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=NMK}{%
+         family={Nygård},
+         familyi={N\bibinitperiod},
+         given={M.\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Ltd}%
+    }
+    \strng{namehash}{BPGNMK1}
+    \strng{fullhash}{BPGNMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{4}
+    \field{pages}{643\bibrangedash 663}
+    \field{title}{Finite elements with increased freedom in choosing shape
+  functions}
+    \field{volume}{20}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1984}
+  \endentry
+
+  \entry{BischLitBook04}{inbook}{}
+    \name{author}{4}{}{%
+      {{hash=BM}{%
+         family={Bischoff},
+         familyi={B\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BKU}{%
+         family={Bletzinger},
+         familyi={B\bibinitperiod},
+         given={K.-U.},
+         giveni={K\bibinitperiod-U\bibinitperiod},
+      }}%
+      {{hash=WWA}{%
+         family={Wall},
+         familyi={W\bibinitperiod},
+         given={W.\bibnamedelima A.},
+         giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=RE}{%
+         family={Ramm},
+         familyi={R\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Ltd}%
+    }
+    \strng{namehash}{BM+1}
+    \strng{fullhash}{BMBKUWWARE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{Encyclopedia of Computational Mechanics}
+    \field{title}{Models and Finite Elements for Thin-Walled Structures}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Bis04}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BM}{%
+         family={Bischoff},
+         familyi={B\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BKU}{%
+         family={Bletzinger},
+         familyi={B\bibinitperiod},
+         given={Kai-Uwe},
+         giveni={K\bibinitperiod-U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BMBKU1}
+    \strng{fullhash}{BMBKU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{15 - 16}
+    \field{pages}{1517 \bibrangedash  1528}
+    \field{title}{Improving stability and accuracy of Reissner-Mindlin plate
+  finite elements via algebraic subgrid scale stabilization}
+    \field{volume}{193}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Bis01}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BM}{%
+         family={Bischoff},
+         familyi={B\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BKU}{%
+         family={Bletzinger},
+         familyi={B\bibinitperiod},
+         given={Kai-Uwe},
+         giveni={K\bibinitperiod-U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BMBKU1}
+    \strng{fullhash}{BMBKU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{253 \bibrangedash  263}
+    \field{title}{Stabilized DSG Plate and Shell Elements}
+    \field{journaltitle}{Trends in Computational Structural Mechanics}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Bletz16}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=BKU}{%
+         family={Bletzinger},
+         familyi={B\bibinitperiod},
+         given={Kai-Uwe},
+         giveni={K\bibinitperiod-U\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Technische Universitaet Muenchen}%
+    }
+    \strng{namehash}{BKU1}
+    \strng{fullhash}{BKU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Lecture notes in Plates}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Ble00}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BKU}{%
+         family={Bletzinger},
+         familyi={B\bibinitperiod},
+         given={Kai-Uwe},
+         giveni={K\bibinitperiod-U\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bischoff},
+         familyi={B\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RE}{%
+         family={Ramm},
+         familyi={R\bibinitperiod},
+         given={Ekkehard},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BKUBMRE1}
+    \strng{fullhash}{BKUBMRE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{3}
+    \field{pages}{321 \bibrangedash  334}
+    \field{title}{A unified approach for shear-locking-free triangular and
+  rectangular shell finite elements}
+    \field{volume}{75}
+    \field{journaltitle}{Computers and Structures}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Bou13}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BR}{%
+         family={Bouclier},
+         familyi={B\bibinitperiod},
+         given={Robin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ET}{%
+         family={Elguedj},
+         familyi={E\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Combescure},
+         familyi={C\bibinitperiod},
+         given={Alain},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BRETCA1}
+    \strng{fullhash}{BRETCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{86 \bibrangedash  110}
+    \field{title}{Efficient isogeometric NURBS-based solid-shell elements:
+  Mixed formulation and -method}
+    \field{volume}{267}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Dvorkin84}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DEN}{%
+         family={Dvorkin},
+         familyi={D\bibinitperiod},
+         given={Eduardo\bibnamedelima N.},
+         giveni={E\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Bathe},
+         familyi={B\bibinitperiod},
+         given={Klaus‐Jürgen},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DENBK1}
+    \strng{fullhash}{DENBK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{1}
+    \field{pages}{77\bibrangedash 88}
+    \field{title}{A continuum mechanics based four node shell element for
+  general non‐linear analysis}
+    \field{volume}{1}
+    \field{journaltitle}{Engineering Computations}
+    \field{year}{1984}
+  \endentry
+
+  \entry{Echter13}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=ER}{%
+         family={Echter},
+         familyi={E\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ER1}
+    \strng{fullhash}{ER1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{Isogeometric Analysis of Shells}
+    \list{location}{1}{%
+      {Stuttgart}%
+    }
+    \list{institution}{1}{%
+      {Universitaet Stuttgart}%
+    }
+    \field{type}{Dissertation}
+    \field{year}{2013}
+  \endentry
+
+  \entry{FELIPPA1990}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={C.A.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={Militello},
+         familyi={M\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCMC1}
+    \strng{fullhash}{FCMC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{1}
+    \field{pages}{1 \bibrangedash  11}
+    \field{title}{Variational formulation of high-performance finite elements:
+  Parametrized variational principles}
+    \field{volume}{36}
+    \field{journaltitle}{Computers and Structures}
+    \field{year}{1990}
+  \endentry
+
+  \entry{felippa2002fitting}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={CA},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PK}{%
+         family={Park},
+         familyi={P\bibinitperiod},
+         given={KC},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCPK1}
+    \strng{fullhash}{FCPK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{booktitle}{Proceedings of the Sixth International Conference on
+  Computational Structures Technology, Prague, Czech Republic}
+    \field{pages}{49\bibrangedash 51}
+    \field{title}{Fitting strains and displacements by minimizing dislocation
+  energy}
+    \field{year}{2002}
+  \endentry
+
+  \entry{Felippa2003}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FCA}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={Carlos\bibnamedelima A.},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCA1}
+    \strng{fullhash}{FCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{16 - 18}
+    \field{pages}{2125 \bibrangedash  2168}
+    \field{title}{A study of optimal membrane triangles with drilling freedoms}
+    \field{volume}{192}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Hau94}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=HB}{%
+         family={Haugen},
+         familyi={H\bibinitperiod},
+         given={Bj{\o}rn},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HB1}
+    \strng{fullhash}{HB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Buckling and Stability Problems for Thin Shell Structures
+  Using High Performance Finite Elements}
+    \list{location}{1}{%
+      {Colorado}%
+    }
+    \list{institution}{1}{%
+      {University of Colorado}%
+    }
+    \field{type}{Dissertation}
+    \field{year}{1994}
+  \endentry
+
+  \entry{Lyl93}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LM}{%
+         family={Lyly},
+         familyi={L\bibinitperiod},
+         given={Mikko},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Stenberg},
+         familyi={S\bibinitperiod},
+         given={Rolf},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vihinen},
+         familyi={V\bibinitperiod},
+         given={Teemu},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LMSRVT1}
+    \strng{fullhash}{LMSRVT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{3}
+    \field{pages}{343 \bibrangedash  357}
+    \field{title}{A stable bilinear element for the Reissner-Mindlin plate
+  model}
+    \field{volume}{110}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{1993}
+  \endentry
+
+  \entry{MACNEAL1982}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MRH}{%
+         family={Macneal},
+         familyi={M\bibinitperiod},
+         given={Richard\bibnamedelima H.},
+         giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MRH1}
+    \strng{fullhash}{MRH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{1}
+    \field{pages}{3 \bibrangedash  12}
+    \field{title}{Derivation of element stiffness matrices by assumed strain
+  distributions}
+    \field{volume}{70}
+    \field{journaltitle}{Nuclear Engineering and Design}
+    \field{year}{1982}
+  \endentry
+
+  \entry{Fel91}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MC}{%
+         family={Militello},
+         familyi={M\bibinitperiod},
+         given={Carmelo},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=FCA}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={Carlos\bibnamedelima A.},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MCFCA1}
+    \strng{fullhash}{MCFCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{issue}{2}
+    \field{pages}{217\bibrangedash 246}
+    \field{title}{The First ANDES Elements: 9-DOF Plate Bending Triangles}
+    \field{volume}{93}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{1991}
+  \endentry
+
+  \entry{Mohan97}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=MP}{%
+         family={Mohan},
+         familyi={M\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MP1}
+    \strng{fullhash}{MP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Development and applications of a flat triangular element for
+  thin laminated shells}
+    \list{location}{1}{%
+      {Virginia}%
+    }
+    \list{institution}{2}{%
+      {Virginia Polytechnic Institute}%
+      {State University}%
+    }
+    \field{type}{Dissertation}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Mostafa11}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=MM}{%
+         family={Mostafa},
+         familyi={M\bibinitperiod},
+         given={Mohammadreza},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MM1}
+    \strng{fullhash}{MM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{A geometric nonlinear solid-shell element based on ANDES, ANS
+  and EAS concepts}
+    \list{location}{1}{%
+      {Colorado}%
+    }
+    \list{institution}{1}{%
+      {University of Colorado}%
+    }
+    \field{type}{Dissertation}
+    \field{year}{2011}
+  \endentry
+
+  \entry{Ngu13}{article}{}
+    \name{author}{4}{}{%
+      {{hash=NTT}{%
+         family={Nguyen-Thoi},
+         familyi={N\bibinitperiod-T\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PVP}{%
+         family={Phung-Van},
+         familyi={P\bibinitperiod-V\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=THC}{%
+         family={Thai-Hoang},
+         familyi={T\bibinitperiod-H\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=NXH}{%
+         family={Nguyen-Xuan},
+         familyi={N\bibinitperiod-X\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NTT+1}
+    \strng{fullhash}{NTTPVPTHCNXH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{pages}{32 \bibrangedash  45}
+    \field{title}{A cell-based smoothed discrete shear gap method (CS-DSG3)
+  using triangular elements for static and free vibration analyses of shell
+  structures}
+    \field{volume}{74}
+    \field{journaltitle}{International Journal of Mechanical Sciences}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Nguyen2009}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NVH}{%
+         family={Nguyen-Van},
+         familyi={N\bibinitperiod-V\bibinitperiod},
+         given={Hieu},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MDN}{%
+         family={Mai-Duy},
+         familyi={M\bibinitperiod-D\bibinitperiod},
+         given={Nam},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=TCT}{%
+         family={Tran-Cong},
+         familyi={T\bibinitperiod-C\bibinitperiod},
+         given={Thanh.},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NVHMDNTCT1}
+    \strng{fullhash}{NVHMDNTCT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{number}{2}
+    \field{pages}{81 \bibrangedash  112}
+    \field{title}{An improved quadrilateral flat element with drilling degrees
+  of freedom for shell structural analysis}
+    \field{volume}{49}
+    \field{journaltitle}{CMES: Computer Modeling in Engineering and Sciences}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Ram16}{article}{}
+    \name{author}{3}{}{%
+      {{hash=RG}{%
+         family={Rama},
+         familyi={R\bibinitperiod},
+         given={Gil},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Marinkovic},
+         familyi={M\bibinitperiod},
+         given={Dragan},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zehn},
+         familyi={Z\bibinitperiod},
+         given={Manfred},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RGMDZM1}
+    \strng{fullhash}{RGMDZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{issue}{2}
+    \field{pages}{420\bibrangedash 431}
+    \field{title}{Efficient Co-Rotational 3-Node Shell Element}
+    \field{volume}{9}
+    \field{journaltitle}{American Journal of Engineering and Applied Sciences}
+    \field{year}{2016}
+  \endentry
+
+  \entry{RammLitBook04}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RE}{%
+         family={Ramm},
+         familyi={R\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=WWA}{%
+         family={Wall},
+         familyi={W\bibinitperiod},
+         given={W.\bibnamedelima A.},
+         giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Ltd.}%
+    }
+    \strng{namehash}{REWWA1}
+    \strng{fullhash}{REWWA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{1}
+    \field{pages}{381 \bibrangedash  427}
+    \field{title}{Shell structures - a sensitive interrelation between physics
+  and numerics}
+    \field{volume}{60}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Ram02}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RE}{%
+         family={Ramm},
+         familyi={R\bibinitperiod},
+         given={Ekkehard},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {vdf Hochschulverlag AG}%
+    }
+    \strng{namehash}{RE1}
+    \strng{fullhash}{RE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Heinz Isler, Schalen: Katalog zur Ausstellung}
+    \list{location}{1}{%
+      {Zurich}%
+    }
+    \field{year}{2002}
+  \endentry
+
+  \entry{Simo1990}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SJC}{%
+         family={Simo},
+         familyi={S\bibinitperiod},
+         given={J.\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=RMS}{%
+         family={Rifai},
+         familyi={R\bibinitperiod},
+         given={M.\bibnamedelima S.},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Ltd}%
+    }
+    \strng{namehash}{SJCRMS1}
+    \strng{fullhash}{SJCRMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{8}
+    \field{pages}{1595\bibrangedash 1638}
+    \field{title}{A class of mixed assumed strain methods and the method of
+  incompatible modes}
+    \field{volume}{29}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1990}
+  \endentry
+
+  \entry{Wall2000}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WWA}{%
+         family={Wall},
+         familyi={W\bibinitperiod},
+         given={Wolfgang\bibnamedelima A},
+         giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gee},
+         familyi={G\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RE}{%
+         family={Ramm},
+         familyi={R\bibinitperiod},
+         given={Ekkehard},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WWAGMRE1}
+    \strng{fullhash}{WWAGMRE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Proceedings of ECCM}
+    \field{title}{The challenge of a three-dimensional shell formulation-the
+  conditioning problem}
+    \field{volume}{99}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Yang2000}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YHTY}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Henry T.\bibnamedelima Y.},
+         giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim
+  Y\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Saigal},
+         familyi={S\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Masud},
+         familyi={M\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KRK}{%
+         family={Kapania},
+         familyi={K\bibinitperiod},
+         given={R.\bibnamedelima K.},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons, Ltd.}%
+    }
+    \strng{namehash}{YHTY+1}
+    \strng{fullhash}{YHTYSSMAKRK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{1-3}
+    \field{title}{A survey of recent shell finite elements}
+    \field{volume}{47}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Zien2Vol2000}{book}{}
+    \name{author}{2}{}{%
+      {{hash=ZO}{%
+         family={Zienkiewicz},
+         familyi={Z\bibinitperiod},
+         given={O.C.},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Taylor},
+         familyi={T\bibinitperiod},
+         given={R.L.},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Butterworth-Heinemann}%
+    }
+    \strng{namehash}{ZOTR1}
+    \strng{fullhash}{ZOTR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{title}{The Finite Element Method. Volume 2: Solid Mechanics}
+    \list{location}{1}{%
+      {Oxford}%
+    }
+    \field{year}{2000}
+  \endentry
+
+  \entry{Zie77}{book}{}
+    \name{author}{1}{}{%
+      {{hash=ZO}{%
+         family={Zienkiewicz},
+         familyi={Z\bibinitperiod},
+         given={Olgierd},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {McGraw-Hill}%
+    }
+    \strng{namehash}{ZO1}
+    \strng{fullhash}{ZO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{title}{The Finite Element Method}
+    \list{location}{1}{%
+      {New York City}%
+    }
+    \field{year}{1977}
+  \endentry
+\endsortlist
+\endinput

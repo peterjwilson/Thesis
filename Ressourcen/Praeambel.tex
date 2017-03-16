@@ -19,6 +19,124 @@
 \addto\captionsenglish{\renewcommand*\contentsname{Table of Contents} }
 \fi
 %\usepackage[ngerman]{babel} % Deutsche Lokalisierung
+
+
+
+% Added by peter below 
+\usepackage{graphicx}
+
+\usepackage{float} % Get support for floating figures
+
+\usepackage{tikz}
+
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,matrix}
+
+\usepackage{pgfplots}
+
+\usepackage{lettrine}
+
+\usepackage{tabularx}
+
+\usepackage{varioref} % More descriptive referencing
+
+\usepackage{listings} % Code application environment
+
+\usepackage{multicol}
+
+\usepackage[style=numeric,sortcites=true,block=nbpar,backend=bibtex8]{biblatex} % Get support for the bibliography 
+
+\usepackage{pdfpages}            % Inserting pdf pages
+
+
+% added by peter above
+
+
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{amssymb}
+
+\usepackage{makeidx}
+
+\usepackage[english]{babel} %Language package
+
+\usepackage{blindtext} %inserting random text
+
+\usepackage{subfig} % Get support for the subfigures
+
+\usepackage{float} % Get support for floating figures
+
+\usepackage{mathrsfs} % Get support for mathematical symbols
+
+\usepackage{graphicx} % Get support for LaTeX graphics
+
+\usepackage{microtype}% Disable ligatures
+
+\DisableLigatures[f]{encoding = *, family = * } % Get support for multiple language packages
+
+\usepackage{mathptmx}
+
+%\usepackage{fancyhdr} ----------------------------------------------
+
+\usepackage{nopageno}
+
+\usepackage{array}
+
+\usepackage{multirow}
+
+\usepackage{appendix} % Get support for the appendix
+
+\usepackage{txfonts} % Get support for times New Roman
+
+%\usepackage[ansinew]{inputenc} 
+
+\usepackage{xcolor} % Get support for coloring parts of the text
+
+\usepackage[autostyle,german=guillemets]{csquotes}
+
+\usepackage[style=numeric,sortcites=true,block=nbpar,backend=bibtex8]{biblatex} % Get support for the bibliography 
+
+%\usepackage[a4paper,vmargin={25mm,30mm},hmargin={30mm,20mm},footnotesep=1cm]{geometry} % Adjust the geometry of the outcome pdf
+
+%\usepackage[a4paper,footnotesep=1cm]{geometry} % Adjust the geometry of the outcome pdf
+
+\usepackage[T1]{fontenc}
+
+\usepackage{lmodern} 
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{images/}} % Set the default folder for images
+
+\usepackage{enumitem} % Required for manipulating the whitespace between and within lists
+
+\usepackage{subfig} % Required for creating figures with multiple parts (subfigures)
+
+\usepackage{amsmath,amssymb,amsthm} % For including math equations, theorems, symbols, etc
+
+\usepackage{varioref} % More descriptive referencing
+
+\usepackage[onehalfspacing]{setspace} 
+
+\usepackage{listings} % Code application environment
+
+\usepackage{multicol}
+
+\usepackage[section]{placeins} % Figures and tables remain in their section
+
+\usepackage{here} 
+
+
+
+% --------------------------------------------------
+%
+%        ORIGINAL PACKAGES BELOW
+%
+% --------------------------------------------------
+
+
+
+
 \usepackage{graphicx} % Grafiken
 
 % Schriftart Helvetica:
@@ -65,7 +183,7 @@
 \usepackage{pdfpages}            % Inserting pdf pages
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{subfigure}
+%\usepackage{subfigure} ---------- disabled by pw
 
 \let\fref\undefined
 \usepackage[plain]{fancyref}
@@ -87,6 +205,24 @@
 \frefformat{plain}{\fancyrefanhlabelprefix}{Anhang \fancyreftightspacing#1} % appendix / Anhang
 \newcommand*{\fancyrefkaplabelprefix}{kap}
 \frefformat{plain}{\fancyrefkaplabelprefix}{Kapitel \fancyreftightspacing#1} % chapter / Kpaitel
+
+
+
+
+
+
+
+
+% --------------------------------------------------
+%
+%        PROBABLY NECESSARY PACKAGES BELOW
+%
+% --------------------------------------------------
+
+
+
+
+
 
 % svg figures
 \newcommand{\executeiffilenewer}[3]{%
@@ -114,3 +250,4 @@
 %\usepackage{showframe} % Layout-Boxen anzeigen
 %\usepackage{layout} % Layout-Informationen
 %\usepackage{printlen} % Längenwerte ausgeben
+

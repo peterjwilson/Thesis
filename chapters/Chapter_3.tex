@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                              %%%%%%
+%%%%  Author: Peter Wilson                        %%%%%%
+%%%%                                              %%%%%%
+%%%%  DSG triangle element                        %%%%%%
+%%%%                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%fref generates automatically the respective abreviation/word in the text for the reference. You just have to define a label starting with the respective keyword.
+%english: chap, sec, fig, eq, app
+%deutsch: chap/kap, abs, abb, gl, anh
+%see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
+
+
+\renewcommand{\Thema}{DSG triangle shell element}
+
+\setcounter{MaxMatrixCols}{20}
+
+
+\chapter{DSG triangle shell element}
+\label{chap:chapter_3}
+
+This section deals with the derivation and implementation of a thick triangular shell element in KRATOS.
+
+\section{Stiffness matrix formulation}
+
+Based on Reissner Mindlin shell theory, the thick shell considers internal energy contributions from membrane, bending and shear components. As discussed in the background, basic shell elements derived from this shell theory face locking problems as the shell slenderness ratio increases. The element implemented is Bletzinger's Discrete Shear Gap (DSG) shell \cite{Ble00}, which incorporates an enhanced shear strain formulation to mitigate the aforementioned locking. This triangular element has 18 DOFs ordered as such:
+
+\begin{equation} 
+\mathbf{u}^T = 
+\begin{pmatrix}
+\mathbf{u_1} & \mathbf{u_2} & \mathbf{u_3}
+\end{pmatrix} 
+\hspace{10mm}
+where
+\hspace{10mm}
+\mathbf{u}_i^T = 
+\begin{pmatrix}
+{u_{xi}} & {u_{yi}} & {u_{yi}} & {\theta_{xi}} & {\theta_{yi}} & {\theta_{zi}}
+\end{pmatrix}
+\label{eqt1}
+\end{equation}
+
+The element displacement field is related to the discrete nodal values via shape functions.
+
+\begin{equation} 
+\mathbf{u}(x, y) = \sum_{i=1}^3 \ N_i(x,y) \mathbf{u}_i
+\label{eqt2}
+\end{equation}
+
+$N_i$ are the standard linear triangle shape functions, referred to the cartesian system.
+
+
+\begin{gather} 
+	\begin{aligned}
+		&N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]
+		\\
+		&N_2 (x , y) = \frac{1}{2 A} \big[ (x_3 y_1 - x_1 y_3) + x(y_3 - y_1) + y(x_1 - x_3) \big]
+		\\
+		&N_3 (x , y) = \frac{1}{2 A} \big[ (x_1 y_2 - x_2 y_1) + x(y_1 - y_2) + y(x_2 - x_1) \big]
+		\label{eqt3}
+	\end{aligned}
+\end{gather}
+
+Analogous to internal energy, the element stiffness matrix of the DSG triangle can be decomposed into membrane, bending and shear contributions.
+
+\begin{equation} 
+\mathbf{K} = \mathbf{K}_{mem} + \mathbf{K}_{bend} + \mathbf{K}_{shear}
+\label{eqt4}
+\end{equation}
+
+The above expression can be expanded into strain-displacement and material matrices relevant for each component.
+
+\begin{equation} 
+\mathbf{K} = \int_A  (\mathbf{B}_{mem}^T \mathbf{C}_{mem} \mathbf{B}_{mem} + \mathbf{B}_{bend}^T \mathbf{C}_{bend} \mathbf{B}_{bend} + \mathbf{B}_{shear}^T \mathbf{C}_{shear} \mathbf{B}_{shear})\ dA
+\label{eqt5}
+\end{equation}
+
+Rama et al. \cite{Ram16} present the DSG formulation in a similar manner, detailing the strain displacement matrix and material material of each constituent separately.
+
+The membrane strain displacement matrix can be expressed as:
+
+\begin{equation} 
+\mathbf{B}_{mem} =  \begin{pmatrix}
+\mathbf{B}_{mem_1} & \mathbf{B}_{mem_2} & \mathbf{B}_{mem_3}
+\end{pmatrix} 
+\label{eqt6}
+\end{equation}
+
+\begin{equation} 
+\mathbf{B}_{mem_i} =  \begin{pmatrix}
+N_{i,x} & 0 & 0 & 0 & 0 & 0 \\
+0 & N_{i,y} & 0 & 0 & 0 & 0 \\
+N_{i,y} & N_{i,x} & 0 & 0 & 0 & 0 \\
+\end{pmatrix} 
+\label{eqt7}
+\end{equation}
+
+The bending strain displacement matrix can be presented in a similar manner:
+
+\begin{equation} 
+\mathbf{B}_{bend} =  \begin{pmatrix}
+\mathbf{B}_{bend_1} & \mathbf{B}_{bend_2} & \mathbf{B}_{bend_3}
+\end{pmatrix} 
+\label{eqt8}
+\end{equation}
+
+\begin{equation} 
+\mathbf{B}_{bend_i} =  \begin{pmatrix}
+0 & 0 & 0 & 0 & N_{i,x} & 0 \\
+0 & 0 & 0 & -N_{i,y} & 0 & 0 \\
+0 & 0 & 0 & -N_{i,x} & N_{i,y} & 0
+\end{pmatrix} 
+\label{eqt9}
+\end{equation}
+
+Finally, the shear strain displacement matrix, the feature of the DSG element, is as follows:
+
+\begin{gather} 
+	\begin{aligned}
+		& \mathbf{B}_{shear} =  \frac{1}{2 A}
+		\begin{pmatrix}
+			0 & 0 & b-c & 0 & A & 0 & 0 & 0 & c & \frac{-bc}{2} & \frac{ac}{2} & 0 & 0 & 0 & -b & \frac{bc}{2} & \frac{bd}{2} & 0 \\
+			0 & 0 & d-a & -A & 0 & 0 & 0 & 0 & -d & \frac{bd}{2} & \frac{-ad}{2} & 0 & 0 & 0 & a & \frac{-ac}{2} & \frac{ad}{2} & 0
+		\end{pmatrix}
+		\\
+		& with:\ 
+		a = x_2-x_1,\ 
+		b = y_2-y_1,\ 
+		c = y_3-y_1,\ 
+		d = x_3 - x_1
+		\label{eqt10}
+	\end{aligned}
+\end{gather}
+
+The material matrices for the membrane and bending parts are presented below:
+
+\begin{equation} 
+\mathbf{C}_{mem} =  \frac{Et}{(1-\nu^2)}
+\begin{pmatrix}
+1 & \nu & 0 \\
+\nu & 1 & 0 \\
+0 & 0 & \frac{(1-\nu)}{2}
+\end{pmatrix}
+\label{eqt11}
+\end{equation}
+
+\begin{equation} 
+\mathbf{C}_{bend} =  \frac{E t^3}{12(1-\nu^2)}
+\begin{pmatrix}
+1 & \nu & 0 \\
+\nu & 1 & 0 \\
+0 & 0 & \frac{(1-\nu)}{2}
+\end{pmatrix}
+\label{eqt12}
+\end{equation}
+
+To futher improve the DSG element performance, Bischoff and Bletzinger \cite{Bis04} \cite{Bis01} applied the enhancement approach that Lyly suggested for MITC-4 elements \cite{Lyl93}. This approach modifies the internal shear energy term by scaling the shear constitutive matrix with a correction term $\tau$ incorporating the element thickness and an indicator of element size ($h_k$ = longest element side length). The revised shear constitutive matrix is thus:
+
+\begin{equation} 
+\mathbf{C}_{shear} =  \tau \kappa Gt
+\begin{pmatrix}
+1 & \nu \\
+\nu & 1 
+\end{pmatrix}
+=
+\frac{\kappa G t^3}{t^2 + \alpha h_k^2}
+\begin{pmatrix}
+1 & \nu \\
+\nu & 1 
+\end{pmatrix}
+\label{eqt14}
+\end{equation}
+
+where $\kappa = \frac{5}{6}$ is the shear correction factor and $\alpha = 0.1$ as per \cite{Lyl93}.\\
+
+At a basic level, shear locking in bending plates is driven by a mismatch of internal energy allocation between bending ($\Pi_{bend} \propto t^3$) and shear components ($\Pi_{shear} \propto t$) as $t \rightarrow 0$.  This modification somewhat alleviates the locking by 'encouraging' the internal shear energy to scale with the cube of the thickness too, thus reducing the artificial energy disparity.\\
+
+
+Although all stiffness components are assembled, one notices that lack of entries corresponding to the drilling DOF $\theta_{zi}$ currently renders the element stiffness matrix singular. Nguyen-Thoi et al. \cite{Ngu13} proposed to remedy this rotational singularity by setting the drilling DOF entries to one one-thousandth of the maximum diagonal entry in the element stiffness matrix.
+
+\begin{equation} 
+K_{\theta z} =  \frac{max(K_{el\ ij}\delta_{ij})}{1000}
+\label{eqt15}
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Stiffness matrix implementation}
+asdfasdfasdf
+
+
+ADD DIAGRAM AFTER CODE IS NICE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Mass matrix formulation}
+
+The mass matrix is necessary to facilitate dynamic analysis with the thick triangular shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
+
+\begin{equation} 
+\mathbf{M} =  
+\begin{pmatrix}
+\mathbf{M}_1 & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \mathbf{M}_2 & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \mathbf{M}_3
+\end{pmatrix}
+\hspace{10mm}
+where
+\hspace{10mm}
+\mathbf{M}_i =  
+\begin{pmatrix}
+\bar{m} & 0 & 0 & 0 & 0 & 0\\
+0 & \bar{m} & 0 & 0 & 0 & 0\\
+0 & 0 & \bar{m} &0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\label{eqt15}
+\end{equation}
+
+The general lumped mass is determined for a multi-ply material with $n$ plies each of $t_i$ thickness and $\rho_i$ density as follows:
+
+\begin{equation} 
+\bar{m} = \frac{A}{3} \sum_{i=1}^n \rho_i t_i
+\label{eqt16}
+\end{equation}
+
+For a single layer material of area $A$ this reduces to:
+
+\begin{equation} 
+\bar{m} = \frac{A}{3} \rho t
+\label{eqt17}
+\end{equation}
