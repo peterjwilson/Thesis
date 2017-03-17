@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  16 MAR 2017 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  17 MAR 2017 08:39
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2650,60 +2650,143 @@ chapter 1.
 ifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 \chapter
+l.15 \chapter
              {Plates and shells} [1
 
 
 ]
 chapter 2.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 10.40245pt on input line 22.
+(Font)              scaled to size 10.40245pt on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 37.09024pt on input line 22.
+(Font)              scaled to size 37.09024pt on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 53.08348pt on input line 22.
+(Font)              scaled to size 53.08348pt on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 22.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.40245pt on input line 22.
-<images/degenerateshell.png, id=167, 2075.95575pt x 1061.76675pt>
-File: images/degenerateshell.png Graphic file (type png)
+(Font)              scaled to size 10.40245pt on input line 20.
 
-<use images/degenerateshell.png>
-Package pdftex.def Info: images/degenerateshell.png used on input line 32.
-(pdftex.def)             Requested size: 341.43306pt x 174.61691pt.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 33.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 33.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 33.
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 \end{figure}
-                  [2
+l.26 
+      [2
 
-]
+] <images/degenerateshell.png, id=172, 2075.95575pt x 1061.76675pt>
+File: images/degenerateshell.png Graphic file (type png)
+
+<use images/degenerateshell.png>
+Package pdftex.def Info: images/degenerateshell.png used on input line 30.
+(pdftex.def)             Requested size: 341.43306pt x 174.61691pt.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 31.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 31.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 31.
+
 <images/shellModels.png, id=174, 1068.99374pt x 569.7285pt>
 File: images/shellModels.png Graphic file (type png)
 
 <use images/shellModels.png>
-Package pdftex.def Info: images/shellModels.png used on input line 46.
+Package pdftex.def Info: images/shellModels.png used on input line 44.
 (pdftex.def)             Requested size: 341.43306pt x 181.9691pt.
  [3 <./images/degenerateshell.png>]
 <images/shellsconfig.png, id=186, 2051.86575pt x 1093.08376pt>
 File: images/shellsconfig.png Graphic file (type png)
 
 <use images/shellsconfig.png>
-Package pdftex.def Info: images/shellsconfig.png used on input line 56.
+Package pdftex.def Info: images/shellsconfig.png used on input line 54.
 (pdftex.def)             Requested size: 341.43306pt x 181.88551pt.
  [4 <./images/shellModels.png> <./images/shellsconfig.png>]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 64.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 64.
+(Font)              scaled to size 11.39996pt on input line 62.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+[5] <images/bernoullie.png, id=212, 471.56175pt x 183.084pt>
+File: images/bernoullie.png Graphic file (type png)
+
+<use images/bernoullie.png>
+Package pdftex.def Info: images/bernoullie.png used on input line 171.
+(pdftex.def)             Requested size: 227.62204pt x 88.37657pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+[6 <./images/bernoullie.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--207
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+[8] <images/timoshenkobeam.png, id=249, 1477.9215pt x 714.2685pt>
+File: images/timoshenkobeam.png Graphic file (type png)
+
+<use images/timoshenkobeam.png>
+Package pdftex.def Info: images/timoshenkobeam.png used on input line 329.
+(pdftex.def)             Requested size: 227.62204pt x 110.00204pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+[9 <./images/timoshenkobeam.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+[10] <images/eigenvaluespectra.png, id=273, 1668.2325pt x 1061.1645pt>
+File: images/eigenvaluespectra.png Graphic file (type png)
+
+<use images/eigenvaluespectra.png>
+Package pdftex.def Info: images/eigenvaluespectra.png used on input line 442.
+(pdftex.def)             Requested size: 341.43306pt x 217.1839pt.
+ [11 <./images/eigenvaluespectra.png>]
+Overfull \hbox (5.45822pt too wide) detected at line 516
+[] \OMS/lmsy/m/n/10.95   \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \OT1/lmr/m/n/
+10.95 [] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 \OT1/lmr/m/n/10.95 []) = 
+\OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 ([] + []) = [][] [] : [][] : \OML/lmm
+/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
+  + [][] [] : \OML/lmm/m/it/10.95 Gt\OT1/lmr/bx/n/10.95 I \OT1/lmr/m/n/10.95 :
+ \OML/lmm/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
+
+ []
 
 
 Package scrlayer-scrpage Warning: \headheight to low.
@@ -2713,8 +2796,8 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=21.03394pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 1
-14.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 5
+21.
 
 
 Overfull \vbox (1.92393pt too high) has occurred while \output is active []
@@ -2729,135 +2812,107 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{42.06789pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 11
-4.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 52
+1.
 
-[5] <images/bernoullie.png, id=212, 471.56175pt x 183.084pt>
-File: images/bernoullie.png Graphic file (type png)
-
-<use images/bernoullie.png>
-Package pdftex.def Info: images/bernoullie.png used on input line 176.
-(pdftex.def)             Requested size: 227.62204pt x 88.37657pt.
- [6] [7 <./images/bernoullie.png>] [8]
-<images/timoshenkobeam.png, id=247, 1477.9215pt x 714.2685pt>
-File: images/timoshenkobeam.png Graphic file (type png)
-
-<use images/timoshenkobeam.png>
-Package pdftex.def Info: images/timoshenkobeam.png used on input line 334.
-(pdftex.def)             Requested size: 227.62204pt x 110.00204pt.
- [9] [10 <./images/timoshenkobeam.png>] [11]
-<images/eigenvaluespectra.png, id=277, 1668.2325pt x 1061.1645pt>
-File: images/eigenvaluespectra.png Graphic file (type png)
-
-<use images/eigenvaluespectra.png>
-Package pdftex.def Info: images/eigenvaluespectra.png used on input line 447.
-(pdftex.def)             Requested size: 341.43306pt x 217.1839pt.
- [12 <./images/eigenvaluespectra.png>]
-[13]
-Overfull \hbox (5.45822pt too wide) detected at line 521
-[] \OMS/lmsy/m/n/10.95   \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \OT1/lmr/m/n/
-10.95 [] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 \OT1/lmr/m/n/10.95 []) = 
-\OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 ([] + []) = [][] [] : [][] : \OML/lmm
-/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
-  + [][] [] : \OML/lmm/m/it/10.95 Gt\OT1/lmr/bx/n/10.95 I \OT1/lmr/m/n/10.95 :
- \OML/lmm/m/it/10.95 [] d\OT1/lmr/m/n/10.95 
-
- []
-
-<images/membranelocking.png, id=289, 2107.875pt x 741.972pt>
+[12] <images/membranelocking.png, id=288, 2107.875pt x 741.972pt>
 File: images/membranelocking.png Graphic file (type png)
 
 <use images/membranelocking.png>
-Package pdftex.def Info: images/membranelocking.png used on input line 535.
+Package pdftex.def Info: images/membranelocking.png used on input line 530.
 (pdftex.def)             Requested size: 398.33858pt x 140.20627pt.
- [14] [15 <./images/membranelocking.png>]
-<images/shearlockingredint.png, id=309, 3047.385pt x 1310.496pt>
+ [13 <./images/membranelocking.png>]
+<images/shearlockingredint.png, id=299, 3047.385pt x 1310.496pt>
 File: images/shearlockingredint.png Graphic file (type png)
 
 <use images/shearlockingredint.png>
-Package pdftex.def Info: images/shearlockingredint.png used on input line 561.
+Package pdftex.def Info: images/shearlockingredint.png used on input line 556.
 (pdftex.def)             Requested size: 398.33858pt x 171.2903pt.
- [16 <./images/shearlockingredint.png>]
-<images/mitc4.png, id=328, 3502.686pt x 1310.496pt>
+ [14] [15 <./images/shearlockingredint.png>] <images/mitc4.png, id=326, 3502.68
+6pt x 1310.496pt>
 File: images/mitc4.png Graphic file (type png)
  <use images/mitc4.png>
-Package pdftex.def Info: images/mitc4.png used on input line 580.
+Package pdftex.def Info: images/mitc4.png used on input line 575.
 (pdftex.def)             Requested size: 455.24408pt x 170.31047pt.
 
-Overfull \hbox (31.298pt too wide) in paragraph at lines 580--581
+Overfull \hbox (31.298pt too wide) in paragraph at lines 575--576
  [][] 
  []
 
-[17 <./images/mitc4.png>] <images/DSG.png, id=352, 1547.7825pt x 773.89125pt>
+[16 <./images/mitc4.png>] <images/DSG.png, id=349, 1547.7825pt x 773.89125pt>
 File: images/DSG.png Graphic file (type png)
 
 <use images/DSG.png>
-Package pdftex.def Info: images/DSG.png used on input line 598.
+Package pdftex.def Info: images/DSG.png used on input line 593.
 (pdftex.def)             Requested size: 227.62204pt x 113.81142pt.
- [18 <./images/DSG.png>]
-<images/8nodeseren.png, id=368, 1070.8005pt x 287.8755pt>
+ [17 <./images/DSG.png>]
+<images/8nodeseren.png, id=366, 1070.8005pt x 287.8755pt>
 File: images/8nodeseren.png Graphic file (type png)
 
 <use images/8nodeseren.png>
-Package pdftex.def Info: images/8nodeseren.png used on input line 612.
+Package pdftex.def Info: images/8nodeseren.png used on input line 607.
 (pdftex.def)             Requested size: 426.79134pt x 114.73964pt.
 
-Overfull \hbox (2.84526pt too wide) in paragraph at lines 612--613
+Overfull \hbox (2.84526pt too wide) in paragraph at lines 607--608
  [][] 
  []
 
-[19 <./images/8nodeseren.png>]
-<images/drillingDOF.png, id=388, 401.0985pt x 334.851pt>
+[18 <./images/8nodeseren.png>]
+<images/drillingDOF.png, id=386, 401.0985pt x 334.851pt>
 File: images/drillingDOF.png Graphic file (type png)
 
 <use images/drillingDOF.png>
-Package pdftex.def Info: images/drillingDOF.png used on input line 650.
+Package pdftex.def Info: images/drillingDOF.png used on input line 645.
 (pdftex.def)             Requested size: 227.62204pt x 190.02399pt.
- [20]
-Underfull \hbox (badness 2065) in paragraph at lines 686--686
+ [19 <./images/drillingDOF.png>]
+Underfull \hbox (badness 2065) in paragraph at lines 680--680
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 686--686
+Underfull \hbox (badness 2065) in paragraph at lines 680--680
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 686--686
+Underfull \hbox (badness 5847) in paragraph at lines 680--680
 []|\T1/phv/m/n/10.95 (+20) Node num-ber-ing de-pen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--686
+Underfull \hbox (badness 10000) in paragraph at lines 680--680
 \T1/phv/m/n/10.95 (+20) men-ta-tion and pos-si-bly
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 686--686
+Underfull \hbox (badness 2065) in paragraph at lines 680--680
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Overfull \hbox (10.40245pt too wide) in paragraph at lines 686--687
+Overfull \hbox (10.40245pt too wide) in paragraph at lines 680--681
 [][] 
  []
 
-[21 <./images/drillingDOF.png>] [22]
-Overfull \hbox (10.40245pt too wide) in paragraph at lines 717--718
+[20]
+Overfull \vbox (5.76631pt too high) has occurred while \output is active []
+
+
+[21]
+Overfull \hbox (10.40245pt too wide) in paragraph at lines 708--709
 [][] 
  []
 
-) (chapters/Chapter_3.tex [23]
+) (chapters/Chapter_3.tex [22]
 chapter 3.
-[24
+[23
 
-] [25]
+] [24]
 Overfull \hbox (24.09605pt too wide) in paragraph at lines 135--135
 [] 
  []
 
-[26]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
@@ -2867,9 +2922,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
-[27]) (chapters/Chapter_4.tex [28]
+[26]) (chapters/Chapter_4.tex [27]
 chapter 4.
-<images/bendplusmemequalshell.png, id=466, 861.2175pt x 426.99525pt>
+<images/bendplusmemequalshell.png, id=462, 861.2175pt x 426.99525pt>
 File: images/bendplusmemequalshell.png Graphic file (type png)
 
 <use images/bendplusmemequalshell.png>
@@ -2885,10 +2940,10 @@ File: images/bernoullie.png Graphic file (type png)
 <use images/bernoullie.png>
 Package pdftex.def Info: images/bernoullie.png used on input line 40.
 (pdftex.def)             Requested size: 170.71652pt x 66.28174pt.
- [29
+ [28
 
  <./images/bendplusmemequalshell.png>]
-<images/reissner.png, id=473, 548.0475pt x 261.3765pt>
+<images/reissner.png, id=469, 548.0475pt x 261.3765pt>
 File: images/reissner.png Graphic file (type png)
 
 <use images/reissner.png>
@@ -2896,16 +2951,16 @@ Package pdftex.def Info: images/reissner.png used on input line 50.
 (pdftex.def)             Requested size: 284.52756pt x 135.70117pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 62.
- [30 <./images/reissner.png>] [31]
+ [29 <./images/reissner.png>] [30]
 chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-[32
+[31
 
-] [33]
+] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
@@ -2915,13 +2970,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
-[34]
+[33]
 Overfull \hbox (2.45512pt too wide) detected at line 290
 [][] \OT1/lmr/m/n/10.95 = [] \OML/lmm/m/it/10.95 where \OT1/lmr/bx/n/10.95 H \O
 T1/lmr/m/n/10.95 = []  \OML/lmm/m/it/10.95 and [] \OT1/lmr/m/n/10.95 = []
  []
 
-[35]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
@@ -2931,12 +2986,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
-[36] [37] [38]
+[35] [36] [37]
 Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
-[39]
+[38]
 File: images/8nodeseren.png Graphic file (type png)
  <use images/8nodeseren.png>
 Package pdftex.def Info: images/8nodeseren.png used on input line 493.
@@ -2946,7 +3001,7 @@ Overfull \hbox (2.84526pt too wide) in paragraph at lines 493--494
  [][] 
  []
 
-[40]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
@@ -2956,12 +3011,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
-[41]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
-[42] [43] [44]
+[41] [42] [43]
 Underfull \hbox (badness 10000) in paragraph at lines 735--736
 
  []
@@ -2980,7 +3035,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
-[45]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 739--740
 \T1/phv/m/n/10.95 (+20) and
  []
@@ -3005,7 +3060,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 743--744
 
  []
 
-[46]
+[45]
 Overfull \hbox (232.32095pt too wide) in paragraph at lines 786--787
 \T1/phv/m/n/10.95 (-20) of the el-e-ment stiff-ness cal-cu-la-tion, it-self cal
 l-ing three key meth-ods: $[]$
@@ -3031,27 +3086,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
  []
 
-[47] <images/scordelisroof.png, id=628, 769.07326pt x 428.802pt>
+[46] <images/scordelisroof.png, id=624, 769.07326pt x 428.802pt>
 File: images/scordelisroof.png Graphic file (type png)
 
 <use images/scordelisroof.png>
 Package pdftex.def Info: images/scordelisroof.png used on input line 832.
 (pdftex.def)             Requested size: 227.62204pt x 126.9077pt.
- [48 <./images/scordelisroof.png>]
-<images/pinchedcylinder.png, id=639, 794.36775pt x 459.51675pt>
+ [47 <./images/scordelisroof.png>]
+<images/pinchedcylinder.png, id=635, 794.36775pt x 459.51675pt>
 File: images/pinchedcylinder.png Graphic file (type png)
 
 <use images/pinchedcylinder.png>
 Package pdftex.def Info: images/pinchedcylinder.png used on input line 869.
 (pdftex.def)             Requested size: 227.62204pt x 131.6718pt.
- [49 <./images/pinchedcylinder.png>]
-<images/pinchedhemisphere.png, id=649, 791.95876pt x 393.26926pt>
+ [48 <./images/pinchedcylinder.png>]
+<images/pinchedhemisphere.png, id=645, 791.95876pt x 393.26926pt>
 File: images/pinchedhemisphere.png Graphic file (type png)
 
 <use images/pinchedhemisphere.png>
 Package pdftex.def Info: images/pinchedhemisphere.png used on input line 907.
 (pdftex.def)             Requested size: 227.62204pt x 113.03102pt.
- [50 <./images/pinchedhemisphere.png>]
+ [49 <./images/pinchedhemisphere.png>]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 937.
 
 
@@ -3061,13 +3116,13 @@ File: omsphv.fd
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 937.
 )
-(chapters/Chapter_5.tex [51]
+(chapters/Chapter_5.tex [50]
 chapter 6.
-) (chapters/Conclusions.tex [52
+) (chapters/Conclusions.tex [51
 
 ]
 chapter 7.
-) [53
+) [52
 
 ] (WissenschaftlicheArbeit.lof
 Overfull \hbox (107.18991pt too wide) in paragraph at lines 30--30
@@ -3085,12 +3140,12 @@ No file WissenschaftlicheArbeit.acr.
 \tf@lot=\write12
 \openout12 = `WissenschaftlicheArbeit.lot'.
 
- [54
+ [53
 
-] [55] [56
+] [54] [55
 
-] [57] [58]
-(chapters/Declaration.tex [59]
+] [56] [57]
+(chapters/Declaration.tex [58]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -3125,7 +3180,7 @@ No file WissenschaftlicheArbeit.acr.
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-[60
+[59
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
@@ -3145,8 +3200,8 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52971 strings out of 493333
- 1148048 string characters out of 3139194
+ 52970 strings out of 493333
+ 1148041 string characters out of 3139194
  1813837 words of memory out of 3000000
  55008 multiletter control sequences out of 15000+200000
  129275 words of font info for 268 fonts, out of 3000000 for 9000
@@ -3172,9 +3227,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfon
 ts/txsya.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (64 pages, 5076987 bytes).
+Output written on WissenschaftlicheArbeit.pdf (63 pages, 5076438 bytes).
 PDF statistics:
- 871 PDF objects out of 1000 (max. 8388607)
- 250 named destinations out of 1000 (max. 500000)
+ 867 PDF objects out of 1000 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
  43787 words of extra memory for PDF output out of 51595 (max. 10000000)
 
