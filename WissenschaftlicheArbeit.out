@@ -13,7 +13,8 @@
 \BOOKMARK [0][-]{chapter.5}{ANDES-DKT quadrilateral shell element}{}% 13
 \BOOKMARK [1][-]{section.5.1}{Stiffness matrix}{chapter.5}% 14
 \BOOKMARK [1][-]{section.5.2}{Implementation in KRATOS}{chapter.5}% 15
-\BOOKMARK [1][-]{section.5.3}{Element benchmarks}{chapter.5}% 16
-\BOOKMARK [0][-]{chapter.6}{Benchmarking}{}% 17
-\BOOKMARK [1][-]{section.6.1}{Nonlinear benchmarks}{chapter.6}% 18
-\BOOKMARK [0][-]{chapter.7}{Conclusions and Outlook}{}% 19
+\BOOKMARK [0][-]{chapter.6}{Benchmarking}{}% 16
+\BOOKMARK [1][-]{section.6.1}{Shell obstacle course}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.2}{Geometically nonlinear benchmarks}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.3}{Dynamics benchmarks}{chapter.6}% 19
+\BOOKMARK [0][-]{chapter.7}{Conclusions and Outlook}{}% 20
