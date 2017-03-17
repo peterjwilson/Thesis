@@ -586,6 +586,34 @@
     \field{year}{1994}
   \endentry
 
+  \entry{Jung13}{article}{}
+    \name{author}{2}{}{%
+      {{hash=JWY}{%
+         family={Jung},
+         familyi={J\bibinitperiod},
+         given={Woo-Young},
+         giveni={W\bibinitperiod-Y\bibinitperiod},
+      }}%
+      {{hash=HSC}{%
+         family={Han},
+         familyi={H\bibinitperiod},
+         given={Sung-Cheon},
+         giveni={S\bibinitperiod-C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JWYHSC1}
+    \strng{fullhash}{JWYHSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{An 8-Node Shell Element for Nonlinear Analysis of Shells
+  Using the Refined Combination of Membrane and Shear Interpolation Functions,}
+    \field{volume}{2013}
+    \field{journaltitle}{Mathematical Problems in Engineering}
+    \field{year}{2013}
+  \endentry
+
   \entry{Lyl93}{article}{}
     \name{author}{3}{}{%
       {{hash=LM}{%
@@ -936,6 +964,42 @@
     \field{journaltitle}{International Journal for Numerical Methods in
   Engineering}
     \field{year}{1990}
+  \endentry
+
+  \entry{Sze2004}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SK}{%
+         family={Sze},
+         familyi={S\bibinitperiod},
+         given={K.Y.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=LX}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={X.H.},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Lo},
+         familyi={L\bibinitperiod},
+         given={S.H.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SKLXLS1}
+    \strng{fullhash}{SKLXLS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{11}
+    \field{pages}{1551 \bibrangedash  1569}
+    \field{title}{Popular benchmark problems for geometric nonlinear analysis
+  of shells}
+    \field{volume}{40}
+    \field{journaltitle}{Finite Elements in Analysis and Design}
+    \field{year}{2004}
   \endentry
 
   \entry{Wall2000}{inproceedings}{}

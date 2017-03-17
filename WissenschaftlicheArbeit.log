@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  17 MAR 2017 08:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  17 MAR 2017 14:24
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2161,6 +2161,9 @@ LaTeX Warning: Label `eqt15' multiply defined.
 
 LaTeX Warning: Label `bendplusmemequalshell' multiply defined.
 
+
+LaTeX Warning: Label `benchmark_hinged_cylindrical_roof' multiply defined.
+
 )
 \openout1 = `WissenschaftlicheArbeit.aux'.
 
@@ -2359,7 +2362,7 @@ LaTeX Info: Redefining \nameref on input line 51.
 
 LaTeX Info: Redefining \Ref on input line 51.
 
-<frontcover/cover.pdf, id=78, 597.50829pt x 845.0471pt>
+<frontcover/cover.pdf, id=82, 597.50829pt x 845.0471pt>
 File: frontcover/cover.pdf Graphic file (type pdf)
 
 <use frontcover/cover.pdf>
@@ -2370,7 +2373,7 @@ File: frontcover/cover.pdf Graphic file (type pdf)
 Package pdftex.def Info: frontcover/cover.pdf used on input line 55.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-<frontcover/cover.pdf, id=81, page=1, 597.50829pt x 845.0471pt>
+<frontcover/cover.pdf, id=85, page=1, 597.50829pt x 845.0471pt>
 File: frontcover/cover.pdf Graphic file (type pdf)
 
 <use frontcover/cover.pdf, page 1>
@@ -2434,7 +2437,7 @@ Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 55.
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-<./Ressourcen/Universitaet_Logo_RGB.pdf, id=107, 54.02504pt x 28.452pt>
+<./Ressourcen/Universitaet_Logo_RGB.pdf, id=111, 54.02504pt x 28.452pt>
 File: ./Ressourcen/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 
 <use ./Ressourcen/Universitaet_Logo_RGB.pdf>
@@ -2637,7 +2640,8 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 76.
 Package tocbasic Info: Using my definition of `\numberline' on input line 88.
 Package tocbasic Info: Using my definition of `\numberline' on input line 92.
 Package tocbasic Info: Using my definition of `\numberline' on input line 102.
-Package tocbasic Info: Using my definition of `\numberline' on input line 106.
+Package tocbasic Info: Using my definition of `\numberline' on input line 104.
+Package tocbasic Info: Using my definition of `\numberline' on input line 110.
 )
 \tf@toc=\write10
 \openout10 = `WissenschaftlicheArbeit.toc'.
@@ -2678,7 +2682,7 @@ been already used, duplicate ignored
 l.26 
       [2
 
-] <images/degenerateshell.png, id=172, 2075.95575pt x 1061.76675pt>
+] <images/degenerateshell.png, id=177, 2075.95575pt x 1061.76675pt>
 File: images/degenerateshell.png Graphic file (type png)
 
 <use images/degenerateshell.png>
@@ -2691,14 +2695,14 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.59998pt on input line 31.
 
-<images/shellModels.png, id=174, 1068.99374pt x 569.7285pt>
+<images/shellModels.png, id=179, 1068.99374pt x 569.7285pt>
 File: images/shellModels.png Graphic file (type png)
 
 <use images/shellModels.png>
 Package pdftex.def Info: images/shellModels.png used on input line 44.
 (pdftex.def)             Requested size: 341.43306pt x 181.9691pt.
  [3 <./images/degenerateshell.png>]
-<images/shellsconfig.png, id=186, 2051.86575pt x 1093.08376pt>
+<images/shellsconfig.png, id=191, 2051.86575pt x 1093.08376pt>
 File: images/shellsconfig.png Graphic file (type png)
 
 <use images/shellsconfig.png>
@@ -2719,7 +2723,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-[5] <images/bernoullie.png, id=212, 471.56175pt x 183.084pt>
+[5] <images/bernoullie.png, id=217, 471.56175pt x 183.084pt>
 File: images/bernoullie.png Graphic file (type png)
 
 <use images/bernoullie.png>
@@ -2745,7 +2749,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
-[8] <images/timoshenkobeam.png, id=249, 1477.9215pt x 714.2685pt>
+[8] <images/timoshenkobeam.png, id=254, 1477.9215pt x 714.2685pt>
 File: images/timoshenkobeam.png Graphic file (type png)
 
 <use images/timoshenkobeam.png>
@@ -2771,7 +2775,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
-[10] <images/eigenvaluespectra.png, id=273, 1668.2325pt x 1061.1645pt>
+[10] <images/eigenvaluespectra.png, id=278, 1668.2325pt x 1061.1645pt>
 File: images/eigenvaluespectra.png Graphic file (type png)
 
 <use images/eigenvaluespectra.png>
@@ -2815,20 +2819,20 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                I'll also increase \footskip on input line 52
 1.
 
-[12] <images/membranelocking.png, id=288, 2107.875pt x 741.972pt>
+[12] <images/membranelocking.png, id=293, 2107.875pt x 741.972pt>
 File: images/membranelocking.png Graphic file (type png)
 
 <use images/membranelocking.png>
 Package pdftex.def Info: images/membranelocking.png used on input line 530.
 (pdftex.def)             Requested size: 398.33858pt x 140.20627pt.
  [13 <./images/membranelocking.png>]
-<images/shearlockingredint.png, id=299, 3047.385pt x 1310.496pt>
+<images/shearlockingredint.png, id=304, 3047.385pt x 1310.496pt>
 File: images/shearlockingredint.png Graphic file (type png)
 
 <use images/shearlockingredint.png>
 Package pdftex.def Info: images/shearlockingredint.png used on input line 556.
 (pdftex.def)             Requested size: 398.33858pt x 171.2903pt.
- [14] [15 <./images/shearlockingredint.png>] <images/mitc4.png, id=326, 3502.68
+ [14] [15 <./images/shearlockingredint.png>] <images/mitc4.png, id=331, 3502.68
 6pt x 1310.496pt>
 File: images/mitc4.png Graphic file (type png)
  <use images/mitc4.png>
@@ -2839,14 +2843,14 @@ Overfull \hbox (31.298pt too wide) in paragraph at lines 575--576
  [][] 
  []
 
-[16 <./images/mitc4.png>] <images/DSG.png, id=349, 1547.7825pt x 773.89125pt>
+[16 <./images/mitc4.png>] <images/DSG.png, id=354, 1547.7825pt x 773.89125pt>
 File: images/DSG.png Graphic file (type png)
 
 <use images/DSG.png>
 Package pdftex.def Info: images/DSG.png used on input line 593.
 (pdftex.def)             Requested size: 227.62204pt x 113.81142pt.
  [17 <./images/DSG.png>]
-<images/8nodeseren.png, id=366, 1070.8005pt x 287.8755pt>
+<images/8nodeseren.png, id=371, 1070.8005pt x 287.8755pt>
 File: images/8nodeseren.png Graphic file (type png)
 
 <use images/8nodeseren.png>
@@ -2858,7 +2862,7 @@ Overfull \hbox (2.84526pt too wide) in paragraph at lines 607--608
  []
 
 [18 <./images/8nodeseren.png>]
-<images/drillingDOF.png, id=386, 401.0985pt x 334.851pt>
+<images/drillingDOF.png, id=391, 401.0985pt x 334.851pt>
 File: images/drillingDOF.png Graphic file (type png)
 
 <use images/drillingDOF.png>
@@ -2924,7 +2928,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
 [26]) (chapters/Chapter_4.tex [27]
 chapter 4.
-<images/bendplusmemequalshell.png, id=462, 861.2175pt x 426.99525pt>
+<images/bendplusmemequalshell.png, id=467, 861.2175pt x 426.99525pt>
 File: images/bendplusmemequalshell.png Graphic file (type png)
 
 <use images/bendplusmemequalshell.png>
@@ -2943,7 +2947,7 @@ Package pdftex.def Info: images/bernoullie.png used on input line 40.
  [28
 
  <./images/bendplusmemequalshell.png>]
-<images/reissner.png, id=469, 548.0475pt x 261.3765pt>
+<images/reissner.png, id=474, 548.0475pt x 261.3765pt>
 File: images/reissner.png Graphic file (type png)
 
 <use images/reissner.png>
@@ -3086,21 +3090,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
  []
 
-[46] <images/scordelisroof.png, id=624, 769.07326pt x 428.802pt>
+[46] <images/scordelisroof.png, id=629, 769.07326pt x 428.802pt>
 File: images/scordelisroof.png Graphic file (type png)
 
 <use images/scordelisroof.png>
 Package pdftex.def Info: images/scordelisroof.png used on input line 832.
 (pdftex.def)             Requested size: 227.62204pt x 126.9077pt.
  [47 <./images/scordelisroof.png>]
-<images/pinchedcylinder.png, id=635, 794.36775pt x 459.51675pt>
+<images/pinchedcylinder.png, id=640, 794.36775pt x 459.51675pt>
 File: images/pinchedcylinder.png Graphic file (type png)
 
 <use images/pinchedcylinder.png>
 Package pdftex.def Info: images/pinchedcylinder.png used on input line 869.
 (pdftex.def)             Requested size: 227.62204pt x 131.6718pt.
  [48 <./images/pinchedcylinder.png>]
-<images/pinchedhemisphere.png, id=645, 791.95876pt x 393.26926pt>
+<images/pinchedhemisphere.png, id=650, 791.95876pt x 393.26926pt>
 File: images/pinchedhemisphere.png Graphic file (type png)
 
 <use images/pinchedhemisphere.png>
@@ -3118,11 +3122,29 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
 )
 (chapters/Chapter_5.tex [50]
 chapter 6.
-) (chapters/Conclusions.tex [51
+<images/hinged_cylindrical_roof.png, id=667, 1667.63025pt x 879.285pt>
+File: images/hinged_cylindrical_roof.png Graphic file (type png)
 
-]
+<use images/hinged_cylindrical_roof.png>
+Package pdftex.def Info: images/hinged_cylindrical_roof.png used on input line 
+32.
+(pdftex.def)             Requested size: 341.43306pt x 180.01309pt.
+
+<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=669, 578.16pt x
+ 433.62pt>
+File: images/Load_displacement_curve_hinged_cylindrical_roof.pdf Graphic file (
+type pdf)
+ <use images/Load_displacement_curve_hinged_cylindrical_roof.pdf>
+Package pdftex.def Info: images/Load_displacement_curve_hinged_cylindrical_roof
+.pdf used on input line 42.
+(pdftex.def)             Requested size: 341.43306pt x 256.07178pt.
+
+[51
+
+ <./images/hinged_cylindrical_roof.png>]) (chapters/Conclusions.tex [52 <./imag
+es/Load_displacement_curve_hinged_cylindrical_roof.pdf>]
 chapter 7.
-) [52
+) [53
 
 ] (WissenschaftlicheArbeit.lof
 Overfull \hbox (107.18991pt too wide) in paragraph at lines 30--30
@@ -3136,16 +3158,16 @@ mem-brane DOFs (source: http://www.edwilson.org/BOOK-
 
 
 No file WissenschaftlicheArbeit.acr.
-(WissenschaftlicheArbeit.lot)
+(WissenschaftlicheArbeit.lot [54
+
+])
 \tf@lot=\write12
 \openout12 = `WissenschaftlicheArbeit.lot'.
 
- [53
+ [55] [56
 
-] [54] [55
-
-] [56] [57]
-(chapters/Declaration.tex [58]
+] [57] [58]
+(chapters/Declaration.tex [59]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -3180,7 +3202,7 @@ No file WissenschaftlicheArbeit.acr.
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-[59
+[60
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
@@ -3190,7 +3212,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `WissenschaftlicheArbeit.out' has not changed
 .
-(rerunfilecheck)             Checksum: 3461949FE7FC8406E5EDD6AEB4C3026D;1241.
+(rerunfilecheck)             Checksum: F2876B1E5EFB6AE19201D8AC192C84DC;1309.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3200,10 +3222,10 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52970 strings out of 493333
- 1148041 string characters out of 3139194
+ 52993 strings out of 493333
+ 1148796 string characters out of 3139194
  1813837 words of memory out of 3000000
- 55008 multiletter control sequences out of 15000+200000
+ 55022 multiletter control sequences out of 15000+200000
  129275 words of font info for 268 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  66i,21n,100p,8958b,2771s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3227,9 +3249,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfon
 ts/txsya.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (63 pages, 5076438 bytes).
+Output written on WissenschaftlicheArbeit.pdf (64 pages, 5386068 bytes).
 PDF statistics:
- 867 PDF objects out of 1000 (max. 8388607)
- 249 named destinations out of 1000 (max. 500000)
- 43787 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 43805 words of extra memory for PDF output out of 51595 (max. 10000000)
 

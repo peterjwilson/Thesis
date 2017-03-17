@@ -101,6 +101,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Benchmarking}{51}{chapter.6}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Nonlinear benchmarks}{51}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Hinged cylindrical roof}{51}{subsection.6.1.1}
+\defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusions and Outlook}{52}{chapter.7}
+\contentsline {chapter}{\numberline {7}Conclusions and Outlook}{53}{chapter.7}
