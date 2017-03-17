@@ -12,17 +12,15 @@
 %deutsch: chap/kap, abs, abb, gl, anh
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more \section
 
-
+\renewcommand{\Thema}{Plates and shells}
 
 \chapter{Plates and shells}
 \label{chap:chapter_2}
 
-\renewcommand{\Thema}{Plates and shells}
-
 \lettrine[lines=3]{T}{he} employment of shell structures is ubiquitous throughout both nature and the built environment. Eggs, nuts, blood vessels and cell walls are examples of shell designs being the result of structural optimisation via natural evolution over millennia. It is no doubt that man drew inspiration from the optimal natural shell design and quickly realised the efficacy of the shell structure, perhaps the pre-eminent example of early shell structures is the Roman Pantheon (126).  Throughout time, as the understanding of the structures increased, so did their prevalence, leading to notable structures such as the Hagia Sophia (537), Notre Dame (1345) and St. Peter's Basilica (1626). Indeed, the efficiency of shell structures lies in their high in-plane (membrane) load carrying capacity in slender low-weight constructions. The membrane action serves to stress all fibres approximately equally in the cross section, realising the full mechanical performance of the structure. Contrasting this, shells are incredibly sensitive to a variety of effects such as imperfections, bending, transverse normal forces and support conditions, leading to significant compromise of the membrane structural performance, possibly manifesting in catastrophic failure. Bending actions result in a non-uniform stressing of material fibres over the cross section, with the outer fibres stressed significantly more than those closer to the neutral axis. Consequently, the limit of the structure in bending is realised when only the outer-most fibre fails instead of the entire cross section of fibres failing under membrane action. This basic example offers a snapshot of the stellar performance of shells juxtaposed against their sensitivity to a multitude of conditions, earning them the title of the \textit{Prima Donna of structures} \cite{Ram16}.
 
 \section{Structural modelling with shells}
-Although shells present the opportunity of an optimally loaded structure, their delicate position in a sharply varying landscape of performance demands consideration of phenomena critical to the analysis undertaken. Contrasting this to the engineering design ethos of \textit{everything should be made as simple as possible, but no simpler}, the arising tension is immediately recognized, one that can only be curtailed by an in depth knowledge of the working problem and shells themselves. Within the engineering design context of a particular scenario, there exists as many opportunities to reduce complexity as there are to incorrectly exclude critical phenomena. Typical structural modelling decisions such as: inclusion or exclusion of inertial and damping effects, non-linear or linear material models, large or small deformation assumptions and dimensional reduction are examples of large brush strokes limiting the canvas of possibilities resolved. Focussing on the rendering of shells, the structural models assumed determine the behaviour they can exhibit.
+Although shells present the opportunity of an optimally loaded structure, their delicate position in a sharply varying landscape of performance demands consideration of phenomena critical to the analysis undertaken. Contrasting this to the engineering design ethos of \textit{everything should be made as simple as possible, but no simpler}, the arising tension is immediately recognized, one that can only be curtailed by an in depth knowledge of the working problem and shells themselves. Within the engineering design context of a particular scenario, there exists as many opportunities to reduce complexity as there are to incorrectly exclude critical phenomena. Typical structural modelling decisions such as: inclusion or exclusion of inertial and damping effects, non-linear or linear material models, large or small deformation assumptions and dimensional reduction are examples of large brush strokes limiting the canvas of possibilities resolved. Focussing on the rendering of shells, the structural models assumed determine the behaviour they can exhibit. \\
 
 Inherent in the use of shells in structural models is the concept of dimensional reduction from 3 dimensions to 2 dimensions, relying on the assumption that one dimension (thickness) is significantly smaller than the other two (length and width). 
 
@@ -63,11 +61,10 @@ Quantities in the reference configuration are expressed in upper case while quan
 
 \subsection{Membrane model}
 
-Despite not truly being a shell model, the membrane model is the simplest model available due to the complete ignorance of bending behaviour. Thus, the structural behaviour of the whole element is described by in plane components. Typically it is assumed that all stress and strain components are constant over the thickness. A key model choice is the specification of either plane stress or plane strain behaviour which is implemented in material matrix.
+Despite not truly being a shell model, the membrane model is the simplest model available due to the complete ignorance of bending behaviour. Thus, the structural behaviour of the whole element is described by in plane components. Typically it is assumed that all stress and strain components are constant over the thickness. A key model choice is the specification of either plane stress or plane strain behaviour which is implemented in material matrix. \\
 
 Commencing a high level formulation of the membrane model, the assumption of constant strain and stress components over the thickness allows collapsing the body into an infinitely thin shell. Thus thickness can be ignored in the position vectors.
 
-\singlespacing
 \begin{equation} 
 \mathbf{X} = \mathbf{R}\ ,
 \hspace{10mm}
@@ -76,8 +73,6 @@ Commencing a high level formulation of the membrane model, the assumption of con
 \mathbf{r} = \mathbf{R} + \mathbf{v}
 \label{eqsmem1a}
 \end{equation}
-
-\doublespacing
 
 Using the notation of $(\ )_{,\alpha} = \frac{\partial(\ )}{\partial	\alpha}$ and explicitly writing the base vectors of the coordinate system yields:
 
@@ -110,7 +105,7 @@ Corresponding to the membrane assumptions, all out of plane strain components ar
 \label{eqsmem3}
 \end{equation}
 
-At this point, one notices that all strain terms are completely contained within the two in-plane mid-surface displacements $\mathbf{v}_\alpha$.
+At this point, one notices that all strain terms are completely contained within the two in-plane mid-surface displacements $\mathbf{v}_\alpha$. \\
 
 By introducing the elasticity tensor $\mathbf{C}_0$ (typically plane stress) the stress components can be recovered from the strains.
 
@@ -178,7 +173,7 @@ The first actual shell model considered is the 3 parameter model, often referred
 	\label{thinshellkine1}
 \end{figure}
 
-A consequence of the above kinematics is that this model ignores transverse shear strains. Thus, the applicability of the 3 parameter model is clearly limited to thin plates in the range of $\frac{1}{5} < \frac{l}{t} < \frac{1}{50}$ where transverse deformations are negligible. Similar to the membrane model, thickness deformation is ignored.
+A consequence of the above kinematics is that this model ignores transverse shear strains. Thus, the applicability of the 3 parameter model is clearly limited to thin plates in the range of $\frac{1}{5} < \frac{l}{t} < \frac{1}{50}$ where transverse deformations are negligible. Similar to the membrane model, thickness deformation is ignored. \\
 
 Establishing the geometry of the KL shell requires incorporation of the shell director along $\theta^3$ in the reference $\mathbf{D}$ and deformed configuration $\mathbf{d}$.
 
@@ -193,7 +188,7 @@ Establishing the geometry of the KL shell requires incorporation of the shell di
 \label{eqskt1}
 \end{equation}
 
-The above equation enforces the KL condition of a straight director with the linear description of $\theta^3 \mathbf{d}$. $\boldsymbol{\Lambda}$ is a rotation tensor composed of two independent rotation parameters $\beta^\alpha$ relating the reference and deformed directors to each other. In a Cartesian frame the linearised rotation components are: $\beta^1 = \mathbf{v}_{3,2}$ and $\beta^2 = -\mathbf{v}_{3,1}$ \cite{BischLitBook04}.
+The above equation enforces the KL condition of a straight director with the linear description of $\theta^3 \mathbf{d}$. $\boldsymbol{\Lambda}$ is a rotation tensor composed of two independent rotation parameters $\beta^\alpha$ relating the reference and deformed directors to each other. In a Cartesian frame the linearised rotation components are: $\beta^1 = \mathbf{v}_{3,2}$ and $\beta^2 = -\mathbf{v}_{3,1}$ \cite{BischLitBook04}.  \\
 
 The displacement is thus expressed:
 
@@ -208,7 +203,7 @@ The displacement is thus expressed:
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Gotta figure out lamda - G = lamda
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
 
 The KT requirement of the director being normal to the mid surface is expressed via the following dot product:
 
@@ -298,7 +293,7 @@ E_{3i} = \epsilon_{3i} = \kappa_{3i} = 0
 \label{eqskt81}
 \end{equation}
 
-Studying the strain components, especially the deformed second fundamental form, reveals that there are now 3 midplane displacements $\mathbf{v}_i$ involved in the description of the KT shell model, hence the name 3 parameter model.
+Studying the strain components, especially the deformed second fundamental form, reveals that there are now 3 midplane displacements $\mathbf{v}_i$ involved in the description of the KT shell model, hence the name 3 parameter model. \\
 
 Combining the above developments, and assuming the same general external work as equation \eqref{eqsmem5}, the internal virtual work can be presented:
 
@@ -336,7 +331,7 @@ By relaxing the assumptions made in the 3 parameter shell model, the Reissner-Mi
 	\label{thickshellkine1}
 \end{figure}
 
-Studying the above kinematics confirms this model now considers transverse shear strains, limiting the range of validity of this model to thick plates $\frac{1}{5} < \frac{l}{t} < \frac{1}{10}$ where transverse deformations are a key component of structural behaviour. Similar to the membrane and KL model, thickness deformation is ignored.
+Studying the above kinematics confirms this model now considers transverse shear strains, limiting the range of validity of this model to thick plates $\frac{1}{5} < \frac{l}{t} < \frac{1}{10}$ where transverse deformations are a key component of structural behaviour. Similar to the membrane and KL model, thickness deformation is ignored. \\
 
 The geometry of the RM model is established similar to the KL model:
 
@@ -349,7 +344,7 @@ The geometry of the RM model is established similar to the KL model:
 \label{eqsrm1}
 \end{equation}
 
-However, the strict requirement of maintaining the director remain normal to the mid-surface, as expressed in the KL theory equation \eqref{eqskt3}, are no longer enforced. Correspondingly, the rotation tensor $\boldsymbol{\Lambda}$ must now include 2 additional parameters related to these 2 introduced degrees of freedom.
+However, the strict requirement of maintaining the director remain normal to the mid-surface, as expressed in the KL theory equation \eqref{eqskt3}, are no longer enforced. Correspondingly, the rotation tensor $\boldsymbol{\Lambda}$ must now include 2 additional parameters related to these 2 introduced degrees of freedom. \\
 
 The general strain components are expressed as:
 
@@ -435,9 +430,9 @@ The 3 integrals of the virtual work equation represent the membrane, bending and
 
 \subsection{7 parameter model}
 
-The previously discussed models all operate under the assumption that the transverse normal strains are zero. The 7 parameter model considers thickness deformation by introducing additional free parameters. Only a brief overview of the 7 parameter model is offered here as shell elements in FEM, the focus of this work, are predominately based off 3 and 5 parameter based formulations. For further details refer Bischoff et al. \cite{BischLitBook04} and Ramm and Wall \cite{RammLitBook04}.
+The previously discussed models all operate under the assumption that the transverse normal strains are zero. The 7 parameter model considers thickness deformation by introducing additional free parameters. Only a brief overview of the 7 parameter model is offered here as shell elements in FEM, the focus of this work, are predominately based off 3 and 5 parameter based formulations. For further details refer Bischoff et al. \cite{BischLitBook04} and Ramm and Wall \cite{RammLitBook04}. \\
 
-Intuitively, one may realise that shell behaviour including thickness change may be described by 6 parameters:  3 mid-surface displacements, 1 thickness change and 2 rotations.  However, thickness locking occurs under this regime due to a mismatch of a linearly varying normal thickness stress $\theta^{33}$ conjugated with a constant thickness strain $\epsilon_{33}$. Thus the 7th parameter is the enhancement of the through thickness strain $\epsilon_{33}$ to a linear field.
+Intuitively, one may realise that shell behaviour including thickness change may be described by 6 parameters:  3 mid-surface displacements, 1 thickness change and 2 rotations.  However, thickness locking occurs under this regime due to a mismatch of a linearly varying normal thickness stress $\theta^{33}$ conjugated with a constant thickness strain $\epsilon_{33}$. Thus the 7th parameter is the enhancement of the through thickness strain $\epsilon_{33}$ to a linear field. \\
 
 It's clear that the additional modelling power of the 7 parameter shell can resolve physics that lower parameter models can't. A prime example of this is the Eigenvalue spectra presented below:
 
@@ -658,7 +653,6 @@ The figure above illustrates that the real twisting DOF associated with $A_2^{(2
 
 Following the discussion of shell models, their associated locking phenomena and element technologies, a summary of the element technologies considered with their relative merits and drawbacks is tabulated below:
 
-\singlespacing
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{ | l | l |  X | X | }
 		\hline
@@ -688,15 +682,12 @@ Following the discussion of shell models, their associated locking phenomena and
 	\label{table:1}
 \end{table}
 
-\doublespacing
-
 The table above confirms the \textit{"no free lunch"} theory, with every technology having its own advantages and drawbacks. In the case of a flat shell (naturally, or via projection), where the bending and membrane response are decoupled, a single finite element can easily employ different technologies in each component. 
 
 \section{Identification of KRATOS shell element formulations}
 
 The shell elements to be implemented in KRATOS are the 5 parameter (Reissner-Mindlin theory) triangular shell and the 3 parameter (Kirchhoff Love theory) quadrilateral shell. Obviously the perfect element choices for KRATOS would be computationally quick, possess no locking and easy to implement, but it's clear such an element doesn't exist yet. If the requirements are relaxed to computationally quick elements that are relatively free of locking effects the following candidates are selected:
 
-\singlespacing
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{ | l | X |  X | }
 		\hline
@@ -718,7 +709,5 @@ The shell elements to be implemented in KRATOS are the 5 parameter (Reissner-Min
 	\caption{Selected formulations of implemented shell elements}
 	\label{table:2}
 \end{table}
-
-\doublespacing
 
 With the various components of the KRATOS shell elements selected, they shall be implemented in the following sections of this work, commencing with the DSG triangular element.
