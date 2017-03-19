@@ -19,7 +19,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}3 parameter model: Kirchhoff-Love shell}{6}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}5 parameter model: Reissner-Mindlin shell}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}5 parameter model: Reissner-Mindlin shell}{8}{subsection.2.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.4}7 parameter model}{10}{subsection.2.2.4}
 \defcounter {refsection}{0}\relax 
@@ -27,92 +27,98 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Transverse shear locking}{12}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Membrane locking}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Membrane locking}{12}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Curvature thickness locking}{14}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}Curvature thickness locking}{13}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Shell finite element technologies}{14}{section.2.4}
+\contentsline {section}{\numberline {2.4}Shell finite element technologies}{13}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Reduced integration}{14}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Reduced integration}{13}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Assumed Natural Strains}{15}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Assumed Natural Strains}{14}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Mixed Interpolation of Tensorial Components}{16}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}Mixed Interpolation of Tensorial Components}{14}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Assumed Natural Deviatoric Strains}{16}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.4}Assumed Natural Deviatoric Strains}{15}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}Discrete Shear Gap}{17}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.5}Discrete Shear Gap}{15}{subsection.2.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.6}Discrete Kirchhoff Theory}{17}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.6}Discrete Kirchhoff Theory}{16}{subsection.2.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.7}Enhanced Assumed Strains}{18}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.7}Enhanced Assumed Strains}{17}{subsection.2.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.8}Drilling degrees of freedom}{19}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.8}Drilling degrees of freedom}{17}{subsection.2.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.9}Summary of selected element technologies}{20}{subsection.2.4.9}
+\contentsline {subsection}{\numberline {2.4.9}Summary of selected element technologies}{18}{subsection.2.4.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Identification of KRATOS shell element formulations}{22}{section.2.5}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}DSG triangle shell element}{23}{chapter.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Stiffness matrix formulation}{23}{section.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Stiffness matrix implementation}{26}{section.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Mass matrix formulation}{27}{section.3.3}
+\contentsline {section}{\numberline {2.5}Identification of KRATOS shell element formulations}{20}{section.2.5}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}A brief background of shell elements}{28}{chapter.4}
+\contentsline {chapter}{\numberline {3}DSG triangle shell element}{21}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.0.1}Formulation context}{29}{subsection.4.0.1}
+\contentsline {section}{\numberline {3.1}Stiffness matrix formulation}{21}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
+\contentsline {section}{\numberline {3.2}Stiffness matrix implementation}{24}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}ANDES-DKT quadrilateral shell element}{31}{chapter.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Stiffness matrix}{31}{section.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Membrane formulation}{31}{subsection.5.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Membrane basic stiffness}{32}{section*.20}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Membrane higher order stiffness}{33}{section*.21}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Bending formulation}{38}{subsection.5.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Combined formulation}{42}{subsection.5.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Implementation in KRATOS}{44}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Workflow of element calculation}{45}{subsection.5.2.1}
+\contentsline {section}{\numberline {3.3}Mass matrix formulation}{24}{section.3.3}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Benchmarking}{48}{chapter.6}
+\contentsline {chapter}{\numberline {4}A brief background of shell elements}{26}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Static benchmarks: shell obstacle course}{48}{section.6.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Scordelis-Lo roof}{48}{subsection.6.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}Pinched cylinder}{49}{subsection.6.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.3}Pinched hemisphere}{49}{subsection.6.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Geometically nonlinear benchmarks}{50}{section.6.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Hinged cylindrical roof}{50}{subsection.6.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Open cylinder pullout}{51}{subsection.6.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Dynamics benchmarks}{52}{section.6.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Shell pendulum}{52}{subsection.6.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Oscillating clamped plate}{52}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {4.0.1}Formulation context}{27}{subsection.4.0.1}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusions and Outlook}{54}{chapter.7}
+\contentsline {chapter}{\numberline {5}ANDES-DKT quadrilateral shell element}{29}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Stiffness matrix}{29}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Membrane formulation}{29}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Membrane basic stiffness}{30}{subsubsection*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Membrane higher order stiffness}{30}{subsubsection*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Bending formulation}{35}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}Combined formulation}{38}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Implementation in KRATOS}{39}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Workflow of element calculation}{40}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Benchmarking}{42}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Static benchmarks: shell obstacle course}{42}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Scordelis-Lo roof}{42}{subsection.6.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.2}Pinched cylinder}{43}{subsection.6.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.3}Pinched hemisphere}{44}{subsection.6.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Geometically nonlinear benchmarks}{45}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Hinged cylindrical roof}{45}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Open cylinder pullout}{46}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Dynamics benchmarks}{46}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Shell pendulum}{47}{subsection.6.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Oscillating clamped plate}{47}{subsection.6.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Quantity recovery benchmarks}{48}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4.1}Tensile test}{48}{subsection.6.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4.2}Snow loaded dome}{48}{subsection.6.4.2}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Conclusions and Outlook}{49}{chapter.7}

@@ -42,9 +42,9 @@ with open("scordelis_tri_struc.txt", "r") as fol:
     line = line.split('\t')
     dofs.append((float(line[0])))    
     disp_dsg.append((float(line[1])))   
-    disp_dsg_basic.append((float(line[1]))*0.9)
-    disp_kratos_tri.append((float(line[2])))   
-    ref.append((float(line[3])))   
+    disp_dsg_basic.append((float(line[2])))
+    disp_kratos_tri.append((float(line[3])))   
+    ref.append((float(line[4])))   
 fol.close()
 
 #colors
@@ -71,16 +71,16 @@ plt.plot(dofs,disp_kratos_tri, color = KRATOSTRI, linewidth=2.0,
          markersize = 7.0, marker='o', markeredgewidth = 2.0, markeredgecolor = KRATOSTRI, 
          markerfacecolor= 'None', label = 'KRATOS T3',antialiased=True)
 
-plt.plot(dofs,ref,color = 'grey', linestyle='--', linewidth=2.0, 
+plt.axhline(y=ref[0],color = 'grey', linestyle='--', linewidth=2.0, 
          label = 'Ref',antialiased=True)
 
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=2, frameon=False,fontsize=labelfontsize+2)
 #lg = plt.legend()
 #lg.draw_frame(False)
 #lg.loc(2)
-plt.xlabel('DOFs')
-plt.ylabel('Displacement [m]')
-#plt.xlim([0,50])
+plt.xlabel('Elements')
+plt.ylabel('|Displacement| [m]')
+plt.ylim(ymin=0)
 plt.grid()
 
 plt.tick_params(labelsize=labelfontsize)

@@ -12,15 +12,24 @@
 %deutsch: chap/kap, abs, abb, gl, anh
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more \section
 
+\onehalfspacing
+\setlength{\belowcaptionskip}{-17pt}
+
+%\textbf{\fontsize{50}{60}\selectfont CHAPTER 2\\PLATES \& SHELLS}
+
+
+
 \chapter{Plates and shells}
 \label{chap:chapter_2}
 
 \renewcommand{\Thema}{Plates and shells}
 
-\lettrine[lines=3]{T}{he} employment of shell structures is ubiquitous throughout both nature and the built environment. Eggs, nuts, blood vessels and cell walls are examples of shell designs being the result of structural optimisation via natural evolution over millennia. It is no doubt that man drew inspiration from the optimal natural shell design and quickly realised the efficacy of the shell structure, perhaps the pre-eminent example of early shell structures is the Roman Pantheon (126).  Throughout time, as the understanding of the structures increased, so did their prevalence, leading to notable structures such as the Hagia Sophia (537), Notre Dame (1345) and St. Peter's Basilica (1626). Indeed, the efficiency of shell structures lies in their high in-plane (membrane) load carrying capacity in slender low-weight constructions. The membrane action serves to stress all fibres approximately equally in the cross section, realising the full mechanical performance of the structure. Contrasting this, shells are incredibly sensitive to a variety of effects such as imperfections, bending, transverse normal forces and support conditions, leading to significant compromise of the membrane structural performance, possibly manifesting in catastrophic failure. Bending actions result in a non-uniform stressing of material fibres over the cross section, with the outer fibres stressed significantly more than those closer to the neutral axis. Consequently, the limit of the structure in bending is realised when only the outer-most fibre fails instead of the entire cross section of fibres failing under membrane action. This basic example offers a snapshot of the stellar performance of shells juxtaposed against their sensitivity to a multitude of conditions, earning them the title of the \textit{Prima Donna of structures} \cite{Ram16}.
+
+
+\lettrine[lines=2]{T}{he} employment of shell structures is ubiquitous throughout both nature and the built environment. Eggs, nuts, blood vessels and cell walls are examples of shell designs being the result of structural optimisation via natural evolution over millennia. It is no doubt that man drew inspiration from the optimal natural shell design and quickly realised the efficacy of the shell structure, perhaps the pre-eminent example of early shell structures is the Roman Pantheon (126).  Throughout time, as the understanding of the structures increased, so did their prevalence, leading to notable structures such as the Hagia Sophia (537), Notre Dame (1345) and St. Peter's Basilica (1626). Indeed, the efficiency of shell structures lies in their high in-plane (membrane) load carrying capacity in slender low-weight constructions. The membrane action serves to stress all fibres approximately equally in the cross section, realising the full mechanical performance of the structure. Contrasting this, shells are incredibly sensitive to a variety of effects such as imperfections, bending, transverse normal forces and support conditions, leading to significant compromise of the membrane structural performance, possibly manifesting in catastrophic failure. Bending actions result in a non-uniform stressing of material fibres over the cross section, with the outer fibres stressed significantly more than those closer to the neutral axis. Consequently, the limit of the structure in bending is realised when only the outer-most fibre fails instead of the entire cross section of fibres failing under membrane action. This basic example offers a snapshot of the stellar performance of shells juxtaposed against their sensitivity to a multitude of conditions, earning them the title of the \textit{Prima Donna of structures} \cite{Ram16}.
 
 \section{Structural modelling with shells}
-Although shells present the opportunity of an optimally loaded structure, their delicate position in a sharply varying landscape of performance demands consideration of phenomena critical to the analysis undertaken. Contrasting this to the engineering design ethos of \textit{everything should be made as simple as possible, but no simpler}, the arising tension is immediately recognized, one that can only be curtailed by an in depth knowledge of the working problem and shells themselves. Within the engineering design context of a particular scenario, there exists as many opportunities to reduce complexity as there are to incorrectly exclude critical phenomena. Typical structural modelling decisions such as: inclusion or exclusion of inertial and damping effects, non-linear or linear material models, large or small deformation assumptions and dimensional reduction are examples of large brush strokes limiting the canvas of possibilities resolved. Focussing on the rendering of shells, the structural models assumed determine the behaviour they can exhibit. \\
+Although shells present the opportunity of an optimally loaded structure, their delicate position in a sharply varying landscape of performance demands consideration of phenomena critical to the analysis undertaken. Contrasting this to the engineering design ethos of \textit{everything should be made as simple as possible, but no simpler}, the arising tension is immediately recognized, one that can only be curtailed by an in depth knowledge of the working problem and shells themselves. Within the engineering design context of a particular scenario, there exists as many opportunities to reduce complexity as there are to incorrectly exclude critical phenomena. Typical structural modelling decisions such as: inclusion or exclusion of inertial and damping effects, non-linear or linear material models, large or small deformation assumptions and dimensional reduction are examples of large brush strokes limiting the canvas of possibilities resolved. Focussing on the rendering of shells, the structural models assumed determine the behaviour they can exhibit.
 
 Inherent in the use of shells in structural models is the concept of dimensional reduction from 3 dimensions to 2 dimensions, relying on the assumption that one dimension (thickness) is significantly smaller than the other two (length and width). 
 
@@ -61,7 +70,7 @@ Quantities in the reference configuration are expressed in upper case while quan
 
 \subsection{Membrane model}
 
-Despite not truly being a shell model, the membrane model is the simplest model available due to the complete ignorance of bending behaviour. Thus, the structural behaviour of the whole element is described by in plane components. Typically it is assumed that all stress and strain components are constant over the thickness. A key model choice is the specification of either plane stress or plane strain behaviour which is implemented in material matrix. \\
+Despite not truly being a shell model, the membrane model is the simplest model available due to the complete ignorance of bending behaviour. Thus, the structural behaviour of the whole element is described by in plane components. Typically it is assumed that all stress and strain components are constant over the thickness. A key model choice is the specification of either plane stress or plane strain behaviour which is implemented in material matrix.
 
 Commencing a high level formulation of the membrane model, the assumption of constant strain and stress components over the thickness allows collapsing the body into an infinitely thin shell. Thus thickness can be ignored in the position vectors.
 
@@ -105,7 +114,7 @@ Corresponding to the membrane assumptions, all out of plane strain components ar
 \label{eqsmem3}
 \end{equation}
 
-At this point, one notices that all strain terms are completely contained within the two in-plane mid-surface displacements $\mathbf{v}_\alpha$. \\
+At this point, one notices that all strain terms are completely contained within the two in-plane mid-surface displacements $\mathbf{v}_\alpha$.
 
 By introducing the elasticity tensor $\mathbf{C}_0$ (typically plane stress) the stress components can be recovered from the strains.
 
@@ -173,7 +182,7 @@ The first actual shell model considered is the 3 parameter model, often referred
 	\label{thinshellkine1}
 \end{figure}
 
-A consequence of the above kinematics is that this model ignores transverse shear strains. Thus, the applicability of the 3 parameter model is clearly limited to thin plates in the range of $\frac{1}{5} < \frac{l}{t} < \frac{1}{50}$ where transverse deformations are negligible. Similar to the membrane model, thickness deformation is ignored. \\
+A consequence of the above kinematics is that this model ignores transverse shear strains. Thus, the applicability of the 3 parameter model is clearly limited to thin plates in the range of $\frac{1}{5} < \frac{l}{t} < \frac{1}{50}$ where transverse deformations are negligible. Similar to the membrane model, thickness deformation is ignored.
 
 Establishing the geometry of the KL shell requires incorporation of the shell director along $\theta^3$ in the reference $\mathbf{D}$ and deformed configuration $\mathbf{d}$.
 
@@ -430,9 +439,9 @@ The 3 integrals of the virtual work equation represent the membrane, bending and
 
 \subsection{7 parameter model}
 
-The previously discussed models all operate under the assumption that the transverse normal strains are zero. The 7 parameter model considers thickness deformation by introducing additional free parameters. Only a brief overview of the 7 parameter model is offered here as shell elements in FEM, the focus of this work, are predominately based off 3 and 5 parameter based formulations. For further details refer Bischoff et al. \cite{BischLitBook04} and Ramm and Wall \cite{RammLitBook04}. \\
+The previously discussed models all operate under the assumption that the transverse normal strains are zero. The 7 parameter model considers thickness deformation by introducing additional free parameters. Only a brief overview of the 7 parameter model is offered here as shell elements in FEM, the focus of this work, are predominately based off 3 and 5 parameter based formulations. For further details refer Bischoff et al. \cite{BischLitBook04} and Ramm and Wall \cite{RammLitBook04}.
 
-Intuitively, one may realise that shell behaviour including thickness change may be described by 6 parameters:  3 mid-surface displacements, 1 thickness change and 2 rotations.  However, thickness locking occurs under this regime due to a mismatch of a linearly varying normal thickness stress $\theta^{33}$ conjugated with a constant thickness strain $\epsilon_{33}$. Thus the 7th parameter is the enhancement of the through thickness strain $\epsilon_{33}$ to a linear field. \\
+Intuitively, one may realise that shell behaviour including thickness change may be described by 6 parameters:  3 mid-surface displacements, 1 thickness change and 2 rotations.  However, thickness locking occurs under this regime due to a mismatch of a linearly varying normal thickness stress $\theta^{33}$ conjugated with a constant thickness strain $\epsilon_{33}$. Thus the 7th parameter is the enhancement of the through thickness strain $\epsilon_{33}$ to a linear field.
 
 It's clear that the additional modelling power of the 7 parameter shell can resolve physics that lower parameter models can't. A prime example of this is the Eigenvalue spectra presented below:
 
@@ -450,7 +459,7 @@ As expected, the 7 parameter model captures higher Eigen-frequencies associated 
 
 Surveying a range of shell models has confirmed that not all of them are appropriate for every type of analysis. One must consider the capabilities of the model in conjunction with the supposed critical phenomena of the analysis at hand. Thus, the analysis results are a function of physics the shell model can \textit{express}. This concept of expression limitation is vital to the correct understanding of shells in the FEM. If the isogeometric approach to the FEM is employed, the field of quantities in the problem are interpolated between discrete nodal values $\hat{(\ )}$ using shape functions $\mathbf{N}$. In general:
 
-\singlespacing
+
 \begin{equation} 
 \begin{pmatrix}
 \mathbf{R} \\
@@ -471,7 +480,7 @@ N(\xi,\eta)_m
 \label{eqfemtech1}
 \end{equation}
 
-\doublespacing
+
 
 The resolving power of the shape functions undoubtedly restricts what continuous fields can be determined from discrete values. They govern not only the description of geometry, but also the deformation modes the element can express. This forms another layer of expression limitation added to shell models in FEM. Given the propensity to use linear or quadratic shape functions in modern FEM codes, these limitations are often not insignificant. These, together with the physics assumptions and limitations of each shell model, give rise to common numerical inaccuracies, generally termed locking.
 
@@ -479,7 +488,7 @@ The resolving power of the shape functions undoubtedly restricts what continuous
 
 Transverse shear locking is perhaps the most recognized and problematic locking phenomena amongst the three considered in this work. As it is related to transverse shear strains, transverse shear locking is possible  in the 5 parameter model and impossible for membrane and 3 parameter models. Phenomenologically, transverse shear locking occurs when thin shells incorrectly described by a 5 parameter model are subject to bending situations, with the signature of significantly reduced displacements (ie. 'locked') than expected. By indicating specific material matrices, and removing membrane work, the internal virtual work of the 5 parameter model is clarified: 
 
-\singlespacing
+
 \begin{equation} 
 \bar{\mathbf{C}} =
 \begin{pmatrix}
@@ -515,7 +524,7 @@ d \Omega
 \label{eqlock2}
 \end{equation}
 
-\doublespacing
+
 
 As phenomenologically described, transverse shear locking comes into effect with thin shells. One can see that as $t \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto t^3$) will be far less than the shear internal work ($\Pi_{shear} \propto t$), leading to an incorrect allocation of internal energy. Since the bending internal work is associated with bending deflections, these resulting deflections will be less than they should be and the element will appear locked. The over-representation of shear strains also leads to strong shear force oscillations - another classic symptom of transverse shear locking.
 
@@ -550,6 +559,7 @@ The previous discussion of locking phenomena associated with pure displacement f
 
 One of the simplest and oldest methods of curbing locking is reduced integration, which deliberately uses less Gauss points than required to integrate the element stiffness matrix. Typically implemented as selective reduced integration (SRI), where the bending component is fully integrated and only the shear part undergoes reduced integration, the efficacy of the method relies on how susceptible the reduced integration Gaussian point locations are to parasitic strains. Despite this chance aspect, it is often used in crash worthiness simulations with the benefits of reduced locking and reduced computational time. The following graph compares the performance (scaled displacement vs. slenderness) of a fully and reduced integrated 5 parameter shell against the reference solution for a square plate in bending.
 
+
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
@@ -558,6 +568,8 @@ One of the simplest and oldest methods of curbing locking is reduced integration
 	\textit{F = Full integration, R = Reduced integration, K = Kirchhoff (3 parameter model) solution}
 	\label{shearlockingredint}
 \end{figure}
+
+
 
 It's clear that the normal fully integrated element exhibits severe locking, while the element with reduced integration converges to a value close to the reference solution. Despite this, SRI in general still doesn't guarantee complete removal of shear locking and also introduces spurious zero energy modes. These zero energy modes are often combated by stabilizing matrices ("hourglass" control \cite{Zien2Vol2000}) which are designed to be activated under the spurious zero-energy regimes and noted as quite complex to formulate \cite{Mohan97}. An additional drawback of reduced integration is element performance deterioration as the mesh becomes distorted and warped \cite{Nguyen2009} \cite{Yang2000}.
 
@@ -620,6 +632,8 @@ For example, the Kirchhoff conditions are imposed at corner nodes $i = 1, 2, 3, 
 \label{eqsdkt}
 \end{equation}
 
+
+
 Mohan \cite{Mohan97} noted that a major drawback of DKT elements is that the transverse displacement isn't explicitly defined within the interior of the element. Despite this, the advantages of DKT formulated elements is that they combine the shear locking free performance of KL models and the lower $C_0$ continuity requirements of RM models \cite{Bletz16}.
 
 \subsection{Enhanced Assumed Strains}
@@ -636,6 +650,7 @@ v_{xi} & v_{yi} & v_{zi} & \beta_{xi} & \beta_{yi}
 \end{pmatrix}
 \label{eqsdrilling}
 \end{equation}
+
 
 It can be seen that the shell formulations don't require a rotational DOF around the z axis $\beta_{zi}$, referred to as the drilling DOF. However, as discussed, shell elements in practical FEA may meet at arbitrary orientations, such as the perpendicular intersection below:
 

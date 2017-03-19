@@ -40,17 +40,21 @@ ref = []
 with open("scordelis_quad_struc.txt", "r") as fol:
   for line in fol:
     line = line.split('\t')
-    dofs.append((float(line[0])))    
-    disp_andes.append((float(line[1])))   
-    disp_andes_basic.append((float(line[1]))*0.9)
-    disp_kratos_quad.append((float(line[2])))   
-    ref.append((float(line[3])))   
+    dofs.append(abs(float(line[0])))    
+    disp_andes.append(abs(float(line[1])))   
+    disp_andes_basic.append(abs(float(line[2])))
+    disp_kratos_quad.append(abs(float(line[3])))   
+    ref.append(abs(float(line[4])))   
 fol.close()
 
 #colors
 ANDESDKQ = '#77B5FE'        #blue
 ANDESBasic = '#C5AAF5'      #purple
 KRATOSQUAD = '#79BFA1'      #green
+
+DSG = '#FF91A4'             #salmon
+DSGBasic = '#F5A352'        #orange
+KRATOSTRI = '#BB7365'       #brown
 
 
 #Plot graph
@@ -67,16 +71,14 @@ plt.plot(dofs,disp_kratos_quad, color = KRATOSQUAD, linewidth=2.0,
          markersize = 7.0, marker='o', markeredgewidth = 2.0, markeredgecolor = KRATOSQUAD, 
          markerfacecolor= 'None', label = 'KRATOS Q4',antialiased=True)
 
-plt.plot(dofs,ref,color = 'grey', linestyle='--', linewidth=2.0, 
+plt.axhline(y=ref[0],color = 'grey', linestyle='--', linewidth=2.0, 
          label = 'Ref',antialiased=True)
 
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=2, frameon=False,fontsize=labelfontsize+2)
-#lg = plt.legend()
-#lg.draw_frame(False)
-#lg.loc(2)
-plt.xlabel('DOFs')
-plt.ylabel('Displacement [m]')
-#plt.xlim([0,50])
+
+plt.xlabel('Elements')
+plt.ylabel('|Displacement| [m]')
+plt.ylim(ymin=0)
 plt.grid()
 
 plt.tick_params(labelsize=labelfontsize)
