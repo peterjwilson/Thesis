@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  18 MAR 2017 12:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  19 MAR 2017 15:25
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2208,6 +2208,36 @@ LaTeX Warning: Label `eqt15' multiply defined.
 LaTeX Warning: Label `bendplusmemequalshell' multiply defined.
 
 
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label_overall' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label_overall' multiply defined.
+
+
 LaTeX Warning: Label `ref_label1' multiply defined.
 
 
@@ -3187,126 +3217,173 @@ chapter 6.
 File: images/scordelisroof.png Graphic file (type png)
 
 <use images/scordelisroof.png>
-Package pdftex.def Info: images/scordelisroof.png used on input line 34.
-(pdftex.def)             Requested size: 227.62204pt x 126.9077pt.
- [48
+Package pdftex.def Info: images/scordelisroof.png used on input line 31.
+(pdftex.def)             Requested size: 169.57584pt x 94.5461pt.
 
- <./images/scordelisroof.png>]
-<images/pinchedcylinder.png, id=649, 794.36775pt x 459.51675pt>
+<images/scordelis_structured_quad_results.pdf, id=640, 535.21361pt x 460.76108p
+t>
+File: images/scordelis_structured_quad_results.pdf Graphic file (type pdf)
+ <use images/scordelis_structured_quad_results.pdf>
+Package pdftex.def Info: images/scordelis_structured_quad_results.pdf used on i
+nput line 44.
+(pdftex.def)             Requested size: 207.7052pt x 178.81023pt.
+
+<images/scordelis_structured_tri_results.pdf, id=641, 535.21361pt x 460.76108pt
+>
+File: images/scordelis_structured_tri_results.pdf Graphic file (type pdf)
+ <use images/scordelis_structured_tri_results.pdf>
+Package pdftex.def Info: images/scordelis_structured_tri_results.pdf used on in
+put line 48.
+(pdftex.def)             Requested size: 207.7052pt x 178.81023pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 44--49
+[][][][] 
+ []
+
+[48
+
+ <./images/scordelisroof.png> <./images/scordelis_structured_quad_results.pdf> 
+<./images/scordelis_structured_tri_results.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/scordelis_structured_tri_results.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>] <images/pinchedcylinder.png, id=750, 794.36775pt x 459.51675pt>
 File: images/pinchedcylinder.png Graphic file (type png)
 
 <use images/pinchedcylinder.png>
-Package pdftex.def Info: images/pinchedcylinder.png used on input line 71.
-(pdftex.def)             Requested size: 227.62204pt x 131.6718pt.
+Package pdftex.def Info: images/pinchedcylinder.png used on input line 60.
+(pdftex.def)             Requested size: 169.57584pt x 98.093pt.
+File: images/scordelis_structured_quad_results.pdf Graphic file (type pdf)
+
+<use images/scordelis_structured_quad_results.pdf>
+Package pdftex.def Info: images/scordelis_structured_quad_results.pdf used on i
+nput line 71.
+(pdftex.def)             Requested size: 207.7052pt x 178.81023pt.
+File: images/scordelis_structured_tri_results.pdf Graphic file (type pdf)
+
+<use images/scordelis_structured_tri_results.pdf>
+Package pdftex.def Info: images/scordelis_structured_tri_results.pdf used on in
+put line 75.
+(pdftex.def)             Requested size: 207.7052pt x 178.81023pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 71--76
+[][][][] 
+ []
+
+File: images/pinchedcylinder.png Graphic file (type png)
+<use images/pinchedcylinder.png>
+Package pdftex.def Info: images/pinchedcylinder.png used on input line 87.
+(pdftex.def)             Requested size: 169.57584pt x 98.093pt.
  [49 <./images/pinchedcylinder.png>]
-<images/pinchedhemisphere.png, id=659, 791.95876pt x 393.26926pt>
-File: images/pinchedhemisphere.png Graphic file (type png)
+File: images/scordelis_structured_quad_results.pdf Graphic file (type pdf)
 
-<use images/pinchedhemisphere.png>
-Package pdftex.def Info: images/pinchedhemisphere.png used on input line 109.
-(pdftex.def)             Requested size: 227.62204pt x 113.03102pt.
- [50 <./images/pinchedhemisphere.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 139.
+<use images/scordelis_structured_quad_results.pdf>
+Package pdftex.def Info: images/scordelis_structured_quad_results.pdf used on i
+nput line 98.
+(pdftex.def)             Requested size: 207.7052pt x 178.81023pt.
+File: images/scordelis_structured_tri_results.pdf Graphic file (type pdf)
 
+<use images/scordelis_structured_tri_results.pdf>
+Package pdftex.def Info: images/scordelis_structured_tri_results.pdf used on in
+put line 102.
+(pdftex.def)             Requested size: 207.7052pt x 178.81023pt.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 139.
- [51]
-<images/hinged_cylindrical_roof.png, id=677, 1430.34375pt x 1117.17375pt>
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 98--103
+[][][][] 
+ []
+
+<images/hinged_cylindrical_roof.png, id=765, 1430.34375pt x 1117.17375pt>
 File: images/hinged_cylindrical_roof.png Graphic file (type png)
 
 <use images/hinged_cylindrical_roof.png>
 Package pdftex.def Info: images/hinged_cylindrical_roof.png used on input line 
-181.
+124.
 (pdftex.def)             Requested size: 207.7052pt x 162.21617pt.
 
-<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=679, 578.16pt x
+<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=767, 578.16pt x
  433.62pt>
 File: images/Load_displacement_curve_hinged_cylindrical_roof.pdf Graphic file (
 type pdf)
  <use images/Load_displacement_curve_hinged_cylindrical_roof.pdf>
 Package pdftex.def Info: images/Load_displacement_curve_hinged_cylindrical_roof
-.pdf used on input line 185.
+.pdf used on input line 128.
 (pdftex.def)             Requested size: 207.7052pt x 155.77887pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 181--186
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 124--129
 [][][][] 
  []
 
-<images/opencylinderpullout.png, id=681, 1296.042pt x 966.009pt>
+[50] <images/opencylinderpullout.png, id=778, 1296.042pt x 966.009pt>
 File: images/opencylinderpullout.png Graphic file (type png)
 
 <use images/opencylinderpullout.png>
-Package pdftex.def Info: images/opencylinderpullout.png used on input line 203.
+Package pdftex.def Info: images/opencylinderpullout.png used on input line 146.
 
 (pdftex.def)             Requested size: 207.7052pt x 154.80043pt.
 
-<images/Load_displacement_curve_open_cylinder_pullout.pdf, id=683, 578.16pt x 4
+<images/Load_displacement_curve_open_cylinder_pullout.pdf, id=780, 578.16pt x 4
 33.62pt>
 File: images/Load_displacement_curve_open_cylinder_pullout.pdf Graphic file (ty
 pe pdf)
  <use images/Load_displacement_curve_open_cylinder_pullout.pdf>
 Package pdftex.def Info: images/Load_displacement_curve_open_cylinder_pullout.p
-df used on input line 207.
+df used on input line 150.
 (pdftex.def)             Requested size: 207.7052pt x 155.77887pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 203--208
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 146--151
 [][][][] 
  []
 
-[52 <./images/hinged_cylindrical_roof.png> <./images/Load_displacement_curve_hi
-nged_cylindrical_roof.pdf>]
-<images/swinging_plate_problem.png, id=735, 4411.48125pt x 2789.622pt>
+[51 <./images/hinged_cylindrical_roof.png> <./images/Load_displacement_curve_hi
+nged_cylindrical_roof.pdf> <./images/opencylinderpullout.png> <./images/Load_di
+splacement_curve_open_cylinder_pullout.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/Load_displacement_curve_open_cylind
+er_pullout.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>] <images/swinging_plate_problem.png, id=876, 4411.48125pt x 2789.622pt>
 File: images/swinging_plate_problem.png Graphic file (type png)
 
 <use images/swinging_plate_problem.png>
-Package pdftex.def Info: images/swinging_plate_problem.png used on input line 2
-29.
+Package pdftex.def Info: images/swinging_plate_problem.png used on input line 1
+72.
 (pdftex.def)             Requested size: 207.7052pt x 131.31656pt.
 
-<images/swinging_plate_graph.pdf, id=736, 527.40317pt x 438.03554pt>
+<images/swinging_plate_graph.pdf, id=877, 527.40317pt x 438.03554pt>
 File: images/swinging_plate_graph.pdf Graphic file (type pdf)
 
 <use images/swinging_plate_graph.pdf>
-Package pdftex.def Info: images/swinging_plate_graph.pdf used on input line 233
+Package pdftex.def Info: images/swinging_plate_graph.pdf used on input line 176
 .
 (pdftex.def)             Requested size: 207.7052pt x 172.51082pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 229--234
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 172--177
 [][][][] 
  []
 
-[53 <./images/opencylinderpullout.png> <./images/Load_displacement_curve_open_c
-ylinder_pullout.pdf> <./images/swinging_plate_problem.png> <./images/swinging_p
-late_graph.pdf
-
-pdfTeX warning: pdflatex.exe (file ./images/swinging_plate_graph.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->] <images/quad_bend_problem.png, id=834, 3083.52pt x 2052.468pt>
+<images/quad_bend_problem.png, id=878, 3083.52pt x 2052.468pt>
 File: images/quad_bend_problem.png Graphic file (type png)
 
 <use images/quad_bend_problem.png>
-Package pdftex.def Info: images/quad_bend_problem.png used on input line 254.
+Package pdftex.def Info: images/quad_bend_problem.png used on input line 197.
 (pdftex.def)             Requested size: 207.7052pt x 138.23808pt.
 
-<images/quad_bend_graph.pdf, id=835, 541.07143pt x 438.03554pt>
+<images/quad_bend_graph.pdf, id=879, 541.07143pt x 438.03554pt>
 File: images/quad_bend_graph.pdf Graphic file (type pdf)
 
 <use images/quad_bend_graph.pdf>
-Package pdftex.def Info: images/quad_bend_graph.pdf used on input line 258.
+Package pdftex.def Info: images/quad_bend_graph.pdf used on input line 201.
 (pdftex.def)             Requested size: 207.7052pt x 168.15294pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 254--259
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 197--202
 [][][][] 
  []
 
-) (chapters/Conclusions.tex [54 <./images/quad_bend_problem.png> <./images/quad
-_bend_graph.pdf>]
+[52 <./images/swinging_plate_problem.png> <./images/swinging_plate_graph.pdf>])
+(chapters/Conclusions.tex [53 <./images/quad_bend_problem.png> <./images/quad_b
+end_graph.pdf>]
 chapter 7.
-) [55
+) [54
 
 ] (WissenschaftlicheArbeit.lof
 Overfull \hbox (107.18991pt too wide) in paragraph at lines 30--30
@@ -3320,16 +3397,16 @@ mem-brane DOFs (source: http://www.edwilson.org/BOOK-
 
 
 No file WissenschaftlicheArbeit.acr.
-(WissenschaftlicheArbeit.lot [56
+(WissenschaftlicheArbeit.lot [55
 
 ])
 \tf@lot=\write12
 \openout12 = `WissenschaftlicheArbeit.lot'.
 
- [57] [58
+ [56] [57
 
-] [59] [60]
-(chapters/Declaration.tex [61]
+] [58] [59]
+(chapters/Declaration.tex [60]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -3364,7 +3441,7 @@ No file WissenschaftlicheArbeit.acr.
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-[62
+[61
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
@@ -3374,7 +3451,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
 Package rerunfilecheck Info: File `WissenschaftlicheArbeit.out' has not changed
 .
-(rerunfilecheck)             Checksum: EBCEB642B42D35CA9B9CCA5F238113B3;1392.
+(rerunfilecheck)             Checksum: 36FFC1BF82A4CE25D4BB56A197091D44;1411.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3384,11 +3461,11 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53651 strings out of 493333
- 1160092 string characters out of 3139194
+ 53243 strings out of 493333
+ 1148630 string characters out of 3139194
  1824188 words of memory out of 3000000
- 55630 multiletter control sequences out of 15000+200000
- 129275 words of font info for 268 fonts, out of 3000000 for 9000
+ 55218 multiletter control sequences out of 15000+200000
+ 129102 words of font info for 268 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,21n,108p,8958b,2769s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -3396,24 +3473,22 @@ iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
 .enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program 
 Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfon
-ts/txsya.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (66 pages, 6862417 bytes).
+/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
+/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on WissenschaftlicheArbeit.pdf (65 pages, 6413360 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
- 272 named destinations out of 1000 (max. 500000)
- 43843 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1192 PDF objects out of 1200 (max. 8388607)
+ 277 named destinations out of 1000 (max. 500000)
+ 43848 words of extra memory for PDF output out of 51595 (max. 10000000)
 

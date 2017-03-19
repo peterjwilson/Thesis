@@ -20,149 +20,92 @@
 
 Benchmarking yeah
 
-\section{Shell obstacle course}
+\section{Static benchmarks: shell obstacle course}
 
 To test the correct derivation and implementation of the thin quad shell element, the shell obstacle course proposed by Belytschko \cite{Bel85} is considered.
 
 \subsection{Scordelis-Lo roof}
 
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\centering
+	\includegraphics[width=0.40\textwidth]{images/scordelisroof.png}
+	\caption{Definition of the Scordelis-Lo roof benchmark\cite{Bou13}}
+\end{wrapfigure}
+
 The Scordelis-Lo roof is part of a cylindrical shell fixed by rigid diaphragms at it's axial ends. The only loading is a pseudo-gravity distributed load that has a magnitude of 90. Due to symmetry only a quarter of the shell is modelled. The key result is the vertical displacement of the lateral side at the midpoint, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} = 0.3024$.
 
+
+
+\singlespacing
 \begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includegraphics[width=8cm]{images/scordelisroof.png}
-	\caption{Problem definition of the Scordelis-Lo roof benchmark (source: \cite{Bou13})}
-	\label{scordelisroof}
+	\subfloat[Quadrilateral element convergence for the Scordelis-Lo roof benchmark]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{scordelis_structured_quad_results.pdf}}
+	\subfloat[Triangle element convergence for the Scordelis-Lo roof benchmark]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{scordelis_structured_tri_results.pdf}}
+	\caption{\label{ref_label_overall}Scordelis-Lo roof benchmark results}
 \end{figure}
 
-\pgfplotsset{width=6cm}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	xlabel=Element divisions along free edge,
-	ylabel=$|$Displacement$|$,
-	grid=both,]
-	\addplot[color=black,mark=o] coordinates {
-		(4,0.42177)
-		(8,0.31887)
-		(16,0.3044)
-		(32,0.30145)};
-	\addplot[red,domain=4:32] 
-	{0.3024};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Element convergence for the Scordelis-Lo roof benchmark}
-	\label{scordelisroofbench}
-\end{figure}
-
-
+\doublespacing
 
 The performance of the element is demonstrated in the convergence graph above. It is clear that the element agrees with the reference solution.
 
 \subsection{Pinched cylinder}
 
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{images/pinchedcylinder.png}
+	\caption{Definition of the pinched cylinder benchmark\cite{Bou13}}
+\end{wrapfigure}
+
 The pinched cylinder considers a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading consists of two opposing compressive point loads at the centre of the shell. Due to symmetry only an eighth of the shell is modelled. The key result is the vertical displacement under the point load, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  1.8248\ \times\ 10^{-5}$. 
 
+\singlespacing
 \begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includegraphics[width=8cm]{images/pinchedcylinder.png}
-	\caption{Problem definition of the pinched cylinder benchmark (source: \cite{Bou13})}
-	\label{pinchedcylinder}
+	\subfloat[Quadrilateral element convergence for the pinched cylinder benchmark]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{scordelis_structured_quad_results.pdf}}
+	\subfloat[Triangle element convergence for the pinched cylinder benchmark]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{scordelis_structured_tri_results.pdf}}
+	\caption{\label{ref_label_overall}Pinched cylinder benchmark results}
 \end{figure}
 
-
-\pgfplotsset{width=6cm}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	xlabel=Element divisions along edges,
-	ylabel=$|$Displacement$|$,
-	grid=both,]
-	\addplot[color=black,mark=o] coordinates {
-		(4,0.0000098753)
-		(8,0.0000162870)
-		(16,0.0000178130)
-		(32,0.0000179140)};
-	\addplot[red,domain=4:32] 
-	{0.000018248};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Element convergence for the pinched cylinder benchmark}
-	\label{pinchedcylinderbench}
-\end{figure}
-
-
+\doublespacing
 
 The performance of the element is demonstrated in the convergence graph above. It is clear that the element agrees with the reference solution.
 
 \subsection{Pinched hemisphere}
 
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{images/pinchedcylinder.png}
+	\caption{Definition of the pinched hemisphere benchmark \cite{Bou13}}
+\end{wrapfigure}
+
 The pinched hemisphere considers a hemispherical shell loaded with opposing point loads along it's equator. Due to symmetry only a quarter of the shell is modelled. The key result is the 'x' displacement along one of the point loads, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  0.0924$. 
 
+\singlespacing
 \begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includegraphics[width=8cm]{images/pinchedhemisphere.png}
-	\caption{Problem definition of the pinched hemisphere benchmark (source: \cite{Bou13})}
-	\label{pinchedhemisphere}
+	\subfloat[Quadrilateral element convergence for the pinched hemisphere benchmark]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{scordelis_structured_quad_results.pdf}}
+	\subfloat[Triangle element convergence for the pinched hemisphere benchmark]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{scordelis_structured_tri_results.pdf}}
+	\caption{\label{ref_label_overall}Pinched hemisphere benchmark results}
 \end{figure}
 
-\pgfplotsset{width=6cm}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	xlabel=Nominal element size along edges,
-	ylabel=$|$Displacement$|$,
-	ylabel style={yshift=0.5cm},
-	grid=both,]
-	\addplot[color=black,mark=o] coordinates {
-		(4,0.001648235)
-		(2,0.001670075)
-		(1,0.001297573)
-		(0.5,0.000476183)};
-	\addplot[red,domain=0.5:4] 
-	{0.0924};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Element convergence for the pinched hemisphere benchmark}
-	\label{pinchedhemispherebench}
-\end{figure}
+\doublespacing
 
 Contrary to the previous benchmarks, the element does not converge to the reference solution in the pinched hemisphere test.  A key point to note is that the other benchmarks in the shell obstacle course employ a structured mesh, while the geometry of this test requires an unstructured mesh. Subsequent investigations of the element attempting to isolate remaining formulation issues have revealed the following phenomena:
-
-\begin{itemize}
-	\item Membrane tests
-	\begin{itemize}
-		\item[{$\times$}] Membrane tests with coarse structured meshes yield incorrect results
-		\item[{$\checkmark$}] Membrane tests with fine structured meshes yield correct results
-		\item[{$\times$}] Membrane tests with unstructured meshes ranging from coarse to fine yield incorrect results
-	\end{itemize}
-	
-	\item Bending tests
-	\begin{itemize}
-		\item[{$\checkmark$}] Bending tests with structured meshes ranging from coarse to fine achieve correct results
-		\item[{$\times$}] Bending tests with unstructured meshes ranging from coarse to fine yield incorrect results
-	\end{itemize}	
-\end{itemize}
-
-From the above statements, it can be concluded that: (1) the performance of the membrane formulation is dependent on mesh refinement, and (2) the element currently handles unstructured meshes incorrectly.
-
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Geometically nonlinear benchmarks}
 
@@ -263,5 +206,16 @@ adfdas
 
 ref is existing kratos quad
 
+\section{Quantity recovery benchmarks}
 
+asdfasdf
+
+\subsection{Tensile test}
+
+poisson != 0
+check strains, forces, moments
+
+\subsection{Snow loaded dome}
+
+ToS-cyk-Assignment09.pdf
 
