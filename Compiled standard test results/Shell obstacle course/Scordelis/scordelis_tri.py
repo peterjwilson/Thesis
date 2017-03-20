@@ -40,11 +40,11 @@ ref = []
 with open("scordelis_tri_struc.txt", "r") as fol:
   for line in fol:
     line = line.split('\t')
-    dofs.append((float(line[0])))    
-    disp_dsg.append((float(line[1])))   
-    disp_dsg_basic.append((float(line[2])))
-    disp_kratos_tri.append((float(line[3])))   
-    ref.append((float(line[4])))   
+    dofs.append(abs(float(line[0])))    
+    disp_dsg.append(abs(float(line[1])))   
+    disp_dsg_basic.append(abs(float(line[2])))
+    disp_kratos_tri.append(abs(float(line[3])))   
+    ref.append(abs(float(line[4])))   
 fol.close()
 
 #colors
@@ -65,7 +65,7 @@ plt.plot(dofs,disp_dsg, color = DSG, linewidth=2.0,
 
 plt.plot(dofs,disp_dsg_basic, color = DSGBasic, linewidth=2.0, 
          markersize = 7.0, marker='o', markeredgewidth = 2.0, markeredgecolor = DSGBasic, 
-         markerfacecolor= 'None', label = 'Basic-Tri',antialiased=True)
+         markerfacecolor= 'None', label = 'Basic-T3',antialiased=True)
 
 plt.plot(dofs,disp_kratos_tri, color = KRATOSTRI, linewidth=2.0, 
          markersize = 7.0, marker='o', markeredgewidth = 2.0, markeredgecolor = KRATOSTRI, 
