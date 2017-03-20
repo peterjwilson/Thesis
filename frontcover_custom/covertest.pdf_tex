@@ -1,0 +1,60 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'covertest.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{595.27597046bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.41428523)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{covertest.pdf}}%
+    \put(0.10703825,0.3568354){\makebox(0,0)[lb]{\smash{Peter Wilson's Master Thesis}}}%
+    \put(0.85500925,0.43558065){\makebox(0,0)[rb]{\smash{MASTER THESIS}}}%
+    \put(0.10620805,0.2257972){\makebox(0,0)[lb]{\smash{Peter Wilson}}}%
+    \put(0.20486996,0.08002471){\color[rgb]{0.51764706,0.51764706,0.51764706}\makebox(0,0)[lb]{\smash{Chair of Structural Analysis\\ Prof. Dr.-Ing. K.-U. Bletzinger\\ Technical University of Munich}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{covertest.pdf}}%
+    \put(0.10773615,1.33425514){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.74331401\unitlength}\raggedright {\Huge\bfseries{Shells & Plates}}\end{minipage}}}%
+  \end{picture}%
+\endgroup%

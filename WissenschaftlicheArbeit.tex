@@ -48,26 +48,19 @@
 % width: 14.8cm or 7.3cm  or 4.8cm recommended for figures in separated rows
 \graphicspath{ {images/}}
 
-%\titleformat
-%{\chapter} % command
-%[hang] % shape [display]
-%{\bfseries\Huge} % format
-%{\thechapter.} % label
-%{0.1ex} %  separation between label and title body {0.5ex}
-%{
-%	\rule{\textwidth}{1pt}
-%	\vspace{1ex}
-%	\centering
-%} % before-code
-%[
-%\vspace{-0.5ex}%
-%\rule{\textwidth}{0.3pt}
-%] % after-code
 
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{10pt}}
 
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+%\titleformat{\chapter}[hang]{\Huge}
+%{Chapter \thechapter\hsp\textcolor{gray75}{|}\hsp}
+%{0pt}
+%{\Huge\bfseries}
+
+\titleformat{\chapter}[hang]{\Huge}
+{\textcolor{gray75}{Chapter \thechapter\hsp}}
+{0pt}
+{\Huge\bfseries}
 
 \renewcommand{\contentsname}{{\Huge\bfseries}{Table of contents}}
 
@@ -75,7 +68,13 @@
 	
 \renewcommand{\Thema}{\ }
 %TOEDIT you have to change the text in the corresponding .svg-file and save it as pdf. You can add a figure on the front page. Exmaples are provided in the computer room 
-\includepdf[pages={1}]{frontcover/cover.pdf} % title page
+
+
+%\includepdf[pages={1}]{frontcover/cover.pdf} % title page
+
+\input{./Ressourcen/CoverTest.tex} % alternate title page
+
+
 \input{./Ressourcen/Deckblatt_Text.tex} % cover sheet
 \pagenumbering{gobble}
 \include{chapters/Abstract}

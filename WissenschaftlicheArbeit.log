@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  19 MAR 2017 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  20 MAR 2017 11:58
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2078,7 +2078,7 @@ Class scrbook Warning: Usage of package `parskip' together
 (scrbook)              I'd suggest to use option
 (scrbook)              `parskip' with one of it's several values.
 (scrbook)              Nevertheless, using requested
-(scrbook)              package `parskip' on input line 194.
+(scrbook)              package `parskip' on input line 196.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\parskip.sty"
 Package: parskip 2001/04/09 non-zero parskip adjustments
@@ -2355,49 +2355,49 @@ LaTeX Warning: Label `ref_label_overall' multiply defined.
 )
 \openout1 = `WissenschaftlicheArbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 74.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 74.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 67.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 67.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omltxmi.fd"
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 74.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 67.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omstxsy.fd"
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 74.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 67.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\omxtxex.fd"
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 74.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 74.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\utxexa.fd"
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 74.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 74.
+(Font)              scaled to size 10.40245pt on input line 67.
 
 
 Package scrlayer-scrpage Warning: Very small head height detected!
@@ -2440,7 +2440,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 74.
+ on input line 67.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -2453,7 +2453,7 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 Package caption Info: supertabular package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `newfloat' on input line 74.
+Package caption Info: We need package `newfloat' on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
@@ -2471,8 +2471,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'WissenschaftlicheArbeit.bbl' found.
 
 (WissenschaftlicheArbeit.bbl)
-Package biblatex Info: Reference section=0 on input line 74.
-Package biblatex Info: Reference segment=0 on input line 74.
+Package biblatex Info: Reference section=0 on input line 67.
+Package biblatex Info: Reference segment=0 on input line 67.
 \AtBeginShipoutBox=\box91
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
@@ -2483,7 +2483,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Info: Redefining \microtypecontext on input line 74.
+LaTeX Info: Redefining \microtypecontext on input line 67.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2532,7 +2532,7 @@ Package microtype Info: Loading generic settings for font family
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 74.
+Package hyperref Info: Link coloring OFF on input line 67.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2542,57 +2542,17 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count434
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (WissenschaftlicheArbeit.out) (WissenschaftlicheArbeit.out)
 \@outlinefile=\write9
 \openout9 = `WissenschaftlicheArbeit.out'.
 
-LaTeX Info: Redefining \Ref on input line 74.
+LaTeX Info: Redefining \Ref on input line 67.
 
-<frontcover/cover.pdf, id=90, 597.50829pt x 845.0471pt>
-File: frontcover/cover.pdf Graphic file (type pdf)
-
-<use frontcover/cover.pdf>
-Package pdftex.def Info: frontcover/cover.pdf used on input line 78.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: frontcover/cover.pdf Graphic file (type pdf)
- <use frontcover/cover.pdf>
-Package pdftex.def Info: frontcover/cover.pdf used on input line 78.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<frontcover/cover.pdf, id=93, page=1, 597.50829pt x 845.0471pt>
-File: frontcover/cover.pdf Graphic file (type pdf)
-
-<use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 78.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: frontcover/cover.pdf Graphic file (type pdf)
- <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 78.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: frontcover/cover.pdf Graphic file (type pdf)
-
-<use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 78.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: frontcover/cover.pdf Graphic file (type pdf)
- <use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 78.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: frontcover/cover.pdf Graphic file (type pdf)
-
-<use frontcover/cover.pdf, page 1>
-Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 78.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [1
-
-\openout6 = `WissenschaftlicheArbeit.xdy'.
-
- <./frontcover/cover.pdf>]
-(Ressourcen/Deckblatt_Text.tex
+(Ressourcen/CoverTest.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -2627,19 +2587,89 @@ Package pdftex.def Info: frontcover/cover.pdf, page1 used on input line 78.
 
 
 TextBlockOrigin set to 20mm x 43.5mm
-<./Ressourcen/Universitaet_Logo_RGB.pdf, id=119, 54.02504pt x 28.452pt>
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 47.49985pt on input line 65.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <50> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 65.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 47.49985pt on input line 65.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 22.79993pt on input line 70.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 70.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.79993pt on input line 70.
+<./Ressourcen/titleimage.pdf, id=90, 222.04958pt x 135.48326pt>
+File: ./Ressourcen/titleimage.pdf Graphic file (type pdf)
+
+<use ./Ressourcen/titleimage.pdf>
+Package pdftex.def Info: ./Ressourcen/titleimage.pdf used on input line 79.
+(pdftex.def)             Requested size: 483.69687pt x 295.14915pt.
+
+<./Ressourcen/Universitaet_Logo_RGB.pdf, id=91, 54.02504pt x 28.452pt>
 File: ./Ressourcen/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
 
 <use ./Ressourcen/Universitaet_Logo_RGB.pdf>
 Package pdftex.def Info: ./Ressourcen/Universitaet_Logo_RGB.pdf used on input l
+ine 103.
+(pdftex.def)             Requested size: 54.06006pt x 28.47101pt.
+
+<./Ressourcen/Statik.pdf, id=92, 67.5333pt x 27.07971pt>
+File: ./Ressourcen/Statik.pdf Graphic file (type pdf)
+
+<use ./Ressourcen/Statik.pdf>
+Package pdftex.def Info: ./Ressourcen/Statik.pdf used on input line 103.
+(pdftex.def)             Requested size: 67.43289pt x 27.03996pt.
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+\openout6 = `WissenschaftlicheArbeit.xdy'.
+
+
+ <./Ressourcen/Universitaet_Logo_RGB.pdf> <./Ressourcen/Statik.pdf> <./Ressourc
+en/titleimage.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Ressourcen/titleimage.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>]) (Ressourcen/Deckblatt_Text.tex
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(123.76949pt, 692.82462pt, 28.45274pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=692.82462pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=31.09949pt
+* \headheight=0.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=0.0pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+TextBlockOrigin set to 20mm x 43.5mm
+File: ./Ressourcen/Universitaet_Logo_RGB.pdf Graphic file (type pdf)
+<use ./Ressourcen/Universitaet_Logo_RGB.pdf>
+Package pdftex.def Info: ./Ressourcen/Universitaet_Logo_RGB.pdf used on input l
 ine 49.
 (pdftex.def)             Requested size: 54.02489pt x 28.45192pt.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.79993pt on input line 54.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 54.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.79993pt on input line 54.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 17.09995pt on input line 57.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <18> not available
@@ -2751,9 +2781,10 @@ Overfull \hbox (124.21347pt too wide) in paragraph at lines 114--118
 |   [] 
  []
 
-[2{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+[2
 
- <./Ressourcen/Universitaet_Logo_RGB.pdf>])
+
+])
 \openout2 = `chapters/Abstract.aux'.
 
  (chapters/Abstract.tex
@@ -2767,19 +2798,19 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 14.24995pt on input line 15.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 81.
+(Font)              scaled to size 8.54997pt on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 81.
+(Font)              <9> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 81.
+(Font)              <7> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 81.
+(Font)              <5> on input line 80.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 
 
 Package scrlayer-scrpage Warning: \headheight to low.
@@ -2790,15 +2821,15 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=19.11pt'.
 (scrlayer-scrpage)                I'll also decrease \topmargin on input line 8
-1.
+0.
 
 
 Overfull \vbox (19.11pt too high) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 81.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 81.
+(Font)              scaled to size 8.54997pt on input line 80.
 
 
 Package scrlayer-scrpage Warning: \footheight to low.
@@ -2809,7 +2840,7 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{38.22002pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 81
+(scrlayer-scrpage)                I'll also increase \footskip on input line 80
 .
 
 [1
@@ -2818,7 +2849,7 @@ Package scrlayer-scrpage Warning: \footheight to low.
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.04994pt on input line 87.
+(Font)              scaled to size 18.04994pt on input line 86.
  (WissenschaftlicheArbeit.toc
 Package tocbasic Info: Using my definition of `\numberline' on input line 8.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
@@ -2876,7 +2907,7 @@ been already used, duplicate ignored
 l.33 
       [2
 
-] <images/degenerateshell.png, id=187, 2075.95575pt x 1061.76675pt>
+] <images/degenerateshell.png, id=181, 2075.95575pt x 1061.76675pt>
 File: images/degenerateshell.png Graphic file (type png)
 
 <use images/degenerateshell.png>
@@ -2889,14 +2920,14 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 7.59998pt on input line 40.
 
-<images/shellModels.png, id=189, 1068.99374pt x 569.7285pt>
+<images/shellModels.png, id=183, 1068.99374pt x 569.7285pt>
 File: images/shellModels.png Graphic file (type png)
 
 <use images/shellModels.png>
 Package pdftex.def Info: images/shellModels.png used on input line 53.
 (pdftex.def)             Requested size: 341.43306pt x 181.9691pt.
  [3 <./images/degenerateshell.png>]
-<images/shellsconfig.png, id=201, 2051.86575pt x 1093.08376pt>
+<images/shellsconfig.png, id=195, 2051.86575pt x 1093.08376pt>
 File: images/shellsconfig.png Graphic file (type png)
 
 <use images/shellsconfig.png>
@@ -2907,7 +2938,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 11.39996pt on input line 71.
- [5] <images/bernoullie.png, id=227, 471.56175pt x 183.084pt>
+ [5] <images/bernoullie.png, id=221, 471.56175pt x 183.084pt>
 File: images/bernoullie.png Graphic file (type png)
 
 <use images/bernoullie.png>
@@ -2928,7 +2959,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-[8] <images/timoshenkobeam.png, id=265, 1477.9215pt x 714.2685pt>
+[8] <images/timoshenkobeam.png, id=259, 1477.9215pt x 714.2685pt>
 File: images/timoshenkobeam.png Graphic file (type png)
 
 <use images/timoshenkobeam.png>
@@ -2945,7 +2976,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--357
  []
 
 [9 <./images/timoshenkobeam.png>]
-<images/eigenvaluespectra.png, id=280, 1668.2325pt x 1061.1645pt>
+<images/eigenvaluespectra.png, id=274, 1668.2325pt x 1061.1645pt>
 File: images/eigenvaluespectra.png Graphic file (type png)
 
 <use images/eigenvaluespectra.png>
@@ -2962,21 +2993,21 @@ Overfull \hbox (5.45822pt too wide) detected at line 525
 
  []
 
-[12] <images/membranelocking.png, id=304, 2107.875pt x 741.972pt>
+[12] <images/membranelocking.png, id=298, 2107.875pt x 741.972pt>
 File: images/membranelocking.png Graphic file (type png)
 
 <use images/membranelocking.png>
 Package pdftex.def Info: images/membranelocking.png used on input line 539.
 (pdftex.def)             Requested size: 398.33858pt x 140.20627pt.
  [13 <./images/membranelocking.png>]
-<images/shearlockingredint.png, id=316, 3047.385pt x 1310.496pt>
+<images/shearlockingredint.png, id=310, 3047.385pt x 1310.496pt>
 File: images/shearlockingredint.png Graphic file (type png)
 
 <use images/shearlockingredint.png>
 Package pdftex.def Info: images/shearlockingredint.png used on input line 566.
 (pdftex.def)             Requested size: 398.33858pt x 171.2903pt.
  [14 <./images/shearlockingredint.png>]
-<images/mitc4.png, id=339, 3502.686pt x 1310.496pt>
+<images/mitc4.png, id=333, 3502.686pt x 1310.496pt>
 File: images/mitc4.png Graphic file (type png)
  <use images/mitc4.png>
 Package pdftex.def Info: images/mitc4.png used on input line 587.
@@ -2986,14 +3017,14 @@ Overfull \hbox (31.298pt too wide) in paragraph at lines 587--588
  [][] 
  []
 
-<images/DSG.png, id=350, 1547.7825pt x 773.89125pt>
+<images/DSG.png, id=344, 1547.7825pt x 773.89125pt>
 File: images/DSG.png Graphic file (type png)
  <use images/DSG.png>
 Package pdftex.def Info: images/DSG.png used on input line 605.
 (pdftex.def)             Requested size: 227.62204pt x 113.81142pt.
 
 [15 <./images/mitc4.png>]
-<images/8nodeseren.png, id=370, 1070.8005pt x 287.8755pt>
+<images/8nodeseren.png, id=364, 1070.8005pt x 287.8755pt>
 File: images/8nodeseren.png Graphic file (type png)
 
 <use images/8nodeseren.png>
@@ -3005,7 +3036,7 @@ Overfull \hbox (2.84526pt too wide) in paragraph at lines 619--620
  []
 
 [16 <./images/DSG.png> <./images/8nodeseren.png>]
-<images/drillingDOF.png, id=391, 401.0985pt x 334.851pt>
+<images/drillingDOF.png, id=385, 401.0985pt x 334.851pt>
 File: images/drillingDOF.png Graphic file (type png)
 
 <use images/drillingDOF.png>
@@ -3067,12 +3098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
 [23] [24]) (chapters/Chapter_4.tex [25]
 chapter 4.
-
-Overfull \hbox (32.51208pt too wide) in paragraph at lines 21--21
-|[]\T1/phv/b/n/24.88 A brief back-ground of shell el-e-ments| 
- []
-
-<images/bendplusmemequalshell.png, id=468, 861.2175pt x 426.99525pt>
+<images/bendplusmemequalshell.png, id=462, 861.2175pt x 426.99525pt>
 File: images/bendplusmemequalshell.png Graphic file (type png)
 
 <use images/bendplusmemequalshell.png>
@@ -3091,7 +3117,7 @@ Package pdftex.def Info: images/bernoullie.png used on input line 40.
  [26
 
  <./images/bendplusmemequalshell.png>]
-<images/reissner.png, id=475, 548.0475pt x 261.3765pt>
+<images/reissner.png, id=469, 548.0475pt x 261.3765pt>
 File: images/reissner.png Graphic file (type png)
 
 <use images/reissner.png>
@@ -3101,6 +3127,11 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 62.
  [27 <./images/reissner.png>] [28]
 chapter 5.
+
+Overfull \hbox (34.75171pt too wide) in paragraph at lines 103--103
+|[]\T1/phv/b/n/24.88 ANDES-DKT quadri-lat-eral shell
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
@@ -3235,14 +3266,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 790--791
 
 ) (chapters/Chapter_5.tex [41]
 chapter 6.
-<images/scordelisroof.png, id=618, 769.07326pt x 428.802pt>
+<images/scordelisroof.png, id=612, 769.07326pt x 428.802pt>
 File: images/scordelisroof.png Graphic file (type png)
 
 <use images/scordelisroof.png>
 Package pdftex.def Info: images/scordelisroof.png used on input line 31.
 (pdftex.def)             Requested size: 169.57584pt x 94.5461pt.
 
-<images/scordelis_structured_quad_results.pdf, id=620, 529.44987pt x 460.76108p
+<images/scordelis_structured_quad_results.pdf, id=614, 529.44987pt x 460.76108p
 t>
 File: images/scordelis_structured_quad_results.pdf Graphic file (type pdf)
  <use images/scordelis_structured_quad_results.pdf>
@@ -3250,7 +3281,7 @@ Package pdftex.def Info: images/scordelis_structured_quad_results.pdf used on i
 nput line 44.
 (pdftex.def)             Requested size: 207.7052pt x 180.75772pt.
 
-<images/scordelis_structured_tri_results.pdf, id=621, 535.21361pt x 460.76108pt
+<images/scordelis_structured_tri_results.pdf, id=615, 535.21361pt x 460.76108pt
 >
 File: images/scordelis_structured_tri_results.pdf Graphic file (type pdf)
  <use images/scordelis_structured_tri_results.pdf>
@@ -3265,14 +3296,14 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 44--49
 [42
 
  <./images/scordelisroof.png>]
-<images/pinchedcylinder.png, id=631, 794.36775pt x 459.51675pt>
+<images/pinchedcylinder.png, id=625, 794.36775pt x 459.51675pt>
 File: images/pinchedcylinder.png Graphic file (type png)
 
 <use images/pinchedcylinder.png>
 Package pdftex.def Info: images/pinchedcylinder.png used on input line 62.
 (pdftex.def)             Requested size: 169.57584pt x 98.093pt.
 
-<images/pinched_cyl_structured_quad_results.pdf, id=633, 521.63945pt x 467.4030
+<images/pinched_cyl_structured_quad_results.pdf, id=627, 521.63945pt x 467.4030
 8pt>
 File: images/pinched_cyl_structured_quad_results.pdf Graphic file (type pdf)
  <use images/pinched_cyl_structured_quad_results.pdf>
@@ -3301,7 +3332,7 @@ File: images/pinchedcylinder.png Graphic file (type png)
 Package pdftex.def Info: images/pinchedcylinder.png used on input line 91.
 (pdftex.def)             Requested size: 169.57584pt x 98.093pt.
 
-<images/pinched_hemi_quad_results.pdf, id=738, 533.3551pt x 460.76108pt>
+<images/pinched_hemi_quad_results.pdf, id=732, 533.3551pt x 460.76108pt>
 File: images/pinched_hemi_quad_results.pdf Graphic file (type pdf)
 
 <use images/pinched_hemi_quad_results.pdf>
@@ -3320,7 +3351,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 102--107
  []
 
 [44 <./images/pinched_cyl_structured_quad_results.pdf>]
-<images/hinged_cylindrical_roof.png, id=799, 1430.34375pt x 1117.17375pt>
+<images/hinged_cylindrical_roof.png, id=793, 1430.34375pt x 1117.17375pt>
 File: images/hinged_cylindrical_roof.png Graphic file (type png)
 
 <use images/hinged_cylindrical_roof.png>
@@ -3328,7 +3359,7 @@ Package pdftex.def Info: images/hinged_cylindrical_roof.png used on input line
 130.
 (pdftex.def)             Requested size: 207.7052pt x 162.21617pt.
 
-<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=801, 578.16pt x
+<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=795, 578.16pt x
  433.62pt>
 File: images/Load_displacement_curve_hinged_cylindrical_roof.pdf Graphic file (
 type pdf)
@@ -3342,7 +3373,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 130--135
  []
 
 [45 <./images/pinched_hemi_quad_results.pdf>]
-<images/opencylinderpullout.png, id=860, 1296.042pt x 966.009pt>
+<images/opencylinderpullout.png, id=854, 1296.042pt x 966.009pt>
 File: images/opencylinderpullout.png Graphic file (type png)
 
 <use images/opencylinderpullout.png>
@@ -3350,7 +3381,7 @@ Package pdftex.def Info: images/opencylinderpullout.png used on input line 152.
 
 (pdftex.def)             Requested size: 207.7052pt x 154.80043pt.
 
-<images/Load_displacement_curve_open_cylinder_pullout.pdf, id=862, 578.16pt x 4
+<images/Load_displacement_curve_open_cylinder_pullout.pdf, id=856, 578.16pt x 4
 33.62pt>
 File: images/Load_displacement_curve_open_cylinder_pullout.pdf Graphic file (ty
 pe pdf)
@@ -3363,7 +3394,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 152--157
 [][][][] 
  []
 
-<images/swinging_plate_problem.png, id=863, 4411.48125pt x 2789.622pt>
+<images/swinging_plate_problem.png, id=857, 4411.48125pt x 2789.622pt>
 File: images/swinging_plate_problem.png Graphic file (type png)
 
 <use images/swinging_plate_problem.png>
@@ -3371,7 +3402,7 @@ Package pdftex.def Info: images/swinging_plate_problem.png used on input line 1
 78.
 (pdftex.def)             Requested size: 207.7052pt x 131.31656pt.
 
-<images/swinging_plate_graph.pdf, id=864, 527.40317pt x 438.03554pt>
+<images/swinging_plate_graph.pdf, id=858, 527.40317pt x 438.03554pt>
 File: images/swinging_plate_graph.pdf Graphic file (type pdf)
 
 <use images/swinging_plate_graph.pdf>
@@ -3390,14 +3421,14 @@ splacement_curve_open_cylinder_pullout.pdf
 pdfTeX warning: pdflatex.exe (file ./images/Load_displacement_curve_open_cylind
 er_pullout.pdf): PDF inclusion: multiple pdfs with page group included in a sin
 gle page
->] <images/quad_bend_problem.png, id=959, 3083.52pt x 2052.468pt>
+>] <images/quad_bend_problem.png, id=953, 3083.52pt x 2052.468pt>
 File: images/quad_bend_problem.png Graphic file (type png)
 
 <use images/quad_bend_problem.png>
 Package pdftex.def Info: images/quad_bend_problem.png used on input line 203.
 (pdftex.def)             Requested size: 207.7052pt x 138.23808pt.
 
-<images/quad_bend_graph.pdf, id=960, 541.07143pt x 438.03554pt>
+<images/quad_bend_graph.pdf, id=954, 541.07143pt x 438.03554pt>
 File: images/quad_bend_graph.pdf Graphic file (type pdf)
 
 <use images/quad_bend_graph.pdf>
@@ -3503,11 +3534,11 @@ TextBlockOrigin set to 20mm x 43.5mm
 [56
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (WissenschaftlicheArbeit.aux (chapters/Abstract.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `WissenschaftlicheArbeit.out' has not changed
 .
 (rerunfilecheck)             Checksum: 1CC48D919C8CE8C7B4C3976E56C80E56;1487.
@@ -3520,11 +3551,11 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53518 strings out of 493333
- 1152738 string characters out of 3139194
- 1828624 words of memory out of 3000000
- 55484 multiletter control sequences out of 15000+200000
- 133568 words of font info for 271 fonts, out of 3000000 for 9000
+ 53534 strings out of 493333
+ 1153074 string characters out of 3139194
+ 1828650 words of memory out of 3000000
+ 55494 multiletter control sequences out of 15000+200000
+ 139188 words of font info for 275 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,21n,108p,8958b,2769s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -3545,9 +3576,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (60 pages, 6444575 bytes).
+Output written on WissenschaftlicheArbeit.pdf (60 pages, 6487195 bytes).
 PDF statistics:
- 1273 PDF objects out of 1440 (max. 8388607)
- 275 named destinations out of 1000 (max. 500000)
- 44890 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1267 PDF objects out of 1440 (max. 8388607)
+ 276 named destinations out of 1000 (max. 500000)
+ 45904 words of extra memory for PDF output out of 51595 (max. 10000000)
 
