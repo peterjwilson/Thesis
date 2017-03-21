@@ -13,13 +13,15 @@
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
 
 
-\renewcommand{\Thema}{DSG triangle shell element}
+
 
 \setcounter{MaxMatrixCols}{20}
 
 
 \chapter{DSG triangle shell element}
 \label{chap:chapter_3}
+
+\renewcommand{\Thema}{DSG triangle shell element}
 
 This section deals with the derivation and implementation of a thick triangular shell element in KRATOS.
 
@@ -198,7 +200,7 @@ ADD DIAGRAM AFTER CODE IS NICE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Mass matrix formulation}
+\section{Mass matrix formulation and implementation}
 
 The mass matrix is necessary to facilitate dynamic analysis with the thick triangular shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
 
@@ -237,3 +239,45 @@ For a single layer material of area $A$ this reduces to:
 \bar{m} = \frac{A}{3} \rho t
 \label{eqt17}
 \end{equation}
+
+\section{Quantity recovery implementation!!!!!!!!!!}
+
+Pseudo code here
+
+\begin{algorithm}
+	\onehalfspacing
+	\caption{DSG triangle element quantity recovery}\label{euclid}
+	\begin{algorithmic}[H]
+		\Require $requestedQuantity$, calculation of nodal displacements
+		\State \textbf{call} InitializeCalculationData({$data$})
+				\State \hspace{\algorithmicindent}Calculate strain-displacement matrix $B$
+				\State \hspace{\algorithmicindent}Calculate material properties $C$
+		\While{$gaussPoint$ < 3}
+				\State $generalizedStrains$ = product$(B,\ localDisplacements)$
+				\If{$requestedQuantity$ requires stress} 
+						\State $generalizedStresses$ = product $(C,\ generalizedStrains)$
+						\State Decimal correction of $generalizedStresses$
+				\EndIf
+				\State Decimal correction of $generalizedStrains$ 
+				\If{$requestedQuantity$ requires local orientation} 
+						\State Rotate $requestedQuantity$ to local orientation
+				\EndIf
+				\State Assemble $requestedQuantity$ into $outputMatrix$
+				\If{$requestedQuantity$ requires global orientation} 
+						\State Rotate $outputMatrix$ to global orientation
+				\EndIf
+				\State Interpolate $outputMatrix$ to standard Gauss points for visualisation
+		\EndWhile
+	\end{algorithmic}
+\end{algorithm}
+
+asdfasdf
+
+
+
+
+
+
+
+
+

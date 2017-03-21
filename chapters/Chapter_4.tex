@@ -12,95 +12,15 @@
 %deutsch: chap/kap, abs, abb, gl, anh
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
 
-\renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
+
 
 \setcounter{MaxMatrixCols}{20}
 %\captionsetup{justification=centering}
 
 
-\chapter{A brief background of shell elements}
-
-As discussed in the introduction, shell elements are composed of membrane and bending contributions. The membrane contribution describes the behaviour of the x and y translational and the z rotational $(u_{x},\ u_{y},\ \theta_{z})$ degree of freedoms (DOFs) for each node, while the bending contribution is responsible for the z translational and x and y rotational $(u_{z},\ \theta_{x},\ \theta_{y})$ DOFs for each node.
-
-\begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includegraphics[width=12cm]{images/bendplusmemequalshell.png}
-	\caption{Construction of shell DOFs from bending and membrane DOFs \\ (source: http://www.edwilson.org/BOOK-Wilson/10-SHE~1.pdf)}
-	\label{bendplusmemequalshell}
-\end{figure}
-
-Furthermore, shells themselves are commonly divided into two groups, thin shells and thick shells, based on the underlying physics assumptions and kinematics. \\
-
-Thin shells, governed by Kirchhoff bending plate theory, are analogous to Bernoulli beam elements where the shell directors remain straight and normal to the shell midsurface. This kinematic prescription neglects the transverse shear strains $\gamma_{xz}$ and $\gamma_{yz}$ as per the figure below.
-
-\begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includegraphics[width=6cm]{images/bernoullie.png}
-	\caption{Thin (Kirchhoff) shell kinematics \\ (source: KU Bletzinger - Theory of Plates Lecture, 2016, TUM)}
-	\label{thinshellkine}
-\end{figure}
-
-Contrasting this, thick shells adhering to Reissner Mindlin bending plate theory are analogous to Timoshenko beam elements, in that they consider the transverse shear deformations neglected by thin shells. The following figure highlights the kinematics of thick shells.
-
-\begin{figure}[H]
-	\centering
-	\def\svgwidth{\columnwidth}
-	\includegraphics[width=10cm]{images/reissner.png}
-	\caption{Thick (Reissner Mindlin) shell kinematics \\ (source: KU Bletzinger - Theory of Plates Lecture, 2016, TUM)}
-	\label{thickshellkine}
-\end{figure}
-
-This work considers the implementation of a thin (Kirchhoff bending theory) quadrilateral shell element.
-
-\subsection{Formulation context}
-
-The context in which the following derivation operates within is hereby established. A general form of the linear static FEM is presented below.
-
-\begin{equation} 
-\textbf{K} \textbf{u} = \textbf{f}
-\label{equation01}
-\end{equation}
-
-Since the proposed element is to be integrated into the existing multiphysics code KRATOS, the relevant term for the derivation of a new element is the system stiffness matrix $\textbf{K}$, which is constructed as such:
-
-\begin{equation} 
-\textbf{K} = \textbf{B}^T \textbf{C} \textbf{B} 
-\label{equation02}
-\end{equation}
-
-$\textbf{C}$ is the constitutive matrix containing the material properties and physics, formed from the membrane and bending constitutive matrices. For the thin quad only a homogeneous isotropic plate constitutive law \cite{Bat82} is considered, as described below.
-
-\begin{equation} 
-\textbf{C} = 
-\begin{pmatrix}
-\frac{E}{(1-\nu^2)}
-\begin{pmatrix}
-1 & \nu & 0 \\
-\nu & 1 & 0 \\
-0 & 0 & (1-\nu)/2
-\end{pmatrix}
-& \mathbf{0} \\
-
-\mathbf{0} & \frac{E t^3}{12(1-\nu^2)}
-\begin{pmatrix}
-1 & \nu & 0 \\
-\nu & 1 & 0 \\
-0 & 0 & (1-\nu)/2
-\end{pmatrix}
-\end{pmatrix}
-\label{equation03}
-\end{equation}
-
-Thus, it is evident that the bulk of the element derivation lies in the determination of the element's strain displacement matrix $\textbf{B}$. The shell B matrix is composed of a membrane part and a bending part.
-
-
-
-
-
-
 \chapter{ANDES-DKT quadrilateral shell element}
+
+\renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
 
 The formulation of the stiffness matrix for the thin quadrilateral shell element is presented after a quick orientation.
 
@@ -791,4 +711,10 @@ $\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}
 
 With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\texttt{FinalizeCalculations()}$ which transforms the calculated element stiffness from local to global coordinates.
 
+\section{Mass matrix formulation and implementation!!!!!!!!!!}
 
+Pseudo code here
+
+\section{Quantity recovery implementation!!!!!!!!!!}
+
+Pseudo code here
