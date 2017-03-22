@@ -652,25 +652,21 @@ Considering this, the addition of the membrane (basic and higher order) B matric
 
 \section{Implementation in KRATOS}
 
-With the formulation of the thin quadrilateral shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.\\
+With the formulation of the thin quadrilateral shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
 
-The new thin quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are placed in the 'custom$\_$elements' directory of the 'StructuralMechanicsApplication' module. Similar to other existing elements, the new class $\texttt{ShellThinElement3D4N}$ is inherited from the base class $\texttt{Element}$, which prescribes both virtual and pure virtual methods for it's derived classes to implement. The purely virtual methods must be re-implemented in the derived class to ensure that the class possesses the necessary fundamental functionality to operate within the KRATOS framework, while the virtual methods offer optional avenues to implement additional derived element functionality. \\
+The new thin quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are placed in the 'custom$\_$elements' directory of the 'StructuralMechanicsApplication' module. Similar to other existing elements, the new class $\texttt{ShellThinElement3D4N}$ is inherited from the base class $\texttt{Element}$, which prescribes both virtual and pure virtual methods for it's derived classes to implement. The purely virtual methods must be re-implemented in the derived class to ensure that the class possesses the necessary fundamental functionality to operate within the KRATOS framework, while the virtual methods offer optional avenues to implement additional derived element functionality.
 
-Examples of purely virtual methods include: $\texttt{EquationIdVector(...),\ GetDofList(...)}$ and\break $\texttt{CalculateLocalSystem(...)}$. \\
+Examples of purely virtual methods include: $\texttt{EquationIdVector(...),\ GetDofList(...)}$ and\break $\texttt{CalculateLocalSystem(...)}$. 
 
-Examples of virtual methods include: $\texttt{CalculateMassMatrix(),\ CalculateDampingMatrix(...)}$ and $\texttt{GetValueOnIntegrationPoints(...)}$. \\
+Examples of virtual methods include: $\texttt{CalculateMassMatrix(),\ CalculateDampingMatrix(...)}$ and $\texttt{GetValueOnIntegrationPoints(...)}$.
 
-Since the current state of the new element is limited to linear statics, few virtual methods have been implemented. Future development of the element into dynamics, for example, would require the implementation of $\texttt{CalculateMassMatrix()}$ and $\texttt{CalculateDampingMatrix(...)}$.\\
+Since the current state of the new element is limited to linear statics, few virtual methods have been implemented. Future development of the element into dynamics, for example, would require the implementation of $\texttt{CalculateMassMatrix()}$ and $\texttt{CalculateDampingMatrix(...)}$.
 
 The general workflow of the current implementation is considered in the following section.
 
 \subsection{Workflow of element calculation}
 
 The scope of the presented workflow is limited to key class methods employed to determine the unknown displacement field for a linear static problem. Within some of the methods presented below are additional methods, however, only the key methods are considered for clarity.
-
-
-
-
 
 \begin{figure}[H]
 	% Define block styles
@@ -698,10 +694,8 @@ The scope of the presented workflow is limited to key class methods employed to 
 	\draw [arrow] (CalculateBMatrix) edge[bend left=45] node [below] {} (CalculateGaussPointContribution);
 	\end{tikzpicture}
 	\caption{High level overview of element workflow}
-	\label{bendplusmemequalshell}
+	\label{andesworkflow}
 \end{figure}
-
-
 
 Initially, the re-implemented purely virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition (.mdpa file in this case). This method simply calls $\texttt{CalculateAll()}$, which is the main pipeline of the element stiffness calculation, itself calling three key methods: $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$. \\
 
@@ -711,9 +705,76 @@ $\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}
 
 With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\texttt{FinalizeCalculations()}$ which transforms the calculated element stiffness from local to global coordinates.
 
-\section{Mass matrix formulation and implementation!!!!!!!!!!}
+\begin{algorithm}
+	\onehalfspacing
+	\caption{ANDES-DKQ element stiffness matrix pseudocode}\label{ANDES-DKQ element stiffness matrix}
+	\begin{algorithmic}[H]
+		\Require Coordinate transformation instance
+		\State Resize $LHS$ and $RHS$
+		\State \textbf{call} InitializeCalculationData({$data$})
+		\State \hspace{\algorithmicindent}Calculate integration areas $dA = w_i \cdot detJ(xi,\ eta)$
+		\State \hspace{\algorithmicindent}Determine basic membrane strain displacement $L$
+		\State \hspace{\algorithmicindent}Construct membrane higher order filter matrix $H$
+		\State \hspace{\algorithmicindent}Arrange higher order natural strain matrices $Q_i$
+		\State \hspace{\algorithmicindent}Transform $Q_i$ into $B_{hi}$
+		\State \hspace{\algorithmicindent}Determine $\bar{B_h}$
+		\State \hspace{\algorithmicindent}Pre-calculate all DKQ coefficients
+		\While{$gaussPoint$ < 4}
+		\State \textbf{call} CalculateGaussPointContribution({$data$})
+		\State \hspace{\algorithmicindent}\textbf{call} CalculateBMatrix({$data$})
+		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate and combine $B_{mem}$ and $B_{bend}$ into $B$
+		\State \hspace{\algorithmicindent}\textbf{call} CalculateSectionResponse({$data$})
+		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate material properties $C$
+		\State \hspace{\algorithmicindent}Add stiffness matrix Gauss point contribution to $LHS$
+		\EndWhile
+		\State Modify $RHS$ residual vector
+		\State \textbf{call} FinalizeCalculations($data,\ displacements,\ LHS,\ RHS$)
+		\State \textbf{call} AddBodyForces($data,\ RHS$)
+	\end{algorithmic}
+\end{algorithm}
 
-Pseudo code here
+asdfasdf
+
+\section{Mass matrix formulation}
+
+The mass matrix is necessary to facilitate dynamic analysis with the thin quadrilateral shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
+
+\begin{equation} 
+\mathbf{M} =  
+\begin{pmatrix}
+\mathbf{M}_1 & \mathbf{0} & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \mathbf{M}_2 & \mathbf{0} & \mathbf{0}\\
+\mathbf{0} & \mathbf{0} & \mathbf{M}_3 & \mathbf{0}\\
+\mathbf{0} &\mathbf{0} & \mathbf{0} & \mathbf{M}_4
+\end{pmatrix}
+\hspace{10mm}
+where
+\hspace{10mm}
+\mathbf{M}_i =  
+\begin{pmatrix}
+\bar{m} & 0 & 0 & 0 & 0 & 0\\
+0 & \bar{m} & 0 & 0 & 0 & 0\\
+0 & 0 & \bar{m} &0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\label{eqt15}
+\end{equation}
+
+The general lumped mass is determined for a multi-ply material with $n$ plies each of $t_i$ thickness and $\rho_i$ density as follows:
+
+\begin{equation} 
+\bar{m} = \frac{A}{4} \sum_{i=1}^n \rho_i t_i
+\label{eqt16}
+\end{equation}
+
+For a single layer material of area $A$ this reduces to:
+
+\begin{equation} 
+\bar{m} = \frac{A}{4} \rho t
+\label{eqt17}
+\end{equation}
 
 \section{Quantity recovery implementation!!!!!!!!!!}
 

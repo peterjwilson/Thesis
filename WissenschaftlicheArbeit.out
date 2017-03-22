@@ -15,7 +15,7 @@
 \BOOKMARK [0][-]{chapter.4}{ANDES-DKT quadrilateral shell element}{}% 15
 \BOOKMARK [1][-]{section.4.1}{Stiffness matrix}{chapter.4}% 16
 \BOOKMARK [1][-]{section.4.2}{Implementation in KRATOS}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Mass matrix formulation and implementation!!!!!!!!!!}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.3}{Mass matrix formulation}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.4}{Quantity recovery implementation!!!!!!!!!!}{chapter.4}% 19
 \BOOKMARK [0][-]{chapter.5}{Benchmarking}{}% 20
 \BOOKMARK [1][-]{section.5.1}{Static benchmarks: shell obstacle course}{chapter.5}% 21

@@ -17,6 +17,12 @@
 
 \setcounter{MaxMatrixCols}{20}
 
+%\abovedisplayskip=5pt
+
+%\setlength{\belowdisplayskip}{-10pt}
+
+%\setlength{\abovedisplayskip}{-10pt}
+%\belowdisplayskip=5pt
 
 \chapter{DSG triangle shell element}
 \label{chap:chapter_3}
@@ -158,7 +164,7 @@ The material matrices for the membrane and bending parts are presented below:
 \label{eqt12}
 \end{equation}
 
-To futher improve the DSG element performance, Bischoff and Bletzinger \cite{Bis04} \cite{Bis01} applied the enhancement approach that Lyly suggested for MITC-4 elements \cite{Lyl93}. This approach modifies the internal shear energy term by scaling the shear constitutive matrix with a correction term $\tau$ incorporating the element thickness and an indicator of element size ($h_k$ = longest element side length). The revised shear constitutive matrix is thus:
+To further improve the DSG element performance, Bischoff and Bletzinger \cite{Bis04} \cite{Bis01} applied the enhancement approach that Lyly suggested for MITC-4 elements \cite{Lyl93}. This approach modifies the internal shear energy term by scaling the shear constitutive matrix with a correction term $\tau$ incorporating the element thickness and an indicator of element size ($h_k$ = longest element side length). The revised shear constitutive matrix is thus:
 
 \begin{equation} 
 \mathbf{C}_{shear} =  \tau \kappa Gt
@@ -175,16 +181,15 @@ To futher improve the DSG element performance, Bischoff and Bletzinger \cite{Bis
 \label{eqt14}
 \end{equation}
 
-where $\kappa = \frac{5}{6}$ is the shear correction factor and $\alpha = 0.1$ as per \cite{Lyl93}.\\
+where $\kappa = \frac{5}{6}$ is the shear correction factor and $\alpha = 0.1$ as per \cite{Lyl93}.
 
-At a basic level, shear locking in bending plates is driven by a mismatch of internal energy allocation between bending ($\Pi_{bend} \propto t^3$) and shear components ($\Pi_{shear} \propto t$) as $t \rightarrow 0$.  This modification somewhat alleviates the locking by 'encouraging' the internal shear energy to scale with the cube of the thickness too, thus reducing the artificial energy disparity.\\
+As described in section \ref{transverse_shear_locking}, transverse shear locking is driven by a mismatch of internal energy allocation between bending ($\Pi_{bend} \propto t^3$) and shear components ($\Pi_{shear} \propto t$) as $t \rightarrow 0$.  This modification somewhat alleviates the locking by 'encouraging' the internal shear energy to scale with the cube of the thickness too, thus reducing the artificial energy disparity.
 
-
-Although all stiffness components are assembled, one notices that lack of entries corresponding to the drilling DOF $\theta_{zi}$ currently renders the element stiffness matrix singular. Nguyen-Thoi et al. \cite{Ngu13} proposed to remedy this rotational singularity by setting the drilling DOF entries to one one-thousandth of the maximum diagonal entry in the element stiffness matrix.
+Although all stiffness components are assembled, one notices that lack of entries corresponding to the drilling DOF $\theta_{zi}$ currently renders the element stiffness matrix singular. The technology of drilling DOFs discussed in \ref{drilling_DOF_section} in thus introduced. Nguyen-Thoi et al. \cite{Ngu13} proposed to remedy this rotational singularity by setting the drilling DOF entries to one one-thousandth of the maximum diagonal entry in the element stiffness matrix.
 
 \begin{equation} 
 K_{\theta z} =  \frac{max(K_{el\ ij}\delta_{ij})}{1000}
-\label{eqt15}
+\label{eqtdrilling}
 \end{equation}
 
 
@@ -192,10 +197,80 @@ K_{\theta z} =  \frac{max(K_{el\ ij}\delta_{ij})}{1000}
 
 
 \section{Stiffness matrix implementation}
-asdfasdfasdf
+Despite the relatively simple and decoupled stiffness formulation presented, the practical programming of it invariably introduces it's own complexities. Furthermore, leveraging the existing functionality that the Kratos code possesses not only prevents re-inventing the wheel, but also makes the code more readable and functionally cohesive.  
 
+The new DSG triangle element is implemented in the files $\texttt{shell\_thick\_element\_3D3N.hpp}$ and $\texttt{shell\_thick\_element\_3D3N.cpp}$, which are compiled into the  'StructuralMechanicsApplication' module of Kratos. Without extending into extraneous details, the DSG triangle element is derived from the Kratos $\texttt{element}$ class and makes extensive use of other existing Kratos utility classes including those offering: coordinate transformations, material properties and response and pre-defined stiffness matrix and residual vector "containers". Correspondingly, it is also subject to the constraints associated with each of these. From a high level view, however, the element stiffness matrix follows the subsequent workflow:
 
-ADD DIAGRAM AFTER CODE IS NICE
+\begin{figure}[H]
+	% Define block styles
+	\tikzstyle{virtual} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+	\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white!30]
+	\tikzstyle{arrow} = [thick,->,>=stealth]
+	\begin{tikzpicture}[node distance = 1.9cm, auto]
+	% Place nodes
+	\node [process] (CalculateLocalSystem) {$\texttt{CalculateLocalSystem()}$};
+	\node [process, right of=CalculateLocalSystem, xshift = 4cm] (CalculateAll) {$\texttt{CalculateAll()}$};
+	\node [process, below of=CalculateAll, xshift = -0cm] (InitializeCalculationData) {$\texttt{InitializeCalculationData()}$};
+	\node [process, below of=InitializeCalculationData, yshift = -0cm] (CalculateSectionResponse) {$\texttt{CalculateSectionResponse()}$};
+	\node [process, below of=CalculateSectionResponse, yshift = -0cm] (FinalizeCalculations) {$\texttt{FinalizeCalculations()}$};
+	% Draw edges
+	\draw [arrow] (CalculateLocalSystem) -- (CalculateAll);
+	\draw [arrow] (CalculateAll) -- (InitializeCalculationData);
+	\draw [arrow] (InitializeCalculationData) -- (CalculateSectionResponse);
+	\draw [arrow] (CalculateSectionResponse) -- (FinalizeCalculations);
+	\end{tikzpicture}
+	\caption{High level overview of DSG element workflow}
+	\label{DSGworkflow}
+\end{figure}
+
+Initially, the re-implemented virtual method $\texttt{CalculateLocalSystem()}$ is called by the Kratos framework automatically for every $\texttt{ShellThickElement3D3N}$ in the job definition. This method redirects to $\texttt{CalculateAll()}$, which is the main pipeline of the element stiffness calculation, itself calling three key methods: $\texttt{InitializeCalculationData()},$ \break$\texttt{CalculateSectionResponse()}$ and $\texttt{FinalizeCalculations()}$.
+
+Following the general form of the existing shell elements in Kratos, all the data which remains constant through the Gauss Integration loop is calculated beforehand in the function $\texttt{InitializeCalculationData()}$. The DSG element follows this tradition for consistency, although it isn't strictly necessary because it only requires one Gauss point for the numerical integration. Following $\texttt{InitializeCalculationData()}$, $\texttt{CalculateSectionResponse()}$ is called and the material matrix is populated with existing Kratos material classes. It must be noted here that a single 8$\times$8 material matrix $\mathbf{C}$ is returned which is structured as follows (for the setting of 'thick' shell kinematics):
+
+\begin{equation} 
+\mathbf{C}_{Kratos} =  
+\begin{pmatrix}
+	\mathbf{C}_{mem} & \mathbf{0} & \mathbf{0} \\
+	\mathbf{0} & \mathbf{C}_{bend} & \mathbf{0} \\
+	\mathbf{0} & 	\mathbf{0} & \mathbf{C}_{shear}
+\end{pmatrix}
+\label{eqtCkratos}
+\end{equation} 
+
+At this stage the shear component of the material matrix is unmodified, and is corrected with $\tau$ as per equation \eqref{eqt14}. The DOF arrangement of the material matrix also motivates a slight departure from the strain displacement matrices as presented above. Although the element stiffness matrix can certainly be programmed in it's constitutive parts, as per equation \eqref{eqt5}, it is more concise to calculate it as follows:
+
+\begin{equation} 
+\mathbf{K} = \int_A  (\mathbf{B}_{comb}^T \mathbf{C}_{Kratos} \mathbf{B}_{comb} )\ dA
+= A\  \mathbf{B}_{comb}^T \mathbf{C}_{Kratos} \mathbf{B}_{comb} 
+\label{eqtKkratos}
+\end{equation}
+
+A consequence of this arrangement is that the combined strain displacement matrix created in $\texttt{InitializeCalculationData()}$ must conform to the DOF ordering of the material matrix layout.
+
+The element stiffness matrix is calculated according to equation \eqref{eqtKkratos} and subsequently modified to include an artificial drilling DOF stiffness as per equation \eqref{eqtdrilling}. Lastly, this is followed by a call to the Kratos function $\texttt{FinalizeCalculations()}$ which handles the transformation from the element to the global orientation.
+
+The following pseudocode summarises the key calls and operations involved in calculating the DSG element stiffness matrix.
+
+\begin{algorithm}
+	\onehalfspacing
+	\caption{DSG triangle element stiffness matrix pseudocode}\label{DSG triangle element stiffness matrix}
+	\begin{algorithmic}[H]
+		\Require Coordinate transformation instance
+		\State \textbf{call} $\texttt{CalculateAll}()$
+		\State Resize $LHS$ and $RHS$
+		\State \textbf{call} $\texttt{InitializeCalculationData}(data)$
+		\State \hspace{\algorithmicindent}Calculate combined strain-displacement matrix $B$
+		\State \textbf{call} $\texttt{CalculateSectionResponse}(data)$
+		\State \hspace{\algorithmicindent}Retrieve material properties $C$
+		\State \hspace{\algorithmicindent}Apply shear stabilization to material matrix $C$
+		\State Calculate $LHS$ stiffness matrix
+		\State Add in artificial drilling stiffness
+		\State Modify $RHS$ residual vector
+		\State \textbf{call} $\texttt{FinalizeCalculations}(data,\ displacements,\ LHS,\ RHS)$
+		\State \textbf{call} $\texttt{AddBodyForces}(data,\ RHS)$
+	\end{algorithmic}
+\end{algorithm}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

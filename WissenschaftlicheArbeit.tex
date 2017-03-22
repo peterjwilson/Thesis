@@ -81,10 +81,18 @@
 %\include{chapters/Acknowledgements}	%optional
 \newpage
 \pagenumbering{Roman}
+
+% ----------- TABLE OF CONTENTS ------------------
 \setcounter{tocdepth}{1}
 \renewcommand{\cftsecfont}{\bfseries}
-\renewcommand{\cftchapafterpnum}{\vspace{\cftbeforechapskip}}
+\renewcommand{\cfttoctitlefont}{\Huge\bfseries} %format toc title
+\renewcommand{\cftloftitlefont}{\Huge\bfseries} %format figures title
+\renewcommand{\cftlottitlefont}{\Huge\bfseries} %format tables title
+\renewcommand{\cftchapafterpnum}{\vspace{\cftbeforechapskip}} 
 \tableofcontents
+
+% -------------------------------------------------------
+
 \mainmatter %turns on chapter numbering, resets page numbering
 \pagenumbering{arabic}
 \pagestyle{headings}
@@ -92,6 +100,7 @@
 %TOEDIT create different files for your chapter an include them here in the main file
 
 \setlength{\belowcaptionskip}{-17pt}
+\renewcommand\arraystretch{1}
 
 \input{./chapters/Chapter_1} %intro
 \input{./chapters/Chapter_2} %shells
