@@ -24,13 +24,11 @@
 
 The formulation of the stiffness matrix for the thin quadrilateral shell element is presented after a quick orientation.
 
-\section{Stiffness matrix}
+\section{Stiffness matrix formulation}
 
 asdfasdf
 
-
-
-\subsection{Membrane formulation}
+\subsection{ANDES membrane formulation}
 
 The membrane formulation is responsible for providing the membrane stiffness of the element. The membrane formulation chosen was the Assumed Natural Deviatoric Strains (ANDES) formulation as presented in \cite{Hau94}. A full description and theoretical derivation of the ANDES approach falls outside the scope of this document, however, those interested are directed to Militello's and Felippa's initial paper \cite{Fel91} on the formulation. Most importantly, the ANDES approach yields high performance elements that are insensitive to distortion.\\
 
@@ -401,7 +399,7 @@ The higher order membrane B matrix $\mathbf{B}_h$ is constructed from the interp
 \end{equation}
 
 
-\subsection{Bending formulation}
+\subsection{DKT bending formulation}
 
 The bending formulation is responsible for providing the bending stiffness of the element. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full description and theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. Most importantly for a thin shell element, the transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.\\
 
@@ -650,7 +648,7 @@ Considering this, the addition of the membrane (basic and higher order) B matric
 
 
 
-\section{Implementation in KRATOS}
+\section{Stiffness matrix implementation}
 
 With the formulation of the thin quadrilateral shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
 
@@ -707,7 +705,7 @@ With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\te
 
 \begin{algorithm}
 	\onehalfspacing
-	\caption{ANDES-DKQ element stiffness matrix pseudocode}\label{ANDES-DKQ element stiffness matrix}
+	\caption{ANDES-DKT element stiffness matrix pseudocode}\label{ANDES-DKQ element stiffness matrix}
 	\begin{algorithmic}[H]
 		\Require Coordinate transformation instance
 		\State Resize $LHS$ and $RHS$
@@ -735,7 +733,7 @@ With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\te
 
 asdfasdf
 
-\section{Mass matrix formulation}
+\section{Mass matrix formulation and implementation}
 
 The mass matrix is necessary to facilitate dynamic analysis with the thin quadrilateral shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
 
@@ -776,6 +774,77 @@ For a single layer material of area $A$ this reduces to:
 \label{eqt17}
 \end{equation}
 
-\section{Quantity recovery implementation!!!!!!!!!!}
+\section{Stress and strain recovery}
 
-Pseudo code here
+The stresses and strains of the ANDES-DKT quadrilateral element are recovered in a similar way to the DSG triangle, with the added complication of the multiple Gauss points.
+
+The non-zero local strains ($\epsilon_{zz},\ \epsilon_{xz},\ \epsilon_{yz} = 0$) of the 4 noded 3 parameter element can be arranged in a vector form:
+
+\begin{equation} 
+\boldsymbol{\epsilon}^T = \begin{pmatrix}
+\boldsymbol{\epsilon}_1 & \boldsymbol{\epsilon}_2 & \boldsymbol{\epsilon}_3 & \boldsymbol{\epsilon}_4
+\end{pmatrix}
+\hspace{5mm}
+with
+\hspace{5mm}
+\boldsymbol{\epsilon}^T_i = \begin{pmatrix}
+\epsilon_{xx} & \epsilon_{xx} & 2\epsilon_{xy} & \epsilon_{xx} & \kappa_{xx} & \kappa_{yy} & 2\kappa_{xy} 
+\end{pmatrix}
+\label{eqqrec1}
+\end{equation}
+
+The nodal strain vector is recovered from the displacement field by applying the strain displacement matrix, which varies over the element.
+
+\begin{equation} 
+\boldsymbol{\epsilon}(\xi,\ \eta) = \mathbf{B}(\xi,\ \eta) \mathbf{u}(\xi,\ \eta)
+\label{eqqrec2}
+\end{equation}
+
+As per the DSG triangle, the strains and stresses are calculated at the Gauss points of the element, with the ANDES-DKT element having four Gauss points ($j = 1,\ 2,\ 3,\ 4$). Thus, the strain vector at each Gauss point $j$ is recovered from the discrete nodal displacements $\hat{\mathbf{u}}_i$ as follows:
+
+\begin{equation} 
+\boldsymbol{\epsilon}_{GP_j} = \mathbf{B}(\xi_j,\ \eta_j) \sum_{i=1}^{4\ nodes} N_i(\xi_j,\ \eta_j) \hat{\mathbf{u}}_i
+\label{eqqrec3}
+\end{equation}
+
+With the strains determined, the stresses at each Gauss point are recovered with the material matrix (which in the general case may vary over the element).
+
+\begin{equation} 
+\boldsymbol{\sigma}_{GP_j} = \mathbf{C}_{GP_j}\ \boldsymbol{\epsilon}_{GP_j}
+\label{eqqrec4}
+\end{equation}
+
+The general implementation of the stress and strain recovery described above is illustrated in the following pseudocode.
+
+\begin{algorithm}
+	\onehalfspacing
+	\caption{ANDES-DKT quadrilateral element stress and strain recovery}
+	\label{ANDES-DKT quadrilateral element stress and strain recovery}
+	\begin{algorithmic}[1]
+		\Require $requestedQuantity$, calculation of nodal displacements
+		\State \textbf{call} $\texttt{InitializeCalculationData}(data)$
+		\State \hspace{\algorithmicindent}Calculate constant components of strain-displacement matrix $B$
+		\State \hspace{\algorithmicindent}Retrieve element $localDisplacements$
+		
+		\While{$gaussPoint$ < 4}
+		\State \textbf{call} $\texttt{CalculateGaussPointContribution}(data)$
+		\State \hspace{\algorithmicindent}\textbf{call} $\texttt{CalculateBMatrix}(data)$
+		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate combined $B$ at current $gaussPoint$
+		\State $generalizedStrains$ = product$(B,\ localDisplacements)$
+		\If{$requestedQuantity$ requires stress} 
+		\State \textbf{call} $\texttt{CalculateSectionResponse}(data)$
+		\State $generalizedStresses$ = product $(C,\ generalizedStrains)$
+		\State Decimal correction of $generalizedStresses$
+		\EndIf
+		\State Decimal correction of $generalizedStrains$ 
+		\If{$requestedQuantity$ requires local orientation} 
+		\State Rotate $requestedQuantity$ to local orientation
+		\EndIf
+		\State Assemble $requestedQuantity$ into $outputMatrix$
+		\If{$requestedQuantity$ requires global orientation} 
+		\State Rotate $outputMatrix$ to global orientation
+		\EndIf
+		\State Interpolate $outputMatrix$ to standard Gauss points for visualisation
+		\EndWhile
+	\end{algorithmic}
+\end{algorithm}

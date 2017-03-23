@@ -11,15 +11,15 @@
 \BOOKMARK [1][-]{section.3.1}{Stiffness matrix formulation}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Stiffness matrix implementation}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.3}{Mass matrix formulation and implementation}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.4}{Quantity recovery implementation!!!!!!!!!!}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.4}{Stress and strain recovery}{chapter.3}% 14
 \BOOKMARK [0][-]{chapter.4}{ANDES-DKT quadrilateral shell element}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Stiffness matrix}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Implementation in KRATOS}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Mass matrix formulation}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Quantity recovery implementation!!!!!!!!!!}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.1}{Stiffness matrix formulation}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Stiffness matrix implementation}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Mass matrix formulation and implementation}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Stress and strain recovery}{chapter.4}% 19
 \BOOKMARK [0][-]{chapter.5}{Benchmarking}{}% 20
 \BOOKMARK [1][-]{section.5.1}{Static benchmarks: shell obstacle course}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.2}{Geometically nonlinear benchmarks}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Geometically non-linear benchmarks}{chapter.5}% 22
 \BOOKMARK [1][-]{section.5.3}{Dynamics benchmarks}{chapter.5}% 23
 \BOOKMARK [1][-]{section.5.4}{Quantity recovery benchmarks}{chapter.5}% 24
 \BOOKMARK [0][-]{chapter.6}{Conclusions and Outlook}{}% 25

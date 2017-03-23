@@ -12,18 +12,22 @@
 %deutsch: chap/kap, abs, abb, gl, anh
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
 
-\renewcommand{\Thema}{Benchmarking}
-
-
-
 \chapter{Benchmarking}
 
-Benchmarking yeah
+\renewcommand{\Thema}{Benchmarking}
+
+\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the analysis performed. The following benchmarks across statics, geometrically non-linear analysis, dynamics and quantity recovery tests the correct implementation of the element formulations and also gives an indication of their performance. 
 
 \section{Static benchmarks: shell obstacle course}
 
-To test the correct derivation and implementation of the thin quad shell element, the shell obstacle course proposed by Belytschko \cite{Bel85} is considered.
+Considered as the standard benchmark for shell elements, the shell obstacle course proposed by Belytschko \cite{Bel85} runs the elements through 3 problems involving complex loading states. These complex loading states often pose difficulties for un-enhanced elements, which is also tested here.
 
+The \textit{Basic-DKQ} element is a quadrilateral element with an un-enhanced membrane formulation and the DKQ bending formulation. Any performance differences that arise between this element and the ANDES-DKQ element can be attributed to the ANDES element technology.
+
+The \textit{Basic-T3} element is a triangular element with an un-enhanced shear formulation and no correction to the shear component of the material matrix. Any performance differences that arise between this element and the DSG element can be attributed to the DSG element technology.
+
+Furthermore, context of element performance is provided by including results from the existing \textit{KRATOS Q4} 5 parameter quadrilateral element and the \textit{KRATOS T3} 3 parameter triangle element.
+\newpage
 \subsection{Scordelis-Lo roof}
 
 \begin{wrapfigure}{r}{0.45\textwidth}
@@ -32,10 +36,7 @@ To test the correct derivation and implementation of the thin quad shell element
 	\caption{Definition of the Scordelis-Lo roof benchmark\cite{Bou13}}
 \end{wrapfigure}
 
-The Scordelis-Lo roof is part of a cylindrical shell fixed by rigid diaphragms at it's axial ends. The only loading is a pseudo-gravity distributed load that has a magnitude of 90. Due to symmetry only a quarter of the shell is modelled. The key result is the vertical displacement of the lateral side at the midpoint, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} = 0.3024$.
-
-
-
+The first problem of the shell obstacle course is the Scordelis-Lo roof, which is part of a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading is a pseudo-gravity distributed load that has a magnitude of 90. Due to symmetry, only a quarter of the shell is modelled. The key result is the vertical displacement of the lateral side at the midpoint, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} = 0.3024$.
  
 \begin{figure}[H]
 	\subfloat[Quadrilateral element convergence for the Scordelis-Lo roof benchmark]
@@ -49,12 +50,8 @@ The Scordelis-Lo roof is part of a cylindrical shell fixed by rigid diaphragms a
 	\caption{\label{ref_label_overall}Scordelis-Lo roof benchmark results}
 \end{figure}
 
- 
-
-Fixup tri results
-
-The performance of the element is demonstrated in the convergence graph above. It is clear that the element agrees with the reference solution.
-
+The convergence graphs above indicate the ANDES-DKQ and DSG elements agree to the reference solution. Conversely, the Basic-T3 element shows very poor performance. Given that the Basic-DKQ performs well (which is immune to transverse shear locking), it's suspected that transverse shear locking is crippling the Basic-T3 element, while the DSG element technology effectively mitigates this for the DSG element. 
+\newpage
 \subsection{Pinched cylinder}
 
 \begin{wrapfigure}{r}{0.45\textwidth}
@@ -63,7 +60,7 @@ The performance of the element is demonstrated in the convergence graph above. I
 	\caption{Definition of the pinched cylinder benchmark\cite{Bou13}}
 \end{wrapfigure}
 
-The pinched cylinder considers a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading consists of two opposing compressive point loads at the centre of the shell. Due to symmetry only an eighth of the shell is modelled. The key result is the vertical displacement under the point load, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  1.8248\ \times\ 10^{-5}$. 
+The second problem of the shell obstacle course is the pinched cylinder, which considers a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading consists of two opposing compressive point loads at the centre of the shell. Due to symmetry only an eighth of the shell is modelled. The key result is the vertical displacement under the point load, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  1.8248\ \times\ 10^{-5}$. 
 
  
 \begin{figure}[H]
@@ -78,22 +75,17 @@ The pinched cylinder considers a cylindrical shell fixed by rigid diaphragms at 
 	\caption{\label{ref_label_overall}Pinched cylinder benchmark results}
 \end{figure}
 
- 
-
-Fixup tri results were in the order of 1e-3
-
-The performance of the element is demonstrated in the convergence graph above. It is clear that the element agrees with the reference solution.
-
+ The good performance of both the ANDES-DKQ and DSG elements is demonstrated in the convergence graphs above. The Basic-T3 results were in the order of $1\times10^{-3}$ (roughly 100 times greater than the reference solution) and were omitted from the graph for clarity of scale. Once again, it is clear that the computationally inexpensive DSG element technology drastically improves performance from the un-enhanced Basic-T3 to the DSG element.
+\newpage
 \subsection{Pinched hemisphere}
 
 \begin{wrapfigure}{r}{0.45\textwidth}
 	\centering
-	\includegraphics[width=0.4\textwidth]{images/pinchedcylinder.png}
+	\includegraphics[width=0.4\textwidth]{images/pinchedhemisphere.png}
 	\caption{Definition of the pinched hemisphere benchmark \cite{Bou13}}
 \end{wrapfigure}
 
-The pinched hemisphere considers a hemispherical shell loaded with opposing point loads along it's equator. Due to symmetry only a quarter of the shell is modelled. The key result is the 'x' displacement along one of the point loads, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  0.0924$. 
-
+The last test in the shell obstacle course is the pinched hemisphere, which considers a hemispherical shell loaded with opposing point loads along it's equator. Due to symmetry only a quarter of the shell is modelled. The key result is the 'x' displacement along one of the point loads, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  0.0924$. 
 
 \begin{figure}[H]
 	\subfloat[Quadrilateral element convergence for the pinched hemisphere benchmark]
@@ -107,17 +99,15 @@ The pinched hemisphere considers a hemispherical shell loaded with opposing poin
 	\caption{\label{ref_label_overall}Pinched hemisphere benchmark results}
 \end{figure}
 
-Fixup tri results
+The ANDES-DKQ and DSG elements both perform well in the final statics test, as per the convergence graphs above. It is observed that the Basic-DKQ element appears to exhibit membrane locking corresponding to the high double curvature of the problem ($R_1=R_2 = 10$) compared to the Scordelis-Lo roof ($R_1= 10,\ R_2 = \infty$) and the pinched cylinder ($R_1= 300,\ R_2 = \infty$). The ANDES element technology clearly prevents this deleterious effect. The poor performance of the Basic-T3 element compared to the DSG element once again highlights the effectiveness of the DSG element technology in preventing transverse shear locking.
 
-Contrary to the previous benchmarks, the element does not converge to the reference solution in the pinched hemisphere test.  A key point to note is that the other benchmarks in the shell obstacle course employ a structured mesh, while the geometry of this test requires an unstructured mesh. Subsequent investigations of the element attempting to isolate remaining formulation issues have revealed the following phenomena:
+\section{Geometically non-linear benchmarks}
 
-\section{Geometically nonlinear benchmarks}
-
-asdfasdf
+Large rotations and displacements mark the departure from geometrically linear to non-linear analyses, however, the assumption of small strains is still maintained. The extension of the elements to geometrically non-linear problems is handled by employing an existing Kratos class which provides co-rotational transformations for shells. At each increment in the non-linear solution, the large displacements and rotations of each element is mapped by rigid body translations and rotations, thus limiting the strains experienced by the element to reasonably small magnitudes. The performance of the element in geometrically non-linear problems is considered with two benchmarks.
 
 \subsection{Hinged cylindrical roof}
 
-Tests snapthrough
+The first geometrically non-linear benchmark is the snap-through of a hinged cylindrical roof under a central point load $P_{max} = 3000$ \cite{Sze2004}. As per the diagram below, the roof geometry is defined with the following parameters: $L = 254,\ R = 2540,\ \theta=0.1rad$ and $t = 12.7$. The material is defined with a Young's modulus $E = 3102.75$ and Poisson's ratio of $\nu = 0.3$.
 
  
 \begin{figure}[H]
