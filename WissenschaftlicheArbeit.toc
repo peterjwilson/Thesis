@@ -81,41 +81,41 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Membrane higher order stiffness}{32}{subsubsection*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}DKT bending formulation}{37}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}DKQ bending formulation}{36}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.3}Combined formulation}{39}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Stiffness matrix implementation}{41}{section.4.2}
+\contentsline {section}{\numberline {4.2}Stiffness matrix implementation}{40}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.1}Workflow of element calculation}{41}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Mass matrix formulation and implementation}{43}{section.4.3}
+\contentsline {section}{\numberline {4.3}Mass matrix formulation and implementation}{42}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Stress and strain recovery}{44}{section.4.4}
+\contentsline {section}{\numberline {4.4}Stress and strain recovery}{43}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Benchmarking}{47}{chapter.5}
+\contentsline {chapter}{\numberline {5}Benchmarking}{46}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Static benchmarks: shell obstacle course}{47}{section.5.1}
+\contentsline {section}{\numberline {5.1}Static benchmarks: shell obstacle course}{46}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Scordelis-Lo roof}{48}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}Scordelis-Lo roof}{47}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Pinched cylinder}{49}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Pinched cylinder}{48}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Pinched hemisphere}{50}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Pinched hemisphere}{49}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Geometically non-linear benchmarks}{50}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Hinged cylindrical roof}{51}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Hinged cylindrical roof}{50}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Open cylinder pullout}{51}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Open cylinder pull-out}{51}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Dynamics benchmarks}{52}{section.5.3}
+\contentsline {section}{\numberline {5.3}Dynamics benchmarks}{51}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Shell pendulum}{52}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Shell pendulum}{51}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Oscillating clamped plate}{53}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Oscillating clamped plate}{52}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Quantity recovery benchmarks}{53}{section.5.4}
 \defcounter {refsection}{0}\relax 

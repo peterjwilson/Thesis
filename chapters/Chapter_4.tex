@@ -30,7 +30,7 @@ asdfasdf
 
 \subsection{ANDES membrane formulation}
 
-The membrane formulation is responsible for providing the membrane stiffness of the element. The membrane formulation chosen was the Assumed Natural Deviatoric Strains (ANDES) formulation as presented in \cite{Hau94}. A full description and theoretical derivation of the ANDES approach falls outside the scope of this document, however, those interested are directed to Militello's and Felippa's initial paper \cite{Fel91} on the formulation. Most importantly, the ANDES approach yields high performance elements that are insensitive to distortion.\\
+The membrane formulation is responsible for providing the membrane stiffness of the element. The membrane formulation chosen was the Assumed Natural Deviatoric Strains (ANDES) formulation as presented in \cite{Hau94}. A full description and theoretical derivation of the ANDES approach falls outside the scope of this document, however, those interested are directed to Militello's and Felippa's initial paper \cite{Fel91} on the formulation. Most importantly, the ANDES approach yields high performance elements that are insensitive to distortion.
 
 Only the membrane portion of the total shell element is considered in this section, in which there are three DOFs per node.
 
@@ -119,9 +119,9 @@ Throughout this paper the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\
 
 \subsubsection{Membrane higher order stiffness}
 
-The membrane higher order stiffness considers a set of higher order DOFs expressed in terms of the visible DOFs as per equation \eqref{equation04}.\\
+The membrane higher order stiffness considers a set of higher order DOFs expressed in terms of the visible DOFs as per equation \eqref{equation04}.
 
-\textit{It should be noted that the derviation below slightly departs from the formulation of Haugen \cite{Hau94} due to the DOF ordering as per equation \eqref{equation04}.}\\
+\textit{It should be noted that the derviation below slightly departs from the formulation of Haugen \cite{Hau94} due to the DOF ordering as per equation \eqref{equation04}.}
 
 The higher order rotational DOFs are related to the visible DOFs as described below:
 
@@ -207,7 +207,7 @@ and
 \label{equation11}
 \end{equation}
 
-The descriptions for equations from \eqref{equation12} to \eqref{equation22} are heavily abridged from the original element derivation \cite{Hau94}. The general idea of these equations is to relate the higher order nodal strain gauge readings to cartesian strain displacement matrices $\mathbf{B}_{hi}$.\\
+The descriptions for equations from \eqref{equation12} to \eqref{equation22} are heavily abridged from the original element derivation \cite{Hau94}. The general idea of these equations is to relate the higher order nodal strain gauge readings to cartesian strain displacement matrices $\mathbf{B}_{hi}$.
 
 The components necessary for the construction of the higher order bending strain field (along $\xi$ and $\eta$ directions) are shown below:
 
@@ -233,11 +233,9 @@ where
 	\mathbf{r_\eta} = \frac{1}{2} ( \mathbf{r_2} + \mathbf{r_3} - \mathbf{r_1} - \mathbf{r_4} )\ ,
 \end{align*}
 
-
-$\textbf{s}_\xi$ and $\textbf{s}_\eta$ are the normalized parametric base vectors in cartesian coordinates, while $\textbf{r}_i$ are the nodal position vectors in cartesian coordinates.\\
+$\textbf{s}_\xi$ and $\textbf{s}_\eta$ are the normalized parametric base vectors in cartesian coordinates, while $\textbf{r}_i$ are the nodal position vectors in cartesian coordinates.
 
 The components necessary for the construction of the higher order bending strain field (along the element diagonal) are shown below: 
-
 
 \begin{equation} 
 \chi_{24} = \frac{d_{24}}{2 l_{24}},
@@ -269,9 +267,7 @@ The components necessary for the construction of the higher order torsional stra
 \label{equation13}
 \end{equation}
 
-
 The mapping from strain gauge readings along the 3 directions at each node to the higher order DOFs is via the matrices $\mathbf{Q}_i$ described below:
-
 
 \begin{equation} 
 \mathbf{Q_1} =
@@ -352,9 +348,7 @@ Values for the coefficients utilised above are as follows:
 	\end{aligned}
 \end{gather}
 
-
 The cartesian strain displacement matrices at the nodes are related to the mapping matrices $\mathbf{Q}_i$ as described below:
-
 
 \begin{gather} 
 	\begin{aligned}
@@ -399,9 +393,9 @@ The higher order membrane B matrix $\mathbf{B}_h$ is constructed from the interp
 \end{equation}
 
 
-\subsection{DKT bending formulation}
+\subsection{DKQ bending formulation}
 
-The bending formulation is responsible for providing the bending stiffness of the element. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full description and theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. Most importantly for a thin shell element, the transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.\\
+The bending formulation is responsible for providing the bending stiffness of the element. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full description and theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. Most importantly for a thin shell element, the transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
 
 Only the bending portion of the total shell element is considered in this section, in which there are three nodal DOFs per node $(w_i$ corresponds to $u_{zi}$ in the figure below).
 
@@ -445,7 +439,6 @@ The nodal rotational interpolation employed is as per the 8 node serendipity qua
 
 where $\psi_i$ are the standard 8 node serendipity shape functions described by Zienkiewicz \cite{Zie77}:
 
-
 \begin{gather} 
 	\begin{aligned}
 		&\psi_i (\xi , \eta) = \frac{-1}{4} (1 + \xi_i \xi)(1 + \eta_i \eta)(1 - \xi_i \xi - \eta_i \eta)
@@ -461,9 +454,9 @@ where $\psi_i$ are the standard 8 node serendipity shape functions described by 
 	\end{aligned}
 \end{gather}
 
-and $\xi_i$ and $\eta_i$ are the natural coordinates of the 8 node serendipity element described in figure \ref{8nodeseren}.\\
+and $\xi_i$ and $\eta_i$ are the natural coordinates of the 8 node serendipity element described in figure \ref{8nodeseren}.
 
-The following derivation from equations \eqref{equation22} to \eqref{equation27} is heavily summarised from that of Barrales \cite{Bar12}. The general idea is the construction of a mapping from the standard 12 DOFs at each node to $\beta_x (\xi,\ \eta)$ and $\beta_y (\xi,\ \eta)$ across the element, the derivatives of which are curvatures as expressed in equation \eqref{equation27}.\\
+The following derivation from equations \eqref{equation22} to \eqref{equation27} is heavily summarised from that of Barrales \cite{Bar12}. The general idea is the construction of a mapping from the standard 12 DOFs at each node to $\beta_x (\xi,\ \eta)$ and $\beta_y (\xi,\ \eta)$ across the element, the derivatives of which are curvatures as expressed in equation \eqref{equation27}.
 
 The following quantities are required components for the mapping:
 
@@ -475,7 +468,6 @@ x_{ij} = x_i - x_j\ ,
 y_{ij} = y_i - y_j
 \label{equation22}
 \end{equation}
-
 
 \begin{gather} 
 	\begin{aligned}
@@ -530,7 +522,7 @@ where the vectors entries are calculated as per the following scheme:
 	\end{aligned}
 \end{gather}
 
-with $i$ = 1, 2, 3, 4 and the relationship $(i,\ r,\ s)$ as (1, 5, 8), (2, 6, 5), (3, 7, 6) and (4, 8, 7).\\
+with $i$ = 1, 2, 3, 4 and the relationship $(i,\ r,\ s)$ as (1, 5, 8), (2, 6, 5), (3, 7, 6) and (4, 8, 7).
 
 Relating curvatures to displacements yield:
 
@@ -581,9 +573,6 @@ and the inverse Jacobian entries $j_{\alpha \beta}$:
 		\label{equation29}
 	\end{aligned}
 \end{gather}
-
-
-
 
 \subsection{Combined formulation}
 
@@ -642,12 +631,6 @@ Considering this, the addition of the membrane (basic and higher order) B matric
 	\label{equation33}
 \end{multline}
 
-
-
-
-
-
-
 \section{Stiffness matrix implementation}
 
 With the formulation of the thin quadrilateral shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
@@ -695,11 +678,11 @@ The scope of the presented workflow is limited to key class methods employed to 
 	\label{andesworkflow}
 \end{figure}
 
-Initially, the re-implemented purely virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition (.mdpa file in this case). This method simply calls $\texttt{CalculateAll()}$, which is the main pipeline of the element stiffness calculation, itself calling three key methods: $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$. \\
+Initially, the re-implemented purely virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition (.mdpa file in this case). This method simply calls $\texttt{CalculateAll()}$, which is the main pipeline of the element stiffness calculation, itself calling three key methods: $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$.
 
-$\texttt{InitializeCalculationData()}$ is called first, and pre-calculates quantities so they can be removed from the Gauss loop. These quantities include the basic membrane lumping matrix $\textbf{L}$, various transformation matrices ($\textbf{H}$, $\textbf{T}_{13}$, $\textbf{T}_{24}$) and all DKQ coefficients in equation  \eqref{equation23}. $\texttt{CalculateQMatrices()}$ and $\texttt{CalculateB$\_$h$\_$mats()}$ are also called from $\texttt{InitializeCalculationData()}$, which calculate $\textbf{Q}_i$ and $\textbf{B}_{hi}$ for the membrane component.\\
+$\texttt{InitializeCalculationData()}$ is called first, and pre-calculates quantities so they can be removed from the Gauss loop. These quantities include the basic membrane lumping matrix $\textbf{L}$, various transformation matrices ($\textbf{H}$, $\textbf{T}_{13}$, $\textbf{T}_{24}$) and all DKQ coefficients in equation  \eqref{equation23}. $\texttt{CalculateQMatrices()}$ and $\texttt{CalculateB$\_$h$\_$mats()}$ are also called from $\texttt{InitializeCalculationData()}$, which calculate $\textbf{Q}_i$ and $\textbf{B}_{hi}$ for the membrane component.
 
-$\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}$ which starts the Gauss integration loop. At each Gauss point $\texttt{CalculateGaussPointContribution()}$ performs Gauss integration of the expression $\textbf{K}_{contribution}$ = $\textbf{B}_{comb}^T \textbf{C} \textbf{B}_{comb}\  dA$, with the current $\textbf{B}_{comb}$ determined by calling\break$\texttt{CalculateBMatrix()}$. \\
+$\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}$ which starts the Gauss integration loop. At each Gauss point $\texttt{CalculateGaussPointContribution()}$ performs Gauss integration of the expression $\textbf{K}_{contribution}$ = $\textbf{B}_{comb}^T \textbf{C} \textbf{B}_{comb}\  dA$, with the current $\textbf{B}_{comb}$ determined by calling\break$\texttt{CalculateBMatrix()}$.
 
 With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\texttt{FinalizeCalculations()}$ which transforms the calculated element stiffness from local to global coordinates.
 

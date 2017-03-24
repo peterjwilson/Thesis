@@ -29,14 +29,21 @@ The \textit{Basic-T3} element is a triangular element with an un-enhanced shear 
 Furthermore, context of element performance is provided by including results from the existing \textit{KRATOS Q4} 5 parameter quadrilateral element and the \textit{KRATOS T3} 3 parameter triangle element.
 \newpage
 \subsection{Scordelis-Lo roof}
-
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.40\textwidth]{images/scordelisroof.png}
-	\caption{Definition of the Scordelis-Lo roof benchmark\cite{Bou13}}
-\end{wrapfigure}
+%
+%\begin{wrapfigure}{r}{0.45\textwidth}
+%	\centering
+%	\includegraphics[width=0.40\textwidth]{images/scordelisroof.png}
+%	\caption{Definition of the Scordelis-Lo roof benchmark\cite{Bou13}}
+%\end{wrapfigure}
 
 The first problem of the shell obstacle course is the Scordelis-Lo roof, which is part of a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading is a pseudo-gravity distributed load that has a magnitude of 90. Due to symmetry, only a quarter of the shell is modelled. The key result is the vertical displacement of the lateral side at the midpoint, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} = 0.3024$.
+ 
+  \begin{figure}[H]
+ 	\centering
+ 	\def\svgwidth{\columnwidth}
+ 	\includegraphics[width=7.3cm]{images/scordelisroof.png}
+ 	\caption{Definition of the Scordelis-Lo roof benchmark\cite{Bou13}}
+ \end{figure}
  
 \begin{figure}[H]
 	\subfloat[Quadrilateral element convergence for the Scordelis-Lo roof benchmark]
@@ -53,15 +60,21 @@ The first problem of the shell obstacle course is the Scordelis-Lo roof, which i
 The convergence graphs above indicate the ANDES-DKQ and DSG elements agree to the reference solution. Conversely, the Basic-T3 element shows very poor performance. Given that the Basic-DKQ performs well (which is immune to transverse shear locking), it's suspected that transverse shear locking is crippling the Basic-T3 element, while the DSG element technology effectively mitigates this for the DSG element. 
 \newpage
 \subsection{Pinched cylinder}
-
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.4\textwidth]{images/pinchedcylinder.png}
-	\caption{Definition of the pinched cylinder benchmark\cite{Bou13}}
-\end{wrapfigure}
+%
+%\begin{wrapfigure}{r}{0.45\textwidth}
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{images/pinchedcylinder.png}
+%	\caption{Definition of the pinched cylinder benchmark\cite{Bou13}}
+%\end{wrapfigure}
 
 The second problem of the shell obstacle course is the pinched cylinder, which considers a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading consists of two opposing compressive point loads at the centre of the shell. Due to symmetry only an eighth of the shell is modelled. The key result is the vertical displacement under the point load, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  1.8248\ \times\ 10^{-5}$. 
-
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\def\svgwidth{\columnwidth}
+ 	\includegraphics[width=7.3cm]{images/pinchedcylinder.png}
+ 	\caption{Definition of the pinched cylinder benchmark\cite{Bou13}}
+ \end{figure}
  
 \begin{figure}[H]
 	\subfloat[Quadrilateral element convergence for the pinched cylinder benchmark]
@@ -78,14 +91,21 @@ The second problem of the shell obstacle course is the pinched cylinder, which c
  The good performance of both the ANDES-DKQ and DSG elements is demonstrated in the convergence graphs above. The Basic-T3 results were in the order of $1\times10^{-3}$ (roughly 100 times greater than the reference solution) and were omitted from the graph for clarity of scale. Once again, it is clear that the computationally inexpensive DSG element technology drastically improves performance from the un-enhanced Basic-T3 to the DSG element.
 \newpage
 \subsection{Pinched hemisphere}
-
-\begin{wrapfigure}{r}{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.4\textwidth]{images/pinchedhemisphere.png}
-	\caption{Definition of the pinched hemisphere benchmark \cite{Bou13}}
-\end{wrapfigure}
+%
+%\begin{wrapfigure}{r}{0.45\textwidth}
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{images/pinchedhemisphere.png}
+%	\caption{Definition of the pinched hemisphere benchmark \cite{Bou13}}
+%\end{wrapfigure}
 
 The last test in the shell obstacle course is the pinched hemisphere, which considers a hemispherical shell loaded with opposing point loads along it's equator. Due to symmetry only a quarter of the shell is modelled. The key result is the 'x' displacement along one of the point loads, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  0.0924$. 
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=7.3cm]{images/pinchedhemisphere.png}
+	\caption{Definition of the pinched hemisphere benchmark \cite{Bou13}}
+\end{figure}
 
 \begin{figure}[H]
 	\subfloat[Quadrilateral element convergence for the pinched hemisphere benchmark]
@@ -100,14 +120,14 @@ The last test in the shell obstacle course is the pinched hemisphere, which cons
 \end{figure}
 
 The ANDES-DKQ and DSG elements both perform well in the final statics test, as per the convergence graphs above. It is observed that the Basic-DKQ element appears to exhibit membrane locking corresponding to the high double curvature of the problem ($R_1=R_2 = 10$) compared to the Scordelis-Lo roof ($R_1= 10,\ R_2 = \infty$) and the pinched cylinder ($R_1= 300,\ R_2 = \infty$). The ANDES element technology clearly prevents this deleterious effect. The poor performance of the Basic-T3 element compared to the DSG element once again highlights the effectiveness of the DSG element technology in preventing transverse shear locking.
-
+\newpage
 \section{Geometically non-linear benchmarks}
 
 Large rotations and displacements mark the departure from geometrically linear to non-linear analyses, however, the assumption of small strains is still maintained. The extension of the elements to geometrically non-linear problems is handled by employing an existing Kratos class which provides co-rotational transformations for shells. At each increment in the non-linear solution, the large displacements and rotations of each element is mapped by rigid body translations and rotations, thus limiting the strains experienced by the element to reasonably small magnitudes. The performance of the element in geometrically non-linear problems is considered with two benchmarks.
 
 \subsection{Hinged cylindrical roof}
 
-The first geometrically non-linear benchmark is the snap-through of a hinged cylindrical roof under a central point load $P_{max} = 3000$ \cite{Sze2004}. As per the diagram below, the roof geometry is defined with the following parameters: $L = 254,\ R = 2540,\ \theta=0.1rad$ and $t = 12.7$. The material is defined with a Young's modulus $E = 3102.75$ and Poisson's ratio of $\nu = 0.3$.
+The first geometrically non-linear benchmark is the snap-through of a hinged cylindrical roof under a central point load $P_{max} = 3000$ \cite{Sze2004}. As per the diagram below, the roof geometry is defined with the parameters: $L = 254,\ R = 2540,\ \theta=0.1\ rad$ and $t = 12.7$. The material is defined with a Young's modulus $E = 3102.75$ and Poisson's ratio of $\nu = 0.3$.
 
  
 \begin{figure}[H]
@@ -124,12 +144,12 @@ The first geometrically non-linear benchmark is the snap-through of a hinged cyl
 \end{figure}
 
  
+The load displacement curve plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference path from \cite{Sze2004}. The full equilibrium path isn't resolved because Kratos only has a load control non-linear solution method implemented, translating to the restriction of only resolving monotonically increasing paths. Regardless, both elements clearly follow the initial path, and then rejoin the reference solution to correctly resolve the structure in it's snapped-through state.
 
-reference solution from \cite{Sze2004}
+\newpage
+\subsection{Open cylinder pull-out}
 
-\subsection{Open cylinder pullout}
-
-pullout problem
+The second geometrically non-linear benchmark is the pull-out of an open cylinder with a load $P_{max} = 40\ 000$. The geometry of the cylinder is $L= 10.35,\ R = 4.953$ and $t = 0.094$ while the linear elastic material is characterised by $E = 10.5\times10^6$ and $\nu = 0.3125$. The measured displacement is the vertical deformation $u_z$ at the point of load application.
 
  
 \begin{figure}[H]
@@ -145,18 +165,15 @@ pullout problem
 	\caption{\label{ref_label_overall}Open cylinder pullout benchmark}
 \end{figure}
 
- 
-
-asdfasdf
+ The load-displacement curve above plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference solution \cite{Sze2004}. Although both elements closely follow the reference path, the ANDES-DKQ performs better in this test than the DSG element. Despite this, the error of the DSG element at maximum load is still only 1.7\%.
 
 \section{Dynamics benchmarks}
 
-asdfasdf
+Dynamic problems introduce inertial effects into the array of phenomena analysed. Combined with the aforementioned co-rotational formulation, it is possible to accurately resolve bodies undergoing large movements over time.
 
 \subsection{Shell pendulum}
 
-asdfasdf
-
+The first dynamic benchmark is a simple shell pendulum allowed to freely rotate along one hinged edge. The initial horizontal configuration of the $1m\times1m\times0.1m$ thick square plate is subject to gravity $g = 9.8\ m/s^2$ acting in the vertical $Z$ direction. The material of the plate is described by $E = 1\times 10^9 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as drawn below.
  
 \begin{figure}[H]
 	%\centering
@@ -171,17 +188,11 @@ asdfasdf
 	\caption{\label{ref_label_overall}Shell pendulum benchmark}
 \end{figure}
 
- 
-
-ref is existing kratos quad
-
-asfsdf
+The plot of displacement over time demonstrates the ability of both elements to handle large displacements and rotations, agreeing with the reference solution of the existing Kratos quadrilateral shell element. As expected, the minimum vertical displacement of $u_z=-1m$ corresponds to the position of bottom dead centre of the plate, while the maximum vertical displacement of $u_z=0m$ corresponds to a fully horizontal plate orientation
 
 \subsection{Oscillating clamped plate}
 
-adfdas
-
-
+The oscillating clamped plate benchmark subjects a clamped cantilever square plate $2m\times2m\times0.1m$ thick to a uniform globally oriented surface pressure of $P_z = -0.25 Pa$. The plate material is linear elastic characterised by $E = 1\times 10^6 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as illustrated below.
  
 \begin{figure}[H]
 	%\centering
@@ -196,14 +207,9 @@ adfdas
 	\caption{\label{Oscillating clamped plate benchmark}Oscillating clamped plate benchmark}
 \end{figure}
 
- 
-
-ref is existing kratos quad
+ The plot of vertical displacement over time demonstrates both elements agree with the reference solution, which is the existing Kratos quadrilateral element. The overall results correctly correspond to structural dynamics theory by oscillating with the base natural frequency about the static displacement of $u_z=-0.006m$.
 
 \section{Quantity recovery benchmarks}
-
-asdfasdf
-
 
 
 \subsection{Snow loaded dome}
