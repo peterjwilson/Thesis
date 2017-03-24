@@ -34,7 +34,6 @@ This section deals with the derivation and implementation of a thick triangular 
 \section{Stiffness matrix formulation}
 
 Based on Reissner Mindlin shell theory, the thick shell considers internal energy contributions from membrane, bending and shear components. As discussed in the background, basic shell elements derived from this shell theory face locking problems as the shell slenderness ratio increases. The element implemented is Bletzinger's Discrete Shear Gap (DSG) shell \cite{Ble00}, which incorporates an enhanced shear strain formulation to mitigate the aforementioned locking. This triangular element has 18 DOFs ordered as such:
-
 \begin{equation} 
 \mathbf{u}^T = 
 \begin{pmatrix}
@@ -49,16 +48,12 @@ where
 \end{pmatrix}
 \label{eqt1}
 \end{equation}
-
 The element displacement field is related to the discrete nodal values via shape functions.
-
 \begin{equation} 
 \mathbf{u}(x, y) = \sum_{i=1}^3 \ N_i(x,y) \mathbf{u}_i
 \label{eqt2}
 \end{equation}
-
 $N_i$ are the standard linear triangle shape functions, referred to the cartesian system.
-
 \begin{gather} 
 	\begin{aligned}
 		&N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]

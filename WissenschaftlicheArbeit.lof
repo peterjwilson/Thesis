@@ -3,60 +3,54 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Dimensional reduction of a solid to a shell \cite {BischLitBook04}\relax }}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {1}{\ignorespaces Dimensional reduction of a solid to a shell \cite {BischLitBook04}\relax }}{3}{figure.caption.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Various shell models \cite {Wall2000}\relax }}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {2}{\ignorespaces Various shell models \cite {Wall2000}\relax }}{4}{figure.caption.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Deformation, reference and current configuration \cite {BischLitBook04}\relax }}{4}{figure.caption.6}
+\contentsline {figure}{\numberline {3}{\ignorespaces Deformation, reference and current configuration \cite {BischLitBook04}\relax }}{4}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Kirchhoff-Love shell kinematics \cite {Bletz16}\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Kirchhoff-Love shell kinematics \cite {Bletz16}\relax }}{6}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Reissner-Mindlin shell kinematics \cite {Bletz16}\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {5}{\ignorespaces Reissner-Mindlin shell kinematics \cite {Bletz16}\relax }}{9}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Eigenvalue spectra of various shell models \cite {RammLitBook04}\relax }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {6}{\ignorespaces Eigenvalue spectra of various shell models \cite {RammLitBook04}\relax }}{11}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Convergence of cylindrical shell problem demonstrating membrane locking \cite {Echter13}\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {7}{\ignorespaces Convergence of cylindrical shell problem demonstrating membrane locking \cite {Echter13}\relax }}{13}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Reduced integration of a 5 parameter Quad 4 shell \cite {Bletz16}\relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {8}{\ignorespaces Reduced integration of a 5 parameter Quad 4 shell \cite {Bletz16}\relax }}{14}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Assumed shear strain field of the MITC4 element \cite {Bathe86}\relax }}{15}{figure.caption.12}
+\contentsline {figure}{\numberline {9}{\ignorespaces Assumed shear strain field of the MITC4 element \cite {Bathe86}\relax }}{15}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Discrete Shear Gap (DSG) concept \cite {Ble00}\relax }}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {10}{\ignorespaces Discrete Shear Gap (DSG) concept \cite {Ble00}\relax }}{16}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces DKQ DOF arrangement and geometry \cite {Bar12}\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {11}{\ignorespaces DKQ DOF arrangement and geometry \cite {Bar12}\relax }}{16}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Shell assembly benefitting from drilling DOFs \cite {BischLitBook04}\relax }}{18}{figure.caption.15}
+\contentsline {figure}{\numberline {12}{\ignorespaces Shell assembly benefitting from drilling DOFs \cite {BischLitBook04}\relax }}{18}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces Construction of shell DOFs from bending and membrane DOFs (source: http://www.edwilson.org/BOOK-Wilson/10-SHE~1.pdf)\relax }}{20}{figure.caption.18}
+\contentsline {figure}{\numberline {13}{\ignorespaces High level overview of DSG element workflow\relax }}{24}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces Thin (Kirchhoff) shell kinematics (source: KU Bletzinger - Theory of Plates Lecture, 2016, TUM)\relax }}{21}{figure.caption.19}
+\contentsline {figure}{\numberline {14}{\ignorespaces DKQ DOF arrangement and geometry (source: \cite {Bar12})\relax }}{35}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces Thick (Reissner Mindlin) shell kinematics (source: KU Bletzinger - Theory of Plates Lecture, 2016, TUM)\relax }}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {15}{\ignorespaces High level overview of ANDES-DKQ element workflow\relax }}{39}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces High level overview of DSG element workflow\relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {16}{\ignorespaces Definition of the Scordelis-Lo roof benchmark\cite {Bou13}\relax }}{45}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces DKQ DOF arrangement and geometry (source: \cite {Bar12})\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {17}{\ignorespaces Scordelis-Lo roof benchmark results\relax }}{45}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {18}{\ignorespaces High level overview of element workflow\relax }}{41}{figure.caption.25}
+\contentsline {figure}{\numberline {18}{\ignorespaces Definition of the pinched cylinder benchmark\cite {Bou13}\relax }}{46}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {19}{\ignorespaces Definition of the Scordelis-Lo roof benchmark\cite {Bou13}\relax }}{47}{figure.caption.26}
+\contentsline {figure}{\numberline {19}{\ignorespaces Pinched cylinder benchmark results\relax }}{46}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {20}{\ignorespaces Scordelis-Lo roof benchmark results\relax }}{47}{figure.caption.27}
+\contentsline {figure}{\numberline {20}{\ignorespaces Definition of the pinched hemisphere benchmark \cite {Bou13}\relax }}{47}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {21}{\ignorespaces Definition of the pinched cylinder benchmark\cite {Bou13}\relax }}{48}{figure.caption.28}
+\contentsline {figure}{\numberline {21}{\ignorespaces Pinched hemisphere benchmark results\relax }}{47}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {22}{\ignorespaces Pinched cylinder benchmark results\relax }}{48}{figure.caption.29}
+\contentsline {figure}{\numberline {22}{\ignorespaces Hinged cylindrical roof benchmark\relax }}{48}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {23}{\ignorespaces Definition of the pinched hemisphere benchmark \cite {Bou13}\relax }}{49}{figure.caption.30}
+\contentsline {figure}{\numberline {23}{\ignorespaces Open cylinder pullout benchmark\relax }}{49}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {24}{\ignorespaces Pinched hemisphere benchmark results\relax }}{49}{figure.caption.31}
+\contentsline {figure}{\numberline {24}{\ignorespaces Shell pendulum benchmark\relax }}{50}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {25}{\ignorespaces Hinged cylindrical roof benchmark\relax }}{50}{figure.caption.32}
+\contentsline {figure}{\numberline {25}{\ignorespaces Oscillating clamped plate benchmark\relax }}{51}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {26}{\ignorespaces Open cylinder pullout benchmark\relax }}{51}{figure.caption.33}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {27}{\ignorespaces Shell pendulum benchmark\relax }}{52}{figure.caption.34}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {28}{\ignorespaces Oscillating clamped plate benchmark\relax }}{53}{figure.caption.35}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {29}{\ignorespaces LEFM stress concentration factor benchmark\relax }}{54}{figure.caption.36}
+\contentsline {figure}{\numberline {26}{\ignorespaces LEFM stress concentration factor benchmark\relax }}{52}{figure.caption.32}

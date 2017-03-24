@@ -17,11 +17,10 @@
 \setcounter{MaxMatrixCols}{20}
 %\captionsetup{justification=centering}
 
-
-\chapter{ANDES-DKT quadrilateral shell element}
-
+\begin{flushleft}
+	\chapter{ANDES-DKT quadrilateral shell element}
+\end{flushleft}
 \renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
-
 The formulation of the stiffness matrix for the thin quadrilateral shell element is presented after a quick orientation.
 
 \section{Stiffness matrix formulation}
@@ -633,66 +632,50 @@ Considering this, the addition of the membrane (basic and higher order) B matric
 
 \section{Stiffness matrix implementation}
 
-With the formulation of the thin quadrilateral shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
+With the formulation of the ANDES-DKQ shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
 
-The new thin quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are placed in the 'custom$\_$elements' directory of the 'StructuralMechanicsApplication' module. Similar to other existing elements, the new class $\texttt{ShellThinElement3D4N}$ is inherited from the base class $\texttt{Element}$, which prescribes both virtual and pure virtual methods for it's derived classes to implement. The purely virtual methods must be re-implemented in the derived class to ensure that the class possesses the necessary fundamental functionality to operate within the KRATOS framework, while the virtual methods offer optional avenues to implement additional derived element functionality.
-
-Examples of purely virtual methods include: $\texttt{EquationIdVector(...),\ GetDofList(...)}$ and\break $\texttt{CalculateLocalSystem(...)}$. 
-
-Examples of virtual methods include: $\texttt{CalculateMassMatrix(),\ CalculateDampingMatrix(...)}$ and $\texttt{GetValueOnIntegrationPoints(...)}$.
-
-Since the current state of the new element is limited to linear statics, few virtual methods have been implemented. Future development of the element into dynamics, for example, would require the implementation of $\texttt{CalculateMassMatrix()}$ and $\texttt{CalculateDampingMatrix(...)}$.
-
-The general workflow of the current implementation is considered in the following section.
-
-\subsection{Workflow of element calculation}
-
-The scope of the presented workflow is limited to key class methods employed to determine the unknown displacement field for a linear static problem. Within some of the methods presented below are additional methods, however, only the key methods are considered for clarity.
+The new quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are compiled into the 'StructuralMechanicsApplication' module of Kratos. Similar to the DSG triangle element, the new ANDES-DKQ element class $\texttt{ShellThinElement3D4N}$ is inherited from the Kratos base class $\texttt{Element}$ and also leverages the existing capabilities other Kratos classes offer. The general workflow of calculating the ANDES-DKQ stiffness matrix is as follows:
 
 \begin{figure}[H]
 	% Define block styles
 	\tikzstyle{virtual} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
 	\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white!30]
 	\tikzstyle{arrow} = [thick,->,>=stealth]
-	\begin{tikzpicture}[node distance = 2cm, auto]
-	% Place nodes
-	\node [process] (CalculateLocalSystem) {CalculateLocalSystem()};
-	\node [process, right of=CalculateLocalSystem, xshift = 2.5cm] (CalculateAll) {CalculateAll()};
-	\node [process, below of=CalculateAll, xshift = -0cm] (InitializeCalculationData) {InitializeCalculationData()};
-	\node [process, right of=InitializeCalculationData, xshift = 4cm, yshift = 1cm] (CalculateQMatrices) {CalculateQMatrices()};
-	\node [process, right of=InitializeCalculationData, xshift = 4cm, yshift = -1cm] (CalculateBhmats) {CalculateB$\_$h$\_$mats()};
-	\node [process, below of=InitializeCalculationData, yshift = -2cm] (CalculateGaussPointContribution) {CalculateGaussPointContribution()};
-	\node [process, right of=CalculateGaussPointContribution, xshift = 4cm] (CalculateBMatrix) {CalculateBMatrix()};
-	\node [process, below of=CalculateGaussPointContribution, yshift = -1cm] (FinalizeCalculations) {FinalizeCalculations()};
-	% Draw edges
-	\draw [arrow] (CalculateLocalSystem) -- (CalculateAll);
-	\draw [arrow] (CalculateAll) -- (InitializeCalculationData);
-	\draw [arrow] (InitializeCalculationData) -| (CalculateQMatrices);
-	\draw [arrow] (InitializeCalculationData) -| (CalculateBhmats);
-	\draw [arrow] (InitializeCalculationData) -- (CalculateGaussPointContribution);
-	\draw [arrow] (CalculateGaussPointContribution) -- (FinalizeCalculations);
-	\draw [arrow] (CalculateGaussPointContribution) edge[bend left=45] node [above] {$Gauss\ Loop$} (CalculateBMatrix);
-	\draw [arrow] (CalculateBMatrix) edge[bend left=45] node [below] {} (CalculateGaussPointContribution);
-	\end{tikzpicture}
-	\caption{High level overview of element workflow}
+	\begin{tikzpicture}[node distance = 1.9cm, auto]
+% Place nodes
+\node [process] (CalculateLocalSystem) {$\texttt{CalculateLocalSystem()}$};
+\node [process, right of=CalculateLocalSystem, xshift = 4cm] (CalculateAll) {$\texttt{CalculateAll()}$};
+\node [process, below of=CalculateAll, xshift = -0cm] (InitializeCalculationData) {$\texttt{InitializeCalculationData()}$};
+\node [process, below of=InitializeCalculationData, yshift = -0cm] (CalculateSectionResponse) {$\texttt{CalculateSectionResponse()}$};
+\node [process, below of=CalculateSectionResponse, yshift = -0cm] (FinalizeCalculations) {$\texttt{FinalizeCalculations()}$};
+% Draw edges
+\draw [arrow] (CalculateLocalSystem) -- (CalculateAll);
+\draw [arrow] (CalculateAll) -- (InitializeCalculationData);
+\draw [arrow] (InitializeCalculationData) -- (CalculateSectionResponse);
+\draw [arrow] (CalculateSectionResponse) -- (FinalizeCalculations);
+\end{tikzpicture}
+	\caption{High level overview of ANDES-DKQ element workflow}
 	\label{andesworkflow}
 \end{figure}
 
-Initially, the re-implemented purely virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition (.mdpa file in this case). This method simply calls $\texttt{CalculateAll()}$, which is the main pipeline of the element stiffness calculation, itself calling three key methods: $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$.
+As per the DSG triangle element, the re-implemented virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition. This method simply calls $\texttt{CalculateAll()}$, which initializes calculating the stiffness matrix by calling $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$.
 
-$\texttt{InitializeCalculationData()}$ is called first, and pre-calculates quantities so they can be removed from the Gauss loop. These quantities include the basic membrane lumping matrix $\textbf{L}$, various transformation matrices ($\textbf{H}$, $\textbf{T}_{13}$, $\textbf{T}_{24}$) and all DKQ coefficients in equation  \eqref{equation23}. $\texttt{CalculateQMatrices()}$ and $\texttt{CalculateB$\_$h$\_$mats()}$ are also called from $\texttt{InitializeCalculationData()}$, which calculate $\textbf{Q}_i$ and $\textbf{B}_{hi}$ for the membrane component.
+$\texttt{InitializeCalculationData()}$ is called first, and pre-calculates quantities so they can be removed from the Gauss loop. These quantities include the ANDES basic lumping matrix $\textbf{L}$, the ANDES higher order strain-displacement matrices $\textbf{B}_{hi}$ and all DKQ coefficients in equation  \eqref{equation23}.
 
-$\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}$ which starts the Gauss integration loop. At each Gauss point $\texttt{CalculateGaussPointContribution()}$ performs Gauss integration of the expression $\textbf{K}_{contribution}$ = $\textbf{B}_{comb}^T \textbf{C} \textbf{B}_{comb}\  dA$, with the current $\textbf{B}_{comb}$ determined by calling\break$\texttt{CalculateBMatrix()}$.
+$\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}$ which starts the Gauss integration loop. At each Gauss point $\texttt{CalculateGaussPointContribution()}$ performs Gauss integration of the expression $\textbf{K}_{contribution}$ = $\textbf{B}_{comb}^T \textbf{C} \textbf{B}_{comb}\  dA$, with the current $\textbf{B}_{comb}$ determined by calling $\texttt{CalculateBMatrix()}$.
 
 With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\texttt{FinalizeCalculations()}$ which transforms the calculated element stiffness from local to global coordinates.
 
+The following pseudocode summarises the key calls and operations involved in calculating the ANDES-DKQ element stiffness matrix.
+
 \begin{algorithm}
 	\onehalfspacing
-	\caption{ANDES-DKT element stiffness matrix pseudocode}\label{ANDES-DKQ element stiffness matrix}
-	\begin{algorithmic}[H]
+	\caption{ANDES-DKQ element stiffness matrix pseudocode}\label{ANDES-DKQ element stiffness matrix}
+	\begin{algorithmic}[1]
 		\Require Coordinate transformation instance
+		\State \textbf{call} $\texttt{CalculateAll()}$
 		\State Resize $LHS$ and $RHS$
-		\State \textbf{call} InitializeCalculationData({$data$})
+		\State \textbf{call} $\texttt{InitializeCalculationData}(data)$
 		\State \hspace{\algorithmicindent}Calculate integration areas $dA = w_i \cdot detJ(xi,\ eta)$
 		\State \hspace{\algorithmicindent}Determine basic membrane strain displacement $L$
 		\State \hspace{\algorithmicindent}Construct membrane higher order filter matrix $H$
@@ -701,25 +684,22 @@ With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\te
 		\State \hspace{\algorithmicindent}Determine $\bar{B_h}$
 		\State \hspace{\algorithmicindent}Pre-calculate all DKQ coefficients
 		\While{$gaussPoint$ < 4}
-		\State \textbf{call} CalculateGaussPointContribution({$data$})
-		\State \hspace{\algorithmicindent}\textbf{call} CalculateBMatrix({$data$})
+		\State \textbf{call} $\texttt{CalculateGaussPointContribution}(data)$
+		\State \hspace{\algorithmicindent}\textbf{call} $\texttt{CalculateBMatrix}(data)$
 		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate and combine $B_{mem}$ and $B_{bend}$ into $B$
-		\State \hspace{\algorithmicindent}\textbf{call} CalculateSectionResponse({$data$})
+		\State \hspace{\algorithmicindent}\textbf{call} $\texttt{CalculateSectionResponse}(data)$
 		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate material properties $C$
 		\State \hspace{\algorithmicindent}Add stiffness matrix Gauss point contribution to $LHS$
 		\EndWhile
 		\State Modify $RHS$ residual vector
-		\State \textbf{call} FinalizeCalculations($data,\ displacements,\ LHS,\ RHS$)
-		\State \textbf{call} AddBodyForces($data,\ RHS$)
+		\State \textbf{call} $\texttt{FinalizeCalculations}(data,\ displacements,\ LHS,\ RHS)$
+		\State \textbf{call} $\texttt{AddBodyForces}(data,\ RHS)$
 	\end{algorithmic}
 \end{algorithm}
 
-asdfasdf
-
-\section{Mass matrix formulation and implementation}
+\section{Mass matrix formulation}
 
 The mass matrix is necessary to facilitate dynamic analysis with the thin quadrilateral shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
-
 \begin{equation} 
 \mathbf{M} =  
 \begin{pmatrix}
