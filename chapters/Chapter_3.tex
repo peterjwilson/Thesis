@@ -29,11 +29,11 @@
 
 \renewcommand{\Thema}{DSG triangle shell element}
 
-This section deals with the derivation and implementation of a thick triangular shell element in KRATOS.
+The follow exposition clarifies the stiffness matrix, mass matrix and quantity recovery of the DSG triangle shell element in Kratos. 
 
 \section{Stiffness matrix formulation}
 
-Based on Reissner Mindlin shell theory, the thick shell considers internal energy contributions from membrane, bending and shear components. As discussed in the background, basic shell elements derived from this shell theory face locking problems as the shell slenderness ratio increases. The element implemented is Bletzinger's Discrete Shear Gap (DSG) shell \cite{Ble00}, which incorporates an enhanced shear strain formulation to mitigate the aforementioned locking. This triangular element has 18 DOFs ordered as such:
+Based on the 5 parameter Reissner-Mindlin shell theory, the thick shell considers internal energy contributions from membrane, bending and shear components. As discussed in Chapter \ref{chap:chapter_2}, basic finite elements derived from this shell theory face locking problems as the shell slenderness ratio increases. The element implemented is Bletzinger's Discrete Shear Gap (DSG) shell \cite{Ble00} which incorporates an enhanced shear strain formulation to mitigate the aforementioned locking. This triangular element has 18 DOFs ordered as such:
 \begin{equation} 
 \mathbf{u}^T = 
 \begin{pmatrix}
@@ -44,7 +44,7 @@ where
 \hspace{10mm}
 \mathbf{u}_i^T = 
 \begin{pmatrix}
-{u_{xi}} & {u_{yi}} & {u_{yi}} & {\theta_{xi}} & {\theta_{yi}} & {\theta_{zi}}
+{u_{xi}} & {u_{yi}} & {u_{yi}} & {\beta_{xi}} & {\beta_{yi}} & {\beta_{zi}}
 \end{pmatrix}
 \label{eqt1}
 \end{equation}
@@ -117,7 +117,7 @@ The bending strain displacement matrix can be presented in a similar manner:
 \label{eqt9}
 \end{equation}
 
-Finally, the shear strain displacement matrix, which implements the DSG element technology, is as follows:
+Finally, the shear strain displacement matrix, which has the DSG element technology 'baked' into it, is as follows:
 
 \begin{gather} 
 	\begin{aligned}
@@ -179,10 +179,10 @@ where $\kappa = \frac{5}{6}$ is the shear correction factor and $\alpha = 0.1$ a
 
 As described in section \ref{transverse_shear_locking}, transverse shear locking is driven by a mismatch of internal energy allocation between bending ($\Pi_{bend} \propto t^3$) and shear components ($\Pi_{shear} \propto t$) as $t \rightarrow 0$.  This modification somewhat alleviates the locking by 'encouraging' the internal shear energy to scale with the cube of the thickness too, thus reducing the artificial energy disparity.
 
-Although all stiffness components are assembled, one notices that lack of entries corresponding to the drilling DOF $\theta_{zi}$ currently renders the element stiffness matrix singular. The technology of drilling DOFs discussed in \ref{drilling_DOF_section} in thus introduced. Nguyen-Thoi et al. \cite{Ngu13} proposed to remedy this rotational singularity by setting the drilling DOF entries to one one-thousandth of the maximum diagonal entry in the element stiffness matrix.
+Although all stiffness components are assembled, one notices that lack of entries corresponding to the drilling DOF $\beta_{zi}$ currently renders the element stiffness matrix singular. The technology of drilling DOFs discussed in \ref{drilling_DOF_section} in thus introduced. Nguyen-Thoi et al. \cite{Ngu13} proposed to remedy this rotational singularity by setting the drilling DOF entries to one one-thousandth of the maximum diagonal entry in the element stiffness matrix.
 
 \begin{equation} 
-K_{\theta z} =  \frac{max(K_{el\ ij}\delta_{ij})}{1000}
+K_{\beta_z} =  \frac{max(K_{ij}\delta_{ij})}{1000}
 \label{eqtdrilling}
 \end{equation}
 
@@ -336,14 +336,14 @@ The strain field within the element can be recovered from the displacement field
 In typical finite element programs the strains and stresses are calculated at the Gauss points of the element, which is also how Kratos operates. Since the DSG has one Gauss point in the centre of the element, the strain is recovered from the discrete nodal displacements $\hat{\mathbf{u}}_i$ as follows:
 
 \begin{equation} 
-\boldsymbol{\epsilon}_{GP} = \mathbf{B} \sum_{i=1}^{3 nodes} N_i(\xi_{GP},\ \eta_{GP}) \hat{\mathbf{u}}_i
+\boldsymbol{\epsilon}_{GP} = \mathbf{B} \sum_{i=1}^{3\ nodes} N_i(\xi_{GP},\ \eta_{GP}) \hat{\mathbf{u}}_i
 \label{eqt20}
 \end{equation}
 
 With the strains determined, the stresses at the Gauss points can be recovered with the material matrix at the Gauss point.
 
 \begin{equation} 
-\boldsymbol{\sigma}_{GP} = \mathbf{C}_GP\ \boldsymbol{\epsilon}_{GP}
+\boldsymbol{\sigma}_{GP} = \mathbf{C}_{GP}\ \boldsymbol{\epsilon}_{GP}
 \label{eqt21}
 \end{equation}
 

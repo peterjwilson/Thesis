@@ -37,11 +37,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}Assumed Natural Strains}{14}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Mixed Interpolation of Tensorial Components}{14}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}Mixed Interpolation of Tensorial Components}{15}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.4}Assumed Natural Deviatoric Strains}{15}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}Discrete Shear Gap}{15}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.5}Discrete Shear Gap}{16}{subsection.2.4.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.6}Discrete Kirchhoff Theory}{16}{subsection.2.4.6}
 \defcounter {refsection}{0}\relax 
@@ -67,7 +67,7 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}ANDES-DKT quadrilateral shell element}{29}{chapter.4}
+\contentsline {chapter}{\numberline {4}ANDES-DKQ quadrilateral shell element}{29}{chapter.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Stiffness matrix formulation}{29}{section.4.1}
 \defcounter {refsection}{0}\relax 
@@ -77,46 +77,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Membrane higher order stiffness}{30}{subsubsection*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}DKQ bending formulation}{34}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}DKQ bending formulation}{36}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Combined formulation}{37}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.3}Combined formulation}{39}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Stiffness matrix implementation}{38}{section.4.2}
+\contentsline {section}{\numberline {4.2}Stiffness matrix implementation}{40}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Mass matrix formulation}{41}{section.4.3}
+\contentsline {section}{\numberline {4.3}Mass matrix formulation}{43}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Stress and strain recovery}{41}{section.4.4}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Benchmarking}{44}{chapter.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Static benchmarks: shell obstacle course}{44}{section.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Scordelis-Lo roof}{45}{subsection.5.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Pinched cylinder}{46}{subsection.5.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Pinched hemisphere}{47}{subsection.5.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Geometically non-linear benchmarks}{48}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Hinged cylindrical roof}{48}{subsection.5.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Open cylinder pull-out}{49}{subsection.5.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Dynamics benchmarks}{49}{section.5.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Shell pendulum}{49}{subsection.5.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Oscillating clamped plate}{50}{subsection.5.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Quantity recovery benchmarks}{51}{section.5.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Snow loaded dome}{51}{subsection.5.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}LEFM SIF recovery}{51}{subsection.5.4.2}
+\contentsline {section}{\numberline {4.4}Stress and strain recovery}{43}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusions and Outlook}{53}{chapter.6}
+\contentsline {chapter}{\numberline {5}Benchmarking}{46}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Static benchmarks: shell obstacle course}{46}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Scordelis-Lo roof}{47}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Pinched cylinder}{48}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}Pinched hemisphere}{49}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Geometically non-linear benchmarks}{50}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Hinged cylindrical roof}{50}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Open cylinder pull-out}{51}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Dynamics benchmarks}{51}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Shell pendulum}{51}{subsection.5.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.2}Oscillating clamped plate}{52}{subsection.5.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Quantity recovery benchmarks}{53}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Snow loaded dome}{53}{subsection.5.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}LEFM SIF recovery}{53}{subsection.5.4.2}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusions and Outlook}{55}{chapter.6}

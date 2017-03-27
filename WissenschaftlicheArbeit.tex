@@ -117,6 +117,15 @@
 %\appendix
 %\include{chapters/Appendix}
 \backmatter
+
+% get rid of citations in list of figures -----------------------------------
+\makeatletter
+\let\oldcite\cite
+\pretocmd{\listoffigures}{\def\cite{\ignorespaces\@gobble}}{}{}
+\apptocmd{\listoffigures}{\let\cite\oldcite}{}{}
+\makeatother
+% get rid of citations in list of figures -----------------------------------
+
 \renewcommand{\Thema}{\ }
 \listoffigures % Abbildungsverzeichnis
 
@@ -129,7 +138,7 @@
 
 \newpage
 \listoftables % Tabellenverzeichnis
-
+\listofalgorithms
 %\bibliographystyle{unsrt} % Literaturverzeichnis
 %\bibliographystyle{alpha} % Literaturverzeichnis
 %\bibliography{bib}

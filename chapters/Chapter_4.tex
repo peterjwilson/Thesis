@@ -18,14 +18,15 @@
 %\captionsetup{justification=centering}
 
 \begin{flushleft}
-	\chapter{ANDES-DKT quadrilateral shell element}
+	\chapter{ANDES-DKQ quadrilateral shell element}
 \end{flushleft}
 \renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
-The formulation of the stiffness matrix for the thin quadrilateral shell element is presented after a quick orientation.
+
+The stiffness matrix, mass matrix and quantity recovery for the ANDES-DKQ quadrilateral shell element in Kratos are covered in this chapter.
 
 \section{Stiffness matrix formulation}
 
-asdfasdf
+Unlike the DSG triangle, the ANDES-DKQ element uses different finite element technologies for the membrane and bending components, both of which are subsequently developed. 
 
 \subsection{ANDES membrane formulation}
 
@@ -34,16 +35,16 @@ The membrane formulation is responsible for providing the membrane stiffness of 
 Only the membrane portion of the total shell element is considered in this section, in which there are three DOFs per node.
 
 \begin{equation} 
-\mathbf{u^T} = 
+\mathbf{u}^T = 
 \begin{pmatrix}
-\mathbf{u_1} & \mathbf{u_2} & \mathbf{u_3} & \mathbf{u_4}
+\mathbf{u}_1 & \mathbf{u}_2 & \mathbf{u}_3 & \mathbf{u}_4
 \end{pmatrix} 
 \hspace{10mm}
 where
 \hspace{10mm}
-\mathbf{u{_i}^T} = 
+\mathbf{u}{_i}^T = 
 \begin{pmatrix}
-{u_{xi}} & {u_{yi}} & {\theta_{zi}}
+{u_{xi}} & {u_{yi}} & {\beta_{zi}}
 \end{pmatrix}
 \label{equation04}
 \end{equation}
@@ -66,7 +67,7 @@ The membrane basic stiffness is driven by assuming a constant stress field withi
 \hspace{10mm}
 where
 \hspace{10mm}
-\boldsymbol{\sigma^T} =
+\boldsymbol{\sigma}^T =
 \begin{pmatrix}
 \sigma_{xx} & \sigma_{xx} & \tau_{xy}
 \end{pmatrix}
@@ -78,22 +79,22 @@ The structure of the above expression is resolved as such:
 \begin{equation} 
 \mathbf{L} =
 \begin{pmatrix}
-\mathbf{L_1} & \mathbf{L_2} & \mathbf{L_3} & \mathbf{L_4}
+\mathbf{L}_1 & \mathbf{L}_2 & \mathbf{L}_3 & \mathbf{L}_4
 \end{pmatrix}
 \hspace{10mm}
 and
 \hspace{10mm}
 \mathbf{f} =
 \begin{pmatrix}
-\mathbf{f_1} \\
-\mathbf{f_2} \\
-\mathbf{f_3} \\
-\mathbf{f_4}
+\mathbf{f}_1 \\
+\mathbf{f}_2 \\
+\mathbf{f}_3 \\
+\mathbf{f}_4
 \end{pmatrix}
 \hspace{10mm}
 where
 \hspace{10mm}
-\mathbf{f_i} =
+\mathbf{f}_i =
 \begin{pmatrix}
 {f_{xi}} \\
 {f_{yi}} \\
@@ -105,7 +106,7 @@ where
 where each nodal entry '$j$' of the lumping matrix $\textbf{L}$ is constructed with the following cyclic permutation $(i,\ j,\ k,\ l)$ for the four nodes $(1,\ 2,\ 3,\ 4)$:
 
 \begin{equation} 
-\mathbf{L_j} = \frac{1}{2 A}
+\mathbf{L}_j = \frac{1}{2 A}
 \begin{pmatrix}
 y_{ki} & 0 & -x_{ki} \\
 0 & -x_{ki} & y_{ki} \\
@@ -114,7 +115,7 @@ y_{ki} & 0 & -x_{ki} \\
 \label{equation07}
 \end{equation}
 
-Throughout this paper the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\ y_j$ holds. Furthermore, the value of $\alpha$ is taken as 1.5 \cite{Fel91}.
+Throughout this formulation the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\ y_j$ holds. Furthermore, the value of $\alpha$ is taken as 1.5 \cite{Fel91}.
 
 \subsubsection{Membrane higher order stiffness}
 
@@ -125,19 +126,17 @@ The membrane higher order stiffness considers a set of higher order DOFs express
 The higher order rotational DOFs are related to the visible DOFs as described below:
 
 \begin{equation} 
-\boldsymbol{\theta_h} = \mathbf{H_{\theta v}} \mathbf{u}
+\boldsymbol{\theta}_h = \mathbf{H}_{\theta v} \mathbf{u}
 \hspace{10mm}
 where
 \hspace{10mm}
-\boldsymbol{\theta_{h}^T} = 
+\boldsymbol{\theta}_{h}^T = 
 \begin{pmatrix}
 \theta_1^{'} & \theta_2^{'} & \theta_3^{'} & \theta_4^{'} & \bar{\theta}
 \end{pmatrix}
 \label{equation08}
 \end{equation}
-
 with
-
 \begin{gather} 
 	\begin{aligned}
 		&\mathbf{H_{\theta v}} = 
@@ -158,9 +157,7 @@ with
 		\label{equation09}
 	\end{aligned}
 \end{gather}
-
 The higher order translational DOFs are related to the visible DOFs as described below:
-
 \begin{equation} 
 \widetilde{\mathbf{v}}_t = \mathbf{H}_{tv} \mathbf{u}
 \hspace{10mm}
@@ -172,11 +169,9 @@ where
 \end{pmatrix}
 \label{equationv_t}
 \end{equation}
-
 with
-
 \begin{equation} 
-\mathbf{H_{tv}} =
+\mathbf{H}_{tv} =
 \begin{pmatrix}
 1 & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 0 \\
 0 & 1 & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 
@@ -193,8 +188,8 @@ where
 \hspace{10mm}
 \mathbf{H} =
 \begin{pmatrix}
-\mathbf{H_{\theta v}} \\
-\mathbf{H_{vt}}
+\mathbf{H}_{\theta v} \\
+\mathbf{H}_{vt}
 \end{pmatrix}
 \hspace{10mm}
 and
@@ -208,7 +203,54 @@ and
 
 The descriptions for equations from \eqref{equation12} to \eqref{equation22} are heavily abridged from the original element derivation \cite{Hau94}. The general idea of these equations is to relate the higher order nodal strain gauge readings to cartesian strain displacement matrices $\mathbf{B}_{hi}$.
 
-The components necessary for the construction of the higher order bending strain field (along $\xi$ and $\eta$ directions) are shown below:
+\begin{figure}[H]
+	%\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=7.3cm]
+		{images/ANDES_strain_gauges.png}
+		\captionof{figure}{ANDES membrane nodal strain gauges \cite{Hau94}}
+		\label{fig:andes_gauges}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=7.3cm]
+		{images/andes_geometric_quantities.png}
+		\captionof{figure}{Geometric dimensions of the quadrilateral element \cite{Hau94}}
+		\label{fig:andes_dims}
+	\end{minipage}
+\end{figure}
+
+The strain gauges are placed as per figure \ref{fig:andes_gauges} and read strains along the $\xi$ and $\eta$ axes as well as the element diagonals. At each strain gauge, the readings are thus:
+
+\begin{equation} 
+\boldsymbol{\epsilon}_{1} = \boldsymbol{\epsilon}_{3} =
+\begin{pmatrix}
+\epsilon_\xi \\
+\epsilon_\eta \\
+\epsilon_{24}
+\end{pmatrix}
+\ ,
+\hspace{10mm}
+\boldsymbol{\epsilon}_{2} = \boldsymbol{\epsilon}_{4} =
+\begin{pmatrix}
+\epsilon_\xi \\
+\epsilon_\eta \\
+\epsilon_{13}
+\end{pmatrix}
+\label{eqnAndesStrainGauges}
+\end{equation}
+
+The strain readings are related to the higher order degrees of freedom via the nodal strain templates $\mathbf{Q}_i$.
+
+\begin{equation} 
+\boldsymbol{\epsilon}_{i} = \mathbf{Q}_i \widetilde{\mathbf{v}}
+\label{eqnAndesHigherOrderStrains}
+\end{equation}
+
+\textit{Higher order bending field}
+
+As per Haugen's PhD thesis, the primary strain mode the field is trying to match is pure bending of an element in an arbitrary direction. The bending strain field is associated with the higher order DOFs of $\theta_i^{'}, \widetilde{v}_{\xi}$ and $\widetilde{v}_{\eta}$, and is intuited to be proportional to the distance from the neutral axis of the direction considered. For instance, bending in the $\xi$ direction is assumed proportional to the distance $d_{\xi}$ (refer figure \ref{fig:andes_dims}) and the curvature of the element $\frac{\Delta \theta}{l_{\xi}}$. Thus the general form of the $\xi$ strains are $\frac{d_{\xi | i}}{l_\xi}$, with the $\eta$ strains derived in a similar manner.
 
 \begin{equation} 
 \chi_{\xi | i} = \frac{d_{\xi | i}}{l_\xi},
@@ -216,25 +258,23 @@ The components necessary for the construction of the higher order bending strain
 \chi_{\eta | i} = \frac{d_{\eta | i}}{l_\eta},
 \label{equation12}
 \end{equation}
-
-where
-
+where the quantities in figure \ref{fig:andes_dims} are calculated as follows:
 \begin{align*} 
-	d_{\xi | i} = \sqrt{(\mathbf{r_i} \times \mathbf{s_\xi}) \cdot (\mathbf{r_i} \times \mathbf{s_\xi})}\ ,
+	d_{\xi | i} = \sqrt{(\mathbf{r}_i \times \mathbf{s_\xi}) \cdot (\mathbf{r}_i \times \mathbf{s_\xi})}\ ,
 	\hspace{10mm}
 	l_\xi = \sqrt{\mathbf{r_\xi} \cdot \mathbf{r_\xi}}\ ,
 	\hspace{10mm} 
-	\mathbf{r_\xi} = \frac{1}{2} ( \mathbf{r_2} + \mathbf{r_3} - \mathbf{r_1} - \mathbf{r_4} )\ , \\
-	d_{\eta | i} = \sqrt{(\mathbf{r_i} \times \mathbf{s_\eta}) \cdot (\mathbf{r_i} \times \mathbf{s_\eta})}\ ,
+	\mathbf{r_\xi} = \frac{1}{2} ( \mathbf{r}_2 + \mathbf{r}_3 - \mathbf{r}_1 - \mathbf{r}_4 )\ , \\
+	d_{\eta | i} = \sqrt{(\mathbf{r}_i \times \mathbf{s_\eta}) \cdot (\mathbf{r}_i \times \mathbf{s_\eta})}\ ,
 	\hspace{10mm}
 	l_\xi = \sqrt{\mathbf{r_\eta} \cdot \mathbf{r_\eta}}\ ,
 	\hspace{10mm}
-	\mathbf{r_\eta} = \frac{1}{2} ( \mathbf{r_2} + \mathbf{r_3} - \mathbf{r_1} - \mathbf{r_4} )\ ,
+	\mathbf{r_\eta} = \frac{1}{2} ( \mathbf{r}_2 + \mathbf{r}_3 - \mathbf{r}_1 - \mathbf{r}_4 )\ ,
 \end{align*}
 
-$\textbf{s}_\xi$ and $\textbf{s}_\eta$ are the normalized parametric base vectors in cartesian coordinates, while $\textbf{r}_i$ are the nodal position vectors in cartesian coordinates.
+$\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the normalized parametric base vectors in cartesian coordinates, while $\textbf{r}_i$ are the nodal position vectors in cartesian coordinates.
 
-The components necessary for the construction of the higher order bending strain field (along the element diagonal) are shown below: 
+The diagonal strain components of the higher order bending field are also assumed as to be proportional to the distance and curvature along the diagonal, thus yielding:  
 
 \begin{equation} 
 \chi_{24} = \frac{d_{24}}{2 l_{24}},
@@ -242,22 +282,32 @@ The components necessary for the construction of the higher order bending strain
 \chi_{13} = \frac{d_{13}}{2 l_{13}},
 \label{equation12chi24}
 \end{equation}
-
 where
-
 \begin{align*} 
-	d_{24} = d_{13} = \sqrt{(\mathbf{r_{31}} \times \mathbf{e_{24}}) \cdot (\mathbf{r_{31}} \times \mathbf{e_{24}})} \\
-	l_{24} = \sqrt{\mathbf{r_{24}} \cdot \mathbf{r_{24}}}\ ,
+	d_{24} = d_{13} = \sqrt{(\mathbf{r}_{31} \times \mathbf{e}_{24}) \cdot (\mathbf{r}_{31} \times \mathbf{e}_{24})} \\
+	l_{24} = \sqrt{\mathbf{r}_{24} \cdot \mathbf{r}_{24}}\ ,
 	\hspace{10mm}
-	\mathbf{r_{24}} = \mathbf{r_2} - \mathbf{r_4} \\
-	l_{13} = \sqrt{\mathbf{r_{13}} \cdot \mathbf{r_{13}}}\ ,
+	\mathbf{r}_{24} = \mathbf{r}_2 - \mathbf{r}_4 \\
+	l_{13} = \sqrt{\mathbf{r}_{13} \cdot \mathbf{r}_{13}}\ ,
 	\hspace{10mm}
-	\mathbf{r_{13}} = \mathbf{r_1} - \mathbf{r_3}
+	\mathbf{r}_{13} = \mathbf{r}_1 - \mathbf{r}_3
 	\hspace{10mm}
 	\mathbf{e}_{24} = \frac{\mathbf{r}_{24}}{l_{24}}
 \end{align*}
 
-The components necessary for the construction of the higher order torsional strain field are shown below:
+\textit{Higher order torsional field}
+
+The higher order torsional field is associated with the $\bar{\theta}$ higher order DOF. Figure \ref{fig:AndesTorsional} illustrates the general torsional displacement mode shape, indicating that no shear strains are produced in this mode.
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=7.3cm]{images/ANDES_torsional_mode.png}
+	\caption{Higher order torsional mode of ANDES membrane formulation \cite{Hau94}}
+	\label{fig:AndesTorsional}
+\end{figure}
+
+Under this torsional regime, $\epsilon_\xi$ is positive in the 1st and 3rd quadrants and negative in the 2nd and 4th quadrants, while $\epsilon_\eta$ has the opposite signs. Furthermore, with a unit rotation at each node the maximum displacement $v_\xi$ will be proportional to $l_\eta$. Recalling that $\epsilon_{\xi}$ is the gradient of $v_\xi$ in the $\xi$ direction, one can suppose that $\epsilon_{\xi}$ is proportional to $\frac{1}{l_\xi}$. Considering this approach for $\epsilon_{\xi}$ and $\epsilon_{\eta}$, the following torsional strain field terms are determined:
 
 \begin{equation} 
 \chi_{\xi t} = \frac{l_\eta}{l_\xi}\ ,
@@ -266,10 +316,12 @@ The components necessary for the construction of the higher order torsional stra
 \label{equation13}
 \end{equation}
 
-The mapping from strain gauge readings along the 3 directions at each node to the higher order DOFs is via the matrices $\mathbf{Q}_i$ described below:
+\textit{Higher order nodal strain templates}
+
+Considering the higher order bending and torsional components just outlined, the nodal strain gauge readings can be described as follows:
 
 \begin{equation} 
-\mathbf{Q_1} =
+\mathbf{Q}_1 =
 \begin{pmatrix}
 \rho_1 \chi_{\xi | 1} & \rho_2 \chi_{\xi | 1} & \rho_3 \chi_{\xi | 1} & \rho_4 \chi_{\xi | 1} & \alpha \chi_{\xi t} & -\beta_1 \frac{\chi_{\xi | 1}}{\bar{\chi_\xi} l_\xi} & 0  \\	
 -\rho_1 \chi_{\eta | 1} & -\rho_4 \chi_{\eta | 1} & -\rho_3 \chi_{\eta | 1} & -\rho_2 \chi_{\eta | 1} & -\alpha \chi_{\eta t} & 0 & -\beta_1 \frac{\chi_{\eta | 1}}{\bar{\chi_\eta} l_\eta} \\
@@ -279,7 +331,7 @@ The mapping from strain gauge readings along the 3 directions at each node to th
 \end{equation}
 
 \begin{equation} 
-\mathbf{Q_2} =
+\mathbf{Q}_2 =
 \begin{pmatrix}
 -\rho_2 \chi_{\xi | 2} & -\rho_1 \chi_{\xi | 2} & -\rho_4 \chi_{\xi | 2} & -\rho_3 \chi_{\xi | 2} & -\alpha \chi_{\xi t} & -\beta_1 \frac{\chi_{\xi | 2}}{\bar{\chi_\xi} l_\xi} & 0  \\	
 \rho_4 \chi_{\eta | 2} & \rho_1 \chi_{\eta | 2} & \rho_2 \chi_{\eta | 2} & \rho_3 \chi_{\eta | 2} & \alpha \chi_{\eta t} & 0 & \beta_1 \frac{\chi_{\eta | 2}}{\bar{\chi_\eta} l_\eta} \\
@@ -289,7 +341,7 @@ The mapping from strain gauge readings along the 3 directions at each node to th
 \end{equation}
 
 \begin{equation} 
-\mathbf{Q_3} =
+\mathbf{Q}_3 =
 \begin{pmatrix}
 \rho_3 \chi_{\xi | 3} & \rho_4 \chi_{\xi | 3} & \rho_1 \chi_{\xi | 3} & \rho_2 \chi_{\xi | 3} & \alpha \chi_{\xi t} & \beta_1 \frac{\chi_{\xi | 3}}{\bar{\chi_\xi} l_\xi} & 0  \\	
 -\rho_3 \chi_{\eta | 3} & -\rho_2 \chi_{\eta | 3} & -\rho_1 \chi_{\eta | 3} & -\rho_4 \chi_{\eta | 3} & -\alpha \chi_{\eta t} & 0 & \beta_1 \frac{\chi_{\eta | 3}}{\bar{\chi_\eta} l_\eta} \\
@@ -299,7 +351,7 @@ The mapping from strain gauge readings along the 3 directions at each node to th
 \end{equation}
 
 \begin{equation} 
-\mathbf{Q_4} =
+\mathbf{Q}_4 =
 \begin{pmatrix}
 -\rho_4 \chi_{\xi | 4} & -\rho_3 \chi_{\xi | 4} & -\rho_2 \chi_{\xi | 4} & -\rho_1 \chi_{\xi | 4} & -\alpha \chi_{\xi t} & \beta_1 \frac{\chi_{\xi | 4}}{\bar{\chi_\xi} l_\xi} & 0  \\	
 \rho_2 \chi_{\eta | 4} & \rho_3 \chi_{\eta | 4} & \rho_4 \chi_{\eta | 4} & \rho_1 \chi_{\eta | 4} & \alpha \chi_{\eta t} & 0 & -\beta_1 \frac{\chi_{\eta | 4}}{\bar{\chi_\eta} l_\eta} \\
@@ -307,21 +359,19 @@ The mapping from strain gauge readings along the 3 directions at each node to th
 \end{pmatrix}		
 \label{equation15}
 \end{equation}
-
 where
-
 \begin{align*} 
-	c_{13 \xi} = \mathbf{s_{13}^T} \mathbf{s_\xi}\ ,
+	c_{13 \xi} = \mathbf{s}_{13}^T \mathbf{s_\xi}\ ,
 	\hspace{10mm}
-	c_{13 \eta} = \mathbf{s_{13}^T} \mathbf{s_\eta}\ ,
+	c_{13 \eta} = \mathbf{s}_{13}^T \mathbf{s_\eta}\ ,
 	\hspace{10mm}
-	c_{24 \xi} = \mathbf{s_{24}^T} \mathbf{s_\xi}\ ,
+	c_{24 \xi} = \mathbf{s}_{24}^T \mathbf{s_\xi}\ ,
 	\hspace{10mm}
-	c_{24 \eta} = \mathbf{s_{24}^T} \mathbf{s_\eta}
+	c_{24 \eta} = \mathbf{s}_{24}^T \mathbf{s_\eta}
 	\hspace{10mm}
 \end{align*}
 
-Values for the coefficients utilised above are as follows:
+An optimisation of element performance has suggested the following coefficients to be used in the nodal strain gauge templates \cite{Hau94}. 
 
 \begin{gather} 
 	\begin{aligned}
@@ -347,16 +397,18 @@ Values for the coefficients utilised above are as follows:
 	\end{aligned}
 \end{gather}
 
+\textit{Cartesian higher order strain displacement matrix}
+
 The cartesian strain displacement matrices at the nodes are related to the mapping matrices $\mathbf{Q}_i$ as described below:
 
 \begin{gather} 
 	\begin{aligned}
-		&\mathbf{B_{h1}} = \mathbf{T_{13}}  \mathbf{Q_{1}}\ ,
+		&\mathbf{B}_{h1} = \mathbf{T}_{13}  \mathbf{Q}_{1}\ ,
 		\hspace{10mm}
-		\mathbf{B_{h3}} = \mathbf{T_{13}}  \mathbf{Q_{3}}\\
+		\mathbf{B}_{h3} = \mathbf{T}_{13}  \mathbf{Q}_{3}\\
 		&where 
 		\hspace{10mm} 
-		\mathbf{T_{13}^{-1}} =
+		\mathbf{T}_{13}^{-1} =
 		\begin{pmatrix}
 			s_{\xi x}^2 & s_{\xi y}^2 & s_{\xi x} s_{\xi y} \\
 			s_{\eta x}^2 & s_{\eta y}^2 & s_{\eta x} s_{\eta y} \\
@@ -365,16 +417,14 @@ The cartesian strain displacement matrices at the nodes are related to the mappi
 		\label{equation17}
 	\end{aligned}
 \end{gather}
-
-
 \begin{gather} 
 	\begin{aligned}
-		&\mathbf{B_{h2}} = \mathbf{T_{24}}  \mathbf{Q_{2}}\ ,
+		&\mathbf{B}_{h2} = \mathbf{T}_{24}  \mathbf{Q}_{2}\ ,
 		\hspace{10mm}
-		\mathbf{B_{h4}} = \mathbf{T_{24}}  \mathbf{Q_{4}}\\
+		\mathbf{B}_{h4} = \mathbf{T}_{24}  \mathbf{Q}_{4}\\
 		&where 
 		\hspace{10mm} 
-		\mathbf{T_{24}^{-1}} =
+		\mathbf{T}_{24}^{-1} =
 		\begin{pmatrix}
 			s_{\xi x}^2 & s_{\xi y}^2 & s_{\xi x} s_{\xi y} \\
 			s_{\eta x}^2 & s_{\eta y}^2 & s_{\eta x} s_{\eta y} \\
@@ -387,7 +437,7 @@ The cartesian strain displacement matrices at the nodes are related to the mappi
 The higher order membrane B matrix $\mathbf{B}_h$ is constructed from the interpolation of the nodal B matrices with standard bi-linear shape functions.
 
 \begin{equation} 
-\mathbf{B_h}(\xi,\eta) = (1-\xi)(1-\eta)\mathbf{B_{h1}} + (1+\xi)(1-\eta)\mathbf{B_{h2}} + (1+\xi)(1+\eta)\mathbf{B_{h3}} +	(1-\xi)(1+\eta)\mathbf{B_{h4}} 
+\mathbf{B}_h(\xi,\eta) = (1-\xi)(1-\eta)\mathbf{B}_{h1} + (1+\xi)(1-\eta)\mathbf{B}_{h2} + (1+\xi)(1+\eta)\mathbf{B}_{h3} +	(1-\xi)(1+\eta)\mathbf{B}_{h4} 
 \label{equation19}
 \end{equation}
 
@@ -402,19 +452,19 @@ Only the bending portion of the total shell element is considered in this sectio
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=15cm]{images/8nodeseren.png}
-	\caption{DKQ DOF arrangement and geometry (source: \cite{Bar12})}
+	\caption{DKQ DOF arrangement and geometry \cite{Bar12}}
 	\label{8nodeseren}
 \end{figure}
 
 \begin{equation} 
-\mathbf{u^T} = 
+\mathbf{u}^T = 
 \begin{pmatrix}
-\mathbf{u_1} & \mathbf{u_2} & \mathbf{u_3} & \mathbf{u_4}
+\mathbf{u}_1 & \mathbf{u}_2 & \mathbf{u}_3 & \mathbf{u}_4
 \end{pmatrix} 
 \hspace{10mm}
 where
 \hspace{10mm}
-\mathbf{u{_i}^T} = 
+\mathbf{u}{_i}^T = 
 \begin{pmatrix}
 {u_{zi}} & {\theta_{xi}} & {\theta_{yi}}
 \end{pmatrix}
@@ -485,14 +535,14 @@ y_{ij} = y_i - y_j
 The elements of the mapping matrix are arranged as such:
 
 \begin{equation} 
-\mathbf{\Psi^x} = 
+\mathbf{\Psi}^x = 
 \begin{pmatrix}
 \Psi_1^x \\
 \vdots \\
 \Psi_{12}^x
 \end{pmatrix}\ ,
 \hspace{10mm}
-\mathbf{\Psi^y} = 
+\mathbf{\Psi}^y = 
 \begin{pmatrix}
 \Psi_1^y \\
 \vdots \\
@@ -575,15 +625,15 @@ and the inverse Jacobian entries $j_{\alpha \beta}$:
 
 \subsection{Combined formulation}
 
-With the separate membrane and bending B matrices developed, the combined shell B matrix $\textbf{B}_{comb.}$ can be constructed to form the element stiffness matrix.
+With the separate membrane and bending B matrices developed, the combined shell B matrix $\mathbf{B}_{comb.}$ can be constructed to form the element stiffness matrix.
 
 \begin{equation} 
-\textbf{K}_{el} = \textbf{B}_{comb}^T \textbf{C} \textbf{B}_{comb} 
+\mathbf{K}_{el} = \mathbf{B}_{comb}^T \mathbf{C} \mathbf{B}_{comb} 
 \label{equation30}
 \end{equation}
 
 \begin{equation} 
-\textbf{B}_{comb} = (\mathbf{L} + \mathbf{B}_h) + \mathbf{B}_{bend} = \mathbf{B}_{mem} + \mathbf{B}_{bend} = 
+\mathbf{B}_{comb} = (\mathbf{L} + \mathbf{B}_h) + \mathbf{B}_{bend} = \mathbf{B}_{mem} + \mathbf{B}_{bend} = 
 \begin{pmatrix}
 \mathbf{B}_{comb1} & \mathbf{B}_{comb2} & \mathbf{B}_{comb3} & \mathbf{B}_{comb4}
 \end{pmatrix}
@@ -598,14 +648,14 @@ The combination of $\textcolor{blue}{membrane}$ and $\textcolor{red}{bending}$ m
 \textcolor{blue}{u_{xi}} \\ 
 \textcolor{blue}{u_{yi}} \\ 
 \textcolor{red}{u_{zi}} \\ 
-\textcolor{red}{\theta_{xi}} \\ 
-\textcolor{red}{\theta_{yi}} \\ 
-\textcolor{blue}{\theta_{zi}} \\ 
+\textcolor{red}{\beta_{xi}} \\ 
+\textcolor{red}{\beta_{yi}} \\ 
+\textcolor{blue}{\beta_{zi}} \\ 
 \end{pmatrix}
 \label{equation32}
 \end{equation}
 
-Considering this, the addition of the membrane (basic and higher order) B matrices and the bending B matrix is conducted as follows:
+Considering this, the addition of the membrane (basic and higher order) B matrices and the bending B matrix is conducted for each node \textit{i} as follows:
 
 \begin{multline}
 	\mathbf{B}_{comb\ i} = \left(
