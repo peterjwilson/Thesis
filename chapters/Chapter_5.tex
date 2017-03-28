@@ -19,14 +19,15 @@
 \lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the analysis performed. The following benchmarks across statics, geometrically non-linear analysis, dynamics and quantity recovery tests the correct implementation of the element formulations and also gives an indication of their performance. 
 
 \section{Static benchmarks: shell obstacle course}
+\label{section:shell obstacle course}
 
 Considered as the standard benchmark for shell elements, the shell obstacle course proposed by Belytschko \cite{Bel85} runs the elements through 3 problems involving complex loading states. These complex loading states often pose difficulties for un-enhanced elements, which is also tested here.
 
-The \textit{Basic-DKQ} element is a quadrilateral element with an un-enhanced membrane formulation and the DKQ bending formulation. Any performance differences that arise between this element and the ANDES-DKQ element can be attributed to the ANDES element technology.
+The \textit{Basic-DKQ} element is a quadrilateral element with an un-enhanced membrane formulation and the DKQ bending formulation. Refer to Appendix \ref{sec:Basic-DKQ quadrilateral formulation} for full details. Any performance differences that arise between this element and the ANDES-DKQ element can be attributed to the ANDES element technology.
 
-The \textit{Basic-T3} element is a triangular element with an un-enhanced shear formulation and no correction to the shear component of the material matrix. Any performance differences that arise between this element and the DSG element can be attributed to the DSG element technology.
+The \textit{Basic-T3} element is a triangular element with an un-enhanced shear formulation and no correction to the shear component of the material matrix. Refer to Appendix \ref{sec:Basic-T3 quadrilateral formulation} for full details. Any performance differences that arise between this element and the DSG element can be attributed to the DSG element technology.
 
-Furthermore, context of element performance is provided by including results from the existing \textit{KRATOS Q4} 5 parameter quadrilateral element and the \textit{KRATOS T3} 3 parameter triangle element.
+Furthermore, context of element performance is provided by including results from the existing \textit{KRATOS Q4} five parameter quadrilateral element (EAS-MITC formulation) and the \textit{KRATOS T3} three parameter triangle element (ANDES-DKT formulation).
 \newpage
 \subsection{Scordelis-Lo roof}
 %

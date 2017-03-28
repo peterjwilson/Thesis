@@ -120,3 +120,11 @@
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Conclusions and Outlook}{55}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{56}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{58}{Appendix.a.B}

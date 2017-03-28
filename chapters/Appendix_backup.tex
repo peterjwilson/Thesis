@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                              %%%%%%
+%%%%  Author: Name des Autors                     %%%%%%
+%%%%                                              %%%%%%
+%%%%  Beschreibung:                               %%%%%%
+%%%%                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifx\lan\deutsch 
+\chapter{Anhang}
+\label{sec:anhang}
+\else
+\chapter{Appendix}
+\label{sec:appendix}
+\fi
+
+\section{Input file with NURBS volume element}
+\label{app:NURBSVolumenelement}
+
+!==========================================\\
+!\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\\
+!\#\#\#\# \hspace*{1.55cm} DESIGN-BLOCK \hspace*{1.55cm} \#\#\#\#\\
+!\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\\
+!==========================================\\
+!     \hspace*{3cm}         ID  PART  PROP   NURBS\_TOP\\
+DE-ELTOP\\
+\hspace*{0.5cm} DE-EL    ~~~~~~1 ~~ 1 ~~  1    ~~  1\\
+!==========================================\\
+DE-REFINEMENT\\
+\hspace*{0.5cm} DE-EL    1       dp=1    dq=1  dr=1  ru=5   rv=5  rw=7\\
+!==========================================\\
+!        ID  DE-EL     LOC COORD  BC\\
+DE-SUP    1    1      w=0         DISP\_X, DISP\_Y, DISP\_Z\\
+DE-SUP    2   1      w=1         DISP\_X, DISP\_Y, DISP\_Z\\
+!===========================================\\
+!         ID  TYPE    DE-EL   LOC COOR    D1   D2   D3 FAC\\
+DE-LOAD   1  DEAD   1   u=2.5  v=2.5  w=2.5 D1=0 D2=0 D3=1 VAL=-100.0\\
+!==========================================\\
+EL-DOMAIN 1\\
+\hspace*{0.5cm} ELEMENTS = EL-TOP 1\\
+!==========================================\\
+LD-COM 1\\
+\hspace*{0.5cm} TYPE=LD-NODE 1 FAC= 1.0\\
+\hspace*{0.5cm} TYPE=BC-DIRICHLET 1\\
+\hspace*{0.5cm} TYPE=BC-DIRICHLET 2\\

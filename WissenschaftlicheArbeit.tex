@@ -114,8 +114,25 @@
 
 \input{./chapters/Conclusions}
 
+% Appendices -----------------------------------------------------
+
 %\appendix
-%\include{chapters/Appendix}
+\begin{appendices}
+
+
+
+\titleformat{\chapter}[hang]{\Huge}
+{\textcolor{gray75}{Appendix \thechapter\hsp}}
+{0pt}
+{\Huge\bfseries}
+
+\include{chapters/Appendix_1}
+\include{chapters/Appendix_2}
+%\include{chapters/Appendix_backup}
+\end{appendices}
+
+% Appendices -----------------------------------------------------
+
 \backmatter
 
 % get rid of citations in list of figures -----------------------------------
@@ -127,6 +144,7 @@
 % get rid of citations in list of figures -----------------------------------
 
 \renewcommand{\Thema}{\ }
+\setlength{\cftfigindent}{0pt}	%remove indentation of numbers
 \listoffigures % Abbildungsverzeichnis
 
 \ifx\lan\deutsch 
@@ -137,6 +155,7 @@
 
 
 \newpage
+\setlength{\cfttabindent}{0pt}
 \listoftables % Tabellenverzeichnis
 \listofalgorithms
 %\bibliographystyle{unsrt} % Literaturverzeichnis

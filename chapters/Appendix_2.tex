@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                              %%%%%%
+%%%%  Author: Peter Wilson                        %%%%%%
+%%%%                                              %%%%%%
+%%%%  Background of shells                        %%%%%%
+%%%%                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Basic-T3 formulation}
+\label{sec:Basic-T3 quadrilateral formulation}
+
+Introduced in section \ref{section:shell obstacle course}, the Basic-T3 quadrilateral element corresponds to a basic constant strain triangle element without any DSG enhancements. It shares the same membrane and bending strain displacement matrices as the DSG triangle element (refer equations \ref{eqt6} and \ref{eqt8}), but has a different transverse shear make-up and no correction of the material matrix (as per equation \ref{eqt14}). 
+
+The transverse shear stiffness of the Basic-T3 formulation is purely displacement based and employs the standard linear triangle shape functions as per the DSG element, repeated here:
+\begin{gather} 
+\begin{aligned}
+&N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]
+\\
+&N_2 (x , y) = \frac{1}{2 A} \big[ (x_3 y_1 - x_1 y_3) + x(y_3 - y_1) + y(x_1 - x_3) \big]
+\\
+&N_3 (x , y) = \frac{1}{2 A} \big[ (x_1 y_2 - x_2 y_1) + x(y_1 - y_2) + y(x_2 - x_1) \big]
+\label{eqApp2_1}
+\end{aligned}
+\end{gather}
+The transverse shear strains are related to the derivative of the discrete transverse displacements $v_{zi}$ and the value of nodal rotations $\beta_{xi}$ and $\beta_{yi}$ via the following transverse shear strain displacement matrix arrangement:
+\begin{equation}
+\boldsymbol{\gamma} = (\nabla \mathbf{N}^{v_{zi}} + \mathbf{N}^{\beta} ) \hat{\mathbf{v}} 
+= \mathbf{B} \hat{\mathbf{v}}  = 
+\begin{pmatrix}
+\mathbf{B}_1 & \mathbf{B}_2 & \mathbf{B}_3 
+\end{pmatrix}
+\begin{pmatrix}
+\hat{\mathbf{v}}_1 \\
+ \hat{\mathbf{v}}_2 \\
+  \hat{\mathbf{v}}_3 
+\end{pmatrix}
+\label{eqApp2_2}
+\end{equation}
+The entries of $\mathbf{B}_i$ and $\hat{\mathbf{v}}_i $ are clarified:
+\begin{equation}
+\mathbf{B}_i=  \begin{pmatrix}
+{N}_{i,x} & {N}_i & 0\\
+{N}_{i,y} & 0 & {N}_i 
+\end{pmatrix}
+\hspace{5mm}
+and
+\hspace{5mm}
+\hat{\mathbf{v}}_i =  \begin{pmatrix}
+\hat{v}_{zi}\\
+\hat{\beta}_{xi}\\
+\hat{\beta}_{yi}
+\end{pmatrix}
+\label{eqApp2_3}
+\end{equation}
