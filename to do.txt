@@ -1,18 +1,17 @@
+Problems:
+	- Composite only works when set OMP_NUM_THREADS=1
+	- thin quad quantity recovery:
+			- main improvement from beta1 = 0. Wait for Haugen response
+			- shell quantity recovery benchmarks
+
+
 To Do:
 	
 	Coding:
-		- Composite progression:
-			- Make material law derived from constitutive law, so it can be easily uncoupled from solid_mechanics
-			- Open thread about how to best represent composite layers on Github
+		- Composite:
 			- Stress recovery for composites
-			- Dynamics for composites
 			- Open thread about run_tests error
-				
-				
 
-		- thin quad quantity recovery:
-			- main improvement from beta1 = 0. Wait for Haugen response
-			- shell quantity recovery benchmarks
 	
 	Report:
 		- Write composites section
