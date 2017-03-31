@@ -1,0 +1,33 @@
+To Do:
+	
+	Coding:
+		- Composite progression:
+			- Make material law derived from constitutive law, so it can be easily uncoupled from solid_mechanics
+			- Open thread about how to best represent composite layers on Github
+			- Stress recovery for composites
+			- Dynamics for composites
+			- Open thread about run_tests error
+				
+				
+
+		- thin quad quantity recovery:
+			- main improvement from beta1 = 0. Wait for Haugen response
+			- shell quantity recovery benchmarks
+	
+	Report:
+		- Write composites section
+		- Update snapthru graphs for displacement control
+		- Write stress results benchmark results section after thin quad is all done
+		- 
+		- 
+		- Hinged cylinder - update results graph
+		- Open cyl - update results graph
+		- 
+		- 
+		- Cleanup equation spacing
+		- alignment of pseudocode on page
+		- Check Bibliography special characters
+		- Check breaking of \texttt formatted words
+		- See if kratos thick tri material mat includes off-diag poisson and update report!
+		- 3 param background - figure out why Gotta figure out lamda - G = lamda
+
