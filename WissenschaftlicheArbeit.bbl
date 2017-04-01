@@ -931,6 +931,29 @@
     \field{year}{2002}
   \endentry
 
+  \entry{reddy2004mechanics}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RJN}{%
+         family={Reddy},
+         familyi={R\bibinitperiod},
+         given={Junuthula\bibnamedelima Narasimha},
+         giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CRC press}%
+    }
+    \strng{namehash}{RJN1}
+    \strng{fullhash}{RJN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{Mechanics of laminated composite plates and shells: theory
+  and analysis}
+    \field{year}{2004}
+  \endentry
+
   \entry{Simo1990}{article}{}
     \name{author}{2}{}{%
       {{hash=SJC}{%
