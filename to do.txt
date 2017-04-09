@@ -11,6 +11,10 @@ To Do:
 		- Composite:
 			- Stress recovery for composites
 			- Open thread about run_tests error
+	
+	Benchmarking:
+		- Simply supported dome stress recovery against analytical solution
+		
 
 	
 	Report:

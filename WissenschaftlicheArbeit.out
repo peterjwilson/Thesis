@@ -6,29 +6,28 @@
 \BOOKMARK [1][-]{section.2.4}{Shell finite element technologies}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.5}{Identification of Kratos shell element formulations}{chapter.2}% 7
 \BOOKMARK [0][-]{chapter.3}{Composite shells}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Use and rise of composites}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Material basics}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.3}{Orthotropic lamina}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.4}{Composite laminates approaches}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{DSG triangle shell element}{}% 13
-\BOOKMARK [1][-]{section.4.1}{Stiffness matrix formulation}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.2}{Stiffness matrix implementation}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.3}{Mass matrix formulation and implementation}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.4}{Stress and strain recovery}{chapter.4}% 17
-\BOOKMARK [0][-]{chapter.5}{ANDES-DKQ quadrilateral shell element}{}% 18
-\BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 19
-\BOOKMARK [1][-]{section.5.2}{Stiffness matrix implementation}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.3}{Mass matrix formulation}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.4}{Stress and strain recovery}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter.6}{Composite orthotropic laminates}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Formulation}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter.7}{Benchmarking}{}% 26
-\BOOKMARK [1][-]{section.7.1}{Static benchmarks: shell obstacle course}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.2}{Geometically non-linear benchmarks}{chapter.7}% 28
-\BOOKMARK [1][-]{section.7.3}{Dynamics benchmarks}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.4}{Quantity recovery benchmarks}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.5}{Composite benchmarks}{chapter.7}% 31
-\BOOKMARK [0][-]{chapter.8}{Conclusions and Outlook}{}% 32
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 33
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 34
+\BOOKMARK [1][-]{section.3.1}{Composite material basics}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Orthotropic lamina}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.3}{Modelling of composite laminates}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{DSG triangle shell element}{}% 12
+\BOOKMARK [1][-]{section.4.1}{Stiffness matrix formulation}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{Stiffness matrix implementation}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.3}{Mass matrix formulation and implementation}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.4}{Stress and strain recovery}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{ANDES-DKQ quadrilateral shell element}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.2}{Stiffness matrix implementation}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.3}{Mass matrix formulation}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.4}{Stress and strain recovery}{chapter.5}% 21
+\BOOKMARK [0][-]{chapter.6}{Composite orthotropic laminates}{}% 22
+\BOOKMARK [1][-]{section.6.1}{Formulation}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 24
+\BOOKMARK [0][-]{chapter.7}{Benchmarking}{}% 25
+\BOOKMARK [1][-]{section.7.1}{Static benchmarks: shell obstacle course}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.2}{Geometically non-linear benchmarks}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.3}{Dynamics benchmarks}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.4}{Quantity recovery benchmarks}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.5}{Composite benchmarks}{chapter.7}% 30
+\BOOKMARK [0][-]{chapter.8}{Conclusions and Outlook}{}% 31
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 32
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 33

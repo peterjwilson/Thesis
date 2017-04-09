@@ -17,6 +17,40 @@
 \endgroup
 
 \sortlist[entry]{nty/global/}
+  \entry{agarwal2006analysis}{book}{}
+    \name{author}{3}{}{%
+      {{hash=ABD}{%
+         family={Agarwal},
+         familyi={A\bibinitperiod},
+         given={Bhagwan\bibnamedelima D},
+         giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=BLJ}{%
+         family={Broutman},
+         familyi={B\bibinitperiod},
+         given={Lawrence\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chandrashekhara},
+         familyi={C\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \strng{namehash}{ABDBLJCK1}
+    \strng{fullhash}{ABDBLJCK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Analysis and performance of fiber composites}
+    \field{year}{2006}
+  \endentry
+
   \entry{Bar12}{thesis}{}
     \name{author}{1}{}{%
       {{hash=BFR}{%
@@ -758,6 +792,25 @@
     \field{year}{2011}
   \endentry
 
+  \entry{nasanettles1994}{article}{}
+    \name{author}{1}{}{%
+      {{hash=NAT}{%
+         family={Nettles},
+         familyi={N\bibinitperiod},
+         given={Alan\bibnamedelima T},
+         giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NAT1}
+    \strng{fullhash}{NAT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Basic mechanics of laminated composite plates, NASA RP-1351}
+    \field{year}{1994}
+  \endentry
+
   \entry{Ngu13}{article}{}
     \name{author}{4}{}{%
       {{hash=NTT}{%
@@ -834,6 +887,34 @@
     \field{volume}{49}
     \field{journaltitle}{CMES: Computer Modeling in Engineering and Sciences}
     \field{year}{2009}
+  \endentry
+
+  \entry{OchoaReddy92}{book}{}
+    \name{author}{2}{}{%
+      {{hash=OO}{%
+         family={Ochoa},
+         familyi={O\bibinitperiod},
+         given={Ozden},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=RJN}{%
+         family={Reddy},
+         familyi={R\bibinitperiod},
+         given={Junuthula\bibnamedelima Narasimha},
+         giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Dordrecht ; Boston : Kluwer Academic Publishers}%
+    }
+    \strng{namehash}{OORJN1}
+    \strng{fullhash}{OORJN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{Finite element analysis of composite laminates}
+    \field{year}{1992}
   \endentry
 
   \entry{Ram16}{article}{}
