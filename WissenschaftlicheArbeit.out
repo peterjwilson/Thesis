@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.2.5}{Identification of Kratos shell element formulations}{chapter.2}% 7
 \BOOKMARK [0][-]{chapter.3}{Composite shells}{}% 8
 \BOOKMARK [1][-]{section.3.1}{Composite material basics}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Orthotropic lamina}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{Orthotropic shell laminates}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.3}{Modelling of composite laminates}{chapter.3}% 11
 \BOOKMARK [0][-]{chapter.4}{DSG triangle shell element}{}% 12
 \BOOKMARK [1][-]{section.4.1}{Stiffness matrix formulation}{chapter.4}% 13

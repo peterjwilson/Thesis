@@ -26,7 +26,7 @@
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=12cm]{images/composites_aerospace.png}
-	\caption{Proliferation of composite materials in the aerospace industry  \cite{BischLitBook04}}
+	\caption{Proliferation of composite materials in the aerospace industry \cite{BischLitBook04}}
 	\label{composite_aerospace}
 \end{figure}
 
@@ -36,37 +36,472 @@ The reason behind this increased propensity to use composites in high performanc
 
 Composite materials are typically the combination of a high strength/stiffness fibre reinforcement material and a base matrix material which is usually weaker/softer than the fibres. Although a wide range composites exist, they are broadly grouped into fibrous composites (reinforcement material are fibres), particulate composites (reinforcement material are particles) and laminate composites composed of layers of different materials, including fibrous and particulate composites. Of these, this work focusses on laminates composed of fibrous composites which are commonly use in engineering.
 
-\subsection{From laminae to laminates}
+\subsection{Laminae and laminates}
 
-Laminae are individual layers or plies, which, when stacked together, form a laminate. Each lamina consists of a volume percentage of reinforcement fibres embedded within the matrix material aligned at a particular orientation to a common coordinate system. Common fibre reinforcement materials are various glass fibres (including E-glass and S-glass), carbon/graphite fibres and boron fibres while common matrix materials are thermosetting polymers such as polyester and epoxy resins and metals including aluminium and titanium. The reinforcement fibres may be arranged in the lamina matrix in a variety of patterns and orientations, either continuous or discontinuous \cite{agarwal2006analysis}. 
+Laminae are individual layers or plies of composite materials, which, when stacked together, form a laminate. Each lamina consists of a volume percentage of reinforcement fibres embedded within the matrix material aligned at a particular orientation to a common coordinate system. Common fibre reinforcement materials are various glass fibres (including E-glass and S-glass), carbon/graphite fibres and boron fibres while common matrix materials are thermosetting polymers such as polyester and epoxy resins and metals including aluminium and titanium. The reinforcement fibres may be arranged in the lamina matrix in a variety of patterns and orientations, either continuous or discontinuous \cite{agarwal2006analysis}. 
 \begin{figure}[H]
-	\subfloat[Composite laminae]
+	\subfloat[Various composite laminae]
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/composite_laminae.png}}
-	\subfloat[Composite laminate]
+	\subfloat[Composite laminate composed of laminae arranged in a stacking sequence]
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/composite_laminates.png}}
 	\caption{\label{composite_laminates}Components of composite laminates \cite{reddy2004mechanics}}
 \end{figure}
 
-Considering the four laminae in figure \ref{composite_laminates} examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, the importance of individual lamina makeup forms a critical determinant of the structural behaviour of the total laminate as a whole. Another critical determinant of the laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation. The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements. An industrial example of this is spoolable Glass Reinforced Epoxy (GRE) oil piping which has a central structural lamina sandwiched between non-structural Polyethylene (PE) laminae intended to provide the structural layer chemical (inside) and environmental (outside) protection. Furthermore, the alignment of the GRE structural lamina is often orientated at an optimal pressure-capacity angle since the stress field of the pipe operating under internal pressure is well defined.
+Considering the four laminae in figure \ref{composite_laminates} examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, the importance of individual lamina makeup forms a critical determinant of the structural behaviour of the total laminate as a whole. Another critical determinant of the laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation. The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements.
+An industrial example of this is spoolable Glass Reinforced Epoxy (GRE) oil piping, which has a central structural lamina sandwiched between two non-structural Polyethylene (PE) laminae intended to provide the structural layer chemical and environmental protection. Furthermore, the alignment of the GRE structural lamina is often orientated at an optimal pressure-capacity angle since the stress field of the pipe operating under internal pressure is well defined.
 
-\subsection{Constitutive equations of a lamina}
+\subsection{Constitutive equations of orthotropic laminae}
 
- - Reddy ch 2.2 and ochoa reddy ch2.2 \cite{OchoaReddy92}
-- Assumptions, General 3D law
+A pre-requisite of modelling complex laminates is the characterisation of each lamina. The general constitutive equations of laminae are thus established under the assumption of perfectly continuous linear elastic materials without fibre breakages or matrix voids. For a generally anisotropic material the stresses can be related to the strains as follows:
+
+\begin{equation} 
+\sigma^{ij} = C_0^{ijkl} \epsilon_{kl}
+\label{eqscomp1}
+\end{equation}
+
+Equivalently, adopting Reddy's \cite{reddy2004mechanics} notation:
+
+\begin{equation} 
+\begin{pmatrix}
+\sigma_{11} \\
+\sigma_{22} \\
+\sigma_{33} \\
+\sigma_{23} \\
+\sigma_{13} \\
+\sigma_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+C_{11} & C_{12} & C_{13} & C_{14} & C_{15} & C_{16} \\
+\  & C_{22} & C_{23} & C_{24} & C_{25} & C_{26} \\
+\  & \  & C_{33} & C_{34} & C_{35} & C_{36} \\
+\  & \  & \  & C_{44} & C_{45} & C_{46} \\
+\  & sym. & \  & \ & C_{55} & C_{56} \\
+\  & \  & \  & \  & \  & C_{66}
+\end{pmatrix}
+\begin{pmatrix}
+\epsilon_{11} \\
+\epsilon_{22} \\
+\epsilon_{33} \\
+2\epsilon_{23} \\
+2\epsilon_{13} \\
+2\epsilon_{12}
+\end{pmatrix}
+\label{eqscomp2}
+\end{equation}
+
+The preceding discussion of laminae illustrated there are innumerable design variants for any ply. In practise however, one of the most common lamina arrangements are orthotropic laminae. Orthotropic laminae have three mutually orthogonal planes of symmetry, which reduces the unique entries of the lamina-orientated constitutive tensor from 21 (anisotropic materials) to 9:
+
+\begin{equation} 
+\begin{pmatrix}
+\sigma_{11} \\
+\sigma_{22} \\
+\sigma_{33} \\
+\sigma_{23} \\
+\sigma_{13} \\
+\sigma_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+C_{11} & C_{12} & C_{13} & 0 & 0 & 0 \\
+\  & C_{22} & C_{23} & 0 & 0 & 0 \\
+\  & \  & C_{33} & 0 & 0 & 0 \\
+\  & \  & \  & C_{44} & 0 & 0 \\
+\  & sym. & \  & \ & C_{55} & 0 \\
+\  & \  & \  & \  & \  & C_{66}
+\end{pmatrix}
+\begin{pmatrix}
+\epsilon_{11} \\
+\epsilon_{22} \\
+\epsilon_{33} \\
+2\epsilon_{23} \\
+2\epsilon_{13} \\
+2\epsilon_{12}
+\end{pmatrix}
+\label{eqscomp3}
+\end{equation}
+
+Furthermore, if the lamina is suitably thin, as is typically the case in composite shell structures, a plane state of stress can be assumed. This corresponds to $\sigma_{33} = 0$ as per the following illustration.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{images/composite_lamina_plane_stress}
+	\caption{Lamina in a plane stress state \cite{reddy2004mechanics}}
+	\label{fig:compositelaminaplanestress}
+\end{figure}
 
 
-- Generalized constitutive relations
+The reduced plane stress orthotropic lamina constitutive tensor is therefore:
 
-\section{Orthotropic lamina}
+\begin{equation} 
+\begin{pmatrix}
+\sigma_{11} \\
+\sigma_{22} \\
+\sigma_{12} \\
+\sigma_{23} \\
+\sigma_{13} 
+\end{pmatrix}
+=
+\begin{pmatrix}
+Q_{11} & Q_{12} &  0 & 0 & 0 \\
+\  & Q_{22} &  0 & 0 & 0 \\
+\  & \  & Q_{66}  & 0 & 0 \\
+\  & sym. & \  & Q_{44} & 0 \\
+\  & \  & \  & \ & Q_{55}
+\end{pmatrix}
+\begin{pmatrix}
+\epsilon_{11} \\
+\epsilon_{22} \\
+2\epsilon_{12}\\
+2\epsilon_{23} \\
+2\epsilon_{13}
+\end{pmatrix}
+\label{eqscomp_plane_stress_tensor_unrotated}
+\end{equation}
 
-- definition. plane stress, other assumptions or simplifications that come along with reducing complexity
--  constitutive relations Qij - stress and strain relations
-	- transformation of strains
-	- transformation of stresses
+The entries $Q_{ij}$ are derived from the bulk structural properties of the lamina at the macro-mechanical level. For example, the bulk lamina properties of a continuous fibre unidirectional design depicted in the following figure is considered.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{images/composite_unidirectional_lamina}
+	\caption{Continuous unidirectional fibre lamina arrangement \cite{reddy2004mechanics}}
+	\label{fig:compositeunidirectionallamina}
+\end{figure}
+
+If the Young's moduli and the Poisson ratios of both the individual fibre ($E_f,\ \nu_f$) and matrix ($E_m,\ \nu_m$) materials are known, along with the volume fraction of each ($v_f,\ v_m$), the resulting bulk lamina moduli can be determined. 
+
+Consider that the bulk modulus $E_1$, along $x_1$ and parallel to the fibres, is activated by tension $\sigma_{11}$ along $x_1$. The constraint $\epsilon_{11_f} = \epsilon_{11_m} = \epsilon_{11}$ must be satisfied at every cross sectional area $A$ along $x_1$. Thus:
+\begin{equation} 
+\sigma_{11} = E_1\epsilon_{11}\ ,
+\hspace{10mm}
+\sigma_{11_f} = E_f\epsilon_{11_f}\ ,
+\hspace{10mm}
+\sigma_{11_m} = E_m\epsilon_{11_m}
+\label{eqscomp5}
+\end{equation}
+Applying force equilibrium:
+\begin{equation} 
+\sigma_{11}A = \sigma_{11_f}A v_f + \sigma_{11_m}A v_m
+\label{eqscomp6}
+\end{equation}
+Substituting and rearranging yields the longitudinal Young's modulus of the lamina:
+\begin{equation} 
+E_1 = E_f v_f + E_m v_m
+\label{eqscomp7}
+\end{equation}
+A similar line of analysis can be performed for the other lamina moduli, yielding the following results:
+\begin{equation} 
+E_2 = \frac{E_f E_m}{E_f v_m + E_m v_f}\ ,
+\hspace{10mm}
+\nu_{12} = \nu_f v_f + \nu_m v_m\ ,
+\hspace{10mm}
+G_{12} = \frac{G_f G_m}{G_f v_m + G_m v_f}
+\label{eqscomp8}
+\end{equation}
+
+The example of continuous unidirectional fibre laminae highlight that the material description of laminae can be shifted from a micro-mechanical level to a macro-mechanical level characterised by equivalent parameters. These are related to the entries $Q_{ij}$ of the reduced plane stress orthotropic lamina constitutive tensor in equation \ref{eqscomp_plane_stress_tensor_unrotated} as follows:
+
+\begin{equation} 
+Q_{11} = \frac{E_1}{1-\nu_{12} \nu_{21}}\ ,
+\hspace{10mm}
+Q_{12} = \frac{\nu_{12} E_1}{1-\nu_{12} \nu_{21}}\ ,
+\hspace{10mm}
+Q_{22} = \frac{E_2}{1-\nu_{12} \nu_{21}}
+\label{eqscomp9}
+\end{equation}
+\begin{equation} 
+Q_{66} = G_{12}\ ,
+\hspace{10mm}
+Q_{44} = G_{23}\ ,
+\hspace{10mm}
+Q_{55} = G_{13}
+\label{eqscomp10}
+\end{equation}
+
+The lamina macro-mechanical parameters $E_1,\ E_2,\ \nu_{12}, G_{12},\ G_{23}$ and $G_{13}$ can be derived from the micro-mechanical properties of the lamina, as demonstrated, or, as is more common, are obtained experimentally. Regardless of their method of origin, these parameters are always aligned with the lamina local coordinate system, which may not necessarily coincide with the laminate coordinate system, or, more generally, the global reference coordinate system of the analysis.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{images/composite_lamina_orientation}
+	\caption{Arbitrary orientation of lamina \cite{reddy2004mechanics}}
+	\label{fig:compositelaminaorientation}
+\end{figure}
+
+The transformation of a locally oriented ($x_1,\ x_2,\ x_3$) lamina constitutive tensor $\mathbf{Q}$ to one aligned with a reference coordinate system ($x,\ y,\ z$) $\bar{\mathbf{Q}}$ through an angle $\theta$ about $\mathbf{z}=\mathbf{x_3}$ is achieved as follows ($c = cos\theta,\ s = sin\theta$):
+\begin{equation} 
+\bar{\mathbf{Q}} = \mathbf{T}^T \mathbf{Q} \mathbf{T}\ ,
+\hspace{10mm}
+\mathbf{T} =
+\begin{pmatrix}
+c^2 & s^2 & -2sc & 0 & 0 \\
+s^2 & c^2 & 2sc & 0 & 0 \\
+sc & -sc & c^2 - s^2 \\
+0 & 0 & 0 & c & s \\
+ 0 & 0 & 0 & -s & c
+\end{pmatrix}
+\label{eqscomp11}
+\end{equation}
+Thus, stresses and strains in the reference coordinate system  ($x,\ y,\ z$) are related as such:
+\begin{equation} 
+\begin{pmatrix}
+\sigma_{xx} \\
+\sigma_{yy} \\
+\sigma_{xy} \\
+\sigma_{yz} \\
+\sigma_{xz} 
+\end{pmatrix}
+=
+\begin{pmatrix}
+\bar{Q}_{11} & \bar{Q}_{12} &  \bar{Q}_{16} & 0 & 0 \\
+\  & \bar{Q}_{22} &  \bar{Q}_{26} & 0 & 0 \\
+\  & \  & \bar{Q}_{66}  & 0 & 0 \\
+\  & sym. & \  & \bar{Q}_{44} & \bar{Q}_{45} \\
+\  & \  & \  & \ & \bar{Q}_{55}
+\end{pmatrix}
+\begin{pmatrix}
+\epsilon_{xx} \\
+\epsilon_{yy} \\
+2\epsilon_{xy}\\
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}
+\label{eqscomp_plane_stress_tensor_rotated}
+\end{equation}
+
+This transformation is required correctly assembly laminae in laminates that have non-zero stacking angles, which, by virtue of their customizability, is almost all laminates. With the individual lamina constitutive behaviour detailed, orthotropic shell laminates can now be built up and modelled.
+
+\section{Orthotropic shell laminates}
+
+Orthotropic shell laminates are composites made from a stacking sequence of orthotropic laminae. As per their application in shells, the assumption of plane stress is continued.
+
+The 5 parameter shell theory internal virtual work is recalled as:
+\begin{equation} 
+-\delta\Pi_{int} =
+\int_\Omega
+\boldsymbol{\epsilon}
+:
+\mathbf{C}_{mem}
+:
+\delta \boldsymbol{\epsilon}\ d \Omega\ 
++
+\int_\Omega
+\boldsymbol{\kappa}
+:
+\mathbf{C}_{bend}
+:
+\delta \boldsymbol{\kappa}\ 
+d \Omega\ 
++
+\int_\Omega
+\boldsymbol{\gamma}
+:
+\mathbf{C}_{shear}
+:
+\delta \boldsymbol{\gamma}\ 
+d \Omega
+\label{eqsrm4_in_composite1}
+\end{equation}
+
+The integral over the volume can split into area and laminate thickness integrals:
+\begin{equation} 
+-\delta\Pi_{int} =
+\int_h
+\int_A
+\boldsymbol{\sigma}_{mem}
+:
+\delta \boldsymbol{\epsilon}\ dAdh\ 
++
+\int_h
+\int_A
+\boldsymbol{\sigma}_{bend}
+:
+\delta \boldsymbol{\kappa}\ 
+\ dAdh\ 
++\\
+\int_h
+\int_A
+\boldsymbol{\tau}
+:
+\delta \boldsymbol{\gamma}\ 
+\ dAdh
+\label{eqsrm4_in_composite2}
+\end{equation}
+
+By pre-integrating the stress quantities, and restricting the scope of the equations to 2D plane stress conditions, the following equivalent form can be presented in vector notation:
+
+\begin{equation} 
+-\delta\Pi_{int} =
+\int_A
+\mathbf{N}^T
+\delta \boldsymbol{\epsilon}
+\ dA\ 
++
+\int_A
+\mathbf{M}^T
+\delta \boldsymbol{\kappa}\ 
+\ dA\ 
++
+\int_A
+\mathbf{Q}^T
+\delta \boldsymbol{\gamma}\ 
+\ dA
+\label{eqsrm4_in_composite3}
+\end{equation}
+
+The introduced quantities $\mathbf{N,\ M}$ and $\mathbf{Q}$ are force and moment resultants over the entire laminate as per the following figure:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{images/composite_force_resultants}
+	\caption{Force and moment resultants of a plate \cite{reddy2004mechanics}}
+	\label{fig:compositeforceresultants}
+\end{figure}
+
+The force and moment resultants are defined as follows:
+
+\begin{equation} 
+\mathbf{N} = 
+\begin{pmatrix}
+N_{xx} \\
+N_{yy} \\
+N_{xy} 
+\end{pmatrix}
+=
+{\int_{\frac{-h}{2}}^{\frac{h}{2}}
+\begin{pmatrix}
+\sigma_{xx} \\
+\sigma_{yy} \\
+\sigma_{xy} 
+\end{pmatrix}}
+dz\ ,
+\hspace{5mm}
+\mathbf{M} = 
+\begin{pmatrix}
+M_{xx} \\
+M_{yy} \\
+M_{xy} 
+\end{pmatrix}
+=
+{\int_{\frac{-h}{2}}^{\frac{h}{2}}
+	\begin{pmatrix}
+	\sigma_{xx} \\
+	\sigma_{yy} \\
+	\sigma_{xy} 
+	\end{pmatrix}}z\ 
+dz
+\label{eqscomp_force_resultants}
+\end{equation}
+
+The shear resultants only applicable for the 5 parameter model are similarly defined:
+\begin{equation} 
+\mathbf{Q} = 
+\begin{pmatrix}
+Q_{x} \\
+Q_{y} 
+\end{pmatrix}
+=
+{\int_{\frac{-h}{2}}^{\frac{h}{2}}
+	\begin{pmatrix}
+	\sigma_{xz} \\
+	\sigma_{yz} 
+	\end{pmatrix}}
+dz
+\label{eqscomp_force_resultants2}
+\end{equation}
+
+\subsection{Laminate constitutive equations}
+
+At this point, the laminate force resultants, by way of the stress integrals, must be related back to strains across all laminae via laminate constitutive equations. Consider the force resultants of a laminate of total thickness $h$ with $n$ laminae:
+
+\begin{equation}
+\mathbf{N} = 
+\begin{pmatrix}
+N_{xx} \\
+N_{yy} \\
+N_{xy} 
+\end{pmatrix}
+=
+{\int_{\frac{-h}{2}}^{\frac{h}{2}}
+	\begin{pmatrix}
+	\sigma_{xx} \\
+	\sigma_{yy} \\
+	\sigma_{xy} 
+	\end{pmatrix}}
+dz
+=
+\sum_{k=1}^n
+\int_{z_k}^{z_{k+1}}
+	\begin{pmatrix}
+	\sigma_{xx} \\
+	\sigma_{yy} \\
+	\sigma_{xy} 
+	\end{pmatrix}
+dz
+\label{eqscomp_laminate_constitutive1}
+\end{equation}
+
+Invoking the laminae constitutive properties previously established in equation \ref{eqscomp_plane_stress_tensor_rotated}:
+
+\begin{gather} 
+	\begin{aligned}
+		\begin{pmatrix}
+			N_{xx} \\
+			N_{yy} \\
+			N_{xy} 
+		\end{pmatrix} 
+		& = 
+		\sum_{k=1}^n
+		\int_{z_k}^{z_{k+1}}
+		{\begin{pmatrix}
+			\bar{Q}_{11} & \bar{Q}_{12} &  \bar{Q}_{16} \\
+			\bar{Q}_{12} & \bar{Q}_{22} &  \bar{Q}_{26} \\
+			\bar{Q}_{16} & \bar{Q}_{26} & \bar{Q}_{66} 
+		\end{pmatrix}}_k
+		\begin{pmatrix}
+			\epsilon_{xx} + z \kappa_{xx}\\
+			\epsilon_{yy} + z \kappa_{xx}\\
+			2\epsilon_{xy} + 2z\kappa_{xy}
+		\end{pmatrix}
+		dz \\
+		& =
+		\begin{pmatrix}
+			{A}_{11} & {A}_{12} &  {A}_{16} \\
+			{A}_{12} & {A}_{22} &  {A}_{26} \\
+			{A}_{16} & {A}_{26} & {A}_{66} 
+		\end{pmatrix}
+		\begin{pmatrix}
+		\epsilon_{xx}\\
+		\epsilon_{yy}\\
+		2\epsilon_{xy}
+		\end{pmatrix}
+		+
+		\begin{pmatrix}
+		{B}_{11} & {B}_{12} &  {B}_{16} \\
+		{B}_{12} & {B}_{22} &  {B}_{26} \\
+		{B}_{16} & {B}_{26} & {B}_{66} 
+		\end{pmatrix}
+		\begin{pmatrix}
+		 \kappa_{xx}\\
+		\kappa_{xx}\\
+		2\kappa_{xy}
+		\end{pmatrix}
+		\label{eqscomp_laminate_constitutive3}
+	\end{aligned}
+\end{gather}
+
+asdfasdf
+
+
+
+
+
+
+
+asdf
 
 \section{Modelling of composite laminates}
 
@@ -95,3 +530,6 @@ Considering the four laminae in figure \ref{composite_laminates} examples of ani
 		{images/composite_nasa_stress_ex1.png}}
 	\caption{\label{composite_stress_strain}Stress and strain thickness distribution of 4 ply plate subject to pure bending  \cite{nasanettles1994}}
 \end{figure}
+
+rotation of stresses
+rotation of strains
