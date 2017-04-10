@@ -274,7 +274,7 @@ Thus, stresses and strains in the reference coordinate system  ($x,\ y,\ z$) are
 
 This transformation is required correctly assembly laminae in laminates that have non-zero stacking angles, which, by virtue of their customizability, is almost all laminates. With the individual lamina constitutive behaviour detailed, orthotropic shell laminates can now be built up and modelled.
 
-\section{Orthotropic shell laminates}
+\section{Orthotropic shell laminates: internal virtual work}
 
 Orthotropic shell laminates are composites made from a stacking sequence of orthotropic laminae. As per their application in shells, the assumption of plane stress is continued.
 
@@ -354,7 +354,7 @@ By pre-integrating the stress quantities, and restricting the scope of the equat
 
 The introduced quantities $\mathbf{N,\ M}$ and $\mathbf{Q}$ are force and moment resultants over the entire laminate as per the following figure:
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{images/composite_force_resultants}
 	\caption{Force and moment resultants of a plate \cite{reddy2004mechanics}}
@@ -396,14 +396,15 @@ dz
 \label{eqscomp_force_resultants}
 \end{equation}
 
-The shear resultants only applicable for the 5 parameter model are similarly defined:
+The shear resultants only applicable for the 5 parameter model are similarly defined, including a shear energy correction factor of $\alpha = \frac{5}{6}$:
+
 \begin{equation} 
 \mathbf{Q} = 
 \begin{pmatrix}
 Q_{x} \\
 Q_{y} 
 \end{pmatrix}
-=
+= \alpha
 {\int_{\frac{-h}{2}}^{\frac{h}{2}}
 	\begin{pmatrix}
 	\sigma_{xz} \\
@@ -415,7 +416,16 @@ dz
 
 \subsection{Laminate constitutive equations}
 
-At this point, the laminate force resultants, by way of the stress integrals, must be related back to strains across all laminae via laminate constitutive equations. Consider the force resultants of a laminate of total thickness $h$ with $n$ laminae:
+At this point, the laminate force resultants, by way of the stress integrals, must be related back to strains across all laminae via laminate constitutive equations. A laminate of total thickness $h$ with $n$ laminae is considered below:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{images/composite_layer_system}
+	\caption{Coordinate system and lamina numbering in a laminate \cite{reddy2004mechanics}}
+	\label{fig:compositelayersystem}
+\end{figure}
+
+The force resultants can be determined as:
 
 \begin{equation}
 \mathbf{N} = 
@@ -444,8 +454,7 @@ dz
 \label{eqscomp_laminate_constitutive1}
 \end{equation}
 
-Invoking the laminae constitutive properties previously established in equation \ref{eqscomp_plane_stress_tensor_rotated}:
-
+Invoking the laminae constitutive properties previously established in equation \ref{eqscomp_plane_stress_tensor_rotated} leads to the 'mathematical assemblage' of the laminae into the laminate via the following integral:
 \begin{gather} 
 	\begin{aligned}
 		\begin{pmatrix}
@@ -460,7 +469,7 @@ Invoking the laminae constitutive properties previously established in equation 
 			\bar{Q}_{11} & \bar{Q}_{12} &  \bar{Q}_{16} \\
 			\bar{Q}_{12} & \bar{Q}_{22} &  \bar{Q}_{26} \\
 			\bar{Q}_{16} & \bar{Q}_{26} & \bar{Q}_{66} 
-		\end{pmatrix}}_k
+		\end{pmatrix}}^{(k)}
 		\begin{pmatrix}
 			\epsilon_{xx} + z \kappa_{xx}\\
 			\epsilon_{yy} + z \kappa_{xx}\\
@@ -492,21 +501,156 @@ Invoking the laminae constitutive properties previously established in equation 
 		\label{eqscomp_laminate_constitutive3}
 	\end{aligned}
 \end{gather}
+Similarly, the moment and shear force resultants can be related to strains:
+\begin{gather} 
+	\begin{aligned}
+		\begin{pmatrix}
+			M_{xx} \\
+			M_{yy} \\
+			M_{xy} 
+		\end{pmatrix} 
+		& = 
+		\sum_{k=1}^n
+		\int_{z_k}^{z_{k+1}}
+		{\begin{pmatrix}
+				\bar{Q}_{11} & \bar{Q}_{12} &  \bar{Q}_{16} \\
+				\bar{Q}_{12} & \bar{Q}_{22} &  \bar{Q}_{26} \\
+				\bar{Q}_{16} & \bar{Q}_{26} & \bar{Q}_{66} 
+		\end{pmatrix}}^{(k)}
+		\begin{pmatrix}
+			\epsilon_{xx} + z \kappa_{xx}\\
+			\epsilon_{yy} + z \kappa_{xx}\\
+			2\epsilon_{xy} + 2z\kappa_{xy}
+		\end{pmatrix}
+		z\ dz \\
+		& =
+		\begin{pmatrix}
+			{B}_{11} & {B}_{12} &  {B}_{16} \\
+			{B}_{12} & {B}_{22} &  {B}_{26} \\
+			{B}_{16} & {B}_{26} & {B}_{66} 
+		\end{pmatrix}
+		\begin{pmatrix}
+			\epsilon_{xx}\\
+			\epsilon_{yy}\\
+			2\epsilon_{xy}
+		\end{pmatrix}
+		+
+		\begin{pmatrix}
+			{D}_{11} & {D}_{12} &  {D}_{16} \\
+			{D}_{12} & {D}_{22} &  {D}_{26} \\
+			{D}_{16} & {D}_{26} & {D}_{66} 
+		\end{pmatrix}
+		\begin{pmatrix}
+			\kappa_{xx}\\
+			\kappa_{yy}\\
+			2\kappa_{xy}
+		\end{pmatrix}
+		\label{eqscomp_laminate_constitutive4}
+	\end{aligned}
+\end{gather}
+\begin{equation} 
+			\begin{pmatrix}
+			Q_{x} \\
+			Q_{y} 
+			\end{pmatrix}
+		= \alpha
+		\sum_{k=1}^n
+		\int_{z_k}^{z_{k+1}}
+			{\begin{pmatrix}
+			\bar{Q}_{44} & \bar{Q}_{45} \\
+			\bar{Q}_{45} & \bar{Q}_{55} 
+			\end{pmatrix}}^{(k)}
+			\begin{pmatrix}
+			2\epsilon_{yz} \\
+			2\epsilon_{xz} 
+			\end{pmatrix}
+		dz
+		= \alpha
+			{\begin{pmatrix}
+			{A}_{44} & {A}_{45} \\
+			{A}_{45} & {A}_{55} 
+			\end{pmatrix}}
+			\begin{pmatrix}
+			2\epsilon_{yz} \\
+			2\epsilon_{xz} 
+			\end{pmatrix}
+		\label{eqscomp_laminate_constitutive5}
+\end{equation}
 
-asdfasdf
+The three introduced matrices represent the extensional stiffnesses $A_{ij}$, the bending stiffnesses $D_{ij}$ and the bending-extensional coupling stiffnesses $B_{ij}$, and are determined from the lamina stiffnesses $\bar{Q}_{ij}^{(k)}$:
 
+\begin{equation} 
+	A_{ij} = 
+	\int_{\frac{-h}{2}}^{\frac{h}{2}}
+	\bar{Q}_{ij}
+	\ dz\ ,
+	\hspace{5mm}
+	B_{ij} = 
+	\int_{\frac{-h}{2}}^{\frac{h}{2}}
+	\bar{Q}_{ij} z
+	\ dz\ ,
+	\hspace{5mm}
+	D_{ij} = 
+	\int_{\frac{-h}{2}}^{\frac{h}{2}}
+	\bar{Q}_{ij} z^2
+	\ dz
+	\label{eqscomp_laminate_constitutive6}
+\end{equation}
 
+By organising the resultants into a generalised resultant vector $\bar{\mathbf{N}}$ and the strains into a generalized strain vector $\bar{\boldsymbol{\epsilon}}$, the following summary is produced:
 
+\begin{equation} 
+\bar{\mathbf{N}} = \bar{\mathbf{C}} \bar{\boldsymbol{\epsilon}} =
+\begin{pmatrix}
+N_{xx} \\
+N_{yy} \\
+N_{xy} \\
+M_{xx} \\
+M_{yy} \\
+M_{xy} \\
+Q_{x} \\
+Q_{y} 
+\end{pmatrix} 
+=
+\begin{pmatrix}
+\mathbf{A} & \mathbf{B} & \mathbf{0} \\
+\mathbf{B} & \mathbf{D} & \mathbf{0} \\
+\mathbf{0}& \mathbf{0} & \alpha		\begin{pmatrix}
+								{A}_{44} & {A}_{45} \\
+ 								{A}_{45} & {A}_{55} 
+ 								\end{pmatrix} 
+\end{pmatrix} 
+\begin{pmatrix}
+\epsilon_{xx} \\
+\epsilon_{yy} \\
+2\epsilon_{xy}\\
+\kappa_{xx}\\
+\kappa_{yy}\\
+2\kappa_{xy} \\
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}
+\label{eqscomp_laminate_constitutive7}
+\end{equation}
 
+The internal virtual work of the 5 parameter shell model presented in equation \ref{eqsrm4_in_composite3} can therefore be reduced down to: 
 
+\begin{equation} 
+-\delta\Pi_{int} =
+\int_A
+\bar{\mathbf{N}}^T
+\delta \bar{\boldsymbol{\epsilon}}
+\ dA
+\label{eqscomp_laminate_constitutive8}
+\end{equation}
 
+\section{Lamina strain and stress recovery}
 
-asdf
+aasdfasdfasdfasdf
 
-\section{Modelling of composite laminates}
+\subsection{Lamina strain recovery}
 
-- Integration of constitutive matrix
-
+Owing to the dimensional reduction from 3D to 2D, the generalized shell strains $\bar{\boldsymbol{\epsilon}}$ are referred to the midplane of the laminate.
 
 - Recovery of strains
 \begin{figure}[H]

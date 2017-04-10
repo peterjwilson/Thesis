@@ -43,48 +43,50 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {18}{\ignorespaces Force and moment resultants of a plate \cite {reddy2004mechanics}\relax }}{28}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {19}{\ignorespaces Deformation of 3 parameter plate \cite {nasanettles1994}\relax }}{30}{figure.caption.23}
+\contentsline {figure}{\numberline {19}{\ignorespaces Coordinate system and lamina numbering in a laminate \cite {reddy2004mechanics}\relax }}{29}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {20}{\ignorespaces Stress and strain thickness distribution of 4 ply plate subject to pure bending \cite {nasanettles1994}\relax }}{30}{figure.caption.24}
+\contentsline {figure}{\numberline {20}{\ignorespaces Deformation of 3 parameter plate \cite {nasanettles1994}\relax }}{31}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {21}{\ignorespaces High level overview of DSG element workflow\relax }}{34}{figure.caption.25}
+\contentsline {figure}{\numberline {21}{\ignorespaces Stress and strain thickness distribution of 4 ply plate subject to pure bending \cite {nasanettles1994}\relax }}{31}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {22}{\ignorespaces ANDES membrane nodal strain gauges \cite {Hau94}\relax }}{42}{figure.caption.28}
+\contentsline {figure}{\numberline {22}{\ignorespaces High level overview of DSG element workflow\relax }}{35}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {23}{\ignorespaces Geometric dimensions of the quadrilateral element \cite {Hau94}\relax }}{42}{figure.caption.28}
+\contentsline {figure}{\numberline {23}{\ignorespaces ANDES membrane nodal strain gauges \cite {Hau94}\relax }}{43}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {24}{\ignorespaces Higher order torsional mode of ANDES membrane formulation \cite {Hau94}\relax }}{43}{figure.caption.29}
+\contentsline {figure}{\numberline {24}{\ignorespaces Geometric dimensions of the quadrilateral element \cite {Hau94}\relax }}{43}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {25}{\ignorespaces DKQ DOF arrangement and geometry \cite {Bar12}\relax }}{46}{figure.caption.30}
+\contentsline {figure}{\numberline {25}{\ignorespaces Higher order torsional mode of ANDES membrane formulation \cite {Hau94}\relax }}{44}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {26}{\ignorespaces High level overview of ANDES-DKQ element workflow\relax }}{51}{figure.caption.31}
+\contentsline {figure}{\numberline {26}{\ignorespaces DKQ DOF arrangement and geometry \cite {Bar12}\relax }}{47}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {27}{\ignorespaces Definition of the Scordelis-Lo roof benchmark\cite {Bou13}\relax }}{59}{figure.caption.32}
+\contentsline {figure}{\numberline {27}{\ignorespaces High level overview of ANDES-DKQ element workflow\relax }}{52}{figure.caption.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {28}{\ignorespaces Scordelis-Lo roof benchmark results\relax }}{59}{figure.caption.33}
+\contentsline {figure}{\numberline {28}{\ignorespaces Definition of the Scordelis-Lo roof benchmark\cite {Bou13}\relax }}{60}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {29}{\ignorespaces Definition of the pinched cylinder benchmark\cite {Bou13}\relax }}{60}{figure.caption.34}
+\contentsline {figure}{\numberline {29}{\ignorespaces Scordelis-Lo roof benchmark results\relax }}{60}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {30}{\ignorespaces Pinched cylinder benchmark results\relax }}{60}{figure.caption.35}
+\contentsline {figure}{\numberline {30}{\ignorespaces Definition of the pinched cylinder benchmark\cite {Bou13}\relax }}{61}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {31}{\ignorespaces Definition of the pinched hemisphere benchmark \cite {Bou13}\relax }}{61}{figure.caption.36}
+\contentsline {figure}{\numberline {31}{\ignorespaces Pinched cylinder benchmark results\relax }}{61}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {32}{\ignorespaces Pinched hemisphere benchmark results\relax }}{61}{figure.caption.37}
+\contentsline {figure}{\numberline {32}{\ignorespaces Definition of the pinched hemisphere benchmark \cite {Bou13}\relax }}{62}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {33}{\ignorespaces Hinged cylindrical roof benchmark\relax }}{62}{figure.caption.38}
+\contentsline {figure}{\numberline {33}{\ignorespaces Pinched hemisphere benchmark results\relax }}{62}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {34}{\ignorespaces Open cylinder pullout benchmark\relax }}{63}{figure.caption.39}
+\contentsline {figure}{\numberline {34}{\ignorespaces Hinged cylindrical roof benchmark\relax }}{63}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {35}{\ignorespaces Shell pendulum benchmark\relax }}{64}{figure.caption.40}
+\contentsline {figure}{\numberline {35}{\ignorespaces Open cylinder pullout benchmark\relax }}{64}{figure.caption.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {36}{\ignorespaces Oscillating clamped plate benchmark\relax }}{65}{figure.caption.41}
+\contentsline {figure}{\numberline {36}{\ignorespaces Shell pendulum benchmark\relax }}{65}{figure.caption.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {37}{\ignorespaces LEFM stress concentration factor benchmark\relax }}{66}{figure.caption.42}
+\contentsline {figure}{\numberline {37}{\ignorespaces Oscillating clamped plate benchmark\relax }}{66}{figure.caption.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {38}{\ignorespaces Composite barrel vault benchmark: cross layup\relax }}{66}{figure.caption.43}
+\contentsline {figure}{\numberline {38}{\ignorespaces LEFM stress concentration factor benchmark\relax }}{67}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {39}{\ignorespaces Composite barrel vault benchmark: angle layup\relax }}{67}{figure.caption.44}
+\contentsline {figure}{\numberline {39}{\ignorespaces Composite barrel vault benchmark: cross layup\relax }}{67}{figure.caption.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {40}{\ignorespaces Composite hinged cylindrical roof benchmark\relax }}{67}{figure.caption.45}
+\contentsline {figure}{\numberline {40}{\ignorespaces Composite barrel vault benchmark: angle layup\relax }}{68}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {41}{\ignorespaces Composite dynamic benchmarks\relax }}{68}{figure.caption.46}
+\contentsline {figure}{\numberline {41}{\ignorespaces Composite hinged cylindrical roof benchmark\relax }}{68}{figure.caption.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {42}{\ignorespaces Composite dynamic benchmarks\relax }}{69}{figure.caption.47}
