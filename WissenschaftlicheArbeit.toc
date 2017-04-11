@@ -67,100 +67,104 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Laminate constitutive equations}{28}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Modelling of composite laminates}{31}{section.3.3}
+\contentsline {section}{\numberline {3.3}Laminate strain and stress recovery}{31}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Laminate strain recovery}{31}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Laminate stress recovery}{33}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}DSG triangle shell element}{32}{chapter.4}
+\contentsline {chapter}{\numberline {4}DSG triangle shell element}{35}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Stiffness matrix formulation}{32}{section.4.1}
+\contentsline {section}{\numberline {4.1}Stiffness matrix formulation}{35}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Stiffness matrix implementation}{35}{section.4.2}
+\contentsline {section}{\numberline {4.2}Stiffness matrix implementation}{38}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Mass matrix formulation and implementation}{37}{section.4.3}
+\contentsline {section}{\numberline {4.3}Mass matrix formulation and implementation}{40}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Stress and strain recovery}{38}{section.4.4}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}ANDES-DKQ quadrilateral shell element}{40}{chapter.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Stiffness matrix formulation}{40}{section.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}ANDES membrane formulation}{40}{subsection.5.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Membrane basic stiffness}{41}{subsubsection*.27}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Membrane higher order stiffness}{41}{subsubsection*.28}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}DKQ bending formulation}{47}{subsection.5.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Combined formulation}{50}{subsection.5.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Stiffness matrix implementation}{51}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Mass matrix formulation}{54}{section.5.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Stress and strain recovery}{54}{section.5.4}
+\contentsline {section}{\numberline {4.4}Stress and strain recovery}{41}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Composite orthotropic laminates}{57}{chapter.6}
+\contentsline {chapter}{\numberline {5}ANDES-DKQ quadrilateral shell element}{43}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Formulation}{57}{section.6.1}
+\contentsline {section}{\numberline {5.1}Stiffness matrix formulation}{43}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Implementation}{58}{section.6.2}
+\contentsline {subsection}{\numberline {5.1.1}ANDES membrane formulation}{43}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
+\contentsline {subsubsection}{Membrane basic stiffness}{44}{subsubsection*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Benchmarking}{59}{chapter.7}
+\contentsline {subsubsection}{Membrane higher order stiffness}{44}{subsubsection*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Static benchmarks: shell obstacle course}{59}{section.7.1}
+\contentsline {subsection}{\numberline {5.1.2}DKQ bending formulation}{50}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}Scordelis-Lo roof}{60}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {5.1.3}Combined formulation}{53}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}Pinched cylinder}{61}{subsection.7.1.2}
+\contentsline {section}{\numberline {5.2}Stiffness matrix implementation}{54}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Pinched hemisphere}{62}{subsection.7.1.3}
+\contentsline {section}{\numberline {5.3}Mass matrix formulation}{57}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Geometically non-linear benchmarks}{63}{section.7.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}Hinged cylindrical roof}{63}{subsection.7.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}Open cylinder pull-out}{64}{subsection.7.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Dynamics benchmarks}{64}{section.7.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Shell pendulum}{64}{subsection.7.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Oscillating clamped plate}{65}{subsection.7.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Quantity recovery benchmarks}{66}{section.7.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Snow loaded dome}{66}{subsection.7.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}LEFM SIF recovery}{66}{subsection.7.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Composite benchmarks}{67}{section.7.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Linear static: composite barrel vault}{67}{subsection.7.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}Linear static: clamped cylinder}{68}{subsection.7.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.3}Non-linear static: composite hinged cylindrical roof}{68}{subsection.7.5.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.4}Dynamics}{69}{subsection.7.5.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.5}Quantity recovery}{69}{subsection.7.5.5}
+\contentsline {section}{\numberline {5.4}Stress and strain recovery}{57}{section.5.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{70}{chapter.8}
+\contentsline {chapter}{\numberline {6}Composite orthotropic laminates}{60}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Formulation}{60}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Implementation}{61}{section.6.2}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{71}{Appendix.a.A}
+\contentsline {chapter}{\numberline {7}Benchmarking}{62}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Static benchmarks: shell obstacle course}{62}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}Scordelis-Lo roof}{63}{subsection.7.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2}Pinched cylinder}{64}{subsection.7.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.3}Pinched hemisphere}{65}{subsection.7.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Geometically non-linear benchmarks}{66}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Hinged cylindrical roof}{66}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Open cylinder pull-out}{67}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Dynamics benchmarks}{67}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}Shell pendulum}{67}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Oscillating clamped plate}{68}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Quantity recovery benchmarks}{69}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.1}Snow loaded dome}{69}{subsection.7.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.2}LEFM SIF recovery}{69}{subsection.7.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5}Composite benchmarks}{70}{section.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5.1}Linear static: composite barrel vault}{70}{subsection.7.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5.2}Linear static: clamped cylinder}{71}{subsection.7.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5.3}Non-linear static: composite hinged cylindrical roof}{71}{subsection.7.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5.4}Dynamics}{72}{subsection.7.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.5.5}Quantity recovery}{72}{subsection.7.5.5}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{73}{Appendix.a.B}
+\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{73}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{74}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{76}{Appendix.a.B}

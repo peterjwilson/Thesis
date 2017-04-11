@@ -3,14 +3,14 @@ Problems:
 	- thin quad quantity recovery:
 			- main improvement from beta1 = 0. Wait for Haugen response
 			- shell quantity recovery benchmarks
-
+	- Composite stress recovery:
+			- In bending???
 
 To Do:
 	
 	Coding:
 		- Composite:
 			- Stress recovery for composites
-			- Open thread about run_tests error
 	
 	Benchmarking:
 		- Simply supported dome stress recovery against analytical solution

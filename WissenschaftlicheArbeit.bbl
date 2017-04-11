@@ -455,6 +455,20 @@
     \field{year}{2013}
   \endentry
 
+  \entry{AMCA2017}{online}{}
+    \list{organization}{1}{%
+      {American Composites Manufacturers Association}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Composites vs. Aluminum}
+    \verb{url}
+    \verb http://compositeslab.com/composites-compared/composites-vs-aluminum/
+    \endverb
+    \field{year}{2017}
+  \endentry
+
   \entry{Dvorkin84}{article}{}
     \name{author}{2}{}{%
       {{hash=DEN}{%
@@ -509,6 +523,29 @@
     }
     \field{type}{Dissertation}
     \field{year}{2013}
+  \endentry
+
+  \entry{FelippaKirchhoff2017}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={C.A.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Colorado at Boulder}%
+    }
+    \strng{namehash}{FC1}
+    \strng{fullhash}{FC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Kirchhoff Plates: Field Equations}
+    \field{journaltitle}{Advanced Finite Element Methods}
+    \field{year}{2017}
   \endentry
 
   \entry{FELIPPA1990}{article}{}
@@ -646,6 +683,30 @@
     \field{volume}{2013}
     \field{journaltitle}{Mathematical Problems in Engineering}
     \field{year}{2013}
+  \endentry
+
+  \entry{kreja2011literature}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KI}{%
+         family={Kreja},
+         familyi={K\bibinitperiod},
+         given={Ireneusz},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KI1}
+    \strng{fullhash}{KI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1}
+    \field{pages}{59\bibrangedash 80}
+    \field{title}{A literature review on computational models for laminated
+  composite and sandwich panels}
+    \field{volume}{1}
+    \field{journaltitle}{Open Engineering}
+    \field{year}{2011}
   \endentry
 
   \entry{Lyl93}{article}{}

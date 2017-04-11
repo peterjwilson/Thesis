@@ -25,8 +25,8 @@
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
-	\includegraphics[width=12cm]{images/composites_aerospace.png}
-	\caption{Proliferation of composite materials in the aerospace industry \cite{BischLitBook04}}
+	\includegraphics[width=14cm]{images/composites_aerospace.png}
+	\caption{Material composition of the Boeing 787 \cite{AMCA2017}}
 	\label{composite_aerospace}
 \end{figure}
 
@@ -239,7 +239,7 @@ The transformation of a locally oriented ($x_1,\ x_2,\ x_3$) lamina constitutive
 \begin{pmatrix}
 c^2 & s^2 & -2sc & 0 & 0 \\
 s^2 & c^2 & 2sc & 0 & 0 \\
-sc & -sc & c^2 - s^2 \\
+sc & -sc & c^2 - s^2 & 0 & 0 \\
 0 & 0 & 0 & c & s \\
  0 & 0 & 0 & -s & c
 \end{pmatrix}
@@ -644,15 +644,21 @@ The internal virtual work of the 5 parameter shell model presented in equation \
 \label{eqscomp_laminate_constitutive8}
 \end{equation}
 
-\section{Lamina strain and stress recovery}
+\section{Laminate strain and stress recovery}
 
-aasdfasdfasdfasdf
+Critical to the practical design of laminates is the evaluation of stresses and strains not only on the laminate mid-plane, but throughout the thickness across laminae. The following describes the procedure of recovering these quantities at arbitrary positions within the laminate thickness.
 
-\subsection{Lamina strain recovery}
+\subsection{Laminate strain recovery}
 
-Owing to the dimensional reduction from 3D to 2D, the generalized shell strains $\bar{\boldsymbol{\epsilon}}$ are referred to the midplane of the laminate.
+Owing to the dimensional reduction from 3D to 2D, the generalized shell strains $\bar{\boldsymbol{\epsilon}}$ of equation \ref{eqscomp_laminate_constitutive7} are referred to the mid-plane $(z=0)$ of the laminate. Thus, within a local convective laminate coordinate system describing the z-axis orientation as per figure \ref{fig:compositelayersystem}:
 
-- Recovery of strains
+\begin{equation} 
+\bar{\boldsymbol{\epsilon}} (x,\ y) = \boldsymbol{\epsilon} (x,\ y,\ 0)
+\label{eqscomp_strain_recovery1}
+\end{equation}
+
+A consequence of the straight director assumption common to both the 3 and 5 parameter shell models is the membrane strains vary proportionally to the distance from the mid-plane. This can be observed in the following diagram of a plate in pure bending highlighting the linear variation of in-plane stresses (which, in simple cases, are merely scaled strains):
+
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
@@ -661,8 +667,136 @@ Owing to the dimensional reduction from 3D to 2D, the generalized shell strains 
 	\label{fig:compositenasastrains}
 \end{figure}
 
-- Recovery of stresses 
-\cite{agarwal2006analysis} eqn 6.9
+Thus the in-plane strains at any position $z$ in the laminate are determined from:
+\begin{equation} 
+\begin{pmatrix}
+\epsilon_{xx} \\
+\epsilon_{yy} \\
+2\epsilon_{xy}\\
+\end{pmatrix}_{(z)}
+=
+\begin{pmatrix}
+\epsilon_{xx} \\
+\epsilon_{yy} \\
+2\epsilon_{xy}\\
+\end{pmatrix}_{(z=0)}
++
+z
+\begin{pmatrix}
+\kappa_{xx}\\
+\kappa_{yy}\\
+2\kappa_{xy} \\
+\end{pmatrix}_{(z=0)}
+\label{eqscomp_strain_recovery2}
+\end{equation}
+
+The in-plane strains of a surface in any lamina within the laminate can be determined by appropriately setting the corresponding $z$ value.
+
+Applicable only to 5 parameter shell models is the recovery of transverse shear strains. A perusal of Kreja's literature review on composite models \cite{kreja2011literature} indicates the amount of academic effort dedicated to accurately modelling transverse shear strains in first order shear deformation theories. The contradiction driving this effort is that 5 parameter models are limited to expressing constant transverse shear strain over the shell thickness, while it is known that for an isotropic material they are actually distributed parabolically. This is the reason behind the shear correction factor of $\alpha = \frac{5}{6}$ which is actually the ratio of internal transverse shear strain energy in a 5 parameter plate to that of 3D elasticity. Without delving into exotic laminate shell theories, two options for recovering the transverse shear strain avail themselves: (1) accept the limitations of the 5 parameter model and consider the transverse shear strain constant across the section, or; (2) reconstruct a parabolic profile from the mid-plane values, as is often done for isotropic materials.
+
+The first approach of accepting constant transverse shear stress is expressed as follows:
+
+\begin{equation} 
+\begin{pmatrix}
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}_{(z)}
+=
+\begin{pmatrix}
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}_{(z=0)}
+\label{eqscomp_strain_recovery3}
+\end{equation}
+
+The second approach of constructing a parabolic strain profile using limiting expressions from \cite{FelippaKirchhoff2017} is described below, starting with the distribution of the transverse shear stress $\sigma_{xz}$ in an isotropic plate:
+\begin{equation} 
+\sigma_{xz} (z) = \sigma_{xz}^{max} (1-\frac{4z^2}{h^2})  = \frac{3Q_x}{2h} (1-\frac{4z^2}{h^2}) = \frac{3}{2} \sigma_{xz}^{av} (1-\frac{4z^2}{h^2})
+\label{eqscomp_strain_recovery4}
+\end{equation}
+
+Unlike laminate stresses, which are generally discontinuous across the thicknesss, laminate strains are continuous. Therefore, the strain distribution of the isotropic plate will be transferred to the laminate.
+The strain distribution of an isotropic plate must follow the stress distribution, thus:
+\begin{equation} 
+\gamma_{xz} (z)=  \frac{3}{2} \gamma_{xz}^{av} (1-\frac{4z^2}{h^2}) = \frac{3}{2} 2\epsilon_{xz}^{(z=0)} (1-\frac{4z^2}{h^2})
+\label{eqscomp_strain_recovery5}
+\end{equation}
+
+Summarising, the approximated transverse shear distribution for the laminate is:
+\begin{equation} 
+\begin{pmatrix}
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}_{(z)}
+=
+\frac{3}{2} (1-\frac{4z^2}{h^2})
+\begin{pmatrix}
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}_{(z=0)}
+\label{eqscomp_strain_recovery6}
+\end{equation}
+
+The in-plane and transverse shear strains determined thus far are referred to the reference coordinate system of the laminate $(x,\ y,\ z)$. However, it is often of interest to transform these strains so they are aligned with the individual lamina considered $(x_1,\ y_1,\ z_1)$. For a lamina oriented at $\theta$ to the laminate coordinate system, the strain components can be transformed as such ($c = cos\theta,\ s = sin\theta$):
+
+\begin{equation} 
+\begin{pmatrix}
+\epsilon_{11} \\
+\epsilon_{22} \\
+2\epsilon_{12}\\
+2\epsilon_{23} \\
+2\epsilon_{13}
+\end{pmatrix}
+ =
+\begin{pmatrix}
+c^2 & s^2 & sc & 0 & 0 \\
+s^2 & c^2 & -sc & 0 & 0 \\
+-sin2\theta & sin2\theta & c^2 - s^2 & 0 & 0 \\
+0 & 0 & 0 & c & -s \\
+0 & 0 & 0 & s & c
+\end{pmatrix}
+\begin{pmatrix}
+\epsilon_{xx} \\
+\epsilon_{yy} \\
+2\epsilon_{xy}\\
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}
+\label{eqscomp_strain_recovery7}
+\end{equation}
+
+\subsection{Laminate stress recovery}
+
+With the laminate strains across the thickness described, the stresses can be recovered by simply applying the considered lamina constitutive law as per equation \ref{eqscomp_plane_stress_tensor_rotated}. Naturally, the material coefficients $Q_{ij}$ should correspond to the $k^{th}$ lamina considered at the height of inspection $z$:
+
+\begin{equation} 
+{\begin{pmatrix}
+\sigma_{xx} \\
+\sigma_{yy} \\
+\sigma_{xy} \\
+\sigma_{yz} \\
+\sigma_{xz} 
+\end{pmatrix}}_{(z)}
+=
+{\begin{pmatrix}
+\bar{Q}_{11} & \bar{Q}_{12} &  \bar{Q}_{16} & 0 & 0 \\
+\  & \bar{Q}_{22} &  \bar{Q}_{26} & 0 & 0 \\
+\  & \  & \bar{Q}_{66}  & 0 & 0 \\
+\  & sym. & \  & \bar{Q}_{44} & \bar{Q}_{45} \\
+\  & \  & \  & \ & \bar{Q}_{55}
+\end{pmatrix}}_{(k)}
+{\begin{pmatrix}
+\epsilon_{xx} \\
+\epsilon_{yy} \\
+2\epsilon_{xy}\\
+2\epsilon_{yz} \\
+2\epsilon_{xz}
+\end{pmatrix}}_{(z)}
+\label{eqscomp_stress_recovery1}
+\end{equation}
+
+As previously hinted at, although the strain distribution is continuous across laminates, the stress distribution is generally discontinuous due to the varying material properties of the laminae. Indeed, if the laminae of a laminate are the exact same orthotropic composite material, but are stacked at varying angles, the resulting stress distribution will be discontinuous. The following example of a 4 ply laminate with a [0, 45, 45, 0] stacking sequence subject to pure bending highlights the nature of stress and strain distributions through the thickness despite all laminae being the same material.
+
 \begin{figure}[H]
 	\subfloat[Continuous strain distribution]
 	{\label{ref_label2}
@@ -675,5 +809,30 @@ Owing to the dimensional reduction from 3D to 2D, the generalized shell strains 
 	\caption{\label{composite_stress_strain}Stress and strain thickness distribution of 4 ply plate subject to pure bending  \cite{nasanettles1994}}
 \end{figure}
 
-rotation of stresses
-rotation of strains
+Similar to the laminate strains, the in-plane and transverse shear stresses determined thus far are referred to the reference coordinate system of the laminate. For a lamina oriented at $\theta$ to the laminate coordinate system $(x,\ y,\ z)$, the stress components can be transformed to the lamina coordinate system $(x_1,\ y_1,\ z_1)$ as such ($c = cos\theta,\ s = sin\theta$):
+
+\begin{equation} 
+\begin{pmatrix}
+\sigma_{11} \\
+\sigma_{22} \\
+2\sigma_{12}\\
+2\sigma_{23} \\
+2\sigma_{13}
+\end{pmatrix}
+=
+\begin{pmatrix}
+c^2 & s^2 & sin2\theta & 0 & 0 \\
+s^2 & c^2 & -sin2\theta & 0 & 0 \\
+-sc & sc & c^2 - s^2 & 0 & 0 \\
+0 & 0 & 0 & c & -s \\
+0 & 0 & 0 & s & c
+\end{pmatrix}
+\begin{pmatrix}
+\sigma_{xx} \\
+\sigma_{yy} \\
+2\sigma_{xy}\\
+2\sigma_{yz} \\
+2\sigma_{xz}
+\end{pmatrix}
+\label{eqscomp_stress_recovery2}
+\end{equation}
