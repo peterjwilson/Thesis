@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  11 APR 2017 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  12 APR 2017 13:06
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2399,6 +2399,42 @@ LaTeX Warning: Label `ref_label2' multiply defined.
 LaTeX Warning: Label `sub@ref_label2' multiply defined.
 
 
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
 LaTeX Warning: Label `Oscillating clamped plate benchmark' multiply defined.
 
 
@@ -2986,10 +3022,10 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 122.
 Package tocbasic Info: Using my definition of `\numberline' on input line 130.
 Package tocbasic Info: Using my definition of `\numberline' on input line 136.
 Package tocbasic Info: Using my definition of `\numberline' on input line 142.
-Package tocbasic Info: Using my definition of `\numberline' on input line 148.
-Package tocbasic Info: Using my definition of `\numberline' on input line 162.
+Package tocbasic Info: Using my definition of `\numberline' on input line 150.
 Package tocbasic Info: Using my definition of `\numberline' on input line 166.
 Package tocbasic Info: Using my definition of `\numberline' on input line 170.
+Package tocbasic Info: Using my definition of `\numberline' on input line 174.
 )
 \tf@toc=\write10
 \openout10 = `WissenschaftlicheArbeit.toc'.
@@ -3566,64 +3602,136 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 203--208
  []
 
 [68 <./images/swinging_plate_problem.png> <./images/swinging_plate_graph.pdf>]
-<images/plate_with_hole_definition.png, id=1362, 1813.977pt x 1736.889pt>
+<images/Simply_support_dome_n_theta.pdf, id=1362, 537.41714pt x 438.03554pt>
+File: images/Simply_support_dome_n_theta.pdf Graphic file (type pdf)
+
+<use images/Simply_support_dome_n_theta.pdf>
+Package pdftex.def Info: images/Simply_support_dome_n_theta.pdf used on input l
+ine 226.
+(pdftex.def)             Requested size: 207.7052pt x 169.29588pt.
+
+<images/Simply_support_dome_n_phi.pdf, id=1363, 537.41714pt x 438.03554pt>
+File: images/Simply_support_dome_n_phi.pdf Graphic file (type pdf)
+
+<use images/Simply_support_dome_n_phi.pdf>
+Package pdftex.def Info: images/Simply_support_dome_n_phi.pdf used on input lin
+e 230.
+(pdftex.def)             Requested size: 207.7052pt x 169.29588pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 226--231
+[][][][] 
+ []
+
+
+<images/Simply_support_dome_von_mises.pdf, id=1364, 529.21463pt x 438.03554pt>
+File: images/Simply_support_dome_von_mises.pdf Graphic file (type pdf)
+
+<use images/Simply_support_dome_von_mises.pdf>
+Package pdftex.def Info: images/Simply_support_dome_von_mises.pdf used on input
+ line 241.
+(pdftex.def)             Requested size: 207.7052pt x 171.92264pt.
+
+<images/simply_support_dome_ansys_vm_plot.png, id=1365, 551.661pt x 398.08725pt
+>
+File: images/simply_support_dome_ansys_vm_plot.png Graphic file (type png)
+ <use images/simply_support_dome_ansys_vm_plot.png>
+Package pdftex.def Info: images/simply_support_dome_ansys_vm_plot.png used on i
+nput line 245.
+(pdftex.def)             Requested size: 207.7052pt x 149.8837pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 241--246
+[][][][] 
+ []
+
+[69 <./images/quad_bend_problem.png> <./images/quad_bend_graph.pdf> <./images/S
+imply_support_dome_n_theta.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/Simply_support_dome_n_theta.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
+> <./images/Simply_support_dome_n_phi.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/Simply_support_dome_n_phi.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>]
+<images/simply_support_dome_andes_vm_plot.png, id=1526, 790.75426pt x 474.573pt
+>
+File: images/simply_support_dome_andes_vm_plot.png Graphic file (type png)
+ <use images/simply_support_dome_andes_vm_plot.png>
+Package pdftex.def Info: images/simply_support_dome_andes_vm_plot.png used on i
+nput line 254.
+(pdftex.def)             Requested size: 207.7052pt x 124.6533pt.
+
+<images/simply_support_dome_dsg_vm_plot.png, id=1527, 629.9535pt x 382.42876pt>
+File: images/simply_support_dome_dsg_vm_plot.png Graphic file (type png)
+<use images/simply_support_dome_dsg_vm_plot.png>
+Package pdftex.def Info: images/simply_support_dome_dsg_vm_plot.png used on inp
+ut line 258.
+(pdftex.def)             Requested size: 207.7052pt x 126.091pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 254--259
+[][][][] 
+ []
+
+<images/plate_with_hole_definition.png, id=1528, 1813.977pt x 1736.889pt>
 File: images/plate_with_hole_definition.png Graphic file (type png)
 
 <use images/plate_with_hole_definition.png>
 Package pdftex.def Info: images/plate_with_hole_definition.png used on input li
-ne 230.
+ne 283.
 (pdftex.def)             Requested size: 207.7052pt x 198.8767pt.
 
-<images/plate_with_hole_results.pdf, id=1363, 517.73424pt x 438.03554pt>
+<images/plate_with_hole_results.pdf, id=1529, 517.73424pt x 438.03554pt>
 File: images/plate_with_hole_results.pdf Graphic file (type pdf)
 
 <use images/plate_with_hole_results.pdf>
 Package pdftex.def Info: images/plate_with_hole_results.pdf used on input line 
-234.
+287.
 (pdftex.def)             Requested size: 207.7052pt x 175.73245pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 230--235
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 283--288
 [][][][] 
  []
 
-[69 <./images/quad_bend_problem.png> <./images/quad_bend_graph.pdf>]
-<images/cross2ply.pdf, id=1420, 521.54535pt x 451.24898pt>
+[70 <./images/Simply_support_dome_von_mises.pdf> <./images/simply_support_dome_
+ansys_vm_plot.png> <./images/simply_support_dome_andes_vm_plot.png> <./images/s
+imply_support_dome_dsg_vm_plot.png>]
+<images/cross2ply.pdf, id=1595, 521.54535pt x 451.24898pt>
 File: images/cross2ply.pdf Graphic file (type pdf)
 
 <use images/cross2ply.pdf>
-Package pdftex.def Info: images/cross2ply.pdf used on input line 251.
+Package pdftex.def Info: images/cross2ply.pdf used on input line 304.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-<images/cross10ply.pdf, id=1421, 521.54535pt x 451.24898pt>
+<images/cross10ply.pdf, id=1596, 521.54535pt x 451.24898pt>
 File: images/cross10ply.pdf Graphic file (type pdf)
 
 <use images/cross10ply.pdf>
-Package pdftex.def Info: images/cross10ply.pdf used on input line 255.
+Package pdftex.def Info: images/cross10ply.pdf used on input line 308.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 251--256
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 304--309
 [][][][] 
  []
 
-<images/angle2ply.pdf, id=1422, 521.54535pt x 451.24898pt>
+<images/angle2ply.pdf, id=1597, 521.54535pt x 451.24898pt>
 File: images/angle2ply.pdf Graphic file (type pdf)
 
 <use images/angle2ply.pdf>
-Package pdftex.def Info: images/angle2ply.pdf used on input line 263.
+Package pdftex.def Info: images/angle2ply.pdf used on input line 316.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-<images/angle10ply.pdf, id=1423, 521.54535pt x 451.24898pt>
+<images/angle10ply.pdf, id=1598, 521.54535pt x 451.24898pt>
 File: images/angle10ply.pdf Graphic file (type pdf)
 
 <use images/angle10ply.pdf>
-Package pdftex.def Info: images/angle10ply.pdf used on input line 267.
+Package pdftex.def Info: images/angle10ply.pdf used on input line 320.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 263--268
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 316--321
 [][][][] 
  []
 
-[70 <./images/plate_with_hole_definition.png> <./images/plate_with_hole_results
+[71 <./images/plate_with_hole_definition.png> <./images/plate_with_hole_results
 .pdf> <./images/cross2ply.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/cross2ply.pdf): PDF inclusion: mult
@@ -3636,24 +3744,24 @@ tiple pdfs with page group included in a single page
 File: images/hinged_cylindrical_roof.png Graphic file (type png)
  <use images/hinged_cylindrical_roof.png>
 Package pdftex.def Info: images/hinged_cylindrical_roof.png used on input line 
-288.
+341.
 (pdftex.def)             Requested size: 207.7052pt x 162.21617pt.
 
-<images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf, id=1575,
+<images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf, id=1750,
  578.16pt x 433.62pt>
 File: images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf Grap
 hic file (type pdf)
 
 <use images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf>
 Package pdftex.def Info: images/Load_displacement_curve_composite_hinged_cylind
-rical_roof.pdf used on input line 292.
+rical_roof.pdf used on input line 345.
 (pdftex.def)             Requested size: 207.7052pt x 155.77887pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 288--293
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 341--346
 [][][][] 
  []
 
-[71 <./images/angle2ply.pdf> <./images/angle10ply.pdf
+[72 <./images/angle2ply.pdf> <./images/angle10ply.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/angle10ply.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
@@ -3663,52 +3771,52 @@ pdfTeX warning: pdflatex.exe (file ./images/Load_displacement_curve_composite_h
 inged_cylindrical_roof.pdf): PDF inclusion: multiple pdfs with page group inclu
 ded in a single page
 >]
-<images/swinging_plate_composite_graph.pdf, id=1727, 527.40317pt x 438.03554pt>
+<images/swinging_plate_composite_graph.pdf, id=1902, 527.40317pt x 438.03554pt>
 File: images/swinging_plate_composite_graph.pdf Graphic file (type pdf)
 <use images/swinging_plate_composite_graph.pdf>
 Package pdftex.def Info: images/swinging_plate_composite_graph.pdf used on inpu
-t line 316.
+t line 369.
 (pdftex.def)             Requested size: 207.7052pt x 172.51082pt.
 
-<images/quad_bend_composite_graph.pdf, id=1728, 541.07143pt x 438.03554pt>
+<images/quad_bend_composite_graph.pdf, id=1903, 541.07143pt x 438.03554pt>
 File: images/quad_bend_composite_graph.pdf Graphic file (type pdf)
 
 <use images/quad_bend_composite_graph.pdf>
 Package pdftex.def Info: images/quad_bend_composite_graph.pdf used on input lin
-e 320.
+e 373.
 (pdftex.def)             Requested size: 207.7052pt x 168.15294pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 316--321
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 369--374
 [][][][] 
  []
 
-) (chapters/Conclusions.tex [72 <./images/swinging_plate_composite_graph.pdf> <
+) (chapters/Conclusions.tex [73 <./images/swinging_plate_composite_graph.pdf> <
 ./images/quad_bend_composite_graph.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/quad_bend_composite_graph.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
 chapter 8.
-) [73
+) [74
 
 ]
 \openout2 = `chapters/Appendix_1.aux'.
 
  (chapters/Appendix_1.tex
 chapter A.
-[74
+[75
 
 
-]) [75]
+]) [76]
 \openout2 = `chapters/Appendix_2.aux'.
 
  (chapters/Appendix_2.tex
 chapter B.
-) [76
+) [77
 
 
 
-] (WissenschaftlicheArbeit.lof [77
+] (WissenschaftlicheArbeit.lof [78
 
 
 ])
@@ -3717,7 +3825,7 @@ chapter B.
 
 
 No file WissenschaftlicheArbeit.acr.
-[78] (WissenschaftlicheArbeit.lot)
+[79] (WissenschaftlicheArbeit.lot)
 \tf@lot=\write12
 \openout12 = `WissenschaftlicheArbeit.lot'.
 
@@ -3736,7 +3844,7 @@ Class scrbook Warning: \float@listhead detected!
 (scrbook)              deprecated \float@listhead interface  on input line 162.
 
 
-[79]
+[80]
 Setting numwidth of `part' to \z@ 
 Setting indent of `part' to \z@
 Setting numwidth of `part' to \z@ 
@@ -3801,11 +3909,11 @@ Overfull \hbox (5.78369pt too wide) detected at line 8
 \tf@loa=\write13
 \openout13 = `WissenschaftlicheArbeit.loa'.
 
- [80
+ [81
 
-] [81
+] [82
 
-] [82] [83] [84] (chapters/Declaration.tex [85]
+] [83] [84] [85] (chapters/Declaration.tex [86]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -3842,7 +3950,7 @@ Overfull \hbox (5.78369pt too wide) detected at line 8
 TextBlockOrigin set to 20mm x 43.5mm
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.04994pt on input line 44.
-[86
+[87
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
@@ -3863,10 +3971,10 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54475 strings out of 493333
- 1170635 string characters out of 3139194
+ 54520 strings out of 493333
+ 1172220 string characters out of 3139194
  1838718 words of memory out of 3000000
- 56211 multiletter control sequences out of 15000+200000
+ 56238 multiletter control sequences out of 15000+200000
  141938 words of font info for 288 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,22n,108p,8958b,2113s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3888,9 +3996,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (90 pages, 9136166 bytes).
+Output written on WissenschaftlicheArbeit.pdf (91 pages, 10156821 bytes).
 PDF statistics:
- 2109 PDF objects out of 2487 (max. 8388607)
- 422 named destinations out of 1000 (max. 500000)
- 46120 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 2293 PDF objects out of 2487 (max. 8388607)
+ 434 named destinations out of 1000 (max. 500000)
+ 46150 words of extra memory for PDF output out of 51595 (max. 10000000)
 

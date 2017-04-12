@@ -121,50 +121,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.1}Static benchmarks: shell obstacle course}{62}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}Scordelis-Lo roof}{63}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.1}Scordelis-Lo roof - good}{63}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}Pinched cylinder}{64}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.2}Pinched cylinder - good}{64}{subsection.7.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Pinched hemisphere}{65}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.3}Pinched hemisphere - good}{65}{subsection.7.1.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.2}Geometically non-linear benchmarks}{66}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}Hinged cylindrical roof}{66}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.1}Hinged cylindrical roof - good}{66}{subsection.7.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}Open cylinder pull-out}{67}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.2}Open cylinder pull-out - good}{67}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.3}Dynamics benchmarks}{67}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Shell pendulum}{67}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.1}Shell pendulum - good}{67}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Oscillating clamped plate}{68}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.2}Oscillating clamped plate - good}{68}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.4}Quantity recovery benchmarks}{69}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Snow loaded dome}{69}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1}Simply supported dome under self weight - done}{69}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}LEFM SIF recovery}{69}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Simply supported plate under uniform pressure - not done}{70}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Composite benchmarks}{70}{section.7.5}
+\contentsline {subsection}{\numberline {7.4.3}LEFM SIF recovery}{70}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Linear static: composite barrel vault}{70}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.5}Composite benchmarks}{71}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}Linear static: clamped cylinder}{71}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.1}Linear static: composite barrel vault - good}{71}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.3}Non-linear static: composite hinged cylindrical roof}{71}{subsection.7.5.3}
+\contentsline {subsection}{\numberline {7.5.2}Linear static: clamped cylinder - good}{72}{subsection.7.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.4}Dynamics}{72}{subsection.7.5.4}
+\contentsline {subsection}{\numberline {7.5.3}Non-linear static: composite hinged cylindrical roof - good}{72}{subsection.7.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.5}Quantity recovery}{72}{subsection.7.5.5}
+\contentsline {subsection}{\numberline {7.5.4}Dynamics: shell pendulum - check again}{73}{subsection.7.5.4}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
+\contentsline {subsection}{\numberline {7.5.5}Stress recovery: tensile test - check}{73}{subsection.7.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{73}{chapter.8}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{74}{Appendix.a.A}
+\contentsline {subsection}{\numberline {7.5.6}Stress recovery: simply supported plate under uniform pressure - not done}{73}{subsection.7.5.6}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{76}{Appendix.a.B}
+\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{74}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{75}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{77}{Appendix.a.B}
