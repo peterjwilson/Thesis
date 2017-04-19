@@ -145,7 +145,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.2}Simply supported plate under uniform pressure - not done}{70}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.3}LEFM SIF recovery}{70}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.3}LEFM SIF recovery - probably skip}{70}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.5}Composite benchmarks}{71}{section.7.5}
 \defcounter {refsection}{0}\relax 
@@ -155,9 +155,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.3}Non-linear static: composite hinged cylindrical roof - good}{72}{subsection.7.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.4}Dynamics: shell pendulum - check again}{73}{subsection.7.5.4}
+\contentsline {subsection}{\numberline {7.5.4}Dynamics: shell pendulum - good}{73}{subsection.7.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.5}Stress recovery: tensile test - check}{73}{subsection.7.5.5}
+\contentsline {subsection}{\numberline {7.5.5}Stress recovery: tensile test - good}{73}{subsection.7.5.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.6}Stress recovery: simply supported plate under uniform pressure - not done}{73}{subsection.7.5.6}
 \defcounter {refsection}{0}\relax 
