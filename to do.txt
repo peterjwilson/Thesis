@@ -10,12 +10,12 @@ Problems:
 			- Nasa ex3 test good for in-plane recovery
 			- Simply supp
 
-To Do:	
-	Coding:
-		- Composite:
-			- Stress recovery for composites
-	
+To Do:		
 	Benchmarking:
+		- DSG transverse shear recovery:
+			- Turn off DSG and shear stab to see if it's one of  them
+			- Try a different mesh
+		- DSG composite stress recovery for transverse shear!
 		- Redo composite scordelis lo roof graphs will full model!
 		
 
@@ -23,7 +23,6 @@ To Do:
 	Report:
 		- (Up next)
 		- Update snapthru graphs for displacement control
-		- Write stress results benchmark results section after thin quad is all done
 		- Revise composites section
 		- 
 		- (Soon)

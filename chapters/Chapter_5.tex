@@ -12,9 +12,9 @@
 %deutsch: chap/kap, abs, abb, gl, anh
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
 
-\chapter{Benchmarking}
+\chapter{Validation of elements}
 
-\renewcommand{\Thema}{Benchmarking}
+\renewcommand{\Thema}{Validation of elements}
 
 \lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the analysis performed. The following benchmarks across statics, geometrically non-linear analysis, dynamics and quantity recovery tests the correct implementation of the element formulations and also gives an indication of their performance. 
 
@@ -266,29 +266,105 @@ limits all set to [1.4e5, 7.5e5] !!!!!!
 
 
 
-\subsection{Simply supported plate under uniform pressure - not done}
+\subsection{Navier supported plate under sinusoidal load}
 
-asdfasdf
-
-\subsection{LEFM SIF recovery - probably skip}
-
-poisson != 0
-check strains, forces, moments
+200x200x10, E=2e11, Poisson = 0.3, pressure = -1e7
+Ref is classical solution as per Reddy \cite{reddy2004mechanics}. Refer to \ref{app:Analytical solution of Navier supported plate}.
 
 \begin{figure}[H]
 	%\centering
-	\subfloat[LEFM stress concentration factor recovery definition]
+	\subfloat[Normal stress (XX) over X coordinate]
 	{\label{ref_label1}
 		\includegraphics[width=7.3cm]
-		{images/plate_with_hole_definition.png}}
-	\subfloat[Stress distribution along distance from hole for LEFM stress concentration factor benchmark]
+		{images/navier_plate_quad_s_xx_bot.pdf}}
+	\subfloat[Normal stress (YY) over X coordinate]
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
-		{plate_with_hole_results.pdf}}
-	\caption{\label{Oscillating clamped plate benchmark}LEFM stress concentration factor benchmark}
+		{images/navier_plate_quad_s_yy_bot.pdf}}
+	\vskip\baselineskip
+	\subfloat[Shear stress (XY) over X coordinate]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_quad_s_xy_bot.pdf}}
+	\subfloat[Von Mises stress over X coordinate]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_quad_s_vm_bot.pdf}}
+	\caption{\label{Navier_quad_s_xx_yy}Stresses (bottom surface) of the Navier supported plate under sinusoidal load}
 \end{figure}
 
-asdf
+asdfadsf
+
+\newpage
+\subsection{Navier supported plate under uniformly distributed load}
+
+200x200x10, E=2e11, Poisson = 0.3, pressure = -1e7
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=14cm]{images/navier_thick_tri_paths}
+	\caption{Paths for results: Red = X path and Green = Y path}
+	\label{fig:navierthicktripaths}
+\end{figure}
+
+
+Ref is ANSYS solution! 
+
+\newpage
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Normal stress (XX) over X coordinate]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_tri_s_xx.pdf}}
+	\subfloat[Normal stress (YY) over X coordinate]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_tri_s_yy.pdf}}
+	\\
+	\subfloat[In plane shear stress (XY) over plate diagonal]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_tri_s_xy.pdf}}
+	\subfloat[Transverse shear stress (XZ) over X coordinate]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_tri_s_xz.pdf}}
+	\\
+	\subfloat[Transverse shear stress (YZ) over Y coordinate]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_tri_s_yz.pdf}}
+	\subfloat[Von Mises stress over plate diagonal]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_tri_vm.pdf}}
+	\caption{\label{Navier_tri_s_xx_yy}Stresses of the Navier supported plate under uniformly distributed load}
+\end{figure}
+
+
+asdfadsf
+
+%\subsection{LEFM SIF recovery - probably skip}
+%
+%poisson != 0
+%check strains, forces, moments
+%
+%\begin{figure}[H]
+%	%\centering
+%	\subfloat[LEFM stress concentration factor recovery definition]
+%	{\label{ref_label1}
+%		\includegraphics[width=7.3cm]
+%		{images/plate_with_hole_definition.png}}
+%	\subfloat[Stress distribution along distance from hole for LEFM stress concentration factor benchmark]
+%	{\label{ref_label2}
+%		\includegraphics[width=7.3cm]
+%		{plate_with_hole_results.pdf}}
+%	\caption{\label{Oscillating clamped plate benchmark}LEFM stress concentration factor benchmark}
+%\end{figure}
+%
+%asdf
 
 \section{Composite benchmarks}
 
@@ -389,6 +465,103 @@ replace with composite results!!!!
 
 asdfdsf
 
-\subsection{Stress recovery: simply supported plate under uniform pressure - not done}
+\subsection{Stress recovery: Navier supported laminate under sinusoidal load}
+
+Ref is Reddy p527 table 9.3.2
+
+Thin plate referred to classical plate theory solution. Thick plate reffered to CFS analytical solution.
 
 asdfdsf
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Normal strain (XX) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_e_xx.pdf}}
+	\subfloat[Normal stress (XX) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_s_xx.pdf}}
+	\\
+	\subfloat[Normal strain (YY) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_e_yy.pdf}}
+	\subfloat[Normal stress (YY) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_s_yy.pdf}}
+	\\
+	\subfloat[In plane shear strain (XY) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_e_xy.pdf}}
+	\subfloat[In plane shear stress (XY) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_s_xy.pdf}}
+	\caption{\label{Navier_quad_composite_s_xx_yy}Stresses and strains of the Navier supported ANDES-DKQ laminate under a sinusoidally distributed load}
+\end{figure}
+
+asdfadsf
+
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Normal strain (XX) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_e_xx.pdf}}
+	\subfloat[Normal stress (XX) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_s_xx.pdf}}
+	\\
+	\subfloat[Normal strain (YY) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_e_yy.pdf}}
+	\subfloat[Normal stress (YY) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_s_yy.pdf}}
+	\\
+	\subfloat[In plane shear strain (XY) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_e_xy.pdf}}
+	\subfloat[In plane shear stress (XY) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_s_xy.pdf}}
+	\caption{\label{Navier_tri_composite_s_xx_yy}In plane stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load}
+\end{figure}
+
+asdfadsf
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Transverse shear strain (XZ) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_e_xz.pdf}}
+	\subfloat[Transverse shear stress (XZ) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_s_xz.pdf}}
+	\\
+	\subfloat[Transverse shear strain (YZ) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_e_yz.pdf}}
+	\subfloat[Transverse shear stress (YZ) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_s_yz.pdf}}
+	\caption{\label{Navier_tri_composite_trans}Transverse shear stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load}
+\end{figure}
+
+INVESTIGATE WHY THE TRANSVERSE STRESSES ARE DIFFERENT HERE!
+
+asdfasdf

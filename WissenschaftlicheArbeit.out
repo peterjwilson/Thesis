@@ -22,7 +22,7 @@
 \BOOKMARK [0][-]{chapter.6}{Composite orthotropic laminates}{}% 22
 \BOOKMARK [1][-]{section.6.1}{Formulation}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 24
-\BOOKMARK [0][-]{chapter.7}{Benchmarking}{}% 25
+\BOOKMARK [0][-]{chapter.7}{Validation of elements}{}% 25
 \BOOKMARK [1][-]{section.7.1}{Static benchmarks: shell obstacle course}{chapter.7}% 26
 \BOOKMARK [1][-]{section.7.2}{Geometically non-linear benchmarks}{chapter.7}% 27
 \BOOKMARK [1][-]{section.7.3}{Dynamics benchmarks}{chapter.7}% 28
@@ -31,3 +31,5 @@
 \BOOKMARK [0][-]{chapter.8}{Conclusions and Outlook}{}% 31
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 32
 \BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 33
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Analytical membrane analysis of dome}{}% 34
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical solution of Navier supported plate}{}% 35

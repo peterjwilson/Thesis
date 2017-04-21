@@ -87,12 +87,70 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {40}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome benchmark\relax }}{70}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {41}{\ignorespaces LEFM stress concentration factor benchmark\relax }}{71}{figure.caption.46}
+\contentsline {figure}{\numberline {41}{\ignorespaces Stresses (bottom surface) of the Navier supported plate under sinusoidal load\relax }}{71}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {42}{\ignorespaces Composite barrel vault benchmark: cross layup\relax }}{71}{figure.caption.47}
+\contentsline {figure}{\numberline {42}{\ignorespaces Paths for results: Red = X path and Green = Y path\relax }}{72}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {43}{\ignorespaces Composite barrel vault benchmark: angle layup\relax }}{72}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Quadrilateral element convergence for the Scordelis-Lo roof benchmark}}}{72}{subfigure.29.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {44}{\ignorespaces Composite hinged cylindrical roof benchmark\relax }}{72}{figure.caption.49}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Triangle element convergence for the Scordelis-Lo roof benchmark}}}{72}{subfigure.29.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {45}{\ignorespaces Composite dynamic benchmarks\relax }}{73}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Quadrilateral element convergence for the pinched cylinder benchmark}}}{72}{subfigure.31.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Triangle element convergence for the pinched cylinder benchmark}}}{72}{subfigure.31.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Quadrilateral element convergence for the pinched hemisphere benchmark}}}{72}{subfigure.33.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Triangle element convergence for the pinched hemisphere benchmark}}}{72}{subfigure.33.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Hinged cylindrical roof definition \cite {Sze2004}}}}{72}{subfigure.34.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Load-displacement curve of hinged cylindrical roof}}}{72}{subfigure.34.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Open cylinder pullout definition \cite {Sze2004}}}}{72}{subfigure.35.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Load-displacement curve of open cylinder pullout}}}{72}{subfigure.35.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shell pendulum definition}}}{72}{subfigure.36.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Vertical displacement over time for shell pendulum benchmark}}}{72}{subfigure.36.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Oscillating clamped plate definition}}}{72}{subfigure.37.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Vertical displacement over time for Oscillating clamped plate benchmark}}}{72}{subfigure.37.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Circumferential shell force over meridian angle}}}{72}{subfigure.38.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Meridional shell force over meridian angle}}}{72}{subfigure.38.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Mid-plane Von Mises stress over meridian angle}}}{72}{subfigure.39.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mid-plane Von Mises plot of the reference ANSYS solution}}}{72}{subfigure.39.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Mid-plane Von Mises plot of the ANDES solution}}}{72}{subfigure.40.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mid-plane Von Mises plot of the DSG solution}}}{72}{subfigure.40.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal stress (XX) over X coordinate}}}{72}{subfigure.41.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Normal stress (YY) over X coordinate}}}{72}{subfigure.41.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Shear stress (XY) over X coordinate}}}{72}{subfigure.41.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Von Mises stress over X coordinate}}}{72}{subfigure.41.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {43}{\ignorespaces Stresses of the Navier supported plate under uniformly distributed load\relax }}{73}{figure.caption.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {44}{\ignorespaces Composite barrel vault benchmark: cross layup\relax }}{74}{figure.caption.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {45}{\ignorespaces Composite barrel vault benchmark: angle layup\relax }}{74}{figure.caption.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {46}{\ignorespaces Composite hinged cylindrical roof benchmark\relax }}{75}{figure.caption.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {47}{\ignorespaces Composite dynamic benchmarks\relax }}{76}{figure.caption.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {48}{\ignorespaces Stresses and strains of the Navier supported ANDES-DKQ laminate under a sinusoidally distributed load\relax }}{77}{figure.caption.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {49}{\ignorespaces In plane stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{78}{figure.caption.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {50}{\ignorespaces Transverse shear stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{79}{figure.caption.55}
