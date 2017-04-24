@@ -171,6 +171,46 @@ with open("laminate_thru_e_xy.txt", "r") as kratos_file:
       for i in range(8):
           kratos_thru_e_xy.append(float(line[2+i])) 
           
+# This only has 6 entries!!!          
+laminate_quad_thru_tsai_no_in_plane_top = []
+laminate_quad_thru_tsai_no_in_plane_bot = []
+with open("laminate_quad_thru_tsai_no_in_plane.txt", "r") as kratos_file:
+  for line in kratos_file:
+      line = line.split('\t')
+      for i in range(6):
+          if i < 3:
+              laminate_quad_thru_tsai_no_in_plane_top.append(float(line[2+i]))   
+          else:
+              laminate_quad_thru_tsai_no_in_plane_bot.append(float(line[2+i]))           
+ 
+              
+laminate_quad_thru_tsai_with_in_plane_top = []
+laminate_quad_thru_tsai_with_in_plane_bot = []
+with open("laminate_quad_thru_tsai_with_in_plane.txt", "r") as kratos_file:
+  for line in kratos_file:
+      line = line.split('\t')
+      for i in range(6):
+          if i < 3:
+              laminate_quad_thru_tsai_with_in_plane_top.append(float(line[2+i]))   
+          else:
+              laminate_quad_thru_tsai_with_in_plane_bot.append(float(line[2+i]))                  
+              
+              
+              
+strand_thru_tsai_top = []
+strand_thru_tsai_bot = []
+counter = 0
+with open("strand_thru_tsai.txt", "r") as kratos_file:
+  for line in kratos_file:
+      line = line.split('\t')
+      counter = counter + 1
+      if counter < 4:
+          strand_thru_tsai_top.append(float(line[0]))   
+      else:
+          strand_thru_tsai_bot.append(float(line[0])) 
+         
+          
+          
 # -----------------------------------------------------------------------------
 #       PLOT GRAPHS
 # -----------------------------------------------------------------------------         
@@ -194,269 +234,6 @@ plt.tick_params(labelsize=labelfontsize)
 #plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
 
 
-
-
-#### CURVATURES   ---------------------------------------------------------------
-#
-## Kappa X
-#fig = plt.figure(11)
-#plt.plot(kratos_x,kratos_kappa_x, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-#plt.plot(kratos_x,analytical_kappa_x,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate')
-#plt.ylabel('Kappa X')
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-#
-#
-## Kappa y
-#fig = plt.figure(12)
-#plt.plot(kratos_x,kratos_kappa_y, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-#plt.plot(kratos_x,analytical_kappa_y,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate')
-#plt.ylabel('Kappa Y')
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-#
-#
-## Kappa xy
-#fig = plt.figure(13)
-#plt.plot(kratos_x,kratos_kappa_xy, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-#plt.plot(kratos_x,analytical_kappa_xy,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate')
-#plt.ylabel('Kappa XY')
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-#
-#
-#
-## MOMENTS      ---------------------------------------------------------------
-#
-## M xx
-#fig = plt.figure(21)
-#plt.plot(kratos_x,kratos_M_xx, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-#plt.plot(kratos_x,analytical_M_xx,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate')
-#plt.ylabel('M_xx')
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-#
-#
-## M YY
-#fig = plt.figure(22)
-#plt.plot(kratos_x,kratos_M_yy, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-#plt.plot(kratos_x,analytical_M_yy,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate')
-#plt.ylabel('M_yy')
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-#
-#
-## M XY
-#fig = plt.figure(23)
-#plt.plot(kratos_x,kratos_M_xy, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-#plt.plot(kratos_x,analytical_M_xy,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate')
-#plt.ylabel('M_xy')
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-
-
-
-# STRESSES      ---------------------------------------------------------------
-
-## Stress XX top surface
-#fig = plt.figure(31)
-#plt.plot(kratos_x,kratos_s_xx_top, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_x_top,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X coordinate',fontsize=myfontsize)
-#plt.ylabel('Stress (XX) @ top surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('navier_plate_quad_s_xx_top.pdf',bbox_inches="tight")
-#
-#
-#
-## Stress YY top surface
-#fig = plt.figure(32)
-#plt.plot(kratos_x,kratos_s_yy_top, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_y_top,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate',fontsize=myfontsize)
-#plt.ylabel('S_yy top surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-#
-#
-## Stress XY top surface
-#fig = plt.figure(33)
-#plt.plot(kratos_x,kratos_s_xy_top, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_xy_top,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X Coordinate',fontsize=myfontsize)
-#plt.ylabel('S_xy top surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
-
-
-
-
-
-## Stress XX bottom surface
-#fig = plt.figure(34)
-#plt.plot(kratos_x,kratos_s_xx_bottom, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_x_bottom,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X coordinate',fontsize=myfontsize)
-#plt.ylabel('Stress_XX @ bottom surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('navier_plate_quad_s_xx_bot.pdf',bbox_inches="tight")
-#
-#
-#
-## Stress YY bottom surface
-#fig = plt.figure(35)
-#plt.plot(kratos_x,kratos_s_yy_bottom, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_y_bottom,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X coordinate',fontsize=myfontsize)
-#plt.ylabel('Stress_YY @ bottom surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('navier_plate_quad_s_yy_bot.pdf',bbox_inches="tight")
-#
-#
-#
-## Stress XY bottom surface
-#fig = plt.figure(36)
-#plt.plot(kratos_x,kratos_s_xy_bottom, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_xy_bottom,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X coordinate',fontsize=myfontsize)
-#plt.ylabel('Stress_XY @ bottom surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('navier_plate_quad_s_xy_bot.pdf',bbox_inches="tight")
-
-
-
-
-## Stress von mises bottom surface
-#fig = plt.figure(37)
-#plt.plot(kratos_x,kratos_s_vm_bottom, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-##plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-##plt.plot(kratos_x,analytical_s_vm_bottom,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-##plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-##plt.legend()
-##lg = plt.legend()
-##lg.draw_frame(False)
-##lg.loc(2)
-#plt.xlim([0,100])
-#plt.xlabel('X coordinate',fontsize=myfontsize)
-#plt.ylabel('Von Mises stress @ bottom surface',fontsize=myfontsize)
-#plt.grid()
-#plt.tick_params(labelsize=labelfontsize)
-##plt.savefig('navier_plate_quad_s_vm_bot.pdf',bbox_inches="tight")
 
 
 
@@ -592,6 +369,63 @@ plt.xlabel('Strain_XY',fontsize=myfontsize)
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
 plt.savefig('navier_plate_composite_quad_e_xy.pdf',bbox_inches="tight")
+
+
+
+
+
+
+
+
+
+
+
+kratos_thru_z_tsai_top = [0.5,0.25,0.25]
+kratos_thru_z_tsai_bot = [-0.25,-0.25,-0.5]
+# Tsai wu thru thickness @ plate center
+fig = plt.figure(61)
+
+plt.plot(laminate_quad_thru_tsai_no_in_plane_top,kratos_thru_z_tsai_top, color = '#77B5FE', linewidth=3.0, linestyle='--', label = 'ANDES-DKQ*',antialiased=True)
+
+plt.plot(laminate_quad_thru_tsai_no_in_plane_bot,kratos_thru_z_tsai_bot, color = '#77B5FE', linewidth=3.0, linestyle='--',label = None,antialiased=True)
+
+plt.plot(laminate_quad_thru_tsai_with_in_plane_top,kratos_thru_z_tsai_top, color = '#77B5FE', linewidth=3.0,  label = 'ANDES-DKQ',antialiased=True)
+
+plt.plot(laminate_quad_thru_tsai_with_in_plane_bot,kratos_thru_z_tsai_bot, color = '#77B5FE', linewidth=3.0, label = None,antialiased=True)
+
+#plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
+
+plt.plot(strand_thru_tsai_top,kratos_thru_z_tsai_top,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = None,antialiased=True)
+
+plt.plot(strand_thru_tsai_bot,kratos_thru_z_tsai_bot,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
+
+#plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
+plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
+#plt.legend()
+#lg = plt.legend()
+#lg.draw_frame(False)
+#lg.loc(2)
+plt.xlim([0,8])
+plt.ylim([-0.75,0.75])
+plt.yticks(ticks)
+plt.ylabel('Z coordinate = z/h',fontsize=myfontsize)
+plt.xlabel('Tsai-Wu reserve factor',fontsize=myfontsize)
+plt.grid()
+plt.tick_params(labelsize=labelfontsize)
+plt.savefig('navier_plate_composite_quad_tsai.pdf',bbox_inches="tight")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

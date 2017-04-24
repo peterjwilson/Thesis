@@ -5,25 +5,28 @@ Problems:
 		- No just my element, the thick quad also does this for the plate bending mesh
 			- main improvement from beta1 = 0. Wait for Haugen response
 			- shell quantity recovery benchmarks
-	
-	- Composite stress recovery:
-			- Nasa ex3 test good for in-plane recovery
-			- Simply supp
+
 
 To Do:		
+	Add new variable - local lamina stresses, test with nasa 3 how to do stress rotation correctly!
+	Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
+
 	Benchmarking:
 		- DSG transverse shear recovery:
-			- Turn off DSG and shear stab to see if it's one of  them
-			- Try a different mesh
 		- DSG composite stress recovery for transverse shear!
 		- Redo composite scordelis lo roof graphs will full model!
-		
+		- composite ones
+		- maybe redo dynamic benchmark with circular navier
+		- Tsai wu benchmarking
 
 	
 	Report:
 		- (Up next)
 		- Update snapthru graphs for displacement control
 		- Revise composites section
+		- Consistent mass matrix
+		- Implementation of composites
+		- Tsai Wu and implementation
 		- 
 		- (Soon)
 		- Hinged cylinder - update results graph
@@ -32,7 +35,7 @@ To Do:
 		- 
 		- (Whenever)
 		- Cleanup equation spacing
-		- alignment of pseudocode on page
+		- alignment of pseudocode on page - try out figure around algortithm
 		- Check Bibliography special characters
 		- Check breaking of \texttt formatted words
 		- See if kratos thick tri material mat includes off-diag poisson and update report!

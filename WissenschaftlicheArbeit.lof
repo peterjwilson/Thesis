@@ -149,8 +149,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {47}{\ignorespaces Composite dynamic benchmarks\relax }}{76}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {48}{\ignorespaces Stresses and strains of the Navier supported ANDES-DKQ laminate under a sinusoidally distributed load\relax }}{77}{figure.caption.53}
+\contentsline {figure}{\numberline {48}{\ignorespaces Stresses and Tsai-Wu results of the composite tensile test\relax }}{77}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {49}{\ignorespaces In plane stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{78}{figure.caption.54}
+\contentsline {figure}{\numberline {49}{\ignorespaces Stresses and strains of the Navier supported ANDES-DKQ laminate under a sinusoidally distributed load\relax }}{78}{figure.caption.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {50}{\ignorespaces Transverse shear stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{79}{figure.caption.55}
+\contentsline {figure}{\numberline {50}{\ignorespaces In plane stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{79}{figure.caption.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {51}{\ignorespaces Transverse shear stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{80}{figure.caption.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {52}{\ignorespaces Tsai-Wu reserve factor through the thickness of the Navier supported DSG laminate under a sinusoidally distributed load\relax }}{81}{figure.caption.57}

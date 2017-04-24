@@ -11,3 +11,13 @@
 \renewcommand{\Thema}{Conclusion}
 
 This work has considered the implementation of a thin quadrilateral shell element for the multiphysics code KRATOS. Section 1 covered the shell formulation, which is split into membrane and bending components. Following this, the element's implementation in KRATOS was presented, which covered key methods employed and the general workflow to calculate the element stiffness matrix. The element considered was subjected to the well known shell obstacle course in Section 3. Although the element correctly converged to the reference solution for the Scordelis-Lo roof and Pinched Cylinder problem, the Pinched Hemisphere benchmark revealed element deficiencies. These deficiencies were identified, with informed direction suggested  for future work associated with improving this element. 
+
+\section{Future work}
+
+Extend shell elements model into a variety of directions:
+
+- Consider von karman non-linear strains for very thin shells
+
+- Improve transverse shear stress modelling for composites
+Look at paper: Improved Transverse Shear Stresses in Composite Finite Elements based on First Order Shear Deformation Theory
+Or, develop separate element with higher order resolving theory

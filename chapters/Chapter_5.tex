@@ -16,9 +16,9 @@
 
 \renewcommand{\Thema}{Validation of elements}
 
-\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the analysis performed. The following benchmarks across statics, geometrically non-linear analysis, dynamics and quantity recovery tests the correct implementation of the element formulations and also gives an indication of their performance. 
+\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across statics, geometrically non-linear analysis, dynamics and quantity recovery interrogates the correct implementation of the element formulations and also gives an indication of their performance. 
 
-\section{Static benchmarks: shell obstacle course}
+\section{Static tests: shell obstacle course}
 \label{section:shell obstacle course}
 
 Considered as the standard benchmark for shell elements, the shell obstacle course proposed by Belytschko \cite{Bel85} runs the elements through 3 problems involving complex loading states. These complex loading states often pose difficulties for un-enhanced elements, which is also tested here.
@@ -122,7 +122,7 @@ The last test in the shell obstacle course is the pinched hemisphere, which cons
 
 The ANDES-DKQ and DSG elements both perform well in the final statics test, as per the convergence graphs above. It is observed that the Basic-DKQ element appears to exhibit membrane locking corresponding to the high double curvature of the problem ($R_1=R_2 = 10$) compared to the Scordelis-Lo roof ($R_1= 10,\ R_2 = \infty$) and the pinched cylinder ($R_1= 300,\ R_2 = \infty$). The ANDES element technology clearly prevents this deleterious effect. The poor performance of the Basic-T3 element compared to the DSG element once again highlights the effectiveness of the DSG element technology in preventing transverse shear locking.
 \newpage
-\section{Geometically non-linear benchmarks}
+\section{Geometically non-linear tests}
 
 Large rotations and displacements mark the departure from geometrically linear to non-linear analyses, however, the assumption of small strains is still maintained. The extension of the elements to geometrically non-linear problems is handled by employing an existing Kratos class which provides co-rotational transformations for shells. At each increment in the non-linear solution, the large displacements and rotations of each element is mapped by rigid body translations and rotations, thus limiting the strains experienced by the element to reasonably small magnitudes. The performance of the element in geometrically non-linear problems is considered with two benchmarks.
 
@@ -168,7 +168,7 @@ The second geometrically non-linear benchmark is the pull-out of an open cylinde
 
  The load-displacement curve above plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference solution \cite{Sze2004}. Although both elements closely follow the reference path, the ANDES-DKQ performs better in this test than the DSG element. Despite this, the error of the DSG element at maximum load is still only 1.7\%.
 
-\section{Dynamics benchmarks}
+\section{Dynamic tests}
 
 Dynamic problems introduce inertial effects into the array of phenomena analysed. Combined with the aforementioned co-rotational formulation, it is possible to accurately resolve bodies undergoing large movements over time.
 
@@ -205,14 +205,16 @@ The oscillating clamped plate benchmark subjects a clamped cantilever square pla
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{quad_bend_graph.pdf}}
-	\caption{\label{Oscillating clamped plate benchmark}Oscillating clamped plate benchmark}
+	\caption{\label{Oscillating clamped plate benchmark}Oscillating clamped plate problem}
 \end{figure}
 
  The plot of vertical displacement over time demonstrates both elements agree with the reference solution, which is the existing Kratos quadrilateral element. The overall results correctly correspond to structural dynamics theory by oscillating with the base natural frequency about the static displacement of $u_z=-0.006m$.
 
-\section{Quantity recovery benchmarks}
+\section{Quantity recovery tests}
 
-\subsection{Simply supported dome under self weight - done}
+Write something about recovery of shell resultants, stresses and strains are important.
+
+\subsection{Simply supported dome with oculus under self weight - done}
 
 
 
@@ -228,7 +230,7 @@ Meshes were all roughly 3000 elements.
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/Simply_support_dome_n_phi.pdf}}
-	\caption{\label{Shell_force_dome_benchmark_shell_force}Shell forces of the simply supported dome benchmark}
+	\caption{\label{Shell_force_dome_benchmark_shell_force}Shell forces of the simply supported dome analysis}
 \end{figure}
 
 Ref is shell membrane theory!
@@ -243,7 +245,7 @@ Ref is shell membrane theory!
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/simply_support_dome_ansys_vm_plot.png}}
-	\caption{\label{Shell_force_dome_benchmark_von_mises}Mid-plane Von Mises stress results of the simply supported dome benchmark}
+	\caption{\label{Shell_force_dome_benchmark_von_mises}Mid-plane Von Mises stress results of the simply supported dome analysis}
 \end{figure}
 
 \begin{figure}[H]
@@ -256,7 +258,7 @@ Ref is shell membrane theory!
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/simply_support_dome_dsg_vm_plot.png}}
-	\caption{\label{Shell_force_dome_benchmark_von_mises_me}Mid-plane Von Mises stress plots of the simply supported dome benchmark}
+	\caption{\label{Shell_force_dome_benchmark_von_mises_me}Mid-plane Von Mises stress plots of the simply supported dome analysis}
 \end{figure}
 
 
@@ -268,7 +270,8 @@ limits all set to [1.4e5, 7.5e5] !!!!!!
 
 \subsection{Navier supported plate under sinusoidal load}
 
-200x200x10, E=2e11, Poisson = 0.3, pressure = -1e7
+200x200x10, E=2e11, Poisson = 0.3, pressure = -1e7.
+
 Ref is classical solution as per Reddy \cite{reddy2004mechanics}. Refer to \ref{app:Analytical solution of Navier supported plate}.
 
 \begin{figure}[H]
@@ -298,7 +301,7 @@ asdfadsf
 \newpage
 \subsection{Navier supported plate under uniformly distributed load}
 
-200x200x10, E=2e11, Poisson = 0.3, pressure = -1e7
+200x200x10, E=2e11, Poisson = 0.3, pressure = -1e7.  Navier edge along y axis had phiX = 0, while navier edge along x axis had phiY = 0.
 
 \begin{figure}[h!]
 	\centering
@@ -346,31 +349,13 @@ Ref is ANSYS solution!
 
 asdfadsf
 
-%\subsection{LEFM SIF recovery - probably skip}
-%
-%poisson != 0
-%check strains, forces, moments
-%
-%\begin{figure}[H]
-%	%\centering
-%	\subfloat[LEFM stress concentration factor recovery definition]
-%	{\label{ref_label1}
-%		\includegraphics[width=7.3cm]
-%		{images/plate_with_hole_definition.png}}
-%	\subfloat[Stress distribution along distance from hole for LEFM stress concentration factor benchmark]
-%	{\label{ref_label2}
-%		\includegraphics[width=7.3cm]
-%		{plate_with_hole_results.pdf}}
-%	\caption{\label{Oscillating clamped plate benchmark}LEFM stress concentration factor benchmark}
-%\end{figure}
-%
-%asdf
 
-\section{Composite benchmarks}
+
+\section{Composite tests}
 
 asdfadsf
 
-\subsection{Linear static: composite barrel vault - good}
+\subsection{Composite linear statics: composite barrel vault - redo for full model!}
 
 asdfdsf
 \begin{figure}[H]
@@ -401,11 +386,11 @@ reference solution is \cite{reddy2004mechanics}.
 
 asdfad
 
-\subsection{Linear static: clamped cylinder - good}
+\subsection{Composite linear static: clamped cylinder - good}
 
 asdfdsf
 
-\subsection{Non-linear static: composite hinged cylindrical roof - good}
+\subsection{Composite non-linear static: composite hinged cylindrical roof - good}
 
 asdfdsf
 
@@ -424,7 +409,7 @@ asdfdsf
 
 asdsds
 
-\subsection{Dynamics: shell pendulum - good}
+\subsection{Composite dynamics: shell pendulum - good}
 
 asdfdsf
 
@@ -461,15 +446,44 @@ oscillating plate setup
 
 replace with composite results!!!!
 
-\subsection{Stress recovery: tensile test - good}
+\subsection{Composite stress recovery: laminate tensile test - good}
+
+Example from Nasa composite doc, example 3. Tensile test token was 10x2x0.02 total thickness. Layup was [0,45,45,0].
+
+Reference tsai-wu results are "Modified tsai-wu" of the same problem on Strand7 FEA software.
+
+Material was $(0.005,0,7850,20010000,1301000,0.3,1001000,1001000,1001000,80000,50000,4000,30000,6000,6000,6000)$.
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Normal stress (XX) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/nasa3_thru_s_xx.pdf}}
+	\subfloat[Normal stress (YY) throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/nasa3_thru_s_yy.pdf}}
+	\\
+	\subfloat[In plane shear stress strain (XY) throughout thickness]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/nasa3_thru_s_xy.pdf}}
+	\subfloat[Tsai-Wu reserve factor throughout thickness]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/nasa3_thru_tsai.pdf}}
+	\caption{\label{Nasa3_stresses}Stresses and Tsai-Wu results of the composite tensile test}
+\end{figure}
 
 asdfdsf
 
-\subsection{Stress recovery: Navier supported laminate under sinusoidal load}
+\subsection{Composite stress recovery: Navier supported laminate under sinusoidal load}
 
-Ref is Reddy p527 table 9.3.2
+Ref is Reddy p527 table 9.3.2. 200x200x10 total thickness. 
 
-Thin plate referred to classical plate theory solution. Thick plate reffered to CFS analytical solution.
+
+Thin plate referred to classical plate theory solution. Thick plate referred to CFS analytical solution.
 
 asdfdsf
 
@@ -563,5 +577,22 @@ asdfadsf
 \end{figure}
 
 INVESTIGATE WHY THE TRANSVERSE STRESSES ARE DIFFERENT HERE!
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Tsai-Wu reserve factor throughout thickness of ANDES-DKQ element]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_quad_tsai.pdf}}
+	\subfloat[Tsai-Wu reserve factor throughout thickness of DSG element]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/navier_plate_composite_tri_tsai.pdf}}
+	\caption{\label{Navier_tri_composite_trans}Tsai-Wu reserve factor through the thickness of the Navier supported DSG laminate under a sinusoidally distributed load}
+\end{figure}
+
+* indicates the in-plane interaction coefficient of the Tsai-Wu criterion was disabled, as per the internal calculations of Strand7 FEA software.
+
+Tsai-Wu result is discontinuous because the thin shell has no stress on the mid-plane under pure bending, yielding an infinite reserve factor. Contrasting this, the prescence of transverse shear stresses on the mid-plane in the DSG element yields a finite reserve factor of roughly 100, which has been omitted for clarity.
 
 asdfasdf
