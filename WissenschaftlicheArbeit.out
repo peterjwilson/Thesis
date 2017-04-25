@@ -23,11 +23,11 @@
 \BOOKMARK [1][-]{section.6.1}{Formulation}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 24
 \BOOKMARK [0][-]{chapter.7}{Validation of elements}{}% 25
-\BOOKMARK [1][-]{section.7.1}{Static benchmarks: shell obstacle course}{chapter.7}% 26
-\BOOKMARK [1][-]{section.7.2}{Geometically non-linear benchmarks}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.3}{Dynamics benchmarks}{chapter.7}% 28
-\BOOKMARK [1][-]{section.7.4}{Quantity recovery benchmarks}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.5}{Composite benchmarks}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.1}{Static tests: shell obstacle course}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.2}{Geometically non-linear tests}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.3}{Dynamic tests}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.4}{Quantity recovery tests}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.5}{Composite tests}{chapter.7}% 30
 \BOOKMARK [0][-]{chapter.8}{Conclusions and Outlook}{}% 31
 \BOOKMARK [1][-]{section.8.1}{Future work}{chapter.8}% 32
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 33

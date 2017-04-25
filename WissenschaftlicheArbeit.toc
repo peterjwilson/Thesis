@@ -119,7 +119,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Validation of elements}{62}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Static benchmarks: shell obstacle course}{62}{section.7.1}
+\contentsline {section}{\numberline {7.1}Static tests: shell obstacle course}{62}{section.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1.1}Scordelis-Lo roof - good}{63}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
@@ -127,58 +127,58 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.1.3}Pinched hemisphere - good}{65}{subsection.7.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Geometically non-linear benchmarks}{66}{section.7.2}
+\contentsline {section}{\numberline {7.2}Geometically non-linear tests}{66}{section.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.1}Hinged cylindrical roof - good}{66}{subsection.7.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.2}Open cylinder pull-out - good}{67}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Dynamics benchmarks}{67}{section.7.3}
+\contentsline {section}{\numberline {7.3}Dynamic tests}{67}{section.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.1}Shell pendulum - good}{67}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.2}Oscillating clamped plate - good}{68}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Quantity recovery benchmarks}{69}{section.7.4}
+\contentsline {section}{\numberline {7.4}Quantity recovery tests}{69}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Simply supported dome under self weight - done}{69}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1}Simply supported dome with oculus under self weight - done}{69}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Navier supported plate under sinusoidal load}{70}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Navier supported plate under sinusoidal load}{71}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.3}Navier supported plate under uniformly distributed load}{72}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.3}Navier supported plate under uniformly distributed load}{73}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Composite benchmarks}{74}{section.7.5}
+\contentsline {section}{\numberline {7.5}Composite tests}{75}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Composite linear static: composite barrel vault - good}{74}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.1}Composite linear statics: composite barrel vault - redo for full model!}{75}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}Composite linear static: clamped cylinder - good}{75}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.2}Composite linear static: clamped cylinder - good}{76}{subsection.7.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.3}Composite non-linear static: composite hinged cylindrical roof - good}{75}{subsection.7.5.3}
+\contentsline {subsection}{\numberline {7.5.3}Composite non-linear static: composite hinged cylindrical roof - good}{76}{subsection.7.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.4}Composite dynamics: shell pendulum - good}{75}{subsection.7.5.4}
+\contentsline {subsection}{\numberline {7.5.4}Composite dynamics: shell pendulum - good}{76}{subsection.7.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.5}Composite stress recovery: laminate tensile test - good}{76}{subsection.7.5.5}
+\contentsline {subsection}{\numberline {7.5.5}Composite stress recovery: laminate tensile test - good}{77}{subsection.7.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.6}Composite stress recovery: Navier supported laminate under sinusoidal load}{77}{subsection.7.5.6}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{82}{chapter.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Future work}{82}{section.8.1}
+\contentsline {subsection}{\numberline {7.5.6}Composite stress recovery: Navier supported laminate under sinusoidal load}{78}{subsection.7.5.6}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{83}{Appendix.a.A}
+\contentsline {chapter}{\numberline {8}Conclusions and Outlook}{83}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Future work}{83}{section.8.1}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{85}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{84}{Appendix.a.A}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Analytical membrane analysis of dome}{86}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{86}{Appendix.a.B}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Analytical solution of Navier supported plate}{87}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {C}Analytical membrane analysis of dome}{87}{Appendix.a.C}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {D}Analytical solution of Navier supported plate}{88}{Appendix.a.D}
