@@ -1,8 +1,8 @@
 \defcounter {refsection}{0}\relax 
-\contentsline {algorithm}{\numberline {1}{\ignorespaces DSG triangle element stiffness matrix pseudocode\relax }}{40}{algorithm.1}
+\contentsline {algorithm}{\numberline {1}{\ignorespaces DSG triangle element stiffness matrix pseudocode\relax }}{41}{algorithm.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {algorithm}{\numberline {2}{\ignorespaces DSG triangle element stress and strain recovery\relax }}{42}{algorithm.2}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces DSG triangle element stress and strain recovery\relax }}{44}{algorithm.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {algorithm}{\numberline {3}{\ignorespaces ANDES-DKQ element stiffness matrix pseudocode\relax }}{56}{algorithm.3}
+\contentsline {algorithm}{\numberline {3}{\ignorespaces ANDES-DKQ element stiffness matrix pseudocode\relax }}{59}{algorithm.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {algorithm}{\numberline {4}{\ignorespaces ANDES-DKT quadrilateral element stress and strain recovery\relax }}{59}{algorithm.4}
+\contentsline {algorithm}{\numberline {4}{\ignorespaces ANDES-DKT quadrilateral element stress and strain recovery\relax }}{62}{algorithm.4}

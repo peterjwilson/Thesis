@@ -398,9 +398,32 @@ reference solution is \cite{reddy2004mechanics}.
 
 asdfad
 
-\subsection{Composite linear static: clamped cylinder - writeup}
+\subsection{Composite linear static: clamped cylinder}
 
 asdfdsf
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{images/composite_clamped_cylinder_def.png}
+	\caption{Composite clamped cylinder test definition}
+	\label{fig:composite_clamped_cyl_def}
+\end{figure}
+
+asdfasdf
+
+\begin{figure}[H]
+	\subfloat[1 ply layup]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/composite_clamped_cyl_0layup.pdf}}
+	\subfloat[2 ply layup]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{images/composite_clamped_cyl_090layup.pdf}}
+	\caption{\label{Composite_clamped_cylinder_test}Composite clamped cylinder analysis convergence}
+\end{figure}
+
+asdfadsf
 
 \subsection{Composite non-linear static: composite hinged cylindrical roof - update graph}
 
@@ -442,28 +465,30 @@ swinging plate material setup:
 	\subfloat[Vertical displacement over time for composite oscillating clamped plate benchmark]
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
-		{images/quad_bend_composite_graph.pdf}}
+		{images/composite_vibrating_square.pdf}}
 	\caption{\label{Composite dynamic benchmarks}Composite dynamic benchmarks}
 \end{figure}
 
-oscillating plate setup
-
-%	SHELL_ORTHOTROPIC_LAYERS  [4,9] (
-%(0.250000E-001,0.0,7850,1.00000E+06,1.00000E+06,0.0,0.50000E+06,0.50000E+06,0.50000E+06),
-%(0.250000E-001,45.0,7850,1.00000E+06,1.00000E+06,0.0,0.50000E+06,0.50000E+06,0.50000E+06),
-%(0.250000E-001,90.0,7850,1.00000E+06,1.00000E+06,0.0,0.50000E+06,0.50000E+06,0.50000E+06),
-%(0.250000E-001,135.0,7850,1.00000E+06,1.00000E+06,0.0,0.50000E+06,0.50000E+06,0.50000E+06)
+vibrating square material setup:
+%	SHELL_ORTHOTROPIC_LAYERS  [8,9] (
+%(0.25,0,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,90,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,0,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,90,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,0,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,90,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,0,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06),
+%(0.25,90,1000,3.00E+08,1.20E+07,2.50E-01,6.00E+06,6.00E+06,2.40E+06)
 %)
 
-replace with composite results!!!!
-
-\subsection{Composite stress recovery: laminate tensile test - good}
+\subsection{Composite stress recovery: laminate tensile test}
 
 Example from Nasa composite doc, example 3. Tensile test token was 10x2x0.02 total thickness. Layup was [0,45,45,0].
 
 Reference tsai-wu results are "Modified tsai-wu" of the same problem on Strand7 FEA software.
 
-Material was $(0.005,0,7850,20010000,1301000,0.3,1001000,1001000,1001000,80000,50000,4000,30000,6000,6000,6000)$.
+Material was :
+%(0.005,0,7850,20010000,1301000,0.3,1001000,1001000,1001000,80000,50000,4000,30000,6000,6000,6000).
 
 \begin{figure}[H]
 	%\centering

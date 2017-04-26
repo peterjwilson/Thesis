@@ -271,7 +271,10 @@ The following pseudocode summarises the key calls and operations involved in cal
 
 \section{Mass matrix formulation and implementation}
 
-The mass matrix is necessary to facilitate dynamic analysis with the thick triangular shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
+The specification of a mass matrix is necessary to facilitate dynamic analysis with the thick triangular shell element. Both lumped and consistent mass matrices are offered, with the lumped mass matrix used by default.
+
+\subsection{Lumped mass matrix}
+The default mass matrix employed is a lumped approach, which results in a diagonal mass matrix that ignores rotary inertia.
 
 \begin{equation} 
 \mathbf{M} =  
@@ -308,6 +311,157 @@ For a single layer material of area $A$ this reduces to:
 \bar{m} = \frac{A}{3} \rho t
 \label{eqt17}
 \end{equation}
+
+\subsection{Consistent mass matrix}
+If the virtual work expression of a general shell element is expanded to include dynamics, the virtual kinetic energy $\delta K$, virtual internal strain energy $\delta U$ and virtual external potential $\delta V$ are related over a time interval $T$ as such:
+
+\begin{equation} 
+\int_{0}^{T} \delta K - (\delta U - \delta V) \ dt = 0
+\label{eqt17_1}
+\end{equation}
+
+Focussing solely on the kinetic energy, pertinent to the consistent mass matrix, clarifying motion in three dimensions yields:
+
+\begin{equation} 
+\delta K = \int_{V} \rho 
+(
+\dot{u_1} \delta \dot{u_1} + 
+\dot{u_2} \delta \dot{u_2} + 
+\dot{u_3} \delta \dot{u_3}
+)
+\ dV
+\label{eqt17_2}
+\end{equation}
+
+The volume integral can be split into area and thickness integrals and referred to mid-plane velocities $(\dot{u_0},\ \dot{v_0},\ \dot{w_0})$:
+\begin{gather} 
+	\begin{aligned}
+		\delta K = \int_{\Omega} \int_{\frac{-h}{2}}^{\frac{h}{2}} \rho 
+		\Big[
+		(\dot{u_0} + z\dot{\phi_1})  (\delta \dot{u_0} + z\delta\dot{\phi_1})+ 
+		&(\dot{v_0} + z\dot{\phi_2})  (\delta \dot{v_0} + z\delta\dot{\phi_2})+
+		\\
+		&(\dot{w_0} + z\dot{\phi_3})  (\delta \dot{w_0} + z\delta\dot{\phi_3})
+		\Big]
+		\ dz
+		\ d\Omega
+		\label{eqt17_3}
+	\end{aligned}
+\end{gather}
+
+The through-thickness integration can be simplified with the help of defining the following translational and rotational inertias under the assumption of constant density throughout the shell thickness:
+\begin{gather} 
+	\begin{aligned}
+		&\ \ \ \ \ 
+		I_i = \int_{\frac{-h}{2}}^{\frac{h}{2}} \rho 
+		z^i
+		\ dz
+		\hspace{10mm}
+		(i = 0,\ 1,\ 2)
+		\\
+		&I_0 = \rho h\ ,
+		\hspace{10mm}
+		I_1 = 0\ ,
+		\hspace{10mm}
+		I_2 = \frac{\rho h^3}{12}
+		\label{eqt17_4}
+	\end{aligned}
+\end{gather}
+
+Substituting the inertias into equation \ref{eqt17_3} yields:
+
+\begin{equation} 
+	\delta K = \int_{\Omega} 
+	\rho
+	\Big[I_0
+	(\dot{u_0} \delta \dot{u_0} 
+	+ \dot{v_0} \delta \dot{v_0}
+	+ \dot{w_0} \delta \dot{w_0}
+	)  
+	+
+	I_2
+	(\dot{\phi_1} \delta \dot{\phi_1} 
+	+ \dot{\phi_2} \delta \dot{\phi_2} 
+	)  
+	\Big]
+	\ d\Omega
+	\label{eqt17_5}
+\end{equation}
+
+Analogous to the method of discretized displacement field, the cartesian velocity and acceleration field can be expressed in terms of shape functions and discrete nodal quantities for both translational and rotational dofs, ordered as per equation \ref{eqt1}:
+
+\begin{equation} 
+\dot{\mathbf{u}} (x,y)
+=
+\sum_{i=1}^{3} N_i (x,y)
+\hat{\dot{\mathbf{u}}}_i\ ,
+\hspace{10mm}
+\ddot{\mathbf{u}} (x,y)
+=
+\sum_{i=1}^{3} N_i (x,y)
+\hat{\ddot{\mathbf{u}}}_i\ ,
+\label{eqt17_6}
+\end{equation}
+
+Considering equation \ref{eqt17_6}, equation \ref{eqt17_5} can be developed into:
+
+\begin{equation} 
+\delta K = \mathbf{M}_c \hat{\ddot{\mathbf{{u}}}} \delta \hat{\mathbf{u}}
+=
+\int_{\Omega} 
+\rho
+\Big[I_0
+\mathbf{N}_T^T
+\mathbf{N}_T
++
+I_2
+\mathbf{N}_R^T
+\mathbf{N}_R
+\Big]
+\ d\Omega\ 
+\hat{\ddot{\mathbf{{u}}}}
+\delta \hat{\mathbf{u}}
+\label{eqt17_7}
+\end{equation}
+
+The matrices $\mathbf{N}_T$ and $\mathbf{N}_R$ arrange shape functions to filter the appropriate translational and rotational DOFs respectively, defined  as:
+
+\begin{equation} 
+\mathbf{N}_T = 
+\begin{pmatrix}
+\mathbf{N}_{T_1} & \mathbf{N}_{T_2} & \mathbf{N}_{T_3}
+\end{pmatrix}\ ,
+\hspace{10mm}
+\mathbf{N}_R = 
+\begin{pmatrix}
+\mathbf{N}_{R_1} & \mathbf{N}_{R_2} & \mathbf{N}_{R_3}
+\end{pmatrix}
+\label{eqt17_8}
+\end{equation}
+
+\begin{equation} 
+\mathbf{N}_{T_i} = 
+\begin{pmatrix}
+N_i & 0 & 0 & 0 & 0 & 0 \\
+0 & N_i & 0 & 0 & 0 & 0 \\
+0 & 0 & N_i & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\hspace{10mm}
+\mathbf{N}_{R_i} = 
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & N_i & 0 & 0 \\
+0 & 0 & 0 & 0 & N_i & 0 \\
+0 & 0 & 0 & 0 & 0 & N_i
+\end{pmatrix}
+\label{eqt17_9}
+\end{equation}
+
 
 \section{Stress and strain recovery}
 

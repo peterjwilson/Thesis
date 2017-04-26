@@ -836,3 +836,66 @@ s^2 & c^2 & -sin2\theta & 0 & 0 \\
 \end{pmatrix}
 \label{eqscomp_stress_recovery2}
 \end{equation}
+
+\section{Laminate Tsai-Wu failure criterion}
+
+The Tsai-Wu failure criterion is a relatively simple method to approximate the safety of composite materials under combined loading. As an extension of the Von Mises distortion energy theory, it provides an invariant scalar indication of how proximate the current stress state of a lamina is to breaching the closed convex failure surface \cite{tsai12}. The closed convex failure surface is defined by material strength parameters $F_i$ and $F_{ij}$, with failure predicted by fulfilling the following inequality \cite{reddy2004mechanics}:
+
+\begin{equation} 
+\sum_{i=1}^{6} F_i \sigma_i + \sum_{i=1}^{6} \sum_{j=1}^{6} F_{ij} \sigma_{ij} \geq 1.0
+\hspace{10mm}with\hspace{10mm}
+\begin{pmatrix}
+\sigma_{1} \\
+\sigma_{2} \\
+\sigma_{3}\\
+\sigma_{4} \\
+\sigma_{5} \\
+\sigma_{6}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\sigma_{11} \\
+\sigma_{22} \\
+\sigma_{33}\\
+\sigma_{23} \\
+\sigma_{13} \\
+\sigma_{12}
+\end{pmatrix}
+\label{eqscomp_tsai1}
+\end{equation}
+
+By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C)$ strengths in the lamina principal material directions (1, 2, 3) and the shear strengths $(R,\ S,\ T)$ corresponding to (23, 13, 12), the non-zero material strength parameters in a plane stress regime are expressed as:
+\begin{gather} 
+	\begin{aligned}
+		&F_1 = \frac{1}{X_T} - \frac{1}{X_C}\ ,
+		\hspace{5mm}
+		F_2 = \frac{1}{Y_T} - \frac{1}{Y_C}\ ,
+		\hspace{5mm}
+		F_{11} = \frac{1}{X_TX_C}\ ,
+		\hspace{5mm}
+		F_{22} = \frac{1}{Y_TY_C}
+		\\
+		&\ \ \ \ 
+		F_{44} = \frac{1}{R^2}\ ,
+		\hspace{5mm}
+		F_{55} = \frac{1}{S^2}\ ,
+		\hspace{5mm}
+		F_{66} = \frac{1}{T^2}\ ,
+		\hspace{5mm}
+		F_{12} = \frac{-0.5}{\sqrt{X_TX_CY_TY_C}}
+		\label{eqscomp_tsai2}
+	\end{aligned}
+\end{gather}
+
+The strength parameter $F_{12}$ is termed the in-plane interaction factor and is generally difficult to determine experimentally. Thus, it is often approximated from other more readily available strengths, as per equation \ref{eqscomp_tsai2} or set to zero entirely. Further information regarding $F_{12}$ can be found in Reference \cite{tsai12}. In the scope of this work $F_{12}$ is determined as per equation \ref{eqscomp_tsai2}.
+
+Although equation \ref{eqscomp_tsai1} describes the Tsai-Wu criterion, it does so in terms of a Failure Index (FI). That is, if the calculated FI is greater than 1.0, failure occurs. Contrasting this, engineers are often interested in safety factors, or more specifically, the ratio with which to increase loads to just achieve failure. This parameter is commonly referred to as either the Reserve Factor (RF) or Strength Ratio (SR), with values less than 1.0 indicating failure while those above 1.0 correspond to safety. The Tsai-Wu RF can be determined as follows \cite{kolios2012evaluation}:
+
+\begin{equation} 
+RF = \frac{-b + \sqrt{b^2 + 4a}}{2a}
+\hspace{5mm}with\hspace{5mm}
+a = \sum_{i=1}^{6} \sum_{j=1}^{6} F_{ij} \sigma_{ij}\ ,
+\hspace{5mm}
+b = \sum_{i=1}^{6} F_i \sigma_i 
+\label{eqscomp_stress_recovery3}
+\end{equation}
