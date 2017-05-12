@@ -1,30 +1,22 @@
 Problems:
 	- Composite only works when set OMP_NUM_THREADS=1
 	- quad gauss point results are crap for the existing element too!
-	
 		- No just my element, the thick quad also does this for the plate bending mesh
 			- main improvement from beta1 = 0. Wait for Haugen response
 			- shell quantity recovery benchmarks
 
-
 To Do:		
-	Add new variable - local lamina stresses, test with nasa 3 how to do stress rotation correctly!
 	Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
 
 	Benchmarking:
 		- DSG transverse shear recovery:
 		- DSG composite stress recovery for transverse shear!
-		- Redo composite scordelis lo roof graphs will full model!
-		- composite ones
-		- maybe redo dynamic benchmark with circular navier
-		- Tsai wu benchmarking
 
 	
 	Report:
 		- (Up next)
 		- Update snapthru graphs for displacement control
 		- Revise composites section
-		- Consistent mass matrix
 		- Implementation of composites
 		- Tsai Wu and implementation
 		- 

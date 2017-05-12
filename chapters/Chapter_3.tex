@@ -372,7 +372,6 @@ Substituting the inertias into equation \ref{eqt17_3} yields:
 
 \begin{equation} 
 	\delta K = \int_{\Omega} 
-	\rho
 	\Big[I_0
 	(\dot{u_0} \delta \dot{u_0} 
 	+ \dot{v_0} \delta \dot{v_0}
@@ -403,13 +402,12 @@ Analogous to the method of discretized displacement field, the cartesian velocit
 \label{eqt17_6}
 \end{equation}
 
-Considering equation \ref{eqt17_6}, equation \ref{eqt17_5} can be developed into:
+Approached from this discretized perspective, equation \ref{eqt17_5} can be developed into:
 
 \begin{equation} 
-\delta K = \mathbf{M}_c \hat{\ddot{\mathbf{{u}}}} \delta \hat{\mathbf{u}}
+\delta K = \mathbf{M}_C \hat{\ddot{\mathbf{{u}}}} \delta \hat{\mathbf{u}}
 =
 \int_{\Omega} 
-\rho
 \Big[I_0
 \mathbf{N}_T^T
 \mathbf{N}_T
@@ -424,7 +422,7 @@ I_2
 \label{eqt17_7}
 \end{equation}
 
-The matrices $\mathbf{N}_T$ and $\mathbf{N}_R$ arrange shape functions to filter the appropriate translational and rotational DOFs respectively, defined  as:
+The matrices $\mathbf{N}_T$ and $\mathbf{N}_R$ arrange nodal shape functions $N_i$ to filter the appropriate translational and rotational DOFs respectively, defined as:
 
 \begin{equation} 
 \mathbf{N}_T = 
@@ -457,9 +455,113 @@ N_i & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 & 0 & 0 \\
 0 & 0 & 0 & N_i & 0 & 0 \\
 0 & 0 & 0 & 0 & N_i & 0 \\
-0 & 0 & 0 & 0 & 0 & N_i
+0 & 0 & 0 & 0 & 0 & \alpha N_i
 \end{pmatrix}
 \label{eqt17_9}
+\end{equation}
+
+It is noted that the drilling DOF has an artificial mass assigned to it, scaled by $\alpha$ from the other rotational DOFs.
+
+By explicitly stating the translational and rotational inertias, the final expression for the consistent mass matrix $\mathbf{M}_C$ of a shell with constant thickness $h$ is derived:
+
+\begin{equation} 
+\mathbf{M}_C
+=
+h
+\int_{\Omega} 
+\rho 
+\Big[
+\mathbf{N}_T^T
+\mathbf{N}_T
++
+\frac{h^2}{12}
+\mathbf{N}_R^T
+\mathbf{N}_R
+\Big]
+\ d\Omega
+\label{eqt17_10}
+\end{equation}
+
+If the average shell density $\bar{\rho}$ is taken at the element centroid, the resulting consistent mass matrix of the DSG element can be explicitly evaluated as:
+
+\begin{equation} 
+\mathbf{M}_C
+=
+\frac{\bar{\rho} h A}{12}
+\begin{pmatrix}
+2 & 0 & 0 & 0 & 0 & 0 & %node 1 start
+1 & 0 & 0 & 0 & 0 & 0 & 
+1 & 0 & 0 & 0 & 0 & 0 
+\\
+0 & 2 & 0 & 0 & 0 & 0 & 
+0 & 1 & 0 & 0 & 0 & 0 & 
+0 & 1 & 0 & 0 & 0 & 0 
+\\
+0 & 0 & 2 & 0 & 0 & 0 & 
+0 & 0 & 1 & 0 & 0 & 0 & 
+0 & 0 & 1 & 0 & 0 & 0 
+\\
+0 & 0 & 0 & \frac{h^2}{6} & 0 & 0 & 
+0 & 0 & 0 & \frac{h^2}{12} & 0 & 0 & 
+0 & 0 & 0 & \frac{h^2}{12} & 0 & 0 
+\\
+0 & 0 & 0 & 0 & \frac{h^2}{6} & 0 & 
+0 & 0 & 0 & 0 & \frac{h^2}{12} & 0 & 
+0 & 0 & 0 & 0 & \frac{h^2}{12} & 0  
+\\
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{6}  & 
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{12} & 
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{12}  
+\\
+1 & 0 & 0 & 0 & 0 & 0 & %node 2 start
+2 & 0 & 0 & 0 & 0 & 0 & 
+1 & 0 & 0 & 0 & 0 & 0 
+\\
+0 & 1 & 0 & 0 & 0 & 0 & 
+0 & 2 & 0 & 0 & 0 & 0 & 
+0 & 1 & 0 & 0 & 0 & 0 
+\\
+0 & 0 & 1 & 0 & 0 & 0 & 
+0 & 0 & 2 & 0 & 0 & 0 & 
+0 & 0 & 1 & 0 & 0 & 0 
+\\
+0 & 0 & 0 & \frac{h^2}{12} & 0 & 0 & 
+0 & 0 & 0 & \frac{h^2}{6} & 0 & 0 & 
+0 & 0 & 0 & \frac{h^2}{12} & 0 & 0 
+\\
+0 & 0 & 0 & 0 & \frac{h^2}{12} & 0 & 
+0 & 0 & 0 & 0 & \frac{h^2}{6} & 0 & 
+0 & 0 & 0 & 0 & \frac{h^2}{12} & 0  
+\\
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{12}  & 
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{6} & 
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{12}  
+\\
+1 & 0 & 0 & 0 & 0 & 0 & %node 3 start
+1 & 0 & 0 & 0 & 0 & 0 & 
+2 & 0 & 0 & 0 & 0 & 0 
+\\
+0 & 1 & 0 & 0 & 0 & 0 & 
+0 & 1 & 0 & 0 & 0 & 0 & 
+0 & 2 & 0 & 0 & 0 & 0 
+\\
+0 & 0 & 1 & 0 & 0 & 0 & 
+0 & 0 & 1 & 0 & 0 & 0 & 
+0 & 0 & 2 & 0 & 0 & 0 
+\\
+0 & 0 & 0 & \frac{h^2}{12} & 0 & 0 & 
+0 & 0 & 0 & \frac{h^2}{12} & 0 & 0 & 
+0 & 0 & 0 & \frac{h^2}{6} & 0 & 0 
+\\
+0 & 0 & 0 & 0 & \frac{h^2}{12} & 0 & 
+0 & 0 & 0 & 0 & \frac{h^2}{12} & 0 & 
+0 & 0 & 0 & 0 & \frac{h^2}{6} & 0  
+\\
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{12}  & 
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{12} & 
+0 & 0 & 0 & 0 & 0 & \frac{\alpha^2h^2}{6}  
+\end{pmatrix}
+\label{eqt17_11}
 \end{equation}
 
 

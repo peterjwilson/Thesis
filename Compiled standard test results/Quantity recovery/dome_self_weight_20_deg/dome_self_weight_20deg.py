@@ -163,7 +163,18 @@ for i in range(len((y_andes))):
 
 
 
+#theoretical shell resuls
+density = 7850
+g = 9.8
+gamma = density*g
+R = 5
+n_phi_hand = []
+n_theta_hand = []
 
+for i in range(len(phi_ref)):
+    phi = phi_ref[i]/180*np.pi
+    n_phi_hand.append(R*gamma*t*(np.cos(phi)-0.9397)/np.sin(phi)/np.sin(phi))
+    n_theta_hand.append(-R*gamma*t*np.cos(phi)-n_phi_hand[i])
 
 
 
@@ -173,8 +184,9 @@ for i in range(len((y_andes))):
 fig = plt.figure(1)
 plt.plot(phi_andes,n_theta_andes, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
 plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-plt.plot(phi_ref,n_theta_ref,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-#plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
+#plt.plot(phi_ref,n_theta_ref,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
+plt.plot(phi_ref,n_theta_hand,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
+#plt.plot(phi_ref,n_theta_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
 #lg = plt.legend()
 #lg.draw_frame(False)
@@ -184,15 +196,16 @@ plt.xlabel('Phi (degrees)')
 plt.ylabel('Circumferential shell force [N/m]')
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
-plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
+#plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
 
 
 
 fig = plt.figure(2)
 plt.plot(phi_andes,n_phi_andes, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
 plt.plot(phi_dsg,n_phi_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
-plt.plot(phi_ref,n_phi_ref,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
-#plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
+#plt.plot(phi_ref,n_phi_ref,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
+plt.plot(phi_ref,n_phi_hand,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
+#plt.plot(phi_ref,n_phi_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
 #lg = plt.legend()
 #lg.draw_frame(False)
@@ -202,7 +215,7 @@ plt.xlabel('Phi (degrees)')
 plt.ylabel('Meridional shell force [N/m]')
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
-plt.savefig('Simply_support_dome_n_phi.pdf',bbox_inches="tight")
+#plt.savefig('Simply_support_dome_n_phi.pdf',bbox_inches="tight")
 
 
 

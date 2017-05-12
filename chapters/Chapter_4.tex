@@ -762,7 +762,10 @@ The following pseudocode summarises the key calls and operations involved in cal
 
 \section{Mass matrix formulation}
 
-The mass matrix is necessary to facilitate dynamic analysis with the thin quadrilateral shell element. As per the existing KRATOS shell elements, a lumped mass approach is employed which results in a diagonal mass matrix.
+The mass matrix is necessary to facilitate dynamic analysis with the thin quadrilateral shell element. Both lumped and consistent options have been implemented.
+
+\subsection{Lumped mass matrix}
+The lumped mass matrix is the default option used due to it's speed of construction without significant loss of accuracy. The general form of the ANDES-DKQ lumped matrix is similar to the DSG lumped matrix.
 \begin{equation} 
 \mathbf{M} =  
 \begin{pmatrix}
@@ -783,21 +786,126 @@ where
 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0
 \end{pmatrix}
-\label{eqt15}
+\label{eqqmass1}
 \end{equation}
 
 The general lumped mass is determined for a multi-ply material with $n$ plies each of $t_i$ thickness and $\rho_i$ density as follows:
 
 \begin{equation} 
 \bar{m} = \frac{A}{4} \sum_{i=1}^n \rho_i t_i
-\label{eqt16}
+\label{eqqmass2}
 \end{equation}
 
 For a single layer material of area $A$ this reduces to:
 
 \begin{equation} 
 \bar{m} = \frac{A}{4} \rho t
-\label{eqt17}
+\label{eqqmass3}
+\end{equation}
+
+\subsection{Consistent mass matrix}
+A consistent mass matrix is also provided, and once again has a similar form to the DSG consistent mass matrix. The continuous form for a shell with constant thickness is re-written below for clarity:
+
+\begin{equation} 
+\mathbf{M}_C
+=
+h
+\int_{\Omega} 
+\rho 
+\Big[
+\mathbf{N}_T^T
+\mathbf{N}_T
++
+\frac{h^2}{12}
+\mathbf{N}_R^T
+\mathbf{N}_R
+\Big]
+\ d\Omega
+\label{eqqmass4}
+\end{equation}
+
+For the quadrilateral element, the nodal shape function matrices are expanded from 3 nodes to 4 nodes:
+
+\begin{equation} 
+\mathbf{N}_T = 
+\begin{pmatrix}
+\mathbf{N}_{T_1} & \mathbf{N}_{T_2} & \mathbf{N}_{T_3} & \mathbf{N}_{T_4}
+\end{pmatrix}\ ,
+\hspace{10mm}
+\mathbf{N}_R = 
+\begin{pmatrix}
+\mathbf{N}_{R_1} & \mathbf{N}_{R_2} & \mathbf{N}_{R_3} & \mathbf{N}_{R_4}
+\end{pmatrix}
+\label{eqqmass5}
+\end{equation}
+\begin{equation} 
+\mathbf{N}_{T_i} = 
+\begin{pmatrix}
+N_i & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & N_i & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & N_i & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & N_i & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\hspace{10mm}
+\mathbf{N}_{R_i} = 
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0& 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 &0 & 0 & 0 & N_i & 0 & 0  & 0\\
+0 &0 & 0 & 0 & 0 & N_i & 0  & 0\\
+0 &0 & 0 & 0 & 0 & 0 & N_i  & 0\\
+0 &0 & 0 & 0 & 0 & 0 & 0 & \alpha N_i
+\end{pmatrix}
+\label{eqqmass5_1}
+\end{equation}
+
+Unlike the DSG element which could be evaluated directly, the consistent mass matrix of the ANDES-DKQ is evaluated with numerical 2x2 Gauss integration. Thus, equation \ref{eqqmass4} can be equivalently written in parametric space:
+
+\begin{equation} 
+\mathbf{M}_C
+=
+h
+\int_{-1}^{1} 
+\int_{-1}^{1} 
+\rho 
+\Big[
+\mathbf{N}_T^T
+\mathbf{N}_T
++
+\frac{h^2}{12}
+\mathbf{N}_R^T
+\mathbf{N}_R
+\Big]
+\ d\eta
+\ d\xi
+\ det (\mathbf{J})
+\label{eqqmass6}
+\end{equation}
+
+Shifting over to Gauss integration, the consistent mass matrix is determined numerically from:
+\begin{equation} 
+\mathbf{M}_C
+=
+h
+\sum_{i=1}^{4 GP}
+\rho(\xi_{i},\eta_{i})
+\Big[
+\mathbf{N}_T^T(\xi_{i},\eta_{i})
+\mathbf{N}_T(\xi_{i},\eta_{i})
++
+\frac{h^2}{12}
+\mathbf{N}_R^T(\xi_{i},\eta_{i})
+\mathbf{N}_R(\xi_{i},\eta_{i})
+\Big]
+w_i
+\ det (\mathbf{J}(\xi_{i},\eta_{i}))
+\label{eqqmass7}
 \end{equation}
 
 \section{Stress and strain recovery}
