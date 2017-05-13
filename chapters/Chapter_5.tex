@@ -16,7 +16,7 @@
 
 \renewcommand{\Thema}{Validation of elements}
 
-\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across statics, geometrically non-linear analysis, dynamics and quantity recovery interrogates the correct implementation of the element formulations and also gives an indication of their performance. 
+\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across statics, geometrically non-linear analysis, dynamics and quantity recovery interrogate the correct implementation of the element formulations and also gives an indication of their performance. 
 
 \section{Static tests: shell obstacle course}
 \label{section:shell obstacle course}
@@ -265,7 +265,7 @@ A simply supported dome with an oculus under self weight is considered to evalua
 The results of both elements for circumferential and meridional shell forces demonstrate excellent agreement with the analytical membrane analysis. Minor deviations occur at both ends of the dome due to the strict assumptions of the analytical membrane theory and mesh effects. The mid-surface Von Mises stress results also agree with the ANSYS solution quite closely, with the ANDES-DKQ slightly out-performing the DSG element. The contour plots (with all limits set to $[1.4\times 10^5,\ 7.5\times10^5]$) further exhibit the similarities between the three solution methods.
 %limits all set to [1.4e5, 7.5e5] !!!!!!
 \subsection{Navier supported plate under sinusoidal load}
-
+\label{validation:navier plate under sinusoidal load}
 A Navier supported square plate subject to a sinusoidal load is considered to examine the bending stress results of the ANDES-DKQ element. A 3-parameter analytical solution forms the reference for this problem \cite{reddy2004mechanics}. 
 
 \begin{figure}[H]
@@ -273,6 +273,7 @@ A Navier supported square plate subject to a sinusoidal load is considered to ex
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=7.3cm]{images/navier_plate_def.png}
 	\caption{Definition of the Navier supported plate test \cite{reddy2004mechanics}}
+	\label{validation:pic navier plate}
 \end{figure}
 
 Due to symmetry, one quarter of a $a = 200,\ b = 200,\ t = 10$ square plate of linear isotropic material $E = 2\times 10^{11}$ and $\nu = 0.3$ is modelled and subject to a spatially varying transverse pressure of $q = -1\times 10^7 sin(\frac{x\pi}{200})sin(\frac{y\pi}{200})$. The following graphs plot quantities along a path from $x=0$ to $x=100$ at $y=100$.
@@ -519,15 +520,46 @@ The first test to interrogate the stress recovery accuracy of the composite shel
 The four figures above, illustrating various stresses and Tsai-Wu reserve factor throughout the laminate thickness, confirm the accurate stress recovery of both elements. Although the recovery of Stress\_YY may initially not seem as accurate as the others, it's scale is 3 orders of magnitude less than the primary stress mode Stress\_XX. It's expected with stress values so low that much of this acceptable deviation is due to rounding errors, both in the implemented elements and the reference literature itself. The Tsai-Wu reserve factor results of both elements are in excellent agreement with the reference values.
 
 \subsection{Composite stress recovery: Navier supported laminate under sinusoidal load}
-The second composite stress recovery test considers the bending dominated scenario of a Navier supported square laminate subject to a sinusoidal load.
+The second composite stress recovery test considers the bending dominated scenario of a Navier supported square laminate subject to a sinusoidal load \cite{reddy2004mechanics}. As per the isotropic stress recovery testing, separate tests were carried out for the two elements: the ANDES-DKQ composite test is based off of section \ref{validation:navier plate under sinusoidal load} and the DSG from section \ref{validation:DSG navier unifom}. Both analyses have a transverse sinusoidally distributed transverse pressure defined as $q = -100 sin(\frac{x\pi}{200})sin(\frac{y\pi}{200})$ and consider a $h = 10$ thick [0/90/90/0] laminate with individual lamina properties as per those defined in \ref{validation:composite barrel vault}.
 
-Ref is Reddy p527 table 9.3.2. 200x200x10 total thickness. 
+The reference solutions are taken from Reference \cite{reddy2004mechanics}, with the ANDES-DKQ element compared to a classical plate theory solution and the DSG element compared to a Navier plate closed form solution. As per the reference solutions, results for different quantities are sampled at different positions in the square plate. Referring to figure \ref{validation:pic navier plate} (repeated below for clarity), the stress and strains are recovered throughout the thickness of the laminate at the following positions:
+\begin{align*} 
+\sigma_{xx} = \sigma_{xx}(\frac{a}{2},\ \frac{b}{2},\ z)
+\hspace{10mm}
+\epsilon_{xx} = \epsilon_{xx}(\frac{a}{2},\ \frac{b}{2},\ z)
+\\
+\sigma_{yy} = \sigma_{yy}(\frac{a}{2},\ \frac{b}{2},\ z)
+\hspace{10mm}
+\epsilon_{yy} = \epsilon_{yy}(\frac{a}{2},\ \frac{b}{2},\ z)
+\\
+\sigma_{xy} = \sigma_{xy}(0,\ 0,\ z)
+\hspace{10mm}
+\epsilon_{xy} = \epsilon_{xy}(0,\ 0,\ z)
+\\
+\sigma_{xz} = \sigma_{xz}(0,\ \frac{b}{2},\ z)
+\hspace{10mm}
+\epsilon_{xz} = \epsilon_{xz}(0,\ \frac{b}{2},\ z)
+\\
+\sigma_{yz} = \sigma_{yz}(\frac{a}{2},\ 0,\ z)
+\hspace{10mm}
+\epsilon_{yz} = \epsilon_{yz}(\frac{a}{2},\ 0,\ z)
+%\label{eqs val comp stress}
+\end{align*}
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=7.3cm]{images/navier_plate_def.png}
+	%\caption{Definition of the Navier supported plate test \cite{reddy2004mechanics}}
+	%\label{validation:pic navier plate2}
+\end{figure}
 
+The following set of graphs illustrate the results of the ANDES-DKQ element compared with the reference classical plate theory solution.
+%\begin{equation} 
+%\sigma_{xx} = \sigma_{xx}(\frac{a}{2},\ \frac{b}{2},\ z)
+%\label{eqs val comp stress}
+%\end{equation}
 
-Thin plate referred to classical plate theory solution. Thick plate referred to CFS analytical solution.
-
-asdfdsf
-
+%Ref is Reddy p527 table 9.3.2. 200x200x10 total thickness. 
 \begin{figure}[H]
 	%\centering
 	\subfloat[Normal strain (XX) throughout thickness]
@@ -559,8 +591,7 @@ asdfdsf
 	\caption{\label{Navier_quad_composite_s_xx_yy}Stresses and strains of the Navier supported ANDES-DKQ laminate under a sinusoidally distributed load}
 \end{figure}
 
-asdfadsf
-
+The following set of graphs compare the DSG element results with those of the reference closed form solution.
 
 \begin{figure}[H]
 	%\centering
@@ -593,8 +624,6 @@ asdfadsf
 	\caption{\label{Navier_tri_composite_s_xx_yy}In plane stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load}
 \end{figure}
 
-asdfadsf
-
 \begin{figure}[H]
 	%\centering
 	\subfloat[Transverse shear strain (XZ) throughout thickness]
@@ -617,7 +646,9 @@ asdfadsf
 	\caption{\label{Navier_tri_composite_trans}Transverse shear stresses and strains of the Navier supported DSG laminate under a sinusoidally distributed load}
 \end{figure}
 
-INVESTIGATE WHY THE TRANSVERSE STRESSES ARE DIFFERENT HERE!
+The results of the ANDES-DKQ and DSG elements demonstrate the excellent composite stress recovery accuracy across all stresses considered. It also highlights the ability to resolve discontinuous stress distributions from smooth linear strains by considering properly rotated individual lamina material properties. As expected, the in-plane shear stresses (Stress\_XY) are smoothly linear because the in-plane shear modulus is invariant under planar rotation. The transverse shear stresses of the DSG are slightly less accurate than other stresses recovered, which is likely due to a combination of mild node-numbering dependency (as per the transverse shear stresses of section \ref{validation:DSG navier unifom}) and rounding having a pronounced effect on the comparatively low order-of-magnitude values.
+
+In addition to the stresses and strains considered, the Tsai-Wu reserve factor was also calculated in the centre of the plate $(\frac{a}{2},\ \frac{b}{2},\ z)$ and compared against Tsai-Wu results from a Strand7 analysis of the problem. It must be noted that the Strand7 analysis software approximates the Tsai-Wu in-plane interaction coefficient $F_{12}$ (refer section \ref{tsai wu background}) as zero. Thus, to enable a proper comparison, results marked with an asterisk '*' have $F_{12} = 0$, while those without calculate $F_{12}$ as per equation \ref{eqscomp_tsai2}.
 
 \begin{figure}[H]
 	%\centering
@@ -632,8 +663,4 @@ INVESTIGATE WHY THE TRANSVERSE STRESSES ARE DIFFERENT HERE!
 	\caption{\label{Navier_tri_composite_trans}Tsai-Wu reserve factor through the thickness of the Navier supported DSG laminate under a sinusoidally distributed load}
 \end{figure}
 
-* indicates the in-plane interaction coefficient of the Tsai-Wu criterion was disabled, as per the internal calculations of Strand7 FEA software.
-
-Tsai-Wu result is discontinuous because the thin shell has no stress on the mid-plane under pure bending, yielding an infinite reserve factor. Contrasting this, the prescence of transverse shear stresses on the mid-plane in the DSG element yields a finite reserve factor of roughly 100, which has been omitted for clarity.
-
-asdfasdf
+The figures above confirm accurate determination of the Tsai-Wu reserve factor in both elements. A central discontinuity is present in the ANDES-DKQ thin shell because it has no stress on the mid-plane under pure bending, yielding an infinite reserve factor. Focussing on the DSG element, the low magnitude of transverse shear stresses on the mid-plane yields a finite reserve factor of roughly 100, which has been omitted for clarity. These transverse shear stresses, which have a greater combined magnitude in the central laminae, are also the reason behind the small 'hooks' of lower reserve factors at the outer/inner ply boundaries.

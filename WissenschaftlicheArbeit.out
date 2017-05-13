@@ -21,7 +21,7 @@
 \BOOKMARK [1][-]{section.6.2}{Stiffness matrix implementation}{chapter.6}% 21
 \BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 22
 \BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter.7}{Composite orthotropic laminates: implementation}{}% 24
+\BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates}{}% 24
 \BOOKMARK [1][-]{section.7.1}{Formulation}{chapter.7}% 25
 \BOOKMARK [1][-]{section.7.2}{Implementation}{chapter.7}% 26
 \BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 27
