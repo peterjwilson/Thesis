@@ -22,17 +22,19 @@
 \BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 22
 \BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 23
 \BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates}{}% 24
-\BOOKMARK [1][-]{section.7.1}{Formulation}{chapter.7}% 25
-\BOOKMARK [1][-]{section.7.2}{Implementation}{chapter.7}% 26
-\BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 27
-\BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.3}{Dynamic tests}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.4}{Quantity recovery tests}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.5}{Composite tests}{chapter.8}% 32
-\BOOKMARK [0][-]{chapter.9}{Conclusions and Outlook}{}% 33
-\BOOKMARK [1][-]{section.9.1}{Future work}{chapter.9}% 34
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 35
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 36
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Analytical membrane analysis of dome}{}% 37
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical solution of Navier supported plate}{}% 38
+\BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.2}{Implementation of composite constitutive matrix}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.3}{Implementation of composite stress recovery}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.4}{Implementation of Tsai-Wu failure criterion}{chapter.7}% 28
+\BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 29
+\BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.3}{Dynamic tests}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.4}{Quantity recovery tests}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.5}{Composite tests}{chapter.8}% 34
+\BOOKMARK [0][-]{chapter.9}{Conclusions and Outlook}{}% 35
+\BOOKMARK [1][-]{section.9.1}{Future work}{chapter.9}% 36
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 37
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 38
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Analytical membrane analysis of dome}{}% 39
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical solution of Navier supported plate}{}% 40

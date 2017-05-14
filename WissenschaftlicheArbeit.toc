@@ -125,9 +125,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Extension of shells to composite laminates}{65}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Formulation}{65}{section.7.1}
+\contentsline {section}{\numberline {7.1}Composite constitutive matrix formulation}{65}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Implementation}{66}{section.7.2}
+\contentsline {section}{\numberline {7.2}Implementation of composite constitutive matrix}{66}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Implementation of composite stress recovery}{68}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Implementation of Tsai-Wu failure criterion}{69}{section.7.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 

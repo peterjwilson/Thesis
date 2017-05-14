@@ -22,10 +22,10 @@
 
 \lettrine[lines=2]{W}{ith} the ANDES-DKQ and DSG elements formulated and implemented for isotropic materials in the preceding chapters, extending them into composite laminate materials is now considered. The relevant theory is covered in chapter \ref{chap:chapter_2_1} which defines the scope of the formulation and implementation discussed here.
 
-\section{Formulation}
-The formulation of orthotropic laminate composite is developed further by recalling the continuous form presented in chapter \ref{chap:chapter_2_1} and then transferring this into a discrete and numerically integrable form suitable for programming.
+\section{Composite constitutive matrix formulation}
+The formulation of orthotropic laminate composite is developed further by recalling the key results presented in chapter \ref{chap:chapter_2_1} and then transferring this into a form suitable for programming.
 
-The general laminate shell stress resultants are related via the total combined constitutive matrix $\bar{\mathbf{C}}$ as follows:
+The general laminate shell stress resultants are related to the generalized mid-plane strains via the total combined constitutive matrix $\bar{\mathbf{C}}$ as follows:
 
 \begin{equation} 
 \bar{\mathbf{N}} = \bar{\mathbf{C}} \bar{\boldsymbol{\epsilon}} =
@@ -81,17 +81,16 @@ D_{ij} =
 \label{eqscomp_laminate_form2}
 \end{equation}
 
-
 The entries $\bar{Q}_{ij}^{(k)}$ are rotated lamina stiffness's as per equation \ref{eqscomp_plane_stress_tensor_rotated}, related to the pure lamina-aligned stiffness's through the transformation matrix $\mathbf{T}$ of equation \ref{eqscomp11}.
 
-By shifting perspective from abstract formulation to a calculable approach, the total combined constitutive matrix $\bar{\mathbf{C}}$ of a laminate with $n$ laminae and total thickness $h$ can be decomposed into lamina contributions. Furthermore, the rotation of the lamina stiffness's can be postponed until each lamina constitutive matrix is assembled:
+By shifting perspective from abstract formulation to a more programmable approach, the total combined constitutive matrix $\bar{\mathbf{C}}$ of a laminate with $n$ laminae and total thickness $h$ can be decomposed into lamina contributions. Furthermore, the rotation of the lamina stiffness's can be postponed until each lamina constitutive matrix is assembled:
 
 \begin{equation} 
  \bar{\mathbf{C}} = \sum_{k=1}^{n}  \mathbf{T}^{T(k)} {\mathbf{C}}^{(k)}  \mathbf{T}^{(k)}
 \label{eqscomp_laminate_form3}
 \end{equation}
 
-The integral limits of the material sub matrices, for each lamina $k$, are updated accordingly:
+The integral limits of the material sub matrices, which must only span the thickness of each lamina $k$, are updated accordingly:
 
 \begin{equation} 
 A_{ij}^{(k)} = 
@@ -111,8 +110,10 @@ D_{ij}^{(k)} =
 \label{eqscomp_laminate_form4}
 \end{equation} 
 
-\section{Implementation}
-The general approach of extending both shell elements to composite laminate materials in a sensible and efficient manner was to abstract the composite specifics from the individual element formulation level as much as possible. This was achieved by modifying the existing \texttt{ShellCrossSection} class and adding a new constitutive law class \texttt{LinearElasticOrthotropic2DLaw}. The generalized workflow of both elements is outlined in the following flowchart, highlighting only methods relevant to composites:
+The above formulation details concern themselves with determining the stiffness matrix of a composite laminate shell. Recovery of lamina stresses also departs from the isotropic formulation, however, the details presented in \ref{Laminate strain and stress recovery} need little further development to be programmable, so they are not reproduced here.
+
+\section{Implementation of composite constitutive matrix}
+The general approach of extending both shell elements to composite laminate materials in a sensible and efficient manner was to abstract the composite specifics from the individual element formulation level as much as possible. This approach reduces duplicate coding and provides a centralized platform to develop and modify the composite capabilities of the elements in the future. Almost all of the composite laminate implementation was achieved by modifying the existing \texttt{ShellCrossSection} class and adding a new constitutive law class \texttt{LinearElasticOrthotropic2DLaw}. Naturally, access to the new functionality required minor modifications to the code of each shell element. With a view to illustrate the relationship between the individual elements and the \texttt{ShellCrossSection} and \texttt{LinearElasticOrthotropic2DLaw} classes, a generalized workflow of both elements is outlined in the following flowchart, highlighting only methods relevant to composites:
 
 \begin{figure}[H]
 	% Define block styles
@@ -123,48 +124,32 @@ The general approach of extending both shell elements to composite laminate mate
 	% Place nodes
 	\node [process] (Initialize) {$\texttt{Initialize()}$};
 	\node [process, below of=Initialize] (CalculateLocalSystem) {$\texttt{CalculateLocalSystem()}$};
-	\node [process, right of=CalculateLocalSystem, xshift = 4cm] (CalculateAll) {$\texttt{CalculateAll()}$};
+	\node [process, right of=CalculateLocalSystem, xshift = 3cm] (CalculateAll) {$\texttt{CalculateAll()}$};
 	\node [process, below of=CalculateAll, xshift = -0cm] (InitializeCalculationData) {$\texttt{InitializeCalculationData()}$};
 	\node [process, below of=InitializeCalculationData, yshift = -0cm] (CalculateSectionResponse) {$\texttt{CalculateSectionResponse()}$};
 	\node [process, below of=CalculateSectionResponse, yshift = -0cm] (FinalizeCalculations) {$\texttt{FinalizeCalculations()}$};
+	\node [process, right of=CalculateSectionResponse, xshift = 3cm] (SCS) {$\texttt{SCS::CSR()}$};
 	% Draw edges
-	\draw [arrow] (Initialize) -- (CalculateLocalSystem);
+	%\draw [arrow] (Initialize) -- (CalculateLocalSystem);
 	\draw [arrow] (CalculateLocalSystem) -- (CalculateAll);
 	\draw [arrow] (CalculateAll) -- (InitializeCalculationData);
 	\draw [arrow] (InitializeCalculationData) -- (CalculateSectionResponse);
 	\draw [arrow] (CalculateSectionResponse) -- (FinalizeCalculations);
+	\draw [arrow] (CalculateSectionResponse) -- (SCS);
 	\end{tikzpicture}
 	\caption{High level overview of composite element workflow}
 	\label{compositeworkflow}
 \end{figure}
 
-Focussing on calculate section response():
+The key differences in the workflow presented above, compared to those previously illustrated, is the explicit inclusion of $\texttt{Initialize()}$ and $\texttt{ShellCrossSection::CalculateSectionResponse()}$, noted as $\texttt{SCS::CSR()}$, methods, which implement composite functionality. 
 
-\begin{figure}[H]
-	% Define block styles
-	\tikzstyle{virtual} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-	\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white!30]
-	\tikzstyle{arrow} = [thick,->,>=stealth]
-	\begin{tikzpicture}[node distance = 1.9cm, auto]
-	% Place nodes
-	\node [process] (Element::CalculateSectionResponse) {$\texttt{Element::CalculateSectionResponse()}$};
-	\node [process, below right of=Element::CalculateSectionResponse, xshift = 0cm, yshift = -1cm] (CalculateSectionResponse) {$\texttt{CalculateSectionResponse()}$};
-	\node [process, below of=CalculateSectionResponse, xshift = -0cm] (InitializeCalculationData) {$\texttt{InitializeCalculationData()}$};
-	\node [process, below of=InitializeCalculationData, yshift = -0cm] (CalculateSectionResponse) {$\texttt{CalculateSectionResponse()}$};
-	\node [process, below of=CalculateSectionResponse, yshift = -0cm] (FinalizeCalculations) {$\texttt{FinalizeCalculations()}$};
-	% Draw edges
-	\draw [arrow] (InitializeCalculationData) -- (CalculateSectionResponse);
-	\draw [arrow] (InitializeCalculationData) -- (CalculateSectionResponse);
-	\draw [arrow] (CalculateSectionResponse) -- (FinalizeCalculations);
-	\end{tikzpicture}
-	\caption{High level overview of composite element workflow scoped to ShellCrossSection}
-	\label{compositeworkflow2}
-\end{figure}
+$\texttt{Initialize()}$ is called upon element creation, completely separate from $\texttt{CalculateLocalSystem()}$, and is responsible for reading in element material properties. Upon reading material data specified with the Kratos variable $\texttt{SHELL\_ORTHOTROPIC\_LAYERS}$, an instance of $\texttt{LinearElasticOrthotropic2DLaw}$ is created and assigned to the $\texttt{ShellCrossSection}$, followed by a call to the $\texttt{ShellCrossSection}$ method $\texttt{ShellCrossSection::ParseOrthotropicPropertyMatrix()}$ is called which parses and stores the orthotropic material data for all laminae. The checking of $\texttt{SHELL\_ORTHOTROPIC\_LAYERS}$ and parsing of orthotropic material data is performed entirely within the $\texttt{ShellCrossSection}$ class, which facilitates un-invasive integration into shell elements and also provides centralization for further composite development should the need arise.
 
+Following the call of $\texttt{Initialize()}$, $\texttt{CalculateLocalSystem()}$ is called to compute the element-specific stiffness matrix. The ANDES-DKQ and DSG specifics of $\texttt{CalculateLocalSystem()}$ and it's subsequent calls are detailed in their respective chapters, the focus here are specifics relating to composite laminates. Logically, the call of $\texttt{CalculateSectionResponse()}$ is relevant, itself calling the $\texttt{ShellCrossSection}$ function $\texttt{ShellCrossSection::CalculateSectionResponse()}$.
 
+The $\texttt{ShellCrossSection}$ method $\texttt{ShellCrossSection::CalculateSectionResponse()}$ serves to calculate the total laminate constitutive matrix $\bar{mathbf{C}}$ by 'stacking' the results of each lamina together. A loop is established over all laminae $k$, with each iteration retrieving the raw laminae stiffnesses $\mathbf{Q}^{(k)}$, integrating and assembling them into a lamina constitutive matrix $\mathbf{C}^{(k)}$ and then transforming them according to the stacking sequence of the lamina in the laminate. At the end of this method, the total laminate constitutive matrix $\bar{mathbf{C}}$ is assembled and suitable for use in element-specific methods to determine the stiffness matrix. 
 
-asdfdsf
-
+A summary of the above flowchart and commentary is presented in the generalized composite shell element stiffness matrix pseudocode below:
 
 \begin{algorithm}
 	\onehalfspacing
@@ -176,7 +161,7 @@ asdfdsf
 		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent} Create and assign $\texttt{LinearElasticOrthotropic2DLaw}$
 		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent} Parse composite material data in $\texttt{ShellCrossSection}$
 		\State \hspace{\algorithmicindent}\textbf{end if}
-		\State \textbf{call} $\texttt{CalculateAll()}$
+		\State \textbf{call} $\texttt{CalculateLocalSystem()}$
 		\State \hspace{\algorithmicindent}Perform element-specific calculations (may enter Gauss loop)
 		\State \hspace{\algorithmicindent}\textbf{call} $\texttt{CalculateSectionResponse}()$
 		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} \textbf{call} $\texttt{ShellCrossSection::CalculateSectionResponse}()$
@@ -192,10 +177,10 @@ asdfdsf
 	\end{algorithmic}
 \end{algorithm}
 
+\section{Implementation of composite stress recovery}
+The extension of both shell elements to handle composites also requires additional functionality to calculate composite stresses. As described in section \ref{Laminate strain and stress recovery}, the laminate stresses and strains require the generalized shell mid-plane strains be determined (refer to the stress and strain recovery sections of each element for details). With the mid-surface strains available, the new method $\texttt{CalculateLaminaStrains()}$, implemented in both elements, calculates and assembles the in-plane strains (as per equation \ref{eqscomp_strain_recovery2}) for the top and bottom surface of each lamina into a vector of vectors. It should be noted that a constant transverse shear strain is assumed across the laminate thickness, as per equation \ref{eqscomp_strain_recovery3}. Stresses of the top and bottom surfaces of each lamina are determined in the new method $\texttt{CalculateLaminaStresses()}$ from the rotated raw lamina stiffnesses and the lamina strains according to equation \ref{eqscomp_stress_recovery1}. Similar to the isotropic stress recovery already implemented, the lamina stresses can be output locally or globally oriented.
 
-
-asdfadsf
-
+The follow pseudocode provides an overview of recovering stresses from the shell elements.
 
 \begin{algorithm}
 	\onehalfspacing
@@ -205,17 +190,15 @@ asdfadsf
 		\Require $requestedQuantity = laminateStresses$, calculation of nodal displacements
 		\State Perform all preliminary operations necessary to determine mid-plane $generalizedStrains$
 		\While{Gauss loop}
-		\State \textbf{call} $\texttt{CalculateGaussPointContribution}(data)$
-		\State \hspace{\algorithmicindent}\textbf{call} $\texttt{CalculateBMatrix}(data)$
-		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate combined $B$ at current $gaussPoint$
+		\State \hspace{\algorithmicindent}Calculate $B$ matrix at current $gaussPoint$
 		\State $generalizedStrains$ = product$(B,\ localDisplacements)$
 		\State \textbf{call} $\texttt{CalculateLaminaStrains}(data)$
 		\State \hspace{\algorithmicindent}Determine $laminateStrains$ at top and bottom surface of each lamina 
 		\State \textbf{call} $\texttt{CalculateLaminaStresses}(data)$
 		\State \hspace{\algorithmicindent}Retrieve raw laminae stiffnesses
 		\State \hspace{\algorithmicindent}\textbf{while} ($k$ < number of laminae) \textbf{do}
-		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent}$laminateStresses^{(2k)}$ = product$(\mathbf{C}^{(2k)},\ laminateStrains^{(2k)})$
-		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent}$laminateStresses^{(2k+1)}$ = product$(\mathbf{C}^{(2k+1)},\ laminateStrains^{(2k+1)})$
+		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent}$laminateStresses^{(2k)}$ = product$(\mathbf{C}^{(k)},\ laminateStrains^{(2k)})$
+		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent}$laminateStresses^{(2k+1)}$ = product$(\mathbf{C}^{(k},\ laminateStrains^{(2k+1)})$
 		\State \hspace{\algorithmicindent}\textbf{while end}
 		\If{$laminateStresses$ requires local orientation} 
 		\State Rotate $laminateStresses$ to local orientation
@@ -228,3 +211,6 @@ asdfadsf
 		\EndWhile
 	\end{algorithmic}
 \end{algorithm}
+
+\section{Implementation of Tsai-Wu failure criterion}
+The Tsai-Wu failure criterion described in section \ref{tsai wu background} is also implemented for both shell elements.
