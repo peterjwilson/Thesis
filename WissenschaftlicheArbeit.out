@@ -23,9 +23,9 @@
 \BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 23
 \BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates}{}% 24
 \BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 25
-\BOOKMARK [1][-]{section.7.2}{Implementation of composite constitutive matrix}{chapter.7}% 26
-\BOOKMARK [1][-]{section.7.3}{Implementation of composite stress recovery}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.4}{Implementation of Tsai-Wu failure criterion}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 28
 \BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 29
 \BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 30
 \BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 31
