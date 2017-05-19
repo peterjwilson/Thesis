@@ -548,6 +548,29 @@
     \field{year}{2017}
   \endentry
 
+  \entry{FelippaStabilityBasics2016}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={C.A.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Colorado at Boulder}%
+    }
+    \strng{namehash}{FC1}
+    \strng{fullhash}{FC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Stability of Structures: Basic Concepts}
+    \field{journaltitle}{Introduction to Aerospace Structures}
+    \field{year}{2016}
+  \endentry
+
   \entry{FELIPPA1990}{article}{}
     \name{author}{2}{}{%
       {{hash=FC}{%

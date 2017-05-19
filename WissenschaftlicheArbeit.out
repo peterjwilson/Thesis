@@ -1,40 +1,41 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Shell finite elements}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Shell finite elements - revised 2}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Structural modelling with shells}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Shell models}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Locking in shell finite elements}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.4}{Shell finite element technologies}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.5}{Identification of Kratos shell element formulations}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Composite shells}{}% 8
+\BOOKMARK [0][-]{chapter.3}{Composite shells - revised 1}{}% 8
 \BOOKMARK [1][-]{section.3.1}{Composite material basics}{chapter.3}% 9
 \BOOKMARK [1][-]{section.3.2}{Orthotropic shell laminates: internal virtual work}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.3}{Laminate strain and stress recovery}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.4}{Laminate Tsai-Wu failure criterion}{chapter.3}% 12
 \BOOKMARK [0][-]{chapter.4}{Stability analysis}{}% 13
-\BOOKMARK [0][-]{chapter.5}{DSG triangle shell element}{}% 14
-\BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 15
-\BOOKMARK [1][-]{section.5.2}{Stiffness matrix implementation}{chapter.5}% 16
-\BOOKMARK [1][-]{section.5.3}{Mass matrix formulation and implementation}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.4}{Stress and strain recovery}{chapter.5}% 18
-\BOOKMARK [0][-]{chapter.6}{ANDES-DKQ quadrilateral shell element}{}% 19
-\BOOKMARK [1][-]{section.6.1}{Stiffness matrix formulation}{chapter.6}% 20
-\BOOKMARK [1][-]{section.6.2}{Stiffness matrix implementation}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates}{}% 24
-\BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 25
-\BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 26
-\BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 27
-\BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 28
-\BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 29
-\BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.3}{Dynamic tests}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.4}{Quantity recovery tests}{chapter.8}% 33
-\BOOKMARK [1][-]{section.8.5}{Composite tests}{chapter.8}% 34
-\BOOKMARK [0][-]{chapter.9}{Conclusions and Outlook}{}% 35
-\BOOKMARK [1][-]{section.9.1}{Future work}{chapter.9}% 36
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 37
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 38
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Analytical membrane analysis of dome}{}% 39
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical solution of Navier supported plate}{}% 40
+\BOOKMARK [1][-]{section.4.1}{Stability criterion}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{DSG triangle shell element}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.2}{Stiffness matrix implementation}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{Mass matrix formulation and implementation}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.4}{Stress and strain recovery}{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{ANDES-DKQ quadrilateral shell element}{}% 20
+\BOOKMARK [1][-]{section.6.1}{Stiffness matrix formulation}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.2}{Stiffness matrix implementation}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 24
+\BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates - revised 1}{}% 25
+\BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 28
+\BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 29
+\BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 30
+\BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.3}{Dynamic tests}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.4}{Quantity recovery tests}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.5}{Composite tests}{chapter.8}% 35
+\BOOKMARK [0][-]{chapter.9}{Conclusions and Outlook}{}% 36
+\BOOKMARK [1][-]{section.9.1}{Future work}{chapter.9}% 37
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Basic-DKQ formulation}{}% 38
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-T3 formulation}{}% 39
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Analytical membrane analysis of dome}{}% 40
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical solution of Navier supported plate}{}% 41

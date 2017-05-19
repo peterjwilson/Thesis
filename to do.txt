@@ -3,6 +3,8 @@ Problems:
 	- quad gauss point results are crap for the existing element too!
 
 To Do:	
+	- rotating pendulum problem
+	- stability problem
 	- Wrinkle problem
 	- Eigenvalue stability solver
 	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
@@ -15,9 +17,7 @@ To Do:
 	Report:
 		- (Up next)
 		- Update snapthru graphs for displacement control
-		- Revise composites section
-		- Implementation of composites
-		- Tsai Wu and implementation
+		- Revise composites theory and implementation section
 		- Transverse shear stress results discussion!
 		- 
 		- (Soon)

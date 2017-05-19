@@ -15,12 +15,12 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Composite shells}
+\chapter{Composite shells - revised 1}
 \label{chap:chapter_2_1}
 
 \renewcommand{\Thema}{Composite shells}
 
-\lettrine[lines=2]{A}{s} is the case with shell structures, composite materials are widely encountered throughout nature and man-made structures. Truly isotropic materials are relatively rare to find in naturally occurring structures, with the phenotypical material usually being anisotropic due to varying demands in different directions. Intuitively, inspecting nature suggests that the best material for a structure subject to spatially non-uniform requirements will be non-uniform itself. This same approach has recently began to dominate the cutting edge of man-made engineering structures where specialized high-performance is demanded, leading to greater adoption of composite materials. The increasing proportion of composite materials in the aerospace industry is but one example of their increasing traction.
+\lettrine[lines=2]{A}{s} is the case with shell structures, anisotropic structures are widely encountered throughout the natural and man-made environment. Truly isotropic materials are but a subset of naturally occurring structures, with the phenotypical material often being anisotropic due to varying environmental pressure in different directions. Intuitively, inspecting the ongoing genetic optimization of constructions forming the natural environment suggests that the best mechanical behaviour for a structure subject to spatially non-uniform requirements will be non-uniform itself. This same philosophy has recently began to dominate the cutting edge of man-made engineering structures where specialized high-performance is demanded, leading to greater adoption of composite materials. The increasing proportion of composite materials in the aerospace industry is but one example of their increasing traction.
 
 \begin{figure}[H]
 	\centering
@@ -34,11 +34,11 @@ The reason behind this increased propensity to use composites in high performanc
 
 \section{Composite material basics}
 
-Composite materials are typically the combination of a high strength/stiffness fibre reinforcement material and a base matrix material which is usually weaker/softer than the fibres. Although a wide range composites exist, they are broadly grouped into fibrous composites (reinforcement material are fibres), particulate composites (reinforcement material are particles) and laminate composites composed of layers of different materials, including fibrous and particulate composites. Of these, this work focusses on laminates composed of fibrous composites which are commonly use in engineering.
+Composite materials are typically the combination of a high strength/stiffness fibre reinforcement material and a weaker/softer base matrix material. Although a wide range composites exist, they are broadly grouped into fibrous composites (employing fibre reinforcement materials), particulate composites (employing particle reinforcement materials) and laminate composites composed of layers of different materials, including fibrous and particulate composites. Of these, this work focusses on laminates composed of fibrous composites which are commonly used in practical engineering.
 
 \subsection{Laminae and laminates}
 
-Laminae are individual layers or plies of composite materials, which, when stacked together, form a laminate. Each lamina consists of a volume percentage of reinforcement fibres embedded within the matrix material aligned at a particular orientation to a common coordinate system. Common fibre reinforcement materials are various glass fibres (including E-glass and S-glass), carbon/graphite fibres and boron fibres while common matrix materials are thermosetting polymers such as polyester and epoxy resins and metals including aluminium and titanium. The reinforcement fibres may be arranged in the lamina matrix in a variety of patterns and orientations, either continuous or discontinuous \cite{agarwal2006analysis}. 
+Laminae are individual layers or plies of composite materials, which, when stacked together, form a laminate. Each lamina consists of a volume percentage of reinforcement fibres embedded within a matrix material, aligned at a particular orientation to some coordinate system. Common fibre reinforcement materials are various glass fibres (including E-glass and S-glass), carbon/graphite fibres and boron fibres while common matrix materials are thermosetting polymers such as polyester and epoxy resins and metals including aluminium and titanium. The reinforcement fibres may be arranged in the lamina matrix in a variety of patterns and orientations, either continuous or discontinuous \cite{agarwal2006analysis}. 
 \begin{figure}[H]
 	\subfloat[Various composite laminae]
 	{\label{ref_label2}
@@ -51,8 +51,9 @@ Laminae are individual layers or plies of composite materials, which, when stack
 	\caption{\label{composite_laminates}Components of composite laminates \cite{reddy2004mechanics}}
 \end{figure}
 
-Considering the four laminae in figure \ref{composite_laminates} examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, the importance of individual lamina makeup forms a critical determinant of the structural behaviour of the total laminate as a whole. Another critical determinant of the laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation. The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements.
-An industrial example of this is spoolable Glass Reinforced Epoxy (GRE) oil piping, which has a central structural lamina sandwiched between two non-structural Polyethylene (PE) laminae intended to provide the structural layer chemical and environmental protection. Furthermore, the alignment of the GRE structural lamina is often orientated at an optimal pressure-capacity angle since the stress field of the pipe operating under internal pressure is well defined.
+Considering the four laminae in figure \ref{composite_laminates}(a) examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, the importance of individual lamina makeup forms a critical determinant of the structural behaviour of the total laminate as a whole. Another critical determinant of the laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation as per figure \ref{composite_laminates}(b). The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements.
+
+An industrial example of this is spoolable Glass Reinforced Epoxy (GRE) oil piping, which has a central GRE structural lamina sandwiched between two non-structural Polyethylene (PE) laminae intended to provide the structural layer chemical and environmental protection. Furthermore, the fibre alignment of the GRE structural lamina is often orientated at an optimal pressure-capacity angle since the stress field of the pipe operating under internal pressure is well defined.
 
 \subsection{Constitutive equations of orthotropic laminae}
 
@@ -94,7 +95,7 @@ C_{11} & C_{12} & C_{13} & C_{14} & C_{15} & C_{16} \\
 \label{eqscomp2}
 \end{equation}
 
-The preceding discussion of laminae illustrated there are innumerable design variants for any ply. In practise however, one of the most common lamina arrangements are orthotropic laminae. Orthotropic laminae have three mutually orthogonal planes of symmetry, which reduces the unique entries of the lamina-orientated constitutive tensor from 21 (anisotropic materials) to 9:
+The preceding discussion of laminae illustrated there are innumerable design variants for any lamina. In practise however, one of the most common lamina arrangements are orthotropic laminae. Orthotropic laminae have three mutually orthogonal planes of symmetry, which reduces the unique entries of the lamina-orientated constitutive tensor from 21 (anisotropic materials) to 9:
 
 \begin{equation} 
 \begin{pmatrix}
@@ -125,7 +126,7 @@ C_{11} & C_{12} & C_{13} & 0 & 0 & 0 \\
 \label{eqscomp3}
 \end{equation}
 
-Furthermore, if the lamina is suitably thin, as is typically the case in composite shell structures, a plane state of stress can be assumed. This corresponds to $\sigma_{33} = 0$ as per the following illustration.
+Furthermore, if the lamina is suitably thin, as is typically the case in composite shell structures, a state of plane stress can be assumed. This corresponds to $\sigma_{33} = 0$ as per the following illustration.
 
 \begin{figure}[h!]
 	\centering
@@ -188,7 +189,7 @@ Applying force equilibrium:
 \sigma_{11}A = \sigma_{11_f}A v_f + \sigma_{11_m}A v_m
 \label{eqscomp6}
 \end{equation}
-Substituting and rearranging yields the longitudinal Young's modulus of the lamina:
+Substituting and rearranging yields the bulk longitudinal Young's modulus of the lamina:
 \begin{equation} 
 E_1 = E_f v_f + E_m v_m
 \label{eqscomp7}
@@ -796,7 +797,7 @@ With the laminate strains across the thickness described, the stresses can be re
 \label{eqscomp_stress_recovery1}
 \end{equation}
 
-As previously hinted at, although the strain distribution is continuous across laminates, the stress distribution is generally discontinuous due to the varying material properties of the laminae. Indeed, if the laminae of a laminate are the exact same orthotropic composite material, but are stacked at varying angles, the resulting stress distribution will be discontinuous. The following example of a 4 ply laminate with a [0, 45, 45, 0] stacking sequence subject to pure bending highlights the nature of stress and strain distributions through the thickness despite all laminae being the same material.
+As previously implied, although the strain distribution is continuous across laminates, the stress distribution is generally discontinuous due to the varying material properties of the laminae. Indeed, if the laminae of a laminate are the exact same orthotropic composite material, but are stacked at varying angles, the resulting stress distribution will be discontinuous. The following example of a 4 ply laminate with a [0, 45, 45, 0] stacking sequence subject to pure bending highlights the nature of stress and strain distributions through the thickness despite all laminae being the same material.
 
 \begin{figure}[H]
 	\subfloat[Continuous strain distribution]
@@ -865,7 +866,7 @@ The Tsai-Wu failure criterion is a relatively simple method to approximate the s
 \label{eqscomp_tsai1}
 \end{equation}
 
-By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C)$ strengths in the lamina principal material directions (1, 2, 3) and the shear strengths $(R,\ S,\ T)$ corresponding to (23, 13, 12), the non-zero material strength parameters in a plane stress regime are expressed as:
+By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C)$ strengths in the lamina principal material directions (1, 2, 3) and the shear strengths $(R,\ S,\ T)$ corresponding to (23, 13, 12), the non-zero material strength parameters in a plane stress regime are expressed as \cite{reddy2004mechanics}:
 \begin{gather} 
 	\begin{aligned}
 		&F_1 = \frac{1}{X_T} - \frac{1}{X_C}\ ,

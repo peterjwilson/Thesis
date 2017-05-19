@@ -183,7 +183,7 @@ for i in range(len(phi_ref)):
 ##77B5FE = nice blue
 fig = plt.figure(1)
 plt.plot(phi_andes,n_theta_andes, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
+plt.plot(phi_dsg,n_theta_dsg, color = '#FF91A4', linestyle='--',linewidth=3.0, label = 'DSG',antialiased=True)
 #plt.plot(phi_ref,n_theta_ref,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
 plt.plot(phi_ref,n_theta_hand,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
 #plt.plot(phi_ref,n_theta_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
@@ -196,13 +196,13 @@ plt.xlabel('Phi (degrees)')
 plt.ylabel('Circumferential shell force [N/m]')
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
-#plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
+plt.savefig('Simply_support_dome_n_theta.pdf',bbox_inches="tight")
 
 
 
 fig = plt.figure(2)
 plt.plot(phi_andes,n_phi_andes, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-plt.plot(phi_dsg,n_phi_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
+plt.plot(phi_dsg,n_phi_dsg, color = '#FF91A4', linestyle='--',linewidth=3.0, label = 'DSG',antialiased=True)
 #plt.plot(phi_ref,n_phi_ref,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
 plt.plot(phi_ref,n_phi_hand,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'Ref',antialiased=True)
 #plt.plot(phi_ref,n_phi_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
@@ -215,14 +215,14 @@ plt.xlabel('Phi (degrees)')
 plt.ylabel('Meridional shell force [N/m]')
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
-#plt.savefig('Simply_support_dome_n_phi.pdf',bbox_inches="tight")
+plt.savefig('Simply_support_dome_n_phi.pdf',bbox_inches="tight")
 
 
 
 
 fig = plt.figure(3)
 plt.plot(phi_andes,von_mises_andes, color = '#77B5FE', linewidth=3.0, label = 'ANDES-DKQ',antialiased=True)
-plt.plot(phi_dsg,von_mises_dsg, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
+plt.plot(phi_dsg,von_mises_dsg, color = '#FF91A4', linestyle='--',linewidth=3.0, label = 'DSG',antialiased=True)
 plt.plot(phi_ansys,von_mises_ansys,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'ANSYS',antialiased=True)
 #plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
