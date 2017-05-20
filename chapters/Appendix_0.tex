@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                              %%%%%%
+%%%%  Author: Peter Wilson                        %%%%%%
+%%%%                                              %%%%%%
+%%%%  Stabilty analysis of Mises truss                        %%%%%%
+%%%%                                              %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter[Analytical stability analysis of Mises truss]{Analytical stability\\ analysis of Mises truss}
+\label{app:Analytical stability analysis of Mises truss}
+
+An analytical stability analysis of the Mises truss system considered in chapter \ref{chap:chapter_2_2} is presented employing the principle of virtual work via the 2nd Piola-Kirchhoff (PK2) stress measure and Green-Lagrange (GL) strain measure.
+
+<Picture of truss>
+
+The kinematics of the system are considered first by describing the undeformed truss lengths $L$, deformed lengths $l$ and the Green-Lagrange strain $\epsilon_{gl}$.
+
+\begin{equation} 
+L^2 = a^2 + b^2
+\hspace{10mm}
+l^2 = a^2 + (b-u)^2 = L^2 + u^2 - 2bu
+\label{eqapp0_1}
+\end{equation}
+
+The Green-Lagrange strain measure for a truss is recalled and specified, as is it's first variation:
+
+\begin{equation} 
+\epsilon_{gl} = \frac{1}{2}
+\Big(\frac{l^2-L^2}{L^2}\Big)
+=
+\Big(\frac{u^2 - 2bu}{2L^2}\Big)
+\hspace{10mm}
+\delta\epsilon_{gl} = 
+\Big(\frac{u-b}{L^2}\Big)
+\delta u
+\label{eqapp0_2}
+\end{equation}
+
+Shifting towards stresses, the 2nd Piola-Kirchhoff stresses are linked to the Green-Lagrange strains via a linearly elastic constitutive law characterised by an axial Young's Modulus $E$.
+
+\begin{equation} 
+\sigma_{pk2} = E \epsilon_{gl}
+\label{eqapp0_3}
+\end{equation}
+
+With the conjugate energy quantities defined, the virtual work expression of the system can be established:
+
+\begin{equation} 
+-\delta W = \delta W_int - \delta W_ext = 0
+\label{eqapp0_4}
+\end{equation}
+
+Clarifying with respect to the system considered yields:
+
+\begin{equation} 
+\delta W_{int} - \delta W_{ext} = 
+2 \int_{V} \sigma_{pk2} \epsilon_{gl}
+\ dV
+- \lambda P \delta u = 0
+\label{eqapp0_5}
+\end{equation}
+
+Development of the above expression leads to the system residual $\mathbf{r}$.
+\begin{gather} 
+	\begin{aligned}
+		&2 \int_{V} E \epsilon_{gl} \delta \epsilon_{gl}
+		\ dV
+		- \lambda P \delta u = 0		
+		\\
+		& 2EAL \Big(\frac{u^2 - 2bu}{2L^2}\Big) \Big(\frac{u-b}{L^2}\Big)
+		\delta u - \lambda P \delta u = 0	
+		\\
+		&\mathbf{r} = 
+		\frac{EA}{L^3}
+		\Big[
+		u^3 -3bu^2 +2b^2u
+		\Big]
+		- \lambda P
+		\label{eqapp0_6}
+	\end{aligned}
+\end{gather}
+
+Recalling that the system tangent matrix $\mathbf{K}$ is the gradient of the system residual, it can be expressed as follows:
+\begin{gather} 
+	\begin{aligned}
+		&\mathbf{K} = 
+		\frac{\partial \mathbf{r}}{\partial \mathbf{u}}
+		\\
+		&
+		\mathbf{K} = 
+		\frac{EA}{L^3}
+		\Big[
+		3u^2 -6bu +2b^2
+		\Big]
+		\label{eqapp0_7}
+	\end{aligned}
+\end{gather}
+
+Key to stability analysis are the calculation of critical points which indicate the onset of instability. These points occur when the determinant of the tangent matrix vanishes, thus:
+
+\begin{equation} 
+\delta W_{int} - \delta W_{ext} = 
+2 \int_{V} \sigma_{pk2} \epsilon_{gl}
+\ dV
+- \lambda P \delta u = 0
+\label{eqapp0_8}
+\end{equation}

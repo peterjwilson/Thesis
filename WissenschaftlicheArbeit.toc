@@ -79,126 +79,138 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Stability analysis}{36}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Stability criterion}{36}{section.4.1}
+\contentsline {section}{\numberline {4.1}Response diagrams}{36}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Stability criterion}{38}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Linear prebuckling analysis}{39}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Stability analysis example}{40}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}DSG triangle shell element}{39}{chapter.5}
+\contentsline {chapter}{\numberline {5}DSG triangle shell element}{41}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Stiffness matrix formulation}{39}{section.5.1}
+\contentsline {section}{\numberline {5.1}Stiffness matrix formulation}{41}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Stiffness matrix implementation}{42}{section.5.2}
+\contentsline {section}{\numberline {5.2}Stiffness matrix implementation}{44}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Mass matrix formulation and implementation}{44}{section.5.3}
+\contentsline {section}{\numberline {5.3}Mass matrix formulation and implementation}{46}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Lumped mass matrix}{44}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Lumped mass matrix}{46}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Consistent mass matrix}{45}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Consistent mass matrix}{47}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Stress and strain recovery}{47}{section.5.4}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}ANDES-DKQ quadrilateral shell element}{49}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Stiffness matrix formulation}{49}{section.6.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}ANDES membrane formulation}{49}{subsection.6.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Membrane basic stiffness}{50}{subsubsection*.28}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Membrane higher order stiffness}{50}{subsubsection*.29}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}DKQ bending formulation}{56}{subsection.6.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.3}Combined formulation}{59}{subsection.6.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Stiffness matrix implementation}{60}{section.6.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Mass matrix formulation}{63}{section.6.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Lumped mass matrix}{63}{subsection.6.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Consistent mass matrix}{63}{subsection.6.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Stress and strain recovery}{64}{section.6.4}
+\contentsline {section}{\numberline {5.4}Stress and strain recovery}{49}{section.5.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Extension of shells to composite laminates - revised 1}{67}{chapter.7}
+\contentsline {chapter}{\numberline {6}ANDES-DKQ quadrilateral shell element}{51}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Composite constitutive matrix formulation}{67}{section.7.1}
+\contentsline {section}{\numberline {6.1}Stiffness matrix formulation}{51}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Composite constitutive matrix implementation}{68}{section.7.2}
+\contentsline {subsection}{\numberline {6.1.1}ANDES membrane formulation}{51}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Composite stress recovery implementation}{70}{section.7.3}
+\contentsline {subsubsection}{Membrane basic stiffness}{52}{subsubsection*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Tsai-Wu failure criterion implementation}{71}{section.7.4}
+\contentsline {subsubsection}{Membrane higher order stiffness}{52}{subsubsection*.30}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
+\contentsline {subsection}{\numberline {6.1.2}DKQ bending formulation}{58}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Validation of elements}{73}{chapter.8}
+\contentsline {subsection}{\numberline {6.1.3}Combined formulation}{61}{subsection.6.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Static tests: shell obstacle course}{73}{section.8.1}
+\contentsline {section}{\numberline {6.2}Stiffness matrix implementation}{62}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.1}Scordelis-Lo roof - good}{74}{subsection.8.1.1}
+\contentsline {section}{\numberline {6.3}Mass matrix formulation}{65}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.2}Pinched cylinder - good}{75}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {6.3.1}Lumped mass matrix}{65}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.3}Pinched hemisphere - good}{76}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {6.3.2}Consistent mass matrix}{65}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Geometically non-linear tests}{77}{section.8.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.1}Hinged cylindrical roof - good}{77}{subsection.8.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2.2}Open cylinder pull-out - good}{78}{subsection.8.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Dynamic tests}{78}{section.8.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1}Shell pendulum - good}{78}{subsection.8.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.2}Oscillating clamped plate - good}{79}{subsection.8.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Quantity recovery tests}{80}{section.8.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.1}Simply supported dome with oculus under self weight}{81}{subsection.8.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.2}Navier supported plate under sinusoidal load}{83}{subsection.8.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.3}Navier supported plate under uniformly distributed load}{84}{subsection.8.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Composite tests}{86}{section.8.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.1}Composite linear statics: composite barrel vault}{86}{subsection.8.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.2}Composite linear static: clamped cylinder}{87}{subsection.8.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.3}Composite non-linear static: composite hinged cylindrical roof - update graph legend!}{89}{subsection.8.5.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.4}Composite dynamics: shell pendulum and oscillating square plate - FIXUP SECOND GRAPH FONT SIZE}{89}{subsection.8.5.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.5}Composite stress recovery: tensile test}{90}{subsection.8.5.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.6}Composite stress recovery: Navier supported laminate under sinusoidal load}{91}{subsection.8.5.6}
+\contentsline {section}{\numberline {6.4}Stress and strain recovery}{66}{section.6.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusions and Outlook}{97}{chapter.9}
+\contentsline {chapter}{\numberline {7}Extension of shells to composite laminates - revised 1}{69}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Future work}{97}{section.9.1}
+\contentsline {section}{\numberline {7.1}Composite constitutive matrix formulation}{69}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
+\contentsline {section}{\numberline {7.2}Composite constitutive matrix implementation}{70}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Basic-DKQ formulation}{98}{Appendix.a.A}
+\contentsline {section}{\numberline {7.3}Composite stress recovery implementation}{72}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
+\contentsline {section}{\numberline {7.4}Tsai-Wu failure criterion implementation}{73}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-T3 formulation}{100}{Appendix.a.B}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Analytical membrane analysis of dome}{101}{Appendix.a.C}
+\newpage 
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Analytical solution of Navier supported plate}{103}{Appendix.a.D}
+\contentsline {chapter}{\numberline {8}Validation of elements}{75}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Static tests: shell obstacle course}{75}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.1}Scordelis-Lo roof - good}{76}{subsection.8.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.2}Pinched cylinder - good}{77}{subsection.8.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1.3}Pinched hemisphere - good}{78}{subsection.8.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Geometically non-linear tests}{79}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.1}Hinged cylindrical roof - good}{79}{subsection.8.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.2}Open cylinder pull-out - good}{80}{subsection.8.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Dynamic tests}{80}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.1}Shell pendulum - good}{80}{subsection.8.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.2}Oscillating clamped plate - good}{81}{subsection.8.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Quantity recovery tests}{82}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.1}Simply supported dome with oculus under self weight}{83}{subsection.8.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.2}Navier supported plate under sinusoidal load}{85}{subsection.8.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.3}Navier supported plate under uniformly distributed load}{86}{subsection.8.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.5}Composite tests}{88}{section.8.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.1}Composite linear statics: composite barrel vault}{88}{subsection.8.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.2}Composite linear static: clamped cylinder}{89}{subsection.8.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.3}Composite non-linear static: composite hinged cylindrical roof - update graph legend!}{91}{subsection.8.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.4}Composite dynamics: shell pendulum and oscillating square plate - FIXUP SECOND GRAPH FONT SIZE}{91}{subsection.8.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.5}Composite stress recovery: tensile test}{92}{subsection.8.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.5.6}Composite stress recovery: Navier supported laminate under sinusoidal load}{93}{subsection.8.5.6}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Conclusions and Outlook}{99}{chapter.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}Future work}{99}{section.9.1}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{100}{Appendix.a.A}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {B}Basic-DKQ formulation}{102}{Appendix.a.B}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {C}Basic-T3 formulation}{104}{Appendix.a.C}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {D}Analytical membrane analysis of dome}{105}{Appendix.a.D}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {E}Analytical solution of Navier supported plate}{107}{Appendix.a.E}

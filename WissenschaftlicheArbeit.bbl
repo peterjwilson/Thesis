@@ -525,6 +525,52 @@
     \field{year}{2013}
   \endentry
 
+  \entry{FelippaNFEMTour2016}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={C.A.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Colorado at Boulder}%
+    }
+    \strng{namehash}{FC1}
+    \strng{fullhash}{FC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{A Tour of Nonlinear Analysis}
+    \field{journaltitle}{Nonlinear Finite Element Methods}
+    \field{year}{2016}
+  \endentry
+
+  \entry{FelippaNFEMCrit2016}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={C.A.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Colorado at Boulder}%
+    }
+    \strng{namehash}{FC1}
+    \strng{fullhash}{FC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Critical Points}
+    \field{journaltitle}{Nonlinear Finite Element Methods}
+    \field{year}{2016}
+  \endentry
+
   \entry{FelippaKirchhoff2017}{misc}{}
     \name{author}{1}{}{%
       {{hash=FC}{%
