@@ -187,11 +187,15 @@ for k in range(b_div+1):
 fig = plt.figure(1)
 
 
-plt.plot(u,lam_2,color = 'grey', label = 'Residual r[2]',antialiased=True)
+plt.plot(u,lam_2,color = 'grey',linewidth=3.0, label = 'Equilibrium path',antialiased=True)
 
-plt.plot(u,k_mat_22,color = '#77B5FE', label = 'det[K]',antialiased=True)
+plt.plot(u,k_mat_22,color = '#77B5FE', linewidth=3.0,label = 'det[K]',antialiased=True)
 
-plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', label = 'LPB',antialiased=True)
+#plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', label = 'LPB',antialiased=True)
+plt.axhline(y=lamda_lpb[1],color = '#79BFA1', linestyle='--', linewidth=3.0, 
+         label = 'LPB',antialiased=True)
+
+
 plt.plot(u_lpb[1],lamda_lpb[1],color = '#79BFA1', linestyle='None', markerfacecolor= 'None',markeredgecolor= '#79BFA1', markersize = 7.0, marker='o', label = None,antialiased=True)
 
 plt.plot(u_c1,lamda_c1,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
@@ -219,7 +223,7 @@ plt.savefig('stability_analysis_mises_truss_1x1.pdf',bbox_inches="tight")
 
 fig = plt.figure(2)
 
-plt.plot(ba,lpb_ratio,color = '#79BFA1', label = None,antialiased=True)
+plt.plot(ba,lpb_ratio,color = '#79BFA1', linewidth=3.0, label = None,antialiased=True)
 
 #plt.plot(phi_ref,n_theta_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 #plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
@@ -234,21 +238,6 @@ plt.tick_params(labelsize=labelfontsize)
 plt.savefig('stability_analysis_mises_truss_lpb.pdf',bbox_inches="tight")
 
 
-fig = plt.figure(3)
-
-plt.plot(ba,u_nl_buck,color = 'grey', label = None,antialiased=True)
-
-#plt.plot(phi_ref,n_theta_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
-#plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
-lg = plt.legend()
-#lg.draw_frame(False)
-#lg.loc(2)
-#plt.xlim([0,90])
-plt.xlabel('b/a')
-plt.ylabel('Vertical NL displacement w at onset of instability')
-plt.grid()
-plt.tick_params(labelsize=labelfontsize)
-plt.savefig('stability_analysis_mises_truss_disp.pdf',bbox_inches="tight")
 
 
 

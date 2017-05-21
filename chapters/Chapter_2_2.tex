@@ -15,14 +15,14 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Stability analysis}
+\chapter{Stability analysis - revised 1}
 \label{chap:chapter_2_2}
 
 \renewcommand{\Thema}{Stability analysis}
 
 \lettrine[lines=2]{T}{he} expedient practical design of engineering structures is often considered fulfilled after the confirmation of allowable deflections and stresses throughout the entire domain. Although the design may in fact be adequate in the vast majority of cases, structural stability is an oft overlooked phenomena in "bread and butter" engineering analysis and is by no means guaranteed by acceptable displacements and stresses. Indeed, some of the most catastrophic structural failures such as the Tacoma Narrows Bridge (1940) and the Twin Towers (2001) have root  causes stemming from system instability and reinforce the importance of stability analysis.
 
-Structural stability, expressed crudely, can be thought of as "the power to recover equilibrium", or, alternatively, a structure can be thought stable at an equilibrium position if it returns to that position following a temporary perturbation \cite{FelippaStabilityBasics2016}. In terms more relatable, it's clear a person standing on one foot is more susceptible to falling over in the presence of a strong wind than someone firmly planted with both feet. Although the person with both feet planted may sway and bob, they have a greater chance to return to their original equilibrium position after the wind has subsided, that is, they are more stable. In an engineering context, perhaps the most well known stability problem is a long beam subject to a compressive end load. At low load levels the beam will undergo small deformations and trace back to it's original configuration after unloading, however, after the critical Euler buckling load is surpassed structural stability is lost giving way to large arbitrary deformations with non-coincident loading and unloading paths. Although these two simple examples provide a phenomenological picture of structural stability, a more precise engineering description of stability is required for general computational mechanics.
+Structural stability, expressed crudely, can be thought of as "the power to recover equilibrium", or, alternatively, a structure can be thought stable at an equilibrium position if it returns to that position following a temporary perturbation \cite{FelippaStabilityBasics2016}. In terms more relatable, it's clear a person standing on one foot is more susceptible to falling over in the presence of a strong wind than someone firmly planted with both feet. Although the person with both feet planted may sway and bob, they more likely to return to their original equilibrium position after the wind has subsided, that is, they are more stable. In an engineering context, perhaps the most well known stability problem is a long beam subject to a compressive end load: the classic Euler buckling cases. At low load levels the beam will undergo small deformations and trace back to it's original configuration after unloading, however, after the critical Euler buckling load is surpassed structural stability is lost giving way to large arbitrary deformations with non-coincident loading and unloading paths. Although these two simple examples provide a phenomenological picture of structural stability, a more precise engineering description of stability is required for general computational mechanics.
 
 \section{Response diagrams}
 Essential to the understanding of structural stability and non-linear FEM is the concept of an equilibrium path, often plotted on load-deflection response diagrams. These diagrams are commonly two dimensional x-y diagrams that plot a representative force quantity against a characterising displacement thereby ascertaining the behaviour of the structure \cite{FelippaNFEMTour2016}.
@@ -35,7 +35,7 @@ Essential to the understanding of structural stability and non-linear FEM is the
 	\label{stab0}
 \end{figure}
 
-The equilibrium path of a response diagram unsurprisingly indicates the points in load-deflection space where the structure is in equilibrium, that is, the residual vector $\mathbf{r}$ of the system vanishes. If the scope of structures considered is limited to static linear elastic structures subject to conservative loading characterised by a load factor $\lambda$ linearly scaling the external load vector $\mathbf{f}$, the residual itself is defined as the gradient of the structure's energy $\Pi$ \cite{FelippaNFEMCrit2016}:
+The equilibrium path of a response diagram indicates the points in load-deflection space where the structure is in equilibrium, that is, the residual vector $\mathbf{r}$ of the system vanishes. If the scope of structures considered is limited to static linear elastic structures subject to conservative loading characterised by a load factor $\lambda$ linearly scaling the external load vector $\mathbf{f}$, the residual itself is defined as the gradient of the structure's energy $\Pi$ \cite{FelippaNFEMCrit2016}:
 
 \begin{equation}
 \mathbf{r}(\mathbf{u},\lambda) = \frac{\partial \Pi (\mathbf{u},\lambda)}{\partial \mathbf{u}}
@@ -64,14 +64,18 @@ Recalling that the equilibrium path of a structure is defined by a vanishing res
 The above expansion offers a variety of perspectives in which to interpret the equilibrium path. A nod to virtual work methods via variation of system energy is present as well as a simple re-arrangement of the well known $\mathbf{Ku} = \mathbf{f}$ introduced in Bachelor FEM courses.
 
 \section{Stability criterion}
- If the aforementioned Euler beam buckling example is fully examined (refer Appendix XXX), it is apparent that the well known Euler critical load formula precipitates by setting the determinant of the system stiffness matrix to zero. In general, loss of structural stability only occurs at critical points $(\mathbf{u}_c,\lambda_c)$ where the determinant of the tangent stiffness matrix vanishes:
+ If the aforementioned Euler beam buckling example is fully derived, it is apparent that the well known Euler critical load formulae precipitate by setting the determinant of the respective system stiffness matrices to zero. In general, loss of structural stability only occurs at critical points $(\mathbf{u}_c,\lambda_c)$ where the determinant of the tangent stiffness matrix vanishes:
  
  \begin{equation} 
  det\big[\mathbf{K}(\mathbf{u}_c,\lambda_c)\big] = 0
  \label{eqstab1}
  \end{equation}
  
- In this Euler case, the instability is manifested by way of bifurcation, commonly referred to as buckling. Bifurcation points designate a critical point in the load-displacement space of the structure where two or more equilibrium paths meet. At these points structure may unpredictably switch equilibrium paths physically manifesting itself as dramatic large deflections. Indeed, in the buckling of a circular-sectioned beam, the direction of buckling deformation is entirely unpredictable (bar coaxing imperfections) with many equilibrium paths coincident at the bifurcation point. Limit, or snap-through, points are the other type of instability that may occur at critical points. In this regime, the critical point coincides with a minimum, maximum or inflection of the load parameter $\lambda$. For an everyday example of snap-through, one can consider an umbrella suddenly inverting in a strong storm, demonstrating that once the snapping wind load is reached predictably large deformations are subsequently observed. The following figure \ref{stab1}(a) illustrates the nature of both instability types on a load-deflection diagram.
+ In this Euler case, the instability is manifested by way of bifurcation, commonly referred to as buckling. Bifurcation points designate a critical point in the load-displacement space of the structure where two or more equilibrium paths meet. At these points structure may unpredictably switch equilibrium paths physically manifesting itself as dramatic large deflections. Indeed, in the buckling of a circular-sectioned beam, the direction of buckling deformation is entirely unpredictable (bar coaxing imperfections) with many equilibrium paths coincident at the bifurcation point. Limit, or snap-through, points are the other type of instability that may occur at critical points. In this regime, the critical point coincides with a minimum, maximum or inflection of the load parameter $\lambda$. For an everyday example of snap-through, one can consider an umbrella suddenly inverting in a strong storm, demonstrating that once the snapping wind load is reached predictably large deformations are subsequently observed. 
+ 
+ In the scope of this work the load magnitude that introduces system instability is of key interest, details regarding how to mathematically distinguish between limit and bifurcation points once a critical point has been identified fall outside the domain surveyed. 
+ 
+ The following figure \ref{stab1}(a) illustrates the nature of both instability types on a load-deflection diagram.
 
 \begin{figure}[H]
 	\subfloat[Critical points of a response diagram]
@@ -85,12 +89,12 @@ The above expansion offers a variety of perspectives in which to interpret the e
 	\caption{\label{stab1}Stability analysis response diagrams \cite{FelippaStabilityBasics2016}}
 \end{figure}
 
-It's clear that after both critical points, as depicted in figure \ref{stab1}(a), the structure looses a significant proportion of it's stiffness indicated by the reduced load required for continual increases of deflection. In this post-buckling state the original function, and indeed safety, of the structure (for example, a roof or building) is likely to be significantly compromised. If such a structural critical point exists at a load level less than the design load cases considered for allowable deflections and stresses then the structure cannot be regarded as properly engineered. Figure \ref{stab1}(b) indicates the critical stability load of the structure, which is the load corresponding to the first critical point on the response diagram. Another more stringent approach is to determine the lowest load factor throughout the whole equilibrium path, including the post-critical regime, and take this as the critical stability load.
+It's clear that after both critical points, as depicted in figure \ref{stab1}(a), the structure looses a significant proportion of it's stiffness indicated by the reduced load required for continual increases of deflection. In this post-buckling state the original function, and indeed safety, of the structure (for example, a roof or building) is likely to be significantly compromised. If such a structural critical point exists at a load level less than the design load cases considered for allowable deflections and stresses then the structure cannot be regarded as properly engineered. Figure \ref{stab1}(b) indicates the critical stability load of the structure, which is the load corresponding to the first critical point on the response diagram. Another, more stringent, approach is to determine the lowest load factor throughout the whole equilibrium path, including the post-critical regime, and take this as the critical stability load.
 
-Despite the need for stability analysis to be regularly considered throughout engineering design, the effort and level of analysis required is clearly quite significant for even simple systems. As such, a linearised approach termed Linear prebuckling analysis, is often employed.
+Despite the need for stability analysis to be regularly considered throughout engineering design, the effort and level of analysis required is clearly quite significant for even simple systems. As such, a linearised approach termed Linear Prebuckling analysis, is often employed.
 
 \section{Linear prebuckling analysis}
-Linear prebuckling (LPB) analysis offers a reduced insight into the stability characteristics of the structure at a fraction of the computational expense required for a full non-linear equilibrium path analysis.
+Linear Prebuckling (LPB) analysis offers insight, albeit reduced, into the stability characteristics of structures at a fraction of the computational expense required for a full non-linear equilibrium path analysis.
 
 In order to further interrogate the nature of structural stability, and how it may be simplified, the tangent stiffness matrix in equation \ref{eqstab1} can be decomposed. The total tangent matrix is made up of the material stiffness matrix $\mathbf{K}_m$ (itself composed of the elastic stiffness $\mathbf{K}_e$ and initial displacement stiffness $\mathbf{K}_u$) and the geometric stiffness matrix $\mathbf{K}_g$. Thus equation \ref{eqstab1} can be expanded accordingly:
 
@@ -131,7 +135,7 @@ det\big[
 Equations \ref{eqstab3} and \ref{eqstab4} are identical if $\hat{\lambda}
  = 1,\ \lambda_i = \lambda_c$ and $u_i = u_c$.
  
- If the structure under analysis is considered suitably stiff, with infinitesimal displacements $\mathbf{u} \approx 0$ in the pre-buckling regime and negligible effects of initial displacements ($\mathbf{K}_u(\mathbf{u} \approx 0) \approx 0$), then a simplified stability eigen-problem can be presented:
+ If the structure under analysis is considered suitably stiff, with approximately infinitesimal displacements $\mathbf{u} \approx \mathbf{0}$ in the pre-buckling regime and negligible effects of initial displacements ($\mathbf{K}_u(\mathbf{u} \approx \mathbf{0}) \approx \mathbf{0}$), then a simplified stability eigen-problem can be presented:
  
  \begin{equation} 
  det\big[
@@ -142,23 +146,105 @@ Equations \ref{eqstab3} and \ref{eqstab4} are identical if $\hat{\lambda}
  \label{eqstab5}
  \end{equation}
  
- The LPB equation above relies on the additional assumptions that the structure remains linearly elastic until buckling and the structure and loading have no imperfections \cite{FelippaStabilityBasics2016}. It's also clear that the geometric stiffness matrix is assumed to scale proportionally with the load factor, which further relies on the assumption of a linearly elastic structure. Along with these assumptions, LPB carries some important limitations. The first of which is the typical over-estimation of the true buckling limit, with the accuracy deteriorating as the pre-buckling structural behaviour becomes more non-linear. The second limitation is the inability to distinguish between bifurcation and limit points, with all critical points transformed into bifurcation points. A consequence of this is that the recovered eigenvector associated with a limit point reported as a bifurcation point will be erroneous.
+ The LPB equation above relies on the additional assumptions that the structure remains linearly elastic until buckling and the structure and loading have no imperfections \cite{FelippaStabilityBasics2016}. It's also clear that the geometric stiffness matrix is assumed to scale proportionally with the load factor, which further relies on the assumption of a linearly elastic structure. Along with these assumptions, LPB analysis is subject to some notable limitations. The first of which is the typical over-estimation of the true stability limit, with accuracy deteriorating as the pre-critical structural behaviour exhibits more non-linearity. Secondly, LPB analysis is unable to distinguish between bifurcation and limit points, with all critical points transformed into bifurcation points. A consequence of this is that the recovered eigenvector associated with a limit point reported as a bifurcation point will be erroneous.
  
- Despite the large swathe of assumptions and limitations accompanying LPB, it is no doubt a sensible and computationally-efficient approach when applied to suitably stiff linear elastic structures, which indeed form the bulk of industrial engineering structures.
+ Despite the large swathe of assumptions and limitations accompanying LPB, it is no doubt a sensible and computationally-efficient approach when applied to suitably stiff linear elastic structures, which indeed include a considerable amount of industrial engineering structures.
 
 \section{Stability analysis example}
 
-To illustrate the various aspects stability analysis, including response diagrams and the comparison of non-linear and linear critical point analysis, an example two truss system is considered. The full analysis can be found in Appendix XXXX, with only key results reproduced below.
+To illustrate the various aspects stability analysis, including response diagrams and the differences between non-linear and linear critical point analysis, an example Mises two truss system is considered. The full analysis can be found in Appendix \ref{app:Analytical stability analysis of Mises truss}, with only key results reproduced below. The system under consideration is depicted in the following figure:
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=8cm]{images/mises_truss_def.png}
+	\caption{Mises truss geometry}
+	\label{stab2_1}
+\end{figure}
+
+After developing the system's virtual work expression via the 2nd Piola-Kirchhoff stress measure and the conjugate Green-Lagrange strain measure, the residual vector can be developed as:
+
+\begin{equation} 
+\mathbf{r} = 
+\frac{EA}{L^3}
+\begin{pmatrix}
+u^3+uw^2-2bwu+2a^2u \\
+u^2w + w^3 - 3bw^2 - bu^2 +2b^2w - \lambda P
+\end{pmatrix}
+=
+\mathbf{0}
+\label{eqstab6}
+\end{equation}
+
+With the residual vector in hand, the system's stiffness matrix can be expressed as:
+
+\begin{equation} 
+\mathbf{K} = 
+\frac{\partial \mathbf{r}}{\partial \mathbf{u}}
+=
+\frac{EA}{L^3}
+\begin{pmatrix}
+3u^2 + w^2 - 2bw +2au +2a^2 & 2uw -2bu \\
+2uw - 2bu & u^2 + 3w^2 - 6bw + 2b^2
+\end{pmatrix}
+\label{eqstab7}
+\end{equation}
+
+Non-linear critical points can be determined by setting the determinant of the stiffness matrix to zero and solving. For the system parameters of ($a=b=EA=P=1$) and under the assumption of $u = 0$ before instability, the non-linear critical points are calculated to be:
+
+ \begin{equation} 
+\mathbf{P}_{NL1} = 
+ \begin{pmatrix}
+ u_{c1} = 0 \\
+w_{c1} = 0.4226 \\
+\lambda_{c1} = 0.1361
+ \end{pmatrix}
+ \ ,
+ \hspace{10mm}
+ \mathbf{P}_{NL2} = 
+ \begin{pmatrix}
+ u_{c2} = 0 \\
+ w_{c2} = 1.5774 \\
+ \lambda_{c2} = -0.1361
+ \end{pmatrix}
+ \label{eqstab8}
+ \end{equation}
+ 
+Although the non-linear critical points have been determined, a LPB analysis of the system will be carried out to compare results between the different approaches. As per equation \ref{eqstab5}, a LPB analysis is an eigenvalue problem which, after assuming small displacements and $u=0$ in the pre-buckling regime, reduces to the following expression:
+
+ \begin{equation} 
+det
+\begin{pmatrix}
+\frac{EA}{L^3} 2a^2 - \frac{\lambda P}{b} & 0 \\
+0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda P}{b}
+\end{pmatrix}
+= 0
+\label{eqstab9}
+\end{equation}
+
+The eigenvalues of the above expression coalesce into the same value:
+
+\begin{equation} 
+\lambda_{lpb\ c1} = 
+\lambda_{lpb\ c2} = 0.7071
+\label{eqstab10}
+\end{equation}
+
+It's clear that the LPB analysis is quite inaccurate for this structure with the estimated onset of instability occurring at over 5 times that of the first non-linear buckling load $\lambda_{c1} = 0.1361$. This inaccuracy is due to the fact that the structure is quite flexible in the pre-critical regime, which violates the small deflections assumption vital to the accurate use of LPB analysis.
+
+The following response diagram plots the equilibrium path $\lambda-w$ (assuming $u = 0$ throughout), determinant of the stiffness matrix and the LPB critical load limit over vertical displacement $w$.
 
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=12cm]{images/stability_analysis_mises_truss_1x1.pdf}
-	\caption{Response diagram of Mises truss}
+	\caption{Ratio of Mises truss LPB and NL critical load factors across varying geometry}
 	\label{stab2}
 \end{figure}
 
-asdfasdf
+From the graph it can be seen that the primary equilibrium path traces the two bars snapping through, with $w=2.0$ corresponding to a fully snapped through system. Both non-linear critical points are highlighted on the equilibrium path with their connection to the vanishing stiffness determinant at these points explicitly drawn.
+
+As previously discussed, inaccuracies of the LPB analysis are attributable to the not-insignificant pre-critical deflections of the structure. The sensitivity of LPB analysis to this effect can be investigated by gradually increasing the height $b$ of the structure while retaining the same span $a$. As the height over span ratio $b/a$ increases, the structure will become stiffer and pre-critical vertical displacements will reduce. As the actual structural behaviour gradually aligns with the underpinning LPB assumptions, the LPB results should become more accurate. Across the range of $1 \le b/a \le 5$, the ratios of critical LPB load factors to the lowest non-linear critical load factors have been plot in the following figure. Although it is acknowledged that as $b/a$ increase the instability mode will change from a limit to bifurcation point, the detail of interest here is the load factor associated with the onset of instability, regardless of it's nature.
 
 \begin{figure}[H]
 	\centering
@@ -168,17 +254,4 @@ asdfasdf
 	\label{stab3}
 \end{figure}
 
-
-- Definition
-
-- Examples of where it's important. P-delta effect
-
-- Critical points, det = 0
-
-- Example, just show summary, put full calc in appendix
-
-- Linear prebuckling definiton
-
-- Linear pre-buckling example
-
-- Implementation of LPB
+Consistent with the previous rationale, the LPB analyses tend toward more accurate results as the structure becomes stiffer at greater $b/a$ and pre-critical displacements approach negligible values. Despite this, the figure also confirms that LPB analyses continue to typically overestimate the critical load for a structure. Summarising, it can be seen that when the LPB assumptions are nearly fulfilled it produces quite accurate results with a fraction of computational effort compared to a full non-linear stability analysis, although the tendency to overestimate the onset of instability should also be considered. 

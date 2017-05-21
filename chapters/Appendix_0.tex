@@ -9,9 +9,15 @@
 \chapter[Analytical stability analysis of Mises truss]{Analytical stability\\ analysis of Mises truss}
 \label{app:Analytical stability analysis of Mises truss}
 
-An analytical stability analysis of the Mises truss system considered in chapter \ref{chap:chapter_2_2} is presented employing the principle of virtual work via the 2nd Piola-Kirchhoff (PK2) stress measure and Green-Lagrange (GL) strain measure.
+An analytical stability analysis of the Mises truss system considered in chapter \ref{chap:chapter_2_2} is presented, employing the principle of virtual work via the 2nd Piola-Kirchhoff (PK2) stress measure and Green-Lagrange (GL) strain measure.
 
-<Picture of truss>
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=8cm]{images/mises_truss_def.png}
+	\caption{Mises truss geometry}
+	\label{pic:app0}
+\end{figure}
 
 The kinematics of the system are considered first by describing the undeformed truss lengths $L$ (which are the same for both bars), deformed lengths $l$ and the Green-Lagrange strain $\epsilon_{gl}$. Truss 1 is considered first:
 
@@ -70,7 +76,7 @@ Shifting towards stresses, the 2nd Piola-Kirchhoff stresses are linked to the Gr
 \label{eqapp0_3}
 \end{equation}
 
-With the conjugate energy quantities defined, the virtual work expression of the system can be established:
+With the conjugate energy quantities defined, the virtual work expression of the system may be established, in general:
 
 \begin{equation} 
 -\delta W = \delta W_{int} - \delta W_{ext} = 0
@@ -144,7 +150,7 @@ Recalling that the system tangent matrix $\mathbf{K}$ is the gradient of the sys
 \label{eqapp0_7}
 \end{equation}
 
-Key to stability analysis are the calculation of critical points which indicate the onset of instability. These points occur when the determinant of the tangent matrix vanishes, which reduces to the following quadratic expression:
+Key to stability analysis are the calculation of critical points which indicate the onset of instability. These points occur when the determinant of the tangent matrix vanishes, which reduces to the following expression:
 
 \begin{equation} 
 (w^2 - 2bw +2a^2)
