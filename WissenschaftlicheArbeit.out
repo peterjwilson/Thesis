@@ -13,7 +13,7 @@
 \BOOKMARK [0][-]{chapter.4}{Stability analysis - revised 1}{}% 13
 \BOOKMARK [1][-]{section.4.1}{Response diagrams}{chapter.4}% 14
 \BOOKMARK [1][-]{section.4.2}{Stability criterion}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.3}{Linear prebuckling analysis}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{Linear Prebuckling analysis}{chapter.4}% 16
 \BOOKMARK [1][-]{section.4.4}{Stability analysis example}{chapter.4}% 17
 \BOOKMARK [0][-]{chapter.5}{DSG triangle shell element}{}% 18
 \BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 19
@@ -30,16 +30,18 @@
 \BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 30
 \BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 31
 \BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 32
-\BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 33
-\BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 34
-\BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 35
-\BOOKMARK [1][-]{section.8.3}{Dynamic tests}{chapter.8}% 36
-\BOOKMARK [1][-]{section.8.4}{Quantity recovery tests}{chapter.8}% 37
-\BOOKMARK [1][-]{section.8.5}{Composite tests}{chapter.8}% 38
-\BOOKMARK [0][-]{chapter.9}{Conclusions and Outlook}{}% 39
-\BOOKMARK [1][-]{section.9.1}{Future work}{chapter.9}% 40
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 41
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-DKQ formulation}{}% 42
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-T3 formulation}{}% 43
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical membrane analysis of dome}{}% 44
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical solution of Navier supported plate}{}% 45
+\BOOKMARK [0][-]{chapter.8}{Implementation of linear Eigensolver}{}% 33
+\BOOKMARK [0][-]{chapter.9}{Validation of elements}{}% 34
+\BOOKMARK [1][-]{section.9.1}{Static tests: shell obstacle course}{chapter.9}% 35
+\BOOKMARK [1][-]{section.9.2}{Geometically non-linear tests}{chapter.9}% 36
+\BOOKMARK [1][-]{section.9.3}{Dynamic tests}{chapter.9}% 37
+\BOOKMARK [1][-]{section.9.4}{Quantity recovery tests}{chapter.9}% 38
+\BOOKMARK [1][-]{section.9.5}{Composite tests}{chapter.9}% 39
+\BOOKMARK [0][-]{chapter.10}{Application of shell finite elements}{}% 40
+\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook}{}% 41
+\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 42
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 43
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-DKQ formulation}{}% 44
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-T3 formulation}{}% 45
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical membrane analysis of dome}{}% 46
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical solution of Navier supported plate}{}% 47

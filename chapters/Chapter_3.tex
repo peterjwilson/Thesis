@@ -29,7 +29,7 @@
 
 \renewcommand{\Thema}{DSG triangle shell element}
 
-The follow exposition clarifies the stiffness matrix, mass matrix and quantity recovery of the DSG triangle shell element in Kratos. 
+The follow sequence elucidates the formulation and implementation of the stiffness matrix, mass matrix and quantity recovery associated with the DSG triangle shell element in Kratos. 
 
 \section{Stiffness matrix formulation}
 
@@ -53,7 +53,7 @@ The element displacement field is related to the discrete nodal values via shape
 \mathbf{u}(x, y) = \sum_{i=1}^3 \ N_i(x,y) \mathbf{u}_i
 \label{eqt2}
 \end{equation}
-$N_i$ are the standard linear triangle shape functions, referred to the cartesian system.
+$N_i$ are the standard linear triangle shape functions, referred to the Cartesian system, considering the corner points of the triangle $x_i,\ y_i$.
 \begin{gather} 
 	\begin{aligned}
 		&N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]
@@ -81,7 +81,7 @@ The above expression can be expanded into strain-displacement and material matri
 
 Rama et al. \cite{Ram16} present the DSG formulation in a similar manner, detailing the strain displacement matrix and material material of each constituent separately.
 
-The membrane strain displacement matrix can be expressed as:
+The membrane strain displacement matrix requires no enhancement since linear triangle elements are impervious to membrane locking as discussed in section \ref{membrane_locking_theory}. Thus, the standard displacement-based formulation can be confidently utilised:
 
 \begin{equation} 
 \mathbf{B}_{mem} =  \begin{pmatrix}
@@ -99,7 +99,7 @@ N_{i,y} & N_{i,x} & 0 & 0 & 0 & 0 \\
 \label{eqt7}
 \end{equation}
 
-The bending strain displacement matrix can be presented in a similar manner:
+The bending strain displacement matrix is also a simple standard displacement-based formulation and can be presented in a similar manner:
 
 \begin{equation} 
 \mathbf{B}_{bend} =  \begin{pmatrix}
@@ -117,7 +117,7 @@ The bending strain displacement matrix can be presented in a similar manner:
 \label{eqt9}
 \end{equation}
 
-Finally, the shear strain displacement matrix, which has the DSG element technology 'baked' into it, is as follows:
+Finally, the shear strain displacement matrix, which implements the DSG element enhancement technology and mitigates shear locking, is expressed as follows:
 
 \begin{gather} 
 	\begin{aligned}
@@ -139,7 +139,7 @@ Finally, the shear strain displacement matrix, which has the DSG element technol
 The material matrices for the membrane and bending parts are presented below:
 
 \begin{equation} 
-\mathbf{C}_{mem} =  \frac{Et}{(1-\nu^2)}
+\mathbf{C}_{mem} =  \frac{Eh}{(1-\nu^2)}
 \begin{pmatrix}
 1 & \nu & 0 \\
 \nu & 1 & 0 \\
@@ -149,7 +149,7 @@ The material matrices for the membrane and bending parts are presented below:
 \end{equation}
 
 \begin{equation} 
-\mathbf{C}_{bend} =  \frac{E t^3}{12(1-\nu^2)}
+\mathbf{C}_{bend} =  \frac{E h^3}{12(1-\nu^2)}
 \begin{pmatrix}
 1 & \nu & 0 \\
 \nu & 1 & 0 \\
@@ -158,16 +158,16 @@ The material matrices for the membrane and bending parts are presented below:
 \label{eqt12}
 \end{equation}
 
-To further improve the DSG element performance, Bischoff and Bletzinger \cite{Bis04} \cite{Bis01} applied the enhancement approach that Lyly suggested for MITC-4 elements \cite{Lyl93}. This approach modifies the internal shear energy term by scaling the shear constitutive matrix with a correction term $\tau$ incorporating the element thickness and an indicator of element size ($h_k$ = longest element side length). The revised shear constitutive matrix is thus:
+To further improve the DSG element performance, Bischoff and Bletzinger \cite{Bis04} \cite{Bis01} applied the enhancement approach that Lyly suggested for MITC-4 elements \cite{Lyl93}. This approach modifies the internal shear energy term by scaling the shear constitutive matrix with a correction term $\tau$ incorporating the element thickness and an indicator of element size ($h_k$ = longest element side length). The enhanced  shear constitutive matrix is thus:
 
 \begin{equation} 
-\mathbf{C}_{shear} =  \tau \kappa Gt
+\mathbf{C}_{shear} =  \tau \kappa Gh
 \begin{pmatrix}
 1 & \nu \\
 \nu & 1 
 \end{pmatrix}
 =
-\frac{\kappa G t^3}{t^2 + \alpha h_k^2}
+\frac{\kappa G h^3}{h^2 + \alpha h_k^2}
 \begin{pmatrix}
 1 & \nu \\
 \nu & 1 
@@ -177,12 +177,12 @@ To further improve the DSG element performance, Bischoff and Bletzinger \cite{Bi
 
 where $\kappa = \frac{5}{6}$ is the shear correction factor and $\alpha = 0.1$ as per \cite{Lyl93}.
 
-As described in section \ref{transverse_shear_locking}, transverse shear locking is driven by a mismatch of internal energy allocation between bending ($\Pi_{bend} \propto t^3$) and shear components ($\Pi_{shear} \propto t$) as $t \rightarrow 0$.  This modification somewhat alleviates the locking by 'encouraging' the internal shear energy to scale with the cube of the thickness too, thus reducing the artificial energy disparity.
+As described in section \ref{transverse_shear_locking}, transverse shear locking is driven by a mismatch of internal energy allocation between bending ($\Pi_{bend} \propto h^3$) and shear components ($\Pi_{shear} \propto h$) as $h \rightarrow 0$.  This modification somewhat alleviates the locking by 'encouraging' the internal shear energy to scale with the cube of the thickness too, thus reducing the artificial energy disparity.
 
 Although all stiffness components are assembled, one notices that lack of entries corresponding to the drilling DOF $\beta_{zi}$ currently renders the element stiffness matrix singular. The technology of drilling DOFs discussed in \ref{drilling_DOF_section} in thus introduced. Nguyen-Thoi et al. \cite{Ngu13} proposed to remedy this rotational singularity by setting the drilling DOF entries to one one-thousandth of the maximum diagonal entry in the element stiffness matrix.
 
 \begin{equation} 
-K_{\beta_z} =  \frac{max(K_{ij}\delta_{ij})}{1000}
+K_{\beta_{zi}} =  \frac{max(K_{ij}\delta_{ij})}{1000}
 \label{eqtdrilling}
 \end{equation}
 
@@ -191,9 +191,9 @@ K_{\beta_z} =  \frac{max(K_{ij}\delta_{ij})}{1000}
 
 
 \section{Stiffness matrix implementation}
-Despite the relatively simple and decoupled stiffness formulation presented, the practical programming of it invariably introduces it's own complexities. Furthermore, leveraging the existing functionality that the Kratos code possesses not only prevents re-inventing the wheel, but also makes the code more readable and functionally cohesive.  
+Despite the relatively simple decoupled stiffness formulation presented, the practical programming of it invariably introduces it's own complexities. Furthermore, leveraging the existing functionality that the Kratos code possesses not only prevents re-inventing the wheel, but also makes the code more readable and functionally cohesive.  
 
-The new DSG triangle element is implemented in the files $\texttt{shell\_thick\_element\_3D3N.hpp}$ and $\texttt{shell\_thick\_element\_3D3N.cpp}$, which are compiled into the  'StructuralMechanicsApplication' module of Kratos. Without extending into extraneous details, the DSG triangle element is derived from the Kratos $\texttt{element}$ class and makes extensive use of other existing Kratos utility classes including those offering: coordinate transformations, material properties and response and pre-defined stiffness matrix and residual vector "containers". Correspondingly, it is also subject to the constraints associated with each of these. From a high level view, however, the element stiffness matrix follows the subsequent workflow:
+The new DSG triangle element is implemented in the files $\texttt{shell\_thick\_element\_3D3N.hpp}$ and $\texttt{shell\_thick\_element\_3D3N.cpp}$, which are compiled into the  'StructuralMechanicsApplication' module of Kratos. Without extending into extraneous details, the DSG triangle element is derived from the Kratos $\texttt{element}$ class and makes extensive use of other existing Kratos utility classes including those offering: coordinate transformations, material properties and pre-defined stiffness matrix and residual vector data types. Correspondingly, it is also subject to the constraints associated with each of these. From a high level view, however, the element stiffness matrix follows the subsequent workflow:
 
 \begin{figure}[H]
 	% Define block styles
@@ -231,7 +231,7 @@ Following the general form of the existing shell elements in Kratos, all the dat
 \label{eqtCkratos}
 \end{equation} 
 
-At this stage the shear component of the material matrix is unmodified, and is corrected with $\tau$ as per equation \eqref{eqt14}. The DOF arrangement of the material matrix also motivates a slight departure from the strain displacement matrices as presented above. Although the element stiffness matrix can certainly be programmed in it's constitutive parts, as per equation \eqref{eqt5}, it is more concise to calculate it as follows:
+At this stage the shear component of the material matrix is currently unmodified, thus it is subsequently corrected with $\tau$ as per equation \eqref{eqt14}. The DOF arrangement of the material matrix also motivates a slight departure from the strain displacement matrices as presented above. Although the element stiffness matrix can certainly be programmed in it's constitutive parts, as per equation \eqref{eqt5}, it is more concise to calculate it as follows:
 
 \begin{equation} 
 \mathbf{K} = \int_A  (\mathbf{B}_{comb}^T \mathbf{C}_{Kratos} \mathbf{B}_{comb} )\ dA
@@ -298,17 +298,17 @@ where
 \label{eqt15}
 \end{equation}
 
-The general lumped mass is determined for a multi-ply material with $n$ plies each of $t_i$ thickness and $\rho_i$ density as follows:
+The general lumped mass is determined for a multi-ply material with $n$ plies each of $h_i$ thickness and $\rho_i$ density as follows:
 
 \begin{equation} 
-\bar{m} = \frac{A}{3} \sum_{i=1}^n \rho_i t_i
+\bar{m} = \frac{A}{3} \sum_{i=1}^n \rho_i h_i
 \label{eqt16}
 \end{equation}
 
 For a single layer material of area $A$ this reduces to:
 
 \begin{equation} 
-\bar{m} = \frac{A}{3} \rho t
+\bar{m} = \frac{A}{3} \rho h
 \label{eqt17}
 \end{equation}
 
@@ -333,15 +333,15 @@ Focussing solely on the kinetic energy, pertinent to the consistent mass matrix,
 \label{eqt17_2}
 \end{equation}
 
-The volume integral can be split into area and thickness integrals and referred to mid-plane velocities $(\dot{u_0},\ \dot{v_0},\ \dot{w_0})$:
+The volume integral can be split into area and thickness integrals and referred to mid-plane velocity components $(\dot{u_0},\ \dot{v_0},\ \dot{w_0})$:
 \begin{gather} 
 	\begin{aligned}
 		\delta K = \int_{\Omega} \int_{\frac{-h}{2}}^{\frac{h}{2}} \rho 
 		\Big[
-		(\dot{u_0} + z\dot{\phi_1})  (\delta \dot{u_0} + z\delta\dot{\phi_1})+ 
-		&(\dot{v_0} + z\dot{\phi_2})  (\delta \dot{v_0} + z\delta\dot{\phi_2})+
+		(\dot{u_0} + z\dot{\beta_1})  (\delta \dot{u_0} + z\delta\dot{\beta_1})+ 
+		&(\dot{v_0} + z\dot{\beta_2})  (\delta \dot{v_0} + z\delta\dot{\beta_2})+
 		\\
-		&(\dot{w_0} + z\dot{\phi_3})  (\delta \dot{w_0} + z\delta\dot{\phi_3})
+		&(\dot{w_0} + z\dot{\beta_3})  (\delta \dot{w_0} + z\delta\dot{\beta_3})
 		\Big]
 		\ dz
 		\ d\Omega
@@ -379,8 +379,8 @@ Substituting the inertias into equation \ref{eqt17_3} yields:
 	)  
 	+
 	I_2
-	(\dot{\phi_1} \delta \dot{\phi_1} 
-	+ \dot{\phi_2} \delta \dot{\phi_2} 
+	(\dot{\beta_1} \delta \dot{\beta_1} 
+	+ \dot{\beta_2} \delta \dot{\beta_2} 
 	)  
 	\Big]
 	\ d\Omega
@@ -630,3 +630,51 @@ The general implementation of the stress and strain recovery described above is 
 		\State Interpolate $outputMatrix$ to standard Gauss points for visualisation
 	\end{algorithmic}
 \end{algorithm}
+
+\subsection{Von Mises equivalent stress}
+
+The Von Mises equivalent stress is a convenient method to translate a complex 3 dimensional stress state into an equivalent scalar value. As such, it's computation requires element stresses to be recovered, the tensor of which is:
+
+\begin{equation} 
+\boldsymbol{\sigma} = 
+\begin{pmatrix}
+\sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+\sigma_{xy} & \sigma_{yy} & \sigma_{yz} \\
+\sigma_{xz} & \sigma_{yy} & \sigma_{zz}
+\end{pmatrix}
+\label{eqt22}
+\end{equation}
+
+Limiting the tensor to plane stress states, the deviatoric stress tensor $\boldsymbol{\sigma}'$ can be derived by subtracting the mean hydrostatic stress $\sigma_{H}$:
+\begin{equation} 
+\boldsymbol{\sigma}' = \boldsymbol{\sigma} - \sigma_{H} \delta_{ij} = 
+\frac{1}{3}
+\begin{pmatrix}
+2\sigma_{xx}-\sigma_{yy} & 3\sigma_{xy} & 3\sigma_{xz} \\
+3\sigma_{xy} & 2\sigma_{yy}-\sigma_{xx} & 3\sigma_{yz} \\
+3\sigma_{xz} & 3\sigma_{yy} & -\sigma_{xx}-\sigma_{yy} \\
+\end{pmatrix}\ ,
+\hspace{5mm}
+\sigma_{H} = \frac{\sigma_{xx} + \sigma_{yy} + (\sigma_{zz} = 0)}{3}
+\label{eqt23}
+\end{equation}
+
+The Von Mises equivalent stress is a scaling of the second deviatoric stress invariant $J_2$ related by:
+
+\begin{equation} 
+\sigma_{VM} = \sqrt{3J_2} = \sqrt{\frac{3}{2}\boldsymbol{\sigma}' : \boldsymbol{\sigma}'}
+\label{eqt24}
+\end{equation}
+
+Expanding the above expression in conjuction with equation \ref{eqt23}, the Von Mises equivalent stress for the 5 parameter shell model is simplified to:
+
+\begin{equation} 
+\sigma_{VM} = 
+\sqrt{
+\sigma_{xx}^2
+- \sigma_{xx}\sigma_{yy}
++ \sigma_{yy}^2
++ 3(\sigma_{xy}^2 + \sigma_{xz}^2 + \sigma_{yz}^2)
+}
+\label{eqt25}
+\end{equation}

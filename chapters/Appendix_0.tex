@@ -29,7 +29,6 @@ l_1^2 = (a+u)^2 + (b-w)^2 = L^2 + u^2 + 2au +w^2 -2bw
 \end{equation}
 
 The Green-Lagrange strain measure for a truss is recalled and specified, as is it's first variation:
-
 \begin{equation} 
 \epsilon_{gl1} = \frac{1}{2}
 \Big(\frac{l_1^2-L^2}{L^2}\Big)
@@ -92,7 +91,7 @@ Clarifying with respect to the system considered yields:
 +
 \int_{V_2} \sigma_{pk2(2)} \epsilon_{gl2}
 \ dV_2
-- \lambda P \delta w = 0
+- \lambda F \delta w = 0
 \label{eqapp0_5}
 \end{equation}
 
@@ -117,7 +116,7 @@ Combining the kinematics and constitutive relations yields a crude form of the r
 		+
 		(w-b)\delta w
 		\Big] 
-		- \lambda P \delta w = 0
+		- \lambda F \delta w = 0
 		\label{eqapp0_6_0}
 	\end{aligned}
 \end{gather}
@@ -126,10 +125,9 @@ Development of the above expression, and arranging into vector form yields:
 
 \begin{equation} 
 \mathbf{r} = 
-\frac{EA}{L^3}
 \begin{pmatrix}
-u^3+uw^2-2bwu+2a^2u \\
-u^2w + w^3 - 3bw^2 - bu^2 +2b^2w - \lambda P
+\frac{EA}{L^3} [u^3+uw^2-2bwu+2a^2u] \\
+\frac{EA}{L^3} [u^2w + w^3 - 3bw^2 - bu^2 +2b^2w] - \lambda F
 \end{pmatrix}
 =
 \mathbf{0}
@@ -144,7 +142,7 @@ Recalling that the system tangent matrix $\mathbf{K}$ is the gradient of the sys
 =
 \frac{EA}{L^3}
 \begin{pmatrix}
-3u^2 + w^2 - 2bw +2au +2a^2 & 2uw -2bu \\
+3u^2 + w^2 - 2bw +2a^2 & 2uw -2bu \\
 2uw - 2bu & u^2 + 3w^2 - 6bw + 2b^2
 \end{pmatrix}
 \label{eqapp0_7}
@@ -158,7 +156,7 @@ Key to stability analysis are the calculation of critical points which indicate 
 \label{eqapp0_8}
 \end{equation}
 
-For the system considered ($a=b=EA=P=1$), the roots of the above equation are:
+For the system considered ($a=b=EA=F=1$), the roots of the above equation are:
 
 \begin{equation} 
 w_{crit1} = 0.4226
@@ -199,7 +197,7 @@ $N$ is the normal force in the trusses, derived from vertical static equilibrium
 
  \begin{equation} 
 \mathbf{K}_g = 
-\frac{-\lambda P}{b}
+\frac{-\lambda F}{b}
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
@@ -212,14 +210,14 @@ The general LPB eigensystem, focussed on critical load factors only, can be asse
  \begin{equation} 
  det
 \begin{pmatrix}
-\frac{EA}{L^3} 2a^2 - \frac{\lambda P}{b} & 0 \\
-0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda P}{b}
+\frac{EA}{L^3} 2a^2 - \frac{\lambda F}{b} & 0 \\
+0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda F}{b}
 \end{pmatrix}
 = 0
 \label{eqapp0_14}
 \end{equation}
 
-For the system considered ($a=b=EA=P=1$), the LPB critical load factors coalesce and are calculated to be:
+For the system considered ($a=b=EA=F=1$), the LPB critical load factors coalesce and are calculated to be:
 
 \begin{equation} 
 \lambda_{lpb\ crit1} = 

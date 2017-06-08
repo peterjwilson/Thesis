@@ -93,7 +93,7 @@ It's clear that after both critical points, as depicted in figure \ref{stab1}(a)
 
 Despite the need for stability analysis to be regularly considered throughout engineering design, the effort and level of analysis required is clearly quite significant for even simple systems. As such, a linearised approach termed Linear Prebuckling analysis, is often employed.
 
-\section{Linear prebuckling analysis}
+\section{Linear Prebuckling analysis}
 Linear Prebuckling (LPB) analysis offers insight, albeit reduced, into the stability characteristics of structures at a fraction of the computational expense required for a full non-linear equilibrium path analysis.
 
 In order to further interrogate the nature of structural stability, and how it may be simplified, the tangent stiffness matrix in equation \ref{eqstab1} can be decomposed. The total tangent matrix is made up of the material stiffness matrix $\mathbf{K}_m$ (itself composed of the elastic stiffness $\mathbf{K}_e$ and initial displacement stiffness $\mathbf{K}_u$) and the geometric stiffness matrix $\mathbf{K}_g$. Thus equation \ref{eqstab1} can be expanded accordingly:
@@ -162,14 +162,13 @@ To illustrate the various aspects stability analysis, including response diagram
 	\label{stab2_1}
 \end{figure}
 
-After developing the system's virtual work expression via the 2nd Piola-Kirchhoff stress measure and the conjugate Green-Lagrange strain measure, the residual vector can be developed as:
+After developing the system's virtual work expression via the 2nd Piola-Kirchhoff stress measure and the conjugate Green-Lagrange strain measure, the residual vector can be expressed as:
 
 \begin{equation} 
 \mathbf{r} = 
-\frac{EA}{L^3}
 \begin{pmatrix}
-u^3+uw^2-2bwu+2a^2u \\
-u^2w + w^3 - 3bw^2 - bu^2 +2b^2w - \lambda P
+\frac{EA}{L^3} [u^3+uw^2-2bwu+2a^2u] \\
+\frac{EA}{L^3} [u^2w + w^3 - 3bw^2 - bu^2 +2b^2w] - \lambda F
 \end{pmatrix}
 =
 \mathbf{0}
@@ -184,13 +183,13 @@ With the residual vector in hand, the system's stiffness matrix can be expressed
 =
 \frac{EA}{L^3}
 \begin{pmatrix}
-3u^2 + w^2 - 2bw +2au +2a^2 & 2uw -2bu \\
+3u^2 + w^2 - 2bw +2a^2 & 2uw -2bu \\
 2uw - 2bu & u^2 + 3w^2 - 6bw + 2b^2
 \end{pmatrix}
 \label{eqstab7}
 \end{equation}
 
-Non-linear critical points can be determined by setting the determinant of the stiffness matrix to zero and solving. For the system parameters of ($a=b=EA=P=1$) and under the assumption of $u = 0$ before instability, the non-linear critical points are calculated to be:
+Non-linear critical points can be determined by setting the determinant of the stiffness matrix to zero and solving. For the system parameters of ($a=b=EA=F=1$) and under the assumption of $u = 0$ before instability, the non-linear critical points are calculated to be:
 
  \begin{equation} 
 \mathbf{P}_{NL1} = 
@@ -215,8 +214,8 @@ Although the non-linear critical points have been determined, a LPB analysis of 
  \begin{equation} 
 det
 \begin{pmatrix}
-\frac{EA}{L^3} 2a^2 - \frac{\lambda P}{b} & 0 \\
-0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda P}{b}
+\frac{EA}{L^3} 2a^2 - \frac{\lambda F}{b} & 0 \\
+0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda F}{b}
 \end{pmatrix}
 = 0
 \label{eqstab9}
@@ -232,7 +231,7 @@ The eigenvalues of the above expression coalesce into the same value:
 
 It's clear that the LPB analysis is quite inaccurate for this structure with the estimated onset of instability occurring at over 5 times that of the first non-linear buckling load $\lambda_{c1} = 0.1361$. This inaccuracy is due to the fact that the structure is quite flexible in the pre-critical regime, which violates the small deflections assumption vital to the accurate use of LPB analysis.
 
-The following response diagram plots the equilibrium path $\lambda-w$ (assuming $u = 0$ throughout), determinant of the stiffness matrix and the LPB critical load limit over vertical displacement $w$.
+The following response diagram plots the equilibrium path $\lambda$ vs. $w$ (assuming $u = 0$ throughout), determinant of the stiffness matrix and the LPB critical load limit over vertical displacement $w$.
 
 \begin{figure}[H]
 	\centering
@@ -242,9 +241,9 @@ The following response diagram plots the equilibrium path $\lambda-w$ (assuming 
 	\label{stab2}
 \end{figure}
 
-From the graph it can be seen that the primary equilibrium path traces the two bars snapping through, with $w=2.0$ corresponding to a fully snapped through system. Both non-linear critical points are highlighted on the equilibrium path with their connection to the vanishing stiffness determinant at these points explicitly drawn.
+From the graph it can be seen that the primary equilibrium path traces the two bars snapping through, with $w=1.0$ signifying the bars in a perfectly horizontal position and $w=2.0$ corresponding to a fully snapped through system. Both non-linear critical points are highlighted on the equilibrium path with their connection to the vanishing stiffness determinant at these points explicitly drawn.
 
-As previously discussed, inaccuracies of the LPB analysis are attributable to the not-insignificant pre-critical deflections of the structure. The sensitivity of LPB analysis to this effect can be investigated by gradually increasing the height $b$ of the structure while retaining the same span $a$. As the height over span ratio $b/a$ increases, the structure will become stiffer and pre-critical vertical displacements will reduce. As the actual structural behaviour gradually aligns with the underpinning LPB assumptions, the LPB results should become more accurate. Across the range of $1 \le b/a \le 5$, the ratios of critical LPB load factors to the lowest non-linear critical load factors have been plot in the following figure. Although it is acknowledged that as $b/a$ increase the instability mode will change from a limit to bifurcation point, the detail of interest here is the load factor associated with the onset of instability, regardless of it's nature.
+As previously discussed, inaccuracies of the LPB analysis are attributable to the consequential pre-critical deflections of the structure. The sensitivity of LPB analysis to this effect can be investigated by gradually increasing the height $b$ of the structure while retaining the same span $a$. As the height over span ratio $b/a$ increases, the structure will become stiffer and pre-critical vertical displacements will reduce. As the actual structural behaviour gradually aligns with the underpinning LPB assumptions, the LPB results should become more accurate. Across the range of $1 \le b/a \le 5$, the ratios of critical LPB load factors to the lowest non-linear critical load factors have been plot in the following figure. Although it is acknowledged that as $b/a$ increase the instability mode will change from a limit to bifurcation point, the detail of interest here is the load factor associated with the onset of instability, regardless of it's nature.
 
 \begin{figure}[H]
 	\centering

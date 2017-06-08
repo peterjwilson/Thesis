@@ -699,6 +699,32 @@
     \field{year}{2003}
   \endentry
 
+  \entry{felippa2006supernatural}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FCA}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={Carlos\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{FCA2}
+    \strng{fullhash}{FCA2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{41}
+    \field{pages}{5316\bibrangedash 5342}
+    \field{title}{Supernatural QUAD4: a template formulation}
+    \field{volume}{195}
+    \field{journaltitle}{Computer methods in applied mechanics and engineering}
+    \field{year}{2006}
+  \endentry
+
   \entry{tsai12}{thesis}{}
     \name{author}{1}{}{%
       {{hash=HW}{%

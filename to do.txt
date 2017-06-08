@@ -3,26 +3,26 @@ Problems:
 	- quad gauss point results are crap for the existing element too!
 
 To Do:	
-	- rotating pendulum problem
 	- stability problem
 	- Wrinkle problem
 	- Eigenvalue stability solver
 	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
+	- Do stability problems, compare results between different element technologies on and off, as well as NL and LPB
+		- Euler buckling of CHS with unstructured mesh will show diff between ANDES and not - membrane locking
+		- Wrinkle stuff
 
 	Benchmarking:
-		- DSG transverse shear recovery:
-		- DSG composite stress recovery for transverse shear!
 
 	
 	Report:
+		- Go through ANDES and clean up formulation - MID WAY THROUGH MAPPING MATRIX!!
+		- Kg derivation for shells
+		- Manual derivation of buckling problem
+		 - Go over ANDES formulation to make consistent with Kratos
 		- (Up next)
-		- Update snapthru graphs for displacement control
-		- Revise composites theory and implementation section
 		- Transverse shear stress results discussion!
 		- 
 		- (Soon)
-		- Hinged cylinder - update results graph
-		- Open cyl - update results graph
 		- 3 param background - figure out why Gotta figure out lamda - G = lamda
 		- 
 		- (Whenever)

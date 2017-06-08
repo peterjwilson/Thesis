@@ -191,12 +191,12 @@ plt.plot(u,lam_2,color = 'grey',linewidth=3.0, label = 'Equilibrium path',antial
 
 plt.plot(u,k_mat_22,color = '#77B5FE', linewidth=3.0,label = 'det[K]',antialiased=True)
 
-#plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', label = 'LPB',antialiased=True)
-plt.axhline(y=lamda_lpb[1],color = '#79BFA1', linestyle='--', linewidth=3.0, 
-         label = 'LPB',antialiased=True)
+plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', linewidth=3.0,label = 'LPB',antialiased=True)
+#plt.axhline(y=lamda_lpb[1],color = '#79BFA1', linestyle='--', linewidth=3.0, 
+#         label = 'LPB',antialiased=True)
 
 
-plt.plot(u_lpb[1],lamda_lpb[1],color = '#79BFA1', linestyle='None', markerfacecolor= 'None',markeredgecolor= '#79BFA1', markersize = 7.0, marker='o', label = None,antialiased=True)
+plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', linestyle='None', markerfacecolor= 'None',markeredgecolor= '#79BFA1', markersize = 7.0, marker='o', label = None,antialiased=True)
 
 plt.plot(u_c1,lamda_c1,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
 plt.plot(u_c2,lamda_c2,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)

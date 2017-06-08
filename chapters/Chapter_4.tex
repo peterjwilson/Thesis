@@ -22,15 +22,15 @@
 \end{flushleft}
 \renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
 
-The stiffness matrix, mass matrix and quantity recovery for the ANDES-DKQ quadrilateral shell element in Kratos are covered in this chapter.
+The following chapter outlines the formulation and implementation of the stiffness matrix, mass matrix and quantity recovery for the ANDES-DKQ quadrilateral shell element in Kratos.
 
 \section{Stiffness matrix formulation}
 
-Unlike the DSG triangle, the ANDES-DKQ element uses different finite element technologies for the membrane and bending components, both of which are subsequently developed. 
+As per the element technology discussion in section \ref{FE_tech}, the ANDES-DKQ element uses different finite element technologies for the membrane and bending components, both of which are subsequently developed. 
 
 \subsection{ANDES membrane formulation}
 
-The membrane formulation is responsible for providing the membrane stiffness of the element. The membrane formulation chosen was the Assumed Natural Deviatoric Strains (ANDES) formulation as presented in \cite{Hau94}. A full description and theoretical derivation of the ANDES approach falls outside the scope of this document, however, those interested are directed to Militello's and Felippa's initial paper \cite{Fel91} on the formulation. Most importantly, the ANDES approach yields high performance elements that are insensitive to distortion.
+The membrane formulation is responsible for providing the membrane stiffness of the element. Unlike the linear triangle DSG element, bilinear quadrilaterals are susceptible to membrane locking, and, as such, the ANDES membrane formulation was prudentially chosen as presented in \cite{Hau94}. A full description and theoretical derivation of the ANDES approach falls outside the scope of this document, however, those interested are directed to Militello's and Felippa's initial paper \cite{Fel91} on the formulation.
 
 Only the membrane portion of the total shell element is considered in this section, in which there are three DOFs per node.
 
@@ -49,7 +49,7 @@ where
 \label{equation04}
 \end{equation}
 
-The ANDES membrane formulation itself is split into the basic stiffness related to the basic constant strain displacement matrix $\mathbf{L}$ and the higher order stiffness related to the higher order deviatoric strain displacement matrix $\mathbf{B}_d$.
+The ANDES membrane formulation, following the FF framework, is split into the basic stiffness related to the basic constant strain displacement matrix $\mathbf{L}$ and the higher order stiffness related to the higher order deviatoric strain displacement matrix $\mathbf{B}_d$.
 
 \begin{equation} 
 \mathbf{K}_{mem} = \mathbf{K}_{b} + \mathbf{K}_{h} = \int_A (\mathbf{L} + \mathbf{B}_d)^T \mathbf{C}_{mem} (\mathbf{L} + \mathbf{B}_d)\ dA
@@ -58,7 +58,7 @@ The ANDES membrane formulation itself is split into the basic stiffness related 
 
 The basic strain displacement matrix $\mathbf{L}$ and the higher order complement $\mathbf{B}_d$ are now developed. 
 
-\subsubsection{Membrane basic stiffness}
+\textit{Membrane basic stiffness}
 
 The membrane basic stiffness is driven by assuming a constant stress field within the element and lumping this over side edges to consistent nodal forces. 
 
@@ -117,7 +117,7 @@ y_{ki} & 0 & -x_{ki} \\
 
 Throughout this formulation the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\ y_j$ holds. Furthermore, the value of $\alpha$ is taken as 1.5 \cite{Fel91}.
 
-\subsubsection{Membrane higher order stiffness}
+\textit{Membrane higher order stiffness}
 
 The membrane higher order stiffness considers a set of higher order DOFs expressed in terms of the visible DOFs as per equation \eqref{equation04}.
 
@@ -141,11 +141,11 @@ with
 	\begin{aligned}
 		&\mathbf{H_{\theta v}} = 
 		\begin{pmatrix}
-			0 & 0 & \frac{3}{4} & 0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{-1}{4} \\
-			0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{3}{4} & 0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{-1}{4} \\
-			0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{3}{4} & 0 & 0 & \frac{-1}{4} \\
-			0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{-1}{4} & 0 & 0 & \frac{3}{4} \\
-			\frac{x_{42}}{f} & \frac{y_{42}}{f} & \frac{1}{4} & \frac{x_{13}}{f} & \frac{y_{13}}{f} & \frac{1}{4} & \frac{x_{24}}{f} & \frac{y_{24}}{f} & \frac{1}{4} & \frac{x_{31}}{f} & \frac{y_{31}}{f} & \frac{1}{4}
+			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{3}{4} & \frac{-1}{4} & \frac{-1}{4} & \frac{-1}{4} \\
+			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{-1}{4} & \frac{3}{4} & \frac{-1}{4} & \frac{-1}{4} \\
+			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{-1}{4} & \frac{-1}{4} & \frac{3}{4} & \frac{-1}{4} \\
+			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{-1}{4} & \frac{-1}{4} & \frac{-1}{4} & \frac{3}{4} \\
+			\frac{x_{42}}{f} & \frac{x_{13}}{f} & \frac{x_{24}}{f} & \frac{x_{31}}{f} & \frac{y_{42}}{f} & \frac{y_{13}}{f} & \frac{x_{24}}{f} & \frac{y_{31}}{f} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}
 		\end{pmatrix}\\
 		&where 
 		\hspace{10mm} 
@@ -169,7 +169,7 @@ where
 \end{pmatrix}
 \label{equationv_t}
 \end{equation}
-with
+The translational mapping matrix $ \mathbf{H}_{tv}$ was originally prescribed by Haugen to be:
 \begin{equation} 
 \mathbf{H}_{tv} =
 \begin{pmatrix}
@@ -178,6 +178,21 @@ with
 \end{pmatrix}
 \label{equation10}
 \end{equation}
+
+However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes too, the general translational mapping matrix from \cite{felippa2006supernatural} is utilised, as outlined below:
+
+\begin{equation} 
+\mathbf{H}_{tv} =
+\begin{pmatrix}
+{s_\xi}_x & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 0 \\
+0 & 1 & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 
+\end{pmatrix}
+\label{equation10_1}
+\end{equation}
+
+The coefficients $H_i$ are determined with the following geometric calculations:
+
+
 
 Combining both mapping matrices together expresses all higher order DOFs in terms of the visible DOFs:
 
@@ -201,7 +216,7 @@ and
 \label{equation11}
 \end{equation}
 
-The descriptions for equations from \eqref{equation12} to \eqref{equation22} are heavily abridged from the original element derivation \cite{Hau94}. The general idea of these equations is to relate the higher order nodal strain gauge readings to cartesian strain displacement matrices $\mathbf{B}_{hi}$.
+The descriptions for equations from \eqref{equation12} to \eqref{equation22} are abridged from the original element derivation \cite{Hau94}. The general idea of these equations is to relate the higher order nodal strain gauge readings to Cartesian strain displacement matrices $\mathbf{B}_{hi}$.
 
 \begin{figure}[H]
 	%\centering
@@ -242,7 +257,6 @@ The strain gauges are placed as per figure \ref{fig:andes_gauges} and read strai
 \end{equation}
 
 The strain readings are related to the higher order degrees of freedom via the nodal strain templates $\mathbf{Q}_i$.
-
 \begin{equation} 
 \boldsymbol{\epsilon}_{i} = \mathbf{Q}_i \widetilde{\mathbf{v}}
 \label{eqnAndesHigherOrderStrains}
@@ -321,7 +335,6 @@ Under this torsional regime, $\epsilon_\xi$ is positive in the 1st and 3rd quadr
 \textit{Higher order nodal strain templates}
 
 Considering the higher order bending and torsional components just outlined, the nodal strain gauge readings can be described as follows:
-
 \begin{equation} 
 \mathbf{Q}_1 =
 \begin{pmatrix}
@@ -374,7 +387,6 @@ where
 \end{align*}
 
 An optimisation of element performance has suggested the following coefficients to be used in the nodal strain gauge templates \cite{Hau94}. 
-
 \begin{gather} 
 	\begin{aligned}
 		&\rho_1 = 0.1\ ,
@@ -401,8 +413,7 @@ An optimisation of element performance has suggested the following coefficients 
 
 \textit{Cartesian higher order strain displacement matrix}
 
-The cartesian strain displacement matrices at the nodes are related to the mapping matrices $\mathbf{Q}_i$ as described below:
-
+The Cartesian strain displacement matrices at the nodes are related to the mapping matrices $\mathbf{Q}_i$ as described below:
 \begin{gather} 
 	\begin{aligned}
 		&\mathbf{B}_{h1} = \mathbf{T}_{13}  \mathbf{Q}_{1}\ ,
@@ -436,14 +447,13 @@ The cartesian strain displacement matrices at the nodes are related to the mappi
 	\end{aligned}
 \end{gather}
 
-The higher order membrane B matrix $\mathbf{B}_h$ is constructed from the interpolation of the nodal B matrices with standard bi-linear shape functions.
-
+The total higher order membrane B matrix $\mathbf{B}_h$ is constructed from the interpolation of the nodal $\mathbf{B}_{hi}$ matrices with standard bi-linear shape functions.
 \begin{equation} 
 \mathbf{B}_h(\xi,\eta) = (1-\xi)(1-\eta)\mathbf{B}_{h1} + (1+\xi)(1-\eta)\mathbf{B}_{h2} + (1+\xi)(1+\eta)\mathbf{B}_{h3} +	(1-\xi)(1+\eta)\mathbf{B}_{h4} 
 \label{equation19}
 \end{equation}
 
-The current strain field interpolation is not energy orthogonal to the basic strain field yet. This deviatoric condition can be achieved by subtracting the mean integral:
+A requirement of the underlying FF is energy orthogonality between the basic and higher order strain fields, which is not yet fulfilled. This orthogonality can be achieved by rendering the higher order field deviatoric, as per the formulation name, which involves subtracting the mean integral:
 
 \begin{equation} 
 \mathbf{B}_d(\xi,\eta) = \mathbf{B}_h(\xi,\eta) - \bar{\mathbf{B}}_h
@@ -457,7 +467,7 @@ with
 \subsection{DKQ bending formulation}
 \label{section:DKQ bending formulation}
 
-The bending formulation is responsible for providing the bending stiffness of the element. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full description and theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. Most importantly for a thin shell element, the transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
+The bending formulation is responsible for providing the bending stiffness of the element, with an enhanced formulation selected to pre-empt transverse shear locking. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full description and theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. As described in section \ref{dkqtheory}, the transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
 
 Only the bending portion of the total shell element is considered in this section, in which there are three nodal DOFs per node $(w_i$ corresponds to $u_{zi}$ in the figure below).
 
@@ -518,7 +528,7 @@ where $\psi_i$ are the standard 8 node serendipity shape functions described by 
 
 and $\xi_i$ and $\eta_i$ are the natural coordinates of the 8 node serendipity element described in figure \ref{8nodeseren}.
 
-The following derivation from equations \eqref{equation22} to \eqref{equation27} is heavily summarised from that of Barrales \cite{Bar12}. The general idea is the construction of a mapping from the standard 12 DOFs at each node to $\beta_x (\xi,\ \eta)$ and $\beta_y (\xi,\ \eta)$ across the element, the derivatives of which are curvatures as expressed in equation \eqref{equation27}.
+The following derivation from equations \eqref{equation22} to \eqref{equation27} is summarised from that of Barrales \cite{Bar12}. The general idea is the construction of a mapping from the standard 12 DOFs at each node to $\beta_x (\xi,\ \eta)$ and $\beta_y (\xi,\ \eta)$ across the element, the derivatives of which are curvatures as expressed in equation \eqref{equation27}.
 
 The following quantities are required components for the mapping:
 
@@ -530,13 +540,13 @@ x_{ij} = x_i - x_j\ ,
 y_{ij} = y_i - y_j
 \label{equation22}
 \end{equation}
-
 \begin{gather} 
 	\begin{aligned}
 		&a_k = \frac{-x_{ij}}{L_{ij}^2}\ ,
 		\hspace{10mm}
 		b_k = \frac{3}{4} \frac{x_{ij} y_{ij}}{L_{ij}^2}\ , \\
-		&c_k = \frac{\frac{1}{4} x_{ij}^2 - \frac{1}{2} y_{ij}^2}{L_{ij}^2}\ ,
+		c_k = \frac{\frac{1}{4} x_{ij}^2 - \frac{1}{2} y_{ij}^2}{L_{ij}^2}\
+		& ,
 		\hspace{10mm}
 		d_k = \frac{-y_{ij}}{L_{ij}^2}\ ,
 		\hspace{10mm}
@@ -565,7 +575,6 @@ The elements of the mapping matrix are arranged as such:
 \end{equation}
 
 where the vectors entries are calculated as per the following scheme:
-
 \begin{gather} 
 	\begin{aligned}
 		&\Psi_{3(i-1)+1}^x (\xi , \eta) = \frac{3}{2} (a_r \psi_r (\xi , \eta) - a_s \psi_s (\xi , \eta) ) \\
@@ -574,7 +583,6 @@ where the vectors entries are calculated as per the following scheme:
 		\label{equation25}
 	\end{aligned}
 \end{gather}
-
 \begin{gather} 
 	\begin{aligned}
 		&\Psi_{3(i-1)+1}^y (\xi , \eta) = \frac{3}{2} (d_r \psi_r (\xi , \eta) - d_s \psi_s (\xi , \eta) ) \\
@@ -612,7 +620,6 @@ j_{11} \frac{\partial \mathbf{\Psi}^{y^T}}{\partial \xi}  + j_{12} \frac{\partia
 \end{equation}
 
 and the inverse Jacobian entries $j_{\alpha \beta}$:
-
 \begin{gather} 
 	\begin{aligned}
 		&\mathbf{J} = \frac{1}{4}
@@ -704,19 +711,22 @@ The new quad element is implemented in the files $\texttt{shell\_thin\_element\_
 	\tikzstyle{virtual} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
 	\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white!30]
 	\tikzstyle{arrow} = [thick,->,>=stealth]
-	\begin{tikzpicture}[node distance = 1.9cm, auto]
-% Place nodes
-\node [process] (CalculateLocalSystem) {$\texttt{CalculateLocalSystem()}$};
-\node [process, right of=CalculateLocalSystem, xshift = 4cm] (CalculateAll) {$\texttt{CalculateAll()}$};
-\node [process, below of=CalculateAll, xshift = -0cm] (InitializeCalculationData) {$\texttt{InitializeCalculationData()}$};
-\node [process, below of=InitializeCalculationData, yshift = -0cm] (CalculateSectionResponse) {$\texttt{CalculateSectionResponse()}$};
-\node [process, below of=CalculateSectionResponse, yshift = -0cm] (FinalizeCalculations) {$\texttt{FinalizeCalculations()}$};
-% Draw edges
-\draw [arrow] (CalculateLocalSystem) -- (CalculateAll);
-\draw [arrow] (CalculateAll) -- (InitializeCalculationData);
-\draw [arrow] (InitializeCalculationData) -- (CalculateSectionResponse);
-\draw [arrow] (CalculateSectionResponse) -- (FinalizeCalculations);
-\end{tikzpicture}
+	\begin{tikzpicture}[node distance = 2cm, auto]
+	% Place nodes
+	\node [process] (CalculateLocalSystem) {CalculateLocalSystem()};
+	\node [process, right of=CalculateLocalSystem, xshift = 2.5cm] (CalculateAll) {CalculateAll()};
+	\node [process, below of=CalculateAll, xshift = -0cm] (InitializeCalculationData) {InitializeCalculationData()};
+	\node [process, below of=InitializeCalculationData, yshift = -2cm] (CalculateGaussPointContribution) {CalculateGaussPointContribution()};
+	\node [process, right of=CalculateGaussPointContribution, xshift = 4cm] (CalculateBMatrix) {CalculateBMatrix()};
+	\node [process, below of=CalculateGaussPointContribution, yshift = -1cm] (FinalizeCalculations) {FinalizeCalculations()};
+	% Draw edges
+	\draw [arrow] (CalculateLocalSystem) -- (CalculateAll);
+	\draw [arrow] (CalculateAll) -- (InitializeCalculationData);
+	\draw [arrow] (InitializeCalculationData) -- (CalculateGaussPointContribution);
+	\draw [arrow] (CalculateGaussPointContribution) -- (FinalizeCalculations);
+	\draw [arrow] (CalculateGaussPointContribution) edge[bend left=45] node [above] {$Gauss\ Loop$} (CalculateBMatrix);
+	\draw [arrow] (CalculateBMatrix) edge[bend left=45] node [below] {} (CalculateGaussPointContribution);
+	\end{tikzpicture}
 	\caption{High level overview of ANDES-DKQ element workflow}
 	\label{andesworkflow}
 \end{figure}
@@ -792,14 +802,14 @@ where
 The general lumped mass is determined for a multi-ply material with $n$ plies each of $t_i$ thickness and $\rho_i$ density as follows:
 
 \begin{equation} 
-\bar{m} = \frac{A}{4} \sum_{i=1}^n \rho_i t_i
+\bar{m} = \frac{A}{4} \sum_{i=1}^n \rho_i h_i
 \label{eqqmass2}
 \end{equation}
 
 For a single layer material of area $A$ this reduces to:
 
 \begin{equation} 
-\bar{m} = \frac{A}{4} \rho t
+\bar{m} = \frac{A}{4} \rho h
 \label{eqqmass3}
 \end{equation}
 
@@ -913,7 +923,6 @@ w_i
 The stresses and strains of the ANDES-DKT quadrilateral element are recovered in a similar way to the DSG triangle, with the added complication of the multiple Gauss points.
 
 The non-zero local strains ($\epsilon_{zz},\ \epsilon_{xz},\ \epsilon_{yz} = 0$) of the 4 noded 3 parameter element can be arranged in a vector form:
-
 \begin{equation} 
 \boldsymbol{\epsilon}^T = \begin{pmatrix}
 \boldsymbol{\epsilon}_1 & \boldsymbol{\epsilon}_2 & \boldsymbol{\epsilon}_3 & \boldsymbol{\epsilon}_4
@@ -948,9 +957,9 @@ With the strains determined, the stresses at each Gauss point are recovered with
 \label{eqqrec4}
 \end{equation}
 
-The general implementation of the stress and strain recovery described above is illustrated in the following pseudocode.
+The general implementation of the stress and strain recovery described above is illustrated in pseudocode algorithm \ref{ANDES-DKT quadrilateral element stress and strain recovery}.
 
-\begin{algorithm}
+\begin{algorithm}[tbh]
 	\onehalfspacing
 	\caption{ANDES-DKT quadrilateral element stress and strain recovery}
 	\label{ANDES-DKT quadrilateral element stress and strain recovery}
@@ -982,3 +991,31 @@ The general implementation of the stress and strain recovery described above is 
 		\EndWhile
 	\end{algorithmic}
 \end{algorithm}
+
+\subsection{Von Mises equivalent stress}
+
+As per the DSG element, the Von Mises equivalent stress is calculated for the ANDES-DKQ element by double contracting the deviatoric stress tensor. The result to calculate Von Mises equivalent stresses of the DSG element is recalled:
+
+\begin{equation} 
+\sigma_{VM} = 
+\sqrt{
+	\sigma_{xx}^2
+	- \sigma_{xx}\sigma_{yy}
+	+ \sigma_{yy}^2
+	+ 3(\sigma_{xy}^2 + \sigma_{xz}^2 + \sigma_{yz}^2)
+}
+\label{eqqrec5}
+\end{equation}
+
+Corresponding to the underlying 3 parameter model of the ANDES-DKQ in which $\sigma_{3i} = 0$, the expression above can be simplified, yielding the formula to determine the Von Mises equivalent stress for the ANDES-DKQ element:
+
+\begin{equation} 
+\sigma_{VM} = 
+\sqrt{
+	\sigma_{xx}^2
+	- \sigma_{xx}\sigma_{yy}
+	+ \sigma_{yy}^2
+	+ 3\sigma_{xy}^2
+}
+\label{eqqrec6}
+\end{equation}
