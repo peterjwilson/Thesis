@@ -173,26 +173,51 @@ The translational mapping matrix $ \mathbf{H}_{tv}$ was originally prescribed by
 \begin{equation} 
 \mathbf{H}_{tv} =
 \begin{pmatrix}
-1 & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 0 \\
-0 & 1 & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 
+{s_\xi}_x & -{s_\xi}_x & {s_\xi}_x & -{s_\xi}_x & {s_\xi}_y & -{s_\xi}_y & {s_\xi}_y & -{s_\xi}_y & 0 & 0 & 0 & 0 \\
+{s_\eta}_x & -{s_\eta}_x & {s_\eta}_x & -{s_\eta}_x & {s_\eta}_y & -{s_\eta}_y & {s_\eta}_y & -{s_\eta}_y & 0 & 0 & 0 & 0
 \end{pmatrix}
 \label{equation10}
 \end{equation}
+
+Where $\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the Cartesian unit vectors in the $\xi$ and $\eta$ directions respectively.
 
 However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes too, the general translational mapping matrix from \cite{felippa2006supernatural} is utilised, as outlined below:
 
 \begin{equation} 
 \mathbf{H}_{tv} =
 \begin{pmatrix}
-{s_\xi}_x & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 0 \\
-0 & 1 & 0 & 0 & -1 & 0 & 0 & 1 & 0 & 0 & -1 & 0 & 
+H_1{s_\xi}_x & H_2{s_\xi}_x & H_3{s_\xi}_x & H_4{s_\xi}_x & H_1{s_\xi}_y & H_2{s_\xi}_y & H_3{s_\xi}_y & H_4{s_\xi}_y & 0 & 0 & 0 & 0 \\
+H_1{s_\eta}_x & H_2{s_\eta}_x & H_3{s_\eta}_x & H_4{s_\eta}_x & H_1{s_\eta}_y & H_2{s_\eta}_y & H_3{s_\eta}_y & H_4{s_\eta}_y & 0 & 0 & 0 & 0
 \end{pmatrix}
 \label{equation10_1}
 \end{equation}
 
-The coefficients $H_i$ are determined with the following geometric calculations:
+The coefficients $H_i$ are determined with the following geometric calculations \cite{felippa2006supernatural}:
 
-
+\begin{equation} 
+\begin{pmatrix}
+H_1 \\
+H_2 \\
+H_3 \\
+H_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+\frac{A_0 + A_1 + A_2}{2A_0} \\
+\frac{-A_0 + A_1 - A_2}{2A_0} \\
+\frac{A_0 - A_1 - A_2}{2A_0} \\
+\frac{-A_0 - A_1 + A_2}{2A_0}
+\end{pmatrix}
+\hspace{5mm}
+with
+\hspace{5mm}
+\begin{pmatrix}
+A_0 = A \\
+A_1 = \frac{x_{34} y_{12} - x_{12} y_{34}}{2} \\
+A_2 = \frac{x_{23} y_{14} - x_{14} y_{23}}{2}
+\end{pmatrix}
+\label{equation10_2}
+\end{equation}
 
 Combining both mapping matrices together expresses all higher order DOFs in terms of the visible DOFs:
 

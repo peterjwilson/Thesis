@@ -3,9 +3,15 @@ Problems:
 	- quad gauss point results are crap for the existing element too!
 
 To Do:	
+	- Eigenvalue stability solver
+		- check with CSE off if the global K mat is symm!
+	
+		
 	- stability problem
 	- Wrinkle problem
-	- Eigenvalue stability solver
+	
+		
+		
 	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
 	- Do stability problems, compare results between different element technologies on and off, as well as NL and LPB
 		- Euler buckling of CHS with unstructured mesh will show diff between ANDES and not - membrane locking
