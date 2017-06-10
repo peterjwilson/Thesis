@@ -52,7 +52,7 @@ where
 The ANDES membrane formulation, following the FF framework, is split into the basic stiffness related to the basic constant strain displacement matrix $\mathbf{L}$ and the higher order stiffness related to the higher order deviatoric strain displacement matrix $\mathbf{B}_d$.
 
 \begin{equation} 
-\mathbf{K}_{mem} = \mathbf{K}_{b} + \mathbf{K}_{h} = \int_A (\mathbf{L} + \mathbf{B}_d)^T \mathbf{C}_{mem} (\mathbf{L} + \mathbf{B}_d)\ dA
+\mathbf{K}_{mem} = \mathbf{K}_{b} + \mathbf{K}_{h} = \int_A (\mathbf{L} + \mathbf{B}_d  \mathbf{H}_K)^T \mathbf{C}_{mem} (\mathbf{L} + \mathbf{B}_d \mathbf{H}_K)\ dA
 \label{equationMEM}
 \end{equation}
 
@@ -119,14 +119,48 @@ Throughout this formulation the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y
 
 \textit{Membrane higher order stiffness}
 
-The membrane higher order stiffness considers a set of higher order DOFs expressed in terms of the visible DOFs as per equation \eqref{equation04}.
+The membrane higher order stiffness considers a set of higher order DOFs expressed in terms of the visible DOFs. To improve readability and allow easier code checking, the visible membrane DOFs for the membrane higher order stiffness are arranged as per Haugen's original formulation \cite{Hau94} (denoted $\mathbf{u}_H$) in a component-wise fashion:
 
-\textit{It should be noted that the derviation below slightly departs from the formulation of Haugen \cite{Hau94} due to the DOF ordering as per equation \eqref{equation04}.}
+\begin{equation} 
+\mathbf{u}_H = 
+\begin{pmatrix}
+\mathbf{u}_x \\ 
+\mathbf{u}_y \\
+\boldsymbol{\beta}_z
+\end{pmatrix} 
+\hspace{5mm}
+where
+\hspace{5mm}
+\mathbf{u}_x = 
+\begin{pmatrix}
+u_{x1} \\
+u_{x2} \\
+u_{x3} \\
+u_{x4} 
+\end{pmatrix}
+\ ,\hspace{5mm}
+\mathbf{u}_y = 
+\begin{pmatrix}
+u_{y1} \\
+u_{y2} \\
+u_{y3} \\
+u_{y4} 
+\end{pmatrix}
+\ ,\hspace{5mm}
+\boldsymbol{\beta}_z= 
+\begin{pmatrix}
+\beta_{z1} \\
+\beta_{z2}  \\
+\beta_{z3}  \\
+\beta_{z4} 
+\end{pmatrix}
+\label{equation07_2}
+\end{equation}
 
 The higher order rotational DOFs are related to the visible DOFs as described below:
 
 \begin{equation} 
-\boldsymbol{\theta}_h = \mathbf{H}_{\theta v} \mathbf{u}
+\boldsymbol{\theta}_h = \mathbf{H}_{\theta u} \mathbf{u}_H
 \hspace{10mm}
 where
 \hspace{10mm}
@@ -139,7 +173,7 @@ where
 with
 \begin{gather} 
 	\begin{aligned}
-		&\mathbf{H_{\theta v}} = 
+		&\mathbf{H_{\theta u}} = 
 		\begin{pmatrix}
 			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{3}{4} & \frac{-1}{4} & \frac{-1}{4} & \frac{-1}{4} \\
 			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{-1}{4} & \frac{3}{4} & \frac{-1}{4} & \frac{-1}{4} \\
@@ -159,19 +193,19 @@ with
 \end{gather}
 The higher order translational DOFs are related to the visible DOFs as described below:
 \begin{equation} 
-\widetilde{\mathbf{v}}_t = \mathbf{H}_{tv} \mathbf{u}
+\widetilde{\mathbf{u}}_t = \mathbf{H}_{tu} \mathbf{u}_H
 \hspace{10mm}
 where
 \hspace{10mm}
-\widetilde{\mathbf{v}}_t^T = 
+\widetilde{\mathbf{u}}_t^T = 
 \begin{pmatrix}
-\widetilde{v}_x & \widetilde{v}_y
+\widetilde{u}_x & \widetilde{u}_y
 \end{pmatrix}
-\label{equationv_t}
+\label{equationu_t}
 \end{equation}
-The translational mapping matrix $ \mathbf{H}_{tv}$ was originally prescribed by Haugen to be:
+The translational mapping matrix $ \mathbf{H}_{tu}$ was originally prescribed by Haugen to be:
 \begin{equation} 
-\mathbf{H}_{tv} =
+\mathbf{H}_{tu} =
 \begin{pmatrix}
 {s_\xi}_x & -{s_\xi}_x & {s_\xi}_x & -{s_\xi}_x & {s_\xi}_y & -{s_\xi}_y & {s_\xi}_y & -{s_\xi}_y & 0 & 0 & 0 & 0 \\
 {s_\eta}_x & -{s_\eta}_x & {s_\eta}_x & -{s_\eta}_x & {s_\eta}_y & -{s_\eta}_y & {s_\eta}_y & -{s_\eta}_y & 0 & 0 & 0 & 0
@@ -181,10 +215,10 @@ The translational mapping matrix $ \mathbf{H}_{tv}$ was originally prescribed by
 
 Where $\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the Cartesian unit vectors in the $\xi$ and $\eta$ directions respectively.
 
-However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes too, the general translational mapping matrix from \cite{felippa2006supernatural} is utilised, as outlined below:
+However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes the general translational mapping matrix from \cite{felippa2006supernatural} is utilised and incorporated into Haugen's original approach in equation \ref{equation10}, as outlined below:
 
 \begin{equation} 
-\mathbf{H}_{tv} =
+\mathbf{H}_{tu} =
 \begin{pmatrix}
 H_1{s_\xi}_x & H_2{s_\xi}_x & H_3{s_\xi}_x & H_4{s_\xi}_x & H_1{s_\xi}_y & H_2{s_\xi}_y & H_3{s_\xi}_y & H_4{s_\xi}_y & 0 & 0 & 0 & 0 \\
 H_1{s_\eta}_x & H_2{s_\eta}_x & H_3{s_\eta}_x & H_4{s_\eta}_x & H_1{s_\eta}_y & H_2{s_\eta}_y & H_3{s_\eta}_y & H_4{s_\eta}_y & 0 & 0 & 0 & 0
@@ -222,23 +256,84 @@ A_2 = \frac{x_{23} y_{14} - x_{14} y_{23}}{2}
 Combining both mapping matrices together expresses all higher order DOFs in terms of the visible DOFs:
 
 \begin{equation} 
-\widetilde{\mathbf{v}} = \mathbf{H v}
+\widetilde{\mathbf{u}} = \mathbf{H} \mathbf{u}_H
 \hspace{10mm}
 where
 \hspace{10mm}
 \mathbf{H} =
 \begin{pmatrix}
-\mathbf{H}_{\theta v} \\
-\mathbf{H}_{vt}
+\mathbf{H}_{\theta u} \\
+\mathbf{H}_{ut}
 \end{pmatrix}
 \hspace{10mm}
 and
 \hspace{10mm}
-\widetilde{\mathbf{v}}^T = 
+\widetilde{\mathbf{u}}^T = 
 \begin{pmatrix}
-\theta_1^{'} & \theta_2^{'} & \theta_3^{'} & \theta_4^{'} & \bar{\theta} &  \widetilde{v}_x & \widetilde{v}_y
+\theta_1^{'} & \theta_2^{'} & \theta_3^{'} & \theta_4^{'} & \bar{\theta} &  \widetilde{u}_x & \widetilde{u}_y
 \end{pmatrix}
 \label{equation11}
+\end{equation}
+
+As discussed prior to equation \ref{equation07_2} the higher order membrane stiffness thus far is relative to Haugen's DOF ordering $\mathbf{u}_H$ which does not coincide with Kratos ordering $\mathbf{u}_K = \mathbf{u}$. Since the combined mapping matrix $\mathbf{H}$ is the only link between the visible and higher order DOFs, it is possible to "re-route" it via an additional filter operation to the Kratos DOF arrangement. The Kratos and Haugen DOF ordering can be related with a filter matrix $\mathbf{Z}$:
+
+\begin{equation} 
+\mathbf{u}_{K} = \mathbf{Z} \mathbf{u}_{H} 
+\label{equation11_2}
+\end{equation}
+
+\begin{equation} 
+\begin{pmatrix}
+u_{x1} \\
+u_{y1} \\
+\beta_{z1} \\
+u_{x2} \\
+u_{y2} \\
+\beta_{z2} \\
+u_{x3} \\
+u_{y3} \\
+\beta_{z3} \\
+u_{x4} \\
+u_{y4} \\
+\beta_{z4} 
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+u_{x1} \\
+u_{x2} \\
+u_{x3} \\
+u_{x4} \\
+u_{y1} \\
+u_{y2} \\
+u_{y3} \\
+u_{y4} \\
+\beta_{z1} \\
+\beta_{z2}  \\
+\beta_{z3}  \\
+\beta_{z4} 
+\end{pmatrix}
+\label{equation18_2}
+\end{equation}
+
+Hence, the higher order DOFs can be expressed in terms of the Kratos DOFs, with $\mathbf{H}_K$ denoting the transformed filter matrix:
+
+\begin{equation} 
+\widetilde{\mathbf{u}} = \mathbf{H Z} \mathbf{u}_H = \mathbf{H}_K \mathbf{u}_K = \mathbf{H}_K \mathbf{u}
+\label{equation11_3}
 \end{equation}
 
 The descriptions for equations from \eqref{equation12} to \eqref{equation22} are abridged from the original element derivation \cite{Hau94}. The general idea of these equations is to relate the higher order nodal strain gauge readings to Cartesian strain displacement matrices $\mathbf{B}_{hi}$.
