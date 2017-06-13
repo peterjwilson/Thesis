@@ -4,15 +4,7 @@ Problems:
 
 To Do:	
 	- Eigenvalue stability solver
-		- check with CSE off if the global K mat is symm!
-	
-		
-	- stability problem
-	- Wrinkle problem
-	
-		
-		
-	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
+		- check with CSE off if the global K mat is symm!		
 	- Do stability problems, compare results between different element technologies on and off, as well as NL and LPB
 		- Euler buckling of CHS with unstructured mesh will show diff between ANDES and not - membrane locking
 		- Wrinkle stuff
@@ -21,12 +13,11 @@ To Do:
 
 	
 	Report:
-		- Go through ANDES and clean up formulation - MID WAY THROUGH MAPPING MATRIX!!
-		- Kg derivation for shells
+		- Kg derivation for shells ????
 		- Manual derivation of buckling problem
-		 - Go over ANDES formulation to make consistent with Kratos
 		- (Up next)
 		- Transverse shear stress results discussion!
+		- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
 		- 
 		- (Soon)
 		- 3 param background - figure out why Gotta figure out lamda - G = lamda
