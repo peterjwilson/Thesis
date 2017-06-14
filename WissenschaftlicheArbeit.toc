@@ -197,6 +197,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Application of shell finite elements}{105}{chapter.10}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.1}Stability analysis}{105}{section.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1.1}Euler buckling of CHS column}{105}{subsection.10.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1.2}Shear wrinkling of thin membrane}{105}{subsection.10.1.2}
+\defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Conclusions and Outlook}{106}{chapter.11}
@@ -221,4 +227,4 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {E}Analytical solution of Navier supported plate}{116}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {E}Derivation of Euler buckling load}{116}{Appendix.a.E}

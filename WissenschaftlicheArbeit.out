@@ -38,10 +38,11 @@
 \BOOKMARK [1][-]{section.9.4}{Quantity recovery tests}{chapter.9}% 38
 \BOOKMARK [1][-]{section.9.5}{Composite tests}{chapter.9}% 39
 \BOOKMARK [0][-]{chapter.10}{Application of shell finite elements}{}% 40
-\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook}{}% 41
-\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 42
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 43
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-DKQ formulation}{}% 44
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-T3 formulation}{}% 45
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical membrane analysis of dome}{}% 46
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical solution of Navier supported plate}{}% 47
+\BOOKMARK [1][-]{section.10.1}{Stability analysis}{chapter.10}% 41
+\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook}{}% 42
+\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 43
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 44
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-DKQ formulation}{}% 45
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-T3 formulation}{}% 46
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical membrane analysis of dome}{}% 47
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Derivation of Euler buckling load}{}% 48
