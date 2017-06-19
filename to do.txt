@@ -3,18 +3,24 @@ Problems:
 	- quad gauss point results are crap for the existing element too!
 
 To Do:	
-	- Eigenvalue stability solver
-		- check with CSE off if the global K mat is symm!		
+	- Element tests
+		- Lin and NL statics
+		- Lin and NL statics
 	- Do stability problems, compare results between different element technologies on and off, as well as NL and LPB
 		- Euler buckling of CHS with unstructured mesh will show diff between ANDES and not - membrane locking
 		- Wrinkle stuff
+	- Eigenvalue stability solver
+		- check with CSE off if the global K mat is symm!		
+	
 
 	Benchmarking:
-
+	- nonlinear load increment - line 65
 	
 	Report:
+		- Writeup for CHS buckling
+		- Writeup for wrinkle problem
 		- Kg derivation for shells ????
-		- Manual derivation of buckling problem
+		
 		- (Up next)
 		- Transverse shear stress results discussion!
 		- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!

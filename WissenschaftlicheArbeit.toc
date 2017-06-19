@@ -197,34 +197,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Application of shell finite elements}{105}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Stability analysis}{105}{section.10.1}
+\contentsline {section}{\numberline {10.1}Euler buckling of CHS column}{105}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.1}Euler buckling of CHS column}{105}{subsection.10.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.2}Shear wrinkling of thin membrane}{105}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.1}Shear wrinkling of thin membrane}{111}{subsection.10.1.1}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusions and Outlook}{106}{chapter.11}
+\contentsline {chapter}{\numberline {11}Conclusions and Outlook}{114}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Future work}{106}{section.11.1}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{107}{Appendix.a.A}
+\contentsline {section}{\numberline {11.1}Future work}{114}{section.11.1}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-DKQ formulation}{111}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{115}{Appendix.a.A}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Basic-T3 formulation}{113}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {B}Basic-DKQ formulation}{119}{Appendix.a.B}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Analytical membrane analysis of dome}{114}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {C}Basic-T3 formulation}{121}{Appendix.a.C}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {E}Derivation of Euler buckling load}{116}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {D}Analytical membrane analysis of dome}{122}{Appendix.a.D}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {E}Derivation of Euler buckling load}{124}{Appendix.a.E}

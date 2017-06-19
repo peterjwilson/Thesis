@@ -239,8 +239,8 @@ plt.plot(latDispTT,loadTT, color = DSG, linewidth=2.0,
 plt.plot(latDispQTB,loadQTB, color = ANDESBasic, linewidth=2.0, 
          label = 'Basic-DKQ',antialiased=True)
 
-#plt.plot(latDispTTB,loadTTB, color = DSGBasic, linewidth=2.0, 
-#         label = 'Basic-T3',antialiased=True)
+plt.plot(latDispTTB,loadTTB, color = DSGBasic, linewidth=2.0, 
+         label = 'Basic-T3',antialiased=True)
 
 plt.plot(latDispQK,loadQK, color = KRATOSQUAD, linewidth=2.0, 
          label = 'KRATOS Q4',antialiased=True)
@@ -250,9 +250,10 @@ plt.plot(latDispTK,loadTK, color = KRATOSTRI, linewidth=2.0,
 
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
 
-plt.xlabel('Lateral displacement [m]',fontsize=myfontsize)
-plt.ylabel('Load [kN]',fontsize=myfontsize)
-#plt.ylim([0,2e-5])
+plt.xlabel('Max |Out of plane displacement| [m]',fontsize=myfontsize)
+plt.ylabel('Lateral load [kN]',fontsize=myfontsize)
+plt.ylim([0,2e4])
+plt.xlim([0,0.025])
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
 plt.savefig('stability_wrinkle_abstrans_disp.pdf',bbox_inches="tight")
@@ -281,8 +282,8 @@ plt.plot(latDispPointTK,loadTK, color = KRATOSTRI, linewidth=2.0,
 
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
 
-plt.xlabel('Point lateral displacement [m]',fontsize=myfontsize)
-plt.ylabel('Load [kN]',fontsize=myfontsize)
+plt.xlabel('Out of plane midpoint displacement [m]',fontsize=myfontsize)
+plt.ylabel('Lateral load [kN]',fontsize=myfontsize)
 plt.ylim([0,2e4])
 plt.xlim([-0.015,0.015])
 plt.grid()
@@ -303,8 +304,8 @@ plt.plot(axialDispTT,loadTT, color = DSG, linewidth=2.0,
 plt.plot(axialDispQTB,loadQTB, color = ANDESBasic, linewidth=2.0, 
          label = 'Basic-DKQ',antialiased=True)
 
-#plt.plot(axialDispTTB,loadTTB, color = DSGBasic, linewidth=2.0, 
-#         label = 'Basic-T3',antialiased=True)
+plt.plot(axialDispTTB,loadTTB, color = DSGBasic, linewidth=2.0, 
+         label = 'Basic-T3',antialiased=True)
 
 plt.plot(axialDispQK,loadQK, color = KRATOSQUAD, linewidth=2.0, 
          label = 'KRATOS Q4',antialiased=True)
@@ -316,9 +317,10 @@ plt.plot(axialDispTK,loadTK, color = KRATOSTRI, linewidth=2.0,
 
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
 
-plt.xlabel('Axial displacement [m]',fontsize=myfontsize)
-plt.ylabel('Load [kN]',fontsize=myfontsize)
-#plt.ylim([0,2e-5])
+plt.xlabel('Lateral displacement [m]',fontsize=myfontsize)
+plt.ylabel('Lateral load [kN]',fontsize=myfontsize)
+plt.ylim([0,2e4])
+plt.xlim([0,0.016])
 plt.grid()
 plt.tick_params(labelsize=labelfontsize)
 plt.savefig('stability_wrinkle_axial_disp.pdf',bbox_inches="tight")
