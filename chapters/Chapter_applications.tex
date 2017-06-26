@@ -15,10 +15,10 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Application of shell finite elements}
+\chapter{Applications and the effect of element technologies}
 \label{chap:chapter_application}
 
-\renewcommand{\Thema}{Application of shell finite elements}
+\renewcommand{\Thema}{Applications and the effect of element technologies}
 
 \lettrine[lines=2]{W}{ith} the elements formulation, background and validation complete, some examples of their application are now considered. An emphasis is placed on the relative strengths and weaknesses of each element and the effect of their enhancements by considering six elements for each analysis: ANDES-DKQ, Basic-DKQ, Kratos-Q4, DSG, Basic-T3, Kratos-T3.
 
@@ -114,9 +114,22 @@ In this comparison, the differences in deformation behaviour is solely due to th
 
 Through the comparison of results obtained with various elements employing different element enhancements it is clear that structural modelling with shells, as discussed in section \ref{Structural modelling with shells}, requires careful consideration of simplifications and assumptions made. For the analysed problem of a CHS beam buckling dimensional reduction can be reasonably varied between a 1D and 2D approach, as explored. Undertaking a one dimensional beam approach may yield quick and acceptable 'ballpark' results, such as Euler's buckling formula, but it also immensely filters the space of possible mechanical expressions resolvable, such as local ovalisation which was seen to form an important driver in some of the results obtained. However, simply adopting a two dimensional shell approach to the problem did not homogenize all results, as was seen. Element base formulations, element enhancements, element order and mesh were all important factors strongly affecting results and correspond to questions that must be answered upon entering the shell regime. 
 
-\subsection{Shear wrinkling of thin membrane}
+\section{Shear wrinkling of plate}
 
-asdafdf
+Although classic Euler buckling is perhaps the most apparent phenomena that comes to mind when considering beam structures, the previous example highlights that local buckling effects can come to dominate the overall structural behaviour. Progressing along this vein, another local instability phenomena that can occur with I-sectioned beams is web buckling wherein the web manifests out of plane bubble-like deformation patterns.
+
+The effect of element selection and enhancement on this phenomena can be considered by analysing a flat plate of $1.2m$ x $0.3m$ x $0.005m$ thick fully clamped on it's lower edge and laterally displaced by $U_x = \delta = 0.015m$ along it's top edge, roughly corresponding to an I-beam thin web under shear action. Material properties are taken as $E = 206.9 GPa$ and $\nu = 0.0$. The system setup is illustrated below:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{images/wrinkle_setup}
+	\caption{Shear wrinkling of plate setup}
+	\label{fig:wrinklesetup}
+\end{figure}
+
+As per the previous problem, bifurcation is encouraged with minor out of plane loading, this case being $F_z = -100N$ applied at the centre of the plate denoted by the red cross above. 
+
+The first result presented is the imposed lateral displacement $\delta$ vs the lateral load, determined as the sum of all nodal lateral reactions $R_x$ along the displaced top edge.
 
 \begin{figure}[H]
 	\centering
@@ -126,7 +139,9 @@ asdafdf
 	\label{pic:wrinkle1}
 \end{figure}
 
-asdfadsf
+Separated from the other elements, the Basic-T3 element demonstrates spurious behaviour indicative of severe shear locking yet again. This also illustrates the effectiveness of DSG enhancements to inoculate against this deleterious phenomena. Apart from the Basic-T3 element, all remaining elements are grouped relatively close together exhibiting largely linear, albeit slightly softening, behaviour with apparent disturbances at lateral loads of roughly $4000N$ and $15000N$
+
+To avail further insight of the problem, the out of plane displacement of the mid-point (denoted with a red cross in figure \ref{fig:wrinklesetup}) is plotted against the lateral load.
 
 \begin{figure}[H]
 	\centering
@@ -136,7 +151,119 @@ asdfadsf
 	\label{pic:wrinkle2}
 \end{figure}
 
-asdfadf
+This perspective shift affords new clarity illustrating the Basic-T3 element never buckles during the whole analysis thereby explaining it's equilibrium path in figure \ref{pic:wrinkle1}. The remaining elements exhibit highly complex non-linear behaviour bifurcating between 3 (DSG) and 5 (Kratos-Q4 and Kratos-T3) times. Despite this, all reasonable elements demonstrate temporary stability in two zones: the secondary branch swaying leftwards in the load range of $(2500 - 6000)N$; and the final branch in the load range of $12000 N$ onwards. Despite this rough reconciliation, significant differences of structural behaviour still exist between the elements, which can be explored by examining the displacement contours at key points of interest.
+
+In order to establish a general appreciation of the structural behaviour throughout the lateral reaction load range considered Z-displacement plots of the ANDES-DKQ element, fairly representative of the other elements' behaviour, at various points on it's equilibrium path are presented below:
+
+\begin{figure}[H]
+	%\centering
+		\subfloat[Response diagram]
+	{\label{ref_label1}
+		\includegraphics[width=10.0cm]
+		{images/wrinkle_andes_NLgraph.png}}
+	\subfloat[Contour colour scale]
+	{\label{ref_label1}
+		\includegraphics[width=4.0cm]
+		{images/wrink_andes_scale.png}}
+	\\
+	\subfloat[Z-displacement @ Rx = 2208kN]
+	{\label{ref_label1}
+		\includegraphics[width=7.0cm]
+		{images/wrinkle_andes_t0_1.png}}
+	\subfloat[Z-displacement @ Rx = 3110kN]
+	{\label{ref_label1}
+		\includegraphics[width=7.0cm]
+		{images/wrinkle_andes_t0_15.png}}
+	\\
+\subfloat[Z-displacement @ Rx = 10851kN]
+{\label{ref_label1}
+	\includegraphics[width=7.0cm]
+	{images/wrinkle_andes_t0_6.png}}
+\subfloat[Z-displacement @ Rx = 11450kN]
+{\label{ref_label1}
+	\includegraphics[width=7.0cm]
+	{images/wrinkle_andes_t0_65.png}}
+	\\
+\subfloat[Z-displacement @ Rx =12303kN]
+{\label{ref_label1}
+	\includegraphics[width=7.0cm]
+	{images/wrinkle_andes_t0_7.png}}
+\subfloat[Z-displacement @ Rx = 17394kN]
+{\label{ref_label1}
+	\includegraphics[width=7.0cm]
+	{images/wrinkle_andes_t1_0.png}}
+	\caption{\label{wrinkle 3}Plate wrinkling: ANDES-DKQ Z-displacement plots over equilibrium path}
+\end{figure}
+
+Plot (c) above shows the stressed unbuckled plate acting in pure membrane action with no developed out of plane displacement (other than that due to the minor point load) just before the onset of instability. Plot (d) highlights the deformation pattern in the secondary equilibrium path, which, for many of the other elements considered, constitutes the first zone of temporary stability as discussed before. A significant loss of membrane stiffness is somewhat tempered with the activation of the plate's bending stiffness via the relatively minor local curvature developed. Progressing to plot (e) illustrates the developing magnitude of the out of plane displacements and gradual re-distribution of the plate's buckling mode into a pattern of shorter period. The shift from state (e) to state (f) and finally to state (g) marks the transition to the final tightly defined buckling pattern of 3 peaks and 2 troughs, from an initial diffuse pattern of 2 peaks and 2 troughs, which activates more of the bending stiffness due to the higher curvatures involved. The final state (h) highlights the development and utilisation of this buckling mode which forms the second common zone of temporary stability among the other elements considered.
+
+With a greater appreciation of the structural behaviour at hand, the different contours of the DSG and Kratos-T3 element, representing 5-parameter and 3-parameter based formulations respectively, are considered at key points below.
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[Kratos-T3 @ $\delta = 0.0025m$]
+	{\label{ref_label1}
+		\includegraphics[width=6.25cm]
+		{images/wrinkle_kratosT3_t0_15.png}}
+	\subfloat[DSG @ $\delta = 0.0025m$]
+	{\label{ref_label1}
+		\includegraphics[width=6.25cm]
+		{images/wrinkle_dsg_t0_15.png}}
+	\subfloat[Legend]
+	{\label{ref_label1}
+		\includegraphics[width=1.5cm]
+		{images/wrinkle_dsg_scale_t0_15.png}}
+	\\
+	\subfloat[Kratos-T3 @ $\delta = 0.015m$]
+{\label{ref_label1}
+	\includegraphics[width=6.25cm]
+	{images/wrinkle_kratosT3_t1_0.png}}
+\subfloat[DSG @ $\delta = 0.015m$]
+{\label{ref_label1}
+	\includegraphics[width=6.25cm]
+	{images/wrinkle_dsg_t1_0.png}}
+\subfloat[Legend]
+{\label{ref_label1}
+	\includegraphics[width=1.5cm]
+	{images/wrinkle_dsg_scale_t1_0.png}}
+	\caption{\label{wrinkle 4}Plate wrinkling: Kratos-T3 and DSG Z-displacement plots over equilibrium path}
+\end{figure}
+
+
+asdfasdf
+
+\begin{figure}[H]
+	%\centering
+	\subfloat[ANDES-DKQ @ $\delta = 0.0025m$]
+	{\label{ref_label1}
+		\includegraphics[width=6.25cm]
+		{images/wrinkle_andes_comp_t0_15.png}}
+	\subfloat[Basic-DKQ @ $\delta = 0.0025m$]
+	{\label{ref_label1}
+		\includegraphics[width=6.25cm]
+		{images/wrinkle_basic_andes_t0_15.png}}
+	\subfloat[Legend]
+	{\label{ref_label1}
+		\includegraphics[width=1.5cm]
+		{images/wrinkle_andes_comp_scale_t0_15.png}}
+	\\
+	\subfloat[ANDES-DKQ @ $\delta = 0.015m$]
+	{\label{ref_label1}
+		\includegraphics[width=6.25cm]
+		{images/wrinkle_andes_comp_t1_0.png}}
+	\subfloat[Basic-DKQ @ $\delta = 0.015m$]
+	{\label{ref_label1}
+		\includegraphics[width=6.25cm]
+		{images/wrinkle_basic_andes_t1_0.png}}
+	\subfloat[Legend]
+	{\label{ref_label1}
+		\includegraphics[width=1.5cm]
+		{images/wrinkle_andes_comp_scale_t1_0.png}}
+	\caption{\label{wrinkle 5}Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path}
+\end{figure}
+
+asdfd
+
 
 \begin{figure}[H]
 	\centering

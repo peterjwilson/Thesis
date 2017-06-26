@@ -33,10 +33,10 @@ plt.ticklabel_format(style='sci', axis='y', scilimits=(1e-4,10000))
 #===============================================================================
 
 # Thin quad element -------------------------------------------
-axialDispQT = []
-latDispQT = []
-latDispPointQT = []
-loadQT = []
+axialDispQT = [0]
+latDispQT = [0]
+latDispPointQT = [0]
+loadQT = [0]
 
 with open("displacementxQT.txt", "r") as doc:
   for line in doc:
@@ -61,10 +61,10 @@ doc.close()
 
 
 # Thin quad element BASIC -------------------------------------------
-axialDispQTB = []
-latDispQTB = []
-latDispPointQTB = []
-loadQTB = []
+axialDispQTB = [0]
+latDispQTB = [0]
+latDispPointQTB = [0]
+loadQTB = [0]
 
 with open("displacementxQTB.txt", "r") as doc:
   for line in doc:
@@ -88,10 +88,10 @@ doc.close()
 
 
 # Kratos quad element -------------------------------------------
-axialDispQK = []
-latDispQK = []
-latDispPointQK = []
-loadQK = []
+axialDispQK = [0]
+latDispQK = [0]
+latDispPointQK = [0]
+loadQK = [0]
 
 with open("displacementxQK.txt", "r") as doc:
   for line in doc:
@@ -116,10 +116,10 @@ doc.close()
 
 
 # Thick tri element -------------------------------------------
-axialDispTT = []
-latDispTT = []
-latDispPointTT = []
-loadTT = []
+axialDispTT = [0]
+latDispTT = [0]
+latDispPointTT = [0]
+loadTT = [0]
 
 with open("displacementxTT.txt", "r") as doc:
   for line in doc:
@@ -144,10 +144,10 @@ doc.close()
 
 
 # Thick tri element basic-------------------------------------------
-axialDispTTB = []
-latDispTTB = []
-latDispPointTTB = []
-loadTTB = []
+axialDispTTB = [0]
+latDispTTB = [0]
+latDispPointTTB = [0]
+loadTTB = [0]
 
 with open("displacementxTTB.txt", "r") as doc:
   for line in doc:
@@ -173,10 +173,10 @@ doc.close()
 
 
 # Thick tri element -------------------------------------------
-axialDispTK = []
-latDispTK = []
-latDispPointTK = []
-loadTK = []
+axialDispTK = [0]
+latDispTK = [0]
+latDispPointTK = [0]
+loadTK = [0]
 
 with open("displacementxTK.txt", "r") as doc:
   for line in doc:
@@ -327,7 +327,34 @@ plt.savefig('stability_wrinkle_axial_disp.pdf',bbox_inches="tight")
 
 
 
+fig = plt.figure(4)
+plt.plot(latDispPointQT,loadQT, color = ANDESDKQ, linewidth=2.0, 
+         label = 'ANDES-DKQ',antialiased=True)
 
+#plt.plot(latDispPointTT,loadTT, color = DSG, linewidth=2.0, 
+#         label = 'DSG',antialiased=True)
+#
+#plt.plot(latDispPointQTB,loadQTB, color = ANDESBasic, linewidth=2.0, 
+#         label = 'Basic-DKQ',antialiased=True)
+#
+#plt.plot(latDispPointTTB,loadTTB, color = DSGBasic, linewidth=2.0, 
+#         label = 'Basic-T3',antialiased=True)
+#
+#plt.plot(latDispPointQK,loadQK, color = KRATOSQUAD, linewidth=2.0, 
+#         label = 'KRATOS Q4',antialiased=True)
+#
+#plt.plot(latDispPointTK,loadTK, color = KRATOSTRI, linewidth=2.0, 
+#         label = 'KRATOS T3',antialiased=True)
+
+plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
+
+plt.xlabel('Out of plane midpoint displacement [m]',fontsize=myfontsize)
+plt.ylabel('Lateral load [kN]',fontsize=myfontsize)
+plt.ylim([0,2e4])
+plt.xlim([-0.019,0.0135])
+plt.grid()
+plt.tick_params(labelsize=labelfontsize)
+plt.savefig('stability_wrinkle_pointtrans_disp_andes.pdf',bbox_inches="tight")
 
 
 

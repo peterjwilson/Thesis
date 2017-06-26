@@ -17,32 +17,34 @@
 \BOOKMARK [1][-]{section.4.4}{Stability analysis example}{chapter.4}% 17
 \BOOKMARK [0][-]{chapter.5}{DSG triangle shell element}{}% 18
 \BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 19
-\BOOKMARK [1][-]{section.5.2}{Stiffness matrix implementation}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.3}{Mass matrix formulation and implementation}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.4}{Stress and strain recovery}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter.6}{ANDES-DKQ quadrilateral shell element}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Stiffness matrix formulation}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.2}{Stiffness matrix implementation}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 27
-\BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates - revised 1}{}% 28
-\BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 31
-\BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 32
-\BOOKMARK [0][-]{chapter.8}{Implementation of linear Eigensolver}{}% 33
-\BOOKMARK [0][-]{chapter.9}{Validation of elements}{}% 34
-\BOOKMARK [1][-]{section.9.1}{Static tests: shell obstacle course}{chapter.9}% 35
-\BOOKMARK [1][-]{section.9.2}{Geometically non-linear tests}{chapter.9}% 36
-\BOOKMARK [1][-]{section.9.3}{Dynamic tests}{chapter.9}% 37
-\BOOKMARK [1][-]{section.9.4}{Quantity recovery tests}{chapter.9}% 38
-\BOOKMARK [1][-]{section.9.5}{Composite tests}{chapter.9}% 39
-\BOOKMARK [0][-]{chapter.10}{Application of shell finite elements}{}% 40
-\BOOKMARK [1][-]{section.10.1}{Euler buckling of CHS column}{chapter.10}% 41
-\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook}{}% 42
-\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 43
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 44
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-DKQ formulation}{}% 45
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-T3 formulation}{}% 46
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical membrane analysis of dome}{}% 47
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Derivation of Euler buckling load}{}% 48
+\BOOKMARK [1][-]{section.5.2}{DSGc3 element}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.3}{Stiffness matrix implementation}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.4}{Mass matrix formulation and implementation}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.5}{Stress and strain recovery}{chapter.5}% 23
+\BOOKMARK [0][-]{chapter.6}{ANDES-DKQ quadrilateral shell element}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Stiffness matrix formulation}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.2}{Stiffness matrix implementation}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 28
+\BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates - revised 1}{}% 29
+\BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 33
+\BOOKMARK [0][-]{chapter.8}{Implementation of linear Eigensolver}{}% 34
+\BOOKMARK [0][-]{chapter.9}{Validation of elements}{}% 35
+\BOOKMARK [1][-]{section.9.1}{Static tests: shell obstacle course}{chapter.9}% 36
+\BOOKMARK [1][-]{section.9.2}{Geometically non-linear tests}{chapter.9}% 37
+\BOOKMARK [1][-]{section.9.3}{Dynamic tests}{chapter.9}% 38
+\BOOKMARK [1][-]{section.9.4}{Quantity recovery tests}{chapter.9}% 39
+\BOOKMARK [1][-]{section.9.5}{Composite tests}{chapter.9}% 40
+\BOOKMARK [0][-]{chapter.10}{Applications and the effect of element technologies}{}% 41
+\BOOKMARK [1][-]{section.10.1}{Euler buckling of CHS column}{chapter.10}% 42
+\BOOKMARK [1][-]{section.10.2}{Shear wrinkling of plate}{chapter.10}% 43
+\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook}{}% 44
+\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 45
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 46
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix Basic-DKQ formulation}{}% 47
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-T3 formulation}{}% 48
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Analytical membrane analysis of dome}{}% 49
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Derivation of Euler buckling load}{}% 50
