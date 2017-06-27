@@ -205,26 +205,26 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusions and Outlook}{119}{chapter.11}
+\contentsline {chapter}{\numberline {11}Conclusions and Outlook}{121}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Future work}{119}{section.11.1}
-\defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{120}{Appendix.a.A}
+\contentsline {section}{\numberline {11.1}Future work}{121}{section.11.1}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-DKQ formulation}{124}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{122}{Appendix.a.A}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Basic-T3 formulation}{126}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {B}Basic-DKQ formulation}{126}{Appendix.a.B}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Analytical membrane analysis of dome}{127}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {C}Basic-T3 formulation}{128}{Appendix.a.C}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {E}Derivation of Euler buckling load}{129}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {D}Analytical membrane analysis of dome}{129}{Appendix.a.D}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {E}Derivation of Euler buckling load}{131}{Appendix.a.E}
