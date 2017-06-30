@@ -215,16 +215,20 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}Basic-DKQ formulation}{126}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {B}DSG technology derivation}{126}{Appendix.a.B}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Basic-T3 formulation}{128}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {C}Basic-DKQ formulation}{129}{Appendix.a.C}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Analytical membrane analysis of dome}{129}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {D}Basic-T3 formulation}{131}{Appendix.a.D}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {E}Derivation of Euler buckling load}{131}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {E}Analytical membrane analysis of dome}{132}{Appendix.a.E}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {F}Derivation of Euler buckling load}{134}{Appendix.a.F}
