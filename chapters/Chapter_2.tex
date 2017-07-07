@@ -449,6 +449,7 @@ It's clear that the additional modelling power of the 7 parameter shell can reso
 As expected, the 7 parameter model captures higher Eigen-frequencies associated with thickness modes, while the 5 parameter is unable to resolve these. This is yet another example of model selection limiting the possibility of phenomena resolved.
 
 \section{Locking in shell finite elements}
+\label{locking in shell finite elements}
 
 Surveying a range of shell models has confirmed that not all of them are appropriate for every type of analysis. One must consider the capabilities of the model in conjunction with the supposed critical phenomena of the analysis at hand. Thus, the analysis results are a function of physics the shell model can \textit{express}. This concept of expression limitation is vital to the correct understanding of shells in the FEM. If the isogeometric approach to the FEM is employed, the field of quantities in the problem are interpolated between discrete nodal values $\hat{(\ )}$ using shape functions $\mathbf{N}$. In general:
 
@@ -582,6 +583,7 @@ The performance of the MITC formulation clearly depends on the location of the s
 The ANS approach was extended into Free Formulation (FF) \cite{Bergan84}, where the element stiffness matrix is the sum of a basic and higher order stiffness, by Militello and Felippa \cite{FELIPPA1990} under the name of the Assumed Natural Deviatoric Strains (ANDES) formulation. An advantage that the ANDES formulation inherits from the FF is that it untethers the derivation of element stiffness from the principle of minimum potential energy, the function continuity requirements of which often result in elements that "tend to be too stiff" \cite{Bergan84}. The ANDES basic stiffness ensures consistency of the element and arrises from the basic strain field comprising constant strain states and those associated with rigid body motion. Complementing this, the higher order stiffness is responsible for stability and accuracy \cite{Felippa2003} based on a enhanced strain field where the element enhancements are realised. The FF framework requires this potentially non-conforming higher order field be energy orthogonal to the basic field, which the ANDES formulation fulfils with a deviatoric higher order strain field \cite{felippa2002fitting}.  The ANDES formulation has proven capable of alleviating membrane and transverse shear locking \cite{Mostafa11}.
 
 \subsection{Discrete Shear Gap}
+\label{DSGbackground}
 
 The Discrete Shear Gap (DSG) approach from Bischoff and Bletzinger \cite{Ble00} \cite{Bis04} is another variant on the ANS approach with the novelty of identifying and manipulating the 'shear gap' field of the element. The shear gap, as illustrated below, is the increase of displacement due to shear, and corresponds to the difference between the actual displacement and that of pure bending (thus the shear gap is always zero in a 3 parameter Kirchhoff-Love model).
 

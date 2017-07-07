@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  30 JUN 2017 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  7 JUL 2017 11:24
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2851,8 +2851,32 @@ LaTeX Warning: Label `ref_label1' multiply defined.
 
 LaTeX Warning: Label `sub@ref_label1' multiply defined.
 
-(chapters/Appendix_0.aux) (chapters/Appendix_DSG_derivation.aux)
-(chapters/Appendix_1.aux) (chapters/Appendix_2.aux) (chapters/Appendix_3.aux
+(chapters/Appendix_0.aux) (chapters/Appendix_DSG_derivation.aux
+
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `ref_label1' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label1' multiply defined.
+
+) (chapters/Appendix_1.aux) (chapters/Appendix_2.aux) (chapters/Appendix_3.aux
 
 LaTeX Warning: Label `ref_label1' multiply defined.
 
@@ -3469,25 +3493,25 @@ Overfull \hbox (1.22725pt too wide) detected at line 218
 Package tocbasic Info: Using my definition of `\numberline' on input line 222.
 
 Overfull \hbox (1.22725pt too wide) detected at line 222
- \T1/phv/m/n/10.95 127
+ \T1/phv/m/n/10.95 131
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 226.
 
 Overfull \hbox (1.22725pt too wide) detected at line 226
- \T1/phv/m/n/10.95 129
+ \T1/phv/m/n/10.95 133
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 230.
 
 Overfull \hbox (1.22725pt too wide) detected at line 230
- \T1/phv/m/n/10.95 130
+ \T1/phv/m/n/10.95 134
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 234.
 
 Overfull \hbox (1.22725pt too wide) detected at line 234
- \T1/phv/m/n/10.95 132
+ \T1/phv/m/n/10.95 136
  []
 
 )
@@ -3586,7 +3610,7 @@ File: images/eigenvaluespectra.png Graphic file (type png)
 Package pdftex.def Info: images/eigenvaluespectra.png used on input line 444.
 (pdftex.def)             Requested size: 341.43306pt x 217.1839pt.
  [10] [11 <./images/eigenvaluespectra.png>]
-Overfull \hbox (5.45822pt too wide) detected at line 515
+Overfull \hbox (5.45822pt too wide) detected at line 516
 [] \OMS/lmsy/m/n/10.95   \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 \OT1/lmr/m/n/
 10.95 [] \OMS/lmsy/m/n/10.95   \OML/lmm/m/it/10.95 \OT1/lmr/m/n/10.95 []) = 
 \OMS/lmsy/m/n/10.95  \OT1/lmr/m/n/10.95 ([] + []) = [][] [] : [][] : \OML/lmm
@@ -3600,27 +3624,27 @@ Overfull \hbox (5.45822pt too wide) detected at line 515
 File: images/membranelocking.png Graphic file (type png)
 
 <use images/membranelocking.png>
-Package pdftex.def Info: images/membranelocking.png used on input line 529.
+Package pdftex.def Info: images/membranelocking.png used on input line 530.
 (pdftex.def)             Requested size: 398.33858pt x 140.20627pt.
  [13 <./images/membranelocking.png>]
 <images/shearlockingredint.png, id=463, 3047.385pt x 1310.496pt>
 File: images/shearlockingredint.png Graphic file (type png)
 
 <use images/shearlockingredint.png>
-Package pdftex.def Info: images/shearlockingredint.png used on input line 552.
+Package pdftex.def Info: images/shearlockingredint.png used on input line 553.
 (pdftex.def)             Requested size: 398.33858pt x 171.2903pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 555.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 556.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.59998pt on input line 555.
+(Font)              scaled to size 7.59998pt on input line 556.
  [14 <./images/shearlockingredint.png>]
 <images/mitc4.png, id=484, 3502.686pt x 1310.496pt>
 File: images/mitc4.png Graphic file (type png)
  <use images/mitc4.png>
-Package pdftex.def Info: images/mitc4.png used on input line 573.
+Package pdftex.def Info: images/mitc4.png used on input line 574.
 (pdftex.def)             Requested size: 455.24408pt x 170.31047pt.
 
-Overfull \hbox (31.298pt too wide) in paragraph at lines 573--574
+Overfull \hbox (31.298pt too wide) in paragraph at lines 574--575
  [][] 
  []
 
@@ -3628,16 +3652,16 @@ Overfull \hbox (31.298pt too wide) in paragraph at lines 573--574
 File: images/DSG.png Graphic file (type png)
 
 <use images/DSG.png>
-Package pdftex.def Info: images/DSG.png used on input line 591.
+Package pdftex.def Info: images/DSG.png used on input line 593.
 (pdftex.def)             Requested size: 227.62204pt x 113.81142pt.
  <images/8nodeseren.png, id=514, 1070.8005pt x 287.8755pt>
 File: images/8nodeseren.png Graphic file (type png)
 
 <use images/8nodeseren.png>
-Package pdftex.def Info: images/8nodeseren.png used on input line 606.
+Package pdftex.def Info: images/8nodeseren.png used on input line 608.
 (pdftex.def)             Requested size: 426.79134pt x 114.73964pt.
 
-Overfull \hbox (2.84526pt too wide) in paragraph at lines 606--607
+Overfull \hbox (2.84526pt too wide) in paragraph at lines 608--609
  [][] 
  []
 
@@ -3646,40 +3670,40 @@ Overfull \hbox (2.84526pt too wide) in paragraph at lines 606--607
 File: images/drillingDOF.png Graphic file (type png)
 
 <use images/drillingDOF.png>
-Package pdftex.def Info: images/drillingDOF.png used on input line 644.
+Package pdftex.def Info: images/drillingDOF.png used on input line 646.
 (pdftex.def)             Requested size: 227.62204pt x 190.02399pt.
  [17]
-Underfull \hbox (badness 2065) in paragraph at lines 681--681
+Underfull \hbox (badness 2065) in paragraph at lines 683--683
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 681--681
+Underfull \hbox (badness 2065) in paragraph at lines 683--683
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 681--681
+Underfull \hbox (badness 5847) in paragraph at lines 683--683
 []|\T1/phv/m/n/10.95 (+20) Node num-ber-ing de-pen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 683--683
 \T1/phv/m/n/10.95 (+20) men-ta-tion and pos-si-bly
  []
 
 
-Underfull \hbox (badness 2065) in paragraph at lines 681--681
+Underfull \hbox (badness 2065) in paragraph at lines 683--683
 []|\T1/phv/m/n/10.95 (+20) Reduced mem-brane and
  []
 
 
-Overfull \hbox (10.40245pt too wide) in paragraph at lines 681--682
+Overfull \hbox (10.40245pt too wide) in paragraph at lines 683--684
 [][] 
  []
 
 [18 <./images/drillingDOF.png>]
-Overfull \hbox (10.40245pt too wide) in paragraph at lines 709--710
+Overfull \hbox (10.40245pt too wide) in paragraph at lines 711--712
 [][] 
  []
 
@@ -5131,7 +5155,7 @@ chapter 11.
 chapter A.
 File: images/mises_truss_def.png Graphic file (type png)
 <use images/mises_truss_def.png>
-Package pdftex.def Info: images/mises_truss_def.png used on input line 17.
+Package pdftex.def Info: images/mises_truss_def.png used on input line 18.
 (pdftex.def)             Requested size: 227.62204pt x 160.55965pt.
  [122
 
@@ -5147,57 +5171,55 @@ Overfull \hbox (16.88658pt too wide) in paragraph at lines 9--9
 |[]\T1/phv/b/n/24.88 DSG tech-nol-ogy deriva-tion| 
  []
 
-<images/dsg_derivation_CS_layout.png, id=4450, 248.8497pt x 322.806pt>
-File: images/dsg_derivation_CS_layout.png Graphic file (type png)
+File: images/DSG.png Graphic file (type png)
+<use images/DSG.png>
+Package pdftex.def Info: images/DSG.png used on input line 18.
+(pdftex.def)             Requested size: 207.7052pt x 103.84496pt.
+ <images/DSG_2.png, id=4450, 627.84563pt x 242.40562pt>
+File: images/DSG_2.png Graphic file (type png)
 
-<use images/dsg_derivation_CS_layout.png>
-Package pdftex.def Info: images/dsg_derivation_CS_layout.png used on input line
- 20.
-(pdftex.def)             Requested size: 219.35672pt x 284.52756pt.
+<use images/DSG_2.png>
+Package pdftex.def Info: images/DSG_2.png used on input line 21.
+(pdftex.def)             Requested size: 207.7052pt x 80.19012pt.
 
-<images/dsg_derivation_CS_layout2.png, id=4451, 510.90875pt x 658.96187pt>
-File: images/dsg_derivation_CS_layout2.png Graphic file (type png)
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 18--22
+[][][][] 
+ []
 
-<use images/dsg_derivation_CS_layout2.png>
-Package pdftex.def Info: images/dsg_derivation_CS_layout2.png used on input lin
-e 27.
-(pdftex.def)             Requested size: 220.60638pt x 284.52756pt.
- [126
+[126
 
 
 
- <./images/dsg_derivation_CS_layout.png (PNG copy)>]
-<images/dsg_derivation_bletzy_Bmat.png, id=4457, 604.2575pt x 178.6675pt>
-File: images/dsg_derivation_bletzy_Bmat.png Graphic file (type png)
+ <./images/DSG_2.png>]
+<images/DSG_element1.png, id=4462, 354.32375pt x 320.19624pt>
+File: images/DSG_element1.png Graphic file (type png)
 
-<use images/dsg_derivation_bletzy_Bmat.png>
-Package pdftex.def Info: images/dsg_derivation_bletzy_Bmat.png used on input li
-ne 35.
-(pdftex.def)             Requested size: 227.62204pt x 67.30275pt.
+<use images/DSG_element1.png>
+Package pdftex.def Info: images/DSG_element1.png used on input line 73.
+(pdftex.def)             Requested size: 184.9429pt x 167.13326pt.
 
-<images/dsg_derivation_DOF_conversion.png, id=4458, 250.9375pt x 227.34938pt>
-File: images/dsg_derivation_DOF_conversion.png Graphic file (type png)
+<images/DSG_element2.png, id=4463, 496.35437pt x 233.37187pt>
+File: images/DSG_element2.png Graphic file (type png)
 
-<use images/dsg_derivation_DOF_conversion.png>
-Package pdftex.def Info: images/dsg_derivation_DOF_conversion.png used on input
- line 47.
-(pdftex.def)             Requested size: 227.62204pt x 206.23607pt.
- [127 <./images/dsg_derivation_CS_layout2.png> <./images/dsg_derivation_bletzy_
-Bmat.png>]) [128 <./images/dsg_derivation_DOF_conversion.png>]
+<use images/DSG_element2.png>
+Package pdftex.def Info: images/DSG_element2.png used on input line 76.
+(pdftex.def)             Requested size: 207.7052pt x 97.65585pt.
+ [127 <./images/DSG_element1.png> <./images/DSG_element2.png>] [128] [129]) [13
+0]
 \openout2 = `chapters/Appendix_1.aux'.
 
  (chapters/Appendix_1.tex
 chapter C.
-[129
+[131
 
 
 
-]) [130]
+]) [132]
 \openout2 = `chapters/Appendix_2.aux'.
 
  (chapters/Appendix_2.tex
 chapter D.
-) [131
+) [133
 
 
 
@@ -5206,55 +5228,50 @@ chapter D.
 
  (chapters/Appendix_3.tex
 chapter E.
-<images/dome_geom.png, id=4502, 451.08525pt x 275.22826pt>
+<images/dome_geom.png, id=4540, 451.08525pt x 275.22826pt>
 File: images/dome_geom.png Graphic file (type png)
 
 <use images/dome_geom.png>
-Package pdftex.def Info: images/dome_geom.png used on input line 19.
+Package pdftex.def Info: images/dome_geom.png used on input line 20.
 (pdftex.def)             Requested size: 207.7052pt x 126.72832pt.
 
-<images/dome_self_weight.png, id=4503, 588.39825pt x 314.3745pt>
+<images/dome_self_weight.png, id=4541, 588.39825pt x 314.3745pt>
 File: images/dome_self_weight.png Graphic file (type png)
 
 <use images/dome_self_weight.png>
-Package pdftex.def Info: images/dome_self_weight.png used on input line 23.
+Package pdftex.def Info: images/dome_self_weight.png used on input line 24.
 (pdftex.def)             Requested size: 207.7052pt x 110.97292pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 19--24
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 20--25
 [][][][] 
- []
-
-[132
-
-
-
- <./images/dome_geom.png> <./images/dome_self_weight.png>]) [133]
-\openout2 = `chapters/Appendix_4.aux'.
-
-
-(chapters/Appendix_4.tex
-chapter F.
-
-Overfull \hbox (13.41092pt too wide) in paragraph at lines 8--8
-|[]\T1/phv/b/n/24.88 Derivation of Eu-ler buck-ling
  []
 
 [134
 
 
 
-]) [135] (WissenschaftlicheArbeit.lof [136
+ <./images/dome_geom.png> <./images/dome_self_weight.png>]) [135]
+\openout2 = `chapters/Appendix_4.aux'.
 
 
-] [137])
+(chapters/Appendix_4.tex
+chapter F.
+[136
+
+
+
+]) [137] (WissenschaftlicheArbeit.lof [138
+
+
+] [139])
 \tf@lof=\write11
 \openout11 = `WissenschaftlicheArbeit.lof'.
 
 
 No file WissenschaftlicheArbeit.acr.
-[138] [139
+[140] [141
 
-] [140] [141] [142] (chapters/Declaration.tex [143]
+] [142] [143] [144] (chapters/Declaration.tex [145]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -5291,7 +5308,7 @@ No file WissenschaftlicheArbeit.acr.
 TextBlockOrigin set to 20mm x 43.5mm
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.04994pt on input line 44.
-[144
+[146
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
@@ -5314,10 +5331,10 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55487 strings out of 493333
- 1196961 string characters out of 3139194
+ 55522 strings out of 493333
+ 1197166 string characters out of 3139194
  1854750 words of memory out of 3000000
- 56795 multiletter control sequences out of 15000+200000
+ 56809 multiletter control sequences out of 15000+200000
  147230 words of font info for 303 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,22n,108p,8958b,2113s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -5340,9 +5357,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.
 lic/txfonts/txsyc.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
 b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (149 pages, 17991238 bytes).
+Output written on WissenschaftlicheArbeit.pdf (151 pages, 17725656 bytes).
 PDF statistics:
- 4877 PDF objects out of 5155 (max. 8388607)
- 702 named destinations out of 1000 (max. 500000)
- 47738 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 4922 PDF objects out of 5155 (max. 8388607)
+ 724 named destinations out of 1000 (max. 500000)
+ 47733 words of extra memory for PDF output out of 51595 (max. 10000000)
 

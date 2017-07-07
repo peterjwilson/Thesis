@@ -4,6 +4,7 @@ Problems:
 
 To Do:	
 	- Original DSG derivation
+		- write up in report, esp the DOF ordering and rotation definitions
 	- Set alignment of shells in MDPA
 		- Add in alignment visualisation
 		- Add in element conditions in the MDPA prescribing alignment
