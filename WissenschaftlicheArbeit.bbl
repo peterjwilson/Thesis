@@ -857,6 +857,66 @@
     \field{year}{2011}
   \endentry
 
+  \entry{DSG_XFEM_2015}{article}{}
+    \name{author}{7}{}{%
+      {{hash=LP}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Bui},
+         familyi={B\bibinitperiod},
+         given={T.Q.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YT}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={T.T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={J.W.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yin},
+         familyi={Y\bibinitperiod},
+         given={S.H.},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hirose},
+         familyi={H\bibinitperiod},
+         given={S.},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LP+1}
+    \strng{fullhash}{LPBTZDYTWJYSHS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{179 \bibrangedash  193}
+    \field{title}{Buckling failure analysis of cracked functionally graded
+  plates by a stabilized discrete shear gap extended 3-node triangular plate
+  element}
+    \field{volume}{77}
+    \field{journaltitle}{Composites Part B: Engineering}
+    \field{year}{2015}
+  \endentry
+
   \entry{Lyl93}{article}{}
     \name{author}{3}{}{%
       {{hash=LM}{%

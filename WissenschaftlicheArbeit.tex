@@ -99,32 +99,32 @@
 
 %TOEDIT create different files for your chapter an include them here in the main file
 
-\setlength{\belowcaptionskip}{-17pt}
+\setlength{\belowcaptionskip}{-12pt}
 \renewcommand\arraystretch{1}
 
 \input{./chapters/Chapter_1} %intro
 % ----------- Background sections -----------------%
 \input{./chapters/Chapter_2} %shells in FEM
 \input{./chapters/Chapter_2_1} %Composite shells
-\input{./chapters/Chapter_2_2} %Stability analysis
+\input{./chapters/Chapter_2_2} %Nonlinear analysis
 % ----------- Formulation and implementation sections -----------------%
 \input{./chapters/Chapter_3} %thick tri
 \input{./chapters/Chapter_4} %thin quad
 \input{./chapters/Chapter_composite_formulation_implentation}
-\input{./chapters/Chapter_stability_implentation}
+%\input{./chapters/Chapter_stability_implentation}
 % ----------- Validation and testing sections -----------------%
 \input{./chapters/Chapter_5} %benchmarking
 % ----------- Application of shell elements -----------------%
 \input{./chapters/Chapter_applications} 
-
-\onehalfspacing
+% ----------- Extension of DSG theory -----------------%
+\input{./chapters/Chapter_DSG_extensions} 
 
 %\input{./Ressourcen/Tabellenvarianten.tex}
 
 \input{./chapters/Conclusions}
 
 % Appendices -----------------------------------------------------
-
+\onehalfspacing
 %\appendix
 \begin{appendices}
 
@@ -135,12 +135,14 @@
 {0pt}
 {\Huge\bfseries}
 
-\include{chapters/Appendix_0}
-\include{chapters/Appendix_DSG_derivation}
-\include{chapters/Appendix_1}
-\include{chapters/Appendix_2}
-\include{chapters/Appendix_3}
-\include{chapters/Appendix_4}
+\include{chapters/Appendix_0} %Analytical stability analysis of Mises truss
+\include{chapters/Appendix_DSG_derivation} %DSG derivation
+\include{chapters/Appendix_1} % Basic-DKQ formulation
+\include{chapters/Appendix_2} % Basic-T3 formulation
+\include{chapters/Appendix_3} % Analytical membrane analysis of dome
+\include{chapters/Appendix_4} % Derivation of Euler buckling load
+\include{chapters/DSG_implementation_in_Kratos}
+\include{chapters/ANDES_implementation_in_Kratos}
 %\include{chapters/Appendix_backup}
 \end{appendices}
 

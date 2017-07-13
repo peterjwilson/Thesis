@@ -1,21 +1,21 @@
+Klaus's presentation
+
+25 July
+11:30am
+
 Problems:
 	- Composite only works when set OMP_NUM_THREADS=1
 	- quad gauss point results are crap for the existing element too!
 
 To Do:	
-	- Original DSG derivation
-		- write up in report, esp the DOF ordering and rotation definitions
-	- Set alignment of shells in MDPA
-		- Add in alignment visualisation
-		- Add in element conditions in the MDPA prescribing alignment
 	- Element tests
 		- Composite tests
-	
-
+	- Write up background of Co-rotational and Kg formulation in non-linear analysis section
+	- Write up Kratos and element functions
 	
 Report:
 	- Continue review
-	- Kg derivation for shells ????
+	- Kg derivation for shells in non-linear analysis section
 	
 	- (Up next)
 	- Transverse shear stress results discussion!
