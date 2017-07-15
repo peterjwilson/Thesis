@@ -12,6 +12,8 @@ To Do:
 		- Composite tests
 	- Write up background of Co-rotational and Kg formulation in non-linear analysis section
 	- Write up Kratos and element functions
+	- Move Appendix DSG technology derivation to that DSG chapter
+	- Add general overview of each DSG and ANDES formulation in their chapters
 	
 Report:
 	- Continue review

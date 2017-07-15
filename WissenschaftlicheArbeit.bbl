@@ -1186,6 +1186,52 @@
     \field{year}{1992}
   \endentry
 
+  \entry{phung2013static}{article}{}
+    \name{author}{4}{}{%
+      {{hash=PVP}{%
+         family={Phung-Van},
+         familyi={P\bibinitperiod-V\bibinitperiod},
+         given={Phuc},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=NTT}{%
+         family={Nguyen-Thoi},
+         familyi={N\bibinitperiod-T\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+      {{hash=LDT}{%
+         family={Le-Dinh},
+         familyi={L\bibinitperiod-D\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+      {{hash=NXH}{%
+         family={Nguyen-Xuan},
+         familyi={N\bibinitperiod-X\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{PVP+1}
+    \strng{fullhash}{PVPNTTLDTNXH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{9}
+    \field{pages}{095026}
+    \field{title}{Static and free vibration analyses and dynamic control of
+  composite plates integrated with piezoelectric sensors and actuators by the
+  cell-based smoothed discrete shear gap method (CS-FEM-DSG3)}
+    \field{volume}{22}
+    \field{journaltitle}{Smart Materials and Structures}
+    \field{year}{2013}
+  \endentry
+
   \entry{Ram16}{article}{}
     \name{author}{3}{}{%
       {{hash=RG}{%

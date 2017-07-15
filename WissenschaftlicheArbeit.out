@@ -42,23 +42,22 @@
 \BOOKMARK [1][-]{section.9.1}{Euler buckling of CHS column}{chapter.9}% 42
 \BOOKMARK [1][-]{section.9.2}{Shear wrinkling of plate}{chapter.9}% 43
 \BOOKMARK [0][-]{chapter.10}{Extension of DSG triangle element technology - STILL TO DO!!!!!}{}% 44
-\BOOKMARK [1][-]{section.10.1}{DSG triangle ordering dependency}{chapter.10}% 45
-\BOOKMARK [1][-]{section.10.2}{Cell Smoothed DSG approach}{chapter.10}% 46
-\BOOKMARK [1][-]{section.10.3}{DSGc3 approach}{chapter.10}% 47
-\BOOKMARK [1][-]{section.10.4}{Appraisal of alternative DSG technology approaches}{chapter.10}% 48
-\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook - STILL TO DO!!!!!}{}% 49
-\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 50
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 51
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix DSG technology derivation}{}% 52
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-DKQ formulation}{}% 53
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Basic-T3 formulation}{}% 54
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical membrane analysis of dome}{}% 55
-\BOOKMARK [0][-]{Appendix.a.F}{Appendix Derivation of Euler buckling load}{}% 56
-\BOOKMARK [0][-]{Appendix.a.G}{Appendix DSG element as programmed in Kratos}{}% 57
-\BOOKMARK [1][-]{section.a.G.1}{ShellThickElement3D3N methods}{Appendix.a.G}% 58
-\BOOKMARK [1][-]{section.a.G.2}{ShellThickElement3D3N member variables}{Appendix.a.G}% 59
-\BOOKMARK [1][-]{section.a.G.3}{ShellThickElement3D3N KRATOS variables}{Appendix.a.G}% 60
-\BOOKMARK [0][-]{Appendix.a.H}{Appendix ANDES element as programmed in Kratos}{}% 61
-\BOOKMARK [1][-]{section.a.H.1}{ShellThinElementCorotational3D4N methods}{Appendix.a.H}% 62
-\BOOKMARK [1][-]{section.a.H.2}{ShellThinElementCorotational3D4N member variables}{Appendix.a.H}% 63
-\BOOKMARK [1][-]{section.a.H.3}{ShellThinElementCorotational3D4N KRATOS variables}{Appendix.a.H}% 64
+\BOOKMARK [1][-]{section.10.1}{Cell Smoothed DSG approach}{chapter.10}% 45
+\BOOKMARK [1][-]{section.10.2}{DSGc3 approach}{chapter.10}% 46
+\BOOKMARK [1][-]{section.10.3}{Appraisal of alternative DSG technology approaches}{chapter.10}% 47
+\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook - STILL TO DO!!!!!}{}% 48
+\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 49
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 50
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix DSG technology derivation}{}% 51
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-DKQ formulation}{}% 52
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Basic-T3 formulation}{}% 53
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical membrane analysis of dome}{}% 54
+\BOOKMARK [0][-]{Appendix.a.F}{Appendix Derivation of Euler buckling load}{}% 55
+\BOOKMARK [0][-]{Appendix.a.G}{Appendix DSG element as programmed in Kratos}{}% 56
+\BOOKMARK [1][-]{section.a.G.1}{ShellThickElement3D3N methods}{Appendix.a.G}% 57
+\BOOKMARK [1][-]{section.a.G.2}{ShellThickElement3D3N member variables}{Appendix.a.G}% 58
+\BOOKMARK [1][-]{section.a.G.3}{ShellThickElement3D3N KRATOS variables}{Appendix.a.G}% 59
+\BOOKMARK [0][-]{Appendix.a.H}{Appendix ANDES element as programmed in Kratos}{}% 60
+\BOOKMARK [1][-]{section.a.H.1}{ShellThinElementCorotational3D4N methods}{Appendix.a.H}% 61
+\BOOKMARK [1][-]{section.a.H.2}{ShellThinElementCorotational3D4N member variables}{Appendix.a.H}% 62
+\BOOKMARK [1][-]{section.a.H.3}{ShellThinElementCorotational3D4N KRATOS variables}{Appendix.a.H}% 63
