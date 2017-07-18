@@ -217,58 +217,60 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.2.1}DSGc3 unit triangle parametric formulation}{124}{subsection.10.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}Appraisal of alternative DSG technology approaches}{125}{section.10.3}
+\contentsline {subsection}{\numberline {10.2.2}DSGc3 example}{127}{subsection.10.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.1}Dissipation rate of DSG nodal ordering dependency}{125}{subsection.10.3.1}
+\contentsline {section}{\numberline {10.3}Appraisal of alternative DSG technology approaches}{129}{section.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.2}Computational cost vs. error for DSG and CS-DSG elements}{127}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.1}Dissipation rate of DSG nodal ordering dependency}{130}{subsection.10.3.1}
 \defcounter {refsection}{0}\relax 
-\vspace {-10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusions and Outlook - STILL TO DO!!!!!}{129}{chapter.11}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Future work}{129}{section.11.1}
+\contentsline {subsection}{\numberline {10.3.2}Computational cost vs. error for DSG and CS-DSG elements}{132}{subsection.10.3.2}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{130}{Appendix.a.A}
+\contentsline {chapter}{\numberline {11}Conclusions and Outlook - STILL TO DO!!!!!}{134}{chapter.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.1}Future work}{134}{section.11.1}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}DSG technology derivation}{134}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{135}{Appendix.a.A}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Basic-DKQ formulation}{139}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {B}DSG technology derivation}{139}{Appendix.a.B}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Basic-T3 formulation}{141}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {C}Basic-DKQ formulation}{144}{Appendix.a.C}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {E}Analytical membrane analysis of dome}{142}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {D}Basic-T3 formulation}{146}{Appendix.a.D}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {F}Derivation of Euler buckling load}{144}{Appendix.a.F}
+\contentsline {chapter}{Appendix \numberline {E}Analytical membrane analysis of dome}{147}{Appendix.a.E}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {G}DSG element as programmed in Kratos}{146}{Appendix.a.G}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.1}ShellThickElement3D3N methods}{146}{section.a.G.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.2}ShellThickElement3D3N member variables}{146}{section.a.G.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.3}ShellThickElement3D3N KRATOS variables}{146}{section.a.G.3}
+\contentsline {chapter}{Appendix \numberline {F}Derivation of Euler buckling load}{149}{Appendix.a.F}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {H}ANDES element as programmed in Kratos}{147}{Appendix.a.H}
+\contentsline {chapter}{Appendix \numberline {G}DSG element as programmed in Kratos}{151}{Appendix.a.G}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.1}ShellThinElementCorotational3D4N methods}{147}{section.a.H.1}
+\contentsline {section}{\numberline {G.1}ShellThickElement3D3N methods}{151}{section.a.G.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.2}ShellThinElementCorotational3D4N member variables}{147}{section.a.H.2}
+\contentsline {section}{\numberline {G.2}ShellThickElement3D3N member variables}{151}{section.a.G.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.3}ShellThinElementCorotational3D4N KRATOS variables}{147}{section.a.H.3}
+\contentsline {section}{\numberline {G.3}ShellThickElement3D3N KRATOS variables}{151}{section.a.G.3}
+\defcounter {refsection}{0}\relax 
+\vspace {-10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix \numberline {H}ANDES element as programmed in Kratos}{152}{Appendix.a.H}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {H.1}ShellThinElementCorotational3D4N methods}{152}{section.a.H.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {H.2}ShellThinElementCorotational3D4N member variables}{152}{section.a.H.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {H.3}ShellThinElementCorotational3D4N KRATOS variables}{152}{section.a.H.3}

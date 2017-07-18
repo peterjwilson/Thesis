@@ -302,14 +302,14 @@ Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\
 	\label{fig:parametric_unit_triangle}
 \end{figure}
 
-Three transverse displacement fields are considered across the triangle: a Kirchhoff-Love field $w_{KL}$, a Reissner-Mindlin field $w_{RM}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
+Three transverse displacement fields are considered across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
 
 \begin{equation} 
 w_{KL} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 + 0.5(a_5 + a_6)\xi \eta + \eta^2 a_7
 \label{eqDSGc3_1}
 \end{equation}
 \begin{equation} 
-w_{RM} = \xi a_8 + \eta a_9
+w_{RM \gamma} = \xi a_8 + \eta a_9
 \label{eqDSGc3_2}
 \end{equation}
 \begin{equation} 
@@ -317,31 +317,220 @@ w_{MOD} = 0.5(a_5 - a_6)\xi \eta
 \label{eqDSGc3_3}
 \end{equation}
 
-The coefficients $a_1$ through $a_9$ are placeholders for the relevant triangle DOFs to be solved in the next steps of the formulation.
+The coefficients $a_1$ through $a_9$ are ansatz coefficients as yet unknown corresponding to one or more triangle DOFs each.
 
-The interaction between the moderator field and the Kirchhoff-Love and Reissner-Mindlin fields is introduced along parametric axes as:
+The interaction between the moderator field and the Kirchhoff-Love fields is introduced along parametric axes as
 
 \begin{equation} 
 w_{KL \xi} = w_{KL} + w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_5 \xi \eta + \eta^2 a_7
 \label{eqDSGc3_4}
 \end{equation}
+and
 \begin{equation} 
 w_{KL \eta} = w_{KL} - w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_6 \xi \eta + \eta^2 a_7
-\label{eqDSGc3_5}
+\label{eqDSGc3_5}\ .
+\end{equation}
+
+ According to it's definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field.
+
+\begin{equation} 
+\beta_{KL \xi} = \frac{\partial w_{KL \xi}}{\partial \xi}  = a_2 + 2 \xi a_4 +a_5 \eta
+\label{eqDSGc3_8}
+\end{equation}
+\begin{equation} 
+\beta_{KL \eta} = \frac{\partial w_{KL \eta}}{\partial \eta}  =a_3 +a_6 \xi + 2 \eta a_7
+\label{eqDSGc3_9}
+\end{equation}
+
+A displacement gap field can be recovered by identifying the difference between the Reissner-Mindlin shear-displacement and Kirchhoff-Love displacement fields:
+
+\begin{equation} 
+\Delta_w = w_{RM\gamma} - w_{KL}  =-a_1 - a_2\xi - a3\eta - a_4\xi^2 - a_7\eta^2 + a_8\xi + a_9\eta - 0.5\eta\xi(a_5 + a_6)
+\label{eqDSGc3_10}\ .
+\end{equation}
+
+Until now the fields have been written in general terms of unknown ansatz coefficients. The fields can be clarified by considering 9 boundary conditions, sufficient to set-up 9 equations and solve the 9 unknowns.
+
+The first three equations constrain the displacement gap field to fulfil discrete nodal displacements:
+
+\begin{equation} 
+bc1 = \Delta_w(0,0) = w_1 = -a_1
+\label{eqDSGc3_11}\ ,
+\end{equation}
+\begin{equation} 
+bc2 = \Delta_w(1,0) = w_2 = -a_1 -a_2 -a_4 + a_8
+\label{eqDSGc3_12}\ ,
+\end{equation}
+and
+\begin{equation} 
+bc3 = \Delta_w(0,1) = w_3 = -a_1 -a_3 -a_7 + a_9
+\label{eqDSGc3_13}\ .
+\end{equation}
+
+The remaining six impose rotation conditions on the nodal extremities of the modified Kirchhoff-Love fields, shaping both it and the introduced moderator field:
+
+\begin{equation} 
+bc4 = \beta_{KL \xi}(0,0) = \beta_{\xi 1} = a_2
+\label{eqDSGc3_14}\ ,
+\end{equation}
+\begin{equation} 
+bc5 = \beta_{KL \xi}(1,0) = \beta_{\xi 2} = a_2 + 2a_4
+\label{eqDSGc3_15}\ ,
+\end{equation}
+\begin{equation} 
+bc6 = \beta_{KL \xi}(0,1) = \beta_{\xi 3} = a_2 + a_5
+\label{eqDSGc3_16}\ ,
 \end{equation}
 
 \begin{equation} 
-w_{RM \xi} = w_{RM} + w_{MOD} = \xi a_8 + \eta a_9 + 0.5(a_5 - a_6)\xi \eta
+bc7 = \beta_{KL \eta}(0,0) = \beta_{\eta 1} = a_3
+\label{eqDSGc3_17}\ ,
+\end{equation}
+\begin{equation} 
+bc8 = \beta_{KL \eta}(1,0) = \beta_{\eta 2} = a_3 + a_6
+\label{eqDSGc3_18}\ ,
+\end{equation}
+and
+\begin{equation} 
+bc9 = \beta_{KL \eta}(0,1) = \beta_{\eta 3} = a_3 + 2a_7
+\label{eqDSGc3_19}\ .
+\end{equation}
+
+Solving the above system of equations yields the following ansatz coefficients:
+
+\begin{equation} 
+\begin{pmatrix}
+a_1 \\
+a_2 \\
+a_3 \\
+a_4 \\
+a_5 \\
+a_6 \\
+a_7 \\
+a_8 \\
+a_9
+\end{pmatrix}
+=
+\begin{pmatrix}
+-w_1 \\
+\beta_{\xi 1} \\
+\beta_{\eta 1} \\
+0.5(\beta_{\xi 2} - \beta_{\xi 1}) \\
+\beta_{\xi 3} - \beta_{\xi 1} \\
+\beta_{\eta 2} - \beta_{\eta 1} \\
+0.5(\beta_{\eta 3} - \beta_{\eta 1}) \\
+w_2 - w_1 + 0.5(\beta_{\xi 1} + \beta_{\xi 2}) \\
+w_3 - w_1 + 0.5(\beta_{\eta 1} + \beta_{\eta 3}) 
+\end{pmatrix}
+\label{eqDSGc3_20}\ .
+\end{equation}
+
+For completeness, the Reissner-Mindlin shear-displacement and moderator fields are re-written with the ansatz results substituted:
+
+\begin{equation} 
+w_{RM \gamma} = \eta(0.5 \beta_{\eta 1} + 0.5\beta_{\eta 3} - w_1 + w_3) + \xi(0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2)
+\label{eqDSGc3_21}\ ,
+\end{equation}
+and
+\begin{equation} 
+w_{MOD} = \eta\xi(-0.5\beta_{\xi 1}1 + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
+\label{eqDSGc3_22}\ .
+\end{equation}
+
+Indeed, the resulting Reissner-Mindlin shear-displacement field above is similar to the DSG field in the original DSG formulation only without skewed geometry interactions accounted for.
+
+As the moderator field was introduced into the Kirchhoff-Love field previously, so can it be introduced into the Reissner-Mindlin shear-displacement field as
+
+\begin{equation} 
+w_{RM \gamma \xi} = w_{RM \gamma} + w_{MOD} 
 \label{eqDSGc3_6}
 \end{equation}
+and
 \begin{equation} 
-w_{RM \eta} = w_{RM} - w_{MOD} = \xi a_8 + \eta a_9 - 0.5(a_5 - a_6)\xi \eta
-\label{eqDSGc3_7}
+w_{RM \gamma \eta} = w_{RM \gamma} - w_{MOD} 
+\label{eqDSGc3_7}\ .
 \end{equation}
 
-Similar to the original DSG formulation, the shear deformation field can be precipitated from the Reissner-Mindlin displacement field via differentiation. According to it's definition, differentiating the Kirchhoff-Love displacement field yields a pure rotation field.
+Similar to the original DSG formulation, the shear deformation field can be precipitated from the modified Reissner-Mindlin shear-displacement field via differentiation, yielding
 
+\begin{equation} 
+\gamma_{RM \gamma \xi} = \frac{\partial w_{RM \gamma \xi}}{\partial \xi}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2 + \eta(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
+\label{eqDSGc3_23}
+\end{equation} 
+and
+\begin{equation} 
+\gamma_{RM \gamma \eta} = \frac{\partial w_{RM \gamma \eta}}{\partial \eta}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} - w_1 + w_3 - \xi(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\xi 1} - 0.5\beta_{\xi 3})
+\label{eqDSGc3_25}\ .
+\end{equation}
 
+The entries of the above fields can ordered in a strain-displacement B matrix relating the shear fields to the triangle plate theory DOFs, resulting in:
+
+\begin{equation} 
+\mathbf{B}_\gamma = 
+\begin{pmatrix}
+-1 & 1 & 0 & 0.5(1 - \eta) & 0.5 & 0.5\eta & 0.5\eta & -0.5\eta & 0 \\
+-1 & 0 & 1 & 0.5\xi & 0 & -0.5\xi & 0.5(1-\xi) & 0.5\xi & 0.5
+\end{pmatrix}
+\label{eqDSGc3_26}\ .
+\end{equation}
+
+\subsection{DSGc3 example}
+In order to illustate the shear locking performance of the DSGc3 formulation proof of concept, 
+
+asdfadsf
+
+\begin{figure}[H]
+	\subfloat[Kirchhoff displacement field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{kt_displacement_field.pdf}}
+	\subfloat[Kirchhoff displacement field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{kt_displacement_field_90.pdf}}
+	\\
+	\subfloat[Displacement gap field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{displacement_gap_field.pdf}}
+	\subfloat[Displacement gap field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{displacement_gap_field_90.pdf}}
+	\\
+	\subfloat[Reissner-Mindlin shear-displacement field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rm_shear_disp_field.pdf}}
+	\subfloat[Relationship of aforementioned fields]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{sum.pdf}}
+	\caption{\label{csdsgc3_result}DSGc3 example problem displacement field results}
+\end{figure}
+
+\begin{figure}[H]
+	\subfloat[Rotation xi field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_xi.pdf}}
+	\subfloat[Rotation xi field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_xi_90.pdf}}
+	\\
+	\subfloat[Rotation eta field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_eta.pdf}}
+	\subfloat[Rotation eta field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_eta_90.pdf}}
+	\caption{\label{csdsgc3_resul1t}DSGc3 example problem rotation field results}
+\end{figure}
+
+asdfasdf
 
 \section{Appraisal of alternative DSG technology approaches}
 \label{CSDSG appraisal}

@@ -219,16 +219,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {76}{\ignorespaces Parametric unit triangle \cite {Ble00}\relax }}{124}{figure.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {77}{\ignorespaces DSG nodal dependency dissipation rate study setup\relax }}{126}{figure.caption.81}
+\contentsline {figure}{\numberline {77}{\ignorespaces DSGc3 example problem displacement field results\relax }}{128}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {78}{\ignorespaces Nodal ordering sensitivity study of DSG formulations\relax }}{126}{figure.caption.82}
+\contentsline {figure}{\numberline {78}{\ignorespaces DSGc3 example problem rotation field results\relax }}{129}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {79}{\ignorespaces Computational cost vs \% error of DSG formulations\relax }}{128}{figure.caption.83}
+\contentsline {figure}{\numberline {79}{\ignorespaces DSG nodal dependency dissipation rate study setup\relax }}{130}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {80}{\ignorespaces Mises truss geometry\relax }}{130}{figure.caption.84}
+\contentsline {figure}{\numberline {80}{\ignorespaces Nodal ordering sensitivity study of DSG formulations\relax }}{131}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {81}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{134}{figure.caption.85}
+\contentsline {figure}{\numberline {81}{\ignorespaces Computational cost vs \% error of DSG formulations\relax }}{132}{figure.caption.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {82}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{135}{figure.caption.86}
+\contentsline {figure}{\numberline {82}{\ignorespaces Mises truss geometry\relax }}{135}{figure.caption.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {83}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{142}{figure.caption.87}
+\contentsline {figure}{\numberline {83}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{139}{figure.caption.87}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {84}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{140}{figure.caption.88}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {85}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{147}{figure.caption.89}

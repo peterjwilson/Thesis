@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  15 JUL 2017 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  18 JUL 2017 13:13
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -2939,6 +2939,66 @@ LaTeX Warning: Label `ref_label2' multiply defined.
 
 LaTeX Warning: Label `sub@ref_label2' multiply defined.
 
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `ref_label2' multiply defined.
+
+
+LaTeX Warning: Label `sub@ref_label2' multiply defined.
+
 (chapters/Appendix_0.aux) (chapters/Appendix_DSG_derivation.aux
 
 LaTeX Warning: Label `ref_label1' multiply defined.
@@ -3573,106 +3633,106 @@ Overfull \hbox (1.22725pt too wide) detected at line 216
  []\T1/phv/m/n/10.95 124
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 220.
+Package tocbasic Info: Using my definition of `\numberline' on input line 222.
 
-Overfull \hbox (1.22725pt too wide) detected at line 220
- []\T1/phv/m/n/10.95 125
- []
-
-Package tocbasic Info: Using my definition of `\numberline' on input line 228.
-
-Overfull \hbox (1.22725pt too wide) detected at line 228
- \T1/phv/m/n/10.95 129
+Overfull \hbox (1.22725pt too wide) detected at line 222
+ []\T1/phv/m/n/10.95 129
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 230.
 
 Overfull \hbox (1.22725pt too wide) detected at line 230
- []\T1/phv/m/n/10.95 129
- []
-
-Package tocbasic Info: Using my definition of `\numberline' on input line 234.
-
-Overfull \hbox (1.22725pt too wide) detected at line 234
- \T1/phv/m/n/10.95 130
- []
-
-Package tocbasic Info: Using my definition of `\numberline' on input line 238.
-
-Overfull \hbox (1.22725pt too wide) detected at line 238
  \T1/phv/m/n/10.95 134
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 242.
+Package tocbasic Info: Using my definition of `\numberline' on input line 232.
 
-Overfull \hbox (1.22725pt too wide) detected at line 242
+Overfull \hbox (1.22725pt too wide) detected at line 232
+ []\T1/phv/m/n/10.95 134
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 236.
+
+Overfull \hbox (1.22725pt too wide) detected at line 236
+ \T1/phv/m/n/10.95 135
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 240.
+
+Overfull \hbox (1.22725pt too wide) detected at line 240
  \T1/phv/m/n/10.95 139
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 246.
+Package tocbasic Info: Using my definition of `\numberline' on input line 244.
 
-Overfull \hbox (1.22725pt too wide) detected at line 246
- \T1/phv/m/n/10.95 141
- []
-
-Package tocbasic Info: Using my definition of `\numberline' on input line 250.
-
-Overfull \hbox (1.22725pt too wide) detected at line 250
- \T1/phv/m/n/10.95 142
- []
-
-Package tocbasic Info: Using my definition of `\numberline' on input line 254.
-
-Overfull \hbox (1.22725pt too wide) detected at line 254
+Overfull \hbox (1.22725pt too wide) detected at line 244
  \T1/phv/m/n/10.95 144
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 258.
+Package tocbasic Info: Using my definition of `\numberline' on input line 248.
 
-Overfull \hbox (1.22725pt too wide) detected at line 258
+Overfull \hbox (1.22725pt too wide) detected at line 248
  \T1/phv/m/n/10.95 146
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 252.
+
+Overfull \hbox (1.22725pt too wide) detected at line 252
+ \T1/phv/m/n/10.95 147
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 256.
+
+Overfull \hbox (1.22725pt too wide) detected at line 256
+ \T1/phv/m/n/10.95 149
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 260.
 
 Overfull \hbox (1.22725pt too wide) detected at line 260
- []\T1/phv/m/n/10.95 146
+ \T1/phv/m/n/10.95 151
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 262.
 
 Overfull \hbox (1.22725pt too wide) detected at line 262
- []\T1/phv/m/n/10.95 146
+ []\T1/phv/m/n/10.95 151
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 264.
 
 Overfull \hbox (1.22725pt too wide) detected at line 264
- []\T1/phv/m/n/10.95 146
+ []\T1/phv/m/n/10.95 151
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 268.
+Package tocbasic Info: Using my definition of `\numberline' on input line 266.
 
-Overfull \hbox (1.22725pt too wide) detected at line 268
- \T1/phv/m/n/10.95 147
+Overfull \hbox (1.22725pt too wide) detected at line 266
+ []\T1/phv/m/n/10.95 151
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 270.
 
 Overfull \hbox (1.22725pt too wide) detected at line 270
- []\T1/phv/m/n/10.95 147
+ \T1/phv/m/n/10.95 152
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 272.
 
 Overfull \hbox (1.22725pt too wide) detected at line 272
- []\T1/phv/m/n/10.95 147
+ []\T1/phv/m/n/10.95 152
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 274.
 
 Overfull \hbox (1.22725pt too wide) detected at line 274
- []\T1/phv/m/n/10.95 147
+ []\T1/phv/m/n/10.95 152
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 276.
+
+Overfull \hbox (1.22725pt too wide) detected at line 276
+ []\T1/phv/m/n/10.95 152
  []
 
 )
@@ -5396,54 +5456,170 @@ File: images/parametric_unit_triangle.png Graphic file (type png)
 Package pdftex.def Info: images/parametric_unit_triangle.png used on input line
  300.
 (pdftex.def)             Requested size: 227.62204pt x 196.28314pt.
- [124 <./images/parametric_unit_triangle.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 351.
+ [124 <./images/parametric_unit_triangle.png>] [125] [126]
+<images/kt_displacement_field.pdf, id=4711, 440.06908pt x 361.35pt>
+File: images/kt_displacement_field.pdf Graphic file (type pdf)
+
+<use images/kt_displacement_field.pdf>
+Package pdftex.def Info: images/kt_displacement_field.pdf used on input line 48
+6.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/kt_displacement_field_90.pdf, id=4712, 440.06908pt x 361.35pt>
+File: images/kt_displacement_field_90.pdf Graphic file (type pdf)
+
+<use images/kt_displacement_field_90.pdf>
+Package pdftex.def Info: images/kt_displacement_field_90.pdf used on input line
+ 490.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/displacement_gap_field.pdf, id=4713, 431.86656pt x 361.35pt>
+File: images/displacement_gap_field.pdf Graphic file (type pdf)
+
+<use images/displacement_gap_field.pdf>
+Package pdftex.def Info: images/displacement_gap_field.pdf used on input line 4
+95.
+(pdftex.def)             Requested size: 207.7052pt x 173.78787pt.
+
+<images/displacement_gap_field_90.pdf, id=4714, 431.86656pt x 361.35pt>
+File: images/displacement_gap_field_90.pdf Graphic file (type pdf)
+
+<use images/displacement_gap_field_90.pdf>
+Package pdftex.def Info: images/displacement_gap_field_90.pdf used on input lin
+e 499.
+(pdftex.def)             Requested size: 207.7052pt x 173.78787pt.
+
+<images/rm_shear_disp_field.pdf, id=4715, 440.06908pt x 361.35pt>
+File: images/rm_shear_disp_field.pdf Graphic file (type pdf)
+
+<use images/rm_shear_disp_field.pdf>
+Package pdftex.def Info: images/rm_shear_disp_field.pdf used on input line 504.
+
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/sum.pdf, id=4716, 446.77634pt x 361.35pt>
+File: images/sum.pdf Graphic file (type pdf)
+ <use images/sum.pdf>
+Package pdftex.def Info: images/sum.pdf used on input line 508.
+(pdftex.def)             Requested size: 207.7052pt x 167.99294pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 486--509
+[][][][] 
+ []
+
+[127] <images/rotation_xi.pdf, id=4727, 440.06908pt x 361.35pt>
+File: images/rotation_xi.pdf Graphic file (type pdf)
+
+<use images/rotation_xi.pdf>
+Package pdftex.def Info: images/rotation_xi.pdf used on input line 516.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/rotation_xi_90.pdf, id=4728, 440.06908pt x 361.35pt>
+File: images/rotation_xi_90.pdf Graphic file (type pdf)
+
+<use images/rotation_xi_90.pdf>
+Package pdftex.def Info: images/rotation_xi_90.pdf used on input line 520.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/rotation_eta.pdf, id=4729, 447.87952pt x 361.35pt>
+File: images/rotation_eta.pdf Graphic file (type pdf)
+
+<use images/rotation_eta.pdf>
+Package pdftex.def Info: images/rotation_eta.pdf used on input line 525.
+(pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
+
+<images/rotation_eta_90.pdf, id=4730, 447.87952pt x 361.35pt>
+File: images/rotation_eta_90.pdf Graphic file (type pdf)
+
+<use images/rotation_eta_90.pdf>
+Package pdftex.def Info: images/rotation_eta_90.pdf used on input line 529.
+(pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 516--530
+[][][][] 
+ []
+
+[128 <./images/kt_displacement_field.pdf> <./images/kt_displacement_field_90.pd
+f
+
+pdfTeX warning: pdflatex.exe (file ./images/kt_displacement_field_90.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+> <./images/displacement_gap_field.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/displacement_gap_field.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./images/displacement_gap_field_90.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/displacement_gap_field_90.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+> <./images/rm_shear_disp_field.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/rm_shear_disp_field.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./images/sum.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/sum.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+>]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 540.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 351.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 540.
+ [129 <./images/rotation_xi.pdf> <./images/rotation_xi_90.pdf
 
-<images/csdsg_nodal_dissipation_setup.png, id=4686, 704.6325pt x 643.90562pt>
+pdfTeX warning: pdflatex.exe (file ./images/rotation_xi_90.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./images/rotation_eta.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/rotation_eta.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./images/rotation_eta_90.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/rotation_eta_90.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>]
+<images/csdsg_nodal_dissipation_setup.png, id=5083, 704.6325pt x 643.90562pt>
 File: images/csdsg_nodal_dissipation_setup.png Graphic file (type png)
 
 <use images/csdsg_nodal_dissipation_setup.png>
 Package pdftex.def Info: images/csdsg_nodal_dissipation_setup.png used on input
- line 364.
+ line 553.
 (pdftex.def)             Requested size: 207.7052pt x 189.80313pt.
 
-<images/csdsg_nodal_dissipation_setup1.png, id=4687, 713.66624pt x 639.89063pt>
+<images/csdsg_nodal_dissipation_setup1.png, id=5084, 713.66624pt x 639.89063pt>
 File: images/csdsg_nodal_dissipation_setup1.png Graphic file (type png)
 <use images/csdsg_nodal_dissipation_setup1.png>
 Package pdftex.def Info: images/csdsg_nodal_dissipation_setup1.png used on inpu
-t line 368.
+t line 557.
 (pdftex.def)             Requested size: 207.7052pt x 186.22746pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 364--369
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 553--558
 [][][][] 
  []
 
-[125] <images/node_ordering_study.pdf, id=4698, 517.73424pt x 461.54526pt>
+<images/node_ordering_study.pdf, id=5085, 517.73424pt x 461.54526pt>
 File: images/node_ordering_study.pdf Graphic file (type pdf)
 
 <use images/node_ordering_study.pdf>
-Package pdftex.def Info: images/node_ordering_study.pdf used on input line 376.
+Package pdftex.def Info: images/node_ordering_study.pdf used on input line 565.
 
 (pdftex.def)             Requested size: 341.43306pt x 304.38136pt.
- [126 <./images/csdsg_nodal_dissipation_setup.png> <./images/csdsg_nodal_dissip
-ation_setup1.png> <./images/node_ordering_study.pdf>]
-<images/node_ordering_study_error.pdf, id=4756, 589.91325pt x 439.53333pt>
+ [130 <./images/csdsg_nodal_dissipation_setup.png> <./images/csdsg_nodal_dissip
+ation_setup1.png>] [131 <./images/node_ordering_study.pdf>]
+<images/node_ordering_study_error.pdf, id=5148, 589.91325pt x 439.53333pt>
 File: images/node_ordering_study_error.pdf Graphic file (type pdf)
 
 <use images/node_ordering_study_error.pdf>
 Package pdftex.def Info: images/node_ordering_study_error.pdf used on input lin
-e 392.
+e 581.
 (pdftex.def)             Requested size: 341.43306pt x 254.39296pt.
- [127]) (chapters/Conclusions.tex
-[128 <./images/node_ordering_study_error.pdf>]
+ [132 <./images/node_ordering_study_error.pdf>]) (chapters/Conclusions.tex [133
+]
 chapter 11.
-) [129
+) [134
 
 ]
 \openout2 = `chapters/Appendix_0.aux'.
@@ -5454,10 +5630,10 @@ File: images/mises_truss_def.png Graphic file (type png)
 <use images/mises_truss_def.png>
 Package pdftex.def Info: images/mises_truss_def.png used on input line 18.
 (pdftex.def)             Requested size: 227.62204pt x 160.55965pt.
- [130
+ [135
 
 
-] [131] [132]) [133]
+] [136] [137]) [138]
 \openout2 = `chapters/Appendix_DSG_derivation.aux'.
 
 
@@ -5472,7 +5648,7 @@ File: images/DSG.png Graphic file (type png)
 <use images/DSG.png>
 Package pdftex.def Info: images/DSG.png used on input line 18.
 (pdftex.def)             Requested size: 207.7052pt x 103.84496pt.
- <images/DSG_2.png, id=4865, 627.84563pt x 242.40562pt>
+ <images/DSG_2.png, id=5257, 627.84563pt x 242.40562pt>
 File: images/DSG_2.png Graphic file (type png)
 
 <use images/DSG_2.png>
@@ -5483,40 +5659,40 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 18--22
 [][][][] 
  []
 
-[134
+[139
 
 
 
  <./images/DSG_2.png>]
-<images/DSG_element1.png, id=4878, 354.32375pt x 320.19624pt>
+<images/DSG_element1.png, id=5269, 354.32375pt x 320.19624pt>
 File: images/DSG_element1.png Graphic file (type png)
 
 <use images/DSG_element1.png>
 Package pdftex.def Info: images/DSG_element1.png used on input line 73.
 (pdftex.def)             Requested size: 184.9429pt x 167.13326pt.
 
-<images/DSG_element2.png, id=4879, 496.35437pt x 233.37187pt>
+<images/DSG_element2.png, id=5270, 496.35437pt x 233.37187pt>
 File: images/DSG_element2.png Graphic file (type png)
 
 <use images/DSG_element2.png>
 Package pdftex.def Info: images/DSG_element2.png used on input line 76.
 (pdftex.def)             Requested size: 207.7052pt x 97.65585pt.
- [135 <./images/DSG_element1.png> <./images/DSG_element2.png>] [136] [137]) [13
-8]
+ [140 <./images/DSG_element1.png> <./images/DSG_element2.png>] [141] [142]) [14
+3]
 \openout2 = `chapters/Appendix_1.aux'.
 
  (chapters/Appendix_1.tex
 chapter C.
-[139
+[144
 
 
 
-]) [140]
+]) [145]
 \openout2 = `chapters/Appendix_2.aux'.
 
  (chapters/Appendix_2.tex
 chapter D.
-) [141
+) [146
 
 
 
@@ -5525,14 +5701,14 @@ chapter D.
 
  (chapters/Appendix_3.tex
 chapter E.
-<images/dome_geom.png, id=4956, 451.08525pt x 275.22826pt>
+<images/dome_geom.png, id=5348, 451.08525pt x 275.22826pt>
 File: images/dome_geom.png Graphic file (type png)
 
 <use images/dome_geom.png>
 Package pdftex.def Info: images/dome_geom.png used on input line 20.
 (pdftex.def)             Requested size: 207.7052pt x 126.72832pt.
 
-<images/dome_self_weight.png, id=4957, 588.39825pt x 314.3745pt>
+<images/dome_self_weight.png, id=5349, 588.39825pt x 314.3745pt>
 File: images/dome_self_weight.png Graphic file (type png)
 
 <use images/dome_self_weight.png>
@@ -5543,26 +5719,26 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 20--25
 [][][][] 
  []
 
-[142
+[147
 
 
 
- <./images/dome_geom.png> <./images/dome_self_weight.png>]) [143]
+ <./images/dome_geom.png> <./images/dome_self_weight.png>]) [148]
 \openout2 = `chapters/Appendix_4.aux'.
 
 
 (chapters/Appendix_4.tex
 chapter F.
-[144
+[149
 
 
 
-]) [145]
+]) [150]
 \openout2 = `chapters/DSG_implementation_in_Kratos.aux'.
 
  (chapters/DSG_implementation_in_Kratos.tex
 chapter G.
-) [146
+) [151
 
 
 
@@ -5571,22 +5747,22 @@ chapter G.
 
  (chapters/ANDES_implementation_in_Kratos.tex
 chapter H.
-) [147
+) [152
 
 
 
-] (WissenschaftlicheArbeit.lof [148
+] (WissenschaftlicheArbeit.lof [153
 
 
-] [149])
+] [154])
 \tf@lof=\write11
 \openout11 = `WissenschaftlicheArbeit.lof'.
 
 
 No file WissenschaftlicheArbeit.acr.
-[150] [151
+[155] [156
 
-] [152] [153] [154] [155] (chapters/Declaration.tex [156]
+] [157] [158] [159] [160] (chapters/Declaration.tex [161]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -5623,7 +5799,7 @@ No file WissenschaftlicheArbeit.acr.
 TextBlockOrigin set to 20mm x 43.5mm
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.04994pt on input line 44.
-[157
+[162
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
@@ -5647,10 +5823,10 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56415 strings out of 493333
- 1213899 string characters out of 3139194
+ 56520 strings out of 493333
+ 1216162 string characters out of 3139194
  1872422 words of memory out of 3000000
- 57589 multiletter control sequences out of 15000+200000
+ 57649 multiletter control sequences out of 15000+200000
  148239 words of font info for 310 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,23n,108p,8958b,2113s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -5674,9 +5850,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfon
 ts/txsyc.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (162 pages, 18316706 bytes).
+Output written on WissenschaftlicheArbeit.pdf (167 pages, 19230212 bytes).
 PDF statistics:
- 5371 PDF objects out of 6186 (max. 8388607)
- 789 named destinations out of 1000 (max. 500000)
- 47884 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 5772 PDF objects out of 6186 (max. 8388607)
+ 825 named destinations out of 1000 (max. 500000)
+ 47934 words of extra memory for PDF output out of 51595 (max. 10000000)
 
