@@ -475,11 +475,18 @@ The entries of the above fields can ordered in a strain-displacement B matrix re
 \end{equation}
 
 \subsection{DSGc3 example}
-In order to illustate the shear locking performance of the DSGc3 formulation proof of concept, 
-
-asdfadsf
+In order to illustrate the locking-free performance of the DSGc3 proof of concept formulation, a Python implementation of the element solving prescribed displacements is considered. As per the formulation under development, a unit triangle of thickness $h = 0.005$ is considered with isotropic material properties $E = 1000,\ \nu=0.0$ subject to no external influence except the following prescribed displacements: $w_1 = w_3 = 0.5,\ w_2 = \beta_{\xi 1} = \beta_{\eta 1} = 1.0$ and $\beta_{\xi 3} = 1.5$. Thus the DOFs $\beta_{\xi 2},\ \beta_{\eta 2}$ and $\beta_{\eta 3}$ form the problem unknowns. The results of the analysis determine the following unknown values: $\beta_{\xi 2} = -2.0,\ \beta_{\eta 2} = 1.5$ and $\beta_{\eta 3} = -1.0$. Of more interest, however, is the visual representation of the underlying formulation fields, with the various displacement fields fulfilling the solution presented below:
 
 \begin{figure}[H]
+		\subfloat[Displacement gap field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{displacement_gap_field.pdf}}
+	\subfloat[Displacement gap field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{displacement_gap_field_90.pdf}}
+	\\
 	\subfloat[Kirchhoff displacement field]
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
@@ -488,15 +495,6 @@ asdfadsf
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{kt_displacement_field_90.pdf}}
-	\\
-	\subfloat[Displacement gap field]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{displacement_gap_field.pdf}}
-	\subfloat[Displacement gap field - top view]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{displacement_gap_field_90.pdf}}
 	\\
 	\subfloat[Reissner-Mindlin shear-displacement field]
 	{\label{ref_label2}
@@ -508,6 +506,10 @@ asdfadsf
 		{sum.pdf}}
 	\caption{\label{csdsgc3_result}DSGc3 example problem displacement field results}
 \end{figure}
+
+The displacement gap field in sub-figures (a) and (b) illustrate the fulfilment of nodal transverse displacement as per equations \ref{eqDSGc3_11} through \ref{eqDSGc3_13}, while the Kirchhoff displacement field in sub-figures (c) and (d) fulfils the nodal rotations of equations \ref{eqDSGc3_14} through \ref{eqDSGc3_19}. The locking-free performance of the element is confirmed in (e) with the RM shear-displacement field having a value of zero throughout. Sub-figure (f) highlights the relationship between these three fields, as per equation \ref{eqDSGc3_10}, with the displacement gap and Kirchhoff fields essentially nullifying each other to mitigate locking effects.
+
+The rotation fields of the formulation are presented below:
 
 \begin{figure}[H]
 	\subfloat[Rotation xi field]
@@ -530,7 +532,9 @@ asdfadsf
 	\caption{\label{csdsgc3_resul1t}DSGc3 example problem rotation field results}
 \end{figure}
 
-asdfasdf
+As per equations \ref{eqDSGc3_8} and \ref{eqDSGc3_9}, both rotation fields exhibit linear interpolation of nodal values, themselves corresponding to the solution values due to the constraints of equations \ref{eqDSGc3_14} though \ref{eqDSGc3_19}.
+
+As an emerging formulation, the DSGc3 offers a promising proof of concept for a locking-free linear triangle element. Further steps to generalise the current unit-triangle parametric formulation to an arbitrarily skewed Cartesian formulation are necessary to effectively use the element in general FEM code, such as Kratos. Thus, given the current state of the DSGc3 formulation, the remaining discussion of extended DSG formulations is limited to the aforementioned CS-DSG element.
 
 \section{Appraisal of alternative DSG technology approaches}
 \label{CSDSG appraisal}

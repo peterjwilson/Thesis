@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  18 JUL 2017 13:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  18 JUL 2017 15:59
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -5457,101 +5457,69 @@ Package pdftex.def Info: images/parametric_unit_triangle.png used on input line
  300.
 (pdftex.def)             Requested size: 227.62204pt x 196.28314pt.
  [124 <./images/parametric_unit_triangle.png>] [125] [126]
-<images/kt_displacement_field.pdf, id=4711, 440.06908pt x 361.35pt>
-File: images/kt_displacement_field.pdf Graphic file (type pdf)
-
-<use images/kt_displacement_field.pdf>
-Package pdftex.def Info: images/kt_displacement_field.pdf used on input line 48
-6.
-(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
-
-<images/kt_displacement_field_90.pdf, id=4712, 440.06908pt x 361.35pt>
-File: images/kt_displacement_field_90.pdf Graphic file (type pdf)
-
-<use images/kt_displacement_field_90.pdf>
-Package pdftex.def Info: images/kt_displacement_field_90.pdf used on input line
- 490.
-(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
-
-<images/displacement_gap_field.pdf, id=4713, 431.86656pt x 361.35pt>
+<images/displacement_gap_field.pdf, id=4711, 431.86656pt x 361.35pt>
 File: images/displacement_gap_field.pdf Graphic file (type pdf)
 
 <use images/displacement_gap_field.pdf>
 Package pdftex.def Info: images/displacement_gap_field.pdf used on input line 4
-95.
+84.
 (pdftex.def)             Requested size: 207.7052pt x 173.78787pt.
 
-<images/displacement_gap_field_90.pdf, id=4714, 431.86656pt x 361.35pt>
+<images/displacement_gap_field_90.pdf, id=4712, 431.86656pt x 361.35pt>
 File: images/displacement_gap_field_90.pdf Graphic file (type pdf)
 
 <use images/displacement_gap_field_90.pdf>
 Package pdftex.def Info: images/displacement_gap_field_90.pdf used on input lin
-e 499.
+e 488.
 (pdftex.def)             Requested size: 207.7052pt x 173.78787pt.
+
+<images/kt_displacement_field.pdf, id=4713, 440.06908pt x 361.35pt>
+File: images/kt_displacement_field.pdf Graphic file (type pdf)
+
+<use images/kt_displacement_field.pdf>
+Package pdftex.def Info: images/kt_displacement_field.pdf used on input line 49
+3.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/kt_displacement_field_90.pdf, id=4714, 440.06908pt x 361.35pt>
+File: images/kt_displacement_field_90.pdf Graphic file (type pdf)
+
+<use images/kt_displacement_field_90.pdf>
+Package pdftex.def Info: images/kt_displacement_field_90.pdf used on input line
+ 497.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
 <images/rm_shear_disp_field.pdf, id=4715, 440.06908pt x 361.35pt>
 File: images/rm_shear_disp_field.pdf Graphic file (type pdf)
 
 <use images/rm_shear_disp_field.pdf>
-Package pdftex.def Info: images/rm_shear_disp_field.pdf used on input line 504.
+Package pdftex.def Info: images/rm_shear_disp_field.pdf used on input line 502.
 
 (pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
 <images/sum.pdf, id=4716, 446.77634pt x 361.35pt>
 File: images/sum.pdf Graphic file (type pdf)
  <use images/sum.pdf>
-Package pdftex.def Info: images/sum.pdf used on input line 508.
+Package pdftex.def Info: images/sum.pdf used on input line 506.
 (pdftex.def)             Requested size: 207.7052pt x 167.99294pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 486--509
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 484--507
 [][][][] 
  []
 
-[127] <images/rotation_xi.pdf, id=4727, 440.06908pt x 361.35pt>
-File: images/rotation_xi.pdf Graphic file (type pdf)
-
-<use images/rotation_xi.pdf>
-Package pdftex.def Info: images/rotation_xi.pdf used on input line 516.
-(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
-
-<images/rotation_xi_90.pdf, id=4728, 440.06908pt x 361.35pt>
-File: images/rotation_xi_90.pdf Graphic file (type pdf)
-
-<use images/rotation_xi_90.pdf>
-Package pdftex.def Info: images/rotation_xi_90.pdf used on input line 520.
-(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
-
-<images/rotation_eta.pdf, id=4729, 447.87952pt x 361.35pt>
-File: images/rotation_eta.pdf Graphic file (type pdf)
-
-<use images/rotation_eta.pdf>
-Package pdftex.def Info: images/rotation_eta.pdf used on input line 525.
-(pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
-
-<images/rotation_eta_90.pdf, id=4730, 447.87952pt x 361.35pt>
-File: images/rotation_eta_90.pdf Graphic file (type pdf)
-
-<use images/rotation_eta_90.pdf>
-Package pdftex.def Info: images/rotation_eta_90.pdf used on input line 529.
-(pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
-
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 516--530
-[][][][] 
- []
-
-[128 <./images/kt_displacement_field.pdf> <./images/kt_displacement_field_90.pd
-f
-
-pdfTeX warning: pdflatex.exe (file ./images/kt_displacement_field_90.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
-> <./images/displacement_gap_field.pdf
-
-pdfTeX warning: pdflatex.exe (file ./images/displacement_gap_field.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
-> <./images/displacement_gap_field_90.pdf
+[127] [128 <./images/displacement_gap_field.pdf> <./images/displacement_gap_fie
+ld_90.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/displacement_gap_field_90.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
+> <./images/kt_displacement_field.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/kt_displacement_field.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./images/kt_displacement_field_90.pdf
+
+pdfTeX warning: pdflatex.exe (file ./images/kt_displacement_field_90.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./images/rm_shear_disp_field.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/rm_shear_disp_field.pdf): PDF inclu
@@ -5560,15 +5528,39 @@ sion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./images/sum.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 540.
+>] <images/rotation_xi.pdf, id=4958, 440.06908pt x 361.35pt>
+File: images/rotation_xi.pdf Graphic file (type pdf)
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 540.
- [129 <./images/rotation_xi.pdf> <./images/rotation_xi_90.pdf
+<use images/rotation_xi.pdf>
+Package pdftex.def Info: images/rotation_xi.pdf used on input line 518.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/rotation_xi_90.pdf, id=4959, 440.06908pt x 361.35pt>
+File: images/rotation_xi_90.pdf Graphic file (type pdf)
+
+<use images/rotation_xi_90.pdf>
+Package pdftex.def Info: images/rotation_xi_90.pdf used on input line 522.
+(pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
+
+<images/rotation_eta.pdf, id=4960, 447.87952pt x 361.35pt>
+File: images/rotation_eta.pdf Graphic file (type pdf)
+
+<use images/rotation_eta.pdf>
+Package pdftex.def Info: images/rotation_eta.pdf used on input line 527.
+(pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
+
+<images/rotation_eta_90.pdf, id=4961, 447.87952pt x 361.35pt>
+File: images/rotation_eta_90.pdf Graphic file (type pdf)
+
+<use images/rotation_eta_90.pdf>
+Package pdftex.def Info: images/rotation_eta_90.pdf used on input line 531.
+(pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
+
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 518--532
+[][][][] 
+ []
+
+[129 <./images/rotation_xi.pdf> <./images/rotation_xi_90.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/rotation_xi_90.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
@@ -5581,40 +5573,48 @@ ultiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./images/rotation_eta_90.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<images/csdsg_nodal_dissipation_setup.png, id=5083, 704.6325pt x 643.90562pt>
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 544.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 544.
+
+<images/csdsg_nodal_dissipation_setup.png, id=5091, 704.6325pt x 643.90562pt>
 File: images/csdsg_nodal_dissipation_setup.png Graphic file (type png)
 
 <use images/csdsg_nodal_dissipation_setup.png>
 Package pdftex.def Info: images/csdsg_nodal_dissipation_setup.png used on input
- line 553.
+ line 557.
 (pdftex.def)             Requested size: 207.7052pt x 189.80313pt.
 
-<images/csdsg_nodal_dissipation_setup1.png, id=5084, 713.66624pt x 639.89063pt>
+<images/csdsg_nodal_dissipation_setup1.png, id=5092, 713.66624pt x 639.89063pt>
 File: images/csdsg_nodal_dissipation_setup1.png Graphic file (type png)
 <use images/csdsg_nodal_dissipation_setup1.png>
 Package pdftex.def Info: images/csdsg_nodal_dissipation_setup1.png used on inpu
-t line 557.
+t line 561.
 (pdftex.def)             Requested size: 207.7052pt x 186.22746pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 553--558
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 557--562
 [][][][] 
  []
 
-<images/node_ordering_study.pdf, id=5085, 517.73424pt x 461.54526pt>
+<images/node_ordering_study.pdf, id=5093, 517.73424pt x 461.54526pt>
 File: images/node_ordering_study.pdf Graphic file (type pdf)
 
 <use images/node_ordering_study.pdf>
-Package pdftex.def Info: images/node_ordering_study.pdf used on input line 565.
+Package pdftex.def Info: images/node_ordering_study.pdf used on input line 569.
 
 (pdftex.def)             Requested size: 341.43306pt x 304.38136pt.
  [130 <./images/csdsg_nodal_dissipation_setup.png> <./images/csdsg_nodal_dissip
 ation_setup1.png>] [131 <./images/node_ordering_study.pdf>]
-<images/node_ordering_study_error.pdf, id=5148, 589.91325pt x 439.53333pt>
+<images/node_ordering_study_error.pdf, id=5157, 589.91325pt x 439.53333pt>
 File: images/node_ordering_study_error.pdf Graphic file (type pdf)
 
 <use images/node_ordering_study_error.pdf>
 Package pdftex.def Info: images/node_ordering_study_error.pdf used on input lin
-e 581.
+e 585.
 (pdftex.def)             Requested size: 341.43306pt x 254.39296pt.
  [132 <./images/node_ordering_study_error.pdf>]) (chapters/Conclusions.tex [133
 ]
@@ -5648,7 +5648,7 @@ File: images/DSG.png Graphic file (type png)
 <use images/DSG.png>
 Package pdftex.def Info: images/DSG.png used on input line 18.
 (pdftex.def)             Requested size: 207.7052pt x 103.84496pt.
- <images/DSG_2.png, id=5257, 627.84563pt x 242.40562pt>
+ <images/DSG_2.png, id=5266, 627.84563pt x 242.40562pt>
 File: images/DSG_2.png Graphic file (type png)
 
 <use images/DSG_2.png>
@@ -5664,14 +5664,14 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 18--22
 
 
  <./images/DSG_2.png>]
-<images/DSG_element1.png, id=5269, 354.32375pt x 320.19624pt>
+<images/DSG_element1.png, id=5278, 354.32375pt x 320.19624pt>
 File: images/DSG_element1.png Graphic file (type png)
 
 <use images/DSG_element1.png>
 Package pdftex.def Info: images/DSG_element1.png used on input line 73.
 (pdftex.def)             Requested size: 184.9429pt x 167.13326pt.
 
-<images/DSG_element2.png, id=5270, 496.35437pt x 233.37187pt>
+<images/DSG_element2.png, id=5279, 496.35437pt x 233.37187pt>
 File: images/DSG_element2.png Graphic file (type png)
 
 <use images/DSG_element2.png>
@@ -5701,14 +5701,14 @@ chapter D.
 
  (chapters/Appendix_3.tex
 chapter E.
-<images/dome_geom.png, id=5348, 451.08525pt x 275.22826pt>
+<images/dome_geom.png, id=5357, 451.08525pt x 275.22826pt>
 File: images/dome_geom.png Graphic file (type png)
 
 <use images/dome_geom.png>
 Package pdftex.def Info: images/dome_geom.png used on input line 20.
 (pdftex.def)             Requested size: 207.7052pt x 126.72832pt.
 
-<images/dome_self_weight.png, id=5349, 588.39825pt x 314.3745pt>
+<images/dome_self_weight.png, id=5358, 588.39825pt x 314.3745pt>
 File: images/dome_self_weight.png Graphic file (type png)
 
 <use images/dome_self_weight.png>
@@ -5850,9 +5850,9 @@ ype1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfon
 ts/txsyc.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on WissenschaftlicheArbeit.pdf (167 pages, 19230212 bytes).
+Output written on WissenschaftlicheArbeit.pdf (167 pages, 19234110 bytes).
 PDF statistics:
- 5772 PDF objects out of 6186 (max. 8388607)
+ 5781 PDF objects out of 6186 (max. 8388607)
  825 named destinations out of 1000 (max. 500000)
  47934 words of extra memory for PDF output out of 51595 (max. 10000000)
 
