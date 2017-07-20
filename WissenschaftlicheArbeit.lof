@@ -197,42 +197,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {65}{\ignorespaces CHS buckling: ANDES-DKQ and Basic-DKQ displacement plots at the onset of instability\relax }}{109}{figure.caption.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {66}{\ignorespaces Shear wrinkling of plate setup\relax }}{110}{figure.caption.70}
+\contentsline {figure}{\numberline {66}{\ignorespaces Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path\relax }}{110}{figure.caption.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {67}{\ignorespaces Plate shear stability analysis: lateral displacement vs lateral load\relax }}{111}{figure.caption.71}
+\contentsline {figure}{\numberline {67}{\ignorespaces Shear wrinkling of plate setup\relax }}{111}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {68}{\ignorespaces Plate shear stability analysis: out of plane mid-point displacement vs lateral load\relax }}{112}{figure.caption.72}
+\contentsline {figure}{\numberline {68}{\ignorespaces Plate shear stability analysis: lateral displacement vs lateral load\relax }}{112}{figure.caption.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {69}{\ignorespaces Plate wrinkling: ANDES-DKQ Z-displacement plots over equilibrium path\relax }}{113}{figure.caption.73}
+\contentsline {figure}{\numberline {69}{\ignorespaces Plate shear stability analysis: out of plane mid-point displacement vs lateral load\relax }}{113}{figure.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {70}{\ignorespaces Plate wrinkling: Kratos-T3 and DSG Z-displacement plots over equilibrium path\relax }}{114}{figure.caption.74}
+\contentsline {figure}{\numberline {70}{\ignorespaces Plate wrinkling: ANDES-DKQ Z-displacement plots over equilibrium path\relax }}{114}{figure.caption.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {71}{\ignorespaces Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path\relax }}{115}{figure.caption.75}
+\contentsline {figure}{\numberline {71}{\ignorespaces Plate wrinkling: Kratos-T3 and DSG Z-displacement plots over equilibrium path\relax }}{115}{figure.caption.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {72}{\ignorespaces Plate shear stability analysis: maximum absolute out of plane displacement vs lateral load\relax }}{116}{figure.caption.76}
+\contentsline {figure}{\numberline {72}{\ignorespaces Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path\relax }}{116}{figure.caption.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {73}{\ignorespaces Division of triangle into 3 sub-triangles about centre point \cite {phung2013static}\relax }}{119}{figure.caption.77}
+\contentsline {figure}{\numberline {73}{\ignorespaces Plate shear stability analysis: maximum absolute out of plane displacement vs lateral load\relax }}{117}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {74}{\ignorespaces Sensitivity of nodal ordering between DSG and CS-DSG elements\relax }}{122}{figure.caption.78}
+\contentsline {figure}{\numberline {74}{\ignorespaces Division of triangle into 3 sub-triangles about centre point \cite {phung2013static}\relax }}{120}{figure.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {75}{\ignorespaces Shell obstacle course: DSG vs. CS-DSG\relax }}{123}{figure.caption.79}
+\contentsline {figure}{\numberline {75}{\ignorespaces Sensitivity of nodal ordering between DSG and CS-DSG elements\relax }}{123}{figure.caption.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {76}{\ignorespaces Parametric unit triangle \cite {Ble00}\relax }}{124}{figure.caption.80}
+\contentsline {figure}{\numberline {76}{\ignorespaces Shell obstacle course: DSG vs. CS-DSG\relax }}{124}{figure.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {77}{\ignorespaces DSGc3 example problem displacement field results\relax }}{128}{figure.caption.81}
+\contentsline {figure}{\numberline {77}{\ignorespaces Parametric unit triangle \cite {Ble00}\relax }}{125}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {78}{\ignorespaces DSGc3 example problem rotation field results\relax }}{129}{figure.caption.82}
+\contentsline {figure}{\numberline {78}{\ignorespaces DSGc3 example problem displacement field results\relax }}{129}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {79}{\ignorespaces DSG nodal dependency dissipation rate study setup\relax }}{130}{figure.caption.83}
+\contentsline {figure}{\numberline {79}{\ignorespaces DSGc3 example problem rotation field results\relax }}{130}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {80}{\ignorespaces Nodal ordering sensitivity study of DSG formulations\relax }}{131}{figure.caption.84}
+\contentsline {figure}{\numberline {80}{\ignorespaces DSG nodal dependency dissipation rate study setup\relax }}{131}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {81}{\ignorespaces Computational cost vs \% error of DSG formulations\relax }}{132}{figure.caption.85}
+\contentsline {figure}{\numberline {81}{\ignorespaces Nodal ordering sensitivity study of DSG formulations\relax }}{132}{figure.caption.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {82}{\ignorespaces Mises truss geometry\relax }}{135}{figure.caption.86}
+\contentsline {figure}{\numberline {82}{\ignorespaces Computational cost vs \% error of DSG formulations\relax }}{133}{figure.caption.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {83}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{139}{figure.caption.87}
+\contentsline {figure}{\numberline {83}{\ignorespaces Mises truss geometry\relax }}{136}{figure.caption.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {84}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{140}{figure.caption.88}
+\contentsline {figure}{\numberline {84}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{140}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {85}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{147}{figure.caption.89}
+\contentsline {figure}{\numberline {85}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{141}{figure.caption.89}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {86}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{148}{figure.caption.90}

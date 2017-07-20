@@ -112,6 +112,25 @@ For completeness, the X and Y displacements of the ANDES-DKQ and Basic-DKQ model
 
 In this comparison, the differences in deformation behaviour is solely due to the ANDES enhancement that mitigates membrane locking. An unstructured quadrilateral mesh of a curved surface, such as above, is a quintessential situation for membrane locking to arise. It can be seen that the ANDES-DKQ case exhibits ovalisation of the cross section as expected by it's similarity to the aforementioned Kratos-T3 results. Contrasting this, the Basic-DKQ results display an incredibly minor amount of ovalisation, reduced from it's enhanced counterpart solely due to unmitigated membrane locking, with a more classical beam deflection shape maintaining a relatively constant cross section throughout. Although the ANDES-DKQ and the Basic-DKQ have the same local displacement field resolving power of 4 Gauss Points and also have 3-parameter based enhanced bending formulations, the membrane formulation leading to the prevention or inclusion of membrane locking is the decisive factor here and evidently has a significant impact on the results obtained.
 
+\begin{figure}[H]
+	\centering
+	\subfloat[ANDES-DKQ @ $\delta = 0.0025m$]
+	{\label{ref_label1}
+		\includegraphics[width=12.0cm]
+		{images/stability_chs_accuracy1.png}}
+	\\
+	\subfloat[ANDES-DKQ @ $\delta = 0.015m$]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/stability_chs_accuracy2.png}}
+	\subfloat[Basic-DKQ @ $\delta = 0.015m$]
+	{\label{ref_label1}
+		\includegraphics[width=7.3cm]
+		{images/stability_chs_accuracy3.png}}
+	\caption{\label{wrinkle 5}Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path}
+\end{figure}
+
+
 Through the comparison of results obtained with various elements employing different element enhancements it is clear that structural modelling with shells, as discussed in section \ref{Structural modelling with shells}, requires careful consideration of simplifications and assumptions made. For the analysed problem of a CHS beam buckling dimensional reduction can be reasonably varied between a 1D and 2D approach, as explored. Undertaking a one dimensional beam approach may yield quick and acceptable 'ballpark' results, such as Euler's buckling formula, but it also immensely filters the space of possible mechanical expressions resolvable, such as local ovalisation which was seen to form an important driver in some of the results obtained. However, simply adopting a two dimensional shell approach to the problem did not homogenize all results, as was seen. Element base formulations, element enhancements, element order and mesh were all important factors strongly affecting results and correspond to questions that must be answered upon entering the shell regime. 
 
 \section{Shear wrinkling of plate}
@@ -280,3 +299,4 @@ The figure above summarises the bulk behaviour of the structural and highlights 
 Complementing the summary of how element enhancements affect the CHS buckling analysis, the plate shear wrinkling also confirms the significant effect of element formulation and enhancement selection in the shell regime. Membrane technologies were found to be key in regulating the onset of buckling, with the un-enhanced membrane formulations either considerably delaying bifurcation (Basic-DKQ) or preventing it completely (Basic-T3). Some interplay with bending technologies is also present in determining initial bifurcation, explaining the difference between the Basic-T3 and DSG element behaviours, both of which have the same membrane formulation. The remaining enhanced membrane formulations of ANDES (ANDES-DKQ, Kratos-T3) and EAS (Kratos-Q4) predict similar points of buckling as per figure \ref{pic:wrinkle3}. This example highlights the importance of selecting appropriate element technologies not only based on the initial state of the system (which, in this case, a basic membrane formulation would suffice) but also on the predicted deformed state of the system (where a basic membrane formulation is insufficient).
 
  Upon bifurcation, the bending formulation and technologies largely determined the buckling shape exhibited by the system. The proper selection of a 3 or 5 parameter based formulation suitable to the problem considered appears to be of the utmost importance. Although the 5-parameter based DSG element achieved quite similar results to the 3-parameter based elements naturally suitable to slender problem, differences were nonetheless all too apparent, suggesting that element technologies themselves aren't the silver bullet to all problems, but are most effective when applied to base formulations inherently suitable to the problem considered.
+ 

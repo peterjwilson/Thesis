@@ -7,10 +7,15 @@ Problems:
 	- Composite only works when set OMP_NUM_THREADS=1
 	- quad gauss point results are crap for the existing element too!
 
-To Do:	
-	- Element tests
-		- Composite tests
+Hiwi to do:
+	- Keep looking at composite assignment stuff
+	- Add stress recovery to existing shells
+	- Add composite stuff to existing shells
+	
+	
+Thesis To Do:	
 	- Write up background of Co-rotational and Kg formulation in non-linear analysis section
+	- Add some benchmark examples to the wiki page https://github.com/KratosMultiphysics/Kratos/wiki/Application-Cases
 	- Write up Kratos and element functions
 	- Move Appendix DSG technology derivation to that DSG chapter
 	- Add general overview of each DSG and ANDES formulation in their chapters
