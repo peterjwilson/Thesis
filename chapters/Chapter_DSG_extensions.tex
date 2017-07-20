@@ -302,7 +302,7 @@ Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\
 	\label{fig:parametric_unit_triangle}
 \end{figure}
 
-Three transverse displacement fields are considered across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
+Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
 
 \begin{equation} 
 w_{KL} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 + 0.5(a_5 + a_6)\xi \eta + \eta^2 a_7
@@ -548,7 +548,7 @@ In an attempt to evaluate whether the DSG or CS-DSG is more suitable for general
 Both of these question are addressed in the subsequent sections.
 
 \subsection{Dissipation rate of DSG nodal ordering dependency}
-The dissipation rate of the DSG nodal ordering dependency is studied with the following $20\ \times\ 20\ \times\ 1$ thick square plate of isotropic material $E = 1\times10^6,\ \nu = 0.29$ subject to a uniform pressure of $P_z = -1$. Two non-coincident boundary condition cases are designed to extricate the underlying nodal numbering dependency: the first being the bottom edge fully clamped (and all others free) and the second the left edge fully clamped (and all others free). 
+The dissipation rate of the DSG nodal ordering dependency is studied with the following $20\ \times\ 20\ \times\ 1$ thick square plate of isotropic material $E = 1\times10^6,\ \nu = 0.29$ subject to a uniform pressure of $P_z = -1$. Two asynchronous boundary condition cases are designed to extricate the underlying nodal numbering dependency: the first being the bottom edge fully clamped (and all others free) and the second the left edge fully clamped (and all others free). 
 
 \begin{figure}[H]
 	\subfloat[2 element mesh]
@@ -566,7 +566,7 @@ These two boundary conditions are imposed separately, with the minimum z-displac
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{images/node_ordering_study.pdf}
+	\includegraphics[width=10cm]{images/node_ordering_study.pdf}
 	\caption{Nodal ordering sensitivity study of DSG formulations}
 	\label{fig:Nodal ordering sensitivity study}
 \end{figure}
@@ -582,7 +582,7 @@ Since the shear B-matrix is the only point of difference between the two formula
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{images/node_ordering_study_error.pdf}
+	\includegraphics[width=10cm]{images/node_ordering_study_error.pdf}
 	\caption{Computational cost vs \% error of DSG formulations}
 	\label{fig:Computational cost vs error of DSG formulations}
 \end{figure}

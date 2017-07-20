@@ -89,6 +89,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Co-rotational transformation fundamentals - STILL TO DO!!!!!}{44}{section.4.5}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}General approach}{44}{subsection.4.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}Formulation overview}{44}{subsection.4.5.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Co-rotational transformation geometric stiffness - STILL TO DO!!!!!}{44}{section.4.6}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
@@ -227,7 +231,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.3.1}Dissipation rate of DSG nodal ordering dependency}{132}{subsection.10.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.2}Computational cost vs. error for DSG and CS-DSG elements}{134}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.2}Computational cost vs. error for DSG and CS-DSG elements}{133}{subsection.10.3.2}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
