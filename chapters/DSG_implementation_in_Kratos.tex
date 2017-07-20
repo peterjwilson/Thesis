@@ -6,17 +6,169 @@
 %%%%                                              %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter[DSG element as programmed in Kratos]{DSG element as \\programmed in Kratos}
+\chapter[DSG element class in Kratos]{DSG element class in \\ Kratos}
 \label{app:DSG element as programmed in Kratos}
-\renewcommand{\Thema}{DSG element as programmed in Kratos}
+\renewcommand{\Thema}{DSG element class in Kratos}
 
-asdfasdf
+The DSG element is implemented in Kratos under the class \texttt{ShellThickElement3D3N} as per the established Kratos element naming convention. This appendix provides a brief description of all methods (arguments excluded for brevity) and variables within class \\ \texttt{ShellThickElement3D3N}.
 
-\section{ShellThickElement3D3N methods}
-asdfasdf
+\section{\texttt{ShellThickElement3D3N} methods}
+\subsection{Public methods}
+\texttt{ShellThickElement3D3N()}: Overloaded element constructor. Non-linear geometry bool has the default argument of \texttt{false}.
 
-\section{ShellThickElement3D3N member variables}
-asdfasdf
+\texttt{\textasciitilde ShellThickElement3D3N()}: Element destructor.
 
-\section{ShellThickElement3D3N KRATOS variables}
-asdfasdf
+\texttt{Create()}: Returns pointer to a new instance of this element.
+
+\texttt{GetIntegrationMethod()}: Returns currently assigned integration method.
+
+\texttt{Initialize()}: Initializes element with material properties, sets up isotropic or orthotropic cross section, initializes coordinate transformation and sets section orientation.
+
+\texttt{ResetConstitutiveLaw()}: Resets the cross section by calling \\ \texttt{ShellCrossSection::ResetCrossSection()}. 
+
+\texttt{EquationIdVector()}: Establishes correct relationship between global and local DOF numbering.
+
+\texttt{GetDofList()}: Sets up vector of global numbering of local DOFs.
+
+\texttt{Check()}: Ensures the validity of element data.
+
+\texttt{GetValuesVector()}: Retrieves the element's nodal displacements from a specified historic timestep (default argument is last timestep).
+
+\texttt{GetFirstDerivativesVector()}: Retrieves the element's nodal velocities from a specified historic timestep (default argument is last timestep).
+
+\texttt{GetSecondDerivativesVector()}: Retrieves the element's nodal accelerations from a specified historic timestep (default argument is last timestep).
+
+\texttt{InitializeNonLinearIteration()}: Accessibility function to access \\ \texttt{ShellCrossSection::InitializeNonLinearIteration()}.
+
+\texttt{FinalizeNonLinearIteration()}: Accessibility function to access \\ \texttt{ShellCrossSection::FinalizeNonLinearIteration()}.
+
+\texttt{InitializeSolutionStep()}: Accessibility function to access \\ \texttt{ShellCrossSection::InitializeSolutionStep()}. Initializes coordinate transformation for the current timestep.
+
+\texttt{FinalizeSolutionStep()}: Accessibility function to access \\ \texttt{ShellCrossSection::FinalizeSolutionStep()}. Finalizes coordinate transformation for the current timestep.
+
+\texttt{CalculateMassMatrix()}: Calculates element mass matrix. Default is lumped.
+
+\texttt{CalculateDampingMatrix()}: Placeholder for future implementation. Currently returns zero matrix.
+
+\texttt{CalculateLocalSystem()}: Called by Kratos to add element stiffness contribution to global matrix. Internally re-directs to \texttt{CalculateAll()}.
+
+\texttt{CalculateRightHandSide()}: Called by Kratos to add element internal force contribution to the global vector. Internally re-directs to \texttt{CalculateAll()}.
+
+\texttt{GetValueOnIntegrationPoints()}: Overloaded method to calculate requested gauss point results.
+
+\texttt{CalculateOnIntegrationPoints()}: Wrapper function callable with Python to access \\ \texttt{GetValueOnIntegrationPoints()}.
+
+\texttt{Calculate()}: Overloaded method to calculate element specifics based on passed variable. Primarily used to access local element orientation and assign custom section rotations for composites without knowing the element's derived \texttt{element} type.
+
+\texttt{SetCrossSectionsOnIntegrationPoints()}: Allows assigning custom cross sections to the element shell cross section.
+
+\subsection{Private methods}
+\texttt{CalculateStressesFromForceResultants()}: Calculates stresses from previously determined integrated force resultants as per Reference \cite{FelippaKirchhoff2017}.
+
+\texttt{CalculateLaminaStrains()}: Calculates the in-plane strains for the top and bottom surface of each lamina in the laminate as per equation \ref{eqscomp_strain_recovery2}.
+
+\texttt{CalculateLaminaStresses()}: Calculates the in-plane stresses for the top and bottom surface of each lamina in the laminate as per equation \ref{eqscomp_stress_recovery1}.
+
+\texttt{CalculateTsaiWuPlaneStress()}: Called for each lamina in the laminate. Determines the minimum Tsai-Wu reserve factor of the current lamina considering the top and bottom surfaces as per equation \ref{eqscomp_stress_recovery3}.
+
+\texttt{CalculateVonMisesStress()}: Calculates the Von Mises equivalent stress as per equation \ref{eqt25}. Result can be calculated on the top, middle or bottom shell surface, or the maximum of all 3 surfaces depending on variable passed to method.
+
+\texttt{CheckGeneralizedStressOrStrainOutput()}: Preliminary filter method called immediately by the \texttt{Matrix} overloaded \texttt{GetValueOnIntegrationPoints()} method to provide control flow.
+
+\texttt{DecimalCorrection()}: Rounds very small entries of vectors to zero based on a dynamic numeric tolerance.
+
+\texttt{SetupOrientationAngles()}: Allows the element cross section (material) to be rotated in-plane relative to the element geometry.
+
+\texttt{CalculateSectionResponse()}: Calculates section response, including stress computation from availible strains, according to the constitutive law assigned. Also implements stabilization of shear constitutive entries as per equation \ref{eqt14}.
+
+\texttt{InitializeCalculationData()}: Initializes element data invariant throughout the gauss loop necessary for the computation of the element stiffness matrix.
+
+\texttt{CalculateDSGc3Contribution()}: Calculates the shear B-matrix as per the developmental DSGc3 formulation in equation \ref{eqDSGc3_26}.
+
+\texttt{CalculateSmoothedDSGBMatrix()}: Calculates the shear B-matrix as per the CS-DSG formulation in equation \ref{eqCSDSG11}.
+
+\texttt{CalculateDSGShearBMatrix()}: Called three times during CS-DSG element construction to calculate the sub-triangle's shear B-matrix.
+
+\texttt{AddBodyForces()}: Adds self-weight forces based off the global acceleration specified in the main analysis.
+
+\texttt{CalculateAll()}: The main pipeline to calculate the element stiffness matrix.
+
+\texttt{TryGetValueOnIntegrationPoints\_MaterialOrientation()}: Provides a contour-representation of the element's material alignment.
+
+\texttt{TryGetValueOnIntegrationPoints\_GeneralizedStrainsOrStresses()}: The main pipeline to calculate gauss point results such as strains, stresses, moments and integrated forces.
+
+\texttt{printMatrix()}: Utility function to neatly print arbitrary matrices to the console for debugging.
+
+\section{\texttt{ShellThickElement3D3N} member variables}
+\subsection{Private}
+
+class \texttt{CalculationData}: Contains the bulk of element data necessary for stiffness matrix computation. Detailed below.
+
+\texttt{mpCoordinateTransformation}: Instance of the element's coordinate transformation. May be linear or non-linear corotational.
+
+\texttt{mSections}: Container for the cross section instances associated with each integration point.
+
+\texttt{mThisIntegrationMethod}: Current integration method of the element.
+
+\texttt{mOrthotropicSectionRotation}: In-plane rotation angle for the element material cross section. Default is 0.0.
+
+\subsection{Private, class \texttt{CalculationData} member variables}
+All variables subsequently described are scoped to \texttt{CalculationData} unless noted otherwise.
+
+\texttt{LCS0}: Reference coordinate system of undeformed configuration.
+
+\texttt{LCS}: Current coordinate system of deformed configuration.
+
+\texttt{dA}: Integration area associated with each gauss point. Equal to element area for a single gauss point.
+
+\texttt{hMean}: Mean thickness of the shell cross section.
+
+\texttt{TotalArea}: Total area of the element.
+
+\texttt{gpLocations}: Vector of gauss point locations, used for results output.
+
+\texttt{dNxy}: Cartesian derivatives of shape functions.
+
+\texttt{N}: Shape function vector at the current integration point.
+
+\texttt{globalDisplacements}: Global displacement vector.
+
+\texttt{localDisplacements}: Local displacement vector.
+
+\texttt{CalculateRHS}: Bool to calculate internal force vector.
+
+\texttt{CalculateLHS}: Bool to calculate stiffness matrix.
+
+\texttt{parabolic\_composite\_transverse\_shear\_strains}: Bool to calculate composite transverse shear strains according to a constant (equation \ref{eqscomp_strain_recovery3}) or parabolic (equation \ref{eqscomp_strain_recovery6}) profile. Default value is \texttt{false}.
+
+\texttt{basicTriCST}: Bool to use a basic displacement-derived shear formulation as per equation \ref{eqApp2_3}. Default value is \texttt{false}.
+
+\texttt{ignore\_shear\_stabilization}: Bool to ignore constitutive shear matrix stabilization as per equation \ref{eqt14}. Default value is \texttt{false}.
+
+\texttt{smoothedDSG}: Bool to use the CS-DSG formulation as per \ref{eqCSDSG11}. Default value is \texttt{false}.
+
+\texttt{specialDSGc3}: Bool to use the DSGc3 formulation as per \ref{eqDSGc3_26}. Default value is \texttt{false}.
+
+\texttt{gpIndex}: Integer holding the index of the current gauss point.
+
+\texttt{B}: Element strain-displacement B matrix.
+
+\texttt{h\_e}: Length of the element's longest edge, forming part of the constitutive matrix shear stabilization calculation in equation \ref{eqt14}.
+
+\texttt{alpha}: Constant-value alpha parameter forming part of the constitutive matrix shear stabilization calculation in equation \ref{eqt14}.
+
+\texttt{shearStabilisation}: Condensation of all terms modifying the shear constitutive matrix as per equation \ref{eqt14}.
+
+\texttt{D}: Element material matrix.
+
+\texttt{generalizedStrains}: Element strain vector.
+
+\texttt{generalizedStresses}: Element stress vector.
+
+\texttt{SectionParameters}: Parameters of the shell cross section calculation.
+
+\texttt{rlaminateStrains}: Vector of element lamina strain vectors.
+
+\texttt{rlaminateStresses}: Vector of element lamina stress vectors.
+
+\texttt{CurrentProcessInfo}: Reference to the Kratos job's current process information.

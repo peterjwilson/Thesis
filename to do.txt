@@ -1,5 +1,4 @@
 Klaus's presentation
-
 25 July
 11:30am
 
@@ -9,20 +8,21 @@ Problems:
 
 Hiwi to do:
 	- Keep looking at composite assignment stuff
-	- Add stress recovery to existing shells
 	- Add composite stuff to existing shells
 	
 	
 Thesis To Do:	
 	- Write up background of Co-rotational and Kg formulation in non-linear analysis section
-	- Add some benchmark examples to the wiki page https://github.com/KratosMultiphysics/Kratos/wiki/Application-Cases
 	- Write up Kratos and element functions
-	- Move Appendix DSG technology derivation to that DSG chapter
+	- Do writeup of CHS buckling and performance picture
+	- DSG membrane theory derivation (bookmark 1)
+	- DSG bending theory derivation (bookmark 2)
 	- Add general overview of each DSG and ANDES formulation in their chapters
+	- Add some benchmark examples to the wiki page https://github.com/KratosMultiphysics/Kratos/wiki/Application-Cases
+	
 	
 Report:
 	- Continue review
-	- Kg derivation for shells in non-linear analysis section
 	
 	- (Up next)
 	- Transverse shear stress results discussion!

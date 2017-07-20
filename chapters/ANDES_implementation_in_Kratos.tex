@@ -6,17 +6,187 @@
 %%%%                                              %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter[ANDES element as programmed in Kratos]{ANDES element as \\programmed in Kratos}
+\chapter[ANDES-DKQ class in Kratos]{ANDES-DKQ class in \\ Kratos}
 \label{app:ANDES element as programmed in Kratos}
-\renewcommand{\Thema}{ANDES element as programmed in Kratos}
+\renewcommand{\Thema}{ANDES-DKQ class in Kratos}
 
-asdfasdf
+The ANDES-DKQ element is implemented in Kratos under the class \texttt{ShellThinElement3D4N} as per the established Kratos element naming convention. This appendix provides a brief description of all methods (arguments excluded for brevity) and variables within class \\ \texttt{ShellThinElement3D4N}.
 
-\section{ShellThinElementCorotational3D4N methods}
-asdfasdf
+\section{\texttt{ShellThinElement3D4N} methods}
+\subsection{Public methods}
+\texttt{ShellThinElement3D4N()}: Overloaded element constructor. Non-linear geometry bool has the default argument of \texttt{false}.
 
-\section{ShellThinElementCorotational3D4N member variables}
-asdfasdf
+\texttt{\textasciitilde ShellThinElement3D4N()}: Element destructor.
 
-\section{ShellThinElementCorotational3D4N KRATOS variables}
-asdfasdf
+Remaining public methods have names and overall descriptions as per \texttt{ShellThickElement3D3N}'s public methods.
+
+\subsection{Private methods}
+\texttt{CalculateStressesFromForceResultants()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CalculateLaminaStrains()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CalculateLaminaStresses()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CalculateTsaiWuPlaneStress()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CalculateVonMisesStress()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CheckGeneralizedStressOrStrainOutput()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{DecimalCorrection()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{SetupOrientationAngles()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{InitializeCalculationData()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CalculateBMatrix()}: Calculates the strain-displacement B matrix at the current gauss point.
+
+\texttt{CalculateSectionResponse()}: Calculates section response, including stress computation from available strains, according to the constitutive law assigned.
+
+\texttt{CalculateGaussPointContribution()}: Calculates the current gauss point's contribution to the element stiffness matrix.
+
+\texttt{AddBodyForces()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{CalculateAll()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{TryGetValueOnIntegrationPoints\_MaterialOrientation()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{TryGetValueOnIntegrationPoints\_GeneralizedStrainsOrStresses()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\texttt{printMatrix()}: As per identically named \texttt{ShellThickElement3D3N} method.
+
+\section{\texttt{ShellThinElement3D4N} member variables}
+\subsection{Public}
+class \texttt{JacobianOperator}: Provides commonly used Jacobian functionality. Detailed below.
+
+\subsection{Private}
+class \texttt{CalculationData}: Contains the bulk of element data necessary for stiffness matrix computation. Detailed below.
+
+\texttt{mpCoordinateTransformation}: Instance of the element's coordinate transformation. May be linear or non-linear corotational.
+
+\texttt{mSections}: Container for the cross section instances associated with each integration point.
+
+\texttt{mThisIntegrationMethod}: Current integration method of the element.
+
+\texttt{mOrthotropicSectionRotation}: In-plane rotation angle for the element material cross section. Default is 0.0.
+
+\subsection{Public, class \texttt{JacobianOperator} methods}
+All methods described in this sub-section are scoped to \texttt{JacobianOperator} unless noted otherwise.
+
+\texttt{JacobianOperator()}: Class constructor
+
+\texttt{\textasciitilde JacobianOperator()}: Class destructor.
+
+\texttt{Jacobian()}: Returns Jacobian matrix at the current gauss point.
+
+\texttt{Inverse()}: Returns inverse Jacobian matrix at the current gauss point.
+
+\texttt{XYDerivatives()}: Returns a matrix of Cartesian shape function derivatives at the current gauss point.
+
+\texttt{Determinant()}: Returns the determinant of the Jacobian matrix at the current gauss point.
+
+\subsection{Public, class \texttt{JacobianOperator} member variables}
+All variables described in this sub-section are scoped to \texttt{JacobianOperator} unless noted otherwise.
+
+\texttt{mJac}: Jacobian matrix
+
+\texttt{mInv}: Inverse Jacobian matrix
+
+\texttt{mXYDeriv}: Matrix of Cartesian shape function derivatives.
+
+\texttt{mDet}: Determinant of the Jacobian matrix.
+
+\subsection{Private, class \texttt{CalculationData} member variables}
+All variables described in this sub-section are scoped to \texttt{CalculationData} unless noted otherwise.
+
+\texttt{LCS0}: Reference coordinate system of undeformed configuration.
+
+\texttt{LCS}: Current coordinate system of deformed configuration.
+
+\texttt{s\_xi}: $\xi$ unit vector in Cartesian coordinates.
+
+\texttt{s\_eta}: $\eta$ unit vector in Cartesian coordinates.
+
+\texttt{r\_cartesian}: Array of Cartesian point positions.
+
+\texttt{dA}: Array of integration areas associated with each gauss point. Pre-multiplied with integration weight, equal to $det(\mathbf{J}_i) w_i$.
+
+\texttt{globalDisplacements}: Global displacement vector.
+
+\texttt{localDisplacements}: Local displacement vector.
+
+\texttt{CalculateRHS}: Bool to calculate internal force vector.
+
+\texttt{CalculateLHS}: Bool to calculate stiffness matrix.
+
+\texttt{basicQuad}: Bool to use a basic displacement-derived membrane formulation as per equation \ref{eqApp1_5}. Default value is \texttt{false}.
+
+\texttt{N}: Shape function vector at the current integration point.
+
+\texttt{gpIndex}: Integer holding the index of the current gauss point.
+
+\textit{ANDES membrane formulation data}
+
+\texttt{alpha}: Constant parameter alpha in the ANDES basic membrane formulation as per equation \ref{equation07}. Value is 1.5.
+
+\texttt{L\_mem}: ANDES basic membrane lumping matrix. Refer equation \ref{equation06}.
+
+\texttt{H\_mem\_mod}: ANDES higher order filter matrix as per Haugen's DOF ordering. Refer equation \ref{equation11}.
+
+\texttt{Z}: Transformation matrix between Haugen's and Kratos' DOF ordering for the higher order filter matrix as per equation \ref{equation18_2}.
+
+\texttt{B\_h\_1}: Higher order membrane B-matrix of node 1, as per equation \ref{equation17}.
+
+\texttt{B\_h\_2}: Higher order membrane B-matrix of node 2, as per equation \ref{equation18}.
+
+\texttt{B\_h\_3}: Higher order membrane B-matrix of node 3, as per equation \ref{equation17}.
+
+\texttt{B\_h\_4}: Higher order membrane B-matrix of node 4, as per equation \ref{equation18}.
+
+\texttt{B\_h\_bar}: Mean higher order membrane B-matrix, as per equation \ref{eqnAndesDevB}.
+
+\texttt{T\_13}: Transformation matrix as per equation \ref{equation17}.
+
+\texttt{T\_24}: Transformation matrix as per equation \ref{equation18}.
+
+\textit{DKQ bending formulation data}
+
+\texttt{DKQ\_a}: Vector of DKQ formulation coefficients $a_k$ as per equation \ref{equation23}.
+
+\texttt{DKQ\_b}: Vector of DKQ formulation coefficients $b_k$ as per equation \ref{equation23}.
+
+\texttt{DKQ\_c}: Vector of DKQ formulation coefficients $c_k$ as per equation \ref{equation23}.
+
+\texttt{DKQ\_d}: Vector of DKQ formulation coefficients $d_k$ as per equation \ref{equation23}.
+
+\texttt{DKQ\_e}: Vector of DKQ formulation coefficients $e_k$ as per equation \ref{equation23}.
+
+\texttt{DKQ\_indices}: Matrix of DKQ mapping indices $i,\ r,\ s$ ordering as per commentary beneath equation \ref{equation26}.
+
+\texttt{DKQ\_invJac}: Vector of inverse Jacobian matrices for each gauss point as per equation \ref{equation29}.
+
+\texttt{DKQ\_jac}: Vector of Jacobian matrices for each gauss point as per equation \ref{equation29}.
+
+\texttt{DKQ\_jac\_det}: Vector of Jacobian determinants for each gauss point as per equation \ref{equation29}.
+
+\textit{General calculation-variable data}
+
+\texttt{B}: Element strain-displacement B matrix.
+
+\texttt{D}: Element material matrix.	
+
+\texttt{BTD}: Auxiliary matrix to store the product $\mathbf{B}^T \mathbf{D}$.	
+
+\texttt{generalizedStrains}: Element strain vector.
+
+\texttt{generalizedStresses}: Element stress vector.
+
+\texttt{jacOp}: Instance of \texttt{JacobianOperator} class.
+
+\texttt{rlaminateStrains}: Vector of element lamina strain vectors.
+
+\texttt{rlaminateStresses}: Vector of element lamina stress vectors.
+
+\texttt{SectionParameters}: Parameters of the shell cross section calculation.
+
+\texttt{CurrentProcessInfo}: Reference to the Kratos job's current process information.
