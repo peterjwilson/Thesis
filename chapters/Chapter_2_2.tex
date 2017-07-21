@@ -236,7 +236,7 @@ The following response diagram plots the equilibrium path $\lambda$ vs. $w$ (ass
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
-	\includegraphics[width=12cm]{images/stability_analysis_mises_truss_1x1.pdf}
+	\includegraphics[width=10cm]{images/stability_analysis_mises_truss_1x1.pdf}
 	\caption{Ratio of Mises truss LPB and NL critical load factors across varying geometry}
 	\label{stab2}
 \end{figure}
@@ -248,25 +248,73 @@ As previously discussed, inaccuracies of the LPB analysis are attributable to th
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
-	\includegraphics[width=12cm]{images/stability_analysis_mises_truss_lpb.pdf}
+	\includegraphics[width=10cm]{images/stability_analysis_mises_truss_lpb.pdf}
 	\caption{Ratio of Mises truss LPB and NL critical load factors across varying geometry}
 	\label{stab3}
 \end{figure}
 
 Consistent with the previous rationale, the LPB analyses tend toward more accurate results as the structure becomes stiffer at greater $b/a$ and pre-critical displacements approach negligible values. Despite this, the figure also confirms that LPB analyses continue to typically overestimate the critical load for a structure. Summarising, it can be seen that when the LPB assumptions are nearly fulfilled it produces quite accurate results with a fraction of computational effort compared to a full non-linear stability analysis, although the tendency to overestimate the onset of instability should also be considered. 
 
-\section{Co-rotational transformation fundamentals - STILL TO DO!!!!!}
-Write out strain formulation of above example - show it is massive and far outside the linear range. Practical shell elements need to be accurate, and capture non-linear behaviour, but also need to be fast, which a linearized strain formulation provides. One solution is the use of a co-rotational transformation.
+\section{Co-rotational transformation approach - REVIEWED 0}
+The Mises truss example highlights that, although the computationally efficient LPB method is accurate for a subset of scenarios, the general case requires fully non-linear analysis. This concept can be extended to general structural analysis employing shell elements, with linear approaches only suitable for a certain subspace of problems. The industrial practical demands of shell elements can be condensed to delivering accurate general solutions in a timely manner. By surveying the typical approaches of commercial FEM packages, the latter point of computational speed is usually fulfilled by employing commonplace shell formulations with linearized strains, however, this seemingly betrays the former requirement of accurate general solutions; one case being problems involving large displacements. A novel solution to this problem, which extends the capability of linear small strain elements to handle large displacements and rotations, is the co-rotational transformation approach.
 
-\subsection{General approach}
-rigid body motion to minimize displacements
+\subsection{General overview}
+The co-rotational (CR henceforth) transformation approach extends the capability of elements normally limited to small strains and  displacements to correctly handle arbitrarily large displacements and rotations, provided strains remain small \cite{FelippaCR1_2016}. Unlike other Lagrangian approaches which 'track' the total displacements via strain only, the CR approach relies upon splitting the total displacements into strain-free rigid body motion and deformational motion.
 
-\subsection{Formulation overview}
-Different alternatives in the EICR approach exist. Currently the CSE formulation is used. Go through formulation. Warpage correction??
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=10cm]{images/cr_1.png}
+	\caption{CR kinematic description \cite{FelippaCR1_2016}}
+	\label{cr1}
+\end{figure}
 
+The above figure illustrates this division of total displacement by way of a simple beam example. The base configuration $\mathscr{C}^0$ evidently refers to the initial un-deformed state of the element. The co-rotated configuration $\mathscr{C}^R$, also called the shadow configuration, is the frame which, by way of strain-free rigid body translation and rotation, reduces the element deformation motion to achieve the final deformed configuration $\mathscr{C}^D$. Although the CR approach reduces the deformation motion experienced by the element, which will mechanically respond according to it's formulation, the process of reducing this deformation motion by way of rigid body motion is independent of the element's formulation. Thus, the scope of CR discussion henceforth is focussed on the element-independent CR (EICR) formulation.
 
+\section{EICR formulation overview}
+The EICR, owing to it's name and as previously described, is a CR approach independent of the element formulation. Because of this element formulation independence it allows re-use of linear elements in a non-linear context, provided small strain assumptions aren't violated. Thus, the EICR can also be interpreted as a geometric-based filter stripping away rigid body motion from the deformations seen by each element. The following flowchart illustrates the general function of the EICR in a typical FEM program.
 
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=14cm]{images/cr_3.png}
+	\caption{EICR scheme \cite{FelippaCR1_2016}}
+	\label{cr3}
+\end{figure}
 
+Two key components of the EICR formulation corresponding with the CR blocks above are: extracting the deformational motions by means of EICR kinematics before element computation; and the incorporation of rigid body motions into the calculated element tangent stiffness. These two EICR components are considered in the following subsections.
 
-\section{Co-rotational transformation geometric stiffness - STILL TO DO!!!!!}
+\subsection{EICR kinematics}
+
+asdfads
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=12cm]{images/cr_4.png}
+	\caption{Kinematics of co-rotated element \cite{felippa2000systematic}}
+	\label{cr3}
+\end{figure}
+
+\cite{felippa2000systematic} p13.
+
+Rotators and their relations.
+
+Translational projector matrix P.
+
+Spin lever matrix S.
+
+Spin fitter matrix.
+
+Different alternatives in the EICR approach exist. 
+
+Currently the CSE formulation is used. Go through formulation. Warpage correction??
+
+\subsection{EICR tangent stiffness}
 asdfasdf
+overview \cite{felippa2000systematic} p15.
+
+
+
+\subsection{Advantages and disadvantages of EICR}
+Advantages and disadvantages of EICR. \cite{felippa2000systematic} p11.

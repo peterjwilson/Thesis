@@ -548,6 +548,29 @@
     \field{year}{2016}
   \endentry
 
+  \entry{FelippaCR1_2016}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=FC}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={C.A.},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Colorado at Boulder}%
+    }
+    \strng{namehash}{FC1}
+    \strng{fullhash}{FC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{CR Formulation Overview I}
+    \field{journaltitle}{Nonlinear Finite Element Methods}
+    \field{year}{2016}
+  \endentry
+
   \entry{FelippaNFEMCrit2016}{misc}{}
     \name{author}{1}{}{%
       {{hash=FC}{%
@@ -697,6 +720,30 @@
     \field{volume}{192}
     \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
     \field{year}{2003}
+  \endentry
+
+  \entry{felippa2000systematic}{report}{}
+    \name{author}{1}{}{%
+      {{hash=FCA}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={Carlos\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FCA2}
+    \strng{fullhash}{FCA2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{A systematic approach to the element-independent corotational
+  dynamics of finite elements}
+    \list{institution}{1}{%
+      {Technical Report CU-CAS-00-03, Center for Aerospace Structures}%
+    }
+    \field{type}{techreport}
+    \field{year}{2000}
   \endentry
 
   \entry{felippa2006supernatural}{article}{}
