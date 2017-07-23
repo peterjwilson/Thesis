@@ -13,15 +13,22 @@
 This work has considered the implementation of a thin quadrilateral shell element for the multiphysics code KRATOS. Section 1 covered the shell formulation, which is split into membrane and bending components. Following this, the element's implementation in KRATOS was presented, which covered key methods employed and the general workflow to calculate the element stiffness matrix. The element considered was subjected to the well known shell obstacle course in Section 3. Although the element correctly converged to the reference solution for the Scordelis-Lo roof and Pinched Cylinder problem, the Pinched Hemisphere benchmark revealed element deficiencies. These deficiencies were identified, with informed direction suggested  for future work associated with improving this element. 
 
 \section{Future work}
+asdfasdf
+\subsection{Studies and investigations}
+\begin{itemize}
+	\item Sensitivity of element enhancement differences to mesh refinement
+	\item Establishment of approximate performance vs accuracy Pareto front for element formulations and enhancements across different scenarios
+\end{itemize}
 
-Extend shell elements model into a variety of directions:
 
-- Consider von karman non-linear strains for very thin shells
+\subsection{Development opportunities}
+\begin{itemize}
+	\item Generalize DSGc3 formulation into arbitrary Cartesian triangles
+	\item Build upon the author's initial work of a Kratos linear pre-buckling solver
+	\item Improve transverse shear stress modelling for composites
+	Look at paper: Improved Transverse Shear Stresses in Composite Finite Elements based on First Order Shear Deformation Theory. Or, develop separate element with higher order resolving theory
+	\item Consider von karman non-linear strains for very thin shells
+	\item Extend the DSG element into XFEM as per \cite{DSG_XFEM_2015}
+	\item Extend current shell capability to material non-linearities
+\end{itemize}
 
-- Improve transverse shear stress modelling for composites
-Look at paper: Improved Transverse Shear Stresses in Composite Finite Elements based on First Order Shear Deformation Theory
-Or, develop separate element with higher order resolving theory
-
-- Extend the DSG element into XFEM as per \cite{DSG_XFEM_2015}
-
-- Continue development of the DSGc3 formulation

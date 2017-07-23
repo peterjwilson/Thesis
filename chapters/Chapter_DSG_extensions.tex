@@ -290,10 +290,10 @@ Results of the shell obstacle course confirm the behaviours of the DSG and CS-DS
  \textit{"how gross is the additional computational effort required for the CS-DSG element?"}. These two questions are addressed in section \ref{CSDSG appraisal}, after the discussion of another alternate DSG formulation extension below.
 
 \section{DSGc3 approach}
-The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's chair of structural engineering aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In it's current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric-only unit triangle formulation, with the next stage in development being the transformation into arbitrary Cartesian triangles. 
+The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's chair of structural engineering aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In it's current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric unit triangle formulation, with the next stage in development being the extension into arbitrary Cartesian triangles. 
 
 \subsection{DSGc3 unit triangle parametric formulation}
-Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\eta_i)$ = $(0,0),\ (1,0),\ (0,1)$ as per the following figure:
+Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\eta_i)$ = $(0,0),\ (1,0),\ (0,1)$ as per the figure below:
 
 \begin{figure}[H]
 	\centering
@@ -343,7 +343,6 @@ w_{KL \eta} = w_{KL} - w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_6 \xi \
 \end{equation}
 
 A displacement gap field can be recovered by identifying the difference between the Reissner-Mindlin shear-displacement and Kirchhoff-Love displacement fields:
-
 \begin{equation} 
 \Delta_w = w_{RM\gamma} - w_{KL}  =-a_1 - a_2\xi - a3\eta - a_4\xi^2 - a_7\eta^2 + a_8\xi + a_9\eta - 0.5\eta\xi(a_5 + a_6)
 \label{eqDSGc3_10}\ .
@@ -351,7 +350,7 @@ A displacement gap field can be recovered by identifying the difference between 
 
 Until now the fields have been written in general terms of unknown ansatz coefficients. The fields can be clarified by considering 9 boundary conditions, sufficient to set-up 9 equations and solve the 9 unknowns.
 
-The first three equations constrain the displacement gap field to fulfil discrete nodal displacements:
+The first three equations constrain the displacement gap field to fulfil discrete nodal transverse displacements:
 
 \begin{equation} 
 bc1 = \Delta_w(0,0) = w_1 = -a_1
@@ -439,7 +438,7 @@ w_{MOD} = \eta\xi(-0.5\beta_{\xi 1}1 + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.
 
 Indeed, the resulting Reissner-Mindlin shear-displacement field above is similar to the DSG field in the original DSG formulation only without skewed geometry interactions accounted for.
 
-As the moderator field was introduced into the Kirchhoff-Love field previously, so can it be introduced into the Reissner-Mindlin shear-displacement field as
+As the moderator field was introduced into the Kirchhoff-Love field previously, so can it be introduced into the Reissner-Mindlin shear-displacement field as:
 
 \begin{equation} 
 w_{RM \gamma \xi} = w_{RM \gamma} + w_{MOD} 
@@ -451,7 +450,7 @@ w_{RM \gamma \eta} = w_{RM \gamma} - w_{MOD}
 \label{eqDSGc3_7}\ .
 \end{equation}
 
-Similar to the original DSG formulation, the shear deformation field can be precipitated from the modified Reissner-Mindlin shear-displacement field via differentiation, yielding
+Similar to the original DSG formulation, the shear deformation field can be precipitated from the modified Reissner-Mindlin shear-displacement field via differentiation, yielding:
 
 \begin{equation} 
 \gamma_{RM \gamma \xi} = \frac{\partial w_{RM \gamma \xi}}{\partial \xi}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2 + \eta(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
@@ -534,6 +533,7 @@ The rotation fields of the formulation are presented below:
 
 As per equations \ref{eqDSGc3_8} and \ref{eqDSGc3_9}, both rotation fields exhibit linear interpolation of nodal values, themselves corresponding to the solution values due to the constraints of equations \ref{eqDSGc3_14} though \ref{eqDSGc3_19}.
 
+\subsection{DSGc3 summary}
 As an emerging formulation, the DSGc3 offers a promising proof of concept for a locking-free linear triangle element. Further steps to generalise the current unit-triangle parametric formulation to an arbitrarily skewed Cartesian formulation are necessary to effectively use the element in general FEM code, such as Kratos. Thus, given the current state of the DSGc3 formulation, the remaining discussion of extended DSG formulations is limited to the aforementioned CS-DSG element.
 
 \section{Appraisal of alternative DSG technology approaches}

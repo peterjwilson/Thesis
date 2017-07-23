@@ -772,6 +772,39 @@
     \field{year}{2006}
   \endentry
 
+  \entry{felippa2005unified}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FCA}{%
+         family={Felippa},
+         familyi={F\bibinitperiod},
+         given={Carlos\bibnamedelima A},
+         giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Haugen},
+         familyi={H\bibinitperiod},
+         given={Bjorn},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{FCAHB1}
+    \strng{fullhash}{FCAHB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{21}
+    \field{pages}{2285\bibrangedash 2335}
+    \field{title}{A unified formulation of small-strain corotational finite
+  elements: I. Theory}
+    \field{volume}{194}
+    \field{journaltitle}{Computer Methods in Applied Mechanics and Engineering}
+    \field{year}{2005}
+  \endentry
+
   \entry{tsai12}{thesis}{}
     \name{author}{1}{}{%
       {{hash=HW}{%

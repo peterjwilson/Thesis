@@ -269,9 +269,9 @@ The co-rotational (CR henceforth) transformation approach extends the capability
 	\label{cr1}
 \end{figure}
 
-The above figure illustrates this division of total displacement by way of a simple beam example. The base configuration $\mathscr{C}^0$ evidently refers to the initial un-deformed state of the element. The co-rotated configuration $\mathscr{C}^R$, also called the shadow configuration, is the frame which, by way of strain-free rigid body translation and rotation, reduces the element deformation motion to achieve the final deformed configuration $\mathscr{C}^D$. Although the CR approach reduces the deformation motion experienced by the element, which will mechanically respond according to it's formulation, the process of reducing this deformation motion by way of rigid body motion is independent of the element's formulation. Thus, the scope of CR discussion henceforth is focussed on the element-independent CR (EICR) formulation.
+The above figure illustrates this division of total displacement by way of a simple beam example. The base configuration $\mathscr{C}^0$ evidently refers to the initial un-deformed state of the element. The co-rotated configuration $\mathscr{C}^R$, also called the shadow configuration, is the frame arrived at by extracting the rigid body motion of the element's total displacement. If the remaining deformational motion is applied to state $\mathscr{C}^R$ the final deformed configuration $\mathscr{C}^D$ is achieved. Although the CR approach reduces the deformation motion experienced by the element, which will mechanically respond according to it's formulation, the process of reducing this deformation motion via filtering out rigid body motion is independent of the element's formulation. Thus, the scope of CR discussion henceforth is focussed on the element-independent CR (EICR) formulation.
 
-\section{EICR formulation overview}
+\section{EICR formulation overview - REVIEWED 0 !!!!!}
 The EICR, owing to it's name and as previously described, is a CR approach independent of the element formulation. Because of this element formulation independence it allows re-use of linear elements in a non-linear context, provided small strain assumptions aren't violated. Thus, the EICR can also be interpreted as a geometric-based filter stripping away rigid body motion from the deformations seen by each element. The following flowchart illustrates the general function of the EICR in a typical FEM program.
 
 \begin{figure}[H]
@@ -285,32 +285,317 @@ The EICR, owing to it's name and as previously described, is a CR approach indep
 Two key components of the EICR formulation corresponding with the CR blocks above are: extracting the deformational motions by means of EICR kinematics before element computation; and the incorporation of rigid body motions into the calculated element tangent stiffness. These two EICR components are considered in the following subsections.
 
 \subsection{EICR kinematics}
-
-asdfads
+An overview of the EICR kinematics utilised to separate total element displacements into rigid body motion and deformational motion is henceforth described. Only a high level functional overview of the formulation components is contained herein, for a full treatment of the topic the reader may refer to selected works of Felippa (References \cite{FelippaCR1_2016}) and \cite{felippa2000systematic}) and Haugen's PhD thesis (Reference \cite{Hau94}). The following figure illustrates an element in various states of the EICR transformation:
 
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
-	\includegraphics[width=12cm]{images/cr_4.png}
+	\includegraphics[width=14cm]{images/cr_4.png}
 	\caption{Kinematics of co-rotated element \cite{felippa2000systematic}}
-	\label{cr3}
+	\label{cr4}
 \end{figure}
 
-\cite{felippa2000systematic} p13.
+The base state $\mathscr{C}^0$ displays quantities such as it's centroid $C_B$, local axes $X_1$ and $X_2$ and the position vector $\mathbf{X}_P$ of an arbitrary point $P_B$. Moving to the co-rotated frame $\mathscr{C}^R$, it's centroid is denoted $C$, with $\mathbf{Y}_P$ denoting the position vector of the transformed original base point $P_B$ expressed in the co-rotated frame as $P_R$. The original $\mathscr{C}^0$ axes $X_1$ and $X_2$ are shown along with their co-rotated counterparts $\bar{X}_1$ and $\bar{X}_2$. Vector $\mathbf{u}_P$ defines the total displacement of point $P_B$ which can be decomposed into rigid body $\mathbf{u}_{Pr}$ and deformational motion $\mathbf{d}_p$ according to:
 
-Rotators and their relations.
+\begin{equation} 
+\mathbf{u}_P = 
+\mathbf{u}_{Pr} + \mathbf{d}_p
+\label{eq_cr1}\ .
+\end{equation}
 
-Translational projector matrix P.
+The rigid body motion $\mathbf{u}_{Pr}$ itself can be decomposed into rigid body translation of the element centroid $\mathbf{u}_c$ and rigid body rotation of $\mathbf{X}_P$ to $\mathbf{Y}_P = \mathbf{R} \mathbf{X}_P$ via the orthogonal rotation matrix $\mathbf{R}$ (described below). If point $P$ position vectors $\mathbf{X}_P$ and $\mathbf{Y}_P$ are included in equation \ref{eq_cr1}, one can write:
 
-Spin lever matrix S.
+\begin{equation} 
+\mathbf{u}_P + \mathbf{X}_P = 
+\mathbf{u}_{c} + \mathbf{d}_p + \mathbf{Y}_P
+\label{eq_cr2}\ .
+\end{equation}
 
-Spin fitter matrix.
+The deformational motion $\mathbf{d}_p$ can be extracted in $\mathscr{C}^0$ by rearranging the above equation and substituting the relation $\mathbf{Y}_P = \mathbf{R} \mathbf{X}_P$ yielding:
+
+\begin{equation} 
+\mathbf{d}_p = 
+\mathbf{u}_P - \mathbf{u}_{c} - (\mathbf{R} - \mathbf{I}) \mathbf{X}_P 
+\label{eq_cr3}\ .
+\end{equation}
+
+As per the general flow of figure \ref{cr3}, the deformational motion described above form the totality of displacements 'seen' by the element. Since these displacements, and the element stiffness matrix and internal force vector computed via virtual displacements $\delta \mathbf{v}$, are computed in $\mathscr{C}^R$, the variation of these in $\mathscr{C}^R$ require additional treatment to be linked back to the global frame. This additional workload corresponds to the upper EICR block of figure \ref{cr3}, with the treatment of EICR internal forces considered first.
+
+\subsection{EICR internal forces}
+The element internal force vector $\mathbf{p}_R^e$ in the CR frame $\mathscr{C}^R$ for each node $a = 1\ ...\ N^e$ is given by the internal energy $U^e$ derived through it's DOFs:
+
+\begin{equation} 
+\mathbf{p}_R^e = 
+\frac{\partial U^e}{\partial \mathbf{v}_R^e}
+\label{eq_cr4}\ ,
+\end{equation}
+
+which can be split into translation and moment forces as per:
+
+\begin{equation} 
+\mathbf{p}_R^e = 
+\begin{pmatrix}
+\mathbf{p}_{Ru}^e \\
+\mathbf{p}_{R\theta}^e 
+\end{pmatrix}
+=
+\begin{pmatrix}
+\frac{\partial U^e}{\partial \mathbf{u}_{R}^e} \\
+\frac{\partial U^e}{\partial \boldsymbol{\theta}_{R}^e} 
+\end{pmatrix}
+\label{eq_cr5}\ .
+\end{equation}
+
+With a view of reconciling the above expressions in the global frame variations in the CR configuration $\mathscr{C}^R$ $\delta \mathbf{u}_{R}^e,\ \delta \boldsymbol{\theta}_{R}^e$ must be related back to the global frame $\delta \mathbf{u}^e,\ \delta \boldsymbol{\omega}^e$ via the Jacobian $\mathbf{J}$:
+
+\begin{equation} 
+\begin{pmatrix}
+\delta \mathbf{u}_{R}^e \\
+\delta \boldsymbol{\theta}_{R}^e
+\end{pmatrix}
+=
+\mathbf{J}
+\begin{pmatrix}
+\delta \mathbf{u}^e \\
+\delta \boldsymbol{\omega}^e
+\end{pmatrix}\ ,
+\hspace{10mm}
+\mathbf{J} = 
+\begin{pmatrix}
+\frac{\partial \mathbf{u}_R^e}{\partial \mathbf{u}^e} & \frac{\partial \mathbf{u}_R^e}{\partial \boldsymbol{\omega}^e} \\
+\frac{\partial \boldsymbol{\theta}_R^e}{\partial \mathbf{u}^e} & \frac{\partial \boldsymbol{\theta}_R^e}{\partial \boldsymbol{\omega}^e}
+\end{pmatrix}
+\label{eq_cr6}\ .
+\end{equation}
+
+Key to the EICR is that energy scalars between various configurations $\mathscr{C}$ shouldn't change. Thus, if one considers internal virtual work in terms of the internal force vector between global and $\mathscr{C}^R$ frames the following equality must hold:
+
+\begin{equation} 
+(\mathbf{p}_{Ru}^{e})^T  \delta \mathbf{u}_{R}^e +
+(\mathbf{p}_{R\theta}^{e})^T \delta \boldsymbol{\theta}_{R}^e =
+(\mathbf{p}_{u}^{e})^T  \delta \mathbf{u}_{}^e +
+(\mathbf{p}_{\theta}^{e})^T \delta \boldsymbol{\theta}_{}^e
+\label{eq_cr7}\ ,
+\end{equation}
+with the transformed global internal forces determined as:
+\begin{equation} 
+\begin{pmatrix}
+\mathbf{p}_{u}^e \\
+\mathbf{p}_{\theta}^e 
+\end{pmatrix}
+=
+\mathbf{J}^T
+\begin{pmatrix}
+\mathbf{p}_{Ru}^e \\
+\mathbf{p}_{R\theta}^e 
+\end{pmatrix}
+\label{eq_cr8}\ .
+\end{equation}
+
+Felippa proposes in Reference \cite{felippa2005unified} that it is convenient to split the Jacobian matrix up into the following components:
+
+\begin{equation} 
+\mathbf{J}
+= \mathbf{H}_R 
+\mathbf{P}_R 
+\mathbf{T}
+\label{eq_cr9}\ .
+\end{equation}
+
+Exact expressions for determining the matrices introduced above can be found in References \cite{felippa2005unified}, \cite{felippa2000systematic} and \cite{FelippaCR1_2016}. For the purposes of this EICR overview functional descriptions are provided below \cite{felippa2005unified}:
+
+\begin{itemize}
+	\item $\mathbf{H}$ = Jacobian derivative of the (global) rotational axial vector $\boldsymbol{\theta}$ with respect to the ($\mathscr{C}^R$) spin axial vector $\boldsymbol{\theta}$.
+	\item $\mathbf{P}$ = Projector matrix which preserves deformational motion from total displacements by projecting out rigid body motion.
+	\item $\mathbf{T}$ = Global-to-local transformation matrix such that $\mathbf{u}_R = \mathbf{T} \mathbf{u}$.
+\end{itemize}
+
+Summarising, the movement from global to $\mathscr{C}^R$ DOF variations is succinctly distilled in the following figure:
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=10cm]{images/cr_6.png}
+	\caption{Movement from global to CR frames \cite{felippa2005unified}}
+	\label{cr6}
+\end{figure}
+
+Reversing the direction of movement (from $\mathscr{C}^R$ to global frames) is achieved as per equation \ref{eq_cr8}, with $\mathbf{J}^T = \mathbf{T}^T \mathbf{P}_R^T \mathbf{H}_R^T$. Thus, the global internal force vector $\mathbf{p}^e$ can be recovered according to:
+
+\begin{equation} 
+\mathbf{p}^e
+=
+\mathbf{T}^T \mathbf{P}_R^T \mathbf{H}_R^T
+\mathbf{p}_R^e
+\label{eq_cr10}\ .
+\end{equation}
+ 
+ \subsection{EICR tangent stiffness}
+ Just as the internal force vector must be transformed from the $\mathscr{C}^R$ to the global frame, so must the element tangent stiffness computed in $\mathscr{C}^R$. Felippa defines the consistent tangent stiffness $\mathbf{K}^e$ of element $e$ as the variation of internal forces with respect to element DOFs \cite{felippa2005unified}; mathematically:
+ 
+ \begin{equation} 
+\delta \mathbf{p}^e
+ =
+\mathbf{K}^e \delta \mathbf{v}^e\ ,
+\hspace{5mm}
+with
+\hspace{5mm}
+\mathbf{K}^e = 
+\frac{\partial \mathbf{p}^e}{\partial \mathbf{v}^e}
+ \label{eq_cr11}\ .
+ \end{equation}
+ 
+ If the variation of $\mathbf{p}^e$ is taken in equation \ref{eq_cr10}, the chain rule arises 4 times yielding:
+ 
+  \begin{equation} 
+ \delta \mathbf{p}^e
+ =
+\delta \mathbf{T}^T \mathbf{P}_R^T \mathbf{H}_R^T \mathbf{p}_R^e
++
+\mathbf{T}^T \delta \mathbf{P}_R^T \mathbf{H}_R^T \mathbf{p}_R^e
++
+\mathbf{T}^T \mathbf{P}_R^T \delta \mathbf{H}_R^T \mathbf{p}_R^e
++
+\mathbf{T}^T\mathbf{P}_R^T \mathbf{H}_R^T  \delta \mathbf{p}_R^e
+ \label{eq_cr12}\ ,
+ \end{equation}
+ 
+ condensing terms together yields:
+ 
+   \begin{equation} 
+ \delta \mathbf{p}^e
+ =
+(\mathbf{K}_{GR}^e + 
+\mathbf{K}_{GP}^e + 
+\mathbf{K}_{GM}^e + 
+\mathbf{K}_{M}^e
+)
+\delta \mathbf{v}^e
+ \label{eq_cr13}\ .
+ \end{equation}
+ 
+ The introduced terms above can be identified as stiffness contributions transformed from $\mathscr{C}^R$ to the global frame:
+ 
+ \begin{itemize}
+ 	\item $\mathbf{K}_{GR}^e$ = Rotational-correction geometric stiffness.
+ 	\item $\mathbf{K}_{GP}^e$ = Equilibrium projection geometric stiffness.
+ 	\item $\mathbf{K}_{GM}^e$ = Moment-correction geometric stiffness.
+ 	\item $\mathbf{K}_{M}^e$ = Material stiffness.
+ \end{itemize}
+ 
+ Detailed standalone expressions of the above contributions can be found in Felippa's works \cite{felippa2005unified}, \cite{felippa2000systematic} and \cite{FelippaCR1_2016} and fall outside the scope of this overview. Development and combination of these expressions leads to the complete form of the element tangent stiffness in the global frame \cite{felippa2005unified}:
+ 
+\begin{equation} 
+\mathbf{K}^e 
+ =
+ \mathbf{T}^T
+ (
+ \mathbf{P}_R^T
+ \mathbf{H}_R^T
+ \mathbf{K}_R^e
+  \mathbf{H}_R
+   \mathbf{P}_R
++
+ \mathbf{P}_R^T
+  \mathbf{L}_R
+\mathbf{P}_R
+-
+\mathbf{F}_{RNM}
+ \mathbf{G}_R
+ -
+  \mathbf{G}_R^T
+  \mathbf{F}_{RN}^T
+\mathbf{P}_R
+ )
+\mathbf{T}
+ \label{eq_cr14}\ .
+ \end{equation}
+ 
+ Full derivations of the terms $\mathbf{L}_R$ (spin derivative of $\mathbf{H}$ contracted with nodal moments), $\mathbf{G}_R$ (spin-fitter linking variations in $\mathscr{C}^R$ element-centroid spin with nodal DOFs), $\mathbf{F}_{RNM}$ (spin of nodal forces and moments) and $\mathbf{F}_{RN}$ (spin of nodal forces) can be found in Reference \cite{felippa2005unified}. Of more relevance to this overview are the simplifications available to the complete element tangent stiffness above which form 3 hierarchical formulations, summarised in ascending order of accuracy.
+ 
+  \begin{itemize}
+ 	\item EICR tangent stiffness: consistent CR formulation (C):
+ 	\begin{itemize}
+ 		\item $\mathbf{K}^e 
+ 		=
+ 		\mathbf{T}^T
+ 		(
+ 		\mathbf{K}_R^e
+ 		\mathbf{H}_R
+ 		\mathbf{P}_R
+ 		-
+ 		\mathbf{F}_{RNM}
+ 		\mathbf{G}_R
+ 		)
+ 		\mathbf{T}$
+		\item Reduction to material and rotational geometric stiffness terms.
+		\item Material stiffness approaches symmetry with refining element mesh if the membrane strains are small.
+ 		\item Unsymmetric element geometric stiffness matrix.
+ 		\item Unsymmetric global stiffness matrix, loss of quadratic convergence.
+ 	\end{itemize}
+ 	\item EICR tangent stiffness: consistent equilibrated CR formulation (CE):
+ 	\begin{itemize}
+ 		\item $\mathbf{K}^e 
+ 		=
+ 		\mathbf{T}^T
+ 		(
+ 		\mathbf{P}_R^T
+ 		\mathbf{K}_R^e
+ 		\mathbf{H}_R
+ 		\mathbf{P}_R
+ 		-
+ 		\mathbf{F}_{RNM}
+ 		\mathbf{G}_R
+ 		-
+ 		\mathbf{G}_R^T
+ 		\mathbf{F}_{RN}^T
+ 		\mathbf{P}_R
+ 		)
+ 		\mathbf{T}$
+ 		\item Addition of projector $\mathbf{P}_R$ to (C) formulation.
+ 		\item Material stiffness approaches symmetry with refining element mesh.
+ 		\item Unsymmetric element geometric stiffness matrix.
+ 		\item Symmetric global stiffness matrix (provided there are no nodal moments), quadratic convergence achieved.
+ 	\end{itemize}
+ 	\item EICR tangent stiffness: consistent symmetrizable equilibrated CR formulation (CSE):
+ 		\begin{itemize}
+ 		\item $\mathbf{K}^e 
+ 		=
+ 		\mathbf{T}^T
+ 		(
+ 		\mathbf{P}_R^T
+ 		\mathbf{H}_R^T
+ 		\mathbf{K}_R^e
+ 		\mathbf{H}_R
+ 		\mathbf{P}_R
+ 		+
+ 		\mathbf{P}_R^T
+ 		\mathbf{L}_R
+ 		\mathbf{P}_R
+ 		-
+ 		\mathbf{F}_{RNM}
+ 		\mathbf{G}_R
+ 		-
+ 		\mathbf{G}_R^T
+ 		\mathbf{F}_{RN}^T
+ 		\mathbf{P}_R
+ 		)
+ 		\mathbf{T}$
+ 		\item All terms of equation \ref{eq_cr14} retained. 
+ 		\item Material stiffness is always symmetric.
+ 		\item Unsymmetric element geometric stiffness matrix.
+ 		\item Symmetric global stiffness matrix (provided there are no nodal moments), quadratic convergence achieved.
+ 	\end{itemize}
+ \end{itemize}
 
 Different alternatives in the EICR approach exist. 
 
 Currently the CSE formulation is used. Go through formulation. Warpage correction??
 
-\subsection{EICR tangent stiffness}
+
+
+
+
 asdfasdf
 overview \cite{felippa2000systematic} p15.
 
