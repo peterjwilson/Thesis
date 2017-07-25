@@ -53,6 +53,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Identification of Kratos shell element formulations}{19}{section.2.5}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{20}{section.2.6}
+\defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Composite shells - revised 1}{21}{chapter.3}
@@ -74,6 +76,8 @@
 \contentsline {subsection}{\numberline {3.3.2}Laminate stress recovery}{33}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Laminate Tsai-Wu failure criterion}{34}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{35}{section.3.5}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
@@ -99,7 +103,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}EICR tangent stiffness}{49}{subsection.4.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.4}Advantages and disadvantages of EICR}{50}{subsection.4.6.4}
+\contentsline {section}{\numberline {4.7}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{50}{section.4.7}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
@@ -107,21 +111,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Stiffness matrix formulation}{51}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}ADD IN THEORY OF MEMBRANE DERIVATION HERE !!!!!}{52}{section.5.2}
+\contentsline {section}{\numberline {5.2}Stiffness matrix implementation}{54}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}ADD IN THEORY OF MEMBRANE DERIVATION HERE !!!!!}{52}{section.5.3}
+\contentsline {section}{\numberline {5.3}Mass matrix formulation and implementation}{56}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Stiffness matrix implementation}{54}{section.5.4}
+\contentsline {subsection}{\numberline {5.3.1}Lumped mass matrix}{56}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Mass matrix formulation and implementation}{56}{section.5.5}
+\contentsline {subsection}{\numberline {5.3.2}Consistent mass matrix}{57}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.1}Lumped mass matrix}{56}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.4}Stress and strain recovery}{60}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.2}Consistent mass matrix}{57}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.4.1}Von Mises equivalent stress}{61}{subsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Stress and strain recovery}{60}{section.5.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.1}Von Mises equivalent stress}{61}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.5}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{62}{section.5.5}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
@@ -147,6 +149,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4.1}Von Mises equivalent stress}{80}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{81}{section.6.5}
+\defcounter {refsection}{0}\relax 
+\newpage 
+\defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Extension of shells to composite laminates - revised 1}{82}{chapter.7}
@@ -159,7 +165,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.4}Tsai-Wu failure criterion implementation}{86}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\newpage 
+\contentsline {section}{\numberline {7.5}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{87}{section.7.5}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
@@ -207,39 +213,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5.6}Composite stress recovery: Navier supported laminate under sinusoidal load}{105}{subsection.8.5.6}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.6}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{110}{section.8.6}
+\defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Applications and consequences of element technologies}{111}{chapter.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.1}Euler buckling of CHS column}{111}{section.9.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.1}Summary}{118}{subsection.9.1.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.2}Shear wrinkling of plate}{118}{section.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.2.1}Summary}{124}{subsection.9.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.3}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{125}{section.9.3}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Extension of DSG triangle element technology - STILL TO DO!!!!!}{126}{chapter.10}
+\contentsline {chapter}{\numberline {10}Extension of DSG triangle element technology - REVIEWED 0 !!!!!}{126}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Cell Smoothed DSG approach}{126}{section.10.1}
+\contentsline {section}{\numberline {10.1}DSGc3 approach}{126}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.1}CS-DSG formulation}{126}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.1}DSGc3 unit triangle parametric formulation}{126}{subsection.10.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.2}Invariance of CS-DSG to nodal ordering}{129}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.2}DSGc3 example}{130}{subsection.10.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1.3}Comparison of DSG and CS-DSG elements in the shell obstacle course}{130}{subsection.10.1.3}
+\contentsline {subsection}{\numberline {10.1.3}DSGc3 summary}{132}{subsection.10.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}DSGc3 approach}{132}{section.10.2}
+\contentsline {section}{\numberline {10.2}Cell Smoothed DSG approach}{133}{section.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.1}DSGc3 unit triangle parametric formulation}{132}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.1}CS-DSG formulation}{133}{subsection.10.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.2}DSGc3 example}{135}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.2}Invariance of CS-DSG to nodal ordering}{136}{subsection.10.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.3}DSGc3 summary}{137}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.3}Comparison of DSG and CS-DSG elements in the shell obstacle course}{136}{subsection.10.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.3}Appraisal of alternative DSG technology approaches}{138}{section.10.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.3.1}Dissipation rate of DSG nodal ordering dependency}{138}{subsection.10.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.3.2}Computational cost vs. error for DSG and CS-DSG elements}{139}{subsection.10.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10.4}Chapter summary - TO DO !!!!!!!!!!!!!!!!}{141}{section.10.4}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 

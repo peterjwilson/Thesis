@@ -205,9 +205,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {69}{\ignorespaces CHS buckling: ANDES-DKQ and Basic-DKQ displacement plots at the onset of instability\relax }}{116}{figure.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {70}{\ignorespaces Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path\relax }}{117}{figure.caption.74}
+\contentsline {figure}{\numberline {70}{\ignorespaces CHS buckling: Element construction time vs. critical load\relax }}{117}{figure.caption.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {71}{\ignorespaces Shear wrinkling of plate setup\relax }}{118}{figure.caption.75}
+\contentsline {figure}{\numberline {71}{\ignorespaces Shear wrinkling of plate setup\relax }}{119}{figure.caption.75}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {72}{\ignorespaces Plate shear stability analysis: lateral displacement vs lateral load\relax }}{119}{figure.caption.76}
 \defcounter {refsection}{0}\relax 
@@ -221,17 +221,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {77}{\ignorespaces Plate shear stability analysis: maximum absolute out of plane displacement vs lateral load\relax }}{124}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {78}{\ignorespaces Division of triangle into 3 sub-triangles about centre point \cite {phung2013static}\relax }}{127}{figure.caption.82}
+\contentsline {figure}{\numberline {78}{\ignorespaces Parametric unit triangle \cite {Ble00}\relax }}{127}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {79}{\ignorespaces Sensitivity of nodal ordering between DSG and CS-DSG elements\relax }}{130}{figure.caption.83}
+\contentsline {figure}{\numberline {79}{\ignorespaces DSGc3 example problem displacement field results\relax }}{131}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {80}{\ignorespaces Shell obstacle course: DSG vs. CS-DSG\relax }}{131}{figure.caption.84}
+\contentsline {figure}{\numberline {80}{\ignorespaces DSGc3 example problem rotation field results\relax }}{132}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {81}{\ignorespaces Parametric unit triangle \cite {Ble00}\relax }}{132}{figure.caption.85}
+\contentsline {figure}{\numberline {81}{\ignorespaces Division of triangle into 3 sub-triangles about centre point \cite {phung2013static}\relax }}{133}{figure.caption.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {82}{\ignorespaces DSGc3 example problem displacement field results\relax }}{136}{figure.caption.86}
+\contentsline {figure}{\numberline {82}{\ignorespaces Sensitivity of nodal ordering between DSG and CS-DSG elements\relax }}{136}{figure.caption.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {83}{\ignorespaces DSGc3 example problem rotation field results\relax }}{137}{figure.caption.87}
+\contentsline {figure}{\numberline {83}{\ignorespaces Shell obstacle course: DSG vs. CS-DSG\relax }}{137}{figure.caption.87}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {84}{\ignorespaces DSG nodal dependency dissipation rate study setup\relax }}{138}{figure.caption.88}
 \defcounter {refsection}{0}\relax 

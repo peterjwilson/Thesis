@@ -83,14 +83,22 @@ Rama et al. \cite{Ram16} present the DSG formulation in a similar manner, detail
 
 The membrane strain displacement matrix requires no enhancement since linear triangle elements are impervious to membrane locking as discussed in section \ref{membrane_locking_theory}. Thus, the standard displacement-based formulation can be confidently utilised:
 
-\section{ADD IN THEORY OF MEMBRANE DERIVATION HERE !!!!!}
+\begin{equation}
+\boldsymbol{\epsilon} =(\nabla \mathbf{N}^{u_{i}}) \hat{\mathbf{v}} 
+= \mathbf{B}_{mem} \hat{\mathbf{v}}  
+\label{eqt5_1}\ .
+\end{equation}
+
+Clarifying $\mathbf{B}_{mem}$ yields:
 
 \begin{equation} 
 \mathbf{B}_{mem} =  \begin{pmatrix}
 \mathbf{B}_{mem_1} & \mathbf{B}_{mem_2} & \mathbf{B}_{mem_3}
 \end{pmatrix} 
-\label{eqt6}
+\label{eqt6}\ ,
 \end{equation}
+
+and with increased resolution:
 
 \begin{equation} 
 \mathbf{B}_{mem_i} =  \begin{pmatrix}
@@ -98,19 +106,27 @@ N_{i,x} & 0 & 0 & 0 & 0 & 0 \\
 0 & N_{i,y} & 0 & 0 & 0 & 0 \\
 N_{i,y} & N_{i,x} & 0 & 0 & 0 & 0 \\
 \end{pmatrix} 
-\label{eqt7}
+\label{eqt7}\ .
 \end{equation}
 
 The bending strain displacement matrix is also a simple standard displacement-based formulation and can be presented in a similar manner:
 
-\section{ADD IN THEORY OF MEMBRANE DERIVATION HERE !!!!!}
+\begin{equation}
+\boldsymbol{\kappa} =(\nabla \mathbf{N}^{\theta_{i}}) \hat{\mathbf{v}} 
+= \mathbf{B}_{bend} \hat{\mathbf{v}}  
+\label{eqt7_1}\ .
+\end{equation}
+
+Clarifying $\mathbf{B}_{bend}$ yields:
 
 \begin{equation} 
 \mathbf{B}_{bend} =  \begin{pmatrix}
 \mathbf{B}_{bend_1} & \mathbf{B}_{bend_2} & \mathbf{B}_{bend_3}
 \end{pmatrix} 
-\label{eqt8}
+\label{eqt8}\ ,
 \end{equation}
+
+with individual entries detailed as:
 
 \begin{equation} 
 \mathbf{B}_{bend_i} =  \begin{pmatrix}
@@ -118,10 +134,10 @@ The bending strain displacement matrix is also a simple standard displacement-ba
 0 & 0 & 0 & -N_{i,y} & 0 & 0 \\
 0 & 0 & 0 & -N_{i,x} & N_{i,y} & 0
 \end{pmatrix} 
-\label{eqt9}
+\label{eqt9}\ .
 \end{equation}
 
-Finally, the shear strain displacement matrix, which implements the DSG element enhancement technology fully derived in Appendix \ref{app:DSG technology derivation} and mitigates shear locking, is expressed as follows:
+Finally, the shear strain displacement matrix, which implements the DSG element enhancement technology fully derived in Appendix \ref{app:DSG technology derivation} and mitigates shear locking, is summarily expressed as follows:
 
 \begin{gather} 
 	\begin{aligned}
@@ -140,7 +156,7 @@ Finally, the shear strain displacement matrix, which implements the DSG element 
 	\end{aligned}
 \end{gather}
 
-The material matrices for the membrane and bending parts are presented below:
+The standard isotropic material matrices for the membrane and bending components are presented below:
 
 \begin{equation} 
 \mathbf{C}_{mem} =  \frac{Eh}{(1-\nu^2)}
@@ -149,7 +165,7 @@ The material matrices for the membrane and bending parts are presented below:
 \nu & 1 & 0 \\
 0 & 0 & \frac{(1-\nu)}{2}
 \end{pmatrix}
-\label{eqt11}
+\label{eqt11}\ ,
 \end{equation}
 
 \begin{equation} 
@@ -159,7 +175,7 @@ The material matrices for the membrane and bending parts are presented below:
 \nu & 1 & 0 \\
 0 & 0 & \frac{(1-\nu)}{2}
 \end{pmatrix}
-\label{eqt12}
+\label{eqt12}\ .
 \end{equation}
 
 To further improve the DSG element performance, Bischoff and Bletzinger \cite{Bis04} \cite{Bis01} applied the enhancement approach that Lyly suggested for MITC-4 elements \cite{Lyl93}. This approach modifies the internal shear energy term by scaling the shear constitutive matrix with a correction term $\tau$ incorporating the element thickness and an indicator of element size ($h_k$ = longest element side length). The enhanced  shear constitutive matrix is thus:
@@ -678,3 +694,5 @@ Expanding the above expression in conjuction with equation \ref{eqt23}, the Von 
 }
 \label{eqt25}
 \end{equation}
+
+\section{Chapter summary - TO DO !!!!!!!!!!!!!!!!}

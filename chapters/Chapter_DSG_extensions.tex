@@ -15,12 +15,259 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Extension of DSG triangle element technology - STILL TO DO!!!!!}
-\label{chap:chapter_application}
+\chapter[Extension of DSG triangle element technology  - REVIEWED 0 !!!!!]{Extension of DSG \\ linear triangle element \\ technology}
+\label{chap:chapter_dsg_extension}
 
-\renewcommand{\Thema}{Extension of DSG triangle element technology}
+\renewcommand{\Thema}{Extension of DSG linear triangle element technology}
 
-\lettrine[lines=2]{A}{lthough} the DSG element technology drastically enhances the performance of the basic constant strain triangle (Basic-T3) formulation in a very computationally efficient package, the drawback of nodal numbering dependency in coarse linear triangular meshes has tempted academics since it's original publication to extend the elegant underlying discrete shear gap concept into a formulation invariant of nodal ordering. This chapter concerns itself with: one such formulation successfully published and gaining traction, another approach under development and illuminating the severity of the DSG nodal numbering sensitivity in order to ascertain whether remedies are actually worthwhile in practical scenarios.
+\lettrine[lines=2]{A}{lthough} the DSG element technology drastically enhances the performance of the basic constant strain triangle (Basic-T3) formulation in a very computationally efficient package, the drawback of nodal numbering dependency in coarse linear triangular meshes has tempted academics since it's original publication to extend the elegant underlying discrete shear gap concept into a formulation invariant of nodal ordering. This chapter concerns itself with: one such formulation under development with promise, another approach successfully published and gaining traction and illuminating the severity of the DSG nodal numbering sensitivity in order to ascertain whether remedies are actually worthwhile in practical scenarios.
+
+\section{DSGc3 approach}
+The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's chair of structural engineering aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In it's current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric unit triangle formulation, with the next stage in development being the extension into arbitrary Cartesian triangles. 
+
+\subsection{DSGc3 unit triangle parametric formulation}
+Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\eta_i)$ = $(0,0),\ (1,0),\ (0,1)$ as per the figure below:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{images/parametric_unit_triangle.png}
+	\caption{Parametric unit triangle \cite{Ble00}}
+	\label{fig:parametric_unit_triangle}
+\end{figure}
+
+Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
+
+\begin{equation} 
+w_{KL} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 + 0.5(a_5 + a_6)\xi \eta + \eta^2 a_7
+\label{eqDSGc3_1}
+\end{equation}
+\begin{equation} 
+w_{RM \gamma} = \xi a_8 + \eta a_9
+\label{eqDSGc3_2}
+\end{equation}
+\begin{equation} 
+w_{MOD} = 0.5(a_5 - a_6)\xi \eta
+\label{eqDSGc3_3}
+\end{equation}
+
+The coefficients $a_1$ through $a_9$ are ansatz coefficients as yet unknown corresponding to one or more triangle DOFs each.
+
+The interaction between the moderator field and the Kirchhoff-Love fields is introduced along parametric axes as
+
+\begin{equation} 
+w_{KL \xi} = w_{KL} + w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_5 \xi \eta + \eta^2 a_7
+\label{eqDSGc3_4}
+\end{equation}
+and
+\begin{equation} 
+w_{KL \eta} = w_{KL} - w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_6 \xi \eta + \eta^2 a_7
+\label{eqDSGc3_5}\ .
+\end{equation}
+
+According to it's definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field.
+
+\begin{equation} 
+\beta_{KL \xi} = \frac{\partial w_{KL \xi}}{\partial \xi}  = a_2 + 2 \xi a_4 +a_5 \eta
+\label{eqDSGc3_8}
+\end{equation}
+\begin{equation} 
+\beta_{KL \eta} = \frac{\partial w_{KL \eta}}{\partial \eta}  =a_3 +a_6 \xi + 2 \eta a_7
+\label{eqDSGc3_9}
+\end{equation}
+
+A displacement gap field can be recovered by identifying the difference between the Reissner-Mindlin shear-displacement and Kirchhoff-Love displacement fields:
+\begin{equation} 
+\Delta_w = w_{RM\gamma} - w_{KL}  =-a_1 - a_2\xi - a3\eta - a_4\xi^2 - a_7\eta^2 + a_8\xi + a_9\eta - 0.5\eta\xi(a_5 + a_6)
+\label{eqDSGc3_10}\ .
+\end{equation}
+
+Until now the fields have been written in general terms of unknown ansatz coefficients. The fields can be clarified by considering 9 boundary conditions, sufficient to set-up 9 equations and solve the 9 unknowns.
+
+The first three equations constrain the displacement gap field to fulfil discrete nodal transverse displacements:
+
+\begin{equation} 
+bc1 = \Delta_w(0,0) = w_1 = -a_1
+\label{eqDSGc3_11}\ ,
+\end{equation}
+\begin{equation} 
+bc2 = \Delta_w(1,0) = w_2 = -a_1 -a_2 -a_4 + a_8
+\label{eqDSGc3_12}\ ,
+\end{equation}
+and
+\begin{equation} 
+bc3 = \Delta_w(0,1) = w_3 = -a_1 -a_3 -a_7 + a_9
+\label{eqDSGc3_13}\ .
+\end{equation}
+
+The remaining six impose rotation conditions on the nodal extremities of the modified Kirchhoff-Love fields, shaping both it and the introduced moderator field:
+
+\begin{equation} 
+bc4 = \beta_{KL \xi}(0,0) = \beta_{\xi 1} = a_2
+\label{eqDSGc3_14}\ ,
+\end{equation}
+\begin{equation} 
+bc5 = \beta_{KL \xi}(1,0) = \beta_{\xi 2} = a_2 + 2a_4
+\label{eqDSGc3_15}\ ,
+\end{equation}
+\begin{equation} 
+bc6 = \beta_{KL \xi}(0,1) = \beta_{\xi 3} = a_2 + a_5
+\label{eqDSGc3_16}\ ,
+\end{equation}
+
+\begin{equation} 
+bc7 = \beta_{KL \eta}(0,0) = \beta_{\eta 1} = a_3
+\label{eqDSGc3_17}\ ,
+\end{equation}
+\begin{equation} 
+bc8 = \beta_{KL \eta}(1,0) = \beta_{\eta 2} = a_3 + a_6
+\label{eqDSGc3_18}\ ,
+\end{equation}
+and
+\begin{equation} 
+bc9 = \beta_{KL \eta}(0,1) = \beta_{\eta 3} = a_3 + 2a_7
+\label{eqDSGc3_19}\ .
+\end{equation}
+
+Solving the above system of equations yields the following ansatz coefficients:
+
+\begin{equation} 
+\begin{pmatrix}
+a_1 \\
+a_2 \\
+a_3 \\
+a_4 \\
+a_5 \\
+a_6 \\
+a_7 \\
+a_8 \\
+a_9
+\end{pmatrix}
+=
+\begin{pmatrix}
+-w_1 \\
+\beta_{\xi 1} \\
+\beta_{\eta 1} \\
+0.5(\beta_{\xi 2} - \beta_{\xi 1}) \\
+\beta_{\xi 3} - \beta_{\xi 1} \\
+\beta_{\eta 2} - \beta_{\eta 1} \\
+0.5(\beta_{\eta 3} - \beta_{\eta 1}) \\
+w_2 - w_1 + 0.5(\beta_{\xi 1} + \beta_{\xi 2}) \\
+w_3 - w_1 + 0.5(\beta_{\eta 1} + \beta_{\eta 3}) 
+\end{pmatrix}
+\label{eqDSGc3_20}\ .
+\end{equation}
+
+For completeness, the Reissner-Mindlin shear-displacement and moderator fields are re-written with the ansatz results substituted:
+
+\begin{equation} 
+w_{RM \gamma} = \eta(0.5 \beta_{\eta 1} + 0.5\beta_{\eta 3} - w_1 + w_3) + \xi(0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2)
+\label{eqDSGc3_21}\ ,
+\end{equation}
+and
+\begin{equation} 
+w_{MOD} = \eta\xi(-0.5\beta_{\xi 1}1 + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
+\label{eqDSGc3_22}\ .
+\end{equation}
+
+Indeed, the resulting Reissner-Mindlin shear-displacement field above is similar to the DSG field in the original DSG formulation only without skewed geometry interactions accounted for.
+
+As the moderator field was introduced into the Kirchhoff-Love field previously, so can it be introduced into the Reissner-Mindlin shear-displacement field as:
+
+\begin{equation} 
+w_{RM \gamma \xi} = w_{RM \gamma} + w_{MOD} 
+\label{eqDSGc3_6}
+\end{equation}
+and
+\begin{equation} 
+w_{RM \gamma \eta} = w_{RM \gamma} - w_{MOD} 
+\label{eqDSGc3_7}\ .
+\end{equation}
+
+Similar to the original DSG formulation, the shear deformation field can be precipitated from the modified Reissner-Mindlin shear-displacement field via differentiation, yielding:
+
+\begin{equation} 
+\gamma_{RM \gamma \xi} = \frac{\partial w_{RM \gamma \xi}}{\partial \xi}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2 + \eta(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
+\label{eqDSGc3_23}
+\end{equation} 
+and
+\begin{equation} 
+\gamma_{RM \gamma \eta} = \frac{\partial w_{RM \gamma \eta}}{\partial \eta}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} - w_1 + w_3 - \xi(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\xi 1} - 0.5\beta_{\xi 3})
+\label{eqDSGc3_25}\ .
+\end{equation}
+
+The entries of the above fields can ordered in a strain-displacement B matrix relating the shear fields to the triangle plate theory DOFs, resulting in:
+
+\begin{equation} 
+\mathbf{B}_\gamma = 
+\begin{pmatrix}
+-1 & 1 & 0 & 0.5(1 - \eta) & 0.5 & 0.5\eta & 0.5\eta & -0.5\eta & 0 \\
+-1 & 0 & 1 & 0.5\xi & 0 & -0.5\xi & 0.5(1-\xi) & 0.5\xi & 0.5
+\end{pmatrix}
+\label{eqDSGc3_26}\ .
+\end{equation}
+
+\subsection{DSGc3 example}
+In order to illustrate the locking-free performance of the DSGc3 proof of concept formulation, a Python implementation of the element solving prescribed displacements is considered. As per the formulation under development, a unit triangle of thickness $h = 0.005$ is considered with isotropic material properties $E = 1000,\ \nu=0.0$ subject to no external influence except the following prescribed displacements: $w_1 = w_3 = 0.5,\ w_2 = \beta_{\xi 1} = \beta_{\eta 1} = 1.0$ and $\beta_{\xi 3} = 1.5$. Thus the DOFs $\beta_{\xi 2},\ \beta_{\eta 2}$ and $\beta_{\eta 3}$ form the problem unknowns. The results of the analysis determine the following unknown values: $\beta_{\xi 2} = -2.0,\ \beta_{\eta 2} = 1.5$ and $\beta_{\eta 3} = -1.0$. Of more interest, however, is the visual representation of the underlying formulation fields, with the various displacement fields fulfilling the solution presented below:
+
+\begin{figure}[H]
+	\subfloat[Displacement gap field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{displacement_gap_field.pdf}}
+	\subfloat[Displacement gap field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{displacement_gap_field_90.pdf}}
+	\\
+	\subfloat[Kirchhoff displacement field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{kt_displacement_field.pdf}}
+	\subfloat[Kirchhoff displacement field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{kt_displacement_field_90.pdf}}
+	\\
+	\subfloat[Reissner-Mindlin shear-displacement field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rm_shear_disp_field.pdf}}
+	\subfloat[Relationship of aforementioned fields]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{sum.pdf}}
+	\caption{\label{csdsgc3_result}DSGc3 example problem displacement field results}
+\end{figure}
+
+The displacement gap field in sub-figures (a) and (b) illustrate the fulfilment of nodal transverse displacement as per equations \ref{eqDSGc3_11} through \ref{eqDSGc3_13}, while the Kirchhoff displacement field in sub-figures (c) and (d) fulfils the nodal rotations of equations \ref{eqDSGc3_14} through \ref{eqDSGc3_19}. The locking-free performance of the element is confirmed in (e) with the RM shear-displacement field having a value of zero throughout. Sub-figure (f) highlights the relationship between these three fields, as per equation \ref{eqDSGc3_10}, with the displacement gap and Kirchhoff fields essentially nullifying each other to mitigate locking effects.
+
+The rotation fields of the formulation are presented below:
+
+\begin{figure}[H]
+	\subfloat[Rotation xi field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_xi.pdf}}
+	\subfloat[Rotation xi field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_xi_90.pdf}}
+	\\
+	\subfloat[Rotation eta field]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_eta.pdf}}
+	\subfloat[Rotation eta field - top view]
+	{\label{ref_label2}
+		\includegraphics[width=7.3cm]
+		{rotation_eta_90.pdf}}
+	\caption{\label{csdsgc3_resul1t}DSGc3 example problem rotation field results}
+\end{figure}
+
+As per equations \ref{eqDSGc3_8} and \ref{eqDSGc3_9}, both rotation fields exhibit linear interpolation of nodal values, themselves corresponding to the solution values due to the constraints of equations \ref{eqDSGc3_14} though \ref{eqDSGc3_19}.
+
+\subsection{DSGc3 summary}
+As an emerging formulation, the DSGc3 offers a promising proof of concept for a locking-free linear triangle element. Further steps to generalise the current unit-triangle parametric formulation to an arbitrarily skewed Cartesian formulation are necessary to effectively use the element in general FEM code, such as Kratos. Thus, given the current state of the DSGc3 formulation, the remaining discussion of extended DSG formulations is limited to the CS-DSG element.
 
 \section{Cell Smoothed DSG approach}
 A published and successful approach to remedy the aforementioned nodal numbering dependency is the Cell Smoothed Discrete Shear Gap (CS-DSG) method proposed by Nguyen-Thoi et al. \cite{Ngu13} in 2013. The overarching idea is to split each triangular element into 3 sub-triangles, perform the original DSG formulation on each sub-triangle, then assemble these contributions via an area-averaged approach to recover the behaviour of the meta-triangle. In Reference \cite{Ngu13}, Nguyen-Thoi and his team perform the cell smoothing approach for the membrane, bending and shear B matrices of the original DSG formulation. Since the shear B-matrix is the only component that exhibits nodal ordering dependency, the cell smoothing technique is only applied to the shear B-matrix in this work. The following section illustrates the formulation of the CS-DSG, applied to the shear B-matrix only.
@@ -286,256 +533,9 @@ Although the focus of the previous test was nodal numbering dependency, the accu
 	\caption{\label{csdsg_shell_obstacl}Shell obstacle course: DSG vs. CS-DSG}
 \end{figure}
 
-Results of the shell obstacle course confirm the behaviours of the DSG and CS-DSG elements converge as the mesh is refined, corresponding to the DSG nodal numbering dependency dissipating with finer meshes, as described in the original DSG formulation. The greatest difference occurring between the elements in the first data points (64 element coarse mesh) of the pinched hemisphere test is still relatively minor, highlighting that the DSG nodal dependency of this coarse mesh is already significantly diminished from that of a single triangle (refer figure \ref{csdsg_nodal_ordering} (b)). Thus, the CS-DSG element maintains the accuracy of the original DSG element while also mitigating the nodal dependency of the original element. However, one may invoke the \textit{no free lunch} theorem, and hold the added computational effort of the CS-DSG element against the limited range of nodal dependency of the DSG element. Two questions arise to address this dichotomy: \textit{"how fast does the nodal dependency of the DSG element dissipate to negligible levels?"}, and, 
- \textit{"how gross is the additional computational effort required for the CS-DSG element?"}. These two questions are addressed in section \ref{CSDSG appraisal}, after the discussion of another alternate DSG formulation extension below.
-
-\section{DSGc3 approach}
-The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's chair of structural engineering aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In it's current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric unit triangle formulation, with the next stage in development being the extension into arbitrary Cartesian triangles. 
-
-\subsection{DSGc3 unit triangle parametric formulation}
-Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\eta_i)$ = $(0,0),\ (1,0),\ (0,1)$ as per the figure below:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=8cm]{images/parametric_unit_triangle.png}
-	\caption{Parametric unit triangle \cite{Ble00}}
-	\label{fig:parametric_unit_triangle}
-\end{figure}
-
-Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
-
-\begin{equation} 
-w_{KL} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 + 0.5(a_5 + a_6)\xi \eta + \eta^2 a_7
-\label{eqDSGc3_1}
-\end{equation}
-\begin{equation} 
-w_{RM \gamma} = \xi a_8 + \eta a_9
-\label{eqDSGc3_2}
-\end{equation}
-\begin{equation} 
-w_{MOD} = 0.5(a_5 - a_6)\xi \eta
-\label{eqDSGc3_3}
-\end{equation}
-
-The coefficients $a_1$ through $a_9$ are ansatz coefficients as yet unknown corresponding to one or more triangle DOFs each.
-
-The interaction between the moderator field and the Kirchhoff-Love fields is introduced along parametric axes as
-
-\begin{equation} 
-w_{KL \xi} = w_{KL} + w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_5 \xi \eta + \eta^2 a_7
-\label{eqDSGc3_4}
-\end{equation}
-and
-\begin{equation} 
-w_{KL \eta} = w_{KL} - w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_6 \xi \eta + \eta^2 a_7
-\label{eqDSGc3_5}\ .
-\end{equation}
-
- According to it's definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field.
-
-\begin{equation} 
-\beta_{KL \xi} = \frac{\partial w_{KL \xi}}{\partial \xi}  = a_2 + 2 \xi a_4 +a_5 \eta
-\label{eqDSGc3_8}
-\end{equation}
-\begin{equation} 
-\beta_{KL \eta} = \frac{\partial w_{KL \eta}}{\partial \eta}  =a_3 +a_6 \xi + 2 \eta a_7
-\label{eqDSGc3_9}
-\end{equation}
-
-A displacement gap field can be recovered by identifying the difference between the Reissner-Mindlin shear-displacement and Kirchhoff-Love displacement fields:
-\begin{equation} 
-\Delta_w = w_{RM\gamma} - w_{KL}  =-a_1 - a_2\xi - a3\eta - a_4\xi^2 - a_7\eta^2 + a_8\xi + a_9\eta - 0.5\eta\xi(a_5 + a_6)
-\label{eqDSGc3_10}\ .
-\end{equation}
-
-Until now the fields have been written in general terms of unknown ansatz coefficients. The fields can be clarified by considering 9 boundary conditions, sufficient to set-up 9 equations and solve the 9 unknowns.
-
-The first three equations constrain the displacement gap field to fulfil discrete nodal transverse displacements:
-
-\begin{equation} 
-bc1 = \Delta_w(0,0) = w_1 = -a_1
-\label{eqDSGc3_11}\ ,
-\end{equation}
-\begin{equation} 
-bc2 = \Delta_w(1,0) = w_2 = -a_1 -a_2 -a_4 + a_8
-\label{eqDSGc3_12}\ ,
-\end{equation}
-and
-\begin{equation} 
-bc3 = \Delta_w(0,1) = w_3 = -a_1 -a_3 -a_7 + a_9
-\label{eqDSGc3_13}\ .
-\end{equation}
-
-The remaining six impose rotation conditions on the nodal extremities of the modified Kirchhoff-Love fields, shaping both it and the introduced moderator field:
-
-\begin{equation} 
-bc4 = \beta_{KL \xi}(0,0) = \beta_{\xi 1} = a_2
-\label{eqDSGc3_14}\ ,
-\end{equation}
-\begin{equation} 
-bc5 = \beta_{KL \xi}(1,0) = \beta_{\xi 2} = a_2 + 2a_4
-\label{eqDSGc3_15}\ ,
-\end{equation}
-\begin{equation} 
-bc6 = \beta_{KL \xi}(0,1) = \beta_{\xi 3} = a_2 + a_5
-\label{eqDSGc3_16}\ ,
-\end{equation}
-
-\begin{equation} 
-bc7 = \beta_{KL \eta}(0,0) = \beta_{\eta 1} = a_3
-\label{eqDSGc3_17}\ ,
-\end{equation}
-\begin{equation} 
-bc8 = \beta_{KL \eta}(1,0) = \beta_{\eta 2} = a_3 + a_6
-\label{eqDSGc3_18}\ ,
-\end{equation}
-and
-\begin{equation} 
-bc9 = \beta_{KL \eta}(0,1) = \beta_{\eta 3} = a_3 + 2a_7
-\label{eqDSGc3_19}\ .
-\end{equation}
-
-Solving the above system of equations yields the following ansatz coefficients:
-
-\begin{equation} 
-\begin{pmatrix}
-a_1 \\
-a_2 \\
-a_3 \\
-a_4 \\
-a_5 \\
-a_6 \\
-a_7 \\
-a_8 \\
-a_9
-\end{pmatrix}
-=
-\begin{pmatrix}
--w_1 \\
-\beta_{\xi 1} \\
-\beta_{\eta 1} \\
-0.5(\beta_{\xi 2} - \beta_{\xi 1}) \\
-\beta_{\xi 3} - \beta_{\xi 1} \\
-\beta_{\eta 2} - \beta_{\eta 1} \\
-0.5(\beta_{\eta 3} - \beta_{\eta 1}) \\
-w_2 - w_1 + 0.5(\beta_{\xi 1} + \beta_{\xi 2}) \\
-w_3 - w_1 + 0.5(\beta_{\eta 1} + \beta_{\eta 3}) 
-\end{pmatrix}
-\label{eqDSGc3_20}\ .
-\end{equation}
-
-For completeness, the Reissner-Mindlin shear-displacement and moderator fields are re-written with the ansatz results substituted:
-
-\begin{equation} 
-w_{RM \gamma} = \eta(0.5 \beta_{\eta 1} + 0.5\beta_{\eta 3} - w_1 + w_3) + \xi(0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2)
-\label{eqDSGc3_21}\ ,
-\end{equation}
-and
-\begin{equation} 
-w_{MOD} = \eta\xi(-0.5\beta_{\xi 1}1 + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
-\label{eqDSGc3_22}\ .
-\end{equation}
-
-Indeed, the resulting Reissner-Mindlin shear-displacement field above is similar to the DSG field in the original DSG formulation only without skewed geometry interactions accounted for.
-
-As the moderator field was introduced into the Kirchhoff-Love field previously, so can it be introduced into the Reissner-Mindlin shear-displacement field as:
-
-\begin{equation} 
-w_{RM \gamma \xi} = w_{RM \gamma} + w_{MOD} 
-\label{eqDSGc3_6}
-\end{equation}
-and
-\begin{equation} 
-w_{RM \gamma \eta} = w_{RM \gamma} - w_{MOD} 
-\label{eqDSGc3_7}\ .
-\end{equation}
-
-Similar to the original DSG formulation, the shear deformation field can be precipitated from the modified Reissner-Mindlin shear-displacement field via differentiation, yielding:
-
-\begin{equation} 
-\gamma_{RM \gamma \xi} = \frac{\partial w_{RM \gamma \xi}}{\partial \xi}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 2} - w_1 + w_2 + \eta(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\eta 1} - 0.5\beta_{\eta 2})
-\label{eqDSGc3_23}
-\end{equation} 
-and
-\begin{equation} 
-\gamma_{RM \gamma \eta} = \frac{\partial w_{RM \gamma \eta}}{\partial \eta}  = 0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} - w_1 + w_3 - \xi(-0.5\beta_{\xi 1} + 0.5\beta_{\xi 3} + 0.5\beta_{\xi 1} - 0.5\beta_{\xi 3})
-\label{eqDSGc3_25}\ .
-\end{equation}
-
-The entries of the above fields can ordered in a strain-displacement B matrix relating the shear fields to the triangle plate theory DOFs, resulting in:
-
-\begin{equation} 
-\mathbf{B}_\gamma = 
-\begin{pmatrix}
--1 & 1 & 0 & 0.5(1 - \eta) & 0.5 & 0.5\eta & 0.5\eta & -0.5\eta & 0 \\
--1 & 0 & 1 & 0.5\xi & 0 & -0.5\xi & 0.5(1-\xi) & 0.5\xi & 0.5
-\end{pmatrix}
-\label{eqDSGc3_26}\ .
-\end{equation}
-
-\subsection{DSGc3 example}
-In order to illustrate the locking-free performance of the DSGc3 proof of concept formulation, a Python implementation of the element solving prescribed displacements is considered. As per the formulation under development, a unit triangle of thickness $h = 0.005$ is considered with isotropic material properties $E = 1000,\ \nu=0.0$ subject to no external influence except the following prescribed displacements: $w_1 = w_3 = 0.5,\ w_2 = \beta_{\xi 1} = \beta_{\eta 1} = 1.0$ and $\beta_{\xi 3} = 1.5$. Thus the DOFs $\beta_{\xi 2},\ \beta_{\eta 2}$ and $\beta_{\eta 3}$ form the problem unknowns. The results of the analysis determine the following unknown values: $\beta_{\xi 2} = -2.0,\ \beta_{\eta 2} = 1.5$ and $\beta_{\eta 3} = -1.0$. Of more interest, however, is the visual representation of the underlying formulation fields, with the various displacement fields fulfilling the solution presented below:
-
-\begin{figure}[H]
-		\subfloat[Displacement gap field]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{displacement_gap_field.pdf}}
-	\subfloat[Displacement gap field - top view]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{displacement_gap_field_90.pdf}}
-	\\
-	\subfloat[Kirchhoff displacement field]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{kt_displacement_field.pdf}}
-	\subfloat[Kirchhoff displacement field - top view]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{kt_displacement_field_90.pdf}}
-	\\
-	\subfloat[Reissner-Mindlin shear-displacement field]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{rm_shear_disp_field.pdf}}
-	\subfloat[Relationship of aforementioned fields]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{sum.pdf}}
-	\caption{\label{csdsgc3_result}DSGc3 example problem displacement field results}
-\end{figure}
-
-The displacement gap field in sub-figures (a) and (b) illustrate the fulfilment of nodal transverse displacement as per equations \ref{eqDSGc3_11} through \ref{eqDSGc3_13}, while the Kirchhoff displacement field in sub-figures (c) and (d) fulfils the nodal rotations of equations \ref{eqDSGc3_14} through \ref{eqDSGc3_19}. The locking-free performance of the element is confirmed in (e) with the RM shear-displacement field having a value of zero throughout. Sub-figure (f) highlights the relationship between these three fields, as per equation \ref{eqDSGc3_10}, with the displacement gap and Kirchhoff fields essentially nullifying each other to mitigate locking effects.
-
-The rotation fields of the formulation are presented below:
-
-\begin{figure}[H]
-	\subfloat[Rotation xi field]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{rotation_xi.pdf}}
-	\subfloat[Rotation xi field - top view]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{rotation_xi_90.pdf}}
-	\\
-	\subfloat[Rotation eta field]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{rotation_eta.pdf}}
-	\subfloat[Rotation eta field - top view]
-	{\label{ref_label2}
-		\includegraphics[width=7.3cm]
-		{rotation_eta_90.pdf}}
-	\caption{\label{csdsgc3_resul1t}DSGc3 example problem rotation field results}
-\end{figure}
-
-As per equations \ref{eqDSGc3_8} and \ref{eqDSGc3_9}, both rotation fields exhibit linear interpolation of nodal values, themselves corresponding to the solution values due to the constraints of equations \ref{eqDSGc3_14} though \ref{eqDSGc3_19}.
-
-\subsection{DSGc3 summary}
-As an emerging formulation, the DSGc3 offers a promising proof of concept for a locking-free linear triangle element. Further steps to generalise the current unit-triangle parametric formulation to an arbitrarily skewed Cartesian formulation are necessary to effectively use the element in general FEM code, such as Kratos. Thus, given the current state of the DSGc3 formulation, the remaining discussion of extended DSG formulations is limited to the aforementioned CS-DSG element.
-
+Results of the shell obstacle course confirm the behaviours of the DSG and CS-DSG elements converge as the mesh is refined, corresponding to the DSG nodal numbering dependency dissipating with finer meshes, as described in the original DSG formulation. The greatest difference occurring between the elements in the first data points (64 element coarse mesh) of the pinched hemisphere test is still relatively minor, highlighting that the DSG nodal dependency of this coarse mesh is already significantly diminished from that of a single triangle (refer figure \ref{csdsg_nodal_ordering} (b)). Thus, the CS-DSG element maintains the 'fine-mesh' accuracy of the original DSG element while also mitigating the nodal dependency of the original element. However, one may invoke the \textit{no free lunch} theorem, and hold the added computational effort of the CS-DSG element against the limited range of nodal dependency of the DSG element. Two questions arise to address this dichotomy: \textit{"how fast does the nodal dependency of the DSG element dissipate to negligible levels?"}, and, 
+ \textit{"how gross is the additional computational effort required for the CS-DSG element?"}. 
+ 
 \section{Appraisal of alternative DSG technology approaches}
 \label{CSDSG appraisal}
 In an attempt to evaluate whether the DSG or CS-DSG is more suitable for general purpose FEA use, the two questions previously posed are recalled:
@@ -571,7 +571,7 @@ These two boundary conditions are imposed separately, with the minimum z-displac
 	\label{fig:Nodal ordering sensitivity study}
 \end{figure}
 
-As expected, the coarsest 2 element mesh reveals a high level of nodal numbering dependency in the DSG element, with the 2 boundary conditions producing wildly different displacement results. The CS-DSG element produced identical displacement results for this coarse mesh across both boundary conditions, as well as for all other meshes studied. The 2 element mesh also reveals that although the CS-DSG has no node-numbering dependency, this doesn't necessarily mean it is more accurate than the DSG mesh. Indeed, the left clamped DSG case is closer to the reference solution, however, the bottom clamped DSG case is quite inaccurate. It seems apparent that in this 2 element mesh, and most likely for other very coarse meshes, the CS-DSG element guarantees a result better than the worst possible DSG result but not necessarily better than the best DSG node ordering sensitive result. Despite this caveat, it's clear that the CS-DSG element produces reliably more accurate results than the DSG element for the coarsest mesh.
+As expected, the coarsest 2 element mesh reveals a high level of nodal numbering dependency in the DSG element, with the 2 boundary conditions producing considerably different displacement results. The CS-DSG element produced identical displacement results for this coarse mesh across both boundary conditions, as well as for all other meshes studied. The 2 element mesh also reveals that although the CS-DSG has no node-numbering dependency, this doesn't necessarily mean it is more accurate than the DSG mesh. Indeed, the left clamped DSG case is closer to the reference solution, however, the bottom clamped DSG case is quite inaccurate. It seems apparent that in this 2 element mesh, and most likely for other very coarse meshes, the CS-DSG element guarantees a result better than the worst possible DSG result but not necessarily better than the best DSG node ordering sensitive result. Despite this caveat, it's clear that the CS-DSG element produces reliably more accurate results than the DSG element for the coarsest mesh.
 
 Progressing with mesh refinement, the 8 element mesh DSG results demonstrate almost complete convergence between the two boundary conditions, indicating negligible nodal numbering dependency. Additionally, the DSG and CS-DSG results essentially coalesce after this single level of refinement. As the mesh is refined further, differences between the 3 result cases continue to evaporate and they converge to the same reference solution of $min(u_z) = -0.22058$ calculated with an 'overkill' mesh of 11, 250 elements.
 
@@ -588,5 +588,7 @@ Since the shear B-matrix is the only point of difference between the two formula
 \end{figure}
 
 Practical FEA is often driven by the tension of obtaining accurate results in a timely manner, with minor differences in element speeds magnified into substantial time delays when a large number of iterations are necessary (such as fine dynamic analysis and highly non-linear analysis). The above graph highlights that the DSG element actually reaches a lower percentage error level 'before' (in the sense of time) the CS-DSG element for all meshes except the first. That is, for typical practical meshes (indeed 2 element meshes, especially linear triangles, are ill-advised in practise), the DSG element offers comparable accuracy to the CS-DSG element at a lower computational cost. Exceptional cases will no doubt arise where the CS-DSG element is more suitable, a possible example being the analysis of an I-beam where flange meshes are often naturally coarse due to the size difference between the flanges and the web, however this merely reinforces the importance of correct structural modelling of the system at hand and knowledge concerning the interplay of assumptions, element choices and potential deleterious consequences: a central theme of this thesis.
+
+\section{Chapter summary - TO DO !!!!!!!!!!!!!!!!}
 
 Thus, despite the nodal ordering dependency that demonstrably diminishes quickly, the DSG element appears to be the preferred element for general analysis, while fringe cases involving very coarse meshes would benefit from a shift to the CS-DSG element.

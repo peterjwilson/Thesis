@@ -12,7 +12,7 @@
 %deutsch: chap/kap, abs, abb, gl, anh
 %see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more information
 
-\addtocontents{toc}{\protect\newpage}
+
 
 \chapter{Validation of elements}
 
@@ -147,7 +147,7 @@ The first geometrically non-linear benchmark is the snap-through of a hinged cyl
 \end{figure}
 
  
-The load displacement curve plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference path from \cite{Sze2004}. The full equilibrium path isn't resolved because Kratos only has a load control non-linear solution method implemented, translating to the restriction of only resolving monotonically increasing paths. Regardless, both elements clearly follow the initial path, and then rejoin the reference solution to correctly resolve the structure in it's snapped-through state.
+The load displacement curve plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference path from \cite{Sze2004}. Both elements clearly follow the initial path, and then rejoin the reference solution to correctly resolve the structure in it's snapped-through state.
 
 \newpage
 \subsection{Open cylinder pull-out}
@@ -434,7 +434,7 @@ Both elements quickly converge to the reference solution and maintain good perfo
 
 \subsection{Composite non-linear static: composite hinged cylindrical roof}
 
-To consider the non-linear static performance of composite shells, the hinged cylindrical roof test in section \ref{validation:hinged cyl roof} is identically repeated with a laminate material. The composite laminate of total thickness $h = 12.7mm$ is composed of laminae with properties $E_1 = 3.3\times10^9,\ 1.1\times10^9,\ G_{12} = G_{13} = G_{23} = 0.66\times10^9$ and $\nu_{12} = 0.25$ arranged in a [90/0/90] stacking sequence \cite{Sze2004}.
+To consider the non-linear static performance of composite shells, the hinged cylindrical roof test in section \ref{validation:hinged cyl roof} is identically repeated with a laminate material. The composite laminate of total thickness $h = 12.7mm$ is composed of laminae with properties $E_1 = 3.3\times10^9,\ E_2 = 1.1\times10^9,\ G_{12} = G_{13} = G_{23} = 0.66\times10^9$ and $\nu_{12} = 0.25$ arranged in a [90/0/90] stacking sequence \cite{Sze2004}.
 
 \begin{figure}[H]
 	%\centering
@@ -666,3 +666,5 @@ In addition to the stresses and strains considered, the Tsai-Wu reserve factor w
 \end{figure}
 
 The figures above confirm accurate determination of the Tsai-Wu reserve factor in both elements. A central discontinuity is present in the ANDES-DKQ thin shell because it has no stress on the mid-plane under pure bending, yielding an infinite reserve factor. Focussing on the DSG element, the low magnitude of transverse shear stresses on the mid-plane yields a finite reserve factor of roughly 100, which has been omitted for clarity. These transverse shear stresses, which have a greater combined magnitude in the central laminae, are also the reason behind the small 'hooks' of lower reserve factors at the outer/inner ply boundaries.
+
+\section{Chapter summary - TO DO !!!!!!!!!!!!!!!!}
