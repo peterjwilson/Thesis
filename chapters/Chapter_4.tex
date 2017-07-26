@@ -17,9 +17,7 @@
 \setcounter{MaxMatrixCols}{20}
 %\captionsetup{justification=centering}
 
-\begin{flushleft}
-	\chapter{ANDES-DKQ quadrilateral shell element}
-\end{flushleft}
+\chapter[ANDES-DKQ quadrilateral shell element]{ANDES-DKQ quadrilateral \\ shell element}
 \renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
 
 The following chapter outlines the formulation and implementation of the stiffness matrix, mass matrix and quantity recovery for the ANDES-DKQ quadrilateral shell element in Kratos.
@@ -1139,4 +1137,5 @@ Corresponding to the underlying 3 parameter model of the ANDES-DKQ in which $\si
 \label{eqqrec6}
 \end{equation}
 
-\section{Chapter summary - TO DO !!!!!!!!!!!!!!!!}
+\section{Chapter summary}
+The various aspects of the ANDES-DKQ linear quadrilateral element required for implementation in Kratos were covered in this chapter. Initially, the ANDES membrane and DKQ bending formulations, which, together, form the stiffness matrix formulation, were presented followed by their implementation. Catering for dynamics, the element lumped and consistent mass matrices were detailed. Lastly, the stress and strain recovery aspects of the element were considered which are of critical importance to it's practical analysis use.

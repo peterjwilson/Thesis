@@ -18,7 +18,7 @@
 
 \renewcommand{\Thema}{Validation of elements}
 
-\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across statics, geometrically non-linear analysis, dynamics, quantity recovery and composites interrogate the correct implementation of the element formulations and also gives an indication of their performance. 
+\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across statics, geometrically non-linear analysis, dynamics, quantity recovery and composites interrogate the correct implementation of the element formulations and also gives an initial indication of their performance. 
 
 \section{Static tests: shell obstacle course}
 \label{section:shell obstacle course}
@@ -667,4 +667,5 @@ In addition to the stresses and strains considered, the Tsai-Wu reserve factor w
 
 The figures above confirm accurate determination of the Tsai-Wu reserve factor in both elements. A central discontinuity is present in the ANDES-DKQ thin shell because it has no stress on the mid-plane under pure bending, yielding an infinite reserve factor. Focussing on the DSG element, the low magnitude of transverse shear stresses on the mid-plane yields a finite reserve factor of roughly 100, which has been omitted for clarity. These transverse shear stresses, which have a greater combined magnitude in the central laminae, are also the reason behind the small 'hooks' of lower reserve factors at the outer/inner ply boundaries.
 
-\section{Chapter summary - TO DO !!!!!!!!!!!!!!!!}
+\section{Chapter summary}
+The various validation tests covered in this chapter demonstrate the correct implementation of the shell formulations, laminate material matrices and quantity recovery approaches presented in the preceding chapters. Accurate element performance has been demonstrated across a wide range of analysis scenarios including linear statics, non-linear statics, linear dynamics and non-linear dynamics across isotropic and orthotropic composite materials. Furthermore, the accuracy of recovered stresses and strains, integrated forces, equivalent Von Mises stresses and the composite Tsai-Wu reserve index has been illustrated.

@@ -13,7 +13,7 @@ Hiwi to do:
 	
 Thesis To Do:	
 	- Add general overview of each DSG and ANDES formulation in their chapters
-	- Add some benchmark examples to the wiki page https://github.com/KratosMultiphysics/Kratos/wiki/Application-Cases
+	- Add felippa ifem error diagram to ch2 and extend it
 	
 	
 Report:

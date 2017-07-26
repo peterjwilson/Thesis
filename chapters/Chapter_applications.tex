@@ -308,4 +308,35 @@ The plate shear wrinkling analysis yet again confirms the significant effect of 
 
  Upon bifurcation, the bending formulation and technologies largely determined the buckling shape exhibited by the system. The proper selection of a 3 or 5 parameter based formulation suitable to the problem considered appears to be of the utmost importance. Although the 5-parameter based DSG element achieved quite similar results compared to the 3-parameter based elements naturally suited to the slender problem, differences were nonetheless all too apparent, suggesting that element technologies themselves aren't the "silver bullet" to all scenarios, but are most effective when applied to base formulations inherently suitable to the problem considered.
  
-\section{Chapter summary - TO DO !!!!!!!!!!!!!!!!}
+\section{Structural modelling suggestions and chapter summary}
+Via detailed study of the CHS buckling and plate shear wrinkling problems the importance of correct structural modelling with shells was reinforced. Simplifications and assumptions made during the analyses clearly produced different results, begging the question:
+
+\begin{center}
+\textit{In light of the two cases interrogated, what structural modelling recommendations can be suggested to maximize the accuracy of general structural analysis utilizing shell elements?}
+\end{center}
+
+Although it precedes the question above (as shell elements are already assumed employed), the choice of dimensional reduction imposes a significant filter of possible resolvable results. As demonstrated in the CHS buckling example, the 1D beam solution produced quite a reasonable estimate of buckling load solely based on bulk behaviour, but local effects such as section ovalisation were completely ignored. If one limits the scope of discussion to structural analysis with shell elements, it is proposed that the correct selection of shell base formulation is perhaps most important.
+
+Within the shell regime, the selection of elements based on 3-parameter or 5-parameter models appears to limit resolvable possibilities the greatest. Examined in the shear wrinkling of a plate example, it was observed that results tended to group according to their base formulation instead of according to element enhancements. This suggests that base formulations effectively sit in the element's 'driver's seat' predominantly determining the solution sub-space it can explore, while element enhancement technologies provide corrective measures within this sub-space. Thus, according to each general structural problem, one must consider whether Kirchhoff-Love or Reissner-Mindlin kinematics dominate and select shell base formulations accordingly.
+
+After base formulation selection element enhancement technology choice and geometry (triangular or quadrilateral) form the next layer of narrowing the solution sub-space the element can explore. Both analyses considered in this chapter confirm that 5-parameter models require transverse shear locking mitigation technologies such as DSG or MITC to offer reasonable results. The consistently meaningless results of the Basic-T3 element (pure 5-parameter without technologies) overwhelmingly fortifies this sentiment. Knowledge of the base formulation previously selected is required here too, with competent practitioners realising 3-parameter based shells are impervious to transverse shear locking. However, this asymmetry between base formulations is stripped when considering membrane locking, which affects both 3-parameter and 5-parameter quadrilateral shells but not any linear triangle shells. Thus, a trade-off between the increased resolving power of quadrilaterals (4 gauss points) susceptible to membrane locking and the limited resolving power of triangles (1 gauss point) invulnerable to membrane locking must be evaluated, as per the following figure. 
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=12cm]{images/MODELLING_2.pdf}
+	\caption{Reduction of solution space due to structural modelling in FEM}
+	\label{pic:applications11}
+\end{figure}
+
+Two critical factors key in this trade-off is the predisposition of the mesh to membrane locking (ie. highly warped quadrilaterals) and the effectiveness of the membrane locking mitigation technology. The CHS beam example highlights a case where the highly warped unstructured quadrilateral mesh is extremely susceptible to membrane locking, as demonstrated by the Basic-DKQ results. Despite this mesh, the ANDES enhancement technology demonstrably mitigates membrane locking. The plate shear wrinkling example suggests an additional caveat that mesh susceptibility to membrane locking must be considered over the deformed state too, not just the undeformed. One may also alleviate the severity of unmitigated membrane locking by refining the mesh to reduce element warping, however this is likely to be insufficient for accurate results without the aforementioned element membrane locking preventative technologies incorporated too.
+
+The following figure summarises the hierarchical solution space reduction that occurs during typical FEM, with a distillation of the preceding discussion on shell structural modelling emphasised:
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=12cm]{images/MODELLING_1.pdf}
+	\caption{Reduction of solution space due to structural modelling in FEM}
+	\label{pic:applications10}
+\end{figure}

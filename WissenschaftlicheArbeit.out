@@ -1,17 +1,17 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction - STILL TO DO!!!!}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Shell finite elements - revised 2}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Structural modelling with shells}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Shell models}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Locking in shell finite elements}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.4}{Shell finite element technologies}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.5}{Identification of Kratos shell element formulations}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.6}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.6}{Chapter summary}{chapter.2}% 8
 \BOOKMARK [0][-]{chapter.3}{Composite shells - revised 1}{}% 9
 \BOOKMARK [1][-]{section.3.1}{Composite material basics}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.2}{Orthotropic shell laminates: internal virtual work}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.3}{Laminate strain and stress recovery}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.4}{Laminate Tsai-Wu failure criterion}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.5}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.5}{Chapter summary}{chapter.3}% 14
 \BOOKMARK [0][-]{chapter.4}{Non-linear analysis background - revised 1}{}% 15
 \BOOKMARK [1][-]{section.4.1}{Response diagrams}{chapter.4}% 16
 \BOOKMARK [1][-]{section.4.2}{Stability criterion}{chapter.4}% 17
@@ -19,41 +19,41 @@
 \BOOKMARK [1][-]{section.4.4}{Stability analysis example}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.5}{Co-rotational transformation approach - REVIEWED 0}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.6}{EICR formulation overview - REVIEWED 0 !!!!!}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.7}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.7}{Chapter summary}{chapter.4}% 22
 \BOOKMARK [0][-]{chapter.5}{DSG triangle shell element}{}% 23
 \BOOKMARK [1][-]{section.5.1}{Stiffness matrix formulation}{chapter.5}% 24
 \BOOKMARK [1][-]{section.5.2}{Stiffness matrix implementation}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.3}{Mass matrix formulation and implementation}{chapter.5}% 26
 \BOOKMARK [1][-]{section.5.4}{Stress and strain recovery}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.5}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.5}{Chapter summary}{chapter.5}% 28
 \BOOKMARK [0][-]{chapter.6}{ANDES-DKQ quadrilateral shell element}{}% 29
 \BOOKMARK [1][-]{section.6.1}{Stiffness matrix formulation}{chapter.6}% 30
 \BOOKMARK [1][-]{section.6.2}{Stiffness matrix implementation}{chapter.6}% 31
 \BOOKMARK [1][-]{section.6.3}{Mass matrix formulation}{chapter.6}% 32
 \BOOKMARK [1][-]{section.6.4}{Stress and strain recovery}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.5}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.5}{Chapter summary}{chapter.6}% 34
 \BOOKMARK [0][-]{chapter.7}{Extension of shells to composite laminates - revised 1}{}% 35
 \BOOKMARK [1][-]{section.7.1}{Composite constitutive matrix formulation}{chapter.7}% 36
 \BOOKMARK [1][-]{section.7.2}{Composite constitutive matrix implementation}{chapter.7}% 37
 \BOOKMARK [1][-]{section.7.3}{Composite stress recovery implementation}{chapter.7}% 38
 \BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion implementation}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.5}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.7}% 40
+\BOOKMARK [1][-]{section.7.5}{Chapter summary}{chapter.7}% 40
 \BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 41
 \BOOKMARK [1][-]{section.8.1}{Static tests: shell obstacle course}{chapter.8}% 42
 \BOOKMARK [1][-]{section.8.2}{Geometically non-linear tests}{chapter.8}% 43
 \BOOKMARK [1][-]{section.8.3}{Dynamic tests}{chapter.8}% 44
 \BOOKMARK [1][-]{section.8.4}{Quantity recovery tests}{chapter.8}% 45
 \BOOKMARK [1][-]{section.8.5}{Composite tests}{chapter.8}% 46
-\BOOKMARK [1][-]{section.8.6}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.6}{Chapter summary}{chapter.8}% 47
 \BOOKMARK [0][-]{chapter.9}{Applications and consequences of element technologies}{}% 48
 \BOOKMARK [1][-]{section.9.1}{Euler buckling of CHS column}{chapter.9}% 49
 \BOOKMARK [1][-]{section.9.2}{Shear wrinkling of plate}{chapter.9}% 50
-\BOOKMARK [1][-]{section.9.3}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.3}{Structural modelling suggestions and chapter summary}{chapter.9}% 51
 \BOOKMARK [0][-]{chapter.10}{Extension of DSG triangle element technology - REVIEWED 0 !!!!!}{}% 52
 \BOOKMARK [1][-]{section.10.1}{DSGc3 approach}{chapter.10}% 53
 \BOOKMARK [1][-]{section.10.2}{Cell Smoothed DSG approach}{chapter.10}% 54
 \BOOKMARK [1][-]{section.10.3}{Appraisal of alternative DSG technology approaches}{chapter.10}% 55
-\BOOKMARK [1][-]{section.10.4}{Chapter summary - TO DO !!!!!!!!!!!!!!!!}{chapter.10}% 56
+\BOOKMARK [1][-]{section.10.4}{Chapter summary}{chapter.10}% 56
 \BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook - STILL TO DO!!!!!}{}% 57
 \BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 58
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 59
