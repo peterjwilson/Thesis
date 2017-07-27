@@ -17,7 +17,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7}{\ignorespaces Convergence of cylindrical shell problem demonstrating membrane locking \cite {Echter13}\relax }}{15}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Reduced integration of a 5 parameter Quad 4 shell \cite {Bletz16}\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {8}{\ignorespaces Reduced integration of a 5 parameter Quad 4 shell \cite {Bletz16}.}}{16}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {9}{\ignorespaces Assumed shear strain field of the MITC4 element \cite {Bathe86}\relax }}{17}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
@@ -243,10 +243,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {88}{\ignorespaces Computational cost vs \% error of DSG formulations\relax }}{146}{figure.caption.93}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {89}{\ignorespaces Mises truss geometry\relax }}{150}{figure.caption.94}
+\contentsline {figure}{\numberline {89}{\ignorespaces Mises truss geometry\relax }}{151}{figure.caption.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {90}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{154}{figure.caption.95}
+\contentsline {figure}{\numberline {90}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{155}{figure.caption.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {91}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{155}{figure.caption.96}
+\contentsline {figure}{\numberline {91}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{156}{figure.caption.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {92}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{162}{figure.caption.97}
+\contentsline {figure}{\numberline {92}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{163}{figure.caption.97}

@@ -15,12 +15,12 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Shell finite elements - revised 2}
+\chapter{Shell finite elements}
 \label{chap:chapter_2}
 
 \renewcommand{\Thema}{Shell finite elements}
 
-\lettrine[lines=2]{T}{he} employment of shell structures is ubiquitous throughout both nature and the built environment. Eggs, nuts, blood vessels and cell walls are examples of shell designs being the result of structural optimisation via natural evolution over millennia. It is no doubt that man drew inspiration from the optimal natural shell design and realised the efficacy of the shell structure, with the harnessing of these principles culminating in the pre-eminent Roman Pantheon (126).  Throughout time, as the understanding of shell structures increased, so did their prevalence, leading to notable structures such as the Hagia Sophia (537), Notre Dame (1345) and St. Peter's Basilica (1626). Indeed, the efficiency of shell structures lies in their high in-plane (membrane) load carrying capacity in slender low-weight constructions. The membrane action serves to stress all fibres approximately equally in the cross section, realising the full mechanical performance of the structure. Contrasting this, shells are incredibly sensitive to a variety of effects such as imperfections, bending, transverse normal forces and support conditions, leading to significant compromise of the membrane structural performance and possibly manifesting in catastrophic failure. To briefly consider one such sensitivity, bending actions result in a non-uniform stressing of material fibres over the cross section, with the outer fibres stressed significantly more than those closer to the neutral axis. Consequently, the limit of the structure in bending is realised when only the outer-most fibre fails instead of the entire cross section of fibres failing under membrane action. This basic example offers a snapshot of the stellar performance of shells juxtaposed against their sensitivity to a multitude of conditions, earning them the title of the \textit{Prima Donna of structures} \cite{Ram16}.
+\lettrine[lines=2]{T}{he} employment of shell structures is ubiquitous throughout both nature and the built environment. Eggs, nuts, blood vessels and cell walls are examples of shell designs emerging from structural optimisation via natural evolution over millennia. It is no doubt that man drew inspiration from the optimal natural shell design and realised the efficacy of it's structure, with perhaps the emergent congealing of these principles culminating in the Roman Pantheon (126).  Throughout time, as the understanding of shell structures increased, so did their prevalence, leading to notable structures such as the Hagia Sophia (537), Notre Dame (1345) and St. Peter's Basilica (1626). Indeed, the efficiency of shell structures lies in their high in-plane (membrane) load carrying capacity in slender low-weight constructions. The membrane action serves to stress all fibres approximately equally in the cross section, realising the full mechanical performance of the structure. Contrasting this, shells are incredibly sensitive to a variety of effects such as imperfections, bending, transverse normal forces and support conditions, potentially leading to significant compromise of the membrane structural performance and possibly manifesting in catastrophic failure. To briefly consider one such sensitivity, bending actions result in a non-uniform stressing of material fibres over the cross section, with the outer fibres stressed significantly more than those closer to the neutral axis. Consequently, the limit of the structure in bending is realised when only the outer-most fibre fails instead of the entire cross section of fibres failing under membrane action. This elementary example offers a snapshot of the stellar performance of shells juxtaposed against their sensitivity to a multitude of conditions, earning them the title of the \textit{Prima Donna of structures} \cite{Ram16}.
 
 \section{Structural modelling with shells}
 \label{Structural modelling with shells}
@@ -319,7 +319,7 @@ d \Omega
 \label{eqskt9}
 \end{equation}
 
-The internal work equation illustrates the 3 parameter model considers in-plane membrane behaviour as well as the additional bending behaviour related to the second integral. Furthermore, under the condition of homogeneous linear material models the membrane and bending behaviour of the model are uncoupled. Due to the kinematics of the 3 parameter model (directors remain straight and normal, no transverse shear strains), it can correctly resolve analyses as shell thicknesses approach zero. This is in contrast the to 5 parameter model, which exhibits significant shear locking. Despite this, a pure rendition of the 3 parameter model is not commonly seen in practical FEM due to the required $C_1$ continuity at element boundaries (arising from rotations expressed as derivatives of transverse displacement) and the additional complication of effective shear forces on boundaries \cite{BischLitBook04}.
+The internal work equation illustrates the 3 parameter model considers in-plane membrane behaviour as well as the additional bending behaviour related to the second integral. Furthermore, in flat shells with homogeneous linear material models the membrane and bending behaviour of the model are uncoupled. Due to the kinematics of the 3 parameter model (directors remain straight and normal, no transverse shear strains), it can correctly resolve analyses as shell thicknesses approach zero. This is in contrast the to 5 parameter model, which exhibits significant shear locking. Despite this, a pure rendition of the 3 parameter model is not commonly seen in practical FEM due to the required $C_1$ continuity at element boundaries (arising from rotations expressed as derivatives of transverse displacement) and the additional complication of effective shear forces on boundaries \cite{BischLitBook04}.
 
 \subsection{5 parameter model: Reissner-Mindlin shell}
 
@@ -428,11 +428,11 @@ d \Omega
 %\label{eqsrm6}
 %\end{equation}
 
-The 3 integrals of the virtual work equation represent the membrane, bending and shear work components, corresponding to the phenomena this model resolves. Furthermore, all these components are decoupled from each other in flat shells with homogeneous linear material models. The consideration of transverse shear deformations in the kinematics render the model applicable to thick shells where these strains are not insignificant. Incorrectly applying this model to thin shells in FEM yields spurious results due to a phenomena called shear locking (discussed in section \ref{transverse_shear_locking}). Despite this disadvantage, the 5 parameter forms the basis of many shell elements often used in FEM thanks to the lower $C_0$ continuity required at element boundaries.
+The 3 integrals of the virtual work equation represent the membrane, bending and shear work components, corresponding to the phenomena this model resolves. Furthermore, all these components are decoupled from each other in flat shells with homogeneous linear material models. The consideration of transverse shear deformations in the kinematics render the model applicable to thick shells where these strains are not insignificant. Incorrectly applying this model to thin shells in FEM yields spurious results due to a phenomena called shear locking (discussed in section \ref{transverse_shear_locking}). Despite this disadvantage, the 5 parameter model forms the basis of many shell elements often used in FEM thanks to the lower $C_0$ continuity required at element boundaries.
 
 \subsection{7 parameter model}
 
-The previously discussed models all operate under the assumption that the transverse normal strains are zero. The 7 parameter model considers thickness deformation by introducing additional free parameters. Only a brief overview of the 7 parameter model is offered here as shell elements in FEM, the focus of this work, are predominately based off 3 and 5 parameter based formulations. For further details refer Bischoff et al. \cite{BischLitBook04} and Ramm and Wall \cite{RammLitBook04}.
+The previously discussed models all operate under the assumption that the transverse normal strains are zero. The 7 parameter model considers thickness deformation by introducing additional free parameters. Only a brief overview of the 7 parameter model is offered here as shell elements in FEM, the focus of this work, are predominately based off 3 and 5 parameter formulations. For further details refer Bischoff et al. \cite{BischLitBook04} and Ramm and Wall \cite{RammLitBook04}.
 
 Intuitively, one may realise that shell behaviour including thickness change may be described by 6 parameters:  3 mid-surface displacements, 1 thickness change and 2 rotations.  However, thickness locking occurs under this regime due to a mismatch of a linearly varying normal thickness stress $\theta^{33}$ conjugated with a constant thickness strain $\epsilon_{33}$. Thus the 7th parameter is the enhancement of the through thickness strain $\epsilon_{33}$ to a linear field.
 
@@ -477,7 +477,7 @@ The resolving power of the shape functions undoubtedly restricts what continuous
 
 \subsection{Transverse shear locking} \label{transverse_shear_locking}
 
-Transverse shear locking is perhaps the most recognized and problematic locking phenomena amongst the three considered in this work. As it is related to transverse shear strains, transverse shear locking is possible  in the 5 parameter model and impossible for membrane and 3 parameter models. Phenomenologically, transverse shear locking occurs when thin shells incorrectly described by a 5 parameter model are subject to bending situations, with the signature of significantly reduced displacements (ie. 'locked') than expected. By indicating specific material matrices, and removing membrane work for clarity, the internal bending and shear virtual work of the 5 parameter model can be expressed as follows: 
+Transverse shear locking is perhaps the most recognized and problematic locking phenomena amongst the three considered in this work. As it is related to transverse shear strains, transverse shear locking is possible in the 5 parameter model and impossible for membrane and 3 parameter models. Phenomenologically, transverse shear locking occurs when thin shells incorrectly described by 5 parameter models are subject to bending situations, exhibiting the signature of significantly reduced displacements (ie. 'locked') than expected. By indicating specific material matrices, and removing membrane work for clarity, the internal bending and shear virtual work of the 5 parameter model can be expressed as follows: 
 
 
 \begin{equation} 
@@ -488,19 +488,18 @@ Transverse shear locking is perhaps the most recognized and problematic locking 
 0 & 0 & \frac{1-\nu}{2}
 \end{pmatrix}
 \hspace{10mm}
-\mathbf{C}_{bend} = \frac{E t^3}{12(1-\nu^2)} \bar{ \mathbf{C}}
+\mathbf{C}_{bend} = \frac{E h^3}{12(1-\nu^2)} \bar{ \mathbf{C}}
 \hspace{10mm}
-\mathbf{C}_{shear} = \alpha G t \mathbf{I}
+\mathbf{C}_{shear} = \alpha G h \mathbf{I}
 \label{eqlock1}
 \end{equation}
-
 \begin{equation} 
 -( \delta\Pi_{int} - \delta\Pi_{int\ mem} )=
 -(\Pi_{bend} + \Pi_{shear}) =
 \int_\Omega
 \boldsymbol{\kappa}
 :
-\frac{E t^3}{12(1-\nu^2)} \bar{ \mathbf{C}}
+\frac{E h^3}{12(1-\nu^2)} \bar{ \mathbf{C}}
 :
 \delta \boldsymbol{\kappa}\ 
 d \Omega\ 
@@ -508,7 +507,7 @@ d \Omega\
 \int_\Omega
 \boldsymbol{\gamma}
 :
-\alpha G t \mathbf{I}
+\alpha G h \mathbf{I}
 :
 \delta \boldsymbol{\gamma}\ 
 d \Omega
@@ -517,12 +516,12 @@ d \Omega
 
 
 
-As phenomenologically described, transverse shear locking comes into effect with thin shells. One can see that as $t \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto t^3$) will be far less than the shear internal work ($\Pi_{shear} \propto t$), leading to an incorrect allocation of internal energy. Since the bending internal work is associated with bending deflections, these resulting deflections will be less than they should be and the element will appear locked. The over-representation of shear strains also leads to strong shear force oscillations - another classic symptom of transverse shear locking.
+As phenomenologically described, transverse shear locking comes into effect with thin shells. One can see that as thickness $h \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto h^3$) will be far less than the shear internal work ($\Pi_{shear} \propto t$), leading to an incorrect allocation of internal energy. Since the bending internal work is associated with bending deflections, these resulting deflections will be less than they should be and the element will appear locked. The over-representation of shear strains also leads to strong shear force oscillations - another classic symptom of transverse shear locking.
 
 \subsection{Membrane locking}
 \label{membrane_locking_theory}
 
-Membrane locking is the inability to undergo inextensional bending deformations without parasitic membrane contributions. Physically, a primary symptom of this is significantly reduced deformations under pure bending action. Element curvature is a necessary condition for membrane locking, while increasing slenderness exacerbates the problem. Similar to transverse shear locking, as $t \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto t^3$) reduces at a far greater rate than the membrane internal work ($\Pi_{mem} \propto t$) leading to artificial membrane contributions. Thus, membrane locking is possible in 3, 5, and 7 parameter models. The following figure illustrates the increasing severity of membrane locking as slenderness increases for 3 and 5 parameter NURBS based shell models.
+Membrane locking is the inability to undergo inextensional bending deformations without parasitic membrane contributions. Physically, a primary symptom of this is significantly reduced deformations under pure bending action. Element curvature is a necessary condition for membrane locking, while increasing slenderness exacerbates the problem. Similar to transverse shear locking, as thickness $h \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto h^3$) reduces at a far greater rate than the membrane internal work ($\Pi_{mem} \propto h$) leading to artificial membrane energy contributions. Thus, membrane locking is possible in 3, 5, and 7 parameter models. The following figure illustrates the increasing severity of membrane locking as slenderness increases for 3 and 5 parameter NURBS based shell models.
 
 \begin{figure}[H]
 	\centering
@@ -532,7 +531,7 @@ Membrane locking is the inability to undergo inextensional bending deformations 
 	\label{ansexample}
 \end{figure}
 
-Despite the bleak results of the above problem, especially in high slenderness range, Bischoff et al. \cite{BischLitBook04} suggest that the adverse effects of membrane locking are mild when using bilinear shape functions, and completely ignored in linear triangle elements (where curvature is always zero). These lower order finite elements form the bulk of what used in commercial FEM codes and are the focus of this work.
+Despite the bleak results of the above problem, especially in high slenderness range, Bischoff et al. \cite{BischLitBook04} suggest that the adverse effects of membrane locking are mild when using bilinear shape functions, and completely ignored in linear triangle elements (where curvature is always zero). These lower order finite elements form the bulk of those employed in commercial FEM codes and are the focus of this work.
 
 \subsection{Curvature thickness locking}
 
@@ -541,7 +540,7 @@ Curvature locking is another locking consideration that only occurs in curved st
 \section{Shell finite element technologies}
 \label{FE_tech}
 
-The previous discussion of locking phenomena associated with pure displacement formulations of shell finite elements has given rise to a number of shell finite element technologies to improve element performance. Broadly speaking, these mitigation approaches fall into two categories: reduced integration and B-Bar ($\bar{\mathbf{B}}$) approaches which modify the strain displacement matrix $\mathbf{B}$. 
+The previous discussion of deleterious locking phenomena associated with pure displacement formulations of shell finite elements has given rise to a number of shell finite element technologies to improve element performance. Broadly speaking, these mitigation approaches fall into two categories: reduced integration and B-Bar ($\bar{\mathbf{B}}$) techniques which modify the strain displacement matrix $\mathbf{B}$. 
 
 \subsection{Reduced integration}
 
@@ -551,10 +550,7 @@ One of the simplest and oldest methods of curbing locking is reduced integration
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=14cm]{images/shearlockingredint.png}
-	\caption{Reduced integration of a 5 parameter Quad 4 shell \cite{Bletz16}}
-	\begin{flushleft}
-	{\scriptsize \textit{F = Full integration, R = Reduced integration, K = Kirchhoff (3 parameter model) solution}}
-\end{flushleft}	
+	\caption[Reduced integration of a 5 parameter Quad 4 shell \cite{Bletz16}.]{Reduced integration of a 5 parameter Quad 4 shell \cite{Bletz16}.\\ \textit{F = Full integration, R = Reduced integration, K = Kirchhoff (3 parameter model) solution}}
 	\label{shearlockingredint}
 \end{figure}
 
@@ -562,7 +558,7 @@ It's clear that the normal fully integrated element exhibits severe locking, whi
 
 \subsection{Assumed Natural Strains}
 
-The Assumed Natural Strain (ANS) approach forms a main umbrella of B-Bar methods, which alters the strain-displacement matrix $\mathbf{B}$ to mitigate locking. The ANS approach \cite{MACNEAL1982} works by computing the strain values at particular co-location points less susceptible to parasitic strains in the element (normally chosen as mid-edge and/or centre points) and then interpolating these discrete values through the element to define a new "assumed" shear strain field. As a general approach, many subsequent technologies fall under the ANS umbrella.
+The Assumed Natural Strain (ANS) approach forms the main umbrella of B-Bar methods, which alters the strain-displacement matrix $\mathbf{B}$ to mitigate locking. The ANS approach \cite{MACNEAL1982} works by computing the strain values at particular co-location points less susceptible to parasitic strains in the element (normally chosen as mid-edge and/or centre points) and then interpolating these discrete values through the element to define a new "assumed" shear strain field. As a general approach, many subsequent technologies fall under the ANS umbrella.
 
 \subsection{Mixed Interpolation of Tensorial Components}
 
@@ -580,7 +576,7 @@ The performance of the MITC formulation clearly depends on the location of the s
 
 \subsection{Assumed Natural Deviatoric Strains}
 
-The ANS approach was extended into Free Formulation (FF) \cite{Bergan84}, where the element stiffness matrix is the sum of a basic and higher order stiffness, by Militello and Felippa \cite{FELIPPA1990} under the name of the Assumed Natural Deviatoric Strains (ANDES) formulation. An advantage that the ANDES formulation inherits from the FF is that it untethers the derivation of element stiffness from the principle of minimum potential energy, the function continuity requirements of which often result in elements that "tend to be too stiff" \cite{Bergan84}. The ANDES basic stiffness ensures consistency of the element and arrises from the basic strain field comprising constant strain states and those associated with rigid body motion. Complementing this, the higher order stiffness is responsible for stability and accuracy \cite{Felippa2003} based on a enhanced strain field where the element enhancements are realised. The FF framework requires this potentially non-conforming higher order field be energy orthogonal to the basic field, which the ANDES formulation fulfils with a deviatoric higher order strain field \cite{felippa2002fitting}.  The ANDES formulation has proven capable of alleviating membrane and transverse shear locking \cite{Mostafa11}.
+The ANS approach was extended into Free Formulation (FF) \cite{Bergan84}, where the element stiffness matrix is the sum of a basic and higher order stiffness, by Militello and Felippa \cite{FELIPPA1990} under the name of the Assumed Natural Deviatoric Strains (ANDES) formulation. An advantage that the ANDES formulation inherits from the FF is that it untethers the derivation of element stiffnesses from the principle of minimum potential energy, the function continuity requirements of which often result in elements that "tend to be too stiff" \cite{Bergan84}. The ANDES basic stiffness ensures consistency of the element and arrises from the basic strain field comprising constant strain states and those associated with rigid body motion. Complementing this, the higher order stiffness is responsible for stability and accuracy \cite{Felippa2003} based on a enhanced strain field where the element enhancements are realised. The FF framework requires this potentially non-conforming higher order field be energy orthogonal to the basic field, which the ANDES formulation fulfils with a deviatoric higher order strain field \cite{felippa2002fitting}.  The ANDES formulation has proven capable of alleviating membrane and transverse shear locking \cite{Mostafa11}.
 
 \subsection{Discrete Shear Gap}
 \label{DSGbackground}
@@ -629,7 +625,7 @@ The Enhanced Assumed Strain (EAS) approach \cite{Simo1990} utilises the three fi
 
 \subsection{Drilling degrees of freedom} \label{drilling_DOF_section}
 
-Although drilling degrees of freedom (DOFs) don't counter locking problems, it is a commonly employed finite element technique. The common analysis of structural connections and custom steelwork are instances where shell elements will intersect with each other at arbitrary orientations. The discussion of 3 and 5 parameter shell models confirmed the nodal DOFs to be 3 translation and 2 rotational components:
+Although drilling degrees of freedom (DOFs) don't counter locking problems, it is a commonly employed finite element technique. The common analysis of structural connections and custom steelwork are instances where shell elements intersect each other at arbitrary orientations. The discussion of 3 and 5 parameter shell models confirmed the nodal DOFs to be 3 translation and 2 rotational components:
 
 \begin{equation} 
 \mathbf{v}_i^T = \begin{pmatrix}
@@ -648,7 +644,7 @@ It can be seen that the shell formulations don't require a rotational DOF around
 	\label{shellModels}
 \end{figure}
 
-The figure above illustrates that the real twisting DOF associated with $A_2^{(2)}$ mates with the drilling DOF associated with $D^{(1)}$, which has no theoretically based stiffness value according to the shell formulations. In the current arrangement the connection will clearly be modelled too flexibly.  A remedy for this is the addition of an artificial drilling DOF stiffness to the element, however the magnitude of such a fictitious torsional spring has no decisive theoretical foundation. Intuitively, it should be done on an element by element basis and should vary with the characteristic size and stiffness of the element, as opposed to a global constant drilling stiffness. Among others available, one common technique is to introduce a scaling factor (in the strain-displacement matrix or after the element stiffness matrix is constructed) which takes a fraction of the element stiffness and assigns it to the drilling DOFs. 
+The figure above illustrates that the real twisting DOF associated with $A_2^{(2)}$ mates with the drilling DOF associated with $D^{(1)}$, which has no theoretically based stiffness value according to the shell formulations. In the current arrangement the connection will clearly be modelled too flexibly.  A remedy for this is the addition of an artificial drilling DOF stiffness to the element, however the magnitude of such a fictitious torsional spring has no decisive theoretical foundation. Intuitively, it should be done on an element by element basis and should vary with the characteristic size and stiffness of the element, as opposed to a global constant drilling stiffness. Among others available, one common technique is to introduce a scaling factor (in the strain-displacement matrix or after the element stiffness matrix is constructed) which takes a fraction of the characteristic element stiffness and assigns it to the drilling DOFs. 
 
 \subsection{Summary of selected element technologies}
 

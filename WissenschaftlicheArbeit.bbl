@@ -1430,6 +1430,40 @@
     \field{year}{2004}
   \endentry
 
+  \entry{rolfes1997improved}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RR}{%
+         family={Rolfes},
+         familyi={R\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+      {{hash=RK}{%
+         family={Rohwer},
+         familyi={R\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{RRRK1}
+    \strng{fullhash}{RRRK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{1}
+    \field{pages}{51\bibrangedash 60}
+    \field{title}{Improved transverse shear stresses in composite finite
+  elements based on first order shear deformation theory}
+    \field{volume}{40}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1997}
+  \endentry
+
   \entry{Simo1990}{article}{}
     \name{author}{2}{}{%
       {{hash=SJC}{%

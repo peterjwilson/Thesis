@@ -6,30 +6,43 @@
 %%%%                                              %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Conclusions and Outlook - STILL TO DO!!!!!}
+\chapter{Conclusions and outlook}
 \label{chap:conclusions}
 \renewcommand{\Thema}{Conclusion}
 
-This work has considered the implementation of a thin quadrilateral shell element for the multiphysics code KRATOS. Section 1 covered the shell formulation, which is split into membrane and bending components. Following this, the element's implementation in KRATOS was presented, which covered key methods employed and the general workflow to calculate the element stiffness matrix. The element considered was subjected to the well known shell obstacle course in Section 3. Although the element correctly converged to the reference solution for the Scordelis-Lo roof and Pinched Cylinder problem, the Pinched Hemisphere benchmark revealed element deficiencies. These deficiencies were identified, with informed direction suggested  for future work associated with improving this element. 
+\lettrine[lines=2]{I}{n} this thesis, two advanced shell finite elements with broad functionality have been successfully implemented in the multi-physics code Kratos. By establishing a solid theoretical background in chapters 2 - 4, the correct implementation of the elements in chapters 5 - 7 produced accurate results verified in chapter 8. The range of  capabilities verified for each element include:
+\begin{itemize}
+	\item isotropic and orthotropic laminate linear elastic materials,
+	\item geometrically linear and non-linear analysis,
+	\item static and dynamic analysis, and,
+	\item recovery of stresses, strains, integrated shell forces, Von Mises equivalent stress and Tsai-Wu reserve factor.
+\end{itemize}
 
-\section{Future work}
-asdfasdf
-\subsection{Studies and investigations}
+With this stage set, the structural modelling of shell finite elements was discussed in chapter 9 by focussing on the interplay between structural behaviour, base formulations, enhancing technologies and formulation-mesh-dependency. Through the detailed analysis of two example problems, it was appreciated that the first stop on the way to correct structural modelling of shell finite elements is to consider whether Kirchhoff-Love or Reissner-Mindlin kinematics dominate the problem at hand and select shell base formulations accordingly. Although element technologies can shift an ill-suited (for the problem at hand) element base formulation towards the "correct" solution space, their movement range is somewhat limited compared to the base formulations themselves. Indeed, the idiom \textit{"A leopard can't change it's spots"} rings true here with regard to base formulations, or, at least element enhancements can only change a few, not all, spots. 
+
+Nonetheless, following base formulation selection, correct structural modelling also relies upon element enhancement technology choice and geometry (triangular or quadrilateral). Three-parameter  based formulations are impervious to transverse shear locking, while five-parameter formulations essentially require some shear locking mitigation technology (DSG, MITC, etc...) to produce reasonable results. The interaction between membrane locking, linear triangle or quadrilateral element geometry, local resolving power associated with linear triangle and quadrilateral elements and the mesh was discussed, which ultimately culminates in a trade-off situation, the optimal result being dependent on the particular problem considered. Furthermore, it was demonstrated that one must not only found the selection of base formulations and element technologies on the undeformed configuration, but that the deformed state must be considered too. 
+
+\section{Future opportunities}
+
+The successfully validated advanced shell elements and discussion of their structural modelling naturally provides a solid foundation from which others may pursue future research, with the Kratos programming environment an ideal sphere in which to continue development. 
+
+The following element development opportunities have been identified as possible functionality extensions of the implemented elements:
+\begin{itemize}
+	\item Generalize DSGc3 formulation into arbitrary Cartesian triangles.
+	\item Build upon the author's initial work of a Kratos linear pre-buckling solver.
+	\item Improve transverse shear stress modelling for composites as per Reference \cite{rolfes1997improved}.
+	\item Consider Von Karman non-linear strains for very thin shells.
+	\item Extend the DSG element into XFEM as per Reference \cite{DSG_XFEM_2015}.
+	\item Extend current shell capability to material non-linearities.
+\end{itemize}
+
+The discussion of shell finite element structural modelling may also be extended in various directions, for example:
 \begin{itemize}
 	\item Sensitivity of element enhancement differences to mesh refinement.
-	\item Establishment of approximate performance vs. accuracy Pareto front for element formulations and enhancements across different typical scenarios.
+	\item Establishment of approximate performance vs. accuracy Pareto front for element formulations and enhancements across different typical practical scenarios.
 	\item Characterisation of various element enhancement responses to commonly encountered FEM singularities.
 \end{itemize}
 
+\section{Concluding remark}
 
-\subsection{Development opportunities}
-\begin{itemize}
-	\item Generalize DSGc3 formulation into arbitrary Cartesian triangles
-	\item Build upon the author's initial work of a Kratos linear pre-buckling solver
-	\item Improve transverse shear stress modelling for composites
-	Look at paper: Improved Transverse Shear Stresses in Composite Finite Elements based on First Order Shear Deformation Theory. Or, develop separate element with higher order resolving theory
-	\item Consider von karman non-linear strains for very thin shells
-	\item Extend the DSG element into XFEM as per \cite{DSG_XFEM_2015}
-	\item Extend current shell capability to material non-linearities
-\end{itemize}
-
+As the use of FEA proliferates throughout academia and industry so does the opportunity to perform ill-conceived shell finite element analyses. This potential risk is only exacerbated by the prevalence of commercial "black box" codes, the ease with which ostensibly correct results can be obtained and the shallow shell theory coverage in typical bachelor courses. Given the continual pushing of the engineering envelopment, the FEM does not seem to be disappearing any-time soon, thus this risk is better addressed than avoided. Advanced shell finite elements with enhancing element technologies, such as those implemented in this thesis, have proven themselves robust enough for general purpose analysis and invariably help reduce the risk of incorrect analysis. However, this only forms half of the solution. Correct understanding of shell theories and the shell finite elements themselves gives rise to the correct structural modelling of shell finite elements which, in conjunction with robust advanced shell elements, culminates in confident and accurate analyses.

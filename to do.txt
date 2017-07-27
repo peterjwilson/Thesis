@@ -1,7 +1,3 @@
-Klaus's presentation
-25 July
-11:30am
-
 Problems:
 	- Composite only works when set OMP_NUM_THREADS=1
 	- quad gauss point results are crap for the existing element too!
@@ -12,12 +8,11 @@ Hiwi to do:
 	
 	
 Thesis To Do:	
-	- Add general overview of each DSG and ANDES formulation in their chapters
-	- Add felippa ifem error diagram to ch2 and extend it
 	
 	
 Report:
 	- Continue review
+	- Make non-linear section flow better
 	
 	- (Up next)
 	- Transverse shear stress results discussion!

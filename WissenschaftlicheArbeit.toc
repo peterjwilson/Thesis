@@ -9,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Shell finite elements - revised 2}{4}{chapter.2}
+\contentsline {chapter}{\numberline {2}Shell finite elements}{4}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Structural modelling with shells}{4}{section.2.1}
 \defcounter {refsection}{0}\relax 
@@ -37,11 +37,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}Assumed Natural Strains}{16}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Mixed Interpolation of Tensorial Components}{17}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}Mixed Interpolation of Tensorial Components}{16}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.4}Assumed Natural Deviatoric Strains}{17}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.5}Discrete Shear Gap}{18}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.5}Discrete Shear Gap}{17}{subsection.2.4.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.6}Discrete Kirchhoff Theory}{18}{subsection.2.4.6}
 \defcounter {refsection}{0}\relax 
@@ -259,72 +259,70 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusions and Outlook - STILL TO DO!!!!!}{148}{chapter.11}
+\contentsline {chapter}{\numberline {11}Conclusions and outlook}{148}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Future work}{148}{section.11.1}
+\contentsline {section}{\numberline {11.1}Future opportunities}{149}{section.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.1}Studies and investigations}{148}{subsection.11.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.2}Development opportunities}{148}{subsection.11.1.2}
+\contentsline {section}{\numberline {11.2}Concluding remark}{149}{section.11.2}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{150}{Appendix.a.A}
+\contentsline {chapter}{Appendix \numberline {A}Analytical stability analysis of Mises truss}{151}{Appendix.a.A}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {B}DSG technology derivation}{154}{Appendix.a.B}
+\contentsline {chapter}{Appendix \numberline {B}DSG technology derivation}{155}{Appendix.a.B}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {C}Basic-DKQ formulation}{159}{Appendix.a.C}
+\contentsline {chapter}{Appendix \numberline {C}Basic-DKQ formulation}{160}{Appendix.a.C}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {D}Basic-T3 formulation}{161}{Appendix.a.D}
+\contentsline {chapter}{Appendix \numberline {D}Basic-T3 formulation}{162}{Appendix.a.D}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {E}Analytical membrane analysis of dome}{162}{Appendix.a.E}
+\contentsline {chapter}{Appendix \numberline {E}Analytical membrane analysis of dome}{163}{Appendix.a.E}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {F}Derivation of Euler buckling load}{164}{Appendix.a.F}
+\contentsline {chapter}{Appendix \numberline {F}Derivation of Euler buckling load}{165}{Appendix.a.F}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {G}DSG element class in Kratos}{166}{Appendix.a.G}
+\contentsline {chapter}{Appendix \numberline {G}DSG element class in Kratos}{167}{Appendix.a.G}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.1}\texttt {ShellThickElement3D3N} methods}{166}{section.a.G.1}
+\contentsline {section}{\numberline {G.1}\texttt {ShellThickElement3D3N} methods}{167}{section.a.G.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.1.1}Public methods}{166}{subsection.a.G.1.1}
+\contentsline {subsection}{\numberline {G.1.1}Public methods}{167}{subsection.a.G.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.1.2}Private methods}{168}{subsection.a.G.1.2}
+\contentsline {subsection}{\numberline {G.1.2}Private methods}{169}{subsection.a.G.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {G.2}\texttt {ShellThickElement3D3N} member variables}{169}{section.a.G.2}
+\contentsline {section}{\numberline {G.2}\texttt {ShellThickElement3D3N} member variables}{170}{section.a.G.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.2.1}Private}{169}{subsection.a.G.2.1}
+\contentsline {subsection}{\numberline {G.2.1}Private}{170}{subsection.a.G.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {G.2.2}Private, class \texttt {CalculationData} member variables}{169}{subsection.a.G.2.2}
+\contentsline {subsection}{\numberline {G.2.2}Private, class \texttt {CalculationData} member variables}{170}{subsection.a.G.2.2}
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendix \numberline {H}ANDES-DKQ class in Kratos}{172}{Appendix.a.H}
+\contentsline {chapter}{Appendix \numberline {H}ANDES-DKQ class in Kratos}{173}{Appendix.a.H}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.1}\texttt {ShellThinElement3D4N} methods}{172}{section.a.H.1}
+\contentsline {section}{\numberline {H.1}\texttt {ShellThinElement3D4N} methods}{173}{section.a.H.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.1.1}Public methods}{172}{subsection.a.H.1.1}
+\contentsline {subsection}{\numberline {H.1.1}Public methods}{173}{subsection.a.H.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.1.2}Private methods}{172}{subsection.a.H.1.2}
+\contentsline {subsection}{\numberline {H.1.2}Private methods}{173}{subsection.a.H.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {H.2}\texttt {ShellThinElement3D4N} member variables}{173}{section.a.H.2}
+\contentsline {section}{\numberline {H.2}\texttt {ShellThinElement3D4N} member variables}{174}{section.a.H.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.2.1}Public}{173}{subsection.a.H.2.1}
+\contentsline {subsection}{\numberline {H.2.1}Public}{174}{subsection.a.H.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.2.2}Private}{173}{subsection.a.H.2.2}
+\contentsline {subsection}{\numberline {H.2.2}Private}{174}{subsection.a.H.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.2.3}Public, class \texttt {JacobianOperator} methods}{174}{subsection.a.H.2.3}
+\contentsline {subsection}{\numberline {H.2.3}Public, class \texttt {JacobianOperator} methods}{175}{subsection.a.H.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.2.4}Public, class \texttt {JacobianOperator} member variables}{174}{subsection.a.H.2.4}
+\contentsline {subsection}{\numberline {H.2.4}Public, class \texttt {JacobianOperator} member variables}{175}{subsection.a.H.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {H.2.5}Private, class \texttt {CalculationData} member variables}{174}{subsection.a.H.2.5}
+\contentsline {subsection}{\numberline {H.2.5}Private, class \texttt {CalculationData} member variables}{175}{subsection.a.H.2.5}

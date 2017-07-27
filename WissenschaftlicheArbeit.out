@@ -1,5 +1,5 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Shell finite elements - revised 2}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Shell finite elements}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Structural modelling with shells}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Shell models}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Locking in shell finite elements}{chapter.2}% 5
@@ -54,17 +54,18 @@
 \BOOKMARK [1][-]{section.10.2}{Cell Smoothed DSG approach}{chapter.10}% 54
 \BOOKMARK [1][-]{section.10.3}{Appraisal of alternative DSG technology approaches}{chapter.10}% 55
 \BOOKMARK [1][-]{section.10.4}{Chapter summary}{chapter.10}% 56
-\BOOKMARK [0][-]{chapter.11}{Conclusions and Outlook - STILL TO DO!!!!!}{}% 57
-\BOOKMARK [1][-]{section.11.1}{Future work}{chapter.11}% 58
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 59
-\BOOKMARK [0][-]{Appendix.a.B}{Appendix DSG technology derivation}{}% 60
-\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-DKQ formulation}{}% 61
-\BOOKMARK [0][-]{Appendix.a.D}{Appendix Basic-T3 formulation}{}% 62
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical membrane analysis of dome}{}% 63
-\BOOKMARK [0][-]{Appendix.a.F}{Appendix Derivation of Euler buckling load}{}% 64
-\BOOKMARK [0][-]{Appendix.a.G}{Appendix DSG element class in Kratos}{}% 65
-\BOOKMARK [1][-]{section.a.G.1}{ShellThickElement3D3N methods}{Appendix.a.G}% 66
-\BOOKMARK [1][-]{section.a.G.2}{ShellThickElement3D3N member variables}{Appendix.a.G}% 67
-\BOOKMARK [0][-]{Appendix.a.H}{Appendix ANDES-DKQ class in Kratos}{}% 68
-\BOOKMARK [1][-]{section.a.H.1}{ShellThinElement3D4N methods}{Appendix.a.H}% 69
-\BOOKMARK [1][-]{section.a.H.2}{ShellThinElement3D4N member variables}{Appendix.a.H}% 70
+\BOOKMARK [0][-]{chapter.11}{Conclusions and outlook}{}% 57
+\BOOKMARK [1][-]{section.11.1}{Future opportunities}{chapter.11}% 58
+\BOOKMARK [1][-]{section.11.2}{Concluding remark}{chapter.11}% 59
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 60
+\BOOKMARK [0][-]{Appendix.a.B}{Appendix DSG technology derivation}{}% 61
+\BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-DKQ formulation}{}% 62
+\BOOKMARK [0][-]{Appendix.a.D}{Appendix Basic-T3 formulation}{}% 63
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical membrane analysis of dome}{}% 64
+\BOOKMARK [0][-]{Appendix.a.F}{Appendix Derivation of Euler buckling load}{}% 65
+\BOOKMARK [0][-]{Appendix.a.G}{Appendix DSG element class in Kratos}{}% 66
+\BOOKMARK [1][-]{section.a.G.1}{ShellThickElement3D3N methods}{Appendix.a.G}% 67
+\BOOKMARK [1][-]{section.a.G.2}{ShellThickElement3D3N member variables}{Appendix.a.G}% 68
+\BOOKMARK [0][-]{Appendix.a.H}{Appendix ANDES-DKQ class in Kratos}{}% 69
+\BOOKMARK [1][-]{section.a.H.1}{ShellThinElement3D4N methods}{Appendix.a.H}% 70
+\BOOKMARK [1][-]{section.a.H.2}{ShellThinElement3D4N member variables}{Appendix.a.H}% 71

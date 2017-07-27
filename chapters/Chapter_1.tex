@@ -17,15 +17,28 @@
 
 \renewcommand{\Thema}{Introduction}
 
-\lettrine[lines=2]{T}{he} increasing use of the Finite Element Method (FEM) in both academia and the industry is driven by a myriad of competing external pressures such as greater strength vs. leaner designs and quicker analysis yielding increased accuracy. Many engineering scenarios previously analysed with classical hand calculations are now finalized or replaced with the use of Finite Element Analysis (FEA), or, indeed, the aforementioned pressures drive designs into new realms that fall outside the purview of hand calculations entirely. Detailed analysis of conventional structural steelwork and innovative design of unconventional lightweight shell structures are but two examples of the widespread embrace of FEA, both of which commonly employ shell finite elements to accurately resolve structural behaviour. Given the availability of "black box" commercial FEM codes and the ease with which ostensibly convincing shell models can be created, a general lack of shell theory knowledge manifests a void subsequently filled with questionable results. Conversely, shell theory knowledge allows one to appreciate both the critical behaviour of the structure and also realise the limitations of various shell finite elements, the reconciliation of these two items culminating in confident, accurate analyses.
+\lettrine[lines=2]{T}{he} increasing use of the Finite Element Method (FEM) in both academia and the industry is driven by a myriad of competing external pressures such as greater strength vs. leaner designs and quicker analysis yielding increased accuracy. Many engineering scenarios previously analysed with classical hand calculations are now finalized or replaced with the use of Finite Element Analysis (FEA), or, indeed, the aforementioned pressures drive designs into new realms that fall outside the purview of hand calculations entirely. Detailed analysis of conventional structural steelwork and innovative design of unconventional lightweight shell structures are but two examples of the widespread embrace of FEA, both of which commonly employ shell finite elements to accurately resolve structural behaviour. Given the availability of "black box" commercial FEM codes and the ease with which ostensibly convincing shell models can be created, a general lack of shell theory knowledge manifests a void subsequently filled with questionable results. Conversely, shell theory knowledge allows one to appreciate both the critical behaviour of the structure and also realise the limitations of various shell finite elements, the reconciliation of these two items in conjunction with advanced robust shell finite elements culminates in confident and accurate analyses.
 
-The motivation of this work is to shed light on the structural modelling of shell finite elements by examining their base formulations and enhancing technologies. Implementing two advanced shell elements, a 3-parameter shell and a 5-parameter shell, suitable for isotropic and orthotropic laminate materials in the multi-physics code Kratos builds the platform from which the structural modelling of shell finite elements can be examined from. 
+The objective of this work is two-fold:
+\begin{enumerate}
+	\item Implement two advanced shell finite elements in the multi-physics code Kratos with the following functionality:
+	\begin{itemize}
+		\item isotropic and orthotropic laminate linear elastic materials,
+		\item geometrically linear and non-linear analysis,
+		\item static and dynamic analysis, and,
+		\item generous quantity recovery options.\\
+	\end{itemize}
 
+	\item Illuminate the structural modelling of advanced shell finite elements by examining the interaction between structural behaviour, base formulations, enhancing technologies and formulation-mesh-dependency.
+\end{enumerate}
+
+
+\newpage
 This thesis can be divided into three parts:
 \begin{itemize}
 	\item \textbf{Part 1: Background theory}
 	
-	Chapters 2 - 4 cover the relevant theory pertinent not only to the implementation of the shells in Kratos, but also to the theoretical understanding necessary for an informed discussion of the thesis' motivation.
+	Chapters 2 - 4 cover the relevant theory pertinent not only to the implementation of the shells in Kratos, but also to the theoretical understanding necessary for an informed discussion of shell structural modelling.
 	\begin{itemize}
 		\item Chapter 2 provides an overview of common mathematical shell models and their associated assumptions and limitations. Artificial locking effects that arise from the translation of these mathematical models into low order finite elements are discussed, as well as various element technologies proposed as remedies. From this, the base formulations and enhancement technologies of the Kratos elements to be implemented are chosen.
 		\item Chapter 3 establishes composite material basics and common composite nomenclature. The internal work of a 5-parameter orthotropic laminate shell is developed, leading to expressions for the integrated laminate constitutive matrix and integrated force resultants. Laminae stress and strain recovery are subsequently covered, followed by the Tsai-Wu failure criterion.
@@ -39,10 +52,10 @@ This thesis can be divided into three parts:
 	\begin{itemize}
 		\item Chapter 5 walks through the DSG linear triangle shell element formulation and implementation in Kratos. The stiffness matrix formulation and implementation, lumped and consistent mass matrix details and stress and strain recovery are covered.
 		\item Chapter 6 goes through the ANDES-DKQ linear quadrilateral shell element formulation and implementation in Kratos, surveying the same points as chapter 5.
-		\item Chapter 7 extends both elements from isotropic materials to orthotropic composite laminates by covering the relevant constitutive matrix, stress and strain recovery and Tsai-Wu failure criterion details.
+		\item Chapter 7 extends both elements from isotropic materials to orthotropic composite laminates by covering the relevant constitutive matrices, stress and strain recovery and Tsai-Wu failure criterion details.
 		\item Chapter 8 demonstrates the correct implementation and accuracy of the elements with validation tests spanning linear statics, non-linear statics, linear dynamics and non-linear dynamics across isotropic and orthotropic composite materials. Recovery of stresses, strains, integrated forces, Von Mises stresses and the composite Tsai-Wu reserve index are also validated.
 	\end{itemize}
-
+	\newpage
 	\item \textbf{Part 3: Finite element structural modelling}
 	
 	Chapters 9 and 10 examine the structural modelling of finite shell elements, interrogating the interplay between structural behaviour, base formulations, enhancing technologies and formulation-mesh-dependency.
@@ -55,7 +68,7 @@ This thesis can be divided into three parts:
 
 The programming work associated with this thesis was completed in Kratos (links below), a multi-physics code with a plethora of individual applications including Structural Mechanics, Fluid Dynamics, Fluid Structure Interaction, Discrete Element Modelling and Shape Optimization, many of which can be combined seamlessly into multi-disciplinary analyses. Emerging from the International Center for Numerical Methods in Engineering (CIMNE) in Barcelona and co-developed by the Technical University of Munich (TUM), Kratos's applications are primarily written in C++ (the primary language of this work), while Python is also utilised for efficient communication between applications and with the user.
 
-\vspace*{20mm}
+\vspace*{10mm}
 
 \begin{figure}[H]
 	\centering
