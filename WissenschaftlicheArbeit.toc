@@ -57,7 +57,7 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Composite shells - revised 1}{23}{chapter.3}
+\contentsline {chapter}{\numberline {3}Composite shells}{23}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Composite material basics}{24}{section.3.1}
 \defcounter {refsection}{0}\relax 
@@ -81,23 +81,23 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Non-linear analysis background - revised 1}{39}{chapter.4}
+\contentsline {chapter}{\numberline {4}Non-linear analysis background}{39}{chapter.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Response diagrams}{39}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Stability criterion}{41}{section.4.2}
+\contentsline {section}{\numberline {4.2}Critical points and stability criterion}{41}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Linear Prebuckling analysis}{42}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Stability analysis example}{43}{section.4.4}
+\contentsline {section}{\numberline {4.4}Non-linear analysis example: Mises Truss stability analysis}{44}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Co-rotational transformation approach - REVIEWED 0}{47}{section.4.5}
+\contentsline {section}{\numberline {4.5}Co-rotational transformation approach}{47}{section.4.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.1}General overview}{47}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}EICR formulation overview - REVIEWED 0 !!!!!}{48}{section.4.6}
+\contentsline {section}{\numberline {4.6}EICR formulation overview}{48}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}EICR kinematics}{48}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.1}EICR kinematics}{49}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.2}EICR internal forces}{50}{subsection.4.6.2}
 \defcounter {refsection}{0}\relax 
@@ -107,7 +107,7 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}DSG triangle shell element}{55}{chapter.5}
+\contentsline {chapter}{\numberline {5}DSG linear triangle shell element}{55}{chapter.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Stiffness matrix formulation}{55}{section.5.1}
 \defcounter {refsection}{0}\relax 
@@ -127,21 +127,21 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}ANDES-DKQ quadrilateral shell element}{67}{chapter.6}
+\contentsline {chapter}{\numberline {6}ANDES-DKQ linear quadrilateral shell element}{67}{chapter.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Stiffness matrix formulation}{67}{section.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1.1}ANDES membrane formulation}{67}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}DKQ bending formulation}{75}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.2}DKQ bending formulation}{76}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.3}Combined formulation}{78}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.3}Combined formulation}{79}{subsection.6.1.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Stiffness matrix implementation}{79}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Mass matrix formulation}{82}{section.6.3}
+\contentsline {section}{\numberline {6.3}Mass matrix formulation and implementation}{81}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Lumped mass matrix}{82}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Lumped mass matrix}{81}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.2}Consistent mass matrix}{82}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
@@ -155,15 +155,15 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Extension of shells to composite laminates - revised 1}{86}{chapter.7}
+\contentsline {chapter}{\numberline {7}Extension of isotropic shells to composite laminates}{86}{chapter.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.1}Composite constitutive matrix formulation}{86}{section.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.2}Composite constitutive matrix implementation}{87}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Composite stress recovery implementation}{89}{section.7.3}
+\contentsline {section}{\numberline {7.3}Composite stress recovery}{89}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Tsai-Wu failure criterion implementation}{90}{section.7.4}
+\contentsline {section}{\numberline {7.4}Tsai-Wu failure criterion}{90}{section.7.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.5}Chapter summary}{91}{section.7.5}
 \defcounter {refsection}{0}\relax 
@@ -171,7 +171,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Validation of elements}{92}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Static tests: shell obstacle course}{92}{section.8.1}
+\contentsline {section}{\numberline {8.1}Linear static tests: shell obstacle course}{92}{section.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1.1}Scordelis-Lo roof}{93}{subsection.8.1.1}
 \defcounter {refsection}{0}\relax 
@@ -179,17 +179,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.1.3}Pinched hemisphere}{95}{subsection.8.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Geometically non-linear tests}{96}{section.8.2}
+\contentsline {section}{\numberline {8.2}Geometrically non-linear static tests}{96}{section.8.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.2.1}Hinged cylindrical roof}{96}{subsection.8.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.2.2}Open cylinder pull-out}{97}{subsection.8.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Dynamic tests}{97}{section.8.3}
+\contentsline {section}{\numberline {8.3}Geometrically linear and non-linear dynamic tests}{97}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1}Shell pendulum}{97}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.1}Non-linear dynamic shell pendulum}{97}{subsection.8.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.2}Oscillating clamped plate}{98}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.2}Linear dynamic oscillating clamped plate}{98}{subsection.8.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.4}Quantity recovery tests}{99}{section.8.4}
 \defcounter {refsection}{0}\relax 
@@ -207,7 +207,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5.3}Composite non-linear static: composite hinged cylindrical roof}{106}{subsection.8.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.4}Composite dynamics: shell pendulum and oscillating square plate - FIXUP SECOND GRAPH FONT SIZE}{107}{subsection.8.5.4}
+\contentsline {subsection}{\numberline {8.5.4}Composite dynamics: shell pendulum and oscillating square plate}{107}{subsection.8.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.5.5}Composite stress recovery: tensile test}{108}{subsection.8.5.5}
 \defcounter {refsection}{0}\relax 
@@ -217,7 +217,7 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Applications and consequences of element technologies}{115}{chapter.9}
+\contentsline {chapter}{\numberline {9}Applications and consequences of element formulations}{115}{chapter.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.1}Euler buckling of CHS column}{115}{section.9.1}
 \defcounter {refsection}{0}\relax 
@@ -231,7 +231,7 @@
 \defcounter {refsection}{0}\relax 
 \vspace {-10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Extension of DSG triangle element technology - REVIEWED 0 !!!!!}{132}{chapter.10}
+\contentsline {chapter}{\numberline {10}Extension of DSG linear triangle element technology}{132}{chapter.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.1}DSGc3 approach}{132}{section.10.1}
 \defcounter {refsection}{0}\relax 

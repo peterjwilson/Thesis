@@ -15,12 +15,12 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter[Applications and consequences of element technologies]{Applications and \\ consequences of element \\ technologies}
+\chapter[Applications and consequences of element formulations]{Applications and \\ consequences of element \\ formulations}
 \label{chap:chapter_application}
 
 \renewcommand{\Thema}{Applications and consequences of element technologies}
 
-\lettrine[lines=2]{W}{ith} the elements' formulation, background and validation complete, some examples of their practical application are now considered. An emphasis is placed on the relative strengths and weaknesses of each element and the effect of their base formulations and enhancing technologies by considering six elements for each analysis: the new ANDES-DKQ and DSG elements, their unenhanced counterparts Basic-DKQ and Basic-T3 and the existing Kratos elements Kratos-Q4 (EAS-MITC4) and Kratos-T3 (ANDES-DKT).
+\lettrine[lines=2]{W}{ith} the elements' formulation, background and validation complete, some examples of their practical application are now considered. An emphasis is placed on the relative strengths and weaknesses of each element and the effect of their base formulations and enhancing technologies by considering six elements for each analysis: the new ANDES-DKQ and DSG elements, their un-enhanced counterparts Basic-DKQ and Basic-T3 and the existing Kratos elements Kratos-Q4 (EAS-MITC4) and Kratos-T3 (ANDES-DKT).
 
 \section{Euler buckling of CHS column}
 \label{applications: Euler buckling of CHS column}
@@ -37,7 +37,7 @@ A full derivation of the Euler case 4 buckling load using beam theory is present
 
 \begin{equation} 
 P_{crit} = \frac{4\pi^2 EI}{L^2} = 13, 222 kN
-\label{eqchs_1}
+\label{eqchs_1}\ .
 \end{equation}
 
 Due to the unpredictable nature of solving bifurcation problems with FEM a small side load $F_x = 0.1 kN$ is added to a horizontal ring of nodes at the beam's mid-span to encourage switching to the secondary equilibrium path defined by buckling in the XZ plane. Without this side load, or some other reliable source of imperfection, it is possible that the FE model would continue along the primary equilibrium path after the first critical point, instead of switching to a secondary path of buckling. Although the unstructured meshes used may provide enough asymmetry to act as a buckling catalyst, the severity of the imbalance would no doubt change from triangular to quadrilateral unstructured meshes, which may affect result comparison. Conversely, it's supposed that the applied small lateral load provides a consistent source of imperfection  of greater magnitude than the underlying mesh imbalances, thereby allowing an "\textit{apples to apples}" comparison between triangular and quadrilateral meshes.
@@ -52,7 +52,7 @@ The first set of results for the analysis highlighting axial displacement (of th
 	\label{pic:eulerchs1}
 \end{figure}
 
-The figure above highlights the poor performance of the un-enhanced Basic-T3 element with it's large over-estimation of the critical load being a symptom of severe transverse shear locking. Accordingly, this poor performance also demonstrates the efficacy of the DSG element enhancements with the DSG results aligning quite well with the remaining elements and the reference beam theory solution (which has a first order displacement calculated from an axial stiffness of $EA/L$). The Basic-DKQ element is also quite close to the reference solution, with transverse shear locking is mitigated by the DKQ bending formulation while the effect of membrane locking (which this element is susceptible to) remains untreated in the basic membrane formulation. Accordingly, differences appear between the Basic-DKQ and ANDES-DKQ elements, the latter of which suggests a lower buckling limit along with the Kratos-T3 thin shell element. To gain more insight into the differences between these two elements (ANDES-DKQ and Kratos-T3) and the rest, the axial load is plot against the lateral X-displacement taken at the beam mid-point $(x,y,z) = (D/2,0,L/2)$.
+The figure above highlights the poor performance of the un-enhanced Basic-T3 element with it's large over-estimation of the critical load being a symptom of severe transverse shear locking. Accordingly, this poor performance also demonstrates the efficacy of the DSG element enhancements with the DSG results aligning quite well with the remaining elements and the reference beam theory solution (which has a first order displacement calculated from an axial stiffness of $EA/L$). The Basic-DKQ element is also quite close to the reference solution, with transverse shear locking is mitigated by the DKQ bending formulation while the effect of membrane locking (which this element is susceptible to) remains untreated in the basic membrane formulation. Accordingly, differences appear between the Basic-DKQ and ANDES-DKQ elements, the latter of which suggests a lower buckling limit along with the Kratos-T3 thin shell element. To gain more insight into the differences between these two elements (ANDES-DKQ and Kratos-T3) and the rest, the axial load is plotted against the lateral X-displacement taken at the beam mid-point $(x,y,z) = (D/2,0,L/2)$.
 
 \begin{figure}[H]
 	\centering
@@ -62,7 +62,7 @@ The figure above highlights the poor performance of the un-enhanced Basic-T3 ele
 	\label{pic:eulerchs2}
 \end{figure}
 
-The alternative perspective presented above confirms the exceedingly poor performance of the Basic-T3 element once again. As previously identified, the ANDES-DKQ and Kratos-T3 elements predict low buckling loads for the system, however the plot above indicates that these are associated with reduced lateral displacements too (compared to the Kratos-Q4, Basic-DKQ and DSG elements). Clearly these reasonably performing elements are expressing the system behaviour in different ways with the greatest difference occurring between the Kratos-T3 and DSG elements. To gain further insight into the behaviour of these two envelope cases, the following figures show X and Y displacement contours of the Kratos-T3 and DSG models at the onset of instability plot (at 6.7x deformation with the same contour limits).
+The alternative perspective presented above confirms the exceedingly poor performance of the Basic-T3 element once again. As previously identified, the ANDES-DKQ and Kratos-T3 elements predict low buckling loads for the system, however the plot above indicates that these are associated with reduced lateral displacements too (compared to the Kratos-Q4, Basic-DKQ and DSG elements). Clearly these reasonably performing elements are expressing the system behaviour in different ways with the greatest difference occurring between the Kratos-T3 and DSG elements. To gain further insight into the behaviour of these two envelope cases, the following figures show X and Y displacement contours of the Kratos-T3 and DSG models at the onset of instability (plotted at 6.7x deformation with the same contour limits).
 
 \begin{figure}[H]
 	%\centering
@@ -112,7 +112,7 @@ For completeness, the X and Y displacement contours of the ANDES-DKQ and Basic-D
 
 In this comparison, the differences in deformation behaviour are solely due to the ANDES enhancement that mitigates membrane locking. An unstructured quadrilateral mesh of a curved surface, such as above, is a quintessential situation for membrane locking to arise. It can be seen that the ANDES-DKQ case exhibits ovalisation of the cross section as expected by it's similarity to the aforementioned Kratos-T3 results. Contrasting this, the Basic-DKQ results display only a minor amount of ovalisation, reduced from it's enhanced counterpart solely due to unmitigated membrane locking, with a more classical beam deflection shape maintaining a relatively constant cross section throughout. Although the ANDES-DKQ and the Basic-DKQ have the same local displacement field resolving power of 4 Gauss Points and also have 3-parameter based enhanced bending formulations, the membrane formulation leading to the prevention or inclusion of membrane locking is the decisive factor here and evidently has a significant impact on the results obtained.
 
-The last perspective considered attempts to address the apparent contradiction of "fast and accurate FEM analysis" that so plagues practical FEA in the industry today. Although the exact physically "correct" answer of this scenario is unknown, based on the various structural effects illuminated by the different formulations it is not unreasonable to expect practical buckling numbers towards the lower end of those obtained, roughly 10MN. Progessing with this assumption, average CPU wall time to construct the element stiffness matrix is plot against the critical load across the range of elements considered in the figure below. Immediately two groups are formed: triangles and quadrilateral elements, separated by a significant disparity in computational cost. Even at this early point of investigation a trade-off must be accepted: linear triangles are immune to membrane locking but posses less local resolving power (due to a single gauss point), while linear quads are susceptible to membrane locking but posses greater local resolving power (due to four gauss points). Sub-figures (b) and (c) examine triangle and quadrilateral elements independently.
+The last perspective considered attempts to address the apparent contradiction of "fast and accurate FEM analysis" that so plagues practical FEA in the industry today. Although the exact physically "correct" answer of this scenario is unknown, based on the various structural effects illuminated by the different formulations it is not unreasonable to expect practical buckling numbers towards the lower end of those obtained, roughly 10MN. Progressing with this assumption, average CPU wall time to construct the element stiffness matrix is plot against the critical load across the range of elements considered in the figure below. Immediately two groups are formed: triangles and quadrilateral elements, separated by a significant disparity in computational cost. Even at this early point of investigation a trade-off must be accepted: linear triangles are immune to membrane locking but posses less local resolving power (due to a single gauss point), while linear quads are susceptible to membrane locking but posses greater local resolving power (due to four gauss points). Sub-figures (b) and (c) examine triangle and quadrilateral elements independently.
 
 \begin{figure}[H]
 	\centering
@@ -160,7 +160,7 @@ The first result presented is the imposed lateral displacement $\delta$ vs the l
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=12cm]{images/stability_wrinkle_axial_disp.pdf}
-	\caption{Plate shear stability analysis: lateral displacement vs lateral load}
+	\caption{Shear wrinkling of plate: lateral displacement vs lateral load}
 	\label{pic:wrinkle1}
 \end{figure}
 
@@ -172,7 +172,7 @@ To avail further insight of the problem, the out of plane displacement of the mi
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=12cm]{images/stability_wrinkle_pointtrans_disp.pdf}
-	\caption{Plate shear stability analysis: out of plane mid-point displacement vs lateral load}
+	\caption{Shear wrinkling of plate: out of plane mid-point displacement vs lateral load}
 	\label{pic:wrinkle2}
 \end{figure}
 
@@ -217,10 +217,10 @@ In order to establish a general appreciation of the structural behaviour through
 {\label{ref_label1}
 	\includegraphics[width=7.0cm]
 	{images/wrinkle_andes_t1_0.png}}
-	\caption{\label{wrinkle 3}Plate wrinkling: ANDES-DKQ Z-displacement plots over equilibrium path}
+	\caption{\label{wrinkle 3}Shear wrinkling of plate: ANDES-DKQ Z-displacement plots over equilibrium path}
 \end{figure}
 
-Plot (c) above shows the stressed unbuckled plate acting in pure membrane action with no developed out of plane displacement (other than that due to the minor point load) just before the onset of instability. Plot (d) highlights the deformation pattern in the secondary equilibrium path, which, for many of the other elements considered, constitutes the first zone of temporary stability as discussed before. A significant loss of membrane stiffness is somewhat tempered by the activation of the plate's bending stiffness via the relatively minor local curvature developed. Progressing to plot (e) illustrates the developing magnitude of the out of plane displacements and gradual re-distribution of the plate's buckling mode into a pattern of shorter period. The shift from state (e) to state (f) and finally to state (g) marks the transition to the final tightly defined buckling pattern of 3 peaks and 2 troughs, from an initial diffuse pattern of 2 peaks and 2 troughs, which activates more of the bending stiffness due to the higher curvatures involved. The final state (h) highlights the development and utilisation of this buckling mode which forms the second common zone of temporary stability among the other elements considered.
+Plot (c) above shows the stressed unbuckled plate acting in pure membrane action with no developed out of plane displacement (other than that due to the minor point load) just before the onset of instability. Plot (d) highlights the deformation pattern in the secondary equilibrium path, which, for many of the other elements considered, constitutes the first zone of temporary stability as discussed before. A significant loss of membrane stiffness is somewhat tempered by the activation of the plate's bending stiffness via the relatively minor local curvature developed. Progressing to plot (e) illustrates the developing magnitude of the out of plane displacements and gradual re-distribution of the plate's buckled state into a pattern of shorter period. The shift from state (e) to state (f) and finally to state (g) marks the transition to the final tightly defined buckling pattern of 3 peaks and 2 troughs, from an initial diffuse pattern of 2 peaks and 2 troughs, which activates more of the bending stiffness due to the higher curvatures involved. The final state (h) highlights the development and utilisation of this buckling pattern which forms the second common zone of temporary stability among the other elements considered.
 
 With a greater appreciation of the structural behaviour at hand, the different contours of the DSG and Kratos-T3 element, representing 5-parameter and 3-parameter based formulations respectively, are considered at the two zones of temporary stability.
 
@@ -251,7 +251,7 @@ With a greater appreciation of the structural behaviour at hand, the different c
 {\label{ref_label1}
 	\includegraphics[width=1.5cm]
 	{images/wrinkle_dsg_scale_t1_0.png}}
-	\caption{\label{wrinkle 4}Plate wrinkling: Kratos-T3 and DSG Z-displacement plots over equilibrium path}
+	\caption{\label{wrinkle 4}Shear wrinkling of plate: Kratos-T3 and DSG Z-displacement plots over equilibrium path}
 \end{figure}
 
 Although the displacement contours above minimize the differences suggested by figure \ref{pic:wrinkle2} the DSG element displays a shorter buckling bubble period than the 3-parameter Kratos-T3 element. Intuitively, the phenomenological association between locking (which the DSG element largely mitigates, but remains in it's "genes" due to it's 5-parameter foundation) and greater stiffness can be linked with the general effect of higher stiffness's reducing oscillation periods in general physics, explaining the reduced spacing between peaks (and troughs) in the DSG element. Despite this difference, it must be noted that compared to the Basic-T3 element, the DSG element performs admirably given it's 5-parameter heritage. Furthermore, the smallest slenderness ratio of $L/t = 0.3/0.005 = 60$ places this analysis firmly in the realm of thin plates, rendering 5-parameter based elements as "fish out of water".
@@ -285,7 +285,7 @@ As per the above considerations, plots of the ANDES-DKQ and Basic-DKQ elements a
 	{\label{ref_label1}
 		\includegraphics[width=1.5cm]
 		{images/wrinkle_andes_comp_scale_t1_0.png}}
-	\caption{\label{wrinkle 5}Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path}
+	\caption{\label{wrinkle 5}Shear wrinkling of plate: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path}
 \end{figure}
 
 Given that the problem considered is almost perfectly flat (except due to the destabilising central point load) and initially relatively free of membrane locking, one would expect no appreciable difference between these two elements (which only differ by the ANDES membrane enhancement), although the plots above suggest otherwise. Considering sub-figures (a, b), the Basic membrane formulation clearly delays bifurcation into the secondary path that the ANDES formulation switches to at this load level, along with most other elements considered. Thus, it is likely that the Basic-DKQ element experiences very minor amounts of membrane locking depriving sufficient bending energy allocation and delaying the onset of autocatalytic out of plane displacements, themselves the precursor to entering the secondary branch. Despite this delayed onset of buckling, the final state of the system is demonstrably dominated by the bending formulation, with both elements converging to near identical displacement patterns and magnitudes. Thus, in general, from this comparison, it seems apparent that membrane formulations are key in regulating the onset of instability in this plate wrinkling scenario while bending formulations largely determine the buckled deformation shapes.
@@ -296,7 +296,7 @@ The last perspective considered is the maximum (across the whole domain) absolut
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=12cm]{images/stability_wrinkle_abstrans_disp.pdf}
-	\caption{Plate shear stability analysis: maximum absolute out of plane displacement vs lateral load}
+	\caption{Shear wrinkling of plate: maximum absolute out of plane displacement vs lateral load}
 	\label{pic:wrinkle3}
 \end{figure}
 
@@ -325,7 +325,7 @@ After base formulation selection element enhancement technology choice and geome
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=12cm]{images/MODELLING_2.pdf}
-	\caption{Reduction of solution space due to structural modelling in FEM}
+	\caption{Trade-off between linear triangle and quadrilateral elements}
 	\label{pic:applications11}
 \end{figure}
 

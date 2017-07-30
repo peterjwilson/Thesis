@@ -15,12 +15,12 @@ Introduced in section \ref{section:shell obstacle course}, the Basic-T3 quadrila
 The transverse shear stiffness of the Basic-T3 formulation is purely displacement based and employs the standard linear triangle shape functions as per the DSG element, repeated here:
 \begin{gather} 
 \begin{aligned}
-&N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]
+&N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]\ ,
 \\
-&N_2 (x , y) = \frac{1}{2 A} \big[ (x_3 y_1 - x_1 y_3) + x(y_3 - y_1) + y(x_1 - x_3) \big]
+&N_2 (x , y) = \frac{1}{2 A} \big[ (x_3 y_1 - x_1 y_3) + x(y_3 - y_1) + y(x_1 - x_3) \big]\  and
 \\
 &N_3 (x , y) = \frac{1}{2 A} \big[ (x_1 y_2 - x_2 y_1) + x(y_1 - y_2) + y(x_2 - x_1) \big]
-\label{eqApp2_1}
+\label{eqApp2_1}\ .
 \end{aligned}
 \end{gather}
 The transverse shear strains are related to the derivative of the discrete transverse displacements $v_{zi}$ and the value of nodal rotations $\beta_{xi}$ and $\beta_{yi}$ via the following transverse shear strain displacement matrix arrangement:
@@ -35,7 +35,7 @@ The transverse shear strains are related to the derivative of the discrete trans
  \hat{\mathbf{v}}_2 \\
   \hat{\mathbf{v}}_3 
 \end{pmatrix}
-\label{eqApp2_2}
+\label{eqApp2_2}\ .
 \end{equation}
 The entries of $\mathbf{B}_i$ and $\hat{\mathbf{v}}_i $ are clarified:
 \begin{equation}
@@ -51,5 +51,5 @@ and
 \hat{\beta}_{xi}\\
 \hat{\beta}_{yi}
 \end{pmatrix}
-\label{eqApp2_3}
+\label{eqApp2_3}\ .
 \end{equation}

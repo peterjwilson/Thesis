@@ -7,25 +7,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%fref generates automatically the respective abreviation/word in the text for the reference. You just have to define a label starting with the respective keyword.
-%english: chap, sec, fig, eq, app
-%deutsch: chap/kap, abs, abb, gl, anh
-%see http://ctan.space-pro.be/tex-archive/macros/latex/contrib/fancyref/fancyref.pdf for more \section
-
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Non-linear analysis background - revised 1}
+\chapter[Non-linear analysis background]{Non-linear analysis \\ background}
 \label{chap:chapter_2_2}
 
 \renewcommand{\Thema}{Non-linear analysis background}
 
-\lettrine[lines=2]{T}{he} expedient practical design of engineering structures is often considered fulfilled after the confirmation of allowable deflections and stresses throughout the entire domain. Although the design may in fact be adequate in the vast majority of cases, structural stability is an oft overlooked phenomena in "bread and butter" engineering analysis and is by no means guaranteed by acceptable displacements and stresses. Indeed, some of the most catastrophic structural failures such as the Tacoma Narrows Bridge (1940) and the Twin Towers (2001) have root  causes stemming from system instability and reinforce the importance of stability analysis.
-
-Structural stability, expressed crudely, can be thought of as "the power to recover equilibrium", or, alternatively, a structure can be thought stable at an equilibrium position if it returns to that position following a temporary perturbation \cite{FelippaStabilityBasics2016}. In terms more relatable, it's clear a person standing on one foot is more susceptible to falling over in the presence of a strong wind than someone firmly planted with both feet. Although the person with both feet planted may sway and bob, they are more likely to return to their original equilibrium position after the wind has subsided, that is, they are more stable. In an engineering context, perhaps the most well known stability problem is a long beam subject to a compressive end load: the classic Euler buckling cases. At low load levels the beam will undergo small deformations and trace back to it's original configuration after unloading, however, after the critical Euler buckling load is surpassed structural stability is lost giving way to large arbitrary deformations with non-coincident loading and unloading paths. Although these two simple examples provide a phenomenological picture of structural stability, a more precise engineering description of stability is required for general computational mechanics.
+\lettrine[lines=2]{A}{lthough} many engineering scenarios can be accurately modelled with linear analysis, a significant portion fall outside this domain and must be considered with non-linear analysis. Linear analysis relies upon the assumptions of small strains, small deformations, small rotations and linear elastic materials. Thus, even the dynamic analysis of a pendulum in free space, which experiences small strains and may reasonably be modelled with linear elastic materials, must be considered non-linear due to the large rotations involved. Alternatively, many non-linear analyses bear the hallmark of a displacement dependent stiffness matrix which must be continually updated during the solution based on the most recent state of the system. Naturally it follows that the decomposition of the tangent stiffness into constant and state-dependent components allows one to identify points of system instability, marked by tangent singularity. Stability analysis of this kind is chosen as the lens in which to explore response diagrams and critical points, the foundations of non-linear analysis.
 
 \section{Response diagrams}
-Essential to the understanding of structural stability and non-linear FEM is the concept of an equilibrium path, often plotted on load-deflection response diagrams. These diagrams are commonly two dimensional x-y diagrams that plot a representative force quantity against a characterising displacement thereby ascertaining the behaviour of the structure \cite{FelippaNFEMTour2016}.
+Essential to the understanding of non-linear FEM is the concept of an equilibrium path, often plotted on load-deflection response diagrams. These diagrams are commonly two dimensional x-y diagrams that plot a characterising displacement against a representative force quantity thereby ascertaining the behaviour of the structure \cite{FelippaNFEMTour2016}.
 
 \begin{figure}[H]
 	\centering
@@ -39,7 +32,7 @@ The equilibrium path of a response diagram indicates the points in load-deflecti
 
 \begin{equation}
 \mathbf{r}(\mathbf{u},\lambda) = \frac{\partial \Pi (\mathbf{u},\lambda)}{\partial \mathbf{u}}
-\label{eqstab0}
+\label{eqstab0}\ .
 \end{equation}
 
 The tangent stiffness matrix of the system is intuitively the slope of the equilibrium path, or alternatively, the Hessian of the structure's energy:
@@ -48,7 +41,7 @@ The tangent stiffness matrix of the system is intuitively the slope of the equil
 \mathbf{K} = 
 \frac{\partial \mathbf{r} (\mathbf{u},\lambda)}{\partial \mathbf{u}} = 
 \frac{\partial^2 \Pi (\mathbf{u},\lambda)}{\partial \mathbf{u}\partial \mathbf{u}}
-\label{eqstab01}
+\label{eqstab01}\ .
 \end{equation}
 
 Recalling that the equilibrium path of a structure is defined by a vanishing residual, it can be presented in a variety of forms:
@@ -58,19 +51,19 @@ Recalling that the equilibrium path of a structure is defined by a vanishing res
 \frac{\partial \Pi (\mathbf{u},\lambda)}{\partial \mathbf{u}} =
 \mathbf{K}(\mathbf{u},\lambda) \mathbf{u} - \mathbf{f}(\mathbf{u},\lambda) =
 0
-\label{eqstab02}
+\label{eqstab02}\ .
 \end{equation}
 
-The above expansion offers a variety of perspectives in which to interpret the equilibrium path. A nod to virtual work methods via variation of system energy is present as well as a simple re-arrangement of the well known $\mathbf{Ku} = \mathbf{f}$ introduced in Bachelor FEM courses.
+The above expansion offers a variety of perspectives in which to interpret the equilibrium path. A nod to virtual work methods via variation of system energy is present as well as a simple re-arrangement of the well known $\mathbf{Ku} = \mathbf{f}$ introduced in bachelor FEM courses.
 
-\section{Stability criterion}
- If the aforementioned Euler beam buckling example is fully derived, it is apparent that the well known Euler critical load formulae precipitate by setting the determinant of the respective system stiffness matrices to zero. In general, loss of structural stability only occurs at critical points $(\mathbf{u}_c,\lambda_c)$ where the determinant of the tangent stiffness matrix vanishes:
+\section{Critical points and stability criterion}
+ If the classic engineering Euler beam buckling problem is fully derived, it is apparent that the well known Euler critical load formulae precipitate by setting the determinant of the respective system stiffness matrices to zero. In general, loss of structural stability only occurs at critical points $(\mathbf{u}_c,\lambda_c)$ where the determinant of the tangent stiffness matrix vanishes:
  \begin{equation} 
  det\big[\mathbf{K}(\mathbf{u}_c,\lambda_c)\big] = 0
  \label{eqstab1}\ .
  \end{equation}
  
- In this Euler case, the instability is manifested by way of bifurcation, commonly referred to as buckling. Bifurcation points designate a critical point in the load-displacement space of the structure where two or more equilibrium paths meet. At these points structures may unpredictably switch equilibrium paths, physically manifesting as dramatic large deflections. Indeed, in the buckling of a circular-sectioned beam, the direction of buckling deformation is entirely unpredictable (bar coaxing imperfections) with many equilibrium paths coincident at the bifurcation point. Limit, or snap-through, points are the other type of instability that may occur at critical points. In this regime, the critical point coincides with a minimum, maximum or inflection of the load parameter $\lambda$. For an everyday example of snap-through, one can consider an umbrella suddenly inverting in a strong storm, demonstrating that once the snapping wind load is reached predictably large deformations are subsequently observed. 
+ In this Euler case, the instability is manifested by way of bifurcation, commonly referred to as buckling. Bifurcation points designate a critical point in the load-displacement space of the structure where two or more equilibrium paths meet. At these points structures may unpredictably switch equilibrium paths, physically manifesting as dramatic, potentially unpredictable, large deflections. Indeed, in the buckling of a circular-sectioned beam, the direction of buckling deformation is entirely unpredictable (bar coaxing imperfections) with many equilibrium paths coincident at the bifurcation point. Limit, or snap-through, points are the other type of instability that may occur at critical points. In this regime, the critical point coincides with a minimum, maximum or inflection of the load parameter $\lambda$ as plotted on a response diagram. For an everyday example of snap-through, one can consider an umbrella suddenly inverting in a strong storm, demonstrating that once the snapping wind load is reached predictably large deformations are subsequently observed. 
  
  In the scope of this work the load magnitude that introduces system instability is of key interest, details regarding how to mathematically distinguish between limit and bifurcation points once a critical point has been identified fall outside the domain surveyed. 
  
@@ -88,12 +81,12 @@ The above expansion offers a variety of perspectives in which to interpret the e
 	\caption{\label{stab1}Stability analysis response diagrams \cite{FelippaStabilityBasics2016}}
 \end{figure}
 
-It's clear that after both critical points, as depicted in figure \ref{stab1}(a), the structure looses a significant proportion of it's stiffness indicated by the reduced load required for continual increases of deflection. In this post-buckling state the original function, and indeed safety, of the structure (for example, a roof or building) is likely to be significantly compromised. If such a structural critical point exists at a load level less than the design load cases considered for allowable deflections and stresses then the structure cannot be regarded as properly engineered. Figure \ref{stab1}(b) indicates the critical stability load of the structure, which is the load corresponding to the first critical point on the response diagram. Another, more stringent, approach is to determine the lowest load factor throughout the whole equilibrium path, including the post-critical regime, and take this as the critical stability load.
+It's clear that after both critical points, as depicted in figure \ref{stab1}(a), the example structure looses a significant proportion of it's stiffness indicated by the reduced load required for continual increases of deflection. In this post-buckling state the original function, and indeed safety, of the structure (for example, a roof or building) is likely to be significantly compromised. If such a structural critical point exists at a load level less than the design load cases considered for allowable deflections and stresses then the structure cannot be regarded as properly engineered. Figure \ref{stab1}(b) indicates the critical stability load of the structure, which is the load corresponding to the first critical point on the response diagram. Another, more stringent, approach is to determine the lowest load factor throughout the whole equilibrium path, including the post-critical regime, and take this as the critical stability load.
 
 Despite the need for stability analysis to be regularly considered throughout engineering design, the effort and level of analysis required is clearly quite significant for even simple systems. As such, a linearised approach termed Linear Prebuckling analysis, is often employed.
 
 \section{Linear Prebuckling analysis}
-Linear Prebuckling (LPB) analysis offers insight, albeit reduced, into the stability characteristics of structures at a fraction of the computational expense required for a full non-linear equilibrium path analysis.
+Linear Prebuckling (LPB) analysis offers insight, albeit reduced, into the stability characteristics of structures at a fraction of the computational expense required for a full non-linear equilibrium path analysis. In the context of this thesis, LPB perfectly exemplifies how a simplified linear analysis approach can produce results similar to far more complicated non-linear approaches, provided it's assumptions and limitations are respected.
 
 In order to further interrogate the nature of structural stability, and how it may be simplified, the tangent stiffness matrix in equation \ref{eqstab1} can be decomposed. The total tangent matrix is made up of the material stiffness matrix $\mathbf{K}_m$ (itself composed of the elastic stiffness $\mathbf{K}_e$ and initial displacement stiffness $\mathbf{K}_u$) and the geometric stiffness matrix $\mathbf{K}_g$. Thus equation \ref{eqstab1} can be expanded accordingly:
 
@@ -107,7 +100,7 @@ det\big[
 \mathbf{K}_m +
 \mathbf{K}_g(\mathbf{u}_c,\lambda_c)
 \big] = 0
-\label{eqstab2}
+\label{eqstab2}\ .
 \end{equation}
 
 It's apparent the expression can be characterized as an eigenvalue problem, thus the eigenvector $\mathbf{z} \neq \mathbf{0}$ corresponding to bifurcation mode shapes can be introduced:
@@ -117,7 +110,7 @@ det\big[
 \mathbf{K}_m +
 \mathbf{K}_g(\mathbf{u}_c,\lambda_c)
 \big]\mathbf{z} = 0
-\label{eqstab3}
+\label{eqstab3}\ .
 \end{equation}
 
 The non-linear eigenvalue problem can be presented in a linearised form:
@@ -128,7 +121,7 @@ det\big[
 \hat{\lambda}
 \mathbf{K}_g(\mathbf{u}_i,\lambda_i)
 \big]\mathbf{z} = 0
-\label{eqstab4}
+\label{eqstab4}\ .
 \end{equation}
 
 Equations \ref{eqstab3} and \ref{eqstab4} are identical if $\hat{\lambda}
@@ -142,16 +135,16 @@ Equations \ref{eqstab3} and \ref{eqstab4} are identical if $\hat{\lambda}
 {\lambda}
  \mathbf{K}_g(\lambda_{ref})
  \big]\mathbf{z} = 0
- \label{eqstab5}
+ \label{eqstab5}\ .
  \end{equation}
  
  The LPB equation above relies on the additional assumptions that the structure remains linearly elastic until buckling and the structure and loading have no imperfections \cite{FelippaStabilityBasics2016}. It's also clear that the geometric stiffness matrix is assumed to scale proportionally with the load factor, which further relies on the assumption of a linearly elastic structure. Along with these assumptions, LPB analysis is subject to some notable limitations. The first of which is the typical over-estimation of the true stability limit, with accuracy deteriorating as the pre-critical structural behaviour exhibits more non-linearity. Secondly, LPB analysis is unable to distinguish between bifurcation and limit points, with all critical points transformed into bifurcation points. A consequence of this is that the recovered eigenvector associated with a limit point reported as a bifurcation point will be erroneous.
  
  Despite the large swathe of assumptions and limitations accompanying LPB, it is no doubt a sensible and computationally-efficient approach when applied to suitably stiff linear elastic structures, which indeed include a considerable amount of industrial engineering structures.
 
-\section{Stability analysis example}
+\section{Non-linear analysis example: Mises Truss stability analysis}
 
-To illustrate the various aspects stability analysis, including response diagrams and the differences between non-linear and linear critical point analysis, an example Mises two truss system is considered. The full analysis can be found in Appendix \ref{app:Analytical stability analysis of Mises truss}, with only key results reproduced below. The system under consideration is depicted in the following figure:
+To illustrate the various aspects of non-linear analysis, including response diagrams and the differences between non-linear and linear critical point analysis, the non-linear analysis of an example Mises two truss system is considered. The full analysis can be found in Appendix \ref{app:Analytical stability analysis of Mises truss}, with only key results reproduced below. The system under consideration is depicted in the following figure:
 
 \begin{figure}[H]
 	\centering
@@ -171,7 +164,7 @@ After developing the system's virtual work expression via the 2nd Piola-Kirchhof
 \end{pmatrix}
 =
 \mathbf{0}
-\label{eqstab6}
+\label{eqstab6}\ .
 \end{equation}
 
 With the residual vector in hand, the system's stiffness matrix can be expressed as:
@@ -185,8 +178,10 @@ With the residual vector in hand, the system's stiffness matrix can be expressed
 3u^2 + w^2 - 2bw +2a^2 & 2uw -2bu \\
 2uw - 2bu & u^2 + 3w^2 - 6bw + 2b^2
 \end{pmatrix}
-\label{eqstab7}
+\label{eqstab7}\ .
 \end{equation}
+
+The non-linearity of the system is clearly observed by the presence of displacement terms in the stiffness matrix, rendering it dependent on the system's current state.
 
 Non-linear critical points can be determined by setting the determinant of the stiffness matrix to zero and solving. For the system parameters of ($a=b=EA=F=1$) and under the assumption of $u = 0$ before instability, the non-linear critical points are calculated to be:
 
@@ -205,7 +200,7 @@ w_{c1} = 0.4226 \\
  w_{c2} = 1.5774 \\
  \lambda_{c2} = -0.1361
  \end{pmatrix}
- \label{eqstab8}
+ \label{eqstab8}\ .
  \end{equation}
  
 Although the non-linear critical points have been determined, a LPB analysis of the system will be carried out to compare results between the different approaches. As per equation \ref{eqstab5}, a LPB analysis is an eigenvalue problem which, after assuming small displacements and $u=0$ in the pre-buckling regime, reduces to the following expression:
@@ -217,7 +212,7 @@ det
 0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda F}{b}
 \end{pmatrix}
 = 0
-\label{eqstab9}
+\label{eqstab9}\ .
 \end{equation}
 
 The eigenvalues of the above expression coalesce into the same value:
@@ -225,7 +220,7 @@ The eigenvalues of the above expression coalesce into the same value:
 \begin{equation} 
 \lambda_{lpb\ c1} = 
 \lambda_{lpb\ c2} = 0.7071
-\label{eqstab10}
+\label{eqstab10}\ .
 \end{equation}
 
 It's clear that the LPB analysis is quite inaccurate for this structure with the estimated onset of instability occurring at over 5 times that of the first non-linear buckling load $\lambda_{c1} = 0.1361$. This inaccuracy is due to the fact that the structure is quite flexible in the pre-critical regime, which violates the small deflections assumption vital to the accurate use of LPB analysis.
@@ -236,13 +231,13 @@ The following response diagram plots the equilibrium path $\lambda$ vs. $w$ (ass
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=10cm]{images/stability_analysis_mises_truss_1x1.pdf}
-	\caption{Ratio of Mises truss LPB and NL critical load factors across varying geometry}
+	\caption{Mises truss response diagram}
 	\label{stab2}
 \end{figure}
 
 From the graph it can be seen that the primary equilibrium path traces the two bars snapping through, with $w=1.0$ signifying the bars in a perfectly horizontal position and $w=2.0$ corresponding to a fully snapped through system. Both non-linear critical points are highlighted on the equilibrium path with their connection to the vanishing stiffness determinant at these points explicitly drawn.
 
-As previously discussed, inaccuracies of the LPB analysis are attributable to the consequential pre-critical deflections of the structure. The sensitivity of LPB analysis to this effect can be investigated by gradually increasing the height $b$ of the structure while retaining the same span $a$. As the height over span ratio $b/a$ increases, the structure will become stiffer and pre-critical vertical displacements will reduce. As the actual structural behaviour gradually aligns with the underpinning LPB assumptions, the LPB results should become more accurate. Across the range of $1 \le b/a \le 5$, the ratios of critical LPB load factors to the lowest non-linear critical load factors have been plot in the following figure. Although it is acknowledged that as $b/a$ increase the instability mode will change from a limit to bifurcation point, the detail of interest here is the load factor associated with the onset of instability, regardless of it's nature.
+As previously discussed, inaccuracies of the LPB analysis are attributable to the significant pre-critical deflections of the structure. The sensitivity of LPB analysis to this effect can be investigated by gradually increasing the height $b$ of the structure while retaining the same span $a$. As the height over span ratio $b/a$ increases, the structure will become stiffer and pre-critical vertical displacements will reduce. As the actual structural behaviour gradually aligns with the underpinning LPB assumptions, the LPB results should become more accurate. Across the range of $1 \le b/a \le 5$, the ratios of critical LPB load factors to the lowest non-linear critical load factors have been plotted in the following figure. Although it is acknowledged that as $b/a$ increase the instability mode will change from a limit to bifurcation point, the detail of interest here is the load factor associated with the onset of instability, regardless of it's nature.
 
 \begin{figure}[H]
 	\centering
@@ -252,10 +247,10 @@ As previously discussed, inaccuracies of the LPB analysis are attributable to th
 	\label{stab3}
 \end{figure}
 
-Consistent with the previous rationale, the LPB analyses tend toward more accurate results as the structure becomes stiffer at greater $b/a$ and pre-critical displacements approach negligible values. Despite this, the figure also confirms that LPB analyses continue to typically overestimate the critical load for a structure. Summarising, it can be seen that when the LPB assumptions are nearly fulfilled it produces quite accurate results with a fraction of computational effort compared to a full non-linear stability analysis, although the tendency to overestimate the onset of instability should also be considered. 
+Consistent with the previous rationale, the LPB analyses tend toward more accurate results as the structure becomes stiffer at greater $b/a$ and pre-critical displacements approach negligible values. Despite this, the figure also confirms that LPB analyses continue to typically overestimate the critical load for a structure. Summarising, it can be seen that when the LPB assumptions are approximately fulfilled it produces quite accurate results with a fraction of computational effort compared to a full non-linear stability analysis.
 
-\section{Co-rotational transformation approach - REVIEWED 0}
-The Mises truss example highlights that, although the computationally efficient LPB method is accurate for a subset of scenarios, the general case requires fully non-linear analysis. This concept can be extended to general structural analysis employing shell elements, with linear approaches only suitable for a certain subspace of problems. The industrial practical demands of shell elements can be condensed to delivering accurate general solutions in a timely manner. By surveying the typical approaches of commercial FEM packages, the latter point of computational speed is usually fulfilled by employing commonplace shell formulations with linearized strains, however, this seemingly betrays the former requirement of accurate general solutions; one case being problems involving large displacements. A novel solution to this problem, which extends the capability of linear small strain elements to handle large displacements and rotations, is the co-rotational transformation approach.
+\section{Co-rotational transformation approach}
+The Mises truss example highlights that, although the computationally efficient LPB method is accurate for a subset of scenarios, the general case requires fully non-linear analysis. This concept can be extended to general structural analysis employing shell elements, with linear approaches only suitable for a certain subspace of problems. The industrial practical demands of shell elements can be condensed to "delivering accurate solutions of general problems in a timely manner". By surveying the typical approaches of commercial FEM packages, the latter point of computational speed is usually fulfilled by employing commonplace shell formulations with linearised strains, however, this seemingly betrays the former requirement of accurate general solutions; one example being problems involving large displacements. A novel solution to this problem, which extends the capability of linear small strain elements to handle large displacements and rotations, is the co-rotational transformation approach.
 
 \subsection{General overview}
 The co-rotational (CR henceforth) transformation approach extends the capability of elements normally limited to small strains and  displacements to correctly handle arbitrarily large displacements and rotations, provided strains remain small \cite{FelippaCR1_2016}. Unlike other Lagrangian approaches which 'track' the total displacements via strain only, the CR approach relies upon splitting the total displacements into strain-free rigid body motion and deformational motion.
@@ -268,10 +263,11 @@ The co-rotational (CR henceforth) transformation approach extends the capability
 	\label{cr1}
 \end{figure}
 
-The above figure illustrates this division of total displacement by way of a simple beam example. The base configuration $\mathscr{C}^0$ evidently refers to the initial un-deformed state of the element. The co-rotated configuration $\mathscr{C}^R$, also called the shadow configuration, is the frame arrived at by extracting the rigid body motion of the element's total displacement. If the remaining deformational motion is applied to state $\mathscr{C}^R$ the final deformed configuration $\mathscr{C}^D$ is achieved. Although the CR approach reduces the deformation motion experienced by the element, which will mechanically respond according to it's formulation, the process of reducing this deformation motion via filtering out rigid body motion is independent of the element's formulation. Thus, the scope of CR discussion henceforth is focussed on the element-independent CR (EICR) formulation.
+The above figure illustrates this division of total displacement by way of a simple beam example. The base configuration $\mathscr{C}^0$ evidently refers to the initial un-deformed state of the element. The co-rotated configuration $\mathscr{C}^R$, also called the shadow configuration, is the frame arrived at by extracting the rigid body motion from the element's total displacement. If the remaining deformational motion is applied to state $\mathscr{C}^R$ the final deformed configuration $\mathscr{C}^D$ is achieved. Although the CR approach reduces the deformation motion experienced by the element, which will mechanically respond according to it's individual formulation, the process of reducing this deformation motion via filtering out rigid body motion is independent of the element's formulation. Thus, the scope of CR discussion henceforth is focussed on the element-independent CR (EICR) formulation.
 
-\section{EICR formulation overview - REVIEWED 0 !!!!!}
-The EICR, owing to it's name and as previously described, is a CR approach independent of the element formulation. Because of this element formulation independence it allows re-use of linear elements in a non-linear context, provided small strain assumptions aren't violated. Thus, the EICR can also be interpreted as a geometric-based filter stripping away rigid body motion from the deformations seen by each element. The following flowchart illustrates the general function of the EICR in a typical FEM program.
+\section{EICR formulation overview}
+\label{EICR overview}
+The EICR, owing to it's name and as previously described, is a CR approach independent of the element formulation. Because of this element formulation independence it allows re-use of linear elements in a non-linear context, provided small strain assumptions aren't violated. Thus, the EICR can also be interpreted as a geometric-based filter stripping away rigid body motion from the deformations seen by each element. The following flowchart illustrates the general function of the EICR in the typical FEM workflow.
 
 \begin{figure}[H]
 	\centering
@@ -281,7 +277,7 @@ The EICR, owing to it's name and as previously described, is a CR approach indep
 	\label{cr3}
 \end{figure}
 
-Two key components of the EICR formulation corresponding with the CR blocks above are: extracting the deformational motions by means of EICR kinematics before element computation; and the incorporation of rigid body motions into the calculated element tangent stiffness. These two EICR components are considered in the following subsections.
+Two key components of the EICR formulation corresponding with the CR blocks above are: extracting the deformational motions by means of EICR kinematics before element computation; and the incorporation of rigid body motions into the calculated element matrices and force vector. These two EICR components are considered in the following subsections.
 
 \subsection{EICR kinematics}
 An overview of the EICR kinematics utilised to separate total element displacements into rigid body motion and deformational motion is henceforth described. Only a high level functional overview of the formulation components is contained herein, for a full treatment of the topic the reader may refer to selected works of Felippa (References \cite{FelippaCR1_2016}) and \cite{felippa2000systematic}) and Haugen's PhD thesis (Reference \cite{Hau94}). The following figure illustrates an element in various states of the EICR transformation:
@@ -318,7 +314,7 @@ The deformational motion $\mathbf{d}_p$ can be extracted in $\mathscr{C}^0$ by r
 \label{eq_cr3}\ .
 \end{equation}
 
-As per the general flow of figure \ref{cr3}, the deformational motion described above form the totality of displacements 'seen' by the element. Since these displacements, and the element stiffness matrix and internal force vector computed via virtual displacements $\delta \mathbf{v}$, are computed in $\mathscr{C}^R$, the variation of these in $\mathscr{C}^R$ require additional treatment to be linked back to the global frame. This additional workload corresponds to the upper EICR block of figure \ref{cr3}, with the treatment of EICR internal forces considered first.
+As per the general flow of figure \ref{cr3}, the deformational motion described above are the only displacements 'seen' by the element. Since these displacements, and the element stiffness matrix and internal force vector computed via virtual displacements $\delta \mathbf{v}$, are computed in $\mathscr{C}^R$, the variation of these in $\mathscr{C}^R$ require additional treatment to be linked back to the global frame. This additional workload corresponds to the upper EICR block of figure \ref{cr3}, with the treatment of EICR internal forces considered first.
 
 \subsection{EICR internal forces}
 The element internal force vector $\mathbf{p}_R^e$ in the CR frame $\mathscr{C}^R$ for each node $a = 1\ ...\ N^e$ is given by the internal energy $U^e$ derived through it's DOFs:
@@ -345,7 +341,7 @@ which can be split into translation and moment forces as per:
 \label{eq_cr5}\ .
 \end{equation}
 
-With a view of reconciling the above expressions in the global frame variations in the CR configuration $\mathscr{C}^R$ $\delta \mathbf{u}_{R}^e,\ \delta \boldsymbol{\theta}_{R}^e$ must be related back to the global frame $\delta \mathbf{u}^e,\ \delta \boldsymbol{\omega}^e$ via the Jacobian $\mathbf{J}$:
+With a view of reconciling the above expressions in the global frame, variations in the CR configuration $\mathscr{C}^R$, $\delta \mathbf{u}_{R}^e,\ \delta \boldsymbol{\theta}_{R}^e$ must be related back to the global frame $\delta \mathbf{u}^e,\ \delta \boldsymbol{\omega}^e$ via the Jacobian $\mathbf{J}$:
 
 \begin{equation} 
 \begin{pmatrix}
@@ -367,8 +363,7 @@ With a view of reconciling the above expressions in the global frame variations 
 \label{eq_cr6}\ .
 \end{equation}
 
-Key to the EICR is that energy scalars between various configurations $\mathscr{C}$ shouldn't change. Thus, if one considers internal virtual work in terms of the internal force vector between global and $\mathscr{C}^R$ frames the following equality must hold:
-
+Key to the EICR is that energy scalars between various configurations $\mathscr{C}$ remain invariant. Thus, if one considers internal virtual work in terms of the internal force vector between global and $\mathscr{C}^R$ frames the following equality must hold:
 \begin{equation} 
 (\mathbf{p}_{Ru}^{e})^T  \delta \mathbf{u}_{R}^e +
 (\mathbf{p}_{R\theta}^{e})^T \delta \boldsymbol{\theta}_{R}^e =
@@ -444,7 +439,7 @@ with
  \label{eq_cr11}\ .
  \end{equation}
  
- If the variation of $\mathbf{p}^e$ is taken in equation \ref{eq_cr10}, the chain rule arises 4 times yielding:
+ If the variation of $\mathbf{p}^e$ in equation \ref{eq_cr10} is taken, the chain rule arises 4 times yielding:
  
   \begin{equation} 
  \delta \mathbf{p}^e

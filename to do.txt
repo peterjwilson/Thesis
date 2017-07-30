@@ -11,21 +11,14 @@ Thesis To Do:
 	
 	
 Report:
-	- Continue review
-	- Make non-linear section flow better
+	- Next review
+		- EICR jacobian sum over b?
 	
 	- (Up next)
-	- Transverse shear stress results discussion!
 	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
 	- 
 	- (Soon)
-	- 3 param background - figure out why Gotta figure out lamda - G = lamda
-	- 
-	- (Whenever)
-	- Cleanup equation spacing
-	- alignment of pseudocode on page - try out figure around algortithm
-	- Check Bibliography special characters
-	- Check breaking of \texttt formatted words
-	- See if kratos thick tri material mat includes off-diag poisson and update report!
+	- 3 param background - figure out why Gotta figure out lamda - G = lamda (eq 2.8)
+
 
 

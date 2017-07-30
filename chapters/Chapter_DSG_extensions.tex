@@ -15,7 +15,7 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter[Extension of DSG triangle element technology  - REVIEWED 0 !!!!!]{Extension of DSG \\ linear triangle element \\ technology}
+\chapter[Extension of DSG linear triangle element technology]{Extension of DSG \\ linear triangle element \\ technology}
 \label{chap:chapter_dsg_extension}
 
 \renewcommand{\Thema}{Extension of DSG linear triangle element technology}
@@ -35,19 +35,20 @@ Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\
 	\label{fig:parametric_unit_triangle}
 \end{figure}
 
-Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceeding fields thereby rendering the element free of locking effects. The form of the three fields are:
+Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceding fields thereby rendering the element free of locking effects. The form of the three fields are:
 
 \begin{equation} 
 w_{KL} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 + 0.5(a_5 + a_6)\xi \eta + \eta^2 a_7
-\label{eqDSGc3_1}
+\label{eqDSGc3_1}\ ,
 \end{equation}
 \begin{equation} 
 w_{RM \gamma} = \xi a_8 + \eta a_9
 \label{eqDSGc3_2}
 \end{equation}
+and
 \begin{equation} 
 w_{MOD} = 0.5(a_5 - a_6)\xi \eta
-\label{eqDSGc3_3}
+\label{eqDSGc3_3}\ .
 \end{equation}
 
 The coefficients $a_1$ through $a_9$ are ansatz coefficients as yet unknown corresponding to one or more triangle DOFs each.
@@ -64,12 +65,13 @@ w_{KL \eta} = w_{KL} - w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_6 \xi \
 \label{eqDSGc3_5}\ .
 \end{equation}
 
-According to it's definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field.
+According to it's definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field:
 
 \begin{equation} 
 \beta_{KL \xi} = \frac{\partial w_{KL \xi}}{\partial \xi}  = a_2 + 2 \xi a_4 +a_5 \eta
 \label{eqDSGc3_8}
 \end{equation}
+and
 \begin{equation} 
 \beta_{KL \eta} = \frac{\partial w_{KL \eta}}{\partial \eta}  =a_3 +a_6 \xi + 2 \eta a_7
 \label{eqDSGc3_9}
@@ -296,7 +298,7 @@ y_0
 x_i \\
 y_i
 \end{pmatrix}
-\label{eqCSDSG0}
+\label{eqCSDSG0}\ .
 \end{equation}
 
 As per figure \ref{fig:triangle division}, the displacement vectors for each sub-triangle $\mathbf{u}^{\Delta i}$ are:
@@ -324,7 +326,7 @@ As per figure \ref{fig:triangle division}, the displacement vectors for each sub
 \mathbf{u}_3 \\
 \mathbf{u}_1
 \end{pmatrix}
-\label{eqCSDSG1}
+\label{eqCSDSG1}\ .
 \end{equation}
 
 Critical to the CS-DSG formulation is the relation of $\mathbf{u}_0$ to the exterior nodal displacement vectors which facilitates the central node to be evaporated from the final formulation. According to the geometrical relation, the central point displacement vector can be expressed as:
@@ -335,7 +337,7 @@ Critical to the CS-DSG formulation is the relation of $\mathbf{u}_0$ to the exte
  \frac{1}{3}
  \sum_{i=1}^3
 \mathbf{u}_i
- \label{eqCSDSG2}
+ \label{eqCSDSG2}\ .
  \end{equation}
  
  For each of the sub-triangles $\Delta_i$ the original DSG formulation according to equation \ref{eqt10} is performed, with $x_i,\ y_i$ and $A$ updated to match the nodal positions and area of the current sub-triangle respectively. For illustrative purposes, the first sub-triangle shear B-matrix $\mathbf{B}^{\gamma\Delta 1}$ is written explicitly:
@@ -375,7 +377,7 @@ y_{1} - y_{0} \\
 y_{2} - y_{0} \\
 x_{2} - x_{0} \\
 \end{pmatrix}
-\label{eqCSDSG3_0}
+\label{eqCSDSG3_0}\ .
 \end{equation}
 
  Furthermore, the shear B-matrix $\mathbf{B}^{\gamma\Delta i}$ for each sub-triangle can be further split into nodal contributions $\mathbf{B}_{\Delta nj}^{\gamma\Delta i}$ corresponding to node $j$ in sub-triangle $i$, continued in the example of the first sub-triangle below:
@@ -387,7 +389,7 @@ x_{2} - x_{0} \\
  0 & 0 & b-c & 0 & A_{\Delta 1} & 0 \\
  0 & 0 & d-a & -A_{\Delta 1} & 0 & 0 
 \end{pmatrix}
- \label{eqCSDSG4}
+ \label{eqCSDSG4}\ ,
  \end{equation}
  
   \begin{equation} 
@@ -399,7 +401,7 @@ x_{2} - x_{0} \\
 \end{pmatrix}
 \label{eqCSDSG5}
 \end{equation}
-
+and
   \begin{equation} 
 \mathbf{B}_{\Delta n3}^{\gamma\Delta 1}
 =
@@ -425,7 +427,7 @@ Thus, the shear strains for sub-triangle 1 can be summarised as:
 \mathbf{u}_1 \\
 \mathbf{u}_2
 \end{pmatrix}
-\label{eqCSDSG7}
+\label{eqCSDSG7}\ .
 \end{equation}
 
 Recalling equation \ref{eqCSDSG2}, which expresses the central point's displacement vector $\mathbf{u}_0$ in terms of the 3 external node displacement vectors, the shear B-matrix above can similarly be rearranged and expressed in terms of the 3 exterior nodes:
@@ -443,7 +445,7 @@ Recalling equation \ref{eqCSDSG2}, which expresses the central point's displacem
 \mathbf{u}_2 \\
 \mathbf{u}_3
 \end{pmatrix}
-\label{eqCSDSG8}
+\label{eqCSDSG8}\ .
 \end{equation}
 
 The above process can be repeated for sub-triangles 2 and 3, yielding the following results:
@@ -465,7 +467,7 @@ The above process can be repeated for sub-triangles 2 and 3, yielding the follow
 \end{pmatrix}
 \label{eqCSDSG9}
 \end{equation}
-
+and
   \begin{equation} 
 \boldsymbol{\gamma}^{\Delta 3} =
 \mathbf{B}_r^{\gamma\Delta 3}
@@ -481,7 +483,7 @@ The above process can be repeated for sub-triangles 2 and 3, yielding the follow
 \mathbf{u}_2 \\
 \mathbf{u}_3
 \end{pmatrix}
-\label{eqCSDSG10}
+\label{eqCSDSG10}\ .
 \end{equation}
 
 With the 3 sub-triangle shear B-matrices expressed in terms of the exterior nodes, they can be recombined via an area-averaged approach to recover the total meta-triangle shear B-matrix $\mathbf{B}^{\gamma}$:
@@ -493,7 +495,7 @@ With the 3 sub-triangle shear B-matrices expressed in terms of the exterior node
 \sum_{i=1}^3
 \mathbf{B}_r^{\gamma\Delta i}
 A_{\Delta i}
-\label{eqCSDSG11}
+\label{eqCSDSG11}\ .
 \end{equation}
 
 \subsection{Invariance of CS-DSG to nodal ordering}
@@ -576,9 +578,9 @@ As expected, the coarsest 2 element mesh reveals a high level of nodal numbering
 Progressing with mesh refinement, the 8 element mesh DSG results demonstrate almost complete convergence between the two boundary conditions, indicating negligible nodal numbering dependency. Additionally, the DSG and CS-DSG results essentially coalesce after this single level of refinement. As the mesh is refined further, differences between the 3 result cases continue to evaporate and they converge to the same reference solution of $min(u_z) = -0.22058$ calculated with an 'overkill' mesh of 11, 250 elements.
 
 \subsection{Computational cost vs. error for DSG and CS-DSG elements}
-The previous study of nodal numbering dependency confirms that although the CS-DSG element outperforms the DSG element on the coarsest meshes, the DSG nodal ordering dependency dissipates relatively quickly. Given this performance disparity, the additional computational cost associated with the DS-CSG element must be known to make an informed decision as to what element should be preferred for general use. 
+The previous study of nodal numbering dependency confirms that although the CS-DSG element outperforms the DSG element on the coarsest meshes, the DSG nodal ordering dependency dissipates relatively quickly. Given this performance disparity, the additional computational cost associated with the CS-DSG element must be known to make an informed decision as to what element should be preferred for general use. 
 
-Since the shear B-matrix is the only point of difference between the two formulations, the computational cost discrepancy can be reduced to the time taken to construct the shear B-matrix for each element. The previous analysis' 32 element case was re-run with the average wall time for the construction of the shear B-matrix of the DSG element determined to be 12.000 ns while the CS-DSG counterpart was 13.438 ns. As expected, the simpler DSG formulation is quicker than the CS-DSG formulation, with the latter taking 12\% longer than the former to construct. If the results of the previous analysis are converted to cumulative element shear B-matrix construction time ($= elements \times average\ time\ to\ construct\ shear\ B\ matrix$, ie. the time taken per job run to construct all shear B-matrices) vs. percentage error (against the reference value) the following graph is produced:
+Since the shear B-matrix is the only point of difference between the two formulations, the computational cost discrepancy can be reduced to the time taken to construct the shear B-matrix for each element. The previous analysis' 32 element case was re-run with the average wall time for the construction of the shear B-matrix of the DSG element determined to be 12.000 ns while the CS-DSG counterpart was 13.438 ns. As expected, the simpler DSG formulation is quicker than the CS-DSG formulation, with the latter taking 12\% longer than the former to construct. If the results of the previous analysis are converted to cumulative element shear B-matrix construction time ($= elements \times average\ time\ to\ construct\ shear\ B\ matrix$, i.e. the time taken per job run to construct all shear B-matrices) vs. percentage error (against the reference value) the following graph is produced:
 
 \begin{figure}[H]
 	\centering

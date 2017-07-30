@@ -18,18 +18,20 @@
 
 \renewcommand{\Thema}{Validation of elements}
 
-\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across statics, geometrically non-linear analysis, dynamics, quantity recovery and composites interrogate the correct implementation of the element formulations and also gives an initial indication of their performance. 
+\lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across linear statics, geometrically non-linear statics, linear and non-linear dynamics, quantity recovery and composites interrogate the correct implementation of the element formulations and also gives an initial indication of their performance. 
 
-\section{Static tests: shell obstacle course}
+Unless noted otherwise, materials are isotropic linear elastic.
+
+\section{Linear static tests: shell obstacle course}
 \label{section:shell obstacle course}
 
 Considered as the standard benchmark for shell elements, the shell obstacle course proposed by Belytschko \cite{Bel85} runs the elements through 3 problems involving complex loading states. These complex loading states often pose difficulties for un-enhanced elements, which are also tested here.
 
-The \textit{Basic-DKQ} element is a quadrilateral element with an un-enhanced membrane formulation and the DKQ bending formulation. Refer to Appendix \ref{sec:Basic-DKQ quadrilateral formulation} for full details. Any performance differences that arise between this element and the ANDES-DKQ element can be attributed to the ANDES element technology.
+The \textit{Basic-DKQ} element is a linear quadrilateral element with an un-enhanced membrane formulation and the DKQ bending formulation. Refer to Appendix \ref{sec:Basic-DKQ quadrilateral formulation} for full details. Any performance differences that arise between this element and the ANDES-DKQ element can be attributed to the ANDES element technology.
 
-The \textit{Basic-T3} element is a triangular element with an un-enhanced shear formulation and no correction to the shear component of the material matrix. Refer to Appendix \ref{sec:Basic-T3 quadrilateral formulation} for full details. Any performance differences that arise between this element and the DSG element can be attributed to the DSG element technology.
+The \textit{Basic-T3} element is a linear triangular element with an un-enhanced shear formulation and no correction to the shear component of the material matrix. Refer to Appendix \ref{sec:Basic-T3 quadrilateral formulation} for full details. Any performance differences that arise between this element and the DSG element can be attributed to the DSG element technology.
 
-Furthermore, context of element performance is provided by including results from the existing \textit{KRATOS Q4} five parameter quadrilateral element (EAS-MITC formulation) and the \textit{KRATOS T3} three parameter triangle element (ANDES-DKT formulation).
+Furthermore, context of element performance is provided by including results from the existing \textit{KRATOS Q4} five parameter linear quadrilateral element (EAS-MITC formulation) and the \textit{KRATOS T3} three parameter linear triangle element (ANDES-DKT formulation).
 \newpage
 \subsection{Scordelis-Lo roof}
 %
@@ -60,7 +62,7 @@ The first problem of the shell obstacle course is the Scordelis-Lo roof, which i
 	\caption{\label{ref_label_overall}Scordelis-Lo roof benchmark results}
 \end{figure}
 
-The convergence graphs above indicate the ANDES-DKQ and DSG elements agree to the reference solution. Conversely, the Basic-T3 element shows very poor performance. Given that the Basic-DKQ performs well (which is immune to transverse shear locking), it's suspected that transverse shear locking is crippling the Basic-T3 element, while the DSG element technology effectively mitigates this for the DSG element. 
+The convergence graphs above indicate the ANDES-DKQ and DSG elements agree with the reference solution. Conversely, the Basic-T3 element shows very poor performance. Given that the Basic-DKQ performs well (which is immune to transverse shear locking), it's suspected that transverse shear locking is crippling the Basic-T3 element, while the DSG element technology effectively mitigates this for the DSG element. 
 \newpage
 \subsection{Pinched cylinder}
 %
@@ -124,9 +126,9 @@ The last test in the shell obstacle course is the pinched hemisphere, which cons
 
 The ANDES-DKQ and DSG elements both perform well in the final statics test, as per the convergence graphs above. It is observed that the Basic-DKQ element appears to exhibit membrane locking corresponding to the high double curvature of the problem ($R_1=R_2 = 10$) compared to the Scordelis-Lo roof ($R_1= 10,\ R_2 = \infty$) and the pinched cylinder ($R_1= 300,\ R_2 = \infty$). The ANDES element technology clearly prevents this deleterious effect. The poor performance of the Basic-T3 element compared to the DSG element once again highlights the effectiveness of the DSG element technology in preventing transverse shear locking.
 \newpage
-\section{Geometically non-linear tests}
+\section{Geometrically non-linear static tests}
 
-Large rotations and displacements mark the departure from geometrically linear to non-linear analyses, however, the assumption of small strains is still maintained. The extension of the elements to geometrically non-linear problems is handled by employing an existing Kratos class which provides co-rotational transformations for shells. At each increment in the non-linear solution, the large displacements and rotations of each element is mapped by rigid body translations and rotations, thus limiting the strains experienced by the element to reasonably small magnitudes. The performance of the element in geometrically non-linear problems is considered with two benchmarks.
+Large rotations and displacements mark the departure from geometrically linear to non-linear analyses. By employing the already implemented EICR CE formulation as described in section \ref{EICR overview}, both shell elements can be extended from linear geometry limitations to handle large displacements, provided deformational strains remain small. The performance of the elements in geometrically non-linear problems are considered with two benchmarks.
 
 \subsection{Hinged cylindrical roof}
 \label{validation:hinged cyl roof}
@@ -147,7 +149,7 @@ The first geometrically non-linear benchmark is the snap-through of a hinged cyl
 \end{figure}
 
  
-The load displacement curve plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference path from \cite{Sze2004}. Both elements clearly follow the initial path, and then rejoin the reference solution to correctly resolve the structure in it's snapped-through state.
+The load displacement curve plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference path from \cite{Sze2004}. Both elements correctly resolve the entire equilibrium path including both critical points before ending in the structure's snapped-through state.
 
 \newpage
 \subsection{Open cylinder pull-out}
@@ -165,16 +167,16 @@ The second geometrically non-linear benchmark is the pull-out of an open cylinde
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{Load_displacement_curve_open_cylinder_pullout.pdf}}
-	\caption{\label{ref_label_overall}Open cylinder pullout benchmark}
+	\caption{\label{ref_label_overall}Open cylinder pull-out benchmark}
 \end{figure}
 
- The load-displacement curve above plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference solution \cite{Sze2004}. Although both elements closely follow the reference path, the ANDES-DKQ performs better in this test than the DSG element. Despite this, the error of the DSG element at maximum load is still only 1.7\%.
+ The load-displacement curve above plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference solution \cite{Sze2004}. Both elements closely follow the reference path, which demonstrates the structure gradually activating membrane stiffness before suddenly straightening out and becoming entirely membrane dominated.
 
-\section{Dynamic tests}
+\section{Geometrically linear and non-linear dynamic tests}
 
 Dynamic problems introduce inertial effects into the array of phenomena analysed. Combined with the aforementioned co-rotational formulation, it is possible to accurately resolve bodies undergoing large movements over time.
 
-\subsection{Shell pendulum}
+\subsection{Non-linear dynamic shell pendulum}
 \label{validation:shell pendulum}
 The first dynamic benchmark is a simple shell pendulum allowed to freely rotate along one hinged edge. The initial horizontal configuration of the $1m\times1m\times0.1m$ thick square plate is subject to gravity $g = 9.8\ m/s^2$ acting in the vertical $Z$ direction. The material of the plate is described by $E = 1\times 10^9 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as drawn below.
 
@@ -199,7 +201,7 @@ The first dynamic benchmark is a simple shell pendulum allowed to freely rotate 
 
 The plot of displacement over time demonstrates the ability of both elements to handle large displacements and rotations, agreeing with the reference solution of the existing Kratos quadrilateral shell element. As expected, the minimum vertical displacement of $u_z=-1m$ corresponds to the position of bottom dead centre of the plate, while the maximum vertical displacement of $u_z=0m$ corresponds to a fully horizontal plate orientation
 
-\subsection{Oscillating clamped plate}
+\subsection{Linear dynamic oscillating clamped plate}
 
 The oscillating clamped plate benchmark subjects a clamped cantilever square plate $2m\times2m\times0.1m$ thick to a uniform globally oriented surface pressure of $P_z = -0.25 Pa$. The plate material is linear elastic characterised by $E = 1\times 10^6 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as illustrated below.
 
@@ -226,7 +228,7 @@ The oscillating clamped plate benchmark subjects a clamped cantilever square pla
 
 \section{Quantity recovery tests}
 
-Although displacements are the primary solution variables of a finite element analysis, recovered quantities, such as strains, stresses and force resultants are often more determinant to the success or failure of a system. The following tests validate the implemented elements ability to correctly recovery these quantities.
+Although displacements are the primary solution variables of a finite element analysis, recovered quantities, such as strains, stresses and force resultants are often more critical to the success or failure of a system. The following tests validate the implemented elements ability to correctly recovery these quantities.
 
 \subsection{Simply supported dome with oculus under self weight}
 \label{subsection:dome_test}
@@ -351,7 +353,7 @@ Graphs plotted along an X coordinate follow the same path as the preceding tests
 	\caption{\label{Navier_tri_s_xx_yy}Stresses of the Navier supported plate under uniformly distributed load}
 \end{figure}
 
-The DSG element shows good agreement with the ANSYS results across all stress quantities considered.
+The DSG element shows good agreement with the ANSYS results across all stress quantities considered. The transverse shear stress results have additional result cases of the mesh rotated 90 degrees and an unstructured mesh of similar element size to evaluate if the DSG nodal numbering dependency affects the results. One notes that $\sigma_{yz}$ of the DSG result is essentially the same as $\sigma_{xz}$ of the DSG mesh rotated 90 degrees, as is the case of the reverse too. Furthermore, the unstructured results appear to generally follow the ANSYS results regardless. Thus, it's suspected that the DSG nodal ordering may be affecting the transverse shear stress accuracy, although acceptable accuracy is still achieved when one considers that derived quantities are in general less accurate than displacements.
 
 \section{Composite tests}
 
@@ -451,7 +453,7 @@ To consider the non-linear static performance of composite shells, the hinged cy
 
 The load displacement curve above clearly shows the ability of both elements to accurately resolve the equilibrium path of the composite roof through the pre and post-critical ranges.
 
-\subsection{Composite dynamics: shell pendulum and oscillating square plate - FIXUP SECOND GRAPH FONT SIZE}
+\subsection{Composite dynamics: shell pendulum and oscillating square plate}
 
 The shell pendulum test originally presented in section \ref{validation:shell pendulum} is identically repeated for a composite laminate material. A laminate of total thickness $h = 0.1m$ is considered with a stacking sequence of [0/90/90/0]. The material properties of each lamina are as per those defined in the composite barrel vault test (section \ref{validation:composite barrel vault}). Since the general lumped and consistent mass matrices were verified in section \ref{validation:shell pendulum}, only the lumped case is considered in in this test to validate the correct integration of composite material in dynamics. The reference solution for this test is that obtained by Strand7 with a lumped mass matrix.
 %swinging plate material setup:

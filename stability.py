@@ -92,7 +92,7 @@ for k in range(b_div+1):
     L = np.sqrt(a**2 + b**2)
     
     
-    u_lim = 2.5*b
+    u_lim = 2.25*b
     u_div = 50
     
     a_s = sp.Symbol('a')
@@ -196,16 +196,16 @@ plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', linewidth=3.0,label = 'LPB',antialia
 #         label = 'LPB',antialiased=True)
 
 
-plt.plot(u_lpb,lamda_lpb,color = '#79BFA1', linestyle='None', markerfacecolor= 'None',markeredgecolor= '#79BFA1', markersize = 7.0, marker='o', label = None,antialiased=True)
+plt.plot(u_lpb[1],lamda_lpb[1],color = '#79BFA1', linestyle='None', markerfacecolor= 'None',markeredgecolor= '#79BFA1', markersize = 10.0, marker='o', markeredgewidth = 3.0, label = None,antialiased=True)
 
-plt.plot(u_c1,lamda_c1,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
-plt.plot(u_c2,lamda_c2,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
+plt.plot(u_c1,lamda_c1,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 10.0, marker='o', markeredgewidth = 3.0, label = None,antialiased=True)
+plt.plot(u_c2,lamda_c2,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 10.0, marker='o', markeredgewidth = 3.0, label = None,antialiased=True)
 
 
-plt.plot(u_c1,0,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
-plt.plot(u_c2,0,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
-plt.plot([u_c1,u_c1],[0,lamda_c1],color = 'red', linestyle='--',label = None,antialiased=True)
-plt.plot([u_c2,u_c2],[0,lamda_c2],color = 'red', linestyle='--',label = None,antialiased=True)
+#plt.plot(u_c1,0,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
+#plt.plot(u_c2,0,color = 'red', linestyle='None', markerfacecolor= 'None',markeredgecolor= 'red', markersize = 7.0, marker='o', label = None,antialiased=True)
+plt.plot([u_c1,u_c1],[0,lamda_c1],color = 'red', linestyle='-',linewidth=3.0,label = None,antialiased=True)
+plt.plot([u_c2,u_c2],[0,lamda_c2],color = 'red', linestyle='-',linewidth=3.0,label = None,antialiased=True)
 #plt.plot(phi_ref,n_theta_hand,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
 #lg = plt.legend()

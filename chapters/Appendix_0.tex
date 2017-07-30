@@ -20,13 +20,13 @@ An analytical stability analysis of the Mises truss system considered in chapter
 	\label{pic:app0}
 \end{figure}
 
-The kinematics of the system are considered first by describing the undeformed truss lengths $L$ (which are the same for both bars), deformed lengths $l$ and the Green-Lagrange strain $\epsilon_{gl}$. Truss 1 is considered first:
+The kinematics of the system are considered first by describing the undeformed truss lengths $L$ (which are the same for both bars), deformed lengths $l$ and the Green-Lagrange strain $\epsilon_{gl}$. Truss 1 (the left truss) is considered first:
 
 \begin{equation} 
-L^2 = a^2 + b^2
+L^2 = a^2 + b^2\ ,
 \hspace{10mm}
 l_1^2 = (a+u)^2 + (b-w)^2 = L^2 + u^2 + 2au +w^2 -2bw
-\label{eqapp0_1}
+\label{eqapp0_1}\ .
 \end{equation}
 
 The Green-Lagrange strain measure for a truss is recalled and specified, as is it's first variation:
@@ -34,7 +34,7 @@ The Green-Lagrange strain measure for a truss is recalled and specified, as is i
 \epsilon_{gl1} = \frac{1}{2}
 \Big(\frac{l_1^2-L^2}{L^2}\Big)
 =
-\Big(\frac{u^2 + 2au +w^2 -2bw}{2L^2}\Big)
+\Big(\frac{u^2 + 2au +w^2 -2bw}{2L^2}\Big)\ ,
 \hspace{10mm}
 \delta\epsilon_{gl1} = 
 \frac{1}{L^2}
@@ -43,21 +43,19 @@ The Green-Lagrange strain measure for a truss is recalled and specified, as is i
 +
 (w-b)\delta w
 \Big]
-\label{eqapp0_2}
+\label{eqapp0_2}\ .
 \end{equation}
 
-The kinematics of Truss 2 are presented:
-
+The kinematics of Truss 2 (the right truss) are presented:
 \begin{equation} 
 l_2^2 = (a-u)^2 + (b-w)^2 = L^2 + u^2 - 2au +w^2 -2bw
-\label{eqapp0_2_1}
+\label{eqapp0_2_1}\ ,
 \end{equation}
-
 \begin{equation} 
 \epsilon_{gl2} = \frac{1}{2}
 \Big(\frac{l_2^2-L^2}{L^2}\Big)
 =
-\Big(\frac{u^2 - 2au +w^2 -2bw}{2L^2}\Big)
+\Big(\frac{u^2 - 2au +w^2 -2bw}{2L^2}\Big)\ ,
 \hspace{10mm}
 \delta\epsilon_{gl1} = 
 \frac{1}{L^2}
@@ -66,21 +64,21 @@ l_2^2 = (a-u)^2 + (b-w)^2 = L^2 + u^2 - 2au +w^2 -2bw
 +
 (w-b)\delta w
 \Big]
-\label{eqapp0_2_2}
+\label{eqapp0_2_2}\ .
 \end{equation}
 
-Shifting towards stresses, the 2nd Piola-Kirchhoff stresses are linked to the Green-Lagrange strains via a linearly elastic constitutive law characterised by an axial Young's Modulus $E$.
+Shifting towards stresses, the 2nd Piola-Kirchhoff stresses are linked to the Green-Lagrange strains via a linearly elastic constitutive law characterised by an axial Young's Modulus $E$:
 
 \begin{equation} 
 \sigma_{pk2} = E \epsilon_{gl}
-\label{eqapp0_3}
+\label{eqapp0_3}\ .
 \end{equation}
 
 With the conjugate energy quantities defined, the virtual work expression of the system may be established, in general:
 
 \begin{equation} 
 -\delta W = \delta W_{int} - \delta W_{ext} = 0
-\label{eqapp0_4}
+\label{eqapp0_4}\ .
 \end{equation}
 
 Clarifying with respect to the system considered yields:
@@ -93,7 +91,7 @@ Clarifying with respect to the system considered yields:
 \int_{V_2} \sigma_{pk2(2)} \epsilon_{gl2}
 \ dV_2
 - \lambda F \delta w = 0
-\label{eqapp0_5}
+\label{eqapp0_5}\ .
 \end{equation}
 
 Combining the kinematics and constitutive relations yields a crude form of the residual vector $\mathbf{r}$:
@@ -118,7 +116,7 @@ Combining the kinematics and constitutive relations yields a crude form of the r
 		(w-b)\delta w
 		\Big] 
 		- \lambda F \delta w = 0
-		\label{eqapp0_6_0}
+		\label{eqapp0_6_0}\ .
 	\end{aligned}
 \end{gather}
 
@@ -132,7 +130,7 @@ Development of the above expression, and arranging into vector form yields:
 \end{pmatrix}
 =
 \mathbf{0}
-\label{eqapp0_6_1}
+\label{eqapp0_6_1}\ .
 \end{equation}
 
 Recalling that the system tangent matrix $\mathbf{K}$ is the gradient of the system residual, as per equation \ref{eqstab01}, it can be expressed as follows:
@@ -146,44 +144,40 @@ Recalling that the system tangent matrix $\mathbf{K}$ is the gradient of the sys
 3u^2 + w^2 - 2bw +2a^2 & 2uw -2bu \\
 2uw - 2bu & u^2 + 3w^2 - 6bw + 2b^2
 \end{pmatrix}
-\label{eqapp0_7}
+\label{eqapp0_7}\ .
 \end{equation}
 
 Key to stability analysis are the calculation of critical points which indicate the onset of instability. These points occur when the determinant of the tangent matrix vanishes, which reduces to the following expression:
-
 \begin{equation} 
 (w^2 - 2bw +2a^2)
 (3w^2 -6bw +2b^2) = 0
-\label{eqapp0_8}
+\label{eqapp0_8}\ .
 \end{equation}
 
 For the system considered ($a=b=EA=F=1$), the roots of the above equation are:
-
 \begin{equation} 
 w_{crit1} = 0.4226
 \hspace{10mm}
 w_{crit2} = 1.5774
-\label{eqapp0_9}
+\label{eqapp0_9}\ .
 \end{equation}
 
 By substituting these into the system residual the corresponding critical load factors can be determined:
-
 \begin{equation} 
 \lambda_{crit1} = 0.1361
 \hspace{10mm}
 \lambda_{crit2} = -0.1361
-\label{eqapp0_10}
+\label{eqapp0_10}\ .
 \end{equation}
 
 With the non-linear portion of the analysis complete, a linearised prebuckling analysis of the system is considered. The general eigenproblem solved in the LPB analysis is recalled from equation \ref{eqstab5}.
-
  \begin{equation} 
 det\big[
 \mathbf{K}_e +
 {\lambda}
 \mathbf{K}_g(\lambda_{ref})
 \big]\mathbf{z} = 0
-\label{eqapp0_11}
+\label{eqapp0_11}\ .
 \end{equation}
 
 The elastic matrix $\mathbf{K}_e$ is easily determined from $\mathbf{K}(\mathbf{u} = \mathbf{0})$, while the geometric stiffness matrix $\mathbf{K}_g$ for a truss is determined as follows:
@@ -191,7 +185,7 @@ The elastic matrix $\mathbf{K}_e$ is easily determined from $\mathbf{K}(\mathbf{
  \begin{equation} 
 \mathbf{K}_g = 
 \frac{N}{l}
-\label{eqapp0_12}
+\label{eqapp0_12}\ .
 \end{equation}
 
 $N$ is the normal force in the trusses, derived from vertical static equilibrium, and can also be expressed in terms of the applied load. Furthermore, under the LPB assumption of small displacements, the deformed and undeformed lengths are considered equivalent $l \approx L$. Thus, $\mathbf{K}_g$ can be reduced to:
@@ -203,7 +197,7 @@ $N$ is the normal force in the trusses, derived from vertical static equilibrium
 1 & 0 \\
 0 & 1
 \end{pmatrix}
-\label{eqapp0_13}
+\label{eqapp0_13}\ .
 \end{equation}
 
 The general LPB eigensystem, focussed on critical load factors only, can be assembled:
@@ -215,13 +209,12 @@ The general LPB eigensystem, focussed on critical load factors only, can be asse
 0 &  \frac{EA}{L^3} 2b^2 - \frac{\lambda F}{b}
 \end{pmatrix}
 = 0
-\label{eqapp0_14}
+\label{eqapp0_14}\ .
 \end{equation}
 
 For the system considered ($a=b=EA=F=1$), the LPB critical load factors coalesce and are calculated to be:
-
 \begin{equation} 
 \lambda_{lpb\ crit1} = 
 \lambda_{lpb\ crit2} = 0.7071
-\label{eqapp0_15}
+\label{eqapp0_15}\ .
 \end{equation}

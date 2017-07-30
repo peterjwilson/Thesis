@@ -25,7 +25,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {11}{\ignorespaces DKQ DOF arrangement and geometry \cite {Bar12}\relax }}{18}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Shell assembly benefitting from drilling DOFs \cite {BischLitBook04}\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {12}{\ignorespaces Shell assembly benefiting from drilling DOFs \cite {BischLitBook04}\relax }}{20}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {13}{\ignorespaces Material composition of the Boeing 787 \cite {AMCA2017}\relax }}{23}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
@@ -51,21 +51,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {22}{\ignorespaces Examples of response diagrams \cite {FelippaNFEMTour2016}\relax }}{40}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {23}{\ignorespaces Stability analysis response diagrams \cite {FelippaStabilityBasics2016}\relax }}{41}{figure.caption.28}
+\contentsline {figure}{\numberline {23}{\ignorespaces Stability analysis response diagrams \cite {FelippaStabilityBasics2016}\relax }}{42}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {24}{\ignorespaces Mises truss geometry\relax }}{44}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {25}{\ignorespaces Ratio of Mises truss LPB and NL critical load factors across varying geometry\relax }}{45}{figure.caption.30}
+\contentsline {figure}{\numberline {25}{\ignorespaces Mises truss response diagram\relax }}{46}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {26}{\ignorespaces Ratio of Mises truss LPB and NL critical load factors across varying geometry\relax }}{46}{figure.caption.31}
+\contentsline {figure}{\numberline {26}{\ignorespaces Ratio of Mises truss LPB and NL critical load factors across varying geometry\relax }}{47}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {27}{\ignorespaces CR kinematic description \cite {FelippaCR1_2016}\relax }}{47}{figure.caption.32}
+\contentsline {figure}{\numberline {27}{\ignorespaces CR kinematic description \cite {FelippaCR1_2016}\relax }}{48}{figure.caption.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {28}{\ignorespaces EICR scheme \cite {FelippaCR1_2016}\relax }}{48}{figure.caption.33}
+\contentsline {figure}{\numberline {28}{\ignorespaces EICR scheme \cite {FelippaCR1_2016}\relax }}{49}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {29}{\ignorespaces Kinematics of co-rotated element \cite {felippa2000systematic}\relax }}{49}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {30}{\ignorespaces Movement from global to CR frames \cite {felippa2005unified}\relax }}{51}{figure.caption.35}
+\contentsline {figure}{\numberline {30}{\ignorespaces Movement from global to CR frames \cite {felippa2005unified}\relax }}{52}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {31}{\ignorespaces High level overview of DSG element workflow\relax }}{59}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
@@ -95,7 +95,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {44}{\ignorespaces Hinged cylindrical roof benchmark\relax }}{96}{figure.caption.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {45}{\ignorespaces Open cylinder pullout benchmark\relax }}{97}{figure.caption.49}
+\contentsline {figure}{\numberline {45}{\ignorespaces Open cylinder pull-out benchmark\relax }}{97}{figure.caption.49}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {46}{\ignorespaces Shell pendulum definition\relax }}{98}{figure.caption.50}
 \defcounter {refsection}{0}\relax 
@@ -209,19 +209,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {71}{\ignorespaces Shear wrinkling of plate setup\relax }}{123}{figure.caption.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {72}{\ignorespaces Plate shear stability analysis: lateral displacement vs lateral load\relax }}{123}{figure.caption.77}
+\contentsline {figure}{\numberline {72}{\ignorespaces Shear wrinkling of plate: lateral displacement vs lateral load\relax }}{123}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {73}{\ignorespaces Plate shear stability analysis: out of plane mid-point displacement vs lateral load\relax }}{124}{figure.caption.78}
+\contentsline {figure}{\numberline {73}{\ignorespaces Shear wrinkling of plate: out of plane mid-point displacement vs lateral load\relax }}{124}{figure.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {74}{\ignorespaces Plate wrinkling: ANDES-DKQ Z-displacement plots over equilibrium path\relax }}{125}{figure.caption.79}
+\contentsline {figure}{\numberline {74}{\ignorespaces Shear wrinkling of plate: ANDES-DKQ Z-displacement plots over equilibrium path\relax }}{125}{figure.caption.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {75}{\ignorespaces Plate wrinkling: Kratos-T3 and DSG Z-displacement plots over equilibrium path\relax }}{126}{figure.caption.80}
+\contentsline {figure}{\numberline {75}{\ignorespaces Shear wrinkling of plate: Kratos-T3 and DSG Z-displacement plots over equilibrium path\relax }}{126}{figure.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {76}{\ignorespaces Plate wrinkling: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path\relax }}{127}{figure.caption.81}
+\contentsline {figure}{\numberline {76}{\ignorespaces Shear wrinkling of plate: ANDES-DKQ and Basic-DKQ Z-displacement plots over equilibrium path\relax }}{127}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {77}{\ignorespaces Plate shear stability analysis: maximum absolute out of plane displacement vs lateral load\relax }}{128}{figure.caption.82}
+\contentsline {figure}{\numberline {77}{\ignorespaces Shear wrinkling of plate: maximum absolute out of plane displacement vs lateral load\relax }}{128}{figure.caption.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {78}{\ignorespaces Reduction of solution space due to structural modelling in FEM\relax }}{130}{figure.caption.83}
+\contentsline {figure}{\numberline {78}{\ignorespaces Trade-off between linear triangle and quadrilateral elements\relax }}{130}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {79}{\ignorespaces Reduction of solution space due to structural modelling in FEM\relax }}{131}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
@@ -245,8 +245,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {89}{\ignorespaces Mises truss geometry\relax }}{151}{figure.caption.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {90}{\ignorespaces DSG concept and Timoshenko kinematics\relax }}{155}{figure.caption.95}
+\contentsline {figure}{\numberline {90}{\ignorespaces DSG concept and Timoshenko kinematics \cite {Ble00}\relax }}{155}{figure.caption.95}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {91}{\ignorespaces DSG triangle local coordinates and DOFs \cite {Ngu13}\relax }}{156}{figure.caption.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {92}{\ignorespaces Mid-plane Von Mises stress plots of the simply supported dome analysis\relax }}{163}{figure.caption.97}
+\contentsline {figure}{\numberline {92}{\ignorespaces Dome geometry and loading\relax }}{163}{figure.caption.97}

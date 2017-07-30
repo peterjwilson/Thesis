@@ -121,7 +121,7 @@
       {{hash=BKJ}{%
          family={Bathe},
          familyi={B\bibinitperiod},
-         given={Klaus-JÜRgen},
+         given={Klaus-Jürgen},
          giveni={K\bibinitperiod-J\bibinitperiod},
       }}%
       {{hash=HLW}{%
@@ -371,8 +371,8 @@
          giveni={K\bibinitperiod-U\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Technische Universitaet Muenchen}%
+    \list{organization}{1}{%
+      {Chair of Structural Analysis, Technical University of Munich}%
     }
     \strng{namehash}{BKU1}
     \strng{fullhash}{BKU1}
@@ -380,8 +380,10 @@
     \field{labeltitlesource}{title}
     \field{sortinit}{B}
     \field{sortinithash}{B}
-    \field{title}{Lecture notes in Plates}
+    \field{title}{Lecture: Theory of plates}
     \field{year}{2016}
+    \warn{\item Invalid format of field 'date' \item Invalid format of field
+  'date'}
   \endentry
 
   \entry{Ble00}{article}{}
@@ -534,6 +536,9 @@
          giveni={C\bibinitperiod},
       }}%
     }
+    \list{organization}{1}{%
+      {Nonlinear Finite Element Methods, University of Colorado at Boulder}%
+    }
     \list{publisher}{1}{%
       {University of Colorado at Boulder}%
     }
@@ -556,6 +561,9 @@
          given={C.A.},
          giveni={C\bibinitperiod},
       }}%
+    }
+    \list{organization}{1}{%
+      {Nonlinear Finite Element Methods, University of Colorado at Boulder}%
     }
     \list{publisher}{1}{%
       {University of Colorado at Boulder}%
@@ -580,6 +588,9 @@
          giveni={C\bibinitperiod},
       }}%
     }
+    \list{organization}{1}{%
+      {Nonlinear Finite Element Methods, University of Colorado at Boulder}%
+    }
     \list{publisher}{1}{%
       {University of Colorado at Boulder}%
     }
@@ -603,6 +614,9 @@
          giveni={C\bibinitperiod},
       }}%
     }
+    \list{organization}{1}{%
+      {Advanced Finite Element Methods, University of Colorado at Boulder}%
+    }
     \list{publisher}{1}{%
       {University of Colorado at Boulder}%
     }
@@ -625,6 +639,10 @@
          given={C.A.},
          giveni={C\bibinitperiod},
       }}%
+    }
+    \list{organization}{1}{%
+      {Introduction to Aerospace Structures, University of Colorado at
+  Boulder}%
     }
     \list{publisher}{1}{%
       {University of Colorado at Boulder}%

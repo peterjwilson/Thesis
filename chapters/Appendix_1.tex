@@ -10,19 +10,19 @@
 \label{sec:Basic-DKQ quadrilateral formulation}
 \renewcommand{\Thema}{Basic-DKQ quadrilateral formulation}
 
-Introduced in section \ref{section:shell obstacle course}, the Basic-DKQ quadrilateral element represents the ANDES-DKQ formulation with the membrane ANDES element technology replaced with an un-enhanced displacement based membrane formulation. The DKQ bending formulation is used as per section \ref{section:DKQ bending formulation}.
+Introduced in section \ref{section:shell obstacle course}, the Basic-DKQ quadrilateral element represents the ANDES-DKQ formulation with it's membrane ANDES element technology replaced with an un-enhanced displacement based membrane formulation. The DKQ bending formulation is used as per section \ref{section:DKQ bending formulation}.
 
 The membrane stiffness of the Basic-DKQ formulation is purely displacement based and employs the standard bi-linear quadrilateral shape functions:
 \begin{gather} 
 \begin{aligned}
-&N_1 (\xi , \eta) = \frac{1}{4} (1-\xi)(1-\eta)
+&N_1 (\xi , \eta) = \frac{1}{4} (1-\xi)(1-\eta)\ ,
 \\
-&N_2 (\xi , \eta) = \frac{1}{4} (1+\xi)(1-\eta)
+&N_2 (\xi , \eta) = \frac{1}{4} (1+\xi)(1-\eta)\ ,
 \\
-&N_3 (\xi , \eta) = \frac{1}{4} (1+\xi)(1+\eta)
+&N_3 (\xi , \eta) = \frac{1}{4} (1+\xi)(1+\eta)\ and
 \\
 &N_4 (\xi , \eta) = \frac{1}{4} (1-\xi)(1+\eta)
-\label{eqApp1_1}
+\label{eqApp1_1}\ .
 \end{aligned}
 \end{gather}
 The membrane strains are related to the discrete in-plane membrane displacements $\hat{\mathbf{v}}$ via the differential operator $\mathbf{L}$ and the aforementioned shape functions $\mathbf{N}$ as such:
@@ -44,7 +44,7 @@ and
 \hat{{v}}_{xi} \\
 \hat{{v}}_{yi}
 \end{pmatrix}
-\label{eqApp1_2}
+\label{eqApp1_2}\ .
 \end{equation}
 The differential operator is defined as:
 \begin{equation}
@@ -53,7 +53,7 @@ The differential operator is defined as:
 0 & \frac{\partial}{\partial y}\\
 \frac{\partial}{\partial y} & \frac{\partial}{\partial x}
 \end{pmatrix}
-\label{eqApp1_3}
+\label{eqApp1_3}\ .
 \end{equation}
 
 The matrix of shape functions is structured as follows:
@@ -68,7 +68,7 @@ with
 {N}_i & 0\\
 0& N_i
 \end{pmatrix}
-\label{eqApp1_4}
+\label{eqApp1_4}\ .
 \end{equation}
 The basic membrane strain displacement matrix $\mathbf{B}$ is thus:
 \begin{equation}
@@ -83,7 +83,7 @@ with
 0& {N}_{i,y}\\
 {N}_{i,y} & {N}_{i,x}
 \end{pmatrix}
-\label{eqApp1_5}
+\label{eqApp1_5}\ .
 \end{equation}
 The entries of which can be calculated with the help of the Jacobian $\mathbf{J}$:
 \begin{equation}
@@ -91,8 +91,9 @@ The entries of which can be calculated with the help of the Jacobian $\mathbf{J}
 \frac{\partial x}{\partial \xi} & \frac{\partial y}{\partial \xi} \\
 \frac{\partial x}{\partial \eta} & \frac{\partial y}{\partial \eta}
 \end{pmatrix}
-\label{eqApp1_6}
+\label{eqApp1_6}\ ,
 \end{equation}
+applied to the shape function parametric derivatives yields
 \begin{equation}
 \mathbf{J}^{-1} 
 \begin{pmatrix}
@@ -104,12 +105,12 @@ The entries of which can be calculated with the help of the Jacobian $\mathbf{J}
 {N}_{1,x} & {N}_{2,x} & {N}_{3,x} & {N}_{4,x}\\
 {N}_{1,y} & {N}_{2,y} & {N}_{3,y} & {N}_{4,y}
 \end{pmatrix}
-\label{eqApp1_7}
+\label{eqApp1_7}\ .
 \end{equation}
 
 The above strain displacement matrix doesn't cover drilling stiffnesses, so an artificial drilling stiffness as per the DSG element formulation equation \ref{eqtdrilling} was added for each node after the construction of the element stiffness matrix:
 
 \begin{equation} 
 K_{\beta_z} =  \frac{max(K_{ij}\delta_{ij})}{1000}
-\label{eqtdrilling1}
+\label{eqtdrilling1}\ .
 \end{equation}

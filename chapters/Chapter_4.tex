@@ -17,20 +17,20 @@
 \setcounter{MaxMatrixCols}{20}
 %\captionsetup{justification=centering}
 
-\chapter[ANDES-DKQ quadrilateral shell element]{ANDES-DKQ quadrilateral \\ shell element}
-\renewcommand{\Thema}{ANDES-DKT quadrilateral shell element}
+\chapter[ANDES-DKQ linear quadrilateral shell element]{ANDES-DKQ linear \\ quadrilateral shell element}
+\renewcommand{\Thema}{ANDES-DKT linear quadrilateral shell element}
 
-The following chapter outlines the formulation and implementation of the stiffness matrix, mass matrix and quantity recovery for the ANDES-DKQ quadrilateral shell element in Kratos.
+This chapter concerns itself with the ANDES-DKQ linear quadrilateral shell element formulation and implementation in Kratos. The stiffness matrix formulation and implementation, lumped and consistent mass matrix details and stress and strain recovery are subsequently presented.
 
 \section{Stiffness matrix formulation}
 
-As per the element technology discussion in section \ref{FE_tech}, the ANDES-DKQ element uses different finite element technologies for the membrane and bending components, both of which are subsequently developed. 
+As per the element technology discussion in section \ref{FE_tech}, the ANDES-DKQ linear quadrilateral element uses different finite element technologies for the membrane and bending components, both of which are subsequently developed. Unlike the DSG element, the underlying 3-parameter formulation means no shear component is present for this element.
 
 \subsection{ANDES membrane formulation}
 
 The membrane formulation is responsible for providing the membrane stiffness of the element. Unlike the linear triangle DSG element, bilinear quadrilaterals are susceptible to membrane locking, and, as such, the ANDES membrane formulation was prudentially chosen as presented in \cite{Hau94}. A full description and theoretical derivation of the ANDES approach falls outside the scope of this document, however, those interested are directed to Militello's and Felippa's initial paper \cite{Fel91} on the formulation.
 
-Only the membrane portion of the total shell element is considered in this section, in which there are three DOFs per node.
+Only the membrane portion of the total shell element is considered in this section, in which there are three DOFs per node:
 
 \begin{equation} 
 \mathbf{u}^T = 
@@ -42,16 +42,16 @@ where
 \hspace{10mm}
 \mathbf{u}{_i}^T = 
 \begin{pmatrix}
-{u_{xi}} & {u_{yi}} & {\beta_{zi}}
+{u_{xi}} & {u_{yi}} & {\theta_{zi}}
 \end{pmatrix}
-\label{equation04}
+\label{equation04}\ .
 \end{equation}
 
 The ANDES membrane formulation, following the FF framework, is split into the basic stiffness related to the basic constant strain displacement matrix $\mathbf{L}$ and the higher order stiffness related to the higher order deviatoric strain displacement matrix $\mathbf{B}_d$.
 
 \begin{equation} 
 \mathbf{K}_{mem} = \mathbf{K}_{b} + \mathbf{K}_{h} = \int_A (\mathbf{L} + \mathbf{B}_d  \mathbf{H}_K)^T \mathbf{C}_{mem} (\mathbf{L} + \mathbf{B}_d \mathbf{H}_K)\ dA
-\label{equationMEM}
+\label{equationMEM}\ .
 \end{equation}
 
 The basic strain displacement matrix $\mathbf{L}$ and the higher order complement $\mathbf{B}_d$ are now developed. 
@@ -69,7 +69,7 @@ where
 \begin{pmatrix}
 \sigma_{xx} & \sigma_{xx} & \tau_{xy}
 \end{pmatrix}
-\label{equation05}
+\label{equation05}\ .
 \end{equation}
 
 The structure of the above expression is resolved as such: 
@@ -98,10 +98,10 @@ where
 {f_{yi}} \\
 {m_{zi}}
 \end{pmatrix}
-\label{equation06}
+\label{equation06}\ .
 \end{equation}
 
-where each nodal entry '$j$' of the lumping matrix $\mathbf{L}$ is constructed with the following cyclic permutation $(i,\ j,\ k,\ l)$ for the four nodes $(1,\ 2,\ 3,\ 4)$:
+Each nodal entry '$j$' of the lumping matrix $\mathbf{L}$ is constructed with the following cyclic permutation $(i,\ j,\ k,\ l)$ for the four nodes $(1,\ 2,\ 3,\ 4)$:
 
 \begin{equation} 
 \mathbf{L}_j = \frac{1}{2 A}
@@ -110,7 +110,7 @@ y_{ki} & 0 & -x_{ki} \\
 0 & -x_{ki} & y_{ki} \\
 \frac{\alpha}{6}(y_{ij}^2 - y_{kj}^2 ) & \frac{\alpha}{6}(x_{ij}^2 - x_{kj}^2 ) & \frac{\alpha}{3}(x_{kj}y_{kj} - x_{ij}y_{ij})
 \end{pmatrix}
-\label{equation07}
+\label{equation07}\ .
 \end{equation}
 
 Throughout this formulation the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\ y_j$ holds. Furthermore, the value of $\alpha$ is taken as 1.5 \cite{Fel91}.
@@ -124,7 +124,7 @@ The membrane higher order stiffness considers a set of higher order DOFs express
 \begin{pmatrix}
 \mathbf{u}_x \\ 
 \mathbf{u}_y \\
-\boldsymbol{\beta}_z
+\boldsymbol{\theta}_z
 \end{pmatrix} 
 \hspace{5mm}
 where
@@ -147,12 +147,12 @@ u_{y4}
 \ ,\hspace{5mm}
 \boldsymbol{\beta}_z= 
 \begin{pmatrix}
-\beta_{z1} \\
-\beta_{z2}  \\
-\beta_{z3}  \\
-\beta_{z4} 
+\theta_{z1} \\
+\theta_{z2}  \\
+\theta_{z3}  \\
+\theta_{z4} 
 \end{pmatrix}
-\label{equation07_2}
+\label{equation07_2}\ .
 \end{equation}
 
 The higher order rotational DOFs are related to the visible DOFs as described below:
@@ -166,7 +166,7 @@ where
 \begin{pmatrix}
 \theta_1^{'} & \theta_2^{'} & \theta_3^{'} & \theta_4^{'} & \bar{\theta}
 \end{pmatrix}
-\label{equation08}
+\label{equation08}\ ,
 \end{equation}
 with
 \begin{gather} 
@@ -186,7 +186,7 @@ with
 		&and
 		\hspace{10mm}
 		{|}\mathbf{J}{|} = \frac{1}{8}[ (x_1 y_2 - x_2 y_1) + (x_2 y_3 - x_3 y_2) + (x_3 y_4 - x_4 y_3) + (x_4 y_1 - x_1 y_4)]
-		\label{equation09}
+		\label{equation09}\ .
 	\end{aligned}
 \end{gather}
 The higher order translational DOFs are related to the visible DOFs as described below:
@@ -199,7 +199,7 @@ where
 \begin{pmatrix}
 \widetilde{u}_x & \widetilde{u}_y
 \end{pmatrix}
-\label{equationu_t}
+\label{equationu_t}\ .
 \end{equation}
 The translational mapping matrix $ \mathbf{H}_{tu}$ was originally prescribed by Haugen to be:
 \begin{equation} 
@@ -208,19 +208,19 @@ The translational mapping matrix $ \mathbf{H}_{tu}$ was originally prescribed by
 {s_\xi}_x & -{s_\xi}_x & {s_\xi}_x & -{s_\xi}_x & {s_\xi}_y & -{s_\xi}_y & {s_\xi}_y & -{s_\xi}_y & 0 & 0 & 0 & 0 \\
 {s_\eta}_x & -{s_\eta}_x & {s_\eta}_x & -{s_\eta}_x & {s_\eta}_y & -{s_\eta}_y & {s_\eta}_y & -{s_\eta}_y & 0 & 0 & 0 & 0
 \end{pmatrix}
-\label{equation10}
+\label{equation10}\ ,
 \end{equation}
 
-Where $\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the Cartesian unit vectors in the $\xi$ and $\eta$ directions respectively.
+where $\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the Cartesian unit vectors in the $\xi$ and $\eta$ directions respectively.
 
-However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes the general translational mapping matrix from \cite{felippa2006supernatural} is utilised and incorporated into Haugen's original approach in equation \ref{equation10}, as outlined below:
+However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes the general translational mapping matrix from Reference \cite{felippa2006supernatural} is utilised and incorporated into Haugen's original approach in equation \ref{equation10}, as outlined below:
 \begin{equation} 
 \mathbf{H}_{tu} =
 \begin{pmatrix}
 H_1{s_\xi}_x & H_2{s_\xi}_x & H_3{s_\xi}_x & H_4{s_\xi}_x & H_1{s_\xi}_y & H_2{s_\xi}_y & H_3{s_\xi}_y & H_4{s_\xi}_y & 0 & 0 & 0 & 0 \\
 H_1{s_\eta}_x & H_2{s_\eta}_x & H_3{s_\eta}_x & H_4{s_\eta}_x & H_1{s_\eta}_y & H_2{s_\eta}_y & H_3{s_\eta}_y & H_4{s_\eta}_y & 0 & 0 & 0 & 0
 \end{pmatrix}
-\label{equation10_1}
+\label{equation10_1}\ .
 \end{equation}
 
 The coefficients $H_i$ are determined with the following geometric calculations \cite{felippa2006supernatural}:
@@ -247,52 +247,51 @@ A_0 = A \\
 A_1 = \frac{x_{34} y_{12} - x_{12} y_{34}}{2} \\
 A_2 = \frac{x_{23} y_{14} - x_{14} y_{23}}{2}
 \end{pmatrix}
-\label{equation10_2}
+\label{equation10_2}\ .
 \end{equation}
 
-Combining both mapping matrices together expresses all higher order DOFs in terms of the visible DOFs:
-
+Combining both rotational and translational mapping matrices together expresses all higher order DOFs in terms of the visible DOFs:
 \begin{equation} 
 \widetilde{\mathbf{u}} = \mathbf{H} \mathbf{u}_H
-\hspace{10mm}
+\hspace{5mm}
 where
-\hspace{10mm}
+\hspace{5mm}
 \mathbf{H} =
 \begin{pmatrix}
 \mathbf{H}_{\theta u} \\
 \mathbf{H}_{ut}
 \end{pmatrix}
-\hspace{10mm}
+\hspace{5mm}
 and
-\hspace{10mm}
+\hspace{5mm}
 \widetilde{\mathbf{u}}^T = 
 \begin{pmatrix}
 \theta_1^{'} & \theta_2^{'} & \theta_3^{'} & \theta_4^{'} & \bar{\theta} &  \widetilde{u}_x & \widetilde{u}_y
 \end{pmatrix}
-\label{equation11}
+\label{equation11}\ .
 \end{equation}
 
 As discussed prior to equation \ref{equation07_2} the higher order membrane stiffness thus far is relative to Haugen's DOF ordering $\mathbf{u}_H$ which does not coincide with Kratos ordering $\mathbf{u}_K = \mathbf{u}$. Since the combined mapping matrix $\mathbf{H}$ is the only link between the visible and higher order DOFs, it is possible to "re-route" it via an additional filter operation to the Kratos DOF arrangement. The Kratos and Haugen DOF ordering can be related with a filter matrix $\mathbf{Z}$:
 
 \begin{equation} 
 \mathbf{u}_{K} = \mathbf{Z} \mathbf{u}_{H} 
-\label{equation11_2}
+\label{equation11_2}\ ,
 \end{equation}
-
+the specifics of which are:
 \begin{equation} 
 \begin{pmatrix}
 u_{x1} \\
 u_{y1} \\
-\beta_{z1} \\
+\theta_{z1} \\
 u_{x2} \\
 u_{y2} \\
-\beta_{z2} \\
+\theta_{z2} \\
 u_{x3} \\
 u_{y3} \\
-\beta_{z3} \\
+\theta_{z3} \\
 u_{x4} \\
 u_{y4} \\
-\beta_{z4} 
+\theta_{z4} 
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -318,22 +317,22 @@ u_{y1} \\
 u_{y2} \\
 u_{y3} \\
 u_{y4} \\
-\beta_{z1} \\
-\beta_{z2}  \\
-\beta_{z3}  \\
-\beta_{z4} 
+\theta_{z1} \\
+\theta_{z2}  \\
+\theta_{z3}  \\
+\theta_{z4} 
 \end{pmatrix}
-\label{equation18_2}
+\label{equation18_2}\ .
 \end{equation}
 
 Hence, the higher order DOFs can be expressed in terms of the Kratos DOFs, with $\mathbf{H}_K$ denoting the transformed filter matrix:
 
 \begin{equation} 
 \widetilde{\mathbf{u}} = \mathbf{H Z} \mathbf{u}_H = \mathbf{H}_K \mathbf{u}_K = \mathbf{H}_K \mathbf{u}
-\label{equation11_3}
+\label{equation11_3}\ .
 \end{equation}
 
-The descriptions for equations from \eqref{equation12} to \eqref{equation22} are condensed from the original element derivation \cite{Hau94} for brevity. The overarching idea of these equations is to relate the higher order nodal strain gauge readings to Cartesian strain displacement matrices $\mathbf{B}_{hi}$.
+The descriptions for equations from \eqref{equation12} to \eqref{equation22} are condensed from the original element derivation \cite{Hau94} for brevity. The overarching idea of the following developments is to relate the higher order nodal strain gauge readings to Cartesian strain displacement matrices $\mathbf{B}_{hi}$.
 
 \begin{figure}[H]
 	%\centering
@@ -370,13 +369,13 @@ The strain gauges are placed as per figure \ref{fig:andes_gauges} and read strai
 \epsilon_\eta \\
 \epsilon_{13}
 \end{pmatrix}
-\label{eqnAndesStrainGauges}
+\label{eqnAndesStrainGauges}\ .
 \end{equation}
 
 The strain readings are related to the higher order degrees of freedom via the nodal strain templates $\mathbf{Q}_i$.
 \begin{equation} 
 \boldsymbol{\epsilon}_{i} = \mathbf{Q}_i \widetilde{\mathbf{v}}
-\label{eqnAndesHigherOrderStrains}
+\label{eqnAndesHigherOrderStrains}\ .
 \end{equation}
 
 \textit{Higher order bending field}
@@ -389,6 +388,7 @@ As per Haugen's PhD thesis, the primary strain mode the field is trying to match
 \chi_{\eta | i} = \frac{d_{\eta | i}}{l_\eta},
 \label{equation12}
 \end{equation}
+
 where the quantities in figure \ref{fig:andes_dims} are calculated as follows:
 \begin{align*} 
 	d_{\xi | i} = \sqrt{(\mathbf{r}_i \times \mathbf{s_\xi}) \cdot (\mathbf{r}_i \times \mathbf{s_\xi})}\ ,
@@ -400,10 +400,10 @@ where the quantities in figure \ref{fig:andes_dims} are calculated as follows:
 	\hspace{10mm}
 	l_\xi = \sqrt{\mathbf{r_\eta} \cdot \mathbf{r_\eta}}\ ,
 	\hspace{10mm}
-	\mathbf{r_\eta} = \frac{1}{2} ( \mathbf{r}_2 + \mathbf{r}_3 - \mathbf{r}_1 - \mathbf{r}_4 )\ ,
+	\mathbf{r_\eta} = \frac{1}{2} ( \mathbf{r}_2 + \mathbf{r}_3 - \mathbf{r}_1 - \mathbf{r}_4 )\ .
 \end{align*}
 
-$\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the normalized parametric base vectors in cartesian coordinates, while $\mathbf{r}_i$ are the nodal position vectors in cartesian coordinates.
+$\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the normalized parametric base vectors in Cartesian coordinates, while $\mathbf{r}_i$ are the nodal position vectors in Cartesian coordinates.
 
 The diagonal strain components of the higher order bending field are also assumed as to be proportional to the distance and curvature along the diagonal, thus yielding:  
 
@@ -419,12 +419,14 @@ where
 	d_{24} = d_{13} = & \sqrt{(\mathbf{r}_{31} \times \mathbf{e}_{24}) \cdot (\mathbf{r}_{31} \times \mathbf{e}_{24})} \hspace{10mm}
 	l_{24} = \sqrt{\mathbf{r}_{24} \cdot \mathbf{r}_{24}}\ ,
 	\hspace{10mm}
-	\mathbf{r}_{24} = \mathbf{r}_2 - \mathbf{r}_4 \\
+	\mathbf{r}_{24} = \mathbf{r}_2 - \mathbf{r}_4\ ,
+	\\
+	\\
 	& l_{13} = \sqrt{\mathbf{r}_{13} \cdot \mathbf{r}_{13}}\ ,
 	\hspace{10mm}
-	\mathbf{r}_{13} = \mathbf{r}_1 - \mathbf{r}_3
+	\mathbf{r}_{13} = \mathbf{r}_1 - \mathbf{r}_3\ ,
 	\hspace{10mm}
-	\mathbf{e}_{24} = \frac{\mathbf{r}_{24}}{l_{24}}
+	\mathbf{e}_{24} = \frac{\mathbf{r}_{24}}{l_{24}}\ .
 	\end{split}
 \end{align*}
 
@@ -445,7 +447,7 @@ Under this torsional regime, $\epsilon_\xi$ is positive in the 1st and 3rd quadr
 \begin{equation} 
 \chi_{\xi t} = \frac{l_\eta}{l_\xi}\ ,
 \hspace{10mm}
-\chi_{\eta t} = \frac{l_\xi}{l_\eta}\ ,
+\chi_{\eta t} = \frac{l_\xi}{l_\eta}\ .
 \label{equation13}
 \end{equation}
 
@@ -459,7 +461,7 @@ Considering the higher order bending and torsional components just outlined, the
 -\rho_1 \chi_{\eta | 1} & -\rho_4 \chi_{\eta | 1} & -\rho_3 \chi_{\eta | 1} & -\rho_2 \chi_{\eta | 1} & -\alpha \chi_{\eta t} & 0 & -\beta_1 \frac{\chi_{\eta | 1}}{\bar{\chi_\eta} l_\eta} \\
 \rho_5 \chi_{24} & \rho_6 \chi_{24} & \rho_7 \chi_{24} & \rho_8 \chi_{24} & 0 & \beta_2 \frac{c_{24 \xi}}{l_{24}} & -\beta_2 \frac{c_{24 \eta}}{l_{24}}
 \end{pmatrix}		
-\label{equation14}
+\label{equation14}\ ,
 \end{equation}
 
 \begin{equation} 
@@ -469,7 +471,7 @@ Considering the higher order bending and torsional components just outlined, the
 \rho_4 \chi_{\eta | 2} & \rho_1 \chi_{\eta | 2} & \rho_2 \chi_{\eta | 2} & \rho_3 \chi_{\eta | 2} & \alpha \chi_{\eta t} & 0 & \beta_1 \frac{\chi_{\eta | 2}}{\bar{\chi_\eta} l_\eta} \\
 \rho_8 \chi_{13} & \rho_5 \chi_{13} & \rho_6 \chi_{13} & \rho_7 \chi_{13} & 0 & -\beta_2 \frac{c_{13 \xi}}{l_{13}} & \beta_2 \frac{c_{13 \eta}}{l_{13}}
 \end{pmatrix}		
-\label{equation14_2}
+\label{equation14_2}\ ,
 \end{equation}
 
 \begin{equation} 
@@ -479,7 +481,7 @@ Considering the higher order bending and torsional components just outlined, the
 -\rho_3 \chi_{\eta | 3} & -\rho_2 \chi_{\eta | 3} & -\rho_1 \chi_{\eta | 3} & -\rho_4 \chi_{\eta | 3} & -\alpha \chi_{\eta t} & 0 & \beta_1 \frac{\chi_{\eta | 3}}{\bar{\chi_\eta} l_\eta} \\
 \rho_7 \chi_{13} & \rho_8 \chi_{13} & \rho_5 \chi_{13} & \rho_6 \chi_{213} & 0 & -\beta_2 \frac{c_{13 \xi}}{l_{13}} & \beta_2 \frac{c_{13 \eta}}{l_{13}}
 \end{pmatrix}		
-\label{equation14_3}
+\label{equation14_3}\ ,
 \end{equation}
 
 \begin{equation} 
@@ -489,7 +491,7 @@ Considering the higher order bending and torsional components just outlined, the
 \rho_2 \chi_{\eta | 4} & \rho_3 \chi_{\eta | 4} & \rho_4 \chi_{\eta | 4} & \rho_1 \chi_{\eta | 4} & \alpha \chi_{\eta t} & 0 & -\beta_1 \frac{\chi_{\eta | 4}}{\bar{\chi_\eta} l_\eta} \\
 \rho_6 \chi_{13} & \rho_7 \chi_{13} & \rho_8 \chi_{13} & \rho_5 \chi_{13} & 0 & \beta_2 \frac{c_{13 \xi}}{l_{13}} & -\beta_2 \frac{c_{13 \eta}}{l_{13}}
 \end{pmatrix}		
-\label{equation15}
+\label{equation15}\ ,
 \end{equation}
 where
 \begin{align*} 
@@ -500,7 +502,7 @@ where
 	c_{24 \xi} = \mathbf{s}_{24}^T \mathbf{s_\xi}\ ,
 	\hspace{10mm}
 	c_{24 \eta} = \mathbf{s}_{24}^T \mathbf{s_\eta}
-	\hspace{10mm}
+	\ .
 \end{align*}
 
 An optimisation of element performance has suggested the following coefficients to be used in the nodal strain gauge templates \cite{Hau94}. 
@@ -523,19 +525,21 @@ An optimisation of element performance has suggested the following coefficients 
 		\hspace{10mm}
 		\beta_1 = 0.6\ ,
 		\hspace{10mm}
-		\beta_2 = 0.0
+		\beta_2 = 0.0\ .
 		\label{equation16}
 	\end{aligned}
 \end{gather}
 
 \textit{Cartesian higher order strain displacement matrix}
 
-The Cartesian strain displacement matrices at the nodes are related to the mapping matrices $\mathbf{Q}_i$ as described below:
+The Cartesian strain displacement matrices at the nodes $\mathbf{B}_{hi}$ are related to the mapping matrices $\mathbf{Q}_i$ as described below:
 \begin{gather} 
 	\begin{aligned}
 		&\mathbf{B}_{h1} = \mathbf{T}_{13}  \mathbf{Q}_{1}\ ,
 		\hspace{10mm}
-		\mathbf{B}_{h3} = \mathbf{T}_{13}  \mathbf{Q}_{3}\\
+		\mathbf{B}_{h3} = \mathbf{T}_{13}  \mathbf{Q}_{3}\ ,
+		\\
+		\\
 		&where 
 		\hspace{10mm} 
 		\mathbf{T}_{13}^{-1} =
@@ -544,14 +548,17 @@ The Cartesian strain displacement matrices at the nodes are related to the mappi
 			s_{\eta x}^2 & s_{\eta y}^2 & s_{\eta x} s_{\eta y} \\
 			s_{24 x}^2 & s_{24 y}^2 & s_{24 x} s_{24 y}
 		\end{pmatrix}
-		\label{equation17}
+		\label{equation17}\ ,
 	\end{aligned}
 \end{gather}
+and:
 \begin{gather} 
 	\begin{aligned}
 		&\mathbf{B}_{h2} = \mathbf{T}_{24}  \mathbf{Q}_{2}\ ,
 		\hspace{10mm}
-		\mathbf{B}_{h4} = \mathbf{T}_{24}  \mathbf{Q}_{4}\\
+		\mathbf{B}_{h4} = \mathbf{T}_{24}  \mathbf{Q}_{4}\ ,
+		\\
+		\\
 		&where 
 		\hspace{10mm} 
 		\mathbf{T}_{24}^{-1} =
@@ -560,14 +567,14 @@ The Cartesian strain displacement matrices at the nodes are related to the mappi
 			s_{\eta x}^2 & s_{\eta y}^2 & s_{\eta x} s_{\eta y} \\
 			s_{13 x}^2 & s_{13 y}^2 & s_{13 x} s_{13 y}
 		\end{pmatrix}
-		\label{equation18}
+		\label{equation18}\ .
 	\end{aligned}
 \end{gather}
 
-The total higher order membrane B matrix $\mathbf{B}_h$ is constructed from the interpolation of the nodal $\mathbf{B}_{hi}$ matrices with standard bi-linear shape functions.
+The total higher order membrane strain-displacement matrix $\mathbf{B}_h$ is constructed from the interpolation of the nodal $\mathbf{B}_{hi}$ matrices with standard bi-linear shape functions.
 \begin{equation} 
 \mathbf{B}_h(\xi,\eta) = (1-\xi)(1-\eta)\mathbf{B}_{h1} + (1+\xi)(1-\eta)\mathbf{B}_{h2} + (1+\xi)(1+\eta)\mathbf{B}_{h3} +	(1-\xi)(1+\eta)\mathbf{B}_{h4} 
-\label{equation19}
+\label{equation19}\ .
 \end{equation}
 
 A requirement of the underlying FF is energy orthogonality between the basic and higher order strain fields, which is not yet fulfilled. This orthogonality can be achieved by rendering the higher order field deviatoric, as per the formulation name, which involves subtracting the mean integral:
@@ -578,20 +585,35 @@ A requirement of the underlying FF is energy orthogonality between the basic and
 with
 \hspace{10mm}
 \bar{\mathbf{B}}_h = \int_A \mathbf{B}_h(\xi,\eta) \ dA
-\label{eqnAndesDevB}
+\label{eqnAndesDevB}\ .
 \end{equation}
+
+\textit{ANDES membrane formulation summary}
+
+The following summary looks back over the ANDES membrane stiffness formulation and provides a high-level overview.
+
+Equation \ref{equationMEM} is repeated, describing the assembly of the ANDES membrane stiffness:
+
+\begin{equation} 
+\mathbf{K}_{mem} = \mathbf{K}_{b} + \mathbf{K}_{h} = \int_A (\mathbf{L} + \mathbf{B}_d  \mathbf{H}_K)^T \mathbf{C}_{mem} (\mathbf{L} + \mathbf{B}_d \mathbf{H}_K)\ dA
+\label{equationMEM_1}\ .
+\end{equation}
+
+The basic strain displacement matrix $\mathbf{L}$ that ensures a constant stress field is presented in equation \ref{equation07}.
+
+The higher order strain displacement matrix $\mathbf{B}_d$ enforces the element enhancements, which are the expression of higher order bending and torsional fields via higher order DOFs. These higher order DOFs are related back to the visible DOFs via the transformed filter matrix $\mathbf{H}_K$ described in equation \ref{equation11_3}.
 
 \subsection{DKQ bending formulation}
 \label{section:DKQ bending formulation}
 
-The bending formulation is responsible for providing the bending stiffness of the element, with an enhanced formulation selected to pre-empt transverse shear locking. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full description and theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. As described in section \ref{dkqtheory}, the transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
+The bending formulation is responsible for providing the bending stiffness of the element, with an enhanced formulation selected to pre-empt transverse shear locking. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. As described in section \ref{dkqtheory}, the DKQ formulation's transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
 
 Only the bending portion of the total shell element is considered in this section, in which there are three nodal DOFs per node $(w_i$ corresponds to $u_{zi}$ in the figure below).
 
 \begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
-	\includegraphics[width=15cm]{images/8nodeseren.png}
+	\includegraphics[width=14cm]{images/8nodeseren.png}
 	\caption{DKQ DOF arrangement and geometry \cite{Bar12}}
 	\label{8nodeseren}
 \end{figure}
@@ -608,7 +630,7 @@ where
 \begin{pmatrix}
 {u_{zi}} & {\theta_{xi}} & {\theta_{yi}}
 \end{pmatrix}
-\label{equationBending}
+\label{equationBending}\ .
 \end{equation}
 
 The nodal rotational interpolation employed is as per the 8 node serendipity quad element:
@@ -623,7 +645,7 @@ The nodal rotational interpolation employed is as per the 8 node serendipity qua
 \beta_{xi} (\xi , \eta) \\
 \beta_{yi} (\xi , \eta)
 \end{pmatrix}
-\label{equation20}
+\label{equation20}\ .
 \end{equation}
 
 where $\psi_i$ are the standard 8 node serendipity shape functions described by Zienkiewicz \cite{Zie77}:
@@ -632,20 +654,29 @@ where $\psi_i$ are the standard 8 node serendipity shape functions described by 
 	\begin{aligned}
 		&\psi_i (\xi , \eta) = \frac{-1}{4} (1 + \xi_i \xi)(1 + \eta_i \eta)(1 - \xi_i \xi - \eta_i \eta)
 		\hspace{10mm}
-		i = 1, 2, 3, 4 \\
+		(i = 1, 2, 3, 4)\ , \\
 		&\psi_i (\xi , \eta) = \frac{1}{2} (1 - \xi^2)(1 + \eta_i \eta)
 		\hspace{10mm}
-		i = 5, 7 \\
+		(i = 5, 7)\ , \\
 		&\psi_i (\xi , \eta) = \frac{1}{2} (1 + \xi_i \xi)(1 - \eta^2)
 		\hspace{10mm}
-		i = 6, 8
-		\label{equation21}
+		(i = 6, 8)
+		\label{equation21}\ ,
 	\end{aligned}
 \end{gather}
 
 and $\xi_i$ and $\eta_i$ are the natural coordinates of the 8 node serendipity element described in figure \ref{8nodeseren}.
 
-The following derivation from equations \eqref{equation22} to \eqref{equation27} is summarised from that of Barrales \cite{Bar12}. The general idea is the construction of a mapping from the standard 12 DOFs at each node to $\beta_x (\xi,\ \eta)$ and $\beta_y (\xi,\ \eta)$ across the element, the derivatives of which are curvatures as expressed in equation \eqref{equation27}.
+The following derivation from equations \eqref{equation22} to \eqref{equation27} is summarised from that of Barrales \cite{Bar12}. The general idea is the construction of a mapping from the standard 12 DOFs at each node to $\beta_x (\xi,\ \eta)$ and $\beta_y (\xi,\ \eta)$ across the element, the derivatives of which are curvatures as expressed in equation \eqref{equation27}. More specifically, it is necessary to relate nodal rotations and transverse displacements such that Kirchhoff characteristics are recovered. The Kirchhoff conditions are imposed at corner nodes $i = 1, 2, 3, 4$ and mid-side nodes $k = 5, 6, 7, 8$ corresponding to figure \ref{8nodeseren} \cite{Bar12}:
+
+\begin{equation} 
+\beta_{xi} + \frac{\partial w}{\partial x} \rvert_i = 0\ ,
+\hspace{10mm}
+\beta_{yi} + \frac{\partial w}{\partial y} \rvert_i = 0\ ,
+\hspace{10mm}
+\beta_{sk} + \frac{\partial w}{\partial s} \rvert_k = 0
+\label{eqsdkt_1}\ .
+\end{equation}
 
 The following quantities are required components for the mapping:
 
@@ -655,20 +686,23 @@ L_{ij} = \sqrt{x_{ij}^2 + y_{ij}^2}\ ,
 x_{ij} = x_i - x_j\ ,
 \hspace{10mm}
 y_{ij} = y_i - y_j
-\label{equation22}
+\label{equation22}\ ,
 \end{equation}
+with:
 \begin{gather} 
 	\begin{aligned}
 		&a_k = \frac{-x_{ij}}{L_{ij}^2}\ ,
 		\hspace{10mm}
-		b_k = \frac{3}{4} \frac{x_{ij} y_{ij}}{L_{ij}^2}\ , \\
+		b_k = \frac{3}{4} \frac{x_{ij} y_{ij}}{L_{ij}^2}\ , 
+		\\
+		\\
 		c_k = \frac{\frac{1}{4} x_{ij}^2 - \frac{1}{2} y_{ij}^2}{L_{ij}^2}\
 		& ,
 		\hspace{10mm}
 		d_k = \frac{-y_{ij}}{L_{ij}^2}\ ,
 		\hspace{10mm}
 		e_k = \frac{\frac{-1}{2} x_{ij}^2 + \frac{1}{4} y_{ij}^2}{L_{ij}^2}
-		\label{equation23}
+		\label{equation23}\ .
 	\end{aligned}
 \end{gather}
 
@@ -681,7 +715,9 @@ The elements of the mapping matrix are arranged as such:
 \vdots \\
 \Psi_{12}^x
 \end{pmatrix}\ ,
-\hspace{10mm}
+\hspace{5mm}
+and
+\hspace{5mm}
 \mathbf{\Psi}^y = 
 \begin{pmatrix}
 \Psi_1^y \\
@@ -694,18 +730,22 @@ The elements of the mapping matrix are arranged as such:
 where the vectors entries are calculated as per the following scheme:
 \begin{gather} 
 	\begin{aligned}
-		&\Psi_{3(i-1)+1}^x (\xi , \eta) = \frac{3}{2} (a_r \psi_r (\xi , \eta) - a_s \psi_s (\xi , \eta) ) \\
-		&\Psi_{3(i-1)+2}^x (\xi , \eta) = b_r \psi_r (\xi , \eta) + b_s \psi_s (\xi , \eta) \\
+		&\Psi_{3(i-1)+1}^x (\xi , \eta) = \frac{3}{2} (a_r \psi_r (\xi , \eta) - a_s \psi_s (\xi , \eta) ) \ ,
+		\\
+		&\Psi_{3(i-1)+2}^x (\xi , \eta) = b_r \psi_r (\xi , \eta) + b_s \psi_s (\xi , \eta) \ ,
+		\\
 		&\Psi_{3(i-1)+3}^x (\xi , \eta) = \psi_i (\xi , \eta) - c_r \psi_r (\xi , \eta) - c_s \psi_s (\xi , \eta)
-		\label{equation25}
+		\label{equation25}\ ,
 	\end{aligned}
 \end{gather}
 \begin{gather} 
 	\begin{aligned}
-		&\Psi_{3(i-1)+1}^y (\xi , \eta) = \frac{3}{2} (d_r \psi_r (\xi , \eta) - d_s \psi_s (\xi , \eta) ) \\
-		&\Psi_{3(i-1)+2}^y (\xi , \eta) = -\psi_i (\xi , \eta) + e_r \psi_r (\xi , \eta) + c_s \psi_s (\xi , \eta) \\
+		&\Psi_{3(i-1)+1}^y (\xi , \eta) = \frac{3}{2} (d_r \psi_r (\xi , \eta) - d_s \psi_s (\xi , \eta) ) \ ,
+		\\
+		&\Psi_{3(i-1)+2}^y (\xi , \eta) = -\psi_i (\xi , \eta) + e_r \psi_r (\xi , \eta) + c_s \psi_s (\xi , \eta) \ ,
+		\\
 		&\Psi_{3(i-1)+3}^y (\xi , \eta) = -b_r \psi_r (\xi , \eta) - b_s \psi_s (\xi , \eta)
-		\label{equation26}
+		\label{equation26}\ ,
 	\end{aligned}
 \end{gather}
 
@@ -714,8 +754,8 @@ with $i$ = 1, 2, 3, 4 and the relationship $(i,\ r,\ s)$ as (1, 5, 8), (2, 6, 5)
 Relating curvatures to displacements yield:
 
 \begin{equation} 
-\boldsymbol{\chi} = \mathbf{B}_{bend} \mathbf{U}
-\label{equation27}
+\boldsymbol{\chi} = \mathbf{B}_{bend} \mathbf{u}
+\label{equation27}\ ,
 \end{equation}
 
 with $\mathbf{B}_{bend}$ constructed as follows:
@@ -748,7 +788,8 @@ and the inverse Jacobian entries $j_{\alpha \beta}$:
 		\begin{pmatrix}
 			J_{11} & J_{12} \\
 			J_{21} & J_{22}
-		\end{pmatrix} \\
+		\end{pmatrix} \ ,
+	\\
 		&j_{11} = \frac{J_{22}}{det[J]}\ ,
 		\hspace{10mm}
 		j_{12} = \frac{-J_{12}}{det[J]}\ ,
@@ -756,7 +797,7 @@ and the inverse Jacobian entries $j_{\alpha \beta}$:
 		j_{21} = \frac{-J_{21}}{det[J]}\ ,
 		\hspace{10mm}
 		j_{22} = \frac{J_{11}}{det[J]}
-		\label{equation29}
+		\label{equation29}\ .
 	\end{aligned}
 \end{gather}
 
@@ -768,60 +809,59 @@ With the separate membrane and bending B matrices developed, the combined shell 
 \mathbf{K}_{el} = \mathbf{B}_{comb}^T \mathbf{C} \mathbf{B}_{comb} 
 \label{equation30}
 \end{equation}
-
+and
 \begin{equation} 
 \mathbf{B}_{comb} = (\mathbf{L} + \mathbf{B}_h) + \mathbf{B}_{bend} = \mathbf{B}_{mem} + \mathbf{B}_{bend} = 
 \begin{pmatrix}
 \mathbf{B}_{comb1} & \mathbf{B}_{comb2} & \mathbf{B}_{comb3} & \mathbf{B}_{comb4}
 \end{pmatrix}
-\label{equation31}
+\label{equation31}\ .
 \end{equation}
 
-The combination of $\textcolor{blue}{membrane}$ and $\textcolor{red}{bending}$ matrices must consider the DOF ordering of each component and the relation to the total shell DOF ordering, as shown below:
-
-\begin{equation} 
-\mathbf{u}_i = 
-\begin{pmatrix}
-\textcolor{blue}{u_{xi}} \\ 
-\textcolor{blue}{u_{yi}} \\ 
-\textcolor{red}{u_{zi}} \\ 
-\textcolor{red}{\beta_{xi}} \\ 
-\textcolor{red}{\beta_{yi}} \\ 
-\textcolor{blue}{\beta_{zi}} \\ 
-\end{pmatrix}
-\label{equation32}
-\end{equation}
-
-Considering this, the addition of the membrane (basic and higher order) B matrices and the bending B matrix is conducted for each node \textit{i} as follows:
-
-\begin{multline}
-	\mathbf{B}_{comb\ i} = \left(
-	\begin{matrix}
-		\textcolor{blue}{\mathbf{B}_{mem}[1,3(i-1) + 1]} & \textcolor{blue}{\mathbf{B}_{mem}[1,3(i-1) + 2]} & 0 \\ 
-		\textcolor{blue}{\mathbf{B}_{mem}[2,3(i-1) + 1]} & \textcolor{blue}{\mathbf{B}_{mem}[2,3(i-1) + 2]} & 0 \\ 
-		0 & 0 & \textcolor{red}{\mathbf{B}_{bend}[1,3(i-1) + 1]} \\ 
-		0 & 0 & \textcolor{red}{\mathbf{B}_{bend}[2,3(i-1) + 1]} \\
-		0 & 0 & \textcolor{red}{\mathbf{B}_{bend}[3,3(i-1) + 1]} \\
-		\textcolor{blue}{\mathbf{B}_{mem}[3,3(i-1) + 1]} & \textcolor{blue}{\mathbf{B}_{mem}[3,3(i-1) + 2]} & 0 \\
-	\end{matrix}\right.                
-	\\
-	\left.
-	\begin{matrix}
-		0 & 0 & \textcolor{blue}{\mathbf{B}_{mem}[1,3(i-1) + 3]} \\ 
-		0 & 0 & \textcolor{blue}{\mathbf{B}_{mem}[2,3(i-1) + 3]} \\ 
-		\textcolor{red}{\mathbf{B}_{bend}[1,3(i-1) + 2]} & \textcolor{red}{\mathbf{B}_{bend}[1,3(i-1) + 3]} & 0 \\ 
-		\textcolor{red}{\mathbf{B}_{bend}[2,3(i-1) + 2]} & \textcolor{red}{\mathbf{B}_{bend}[2,3(i-1) + 3]} & 0 \\
-		\textcolor{red}{\mathbf{B}_{bend}[3,3(i-1) + 2]} & \textcolor{red}{\mathbf{B}_{bend}[3,3(i-1) + 3]} & 0 \\
-		0 & 0 & \textcolor{blue}{\mathbf{B}_{mem}[3,3(i-1) + 3]} \\
-	\end{matrix}\right)
-	\label{equation33}
-\end{multline}
-
+%The combination of $\textcolor{blue}{membrane}$ and $\textcolor{red}{bending}$ matrices must consider the DOF ordering of each component and the relation to the total shell DOF ordering, as shown below:
+%
+%\begin{equation} 
+%\mathbf{u}_i = 
+%\begin{pmatrix}
+%\textcolor{blue}{u_{xi}} \\ 
+%\textcolor{blue}{u_{yi}} \\ 
+%\textcolor{red}{u_{zi}} \\ 
+%\textcolor{red}{\beta_{xi}} \\ 
+%\textcolor{red}{\beta_{yi}} \\ 
+%\textcolor{blue}{\beta_{zi}} \\ 
+%\end{pmatrix}
+%\label{equation32}\ .
+%\end{equation}
+%
+%Considering this, the addition of the membrane (basic and higher order) B matrices and the bending B matrix is conducted for each node \textit{i} as follows:
+%
+%\begin{multline}
+%	\mathbf{B}_{comb\ i} = \left(
+%	\begin{matrix}
+%		\textcolor{blue}{\mathbf{B}_{mem}[1,3(i-1) + 1]} & \textcolor{blue}{\mathbf{B}_{mem}[1,3(i-1) + 2]} & 0 \\ 
+%		\textcolor{blue}{\mathbf{B}_{mem}[2,3(i-1) + 1]} & \textcolor{blue}{\mathbf{B}_{mem}[2,3(i-1) + 2]} & 0 \\ 
+%		0 & 0 & \textcolor{red}{\mathbf{B}_{bend}[1,3(i-1) + 1]} \\ 
+%		0 & 0 & \textcolor{red}{\mathbf{B}_{bend}[2,3(i-1) + 1]} \\
+%		0 & 0 & \textcolor{red}{\mathbf{B}_{bend}[3,3(i-1) + 1]} \\
+%		\textcolor{blue}{\mathbf{B}_{mem}[3,3(i-1) + 1]} & \textcolor{blue}{\mathbf{B}_{mem}[3,3(i-1) + 2]} & 0 \\
+%	\end{matrix}\right.                
+%	\\
+%	\left.
+%	\begin{matrix}
+%		0 & 0 & \textcolor{blue}{\mathbf{B}_{mem}[1,3(i-1) + 3]} \\ 
+%		0 & 0 & \textcolor{blue}{\mathbf{B}_{mem}[2,3(i-1) + 3]} \\ 
+%		\textcolor{red}{\mathbf{B}_{bend}[1,3(i-1) + 2]} & \textcolor{red}{\mathbf{B}_{bend}[1,3(i-1) + 3]} & 0 \\ 
+%		\textcolor{red}{\mathbf{B}_{bend}[2,3(i-1) + 2]} & \textcolor{red}{\mathbf{B}_{bend}[2,3(i-1) + 3]} & 0 \\
+%		\textcolor{red}{\mathbf{B}_{bend}[3,3(i-1) + 2]} & \textcolor{red}{\mathbf{B}_{bend}[3,3(i-1) + 3]} & 0 \\
+%		0 & 0 & \textcolor{blue}{\mathbf{B}_{mem}[3,3(i-1) + 3]} \\
+%	\end{matrix}\right)
+%	\label{equation33}\ .
+%\end{multline}
 \section{Stiffness matrix implementation}
 
 With the formulation of the ANDES-DKQ shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
 
-The new quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are compiled into the 'StructuralMechanicsApplication' module of Kratos. Similar to the DSG triangle element, the new ANDES-DKQ element class $\texttt{ShellThinElement3D4N}$ is inherited from the Kratos base class $\texttt{Element}$ and also leverages the existing capabilities other Kratos classes offer. The general workflow of calculating the ANDES-DKQ stiffness matrix is as follows:
+The new linear quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are compiled into the 'StructuralMechanicsApplication' module of Kratos. Similar to the DSG triangle element, the new ANDES-DKQ element class $\texttt{ShellThinElement3D4N}$ is inherited from the Kratos base class $\texttt{Element}$ and also leverages the existing capabilities other Kratos classes offer. The general workflow of calculating the ANDES-DKQ stiffness matrix is as follows:
 
 \begin{figure}[H]
 	% Define block styles
@@ -854,7 +894,7 @@ $\texttt{InitializeCalculationData()}$ is called first, and pre-calculates quant
 
 $\texttt{CalculateAll()}$ then calls $\texttt{CalculateGaussPointContribution()}$ which starts the Gauss integration loop. At each Gauss point $\texttt{CalculateGaussPointContribution()}$ performs Gauss integration of the expression $\textbf{K}_{contribution}$ = $\textbf{B}_{comb}^T \textbf{C} \textbf{B}_{comb}\  dA$, with the current $\textbf{B}_{comb}$ determined by calling $\texttt{CalculateBMatrix()}$.
 
-With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\texttt{FinalizeCalculations()}$ which transforms the calculated element stiffness from local to global coordinates.
+With the Gauss integration complete, $\texttt{CalculateAll()}$ lastly calls $\texttt{FinalizeCalculations()}$ which transforms the calculated element stiffness and internal force from the EICR $\mathscr{C}^R$ frame to the global frame.
 
 The following pseudocode summarises the key calls and operations involved in calculating the ANDES-DKQ element stiffness matrix.
 
@@ -887,9 +927,9 @@ The following pseudocode summarises the key calls and operations involved in cal
 	\end{algorithmic}
 \end{algorithm}
 
-\section{Mass matrix formulation}
+\section{Mass matrix formulation and implementation}
 
-The mass matrix is necessary to facilitate dynamic analysis with the thin quadrilateral shell element. Both lumped and consistent options have been implemented.
+The mass matrix is necessary to facilitate dynamic analysis with the ANDES-DKQ linear quadrilateral shell element. Both lumped and consistent options have been implemented.
 
 \subsection{Lumped mass matrix}
 The lumped mass matrix is the default option used due to it's speed of construction without significant loss of accuracy. The general form of the ANDES-DKQ lumped matrix is similar to the DSG lumped matrix.
@@ -913,21 +953,21 @@ where
 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0
 \end{pmatrix}
-\label{eqqmass1}
+\label{eqqmass1}\ .
 \end{equation}
 
 The general lumped mass is determined for a multi-ply material with $n$ plies each of $t_i$ thickness and $\rho_i$ density as follows:
 
 \begin{equation} 
 \bar{m} = \frac{A}{4} \sum_{i=1}^n \rho_i h_i
-\label{eqqmass2}
+\label{eqqmass2}\ .
 \end{equation}
 
 For a single layer material of area $A$ this reduces to:
 
 \begin{equation} 
 \bar{m} = \frac{A}{4} \rho h
-\label{eqqmass3}
+\label{eqqmass3}\ .
 \end{equation}
 
 \subsection{Consistent mass matrix}
@@ -948,7 +988,7 @@ h
 \mathbf{N}_R
 \Big]
 \ d\Omega
-\label{eqqmass4}
+\label{eqqmass4}\ .
 \end{equation}
 
 For the quadrilateral element, the nodal shape function matrices are expanded from 3 nodes to 4 nodes:
@@ -963,8 +1003,9 @@ For the quadrilateral element, the nodal shape function matrices are expanded fr
 \begin{pmatrix}
 \mathbf{N}_{R_1} & \mathbf{N}_{R_2} & \mathbf{N}_{R_3} & \mathbf{N}_{R_4}
 \end{pmatrix}
-\label{eqqmass5}
+\label{eqqmass5}\ ,
 \end{equation}
+with the above entries detailed below as:
 \begin{equation} 
 \mathbf{N}_{T_i} = 
 \begin{pmatrix}
@@ -976,7 +1017,7 @@ N_i & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
-\end{pmatrix}
+\end{pmatrix}\ ,
 \hspace{10mm}
 \mathbf{N}_{R_i} = 
 \begin{pmatrix}
@@ -989,7 +1030,7 @@ N_i & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 &0 & 0 & 0 & 0 & 0 & N_i  & 0\\
 0 &0 & 0 & 0 & 0 & 0 & 0 & \alpha N_i
 \end{pmatrix}
-\label{eqqmass5_1}
+\label{eqqmass5_1}\ .
 \end{equation}
 
 Unlike the DSG element which could be evaluated directly, the consistent mass matrix of the ANDES-DKQ is evaluated with numerical 2x2 Gauss integration. Thus, equation \ref{eqqmass4} can be equivalently written in parametric space:
@@ -1012,7 +1053,7 @@ h
 \ d\eta
 \ d\xi
 \ det (\mathbf{J})
-\label{eqqmass6}
+\label{eqqmass6}\ .
 \end{equation}
 
 Shifting over to Gauss integration, the consistent mass matrix is determined numerically from:
@@ -1032,14 +1073,14 @@ h
 \Big]
 w_i
 \ det (\mathbf{J}(\xi_{i},\eta_{i}))
-\label{eqqmass7}
+\label{eqqmass7}\ .
 \end{equation}
 
 \section{Stress and strain recovery}
 
-The stresses and strains of the ANDES-DKT quadrilateral element are recovered in a similar way to the DSG triangle, with the added complication of the multiple Gauss points.
+The stresses and strains of the ANDES-DKT linear quadrilateral element are recovered in a similar way to the DSG triangle, with the added complication of the multiple Gauss points.
 
-The non-zero local strains ($\epsilon_{zz},\ \epsilon_{xz},\ \epsilon_{yz} = 0$) of the 4 noded 3 parameter element can be arranged in a vector form:
+The non-zero local strains ($\epsilon_{zz},\ \epsilon_{xz},\ \epsilon_{yz} = 0$) of the 4 node 3 parameter element can be arranged in a vector form:
 \begin{equation} 
 \boldsymbol{\epsilon}^T = \begin{pmatrix}
 \boldsymbol{\epsilon}_1 & \boldsymbol{\epsilon}_2 & \boldsymbol{\epsilon}_3 & \boldsymbol{\epsilon}_4
@@ -1050,28 +1091,28 @@ with
 \boldsymbol{\epsilon}^T_i = \begin{pmatrix}
 \epsilon_{xx} & \epsilon_{xx} & 2\epsilon_{xy} & \epsilon_{xx} & \kappa_{xx} & \kappa_{yy} & 2\kappa_{xy} 
 \end{pmatrix}
-\label{eqqrec1}
+\label{eqqrec1}\ .
 \end{equation}
 
 The nodal strain vector is recovered from the displacement field by applying the strain displacement matrix, which varies over the element.
 
 \begin{equation} 
 \boldsymbol{\epsilon}(\xi,\ \eta) = \mathbf{B}(\xi,\ \eta) \mathbf{u}(\xi,\ \eta)
-\label{eqqrec2}
+\label{eqqrec2}\ .
 \end{equation}
 
 As per the DSG triangle, the strains and stresses are calculated at the Gauss points of the element, with the ANDES-DKT element having four Gauss points ($j = 1,\ 2,\ 3,\ 4$). Thus, the strain vector at each Gauss point $j$ is recovered from the discrete nodal displacements $\hat{\mathbf{u}}_i$ as follows:
 
 \begin{equation} 
 \boldsymbol{\epsilon}_{GP_j} = \mathbf{B}(\xi_j,\ \eta_j) \sum_{i=1}^{4\ nodes} N_i(\xi_j,\ \eta_j) \hat{\mathbf{u}}_i
-\label{eqqrec3}
+\label{eqqrec3}\ .
 \end{equation}
 
-With the strains determined, the stresses at each Gauss point are recovered with the material matrix (which in the general case may vary over the element).
+With the strains determined, the stresses at each Gauss point are recovered with the material matrix (which in the general case may vary over the element):
 
 \begin{equation} 
 \boldsymbol{\sigma}_{GP_j} = \mathbf{C}_{GP_j}\ \boldsymbol{\epsilon}_{GP_j}
-\label{eqqrec4}
+\label{eqqrec4}\ .
 \end{equation}
 
 The general implementation of the stress and strain recovery described above is illustrated in pseudocode algorithm \ref{ANDES-DKT quadrilateral element stress and strain recovery}.
@@ -1121,7 +1162,7 @@ As per the DSG element, the Von Mises equivalent stress is calculated for the AN
 	+ \sigma_{yy}^2
 	+ 3(\sigma_{xy}^2 + \sigma_{xz}^2 + \sigma_{yz}^2)
 }
-\label{eqqrec5}
+\label{eqqrec5}\ .
 \end{equation}
 
 Corresponding to the underlying 3 parameter model of the ANDES-DKQ in which $\sigma_{3i} = 0$, the expression above can be simplified, yielding the formula to determine the Von Mises equivalent stress for the ANDES-DKQ element:
@@ -1134,7 +1175,7 @@ Corresponding to the underlying 3 parameter model of the ANDES-DKQ in which $\si
 	+ \sigma_{yy}^2
 	+ 3\sigma_{xy}^2
 }
-\label{eqqrec6}
+\label{eqqrec6}\ .
 \end{equation}
 
 \section{Chapter summary}

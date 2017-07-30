@@ -19,30 +19,28 @@ The DSG element technology aims to mitigate shear locking in 5-parameter based s
 	\subfloat[Timoshenko beam kinematics]
 	{\label{ref_label1}
 		\includegraphics[width=7.3cm]{images/DSG_2.png}}
-	\caption{\label{DSG_derivation_pic1}DSG concept and Timoshenko kinematics}
+	\caption{\label{DSG_derivation_pic1}DSG concept and Timoshenko kinematics \cite{Ble00}}
 \end{figure}
 
 The shear deformation $\gamma(x)$ of the beam above is defined as the difference between the section rotation $\beta(x)$ and transverse displacement gradient $v'(x)$:
-
 \begin{equation} 
 \gamma(x) = v'(x) + \beta(x)
-\label{DSG_derivation_0}
+\label{DSG_derivation_0}\ .
 \end{equation}
 
 The Bernoulli beam, being the 2D analogue of the Kirchhoff plate, fulfills the condition of vanishing shear deformation:
-
 \begin{equation} 
 \gamma(x)_{Bernoulli} = 0 = v'(x) + \beta(x)
-\label{DSG_derivation_1}
+\label{DSG_derivation_1}\ .
 \end{equation}
 
-The shear deformation field (equation \ref{DSG_derivation_0}) can be discretized into nodal values interpolated with shape functions, typical of the general FEM approach, however, if the same shape functions are used for rotations and transverse displacements, as discussed in section \ref{locking in shell finite elements}, this generally introduces deleterious locking effects. Thus, the novelty of the DSG method, the shear gap, is introduced, which aims to formulate the shear deformation via an integral approach. Considering the 5-parameter formulation analogous Timoshenko beam, the shear gap field can be recovered by integrating the shear distribution over the element:
+The shear deformation field (equation \ref{DSG_derivation_0}) can be discretized into nodal values interpolated with shape functions, typical of the general FEM approach, however, if the same shape functions are used for rotations and transverse displacements, as discussed in section \ref{locking in shell finite elements}, this generally introduces deleterious locking effects. Thus, the novelty of the DSG method, the shear gap, is introduced, which aims to formulate the shear deformation via an integral approach. Considering the 5-parameter formulation analogous Timoshenko beam, the shear gap field $\Delta v_\gamma$ can be recovered by integrating the shear distribution over the element:
 
 \begin{equation} 
 \Delta v_\gamma(x) 
 = \int_{x_o}^x \gamma \ dx
 = v |_{x_o}^x +  \int_{x_o}^x \beta \ dx
-\label{DSG_derivation_2}
+\label{DSG_derivation_2}\ .
 \end{equation}
 
 Accordingly, the shear gap field can be approximated with shape functions $N_i$ and discrete shear gaps $ \Delta v_{\gamma}^i$ evaluated at each node $i$:
@@ -53,7 +51,7 @@ Accordingly, the shear gap field can be approximated with shape functions $N_i$ 
 \Delta v_\gamma^i 
 = \int_{x_o}^{x_i} \gamma \ dx
 = v |_{x_o}^{x_i} +  \int_{x_o}^{x_i} \beta \ dx
-\label{DSG_derivation_3}
+\label{DSG_derivation_3}\ .
 \end{equation}
 
 The shear deformation field may be recovered by differentiating the shear gap field with the onus on the shape functions:
@@ -61,7 +59,7 @@ The shear deformation field may be recovered by differentiating the shear gap fi
 \begin{equation} 
 \gamma(x) = \frac{\partial \Delta v_\gamma(x) }{\partial x}
 =  \sum_{i=1} \frac{\partial N}{\partial x}\Delta v_{\gamma}^i
-\label{DSG_derivation_4}
+\label{DSG_derivation_4}\ .
 \end{equation}
 
 With the basic DSG concept established for a simple beam example, the focus can be shifted to the 5-parameter triangular element under development. The general geometry of the element is presented below:
@@ -71,7 +69,7 @@ With the basic DSG concept established for a simple beam example, the focus can 
 	\subfloat[3 node triangle with local coordinates]
 	{\label{ref_label1}
 		\includegraphics[width=6.5cm]{images/DSG_element1.png}}
-	\subfloat[3 node triangle with DOFs]
+	\subfloat[3 node triangle with plate theory rotation DOFs]
 	{\label{ref_label1}
 		\includegraphics[width=7.3cm]{images/DSG_element2.png}}
 	\caption{\label{DSG_derivation_pic2}DSG triangle local coordinates and DOFs \cite{Ngu13}}
@@ -89,7 +87,7 @@ At this point it is important to note the current rotation DOF definitions are c
 \frac{\partial w}{\partial x} +  \beta_x \\
 \frac{\partial w}{\partial y} +  \beta_y
 \end{pmatrix}
-\label{DSG_derivation_5}
+\label{DSG_derivation_5}\ .
 \end{equation}
 
 According to the general form of equation \ref{DSG_derivation_3}, the shear gaps of the triangular element can be determined in parametric space to be:
@@ -99,10 +97,11 @@ According to the general form of equation \ref{DSG_derivation_3}, the shear gaps
 = w |_{\xi_1}^{\xi_i} +  \int_{\xi_1}^{\xi_i} \beta_x a +  \beta_y b \ d\xi
 \label{DSG_derivation_6}
 \end{equation}
+and
 \begin{equation} 
 \Delta v_{\gamma2}^i 
 = w |_{\eta_1}^{\eta_i} +  \int_{\eta_1}^{\eta_i} \beta_x d +  \beta_y c \ d\eta
-\label{DSG_derivation_7}
+\label{DSG_derivation_7}\ .
 \end{equation}
 
 The rotation fields $\beta_x$ and $\beta_y$ are approximated with nodal values interpolated by the standard linear triangle shape functions:
@@ -117,7 +116,7 @@ N_1 = 1-\xi-\eta\ ,
 N_2 = \xi\ ,
 \hspace{5mm}
 N_3 = \eta
-\label{DSG_derivation_8}
+\label{DSG_derivation_8}\ .
 \end{equation}
 
 Evaluation of the discrete shear gaps at each node yields the following results:
@@ -127,17 +126,18 @@ Evaluation of the discrete shear gaps at each node yields the following results:
 \Delta v_{\gamma1}^3 = 
 \Delta v_{\gamma2}^1 = 
 \Delta v_{\gamma2}^2 = 0
-\label{DSG_derivation_9}
+\label{DSG_derivation_9}\ ,
 \end{equation}
 \begin{equation} 
 \Delta v_{\gamma1}^2 = 
 w_2 - w_1 + \frac{a(\beta_x^1 + \beta_x^2)}{2} + \frac{b(\beta_y^1 + \beta_y^2)}{2}
 \label{DSG_derivation_10}
 \end{equation}
+and
 \begin{equation} 
 \Delta v_{\gamma2}^3 = 
 w_3 - w_1 + \frac{d(\beta_x^1 + \beta_x^3)}{2} + \frac{c(\beta_y^1 + \beta_y^3)}{2}
-\label{DSG_derivation_11}
+\label{DSG_derivation_11}\ .
 \end{equation}
 
 The shear gap field can be constructed with the discrete nodal shear gaps interpolating shape functions (as per equation \ref{DSG_derivation_8}):
@@ -145,7 +145,7 @@ The shear gap field can be constructed with the discrete nodal shear gaps interp
 \begin{equation} 
 \Delta v_{\gamma \alpha} (\xi,\eta) 
 = \sum_i^3 N_i (\xi,\eta) \Delta v_{\gamma \alpha}^i
-\label{DSG_derivation_12}
+\label{DSG_derivation_12}\ .
 \end{equation}
 
 Finally, shear deformations are determined by differentiating the shear gap field along Cartesian space:
@@ -168,10 +168,10 @@ Finally, shear deformations are determined by differentiating the shear gap fiel
 \frac{\partial \Delta v_{\gamma 2}}{\partial \eta}
 \frac{\partial \eta}{\partial y}
 \end{pmatrix}
-\label{DSG_derivation_13}
+\label{DSG_derivation_13}\ ,
 \end{equation}
 
-The inverse Jacobian is given by:
+with the inverse Jacobian entries employed above given by:
 
 \begin{equation} 
 \mathbf{J}^{-1} = 
@@ -185,10 +185,10 @@ The inverse Jacobian is given by:
 c & -b \\
 -d & a
 \end{pmatrix}
-\label{DSG_derivation_14}
+\label{DSG_derivation_14}\ .
 \end{equation}
 
-The combination of the above equations leads to Bletzinger's \cite{Ble00} triangle DSG B matrix:
+The combination of the above equations leads to Bletzinger's \cite{Ble00} linear triangle DSG B matrix:
 
 \begin{equation} 
 \begin{pmatrix}
@@ -212,16 +212,15 @@ w_3 \\
 \beta_{x3} \\
 \beta_{y3} 
 \end{pmatrix}
-\label{DSG_derivation_15}
+\label{DSG_derivation_15}\ .
 \end{equation}
 
 As noted in figure \ref{DSG_derivation_pic2}, the current B matrix is formulated with respect to rotational DOFs defined as per plate theory, which is not consistent with the Cartesian rotations following the right hand screw rule. To render the DSG formulation in terms of Cartesian rotations suitable for Kratos, the following equivalents can be drawn:
-
 \begin{equation} 
 \beta_{yi} = -\theta_{xi}\ ,
 \hspace{10mm}
 \beta_{xi} = \theta_{yi}
-\label{DSG_derivation_16}
+\label{DSG_derivation_16}\ .
 \end{equation}
 
 If the preceding equivalents are substituted into equations \ref{DSG_derivation_5} through \ref{DSG_derivation_13} the following B matrix, expressed in terms of Cartesian rotations, is obtained, which matches that of Rama et al. \cite{Ram16}:
@@ -248,5 +247,5 @@ w_3 \\
 \theta_{x3} \\
 \theta_{y3} 
 \end{pmatrix}
-\label{DSG_derivation_17}
+\label{DSG_derivation_17}\ .
 \end{equation}

@@ -15,7 +15,7 @@
 %\onehalfspacing
 %\setlength{\belowcaptionskip}{-17pt}
 
-\chapter{Composite shells - revised 1}
+\chapter{Composite shells}
 \label{chap:chapter_2_1}
 
 \renewcommand{\Thema}{Composite shells}
@@ -51,7 +51,7 @@ Laminae are individual layers or plies of composite materials, which, when stack
 	\caption{\label{composite_laminates}Components of composite laminates \cite{reddy2004mechanics}}
 \end{figure}
 
-Considering the four laminae in figure \ref{composite_laminates}(a) examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, the importance of individual lamina makeup forms a critical determinant of the structural behaviour of the total laminate as a whole. Another important determinant of the laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation as per figure \ref{composite_laminates}(b). The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements.
+Considering the four laminae in figure \ref{composite_laminates}(a) examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, individual lamina makeup forms a critical determinant of the total laminate's structural behaviour. Another important factor of laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation as per figure \ref{composite_laminates}(b). The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements.
 
 An industrial example of this is spoolable Glass Reinforced Epoxy (GRE) oil piping, which has a central GRE structural lamina sandwiched between two non-structural Polyethylene (PE) laminae intended to provide the structural layer chemical and environmental protection. Furthermore, the fibre alignment of the GRE structural lamina is often orientated at an optimal pressure-capacity angle since the stress field of the pipe operating under internal pressure is well defined.
 
@@ -61,10 +61,10 @@ A pre-requisite of modelling complex laminates is the characterisation of each l
 
 \begin{equation} 
 \sigma^{ij} = C_0^{ijkl} \epsilon_{kl}
-\label{eqscomp1}
+\label{eqscomp1}\ ,
 \end{equation}
 
-Equivalently, adopting Reddy's \cite{reddy2004mechanics} notation:
+equivalently, adopting Reddy's \cite{reddy2004mechanics} notation:
 
 \begin{equation} 
 \begin{pmatrix}
@@ -92,7 +92,7 @@ C_{11} & C_{12} & C_{13} & C_{14} & C_{15} & C_{16} \\
 2\epsilon_{13} \\
 2\epsilon_{12}
 \end{pmatrix}
-\label{eqscomp2}
+\label{eqscomp2}\ .
 \end{equation}
 
 The preceding discussion of laminae illustrated there are innumerable design variants for any lamina. In practise however, one of the most common lamina arrangements are orthotropic laminae. Orthotropic laminae have three mutually orthogonal planes of symmetry, which reduces the unique entries of the lamina-orientated constitutive tensor from 21 (anisotropic materials) to 9:
@@ -123,7 +123,7 @@ C_{11} & C_{12} & C_{13} & 0 & 0 & 0 \\
 2\epsilon_{13} \\
 2\epsilon_{12}
 \end{pmatrix}
-\label{eqscomp3}
+\label{eqscomp3}\ .
 \end{equation}
 
 Furthermore, if the lamina is suitably thin, as is typically the case in composite shell structures, a state of plane stress can be assumed. This corresponds to $\sigma_{33} = 0$ as per the following illustration.
@@ -161,7 +161,7 @@ Q_{11} & Q_{12} &  0 & 0 & 0 \\
 2\epsilon_{23} \\
 2\epsilon_{13}
 \end{pmatrix}
-\label{eqscomp_plane_stress_tensor_unrotated}
+\label{eqscomp_plane_stress_tensor_unrotated}\ .
 \end{equation}
 
 The entries $Q_{ij}$ are derived from the bulk structural properties of the lamina at the macro-mechanical level. For example, the bulk lamina properties of a continuous fibre unidirectional design depicted in the following figure is considered.
@@ -182,17 +182,19 @@ Consider that the bulk modulus $E_1$, along $x_1$ and parallel to the fibres, is
 \sigma_{11_f} = E_f\epsilon_{11_f}\ ,
 \hspace{10mm}
 \sigma_{11_m} = E_m\epsilon_{11_m}
-\label{eqscomp5}
+\label{eqscomp5}\ .
 \end{equation}
-Applying force equilibrium:
+Applying force equilibrium yields:
+
 \begin{equation} 
 \sigma_{11}A = \sigma_{11_f}A v_f + \sigma_{11_m}A v_m
-\label{eqscomp6}
+\label{eqscomp6}\ .
 \end{equation}
+
 Substituting and rearranging yields the bulk longitudinal Young's modulus of the lamina:
 \begin{equation} 
 E_1 = E_f v_f + E_m v_m
-\label{eqscomp7}
+\label{eqscomp7}\ .
 \end{equation}
 A similar line of analysis can be performed for the other lamina moduli, yielding the following results:
 \begin{equation} 
@@ -201,7 +203,7 @@ E_2 = \frac{E_f E_m}{E_f v_m + E_m v_f}\ ,
 \nu_{12} = \nu_f v_f + \nu_m v_m\ ,
 \hspace{10mm}
 G_{12} = \frac{G_f G_m}{G_f v_m + G_m v_f}
-\label{eqscomp8}
+\label{eqscomp8}\ .
 \end{equation}
 
 The example of continuous unidirectional fibre laminae highlight that the material description of laminae can be shifted from a micro-mechanical level to a macro-mechanical level characterised by equivalent parameters. These are related to the entries $Q_{ij}$ of the reduced plane stress orthotropic lamina constitutive tensor in equation \ref{eqscomp_plane_stress_tensor_unrotated} as follows:
@@ -212,15 +214,16 @@ Q_{11} = \frac{E_1}{1-\nu_{12} \nu_{21}}\ ,
 Q_{12} = \frac{\nu_{12} E_1}{1-\nu_{12} \nu_{21}}\ ,
 \hspace{10mm}
 Q_{22} = \frac{E_2}{1-\nu_{12} \nu_{21}}
-\label{eqscomp9}
+\label{eqscomp9}\ ,
 \end{equation}
+
 \begin{equation} 
 Q_{66} = G_{12}\ ,
 \hspace{10mm}
 Q_{44} = G_{23}\ ,
 \hspace{10mm}
 Q_{55} = G_{13}
-\label{eqscomp10}
+\label{eqscomp10}\ .
 \end{equation}
 
 The lamina macro-mechanical parameters $E_1,\ E_2,\ \nu_{12}, G_{12},\ G_{23}$ and $G_{13}$ can be derived from the micro-mechanical properties of the lamina, as demonstrated, or, as is more common, are obtained experimentally. Regardless of their method of origin, these parameters are always aligned with the lamina local coordinate system, which may not necessarily coincide with the laminate coordinate system, or, more generally, the global reference coordinate system of the analysis.
@@ -244,7 +247,7 @@ sc & -sc & c^2 - s^2 & 0 & 0 \\
 0 & 0 & 0 & c & s \\
  0 & 0 & 0 & -s & c
 \end{pmatrix}
-\label{eqscomp11}
+\label{eqscomp11}\ .
 \end{equation}
 Thus, stresses and strains in the reference coordinate system  ($x,\ y,\ z$) are related as such:
 \begin{equation} 
@@ -270,7 +273,7 @@ Thus, stresses and strains in the reference coordinate system  ($x,\ y,\ z$) are
 2\epsilon_{yz} \\
 2\epsilon_{xz}
 \end{pmatrix}
-\label{eqscomp_plane_stress_tensor_rotated}
+\label{eqscomp_plane_stress_tensor_rotated}\ .
 \end{equation}
 
 This transformation is required to correctly assemble laminae in laminates that have non-zero stacking angles, which, by virtue of their customizability, is almost all laminates. With the individual lamina constitutive behaviour detailed, orthotropic shell laminates can now be built up and modelled.
@@ -304,7 +307,7 @@ d \Omega\
 :
 \delta \boldsymbol{\gamma}\ 
 d \Omega
-\label{eqsrm4_in_composite1}
+\label{eqsrm4_in_composite1}\ .
 \end{equation}
 
 The integral over the volume can split into area and laminate thickness integrals:
@@ -329,7 +332,7 @@ The integral over the volume can split into area and laminate thickness integral
 :
 \delta \boldsymbol{\gamma}\ 
 \ dAdh
-\label{eqsrm4_in_composite2}
+\label{eqsrm4_in_composite2}\ .
 \end{equation}
 
 By pre-integrating the stress quantities, and restricting the scope of the equations to 2D plane stress conditions, the following equivalent form can be presented in vector notation:
@@ -350,7 +353,7 @@ By pre-integrating the stress quantities, and restricting the scope of the equat
 \mathbf{Q}^T
 \delta \boldsymbol{\gamma}\ 
 \ dA
-\label{eqsrm4_in_composite3}
+\label{eqsrm4_in_composite3}\ .
 \end{equation}
 
 The introduced quantities $\mathbf{N,\ M}$ and $\mathbf{Q}$ are force and moment resultants over the entire laminate as per the following figure:
@@ -394,7 +397,7 @@ M_{xy}
 	\sigma_{xy} 
 	\end{pmatrix}}z\ 
 dz
-\label{eqscomp_force_resultants}
+\label{eqscomp_force_resultants}\ .
 \end{equation}
 
 The shear resultants only applicable for the 5 parameter model are similarly defined, including a shear energy correction factor of $\alpha = \frac{5}{6}$:
@@ -412,7 +415,7 @@ Q_{y}
 	\sigma_{yz} 
 	\end{pmatrix}}
 dz
-\label{eqscomp_force_resultants2}
+\label{eqscomp_force_resultants2}\ .
 \end{equation}
 
 \subsection{Laminate constitutive equations}
@@ -452,7 +455,7 @@ dz
 	\sigma_{xy} 
 	\end{pmatrix}
 dz
-\label{eqscomp_laminate_constitutive1}
+\label{eqscomp_laminate_constitutive1}\ .
 \end{equation}
 
 Invoking the laminae constitutive properties previously established in equation \ref{eqscomp_plane_stress_tensor_rotated} leads to the 'mathematical assemblage' of the laminae into the laminate via the following integral:
@@ -498,11 +501,11 @@ Invoking the laminae constitutive properties previously established in equation 
 		 \kappa_{xx}\\
 		\kappa_{xx}\\
 		2\kappa_{xy}
-		\end{pmatrix}
+		\end{pmatrix}\ .
 		\label{eqscomp_laminate_constitutive3}
 	\end{aligned}
 \end{gather}
-Similarly, the moment and shear force resultants can be related to strains:
+Similarly, the moment resultants can be related to strains:
 \begin{gather} 
 	\begin{aligned}
 		\begin{pmatrix}
@@ -544,11 +547,12 @@ Similarly, the moment and shear force resultants can be related to strains:
 		\begin{pmatrix}
 			\kappa_{xx}\\
 			\kappa_{yy}\\
-			2\kappa_{xy}
+			2\kappa_{xy}\ ,
 		\end{pmatrix}
 		\label{eqscomp_laminate_constitutive4}
 	\end{aligned}
 \end{gather}
+as can the shear force resultants:
 \begin{equation} 
 			\begin{pmatrix}
 			Q_{x} \\
@@ -575,7 +579,7 @@ Similarly, the moment and shear force resultants can be related to strains:
 			2\epsilon_{yz} \\
 			2\epsilon_{xz} 
 			\end{pmatrix}
-		\label{eqscomp_laminate_constitutive5}
+		\label{eqscomp_laminate_constitutive5}\ .
 \end{equation}
 
 The three introduced matrices represent the extensional stiffnesses $A_{ij}$, the bending stiffnesses $D_{ij}$ and the bending-extensional coupling stiffnesses $B_{ij}$, and are determined from the lamina stiffnesses $\bar{Q}_{ij}^{(k)}$:
@@ -595,7 +599,7 @@ The three introduced matrices represent the extensional stiffnesses $A_{ij}$, th
 	\int_{\frac{-h}{2}}^{\frac{h}{2}}
 	\bar{Q}_{ij}\ z^2
 	\ dz
-	\label{eqscomp_laminate_constitutive6}
+	\label{eqscomp_laminate_constitutive6}\ .
 \end{equation}
 
 By organising the resultants into a generalised resultant vector $\bar{\mathbf{N}}$ and the strains into a generalized strain vector $\bar{\boldsymbol{\epsilon}}$, the following summary is produced:
@@ -631,7 +635,7 @@ Q_{y}
 2\epsilon_{yz} \\
 2\epsilon_{xz}
 \end{pmatrix}
-\label{eqscomp_laminate_constitutive7}
+\label{eqscomp_laminate_constitutive7}\ .
 \end{equation}
 
 In light of the above work, the internal virtual work of the 5 parameter shell model presented in equation \ref{eqsrm4_in_composite3} can therefore be parsimoniously expressed as:
@@ -656,7 +660,7 @@ Owing to the dimensional reduction from 3D to 2D, the generalized shell strains 
 
 \begin{equation} 
 \bar{\boldsymbol{\epsilon}} (x,\ y) = \boldsymbol{\epsilon} (x,\ y,\ 0)
-\label{eqscomp_strain_recovery1}
+\label{eqscomp_strain_recovery1}\ .
 \end{equation}
 
 A consequence of the straight director assumption common to both the 3 and 5 parameter shell models is the membrane strains vary proportionally to the distance from the mid-plane. This can be observed in the following diagram of a plate in pure bending highlighting the linear variation of in-plane stresses (which, in simple cases, are merely scaled strains):
@@ -689,12 +693,12 @@ z
 \kappa_{yy}\\
 2\kappa_{xy} \\
 \end{pmatrix}_{(z=0)}
-\label{eqscomp_strain_recovery2}
+\label{eqscomp_strain_recovery2}\ .
 \end{equation}
 
 The in-plane strains of a surface in any lamina within the laminate can be determined by appropriately setting the corresponding $z$ value.
 
-Applicable only to 5 parameter shell models is the recovery of transverse shear strains. A perusal of Kreja's literature review on composite models \cite{kreja2011literature} indicates the amount of academic effort dedicated to accurately modelling transverse shear strains in first order shear deformation theories. The contradiction driving this effort is that 5 parameter models are limited to expressing constant transverse shear strain over the shell thickness, while it is known that for an isotropic material they are actually distributed parabolically. This is the reason behind the shear correction factor of $\alpha = \frac{5}{6}$ which is actually the ratio of internal transverse shear strain energy in a 5 parameter plate to that of 3D elasticity. Without delving into exotic laminate shell theories, two options for simply recovering the transverse shear strain avail themselves: (1) accept the limitations of the 5 parameter model and consider the transverse shear strain constant across the section, or; (2) reconstruct a parabolic profile from the mid-plane values, as is often done for isotropic materials.
+Applicable only to 5 parameter shell models is the recovery of transverse shear strains. A perusal of Kreja's literature review on composite models \cite{kreja2011literature} indicates the amount of academic effort dedicated to accurately modelling transverse shear strains in first order shear deformation theories. The contradiction driving this effort is that 5 parameter models are limited to expressing constant transverse shear strain over the shell thickness, while it is known that for an isotropic material they are actually distributed parabolically. This is the reason behind the shear correction factor of $\alpha = \frac{5}{6}$ which is actually the ratio of internal transverse shear strain energy in a 5 parameter plate to that of 3D elasticity. Without delving into exotic laminate shell theories, two options for simply recovering the transverse shear strain avail themselves: (1) accept the limitations of the 5 parameter model and consider the transverse shear strain constant across the section, or; (2) reconstruct a parabolic strain profile from the mid-plane values, as is often done for isotropic materials.
 
 The first approach of accepting constant transverse shear stress is expressed as follows:
 
@@ -708,20 +712,20 @@ The first approach of accepting constant transverse shear stress is expressed as
 2\epsilon_{yz} \\
 2\epsilon_{xz}
 \end{pmatrix}_{(z=0)}
-\label{eqscomp_strain_recovery3}
+\label{eqscomp_strain_recovery3}\ .
 \end{equation}
 
 The second approach of constructing a parabolic strain profile using limiting expressions from \cite{FelippaKirchhoff2017} is described below, starting with the distribution of the transverse shear stress $\sigma_{xz}$ in an isotropic plate:
 \begin{equation} 
 \sigma_{xz} (z) = \sigma_{xz}^{max} (1-\frac{4z^2}{h^2})  = \frac{3Q_x}{2h} (1-\frac{4z^2}{h^2}) = \frac{3}{2} \sigma_{xz}^{av} (1-\frac{4z^2}{h^2})
-\label{eqscomp_strain_recovery4}
+\label{eqscomp_strain_recovery4}\ .
 \end{equation}
 
-Unlike laminate stresses, which are generally discontinuous across the thicknesss, laminate strains are continuous. Therefore, the strain distribution of the isotropic plate will be transferred to the laminate.
+Unlike laminate stresses, which are generally discontinuous across the thickness, laminate strains are continuous. Therefore, the strain distribution of the isotropic plate will be transferred to the laminate.
 The strain distribution of an isotropic plate must follow the stress distribution, thus:
 \begin{equation} 
 \gamma_{xz} (z)=  \frac{3}{2} \gamma_{xz}^{av} (1-\frac{4z^2}{h^2}) = \frac{3}{2} 2\epsilon_{xz}^{(z=0)} (1-\frac{4z^2}{h^2})
-\label{eqscomp_strain_recovery5}
+\label{eqscomp_strain_recovery5}\ .
 \end{equation}
 
 Summarising, the approximated transverse shear distribution for the laminate is:
@@ -736,7 +740,7 @@ Summarising, the approximated transverse shear distribution for the laminate is:
 2\epsilon_{yz} \\
 2\epsilon_{xz}
 \end{pmatrix}_{(z=0)}
-\label{eqscomp_strain_recovery6}
+\label{eqscomp_strain_recovery6}\ .
 \end{equation}
 
 The in-plane and transverse shear strains determined thus far are referred to the reference coordinate system of the laminate $(x,\ y,\ z)$. However, it is often of interest to transform these strains so they are aligned with the individual lamina considered $(x_1,\ y_1,\ z_1)$. For a lamina oriented at $\theta$ to the laminate coordinate system, the strain components can be transformed as such ($c = cos\theta,\ s = sin\theta$):
@@ -764,7 +768,7 @@ s^2 & c^2 & -sc & 0 & 0 \\
 2\epsilon_{yz} \\
 2\epsilon_{xz}
 \end{pmatrix}
-\label{eqscomp_strain_recovery7}
+\label{eqscomp_strain_recovery7}\ .
 \end{equation}
 
 \subsection{Laminate stress recovery}
@@ -794,7 +798,7 @@ With the laminate strains across the thickness described, the stresses can be re
 2\epsilon_{yz} \\
 2\epsilon_{xz}
 \end{pmatrix}}_{(z)}
-\label{eqscomp_stress_recovery1}
+\label{eqscomp_stress_recovery1}\ .
 \end{equation}
 
 As previously implied, although the strain distribution is continuous across laminates, the stress distribution is generally discontinuous due to the varying material properties of the laminae. Indeed, if the laminae of a laminate are the exact same orthotropic composite material, but are stacked at varying angles, the resulting stress distribution will be discontinuous. The following example of a 4 ply laminate with a [0, 45, 45, 0] stacking sequence subject to pure bending highlights the nature of stress and strain distributions through the thickness despite all laminae being the same material.
@@ -836,7 +840,7 @@ s^2 & c^2 & -sin2\theta & 0 & 0 \\
 2\sigma_{yz} \\
 2\sigma_{xz}
 \end{pmatrix}
-\label{eqscomp_stress_recovery2}
+\label{eqscomp_stress_recovery2}\ .
 \end{equation}
 
 \section{Laminate Tsai-Wu failure criterion}
@@ -863,7 +867,7 @@ The Tsai-Wu failure criterion is a relatively simple method to approximate the s
 \sigma_{13} \\
 \sigma_{12}
 \end{pmatrix}
-\label{eqscomp_tsai1}
+\label{eqscomp_tsai1}\ .
 \end{equation}
 
 By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C)$ strengths in the lamina principal material directions (1, 2, 3) and the shear strengths $(R,\ S,\ T)$ corresponding to (23, 13, 12), the non-zero material strength parameters in a plane stress regime are expressed as \cite{reddy2004mechanics}:
@@ -877,6 +881,7 @@ By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C
 		\hspace{5mm}
 		F_{22} = \frac{1}{Y_TY_C}
 		\\
+		\\
 		&\ \ \ \ 
 		F_{44} = \frac{1}{R^2}\ ,
 		\hspace{5mm}
@@ -884,7 +889,7 @@ By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C
 		\hspace{5mm}
 		F_{66} = \frac{1}{T^2}\ ,
 		\hspace{5mm}
-		F_{12} = \frac{-0.5}{\sqrt{X_TX_CY_TY_C}}
+		F_{12} = \frac{-0.5}{\sqrt{X_TX_CY_TY_C}}\ .
 		\label{eqscomp_tsai2}
 	\end{aligned}
 \end{gather}
@@ -899,7 +904,7 @@ RF = \frac{-b + \sqrt{b^2 + 4a}}{2a}
 a = \sum_{i=1}^{6} \sum_{j=1}^{6} F_{ij} \sigma_{ij}\ ,
 \hspace{5mm}
 b = \sum_{i=1}^{6} F_i \sigma_i 
-\label{eqscomp_stress_recovery3}
+\label{eqscomp_stress_recovery3}\ .
 \end{equation}
 
 \section{Chapter summary}

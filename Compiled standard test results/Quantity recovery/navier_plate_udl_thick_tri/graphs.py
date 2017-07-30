@@ -186,9 +186,9 @@ DSGBasic = '#F5A352'        #orange
 KRATOSTRI = '#BB7365'       #brown
 
 fig = plt.figure(40)
-plt.plot(kratos_x_rot90,kratos_s_xz_rot90, color = '#F5A352', linewidth=3.0, label = 'DSG mesh rotated 90',antialiased=True)
-plt.plot(kratos_x_unstruc,kratos_s_xz_unstruc, color = '#BB7365', linewidth=3.0, label = 'DSG Unstructured',antialiased=True)
-plt.plot(kratos_x,kratos_s_xz_middle, color = '#FF91A4', linewidth=3.0, label = 'DSG 24x24',antialiased=True)
+plt.plot(kratos_x_rot90,kratos_s_xz_rot90, color = '#F5A352', linewidth=3.0, label = 'DSG (rotated 90deg)',antialiased=True)
+plt.plot(kratos_x_unstruc,kratos_s_xz_unstruc, color = '#BB7365', linewidth=3.0, label = 'DSG (unstructured)',antialiased=True)
+plt.plot(kratos_x,kratos_s_xz_middle, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
 plt.plot(ansys_x,ansys_s_xz_middle,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'ANSYS',antialiased=True)
 #plt.plot(disp_ref,load_ref,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=2, frameon=False,fontsize=labelfontsize+2)
@@ -207,10 +207,10 @@ plt.savefig('navier_plate_tri_s_xz.pdf',bbox_inches="tight")
 
 # Stress YZ middle surface
 fig = plt.figure(41)
-plt.plot(kratos_y_rot90,kratos_s_yz_rot90, color = '#F5A352', linewidth=3.0, label = 'DSG mesh rotated 90',antialiased=True)
+plt.plot(kratos_y_rot90,kratos_s_yz_rot90, color = '#F5A352', linewidth=3.0, label = 'DSG (rotated 90deg)',antialiased=True)
 #plt.plot(kratos_y_8x8,kratos_s_yz_8x8, color = 'red', linewidth=3.0, label = 'DSG 8x8',antialiased=True)
-plt.plot(kratos_y_unstruc,kratos_s_yz_unstruc, color = '#BB7365', linewidth=3.0, label = 'DSG Unstructured',antialiased=True)
-plt.plot(kratos_y,kratos_s_yz_middle, color = '#FF91A4', linewidth=3.0, label = 'DSG 24x24',antialiased=True)
+plt.plot(kratos_y_unstruc,kratos_s_yz_unstruc, color = '#BB7365', linewidth=3.0, label = 'DSG (unstructured)',antialiased=True)
+plt.plot(kratos_y,kratos_s_yz_middle, color = '#FF91A4', linewidth=3.0, label = 'DSG',antialiased=True)
 plt.plot(ansys_y,ansys_s_yz_middle,color = 'grey', linestyle='None', markerfacecolor= 'None', markersize = 7.0, marker='o', label = 'ANSYS',antialiased=True)
 #plt.plot(kratos_y_unstruc,kratos_s_yz_unstruc,color = 'grey', linewidth=2.0, linestyle='--', label = 'Ref',antialiased=True)
 plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=2, frameon=False,fontsize=labelfontsize+2)

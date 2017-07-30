@@ -11,30 +11,31 @@
 
 As part of the stability analysis of a CHS beam considered in section \ref{applications: Euler buckling of CHS column} an Euler buckling solution is included for reference, the derivation of which is presented here.
 
-The governing differential for a CHS section beam with Young's Modulus $E$  and a second moment of area $I$ subject solely to an axial compressive load $P$ without any other loading or spring beds imposed is:
+The governing differential for a CHS section beam with Young's Modulus $E$  and a second moment of area $I_{xx} = I_{yy} = I$ subject solely to an axial compressive load $P$ without any other loading or spring beds imposed is:
 
 \begin{equation} 
 EI w'''' + Pw'' = 0
-\label{eqapp4_1}
+\label{eqapp4_1}\ .
 \end{equation}
 
 The general solution of the above 4th order differential is a displacement field of the form $w = Asin(\lambda x) + Bcos(\lambda x) +  Cx + D$ where $\lambda^2 = P/EI$. The arbitrary constants $A$ through $D$ can be determined by considering four boundary conditions of the beam which is fixed at both ends. This fixity arrangement prescribes the following displacements and angular deflections at both ends:
 
 \begin{equation} 
 w(0) = 0
-\label{eqapp4_2}
+\label{eqapp4_2}\ ,
 \end{equation}
 \begin{equation} 
 w(L) = 0
-\label{eqapp4_3}
+\label{eqapp4_3}\ ,
 \end{equation}
 \begin{equation} 
 w'(0) = 0
 \label{eqapp4_4}
 \end{equation}
+and
 \begin{equation} 
 w'(L) = 0
-\label{eqapp4_5}
+\label{eqapp4_5}\ .
 \end{equation}
 
 These boundary conditions can be substituted into the general displacement field and then arranged in a matrix:
@@ -54,34 +55,34 @@ D
 \end{pmatrix}
 =
 \mathbf{0}
-\label{eqapp4_6}
+\label{eqapp4_6}\ .
 \end{equation}
 
 The critical loads of the system precipitate from the eigenvalues of the matrix above. Thus, the determinant of the above matrix can be simplified and set to zero:
 
 \begin{equation} 
 \lambda L sin(\lambda L) + 2[cos(\lambda L) - 1] = 0
-\label{eqapp4_7}
+\label{eqapp4_7}\ .
 \end{equation}
 
 The bracketed term can be fulfilled with the following value of $\lambda$, which also satisfies the first term too:
 
 \begin{equation} 
 \lambda = \frac{2n\pi}{L}\ ,
-n = 1, 2, 3, ...
-\label{eqapp4_8}
+(n = 1, 2, 3, ...)
+\label{eqapp4_8}\ .
 \end{equation}
 
 Recalling the original definition of $\lambda$, one can combine the eigenvalue and express the critical buckling load of the beam as:
 
 \begin{equation} 
 P_{crit} = \frac{4\pi^2 n^2 EI}{L^2}
-\label{eqapp4_9}
+\label{eqapp4_9}\ .
 \end{equation}
 
 It's clear that the critical load can be minimized by accepting the first eigenvalue $n=1$, thus:
 
 \begin{equation} 
 P_{crit} = \frac{4\pi^2 EI}{L^2}
-\label{eqapp4_10}
+\label{eqapp4_10}\ .
 \end{equation}

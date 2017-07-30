@@ -36,7 +36,7 @@ Inherent in the use of shells in structural models is the concept of dimensional
 	\label{dimReduction}
 \end{figure}
 
-Already, it is apparent that the through-thickness response of the shell now must be modelled instead of resolved, with the results now a function of the approximation employed. This apparent simplification promptly begs a key question: what shall the model consider such that it is simple as possible, but not simpler? Can the thickness vary under deformation? Is the shell one uniform material or multi-layered? Is shear deformation of the thickness negligible or not? One may also impose far stricter modelling assumptions by only considering the bending or membrane behaviour of the shell. These common structural modelling decisions, amongst others, have yielded typical shell models.
+Already, it is apparent that the through-thickness response of the shell now must be modelled instead of resolved, with the results now a function of the approximation employed. This simplification promptly begs a key question: what shall the model consider such that it is simple as possible, but not simpler? Can the thickness vary under deformation? Is the shell one uniform material or multi-layered? Is shear deformation of the thickness negligible or not? One may also impose far stricter modelling assumptions by only considering the bending or membrane behaviour of the shell. These common structural modelling decisions, amongst others, have yielded typical shell models.
 
 \section{Shell models}
 
@@ -66,7 +66,7 @@ Quantities in the reference configuration are expressed in upper case while quan
 
 Despite not truly being a shell model, the membrane model is the simplest model available as it completely ignores bending behaviour. Thus, the structural behaviour of the whole element is described by in plane components. Typically it is assumed that all stress and strain components are constant over the thickness. A key model choice is the specification of either plane stress or plane strain behaviour which is implemented in material matrix.
 
-Commencing a high level formulation of the membrane model, the assumption of constant strain and stress components over the thickness allows collapsing the body into an infinitely thin shell. Thus thickness can be ignored in the position vectors.
+Commencing a high level formulation of the membrane model, the assumption of constant strain and stress components over the thickness allows collapsing the body into an infinitely thin shell. Thus thickness can be ignored in the position vectors:
 
 \begin{equation} 
 \mathbf{X} = \mathbf{R}\ ,
@@ -74,7 +74,7 @@ Commencing a high level formulation of the membrane model, the assumption of con
 \mathbf{x} = \mathbf{r}\ ,
 \hspace{10mm}
 \mathbf{r} = \mathbf{R} + \mathbf{v}
-\label{eqsmem1a}
+\label{eqsmem1a}\ .
 \end{equation}
 
 Using the notation of $(\ )_{,\alpha} = \frac{\partial(\ )}{\partial	\alpha}$ and explicitly writing the base vectors of the coordinate system yields:
@@ -84,7 +84,7 @@ Using the notation of $(\ )_{,\alpha} = \frac{\partial(\ )}{\partial	\alpha}$ an
 \ ,
 \hspace{10mm}
 \mathbf{a}_\alpha  = \mathbf{r}_{,\alpha} = \mathbf{A}_\alpha + \mathbf{v}_{,\alpha}
-\label{eqsmem1b}
+\label{eqsmem1b}\ .
 \end{equation}
 
 Considering the metrics of the reference and deformed configuration, the in-plane Green-Lagrange strain components read:
@@ -95,29 +95,29 @@ Considering the metrics of the reference and deformed configuration, the in-plan
 \hspace{10mm}
 with
 \hspace{10mm}
-a_{\alpha\beta} = \mathbf{a}_\alpha \cdot \mathbf{a}_\beta
+a_{\alpha\beta} = \mathbf{a}_\alpha \cdot \mathbf{a}_\beta\ ,
 \hspace{10mm}
 A_{\alpha\beta} = \mathbf{A}_\alpha \cdot \mathbf{A}_\beta
-\label{eqsmem2}
+\label{eqsmem2}\ .
 \end{equation}
 
-Corresponding to the membrane assumptions, all out of plane strain components are 0.
+Corresponding to the membrane assumptions, all out of plane strain components are 0:
 
 \begin{equation} 
 \epsilon_{3i} = 0
-\label{eqsmem3}
+\label{eqsmem3}\ .
 \end{equation}
 
 At this point, one notices that all strain terms are completely contained within the two in-plane mid-surface displacements $\mathbf{v}_\alpha$.
 
-By introducing the elasticity tensor $\mathbf{C}_0$ (typically plane stress) the stress components can be recovered from the strains.
+By introducing the elasticity tensor $\mathbf{C}_0$ (typically plane stress) the stress components can be recovered from the strains:
 
 \begin{equation} 
 \sigma^{\alpha\beta} = C_0^{\alpha\beta\gamma\delta} \epsilon_{\gamma\delta}
-\label{eqsmem4}
+\label{eqsmem4}\ .
 \end{equation}
 
-With stresses and strains determined, the internal and a generalised (where $\mathbf{f}$ is a generalised traction vector and $\delta \mathbf{v}$ are virtual displacements) external virtual work can be expressed:
+With stresses and strains determined, the internal and generalised external virtual work (where $\mathbf{f}$ is a generalised traction vector and $\delta \mathbf{v}$ are virtual displacements) can be expressed:
 
 \begin{equation} 
 -\delta\Pi_{int} = 
@@ -133,34 +133,8 @@ d \Omega\ ,
 \mathbf{f}^T
 \delta  \mathbf{v}\ 
 d \Omega
-\label{eqsmem5}
+\label{eqsmem5}\ .
 \end{equation}
-
-%Condensing to vector notation the above yields:
-%
-%\begin{equation} 
-% \boldsymbol{\epsilon} =  \begin{pmatrix}
-%  \epsilon_{xx} \\
-%  \epsilon_{yy} \\
-%  2\epsilon_{xy} \\
-% \end{pmatrix} 
-% \hspace{10mm}
-% \mathbf{C}_0 = \frac{E}{1-\nu^2} \bar{\mathbf{C}} = \frac{E}{1-\nu^2}
-% \begin{pmatrix}
-%  1 & 0 & 0 \\
-%   0 & 1 & 0 \\
-%    0 & 0 & \frac{1-\nu}{2}
-% \end{pmatrix} 
-%\label{eqsmem7}
-%\end{equation}
-
-%\begin{equation} 
-%\delta\Pi_{ext} = \int_\Omega
-% \mathbf{f}^T
-%\delta  \mathbf{v}\ 
-%d \Omega
-%\label{eqsmem7}
-%\end{equation}
 
 It's apparent that the internal work is composed solely of in-plane action, corresponding to the general descriptive assumptions of the membrane model above. By extension, it can be understood that the membrane model provides no resistance to out of plane action. Thus, unless the membrane-modelled structure is pre-stressed, the system will be rendered singular under out of plane loads. This lack of out of plane stiffness can also lead to buckling under compressive stresses. Considering the reduced phenomena that the membrane model can resolve, it is crucial to understand the critical physics of the system before employing it.
 
@@ -188,7 +162,7 @@ Establishing the geometry of the KL shell requires incorporation of the shell di
 \mathbf{r} = \mathbf{R} + \mathbf{v}\ ,
 \hspace{10mm}
 \mathbf{d} = \boldsymbol{\Lambda}  \mathbf{D}
-\label{eqskt1}
+\label{eqskt1}\ .
 \end{equation}
 
 The above equation enforces the KL condition of a straight director with the linear description of $\theta^3 \mathbf{d}$. $\boldsymbol{\Lambda}$ is a rotation tensor composed of two independent rotation parameters $\beta^\alpha$ relating the reference and deformed directors to each other. In a Cartesian frame the linearised rotation components are: $\beta^1 = \mathbf{v}_{3,2}$ and $\beta^2 = -\mathbf{v}_{3,1}$ \cite{BischLitBook04}.
@@ -198,15 +172,11 @@ The displacement is thus expressed:
 \begin{equation} 
 \mathbf{u} = \mathbf{x} - \mathbf{X}
 =
-\mathbf{v} + \theta^3 (\boldsymbol{\Lambda} - \mathbf{G}) \mathbf{D}
-=
 \mathbf{v} + \theta^3 \mathbf{d}
-\label{eqskt2}
+\label{eqskt2}\ .
 \end{equation}
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Gotta figure out lamda - G = lamda
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
+%\mathbf{v} + \theta^3 (\boldsymbol{\Lambda} - \mathbf{G}) \mathbf{D}
+%=
 
 The KT requirement of the director being normal to the mid surface is expressed via the following dot product:
 
@@ -216,7 +186,7 @@ The KT requirement of the director being normal to the mid surface is expressed 
 (\boldsymbol{\Lambda} \mathbf{D}) \cdot (\mathbf{A}_\alpha + \mathbf{v}_{,\alpha})
 =
 0
-\label{eqskt3}
+\label{eqskt3}\ .
 \end{equation}
 
 Explicitly writing the base vectors of the coordinate system:
@@ -225,10 +195,10 @@ Explicitly writing the base vectors of the coordinate system:
 \mathbf{A}_\alpha  = \mathbf{R}_{,\alpha}
 \hspace{10mm}
 \mathbf{a}_\alpha  = \mathbf{r}_{,\alpha} = \mathbf{A}_\alpha + \mathbf{v}_{,\alpha}
-\label{eqskt4}
+\label{eqskt4}\ .
 \end{equation}
 
-Eqn \eqref{eqskt3}, requiring the director to be normal to the mid-surface, is guaranteed by employing cross products of the base vectors to construct the directors:
+Equation \eqref{eqskt3}, requiring the director to be normal to the mid-surface, is guaranteed by employing cross products of the base vectors to construct the directors:
 
 \begin{equation} 
 \mathbf{D} = \frac{\mathbf{A}_1 \times \mathbf{A}_2}
@@ -237,7 +207,7 @@ Eqn \eqref{eqskt3}, requiring the director to be normal to the mid-surface, is g
 \hspace{10mm}
 \mathbf{d} = \frac{\mathbf{a}_1 \times \mathbf{a}_2}
 {\lvert \lvert \mathbf{a}_1 \times \mathbf{a}_2 \rvert \rvert}
-= \mathbf{a}_3\ ,
+= \mathbf{a}_3\ .
 \label{eqskt5}
 \end{equation}
 
@@ -254,9 +224,9 @@ B_{\alpha \beta} = \frac{1}{2}
 \mathbf{A}_\alpha \cdot \mathbf{A}_{3,\beta}
 =
 \mathbf{A}_\alpha \cdot \mathbf{D}_{,\beta}
-\label{eqskt6}
+\label{eqskt6}\ ,
 \end{equation}
-
+and, 
 \begin{equation} 
 b_{\alpha \beta} = \frac{1}{2} 
 ( 
@@ -273,7 +243,7 @@ b_{\alpha \beta} = \frac{1}{2}
 	\frac{    (\mathbf{A}_1 + \mathbf{v}_{,1})  \times (\mathbf{A}_2 + \mathbf{v}_{,2})    }
 	{\lvert \lvert  (\mathbf{A}_1 + \mathbf{v}_{,1})  \times (\mathbf{A}_2 + \mathbf{v}_{,2})   \rvert \rvert}
 }\Bigg)_{,\beta}
-\label{eqskt7}
+\label{eqskt7}\ .
 \end{equation}
 
 Contrasting with the membrane model, the KT strain tensor components now include linearly varying terms corresponding to bending phenomena:
@@ -286,17 +256,17 @@ E_{\alpha \beta}
 \theta^3 (b_{\alpha\beta} - B_{\alpha\beta})
 =
 \epsilon_{\alpha \beta} + \theta^3 \kappa_{\alpha \beta}
-\label{eqskt8}
+\label{eqskt8}\ .
 \end{equation}
 
-According to the KT assumptions all out of plane strains are zero.
+According to the KT assumptions all out of plane strains are zero:
 
 \begin{equation} 
 E_{3i} = \epsilon_{3i} = \kappa_{3i} = 0
-\label{eqskt81}
+\label{eqskt81}\ .
 \end{equation}
 
-Studying the strain components, especially the deformed second fundamental form, reveals that there are now 3 midplane displacements $\mathbf{v}_i$ involved in the description of the KT shell model, hence the name 3 parameter model. 
+Studying the strain components, especially the deformed second fundamental form, reveals that there are now 3 mid-plane displacements $\mathbf{v}_i$ involved in the description of the KT shell model, hence the name 3 parameter model. 
 
 Combining the above developments, and assuming the same general external work as equation \eqref{eqsmem5}, the internal virtual work can be presented:
 
@@ -316,10 +286,10 @@ Combining the above developments, and assuming the same general external work as
 :
 \delta \boldsymbol{\kappa}\ 
 d \Omega
-\label{eqskt9}
+\label{eqskt9}\ .
 \end{equation}
 
-The internal work equation illustrates the 3 parameter model considers in-plane membrane behaviour as well as the additional bending behaviour related to the second integral. Furthermore, in flat shells with homogeneous linear material models the membrane and bending behaviour of the model are uncoupled. Due to the kinematics of the 3 parameter model (directors remain straight and normal, no transverse shear strains), it can correctly resolve analyses as shell thicknesses approach zero. This is in contrast the to 5 parameter model, which exhibits significant shear locking. Despite this, a pure rendition of the 3 parameter model is not commonly seen in practical FEM due to the required $C_1$ continuity at element boundaries (arising from rotations expressed as derivatives of transverse displacement) and the additional complication of effective shear forces on boundaries \cite{BischLitBook04}.
+The internal work equation illustrates the 3 parameter model considers in-plane membrane behaviour as well as the additional bending behaviour related to the second integral. Furthermore, in flat shells with homogeneous linear material models the membrane and bending behaviour of the model are uncoupled. Due to the kinematics of the 3 parameter model (directors remain straight and normal, no transverse shear strains), it can correctly resolve analyses as shell thicknesses approach zero. Despite this, a pure rendition of the 3 parameter model is not commonly seen in practical FEM due to the required $C_1$ continuity at element boundaries (arising from rotations expressed as derivatives of transverse displacement) and the additional complication of effective shear forces on boundaries \cite{BischLitBook04}.
 
 \subsection{5 parameter model: Reissner-Mindlin shell}
 
@@ -333,7 +303,7 @@ By relaxing the assumptions made in the 3 parameter shell model, the Reissner-Mi
 	\label{thickshellkine1}
 \end{figure}
 
-Studying the above kinematics confirms this model now considers transverse shear strains, limiting the range of validity of this model to thick plates $\frac{1}{5} < \frac{l}{t} < \frac{1}{10}$ where transverse deformations are a key component of structural behaviour. Similar to the membrane and KL model, thickness deformation is ignored. 
+Studying the above kinematics confirms this model now considers transverse shear strains, limiting the range of validity of this model to thick plates $\frac{1}{5} < \frac{l}{t} < \frac{1}{10}$ where transverse deformations are a key component of structural behaviour \cite{Bletz16}. Similar to the membrane and KL model, thickness deformation is ignored. 
 
 The geometry of the RM model is established similar to the KL model:
 
@@ -343,7 +313,7 @@ The geometry of the RM model is established similar to the KL model:
 \mathbf{v} + \theta^3 (\boldsymbol{\Lambda} - \mathbf{G}) \mathbf{D}
 =
 \mathbf{v} + \theta^3 \mathbf{d}
-\label{eqsrm1}
+\label{eqsrm1}\ .
 \end{equation}
 
 However, the strict requirement of maintaining the director remain normal to the mid-surface, as expressed in the KL theory equation \eqref{eqskt3}, is no longer enforced. Correspondingly, the rotation tensor $\boldsymbol{\Lambda}$ must now include 2 additional parameters related to these 2 introduced degrees of freedom.
@@ -358,14 +328,14 @@ E_{\alpha \beta}
 \theta^3 (b_{\alpha\beta} - B_{\alpha\beta})
 =
 \epsilon_{\alpha \beta} + \theta^3 \kappa_{\alpha \beta}
-\label{eqsrm2}
+\label{eqsrm2}\ .
 \end{equation}
 
 Once again it is noted the assumption of straight directors is enforced by the linear coupling of $\theta^3 \kappa_{\alpha \beta}$. Following the assumption of no thickness strain, it is seen:
 
 \begin{equation} 
 E_{33} = \epsilon_{33} = \kappa_{33} = 0
-\label{eqsrm21}
+\label{eqsrm21}\ .
 \end{equation}
 
 By relaxing the director normality requirements, additional transverse shear strains must be accounted for:
@@ -376,7 +346,7 @@ E_{\alpha 3} = E_{3 \alpha}
 (a_{\alpha 3} - A_{\alpha 3})
 =
 \frac{1}{2} \gamma_{3\alpha}
-\label{eqsrm3}
+\label{eqsrm3}\ .
 \end{equation}
 
 The internal virtual work is therefore expressed as:
@@ -405,28 +375,8 @@ d \Omega\
 :
 \delta \boldsymbol{\gamma}\ 
 d \Omega
-\label{eqsrm4}
+\label{eqsrm4}\ .
 \end{equation}
-
-%\begin{equation} 
-% \boldsymbol{\epsilon} =  \begin{pmatrix}
-%  \epsilon_{xx} \\
-%  \epsilon_{yy} \\
-%  \epsilon_{xy} \\
-% \end{pmatrix} 
-% \hspace{10mm}
-% \boldsymbol{\kappa} =  \begin{pmatrix}
-%  \kappa_{xx} \\
-%  \kappa_{yy} \\
-%  2\kappa_{xy} \\
-% \end{pmatrix} 
-%  \hspace{10mm}
-%  \boldsymbol{\gamma} =  \begin{pmatrix}
-%  \gamma_{xz} \\
-%  \gamma_{yz} \\
-% \end{pmatrix} 
-%\label{eqsrm6}
-%\end{equation}
 
 The 3 integrals of the virtual work equation represent the membrane, bending and shear work components, corresponding to the phenomena this model resolves. Furthermore, all these components are decoupled from each other in flat shells with homogeneous linear material models. The consideration of transverse shear deformations in the kinematics render the model applicable to thick shells where these strains are not insignificant. Incorrectly applying this model to thin shells in FEM yields spurious results due to a phenomena called shear locking (discussed in section \ref{transverse_shear_locking}). Despite this disadvantage, the 5 parameter model forms the basis of many shell elements often used in FEM thanks to the lower $C_0$ continuity required at element boundaries.
 
@@ -446,7 +396,7 @@ It's clear that the additional modelling power of the 7 parameter shell can reso
 	\label{shelleigenvaluespectra}
 \end{figure}
 
-As expected, the 7 parameter model captures higher Eigen-frequencies associated with thickness modes, while the 5 parameter is unable to resolve these. This is yet another example of model selection limiting the possibility of phenomena resolved.
+As expected, the 7 parameter model captures higher eigen frequencies associated with thickness modes, while the 5 parameter is unable to resolve these. This is yet another example of model selection limiting the possibility of phenomena resolved.
 
 \section{Locking in shell finite elements}
 \label{locking in shell finite elements}
@@ -470,14 +420,14 @@ N(\xi,\eta)_m
 	\hat{\epsilon_{ij}}_m \\
 	\vdots
 	\end{pmatrix}}
-\label{eqfemtech1}
+\label{eqfemtech1}\ .
 \end{equation}
 
-The resolving power of the shape functions undoubtedly restricts what continuous fields can be described from discrete values. They govern not only the description of geometry, but also the deformation modes the element can express. This forms another layer of expression limitation added to shell models in FEM. Given the propensity to use linear or quadratic shape functions in modern FEM codes, these limitations are often not insignificant. These, together with the physics assumptions and limitations of each shell model, give rise to common numerical inaccuracies, generally termed locking.
+The resolving power of the shape functions undoubtedly restricts what continuous fields can be described from discrete values. They govern not only the description of geometry, but also deformations the element can express. This forms another layer of expression limitation added to shell models in FEM. Given the propensity to use linear or quadratic shape functions in modern FEM codes, these limitations are often not insignificant. These, together with the physics assumptions and limitations of each shell model, give rise to common numerical inaccuracies, generally termed locking.
 
 \subsection{Transverse shear locking} \label{transverse_shear_locking}
 
-Transverse shear locking is perhaps the most recognized and problematic locking phenomena amongst the three considered in this work. As it is related to transverse shear strains, transverse shear locking is possible in the 5 parameter model and impossible for membrane and 3 parameter models. Phenomenologically, transverse shear locking occurs when thin shells incorrectly described by 5 parameter models are subject to bending situations, exhibiting the signature of significantly reduced displacements (ie. 'locked') than expected. By indicating specific material matrices, and removing membrane work for clarity, the internal bending and shear virtual work of the 5 parameter model can be expressed as follows: 
+Transverse shear locking is perhaps the most recognized and problematic locking phenomena amongst the three considered in this work. As it is related to transverse shear strains, transverse shear locking is possible in the 5 parameter model and impossible for membrane and 3 parameter models. Phenomenologically, transverse shear locking occurs when thin shells incorrectly described by 5 parameter models are subject to bending situations, exhibiting the signature of significantly reduced displacements (i.e. 'locked') than expected. By indicating specific material matrices, and removing membrane work for clarity, the internal bending and shear virtual work of the 5 parameter model can be expressed as follows: 
 
 
 \begin{equation} 
@@ -486,13 +436,14 @@ Transverse shear locking is perhaps the most recognized and problematic locking 
 1 & \nu & 0 \\
 \nu & 1 & 0 \\
 0 & 0 & \frac{1-\nu}{2}
-\end{pmatrix}
+\end{pmatrix}\ ,
 \hspace{10mm}
-\mathbf{C}_{bend} = \frac{E h^3}{12(1-\nu^2)} \bar{ \mathbf{C}}
+\mathbf{C}_{bend} = \frac{E h^3}{12(1-\nu^2)} \bar{ \mathbf{C}}\ ,
 \hspace{10mm}
 \mathbf{C}_{shear} = \alpha G h \mathbf{I}
-\label{eqlock1}
+\label{eqlock1}\ ,
 \end{equation}
+culminating in
 \begin{equation} 
 -( \delta\Pi_{int} - \delta\Pi_{int\ mem} )=
 -(\Pi_{bend} + \Pi_{shear}) =
@@ -511,12 +462,12 @@ d \Omega\
 :
 \delta \boldsymbol{\gamma}\ 
 d \Omega
-\label{eqlock2}
+\label{eqlock2}\ .
 \end{equation}
 
 
 
-As phenomenologically described, transverse shear locking comes into effect with thin shells. One can see that as thickness $h \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto h^3$) will be far less than the shear internal work ($\Pi_{shear} \propto t$), leading to an incorrect allocation of internal energy. Since the bending internal work is associated with bending deflections, these resulting deflections will be less than they should be and the element will appear locked. The over-representation of shear strains also leads to strong shear force oscillations - another classic symptom of transverse shear locking.
+As phenomenologically described, transverse shear locking comes into effect with thin shells. One can see that as thickness $h \rightarrow 0$ the bending internal work ($\Pi_{bend} \propto h^3$) will be far less than the shear internal work ($\Pi_{shear} \propto h$), leading to an incorrect allocation of internal energy. Since the bending internal work is associated with bending deflections, these resulting deflections will be less than they should be and the element will appear locked. The over-representation of shear strains also leads to strong shear force oscillations - another classic symptom of transverse shear locking.
 
 \subsection{Membrane locking}
 \label{membrane_locking_theory}
@@ -576,7 +527,7 @@ The performance of the MITC formulation clearly depends on the location of the s
 
 \subsection{Assumed Natural Deviatoric Strains}
 
-The ANS approach was extended into Free Formulation (FF) \cite{Bergan84}, where the element stiffness matrix is the sum of a basic and higher order stiffness, by Militello and Felippa \cite{FELIPPA1990} under the name of the Assumed Natural Deviatoric Strains (ANDES) formulation. An advantage that the ANDES formulation inherits from the FF is that it untethers the derivation of element stiffnesses from the principle of minimum potential energy, the function continuity requirements of which often result in elements that "tend to be too stiff" \cite{Bergan84}. The ANDES basic stiffness ensures consistency of the element and arrises from the basic strain field comprising constant strain states and those associated with rigid body motion. Complementing this, the higher order stiffness is responsible for stability and accuracy \cite{Felippa2003} based on a enhanced strain field where the element enhancements are realised. The FF framework requires this potentially non-conforming higher order field be energy orthogonal to the basic field, which the ANDES formulation fulfils with a deviatoric higher order strain field \cite{felippa2002fitting}.  The ANDES formulation has proven capable of alleviating membrane and transverse shear locking \cite{Mostafa11}.
+The ANS approach was extended into Free Formulation (FF) \cite{Bergan84}, where the element stiffness matrix is the sum of a basic and higher order stiffness, by Militello and Felippa \cite{FELIPPA1990} under the name of the Assumed Natural Deviatoric Strains (ANDES) formulation. An advantage that the ANDES formulation inherits from the FF is that it untethers the derivation of element stiffnesses from the principle of minimum potential energy, the function continuity requirements of which often result in elements that "tend to be too stiff" \cite{Bergan84}. The ANDES basic stiffness ensures consistency of the element and arises from the basic strain field comprising constant strain states and those associated with rigid body motion. Complementing this, the higher order stiffness is responsible for stability and accuracy \cite{Felippa2003} based on a enhanced strain field where the element enhancements are realised. The FF framework requires this potentially non-conforming higher order field be energy orthogonal to the basic field, which the ANDES formulation fulfils with a deviatoric higher order strain field \cite{felippa2002fitting}.  The ANDES formulation has proven capable of alleviating membrane and transverse shear locking \cite{Mostafa11}.
 
 \subsection{Discrete Shear Gap}
 \label{DSGbackground}
@@ -588,10 +539,10 @@ The Discrete Shear Gap (DSG) approach from Bischoff and Bletzinger \cite{Ble00} 
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=8cm]{images/DSG.png}
 	\caption{Discrete Shear Gap (DSG) concept \cite{Ble00}}
-	\label{ansexample}
+	\label{dsgconcept}
 \end{figure}
 
-The DSG method aims to set the nodal shear gaps to zero, which, in effect, alters and defines the underlying shear strain field. In bilinear rectangular applications of the DSG method, Bletzinger \cite{Ble00} notes that the MITC4 element is recovered. For a linear triangle element, the shear gap of only two nodes can be set to zero, rendering the element stiffness dependent on node ordering \cite{Ble00}. Despite this drawback, which diminishes with mesh refinement, the DSG method offers an advantage of very fast computational construction of element stiffness matrices and effective mitigation of transverse shear locking.
+By constructing a shear gap field, the DSG method approaches the underlying shear formation field in an integral sense, which can be precipitated via differentiation. In bilinear rectangular applications of the DSG method, Bletzinger \cite{Ble00} notes that the MITC4 element is recovered. For a linear triangle element, the approach only considers two edges, rendering the element stiffness dependent on node ordering \cite{Ble00}. Despite this drawback, which diminishes with mesh refinement, the DSG method offers an advantage of very fast computational construction of element stiffness matrices and effective mitigation of transverse shear locking.
 
 \subsection{Discrete Kirchhoff Theory}
 \label{dkqtheory}
@@ -614,7 +565,7 @@ For example, the Kirchhoff conditions are imposed at corner nodes $i = 1, 2, 3, 
 \beta_{yi} + \frac{\partial w}{\partial y} \rvert_i = 0\ ,
 \hspace{10mm}
 \beta_{sk} + \frac{\partial w}{\partial s} \rvert_k = 0
-\label{eqsdkt}
+\label{eqsdkt}\ .
 \end{equation}
 
 Mohan \cite{Mohan97} noted that a major drawback of DKT elements is that the transverse displacement isn't explicitly defined within the interior of the element. Despite this, the advantages of DKT formulated elements is that they combine the shear locking free performance of KL models and the lower $C_0$ continuity requirements of RM models \cite{Bletz16}.
@@ -631,7 +582,7 @@ Although drilling degrees of freedom (DOFs) don't counter locking problems, it i
 \mathbf{v}_i^T = \begin{pmatrix}
 v_{xi} & v_{yi} & v_{zi} & \beta_{xi} & \beta_{yi}
 \end{pmatrix}
-\label{eqsdrilling}
+\label{eqsdrilling}\ .
 \end{equation}
 
 It can be seen that the shell formulations don't require a rotational DOF around the z axis $\beta_{zi}$, referred to as the drilling DOF. However, as discussed, shell elements in practical FEA may meet at arbitrary orientations, such as the perpendicular intersection below:
@@ -640,7 +591,7 @@ It can be seen that the shell formulations don't require a rotational DOF around
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=8cm]{images/drillingDOF.png}
-	\caption{Shell assembly benefitting from drilling DOFs \cite{BischLitBook04}}
+	\caption{Shell assembly benefiting from drilling DOFs \cite{BischLitBook04}}
 	\label{shellModels}
 \end{figure}
 
@@ -666,7 +617,7 @@ Following the discussion of shell models, their associated locking phenomena and
 		\hline
 		Drilling DOFs	  &  - & Practical assembly of shells & Artificial stiffness \\
 		\hline
-		DSG	&	 5 parameter	& Reduced transverse shear locking	& Node numbering dependency for linear triangle \\
+		DSG	&	 5 parameter	& Reduced transverse shear locking	& Node numbering dependency for linear triangles \\
 		\ &\  & Computationally fast & \  \\
 		\hline
 		EAS 	  &		  5 parameter		&		Reduced transverse shear and membrane locking & Potentially complex implementation and possibly slower \\
@@ -681,11 +632,11 @@ Following the discussion of shell models, their associated locking phenomena and
 	\label{table:1}
 \end{table}
 
-The table above confirms the \textit{"no free lunch"} theory, with every technology having its own advantages and drawbacks. In the case of a flat shell (naturally, or via projection), where the bending and membrane response are decoupled, a single finite element can easily employ different technologies in each component. 
+The table above confirms the \textit{"no free lunch"} theory, with every technology having its own advantages and drawbacks. In the case of a flat shell (naturally, or via projection), where the bending and membrane response are decoupled, a single finite element can employ different technologies in each component. 
 
 \section{Identification of Kratos shell element formulations}
 
-The shell elements to be implemented in Kratos are the 5 parameter (Reissner-Mindlin theory) triangular shell and the 3 parameter (Kirchhoff Love theory) quadrilateral shell. Obviously the perfect element choices for Kratos would be computationally quick, possess no locking and easy to implement, but it's clear such an element doesn't exist yet. If the requirements are relaxed to computationally quick elements that are relatively free of locking effects the following candidates are selected:
+The shell elements to be implemented in Kratos are the 5 parameter (Reissner-Mindlin theory) linear triangular shell and the 3 parameter (Kirchhoff Love theory) linear quadrilateral shell. Obviously the perfect element choices for Kratos would be computationally quick, possess no locking and easy to implement, but it's clear such an element doesn't exist yet. If the requirements are relaxed to computationally quick elements that are relatively free of locking effects the following technologies are selected:
 
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{ | l | X |  X | }
