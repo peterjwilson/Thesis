@@ -317,26 +317,26 @@ The deformational motion $\mathbf{d}_p$ can be extracted in $\mathscr{C}^0$ by r
 As per the general flow of figure \ref{cr3}, the deformational motion described above are the only displacements 'seen' by the element. Since these displacements, and the element stiffness matrix and internal force vector computed via virtual displacements $\delta \mathbf{v}$, are computed in $\mathscr{C}^R$, the variation of these in $\mathscr{C}^R$ require additional treatment to be linked back to the global frame. This additional workload corresponds to the upper EICR block of figure \ref{cr3}, with the treatment of EICR internal forces considered first.
 
 \subsection{EICR internal forces}
-The element internal force vector $\mathbf{p}_R^e$ in the CR frame $\mathscr{C}^R$ for each node $a = 1\ ...\ N^e$ is given by the internal energy $U^e$ derived through it's DOFs:
+The element internal force vector $\mathbf{p}_R^e$ in the CR frame $\mathscr{C}^R$ for each node $a = 1\ ...\ N^e$ is given by the internal energy $U^e$ derived through it's DOFs \cite{felippa2000systematic}:
 
 \begin{equation} 
-\mathbf{p}_R^e = 
-\frac{\partial U^e}{\partial \mathbf{v}_R^e}
+\mathbf{p}_{Ra}^e = 
+\frac{\partial U^e}{\partial \mathbf{v}_{Rda}^e}
 \label{eq_cr4}\ ,
 \end{equation}
 
 which can be split into translation and moment forces as per:
 
 \begin{equation} 
-\mathbf{p}_R^e = 
+\mathbf{p}_{Ra}^e = 
 \begin{pmatrix}
-\mathbf{p}_{Ru}^e \\
-\mathbf{p}_{R\theta}^e 
+\mathbf{p}_{Rua}^e \\
+\mathbf{p}_{R\theta a}^e 
 \end{pmatrix}
 =
 \begin{pmatrix}
-\frac{\partial U^e}{\partial \mathbf{u}_{R}^e} \\
-\frac{\partial U^e}{\partial \boldsymbol{\theta}_{R}^e} 
+\frac{\partial U^e}{\partial \mathbf{u}_{Rda}^e} \\
+\frac{\partial U^e}{\partial \boldsymbol{\theta}_{Rda}^e} 
 \end{pmatrix}
 \label{eq_cr5}\ .
 \end{equation}
@@ -345,20 +345,21 @@ With a view of reconciling the above expressions in the global frame, variations
 
 \begin{equation} 
 \begin{pmatrix}
-\delta \mathbf{u}_{R}^e \\
-\delta \boldsymbol{\theta}_{R}^e
+\delta \mathbf{u}_{Rda}^e \\
+\delta \boldsymbol{\theta}_{Rda}^e
 \end{pmatrix}
 =
-\mathbf{J}
+\sum_{b=1}^{N^e}
+\mathbf{J}_{ab}
 \begin{pmatrix}
-\delta \mathbf{u}^e \\
-\delta \boldsymbol{\omega}^e
+\delta \mathbf{u}_a^e \\
+\delta \boldsymbol{\omega}_a^e
 \end{pmatrix}\ ,
 \hspace{10mm}
-\mathbf{J} = 
+\mathbf{J}_{ab} = 
 \begin{pmatrix}
-\frac{\partial \mathbf{u}_R^e}{\partial \mathbf{u}^e} & \frac{\partial \mathbf{u}_R^e}{\partial \boldsymbol{\omega}^e} \\
-\frac{\partial \boldsymbol{\theta}_R^e}{\partial \mathbf{u}^e} & \frac{\partial \boldsymbol{\theta}_R^e}{\partial \boldsymbol{\omega}^e}
+\frac{\partial \mathbf{u}_{Rdb}^e}{\partial \mathbf{u}_a^e} & \frac{\partial \mathbf{u}_{Rdb}^e}{\partial \boldsymbol{\omega}_a^e} \\
+\frac{\partial \boldsymbol{\theta}_{Rbd}^e}{\partial \mathbf{u}_a^e} & \frac{\partial \boldsymbol{\theta}_{Rdb}^e}{\partial \boldsymbol{\omega}_a^e}
 \end{pmatrix}
 \label{eq_cr6}\ .
 \end{equation}
@@ -374,14 +375,15 @@ Key to the EICR is that energy scalars between various configurations $\mathscr{
 with the transformed global internal forces determined as:
 \begin{equation} 
 \begin{pmatrix}
-\mathbf{p}_{u}^e \\
-\mathbf{p}_{\theta}^e 
+\mathbf{p}_{ua}^e \\
+\mathbf{p}_{\theta a}^e 
 \end{pmatrix}
 =
-\mathbf{J}^T
+\sum_{b=1}^{N^e}
+\mathbf{J}_{ab}^T
 \begin{pmatrix}
-\mathbf{p}_{Ru}^e \\
-\mathbf{p}_{R\theta}^e 
+\mathbf{p}_{Rua}^e \\
+\mathbf{p}_{R\theta a}^e 
 \end{pmatrix}
 \label{eq_cr8}\ .
 \end{equation}

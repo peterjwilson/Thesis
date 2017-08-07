@@ -493,7 +493,16 @@ A second composite dynamic test considers the square Navier supported plate desc
 As per the isotropic dynamic tests, the composite tests agree very well with the reference Strand7 solutions. Figure \ref{Composite dynamic benchmarks}(b) reveals that the DSG element slightly deviates as the simulated time accumulates, however, the error in period is less than 1.3\%.
 
 \subsection{Composite stress recovery: tensile test}
-The first test to interrogate the stress recovery accuracy of the composite shell elements is a relatively simple tensile test \cite{nasanettles1994}. A horizontal rectangular tensile test token of $10\times2\times0.02$ total thickness is clamped at one end while the other end is subject to a tensile load of 1000. The token laminate layup is [0/90/90/0] while the material properties of each lamina are defined as: $E_1 = 200.1\times10^5,\ E_2 = 130.1\times10^4,\ G_{12} = G_{13} = G_{23} = 100.1\times10^4$ and $\nu_{12} = 0.3$. Results of the analysis are taken from the mid-length $(x=5)$ of the test token and are averaged across the width. The reference solution for the stresses is from Reference \cite{nasanettles1994} with a Strand7 analysis of the problem providing the Tsai-Wu reference. 
+The first test to interrogate the stress recovery accuracy of the composite shell elements is a relatively simple tensile test \cite{nasanettles1994}. A horizontal rectangular tensile test token of $10\times2\times0.02$ total thickness is clamped at one end while the other end is subject to a tensile load of 1000.
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=12cm]{images/composite_tensile_setup.png}
+	\caption{Definition of the composite tensile stress recovery test}
+\end{figure}
+
+ The token laminate layup is [0/90/90/0] while the material properties of each lamina are defined as: $E_1 = 200.1\times10^5,\ E_2 = 130.1\times10^4,\ G_{12} = G_{13} = G_{23} = 100.1\times10^4$ and $\nu_{12} = 0.3$. Results of the analysis are taken from the mid-length $(x=5)$ of the test token and are averaged across the width. The reference solution for the stresses is from Reference \cite{nasanettles1994} with a Strand7 analysis of the problem providing the Tsai-Wu reference. 
 %Example from Nasa composite doc, example 3. Tensile test token was 10x2x0.02 total thickness. Layup was [0,45,45,0].
 %Reference tsai-wu results are "Modified tsai-wu" of the same problem on Strand7 FEA software.
 %Material was :

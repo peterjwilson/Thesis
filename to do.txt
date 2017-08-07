@@ -8,11 +8,15 @@ Hiwi to do:
 	
 	
 Thesis To Do:	
+
+
+Things to study:
+	- Diff between hard and soft plate supports
+	- Revise over derivation of RM and KT shells in ToP
 	
 	
 Report:
-	- Next review
-		- EICR jacobian sum over b?
+
 	
 	- (Up next)
 	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!

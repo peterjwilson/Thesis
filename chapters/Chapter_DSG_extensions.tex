@@ -20,7 +20,7 @@
 
 \renewcommand{\Thema}{Extension of DSG linear triangle element technology}
 
-\lettrine[lines=2]{A}{lthough} the DSG element technology drastically enhances the performance of the basic constant strain triangle (Basic-T3) formulation in a very computationally efficient package, the drawback of nodal numbering dependency in coarse linear triangular meshes has tempted academics since it's original publication to extend the elegant underlying discrete shear gap concept into a formulation invariant of nodal ordering. This chapter concerns itself with: one such formulation under development with promise, another approach successfully published and gaining traction and illuminating the severity of the DSG nodal numbering sensitivity in order to ascertain whether remedies are actually worthwhile in practical scenarios.
+\lettrine[lines=2]{A}{lthough} the DSG element technology drastically enhances the performance of the basic constant strain triangle (Basic-T3) formulation in a very computationally efficient package, the drawback of nodal numbering dependency in coarse linear triangular meshes has tempted academics since it's original publication to extend the elegant underlying discrete shear gap concept into a formulation invariant of nodal ordering. This chapter concerns itself with: one such formulation under development with promising initial results, another approach successfully published and gaining traction and illuminating the severity of the DSG nodal numbering sensitivity in order to ascertain whether remedies are actually worthwhile in practical scenarios.
 
 \section{DSGc3 approach}
 The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's chair of structural engineering aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In it's current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric unit triangle formulation, with the next stage in development being the extension into arbitrary Cartesian triangles. 
@@ -35,7 +35,7 @@ Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\
 	\label{fig:parametric_unit_triangle}
 \end{figure}
 
-Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of matching both preceding fields thereby rendering the element free of locking effects. The form of the three fields are:
+Three transverse displacement fields are set across the triangle: a Kirchhoff-Love field $w_{KL}$, a displacement field due to Reissner-Mindlin shear $w_{RM \gamma}$ and a moderator field $w_{MOD}$ which has the utility of interacting with both preceding fields thereby rendering the element free of locking effects. The form of the three fields are:
 
 \begin{equation} 
 w_{KL} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 + 0.5(a_5 + a_6)\xi \eta + \eta^2 a_7
@@ -83,7 +83,7 @@ A displacement gap field can be recovered by identifying the difference between 
 \label{eqDSGc3_10}\ .
 \end{equation}
 
-Until now the fields have been written in general terms of unknown ansatz coefficients. The fields can be clarified by considering 9 boundary conditions, sufficient to set-up 9 equations and solve the 9 unknowns.
+Until now the fields have been written in general terms of unknown ansatz coefficients. The fields can be congealed by considering 9 boundary conditions, sufficient to set-up 9 equations and solve the 9 unknowns.
 
 The first three equations constrain the displacement gap field to fulfil discrete nodal transverse displacements:
 

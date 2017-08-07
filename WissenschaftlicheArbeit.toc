@@ -219,7 +219,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Applications and consequences of element formulations}{115}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Euler buckling of CHS column}{115}{section.9.1}
+\contentsline {section}{\numberline {9.1}Euler buckling of CHS column}{116}{section.9.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {9.1.1}Summary}{122}{subsection.9.1.1}
 \defcounter {refsection}{0}\relax 

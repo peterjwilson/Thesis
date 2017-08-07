@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  30 JUL 2017 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  31 JUL 2017 11:42
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -3631,7 +3631,7 @@ Overfull \hbox (1.22725pt too wide) detected at line 220
 Package tocbasic Info: Using my definition of `\numberline' on input line 222.
 
 Overfull \hbox (1.22725pt too wide) detected at line 222
- []\T1/phv/m/n/10.95 115
+ []\T1/phv/m/n/10.95 116
  []
 
 Package tocbasic Info: Using my definition of `\numberline' on input line 226.
@@ -4144,11 +4144,11 @@ File: images/cr_4.png Graphic file (type png)
 Package pdftex.def Info: images/cr_4.png used on input line 288.
 (pdftex.def)             Requested size: 398.33858pt x 169.17152pt.
  [49 <./images/cr_3.png> <./images/cr_4.png>] [50]
-[51] <images/cr_6.png, id=1064, 565.11125pt x 320.19624pt>
+[51] <images/cr_6.png, id=1065, 565.11125pt x 320.19624pt>
 File: images/cr_6.png Graphic file (type png)
 
 <use images/cr_6.png>
-Package pdftex.def Info: images/cr_6.png used on input line 412.
+Package pdftex.def Info: images/cr_6.png used on input line 414.
 (pdftex.def)             Requested size: 284.52756pt x 161.21657pt.
  [52 <./images/cr_6.png>] [53]) (chapters/Chapter_3.tex
 [54]
@@ -4189,7 +4189,7 @@ chapter 6.
 [67
 
 ] [68] [69] [70]
-<images/ANDES_strain_gauges.png, id=1261, 608.87476pt x 433.01775pt>
+<images/ANDES_strain_gauges.png, id=1262, 608.87476pt x 433.01775pt>
 File: images/ANDES_strain_gauges.png Graphic file (type png)
 
 <use images/ANDES_strain_gauges.png>
@@ -4197,7 +4197,7 @@ Package pdftex.def Info: images/ANDES_strain_gauges.png used on input line 342.
 
 (pdftex.def)             Requested size: 207.7052pt x 147.71301pt.
 
-<images/andes_geometric_quantities.png, id=1263, 602.85225pt x 442.0515pt>
+<images/andes_geometric_quantities.png, id=1264, 602.85225pt x 442.0515pt>
 File: images/andes_geometric_quantities.png Graphic file (type png)
 
 <use images/andes_geometric_quantities.png>
@@ -4210,7 +4210,7 @@ Overfull \hbox (10.40245pt too wide) in paragraph at lines 339--353
  []
 
 [71 <./images/ANDES_strain_gauges.png> <./images/andes_geometric_quantities.png
->] [72] <images/ANDES_torsional_mode.png, id=1285, 386.6445pt x 399.29175pt>
+>] [72] <images/ANDES_torsional_mode.png, id=1286, 386.6445pt x 399.29175pt>
 File: images/ANDES_torsional_mode.png Graphic file (type png)
 
 <use images/ANDES_torsional_mode.png>
@@ -4287,14 +4287,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--220
 chapter 8.
 [92
 
-] <images/scordelisroof.png, id=1467, 769.07326pt x 428.802pt>
+] <images/scordelisroof.png, id=1468, 769.07326pt x 428.802pt>
 File: images/scordelisroof.png Graphic file (type png)
 
 <use images/scordelisroof.png>
 Package pdftex.def Info: images/scordelisroof.png used on input line 49.
 (pdftex.def)             Requested size: 207.7052pt x 115.80424pt.
 
-<images/scordelis_structured_quad_results.pdf, id=1469, 529.44987pt x 460.76108
+<images/scordelis_structured_quad_results.pdf, id=1470, 529.44987pt x 460.76108
 pt>
 File: images/scordelis_structured_quad_results.pdf Graphic file (type pdf)
  <use images/scordelis_structured_quad_results.pdf>
@@ -4302,7 +4302,7 @@ Package pdftex.def Info: images/scordelis_structured_quad_results.pdf used on i
 nput line 57.
 (pdftex.def)             Requested size: 207.7052pt x 180.75772pt.
 
-<images/scordelis_structured_tri_results.pdf, id=1470, 533.3551pt x 460.76108pt
+<images/scordelis_structured_tri_results.pdf, id=1471, 533.3551pt x 460.76108pt
 >
 File: images/scordelis_structured_tri_results.pdf Graphic file (type pdf)
  <use images/scordelis_structured_tri_results.pdf>
@@ -4319,14 +4319,14 @@ f> <./images/scordelis_structured_tri_results.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/scordelis_structured_tri_results.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
->] <images/pinchedcylinder.png, id=1573, 794.36775pt x 459.51675pt>
+>] <images/pinchedcylinder.png, id=1574, 794.36775pt x 459.51675pt>
 File: images/pinchedcylinder.png Graphic file (type png)
 
 <use images/pinchedcylinder.png>
 Package pdftex.def Info: images/pinchedcylinder.png used on input line 80.
 (pdftex.def)             Requested size: 207.7052pt x 120.15166pt.
 
-<images/pinched_cyl_structured_quad_results.pdf, id=1575, 521.63945pt x 467.403
+<images/pinched_cyl_structured_quad_results.pdf, id=1576, 521.63945pt x 467.403
 08pt>
 File: images/pinched_cyl_structured_quad_results.pdf Graphic file (type pdf)
  <use images/pinched_cyl_structured_quad_results.pdf>
@@ -4334,7 +4334,7 @@ Package pdftex.def Info: images/pinched_cyl_structured_quad_results.pdf used on
  input line 88.
 (pdftex.def)             Requested size: 207.7052pt x 186.1092pt.
 
-<images/pinched_cyl_structured_tri_results.pdf, id=1576, 525.54466pt x 444.6775
+<images/pinched_cyl_structured_tri_results.pdf, id=1577, 525.54466pt x 444.6775
 5pt>
 File: images/pinched_cyl_structured_tri_results.pdf Graphic file (type pdf)
  <use images/pinched_cyl_structured_tri_results.pdf>
@@ -4351,14 +4351,14 @@ s.pdf> <./images/pinched_cyl_structured_tri_results.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/pinched_cyl_structured_tri_results.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <images/pinchedhemisphere.png, id=1677, 791.95876pt x 393.26926pt>
+>] <images/pinchedhemisphere.png, id=1678, 791.95876pt x 393.26926pt>
 File: images/pinchedhemisphere.png Graphic file (type png)
 
 <use images/pinchedhemisphere.png>
 Package pdftex.def Info: images/pinchedhemisphere.png used on input line 111.
 (pdftex.def)             Requested size: 207.7052pt x 103.14171pt.
 
-<images/pinched_hemi_quad_results.pdf, id=1679, 533.3551pt x 460.76108pt>
+<images/pinched_hemi_quad_results.pdf, id=1680, 533.3551pt x 460.76108pt>
 File: images/pinched_hemi_quad_results.pdf Graphic file (type pdf)
 
 <use images/pinched_hemi_quad_results.pdf>
@@ -4366,7 +4366,7 @@ Package pdftex.def Info: images/pinched_hemi_quad_results.pdf used on input lin
 e 119.
 (pdftex.def)             Requested size: 207.7052pt x 179.43596pt.
 
-<images/pinched_hemi_tri_results.pdf, id=1680, 533.3551pt x 460.76108pt>
+<images/pinched_hemi_tri_results.pdf, id=1681, 533.3551pt x 460.76108pt>
 File: images/pinched_hemi_tri_results.pdf Graphic file (type pdf)
 
 <use images/pinched_hemi_tri_results.pdf>
@@ -4383,7 +4383,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 119--124
 
 pdfTeX warning: pdflatex.exe (file ./images/pinched_hemi_tri_results.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
->] <images/hinged_cylindrical_roof.png, id=1785, 1430.34375pt x 1117.17375pt>
+>] <images/hinged_cylindrical_roof.png, id=1786, 1430.34375pt x 1117.17375pt>
 File: images/hinged_cylindrical_roof.png Graphic file (type png)
 
 <use images/hinged_cylindrical_roof.png>
@@ -4391,7 +4391,7 @@ Package pdftex.def Info: images/hinged_cylindrical_roof.png used on input line
 143.
 (pdftex.def)             Requested size: 207.7052pt x 162.21617pt.
 
-<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=1787, 538.72673
+<images/Load_displacement_curve_hinged_cylindrical_roof.pdf, id=1788, 538.72673
 pt x 438.03554pt>
 File: images/Load_displacement_curve_hinged_cylindrical_roof.pdf Graphic file (
 type pdf)
@@ -4407,7 +4407,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 143--148
 
 [96 <./images/hinged_cylindrical_roof.png> <./images/Load_displacement_curve_hi
 nged_cylindrical_roof.pdf>]
-<images/opencylinderpullout.png, id=1840, 1296.042pt x 966.009pt>
+<images/opencylinderpullout.png, id=1841, 1296.042pt x 966.009pt>
 File: images/opencylinderpullout.png Graphic file (type png)
 
 <use images/opencylinderpullout.png>
@@ -4415,7 +4415,7 @@ Package pdftex.def Info: images/opencylinderpullout.png used on input line 165.
 
 (pdftex.def)             Requested size: 207.7052pt x 154.80043pt.
 
-<images/Load_displacement_curve_open_cylinder_pullout.pdf, id=1842, 538.72673pt
+<images/Load_displacement_curve_open_cylinder_pullout.pdf, id=1843, 538.72673pt
  x 438.03554pt>
 File: images/Load_displacement_curve_open_cylinder_pullout.pdf Graphic file (ty
 pe pdf)
@@ -4428,7 +4428,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 165--170
 [][][][] 
  []
 
-<images/swinging_plate_problem.png, id=1844, 4411.48125pt x 2789.622pt>
+<images/swinging_plate_problem.png, id=1845, 4411.48125pt x 2789.622pt>
 File: images/swinging_plate_problem.png Graphic file (type png)
 
 <use images/swinging_plate_problem.png>
@@ -4436,7 +4436,7 @@ Package pdftex.def Info: images/swinging_plate_problem.png used on input line 1
 86.
 (pdftex.def)             Requested size: 207.7052pt x 131.31656pt.
 
-<images/shell_pendulum_lumped.pdf, id=1845, 527.40317pt x 461.54526pt>
+<images/shell_pendulum_lumped.pdf, id=1846, 527.40317pt x 461.54526pt>
 File: images/shell_pendulum_lumped.pdf Graphic file (type pdf)
 
 <use images/shell_pendulum_lumped.pdf>
@@ -4444,7 +4444,7 @@ Package pdftex.def Info: images/shell_pendulum_lumped.pdf used on input line 19
 4.
 (pdftex.def)             Requested size: 207.7052pt x 181.7696pt.
 
-<images/shell_pendulum_consistent.pdf, id=1846, 528.06189pt x 461.54526pt>
+<images/shell_pendulum_consistent.pdf, id=1847, 528.06189pt x 461.54526pt>
 File: images/shell_pendulum_consistent.pdf Graphic file (type pdf)
 
 <use images/shell_pendulum_consistent.pdf>
@@ -4458,14 +4458,14 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 194--199
 
 [97 <./images/opencylinderpullout.png> <./images/Load_displacement_curve_open_c
 ylinder_pullout.pdf>]
-<images/quad_bend_problem.png, id=1898, 3083.52pt x 2052.468pt>
+<images/quad_bend_problem.png, id=1899, 3083.52pt x 2052.468pt>
 File: images/quad_bend_problem.png Graphic file (type png)
 
 <use images/quad_bend_problem.png>
 Package pdftex.def Info: images/quad_bend_problem.png used on input line 211.
 (pdftex.def)             Requested size: 207.7052pt x 138.23808pt.
 
-<images/oscillating_plate_lumped.pdf, id=1899, 541.07143pt x 461.54526pt>
+<images/oscillating_plate_lumped.pdf, id=1900, 541.07143pt x 461.54526pt>
 File: images/oscillating_plate_lumped.pdf Graphic file (type pdf)
 
 <use images/oscillating_plate_lumped.pdf>
@@ -4473,7 +4473,7 @@ Package pdftex.def Info: images/oscillating_plate_lumped.pdf used on input line
  219.
 (pdftex.def)             Requested size: 207.7052pt x 177.17784pt.
 
-<images/oscillating_plate_consistent.pdf, id=1900, 543.68274pt x 461.54526pt>
+<images/oscillating_plate_consistent.pdf, id=1901, 543.68274pt x 461.54526pt>
 File: images/oscillating_plate_consistent.pdf Graphic file (type pdf)
 
 <use images/oscillating_plate_consistent.pdf>
@@ -4496,7 +4496,7 @@ pdfTeX warning: pdflatex.exe (file ./images/shell_pendulum_consistent.pdf): PDF
 pdfTeX warning: pdflatex.exe (file ./images/oscillating_plate_consistent.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/Simply_support_dome_n_theta.pdf, id=2124, 537.41714pt x 438.03554pt>
+<images/Simply_support_dome_n_theta.pdf, id=2125, 537.41714pt x 438.03554pt>
 File: images/Simply_support_dome_n_theta.pdf Graphic file (type pdf)
 
 <use images/Simply_support_dome_n_theta.pdf>
@@ -4504,7 +4504,7 @@ Package pdftex.def Info: images/Simply_support_dome_n_theta.pdf used on input l
 ine 243.
 (pdftex.def)             Requested size: 207.7052pt x 169.29588pt.
 
-<images/Simply_support_dome_n_phi.pdf, id=2125, 537.41714pt x 438.03554pt>
+<images/Simply_support_dome_n_phi.pdf, id=2126, 537.41714pt x 438.03554pt>
 File: images/Simply_support_dome_n_phi.pdf Graphic file (type pdf)
 
 <use images/Simply_support_dome_n_phi.pdf>
@@ -4512,7 +4512,7 @@ Package pdftex.def Info: images/Simply_support_dome_n_phi.pdf used on input lin
 e 247.
 (pdftex.def)             Requested size: 207.7052pt x 169.29588pt.
 
-<images/Simply_support_dome_von_mises.pdf, id=2126, 529.21463pt x 438.03554pt>
+<images/Simply_support_dome_von_mises.pdf, id=2127, 529.21463pt x 438.03554pt>
 File: images/Simply_support_dome_von_mises.pdf Graphic file (type pdf)
 
 <use images/Simply_support_dome_von_mises.pdf>
@@ -4520,7 +4520,7 @@ Package pdftex.def Info: images/Simply_support_dome_von_mises.pdf used on input
  line 252.
 (pdftex.def)             Requested size: 207.7052pt x 171.92264pt.
 
-<images/simply_support_dome_ansys_vm_plot.png, id=2127, 551.661pt x 398.08725pt
+<images/simply_support_dome_ansys_vm_plot.png, id=2128, 551.661pt x 398.08725pt
 >
 File: images/simply_support_dome_ansys_vm_plot.png Graphic file (type png)
  <use images/simply_support_dome_ansys_vm_plot.png>
@@ -4528,7 +4528,7 @@ Package pdftex.def Info: images/simply_support_dome_ansys_vm_plot.png used on i
 nput line 256.
 (pdftex.def)             Requested size: 207.7052pt x 149.8837pt.
 
-<images/simply_support_dome_andes_vm_plot.png, id=2128, 790.75426pt x 474.573pt
+<images/simply_support_dome_andes_vm_plot.png, id=2129, 790.75426pt x 474.573pt
 >
 File: images/simply_support_dome_andes_vm_plot.png Graphic file (type png)
  <use images/simply_support_dome_andes_vm_plot.png>
@@ -4536,7 +4536,7 @@ Package pdftex.def Info: images/simply_support_dome_andes_vm_plot.png used on i
 nput line 261.
 (pdftex.def)             Requested size: 207.7052pt x 124.6533pt.
 
-<images/simply_support_dome_dsg_vm_plot.png, id=2129, 629.9535pt x 382.42876pt>
+<images/simply_support_dome_dsg_vm_plot.png, id=2130, 629.9535pt x 382.42876pt>
 File: images/simply_support_dome_dsg_vm_plot.png Graphic file (type png)
 <use images/simply_support_dome_dsg_vm_plot.png>
 Package pdftex.def Info: images/simply_support_dome_dsg_vm_plot.png used on inp
@@ -4558,14 +4558,14 @@ pdfTeX warning: pdflatex.exe (file ./images/Simply_support_dome_von_mises.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 > <./images/simply_support_dome_ansys_vm_plot.png> <./images/simply_support_dom
 e_andes_vm_plot.png> <./images/simply_support_dome_dsg_vm_plot.png>]
-<images/navier_plate_def.png, id=2298, 629.35126pt x 430.0065pt>
+<images/navier_plate_def.png, id=2299, 629.35126pt x 430.0065pt>
 File: images/navier_plate_def.png Graphic file (type png)
 
 <use images/navier_plate_def.png>
 Package pdftex.def Info: images/navier_plate_def.png used on input line 278.
 (pdftex.def)             Requested size: 207.7052pt x 141.9157pt.
 
-<images/navier_plate_quad_s_xx_bot.pdf, id=2300, 509.9395pt x 444.67755pt>
+<images/navier_plate_quad_s_xx_bot.pdf, id=2301, 509.9395pt x 444.67755pt>
 File: images/navier_plate_quad_s_xx_bot.pdf Graphic file (type pdf)
 
 <use images/navier_plate_quad_s_xx_bot.pdf>
@@ -4573,7 +4573,7 @@ Package pdftex.def Info: images/navier_plate_quad_s_xx_bot.pdf used on input li
 ne 290.
 (pdftex.def)             Requested size: 207.7052pt x 181.11798pt.
 
-<images/navier_plate_quad_s_yy_bot.pdf, id=2301, 509.9395pt x 444.67755pt>
+<images/navier_plate_quad_s_yy_bot.pdf, id=2302, 509.9395pt x 444.67755pt>
 File: images/navier_plate_quad_s_yy_bot.pdf Graphic file (type pdf)
 
 <use images/navier_plate_quad_s_yy_bot.pdf>
@@ -4581,7 +4581,7 @@ Package pdftex.def Info: images/navier_plate_quad_s_yy_bot.pdf used on input li
 ne 294.
 (pdftex.def)             Requested size: 207.7052pt x 181.11798pt.
 
-<images/navier_plate_quad_s_xy_bot.pdf, id=2302, 529.85765pt x 444.67755pt>
+<images/navier_plate_quad_s_xy_bot.pdf, id=2303, 529.85765pt x 444.67755pt>
 File: images/navier_plate_quad_s_xy_bot.pdf Graphic file (type pdf)
 
 <use images/navier_plate_quad_s_xy_bot.pdf>
@@ -4589,7 +4589,7 @@ Package pdftex.def Info: images/navier_plate_quad_s_xy_bot.pdf used on input li
 ne 299.
 (pdftex.def)             Requested size: 207.7052pt x 174.31241pt.
 
-<images/navier_plate_quad_s_vm_bot.pdf, id=2303, 509.9395pt x 444.67755pt>
+<images/navier_plate_quad_s_vm_bot.pdf, id=2304, 509.9395pt x 444.67755pt>
 File: images/navier_plate_quad_s_vm_bot.pdf Graphic file (type pdf)
 
 <use images/navier_plate_quad_s_vm_bot.pdf>
@@ -4602,7 +4602,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 290--304
  []
 
 [101 <./images/navier_plate_def.png>]
-<images/navier_plate_tri_s_xx.pdf, id=2310, 533.37077pt x 438.03554pt>
+<images/navier_plate_tri_s_xx.pdf, id=2311, 533.37077pt x 438.03554pt>
 File: images/navier_plate_tri_s_xx.pdf Graphic file (type pdf)
 
 <use images/navier_plate_tri_s_xx.pdf>
@@ -4610,7 +4610,7 @@ Package pdftex.def Info: images/navier_plate_tri_s_xx.pdf used on input line 33
 0.
 (pdftex.def)             Requested size: 207.7052pt x 170.57918pt.
 
-<images/navier_plate_tri_s_yy.pdf, id=2311, 533.37077pt x 438.03554pt>
+<images/navier_plate_tri_s_yy.pdf, id=2312, 533.37077pt x 438.03554pt>
 File: images/navier_plate_tri_s_yy.pdf Graphic file (type pdf)
 
 <use images/navier_plate_tri_s_yy.pdf>
@@ -4618,7 +4618,7 @@ Package pdftex.def Info: images/navier_plate_tri_s_yy.pdf used on input line 33
 4.
 (pdftex.def)             Requested size: 207.7052pt x 170.57918pt.
 
-<images/navier_plate_tri_s_xy.pdf, id=2312, 522.04723pt x 438.03554pt>
+<images/navier_plate_tri_s_xy.pdf, id=2313, 522.04723pt x 438.03554pt>
 File: images/navier_plate_tri_s_xy.pdf Graphic file (type pdf)
 
 <use images/navier_plate_tri_s_xy.pdf>
@@ -4626,7 +4626,7 @@ Package pdftex.def Info: images/navier_plate_tri_s_xy.pdf used on input line 33
 9.
 (pdftex.def)             Requested size: 207.7052pt x 174.28204pt.
 
-<images/navier_plate_tri_s_xz.pdf, id=2313, 533.76286pt x 461.54526pt>
+<images/navier_plate_tri_s_xz.pdf, id=2314, 533.76286pt x 461.54526pt>
 File: images/navier_plate_tri_s_xz.pdf Graphic file (type pdf)
 
 <use images/navier_plate_tri_s_xz.pdf>
@@ -4634,7 +4634,7 @@ Package pdftex.def Info: images/navier_plate_tri_s_xz.pdf used on input line 34
 3.
 (pdftex.def)             Requested size: 207.7052pt x 179.6005pt.
 
-<images/navier_plate_tri_s_yz.pdf, id=2314, 533.76286pt x 461.54526pt>
+<images/navier_plate_tri_s_yz.pdf, id=2315, 533.76286pt x 461.54526pt>
 File: images/navier_plate_tri_s_yz.pdf Graphic file (type pdf)
 
 <use images/navier_plate_tri_s_yz.pdf>
@@ -4642,7 +4642,7 @@ Package pdftex.def Info: images/navier_plate_tri_s_yz.pdf used on input line 34
 8.
 (pdftex.def)             Requested size: 207.7052pt x 179.6005pt.
 
-<images/navier_plate_tri_vm.pdf, id=2315, 521.65514pt x 445.77228pt>
+<images/navier_plate_tri_vm.pdf, id=2316, 521.65514pt x 445.77228pt>
 File: images/navier_plate_tri_vm.pdf Graphic file (type pdf)
 
 <use images/navier_plate_tri_vm.pdf>
@@ -4687,7 +4687,7 @@ lusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./images/navier_plate_tri_vm.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->] <images/composite_barrel_vault_def.png, id=2782, 551.661pt x 440.24475pt>
+>] <images/composite_barrel_vault_def.png, id=2783, 551.661pt x 440.24475pt>
 File: images/composite_barrel_vault_def.png Graphic file (type png)
 
 <use images/composite_barrel_vault_def.png>
@@ -4695,28 +4695,28 @@ Package pdftex.def Info: images/composite_barrel_vault_def.png used on input li
 ne 369.
 (pdftex.def)             Requested size: 207.7052pt x 165.75641pt.
 
-<images/cross2ply.pdf, id=2784, 521.54535pt x 451.24898pt>
+<images/cross2ply.pdf, id=2785, 521.54535pt x 451.24898pt>
 File: images/cross2ply.pdf Graphic file (type pdf)
 
 <use images/cross2ply.pdf>
 Package pdftex.def Info: images/cross2ply.pdf used on input line 379.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-<images/cross10ply.pdf, id=2785, 521.54535pt x 451.24898pt>
+<images/cross10ply.pdf, id=2786, 521.54535pt x 451.24898pt>
 File: images/cross10ply.pdf Graphic file (type pdf)
 
 <use images/cross10ply.pdf>
 Package pdftex.def Info: images/cross10ply.pdf used on input line 383.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-<images/angle2ply.pdf, id=2786, 521.54535pt x 451.24898pt>
+<images/angle2ply.pdf, id=2787, 521.54535pt x 451.24898pt>
 File: images/angle2ply.pdf Graphic file (type pdf)
 
 <use images/angle2ply.pdf>
 Package pdftex.def Info: images/angle2ply.pdf used on input line 388.
 (pdftex.def)             Requested size: 207.7052pt x 179.71144pt.
 
-<images/angle10ply.pdf, id=2787, 521.54535pt x 451.24898pt>
+<images/angle10ply.pdf, id=2788, 521.54535pt x 451.24898pt>
 File: images/angle10ply.pdf Graphic file (type pdf)
 
 <use images/angle10ply.pdf>
@@ -4728,7 +4728,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 379--393
  []
 
 [104 <./images/composite_barrel_vault_def.png>]
-<images/composite_clamped_cylinder_def.png, id=2797, 684.156pt x 308.352pt>
+<images/composite_clamped_cylinder_def.png, id=2798, 684.156pt x 308.352pt>
 File: images/composite_clamped_cylinder_def.png Graphic file (type png)
 
 <use images/composite_clamped_cylinder_def.png>
@@ -4748,7 +4748,7 @@ iple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./images/angle10ply.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
 >]
-<images/composite_clamped_cyl_0layup.pdf, id=3009, 525.05847pt x 451.06078pt>
+<images/composite_clamped_cyl_0layup.pdf, id=3010, 525.05847pt x 451.06078pt>
 File: images/composite_clamped_cyl_0layup.pdf Graphic file (type pdf)
 
 <use images/composite_clamped_cyl_0layup.pdf>
@@ -4756,7 +4756,7 @@ Package pdftex.def Info: images/composite_clamped_cyl_0layup.pdf used on input
 line 427.
 (pdftex.def)             Requested size: 207.7052pt x 178.43204pt.
 
-<images/composite_clamped_cyl_090layup.pdf, id=3010, 525.05847pt x 451.24898pt>
+<images/composite_clamped_cyl_090layup.pdf, id=3011, 525.05847pt x 451.24898pt>
 File: images/composite_clamped_cyl_090layup.pdf Graphic file (type pdf)
 <use images/composite_clamped_cyl_090layup.pdf>
 Package pdftex.def Info: images/composite_clamped_cyl_090layup.pdf used on inpu
@@ -4779,7 +4779,7 @@ Package pdftex.def Info: images/hinged_cylindrical_roof.png used on input line
 446.
 (pdftex.def)             Requested size: 207.7052pt x 162.21617pt.
 
-<images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf, id=3127,
+<images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf, id=3128,
  538.72673pt x 438.03554pt>
 File: images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf Grap
 hic file (type pdf)
@@ -4794,7 +4794,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 446--451
  []
 
 
-<images/composite_shell_pendulum_lumped.pdf, id=3133, 527.40317pt x 461.54526pt
+<images/composite_shell_pendulum_lumped.pdf, id=3134, 527.40317pt x 461.54526pt
 >
 File: images/composite_shell_pendulum_lumped.pdf Graphic file (type pdf)
  <use images/composite_shell_pendulum_lumped.pdf>
@@ -4802,7 +4802,7 @@ Package pdftex.def Info: images/composite_shell_pendulum_lumped.pdf used on inp
 ut line 485.
 (pdftex.def)             Requested size: 207.7052pt x 181.7696pt.
 
-<images/composite_vibrating_square.pdf, id=3134, 525.45056pt x 461.54526pt>
+<images/composite_vibrating_square.pdf, id=3135, 525.45056pt x 461.54526pt>
 File: images/composite_vibrating_square.pdf Graphic file (type pdf)
 
 <use images/composite_vibrating_square.pdf>
@@ -4815,35 +4815,43 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 485--490
  []
 
 [107 <./images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf>]
-<images/nasa3_thru_s_xx.pdf, id=3187, 544.97664pt x 431.61311pt>
+<images/composite_tensile_setup.png, id=3187, 1414.78563pt x 308.65312pt>
+File: images/composite_tensile_setup.png Graphic file (type png)
+
+<use images/composite_tensile_setup.png>
+Package pdftex.def Info: images/composite_tensile_setup.png used on input line 
+501.
+(pdftex.def)             Requested size: 341.43306pt x 74.48329pt.
+
+<images/nasa3_thru_s_xx.pdf, id=3189, 544.97664pt x 431.61311pt>
 File: images/nasa3_thru_s_xx.pdf Graphic file (type pdf)
 
 <use images/nasa3_thru_s_xx.pdf>
-Package pdftex.def Info: images/nasa3_thru_s_xx.pdf used on input line 507.
+Package pdftex.def Info: images/nasa3_thru_s_xx.pdf used on input line 516.
 (pdftex.def)             Requested size: 207.7052pt x 164.49545pt.
 
-<images/nasa3_thru_s_yy.pdf, id=3188, 533.261pt x 431.61311pt>
+<images/nasa3_thru_s_yy.pdf, id=3190, 533.261pt x 431.61311pt>
 File: images/nasa3_thru_s_yy.pdf Graphic file (type pdf)
 
 <use images/nasa3_thru_s_yy.pdf>
-Package pdftex.def Info: images/nasa3_thru_s_yy.pdf used on input line 511.
+Package pdftex.def Info: images/nasa3_thru_s_yy.pdf used on input line 520.
 (pdftex.def)             Requested size: 207.7052pt x 168.1111pt.
 
-<images/nasa3_thru_s_xy.pdf, id=3189, 541.07143pt x 431.61311pt>
+<images/nasa3_thru_s_xy.pdf, id=3191, 541.07143pt x 431.61311pt>
 File: images/nasa3_thru_s_xy.pdf Graphic file (type pdf)
 
 <use images/nasa3_thru_s_xy.pdf>
-Package pdftex.def Info: images/nasa3_thru_s_xy.pdf used on input line 516.
+Package pdftex.def Info: images/nasa3_thru_s_xy.pdf used on input line 525.
 (pdftex.def)             Requested size: 207.7052pt x 165.68748pt.
 
-<images/nasa3_thru_tsai.pdf, id=3190, 535.21361pt x 431.61311pt>
+<images/nasa3_thru_tsai.pdf, id=3192, 535.21361pt x 431.61311pt>
 File: images/nasa3_thru_tsai.pdf Graphic file (type pdf)
 
 <use images/nasa3_thru_tsai.pdf>
-Package pdftex.def Info: images/nasa3_thru_tsai.pdf used on input line 520.
+Package pdftex.def Info: images/nasa3_thru_tsai.pdf used on input line 529.
 (pdftex.def)             Requested size: 207.7052pt x 167.49861pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 507--521
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 516--530
 [][][][] 
  []
 
@@ -4852,7 +4860,8 @@ ng_square.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/composite_vibrating_square.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
->] [109 <./images/nasa3_thru_s_xx.pdf> <./images/nasa3_thru_s_yy.pdf
+> <./images/composite_tensile_setup.png>] [109 <./images/nasa3_thru_s_xx.pdf> <
+./images/nasa3_thru_s_yy.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/nasa3_thru_s_yy.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
@@ -4867,111 +4876,111 @@ pdfTeX warning: pdflatex.exe (file ./images/nasa3_thru_tsai.pdf): PDF inclusion
 >]
 File: images/navier_plate_def.png Graphic file (type png)
  <use images/navier_plate_def.png>
-Package pdftex.def Info: images/navier_plate_def.png used on input line 555.
+Package pdftex.def Info: images/navier_plate_def.png used on input line 564.
 (pdftex.def)             Requested size: 207.7052pt x 141.9157pt.
 
-<images/navier_plate_composite_quad_e_xx.pdf, id=3484, 543.02403pt x 431.61311p
+<images/navier_plate_composite_quad_e_xx.pdf, id=3487, 543.02403pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_e_xx.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_e_xx.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_e_xx.pdf used on in
-put line 572.
+put line 581.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_quad_s_xx.pdf, id=3485, 544.97664pt x 431.61311p
+<images/navier_plate_composite_quad_s_xx.pdf, id=3488, 544.97664pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_s_xx.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_s_xx.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_s_xx.pdf used on in
-put line 576.
+put line 585.
 (pdftex.def)             Requested size: 207.7052pt x 164.49545pt.
 
-<images/navier_plate_composite_quad_e_yy.pdf, id=3486, 543.02403pt x 431.61311p
+<images/navier_plate_composite_quad_e_yy.pdf, id=3489, 543.02403pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_e_yy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_e_yy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_e_yy.pdf used on in
-put line 581.
+put line 590.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_quad_s_yy.pdf, id=3487, 544.97664pt x 431.61311p
+<images/navier_plate_composite_quad_s_yy.pdf, id=3490, 544.97664pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_s_yy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_s_yy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_s_yy.pdf used on in
-put line 585.
+put line 594.
 (pdftex.def)             Requested size: 207.7052pt x 164.49545pt.
 
-<images/navier_plate_composite_quad_e_xy.pdf, id=3488, 543.02403pt x 431.61311p
+<images/navier_plate_composite_quad_e_xy.pdf, id=3491, 543.02403pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_e_xy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_e_xy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_e_xy.pdf used on in
-put line 590.
+put line 599.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_quad_s_xy.pdf, id=3489, 541.07143pt x 431.61311p
+<images/navier_plate_composite_quad_s_xy.pdf, id=3492, 541.07143pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_s_xy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_s_xy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_s_xy.pdf used on in
-put line 594.
+put line 603.
 (pdftex.def)             Requested size: 207.7052pt x 165.68748pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 572--595
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 581--604
 [][][][] 
  []
 
 [110]
-<images/navier_plate_composite_tri_e_xx.pdf, id=3496, 543.02403pt x 431.61311pt
+<images/navier_plate_composite_tri_e_xx.pdf, id=3499, 543.02403pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_e_xx.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_e_xx.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_e_xx.pdf used on inp
-ut line 605.
+ut line 614.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_tri_s_xx.pdf, id=3497, 544.97664pt x 431.61311pt
+<images/navier_plate_composite_tri_s_xx.pdf, id=3500, 544.97664pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_s_xx.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_s_xx.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_s_xx.pdf used on inp
-ut line 609.
+ut line 618.
 (pdftex.def)             Requested size: 207.7052pt x 164.49545pt.
 
-<images/navier_plate_composite_tri_e_yy.pdf, id=3498, 543.02403pt x 431.61311pt
+<images/navier_plate_composite_tri_e_yy.pdf, id=3501, 543.02403pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_e_yy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_e_yy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_e_yy.pdf used on inp
-ut line 614.
+ut line 623.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_tri_s_yy.pdf, id=3499, 544.97664pt x 431.61311pt
+<images/navier_plate_composite_tri_s_yy.pdf, id=3502, 544.97664pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_s_yy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_s_yy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_s_yy.pdf used on inp
-ut line 618.
+ut line 627.
 (pdftex.def)             Requested size: 207.7052pt x 164.49545pt.
 
-<images/navier_plate_composite_tri_e_xy.pdf, id=3500, 543.02403pt x 431.61311pt
+<images/navier_plate_composite_tri_e_xy.pdf, id=3503, 543.02403pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_e_xy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_e_xy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_e_xy.pdf used on inp
-ut line 623.
+ut line 632.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_tri_s_xy.pdf, id=3501, 541.07143pt x 431.61311pt
+<images/navier_plate_composite_tri_s_xy.pdf, id=3504, 541.07143pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_s_xy.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_s_xy.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_s_xy.pdf used on inp
-ut line 627.
+ut line 636.
 (pdftex.def)             Requested size: 207.7052pt x 165.68748pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 605--628
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 614--637
 [][][][] 
  []
 
@@ -4997,39 +5006,39 @@ f): PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./images/navier_plate_composite_quad_s_xy.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/navier_plate_composite_tri_e_xz.pdf, id=3752, 543.02403pt x 431.61311pt
+<images/navier_plate_composite_tri_e_xz.pdf, id=3755, 543.02403pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_e_xz.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_e_xz.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_e_xz.pdf used on inp
-ut line 636.
+ut line 645.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_tri_s_xz.pdf, id=3753, 529.35577pt x 431.61311pt
+<images/navier_plate_composite_tri_s_xz.pdf, id=3756, 529.35577pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_s_xz.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_s_xz.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_s_xz.pdf used on inp
-ut line 640.
+ut line 649.
 (pdftex.def)             Requested size: 207.7052pt x 169.35582pt.
 
-<images/navier_plate_composite_tri_e_yz.pdf, id=3754, 543.02403pt x 431.61311pt
+<images/navier_plate_composite_tri_e_yz.pdf, id=3757, 543.02403pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_e_yz.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_e_yz.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_e_yz.pdf used on inp
-ut line 645.
+ut line 654.
 (pdftex.def)             Requested size: 207.7052pt x 165.08818pt.
 
-<images/navier_plate_composite_tri_s_yz.pdf, id=3755, 537.16621pt x 431.61311pt
+<images/navier_plate_composite_tri_s_yz.pdf, id=3758, 537.16621pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_s_yz.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_s_yz.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_s_yz.pdf used on inp
-ut line 649.
+ut line 658.
 (pdftex.def)             Requested size: 207.7052pt x 166.8927pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 636--650
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 645--659
 [][][][] 
  []
 
@@ -5055,23 +5064,23 @@ pdfTeX warning: pdflatex.exe (file ./images/navier_plate_composite_tri_e_xy.pdf
 pdfTeX warning: pdflatex.exe (file ./images/navier_plate_composite_tri_s_xy.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/navier_plate_composite_quad_tsai.pdf, id=3979, 529.35577pt x 431.61311p
+<images/navier_plate_composite_quad_tsai.pdf, id=3982, 529.35577pt x 431.61311p
 t>
 File: images/navier_plate_composite_quad_tsai.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_quad_tsai.pdf>
 Package pdftex.def Info: images/navier_plate_composite_quad_tsai.pdf used on in
-put line 662.
+put line 671.
 (pdftex.def)             Requested size: 207.7052pt x 169.35582pt.
 
-<images/navier_plate_composite_tri_tsai.pdf, id=3980, 529.35577pt x 431.61311pt
+<images/navier_plate_composite_tri_tsai.pdf, id=3983, 529.35577pt x 431.61311pt
 >
 File: images/navier_plate_composite_tri_tsai.pdf Graphic file (type pdf)
  <use images/navier_plate_composite_tri_tsai.pdf>
 Package pdftex.def Info: images/navier_plate_composite_tri_tsai.pdf used on inp
-ut line 666.
+ut line 675.
 (pdftex.def)             Requested size: 207.7052pt x 169.35582pt.
 
-Overfull \hbox (7.65031pt too wide) in paragraph at lines 662--667
+Overfull \hbox (7.65031pt too wide) in paragraph at lines 671--676
 [][][][] 
  []
 
@@ -5095,324 +5104,324 @@ pdfTeX warning: pdflatex.exe (file ./images/navier_plate_composite_tri_tsai.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 chapter 9.
-<images/chs_buckling_setup.png, id=4235, 343.2825pt x 701.2599pt>
+[115
+
+] <images/chs_buckling_setup.png, id=4242, 343.2825pt x 701.2599pt>
 File: images/chs_buckling_setup.png Graphic file (type png)
 
 <use images/chs_buckling_setup.png>
-Package pdftex.def Info: images/chs_buckling_setup.png used on input line 31.
+Package pdftex.def Info: images/chs_buckling_setup.png used on input line 47.
 (pdftex.def)             Requested size: 167.13608pt x 341.43306pt.
- [115
-
-] [116 <./images/chs_buckling_setup.png (PNG copy)>]
-<images/stability_chs_axial_disp.pdf, id=4248, 552.58478pt x 483.4866pt>
+ [116 <./images/chs_buckling_setup.png (PNG copy)>]
+<images/stability_chs_axial_disp.pdf, id=4251, 552.58478pt x 483.4866pt>
 File: images/stability_chs_axial_disp.pdf Graphic file (type pdf)
 
 <use images/stability_chs_axial_disp.pdf>
 Package pdftex.def Info: images/stability_chs_axial_disp.pdf used on input line
- 50.
+ 66.
 (pdftex.def)             Requested size: 341.43306pt x 298.74788pt.
-
-<images/stability_chs_trans_disp.pdf, id=4249, 554.73967pt x 460.76108pt>
+ [117 <./images/stability_chs_axial_disp.pdf>]
+<images/stability_chs_trans_disp.pdf, id=4305, 554.73967pt x 460.76108pt>
 File: images/stability_chs_trans_disp.pdf Graphic file (type pdf)
 
 <use images/stability_chs_trans_disp.pdf>
 Package pdftex.def Info: images/stability_chs_trans_disp.pdf used on input line
- 60.
+ 76.
 (pdftex.def)             Requested size: 341.43306pt x 283.59488pt.
- [117 <./images/stability_chs_axial_disp.pdf>] <images/chs_kratos_tri_x.png, id
-=4303, 198.14024pt x 483.0045pt>
+
+<images/chs_kratos_tri_x.png, id=4306, 198.14024pt x 483.0045pt>
 File: images/chs_kratos_tri_x.png Graphic file (type png)
 
 <use images/chs_kratos_tri_x.png>
-Package pdftex.def Info: images/chs_kratos_tri_x.png used on input line 72.
+Package pdftex.def Info: images/chs_kratos_tri_x.png used on input line 88.
 (pdftex.def)             Requested size: 99.58464pt x 242.76193pt.
 
-<images/chs_dsg_x.png, id=4304, 205.36725pt x 481.19775pt>
+<images/chs_dsg_x.png, id=4307, 205.36725pt x 481.19775pt>
 File: images/chs_dsg_x.png Graphic file (type png)
 
 <use images/chs_dsg_x.png>
-Package pdftex.def Info: images/chs_dsg_x.png used on input line 76.
+Package pdftex.def Info: images/chs_dsg_x.png used on input line 92.
 (pdftex.def)             Requested size: 99.58464pt x 233.34392pt.
 
-<images/chs_kratos_tri_y.png, id=4305, 196.93575pt x 492.03825pt>
+<images/chs_kratos_tri_y.png, id=4308, 196.93575pt x 492.03825pt>
 File: images/chs_kratos_tri_y.png Graphic file (type png)
 
 <use images/chs_kratos_tri_y.png>
-Package pdftex.def Info: images/chs_kratos_tri_y.png used on input line 80.
+Package pdftex.def Info: images/chs_kratos_tri_y.png used on input line 96.
 (pdftex.def)             Requested size: 99.58464pt x 248.81145pt.
 
-<images/chs_dsg_y.png, id=4306, 204.765pt x 478.78876pt>
+<images/chs_dsg_y.png, id=4309, 204.765pt x 478.78876pt>
 File: images/chs_dsg_y.png Graphic file (type png)
 
 <use images/chs_dsg_y.png>
-Package pdftex.def Info: images/chs_dsg_y.png used on input line 84.
+Package pdftex.def Info: images/chs_dsg_y.png used on input line 100.
 (pdftex.def)             Requested size: 99.58464pt x 232.85516pt.
  [118 <./images/stability_chs_trans_disp.pdf>]
-<images/chs_thin_quad_x.png, id=4357, 194.52675pt x 461.92575pt>
+<images/chs_thin_quad_x.png, id=4360, 194.52675pt x 461.92575pt>
 File: images/chs_thin_quad_x.png Graphic file (type png)
 
 <use images/chs_thin_quad_x.png>
-Package pdftex.def Info: images/chs_thin_quad_x.png used on input line 97.
+Package pdftex.def Info: images/chs_thin_quad_x.png used on input line 113.
 (pdftex.def)             Requested size: 99.58464pt x 236.47417pt.
 
-<images/chs_thin_quad_basic_x.png, id=4358, 193.32225pt x 487.22025pt>
+<images/chs_thin_quad_basic_x.png, id=4361, 193.32225pt x 487.22025pt>
 File: images/chs_thin_quad_basic_x.png Graphic file (type png)
 
 <use images/chs_thin_quad_basic_x.png>
-Package pdftex.def Info: images/chs_thin_quad_basic_x.png used on input line 10
-1.
+Package pdftex.def Info: images/chs_thin_quad_basic_x.png used on input line 11
+7.
 (pdftex.def)             Requested size: 99.58464pt x 250.97699pt.
 
-<images/chs_thin_quad_y.png, id=4359, 188.50426pt x 469.15276pt>
+<images/chs_thin_quad_y.png, id=4362, 188.50426pt x 469.15276pt>
 File: images/chs_thin_quad_y.png Graphic file (type png)
 
 <use images/chs_thin_quad_y.png>
-Package pdftex.def Info: images/chs_thin_quad_y.png used on input line 105.
+Package pdftex.def Info: images/chs_thin_quad_y.png used on input line 121.
 (pdftex.def)             Requested size: 99.58464pt x 247.84799pt.
 
-<images/chs_thin_quad_basic_y.png, id=4360, 188.50426pt x 486.01575pt>
+<images/chs_thin_quad_basic_y.png, id=4363, 188.50426pt x 486.01575pt>
 File: images/chs_thin_quad_basic_y.png Graphic file (type png)
 
 <use images/chs_thin_quad_basic_y.png>
-Package pdftex.def Info: images/chs_thin_quad_basic_y.png used on input line 10
-9.
+Package pdftex.def Info: images/chs_thin_quad_basic_y.png used on input line 12
+5.
 (pdftex.def)             Requested size: 99.58464pt x 256.75652pt.
  [119 <./images/chs_kratos_tri_x.png> <./images/chs_dsg_x.png> <./images/chs_kr
 atos_tri_y.png> <./images/chs_dsg_y.png>] [120 <./images/chs_thin_quad_x.png> <
 ./images/chs_thin_quad_basic_x.png> <./images/chs_thin_quad_y.png> <./images/ch
 s_thin_quad_basic_y.png>]
-<images/stability_chs_accuracy1.png, id=4379, 1096.59688pt x 946.53625pt>
+<images/stability_chs_accuracy1.png, id=4382, 1096.59688pt x 946.53625pt>
 File: images/stability_chs_accuracy1.png Graphic file (type png)
 
 <use images/stability_chs_accuracy1.png>
 Package pdftex.def Info: images/stability_chs_accuracy1.png used on input line 
-122.
+138.
 (pdftex.def)             Requested size: 341.43306pt x 294.70863pt.
 
-<images/stability_chs_accuracy2.png, id=4380, 1078.52937pt x 912.40875pt>
+<images/stability_chs_accuracy2.png, id=4383, 1078.52937pt x 912.40875pt>
 File: images/stability_chs_accuracy2.png Graphic file (type png)
 
 <use images/stability_chs_accuracy2.png>
 Package pdftex.def Info: images/stability_chs_accuracy2.png used on input line 
-127.
+143.
 (pdftex.def)             Requested size: 207.7052pt x 175.71231pt.
 
-<images/stability_chs_accuracy3.png, id=4381, 1110.64937pt x 912.40875pt>
+<images/stability_chs_accuracy3.png, id=4384, 1110.64937pt x 912.40875pt>
 File: images/stability_chs_accuracy3.png Graphic file (type png)
 
 <use images/stability_chs_accuracy3.png>
 Package pdftex.def Info: images/stability_chs_accuracy3.png used on input line 
-131.
+147.
 (pdftex.def)             Requested size: 207.7052pt x 170.6307pt.
  [121 <./images/stability_chs_accuracy1.png> <./images/stability_chs_accuracy2.
-png> <./images/stability_chs_accuracy3.png>] <images/wrinkle_setup.png, id=4391
+png> <./images/stability_chs_accuracy3.png>] <images/wrinkle_setup.png, id=4394
 , 1673.0505pt x 581.17125pt>
 File: images/wrinkle_setup.png Graphic file (type png)
 
 <use images/wrinkle_setup.png>
-Package pdftex.def Info: images/wrinkle_setup.png used on input line 150.
+Package pdftex.def Info: images/wrinkle_setup.png used on input line 166.
 (pdftex.def)             Requested size: 398.33858pt x 138.36658pt.
  [122]
-<images/stability_wrinkle_axial_disp.pdf, id=4398, 546.53716pt x 460.76108pt>
+<images/stability_wrinkle_axial_disp.pdf, id=4401, 546.53716pt x 460.76108pt>
 File: images/stability_wrinkle_axial_disp.pdf Graphic file (type pdf)
 
 <use images/stability_wrinkle_axial_disp.pdf>
 Package pdftex.def Info: images/stability_wrinkle_axial_disp.pdf used on input 
-line 162.
+line 178.
 (pdftex.def)             Requested size: 341.43306pt x 287.8484pt.
  [123 <./images/wrinkle_setup.png> <./images/stability_wrinkle_axial_disp.pdf>]
 
-<images/stability_wrinkle_pointtrans_disp.pdf, id=4452, 546.53716pt x 460.76108
+<images/stability_wrinkle_pointtrans_disp.pdf, id=4455, 546.53716pt x 460.76108
 pt>
 File: images/stability_wrinkle_pointtrans_disp.pdf Graphic file (type pdf)
  <use images/stability_wrinkle_pointtrans_disp.pdf>
 Package pdftex.def Info: images/stability_wrinkle_pointtrans_disp.pdf used on i
-nput line 174.
+nput line 190.
 (pdftex.def)             Requested size: 341.43306pt x 287.8484pt.
 
-<images/wrinkle_andes_NLgraph.png, id=4454, 1102.1175pt x 912.40875pt>
+<images/wrinkle_andes_NLgraph.png, id=4457, 1102.1175pt x 912.40875pt>
 File: images/wrinkle_andes_NLgraph.png Graphic file (type png)
 
 <use images/wrinkle_andes_NLgraph.png>
-Package pdftex.def Info: images/wrinkle_andes_NLgraph.png used on input line 18
-8.
+Package pdftex.def Info: images/wrinkle_andes_NLgraph.png used on input line 20
+4.
 (pdftex.def)             Requested size: 284.52756pt x 235.55pt.
 
-<images/wrink_andes_scale.png, id=4455, 174.15062pt x 206.27063pt>
+<images/wrink_andes_scale.png, id=4458, 174.15062pt x 206.27063pt>
 File: images/wrink_andes_scale.png Graphic file (type png)
 
 <use images/wrink_andes_scale.png>
-Package pdftex.def Info: images/wrink_andes_scale.png used on input line 192.
+Package pdftex.def Info: images/wrink_andes_scale.png used on input line 208.
 (pdftex.def)             Requested size: 113.81102pt x 134.80136pt.
 
-<images/wrinkle_andes_t0_1.png, id=4456, 556.0775pt x 149.55875pt>
+<images/wrinkle_andes_t0_1.png, id=4459, 556.0775pt x 149.55875pt>
 File: images/wrinkle_andes_t0_1.png Graphic file (type png)
 
 <use images/wrinkle_andes_t0_1.png>
-Package pdftex.def Info: images/wrinkle_andes_t0_1.png used on input line 197.
+Package pdftex.def Info: images/wrinkle_andes_t0_1.png used on input line 213.
 (pdftex.def)             Requested size: 199.16928pt x 53.56725pt.
 
-<images/wrinkle_andes_t0_15.png, id=4457, 556.0775pt x 148.555pt>
+<images/wrinkle_andes_t0_15.png, id=4460, 556.0775pt x 148.555pt>
 File: images/wrinkle_andes_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_andes_t0_15.png>
-Package pdftex.def Info: images/wrinkle_andes_t0_15.png used on input line 201.
+Package pdftex.def Info: images/wrinkle_andes_t0_15.png used on input line 217.
 
 (pdftex.def)             Requested size: 199.16928pt x 53.20773pt.
 
-<images/wrinkle_andes_t0_6.png, id=4458, 552.56438pt x 146.04562pt>
+<images/wrinkle_andes_t0_6.png, id=4461, 552.56438pt x 146.04562pt>
 File: images/wrinkle_andes_t0_6.png Graphic file (type png)
 
 <use images/wrinkle_andes_t0_6.png>
-Package pdftex.def Info: images/wrinkle_andes_t0_6.png used on input line 206.
+Package pdftex.def Info: images/wrinkle_andes_t0_6.png used on input line 222.
 (pdftex.def)             Requested size: 199.16928pt x 52.64099pt.
 
-<images/wrinkle_andes_t0_65.png, id=4459, 553.56813pt x 147.04938pt>
+<images/wrinkle_andes_t0_65.png, id=4462, 553.56813pt x 147.04938pt>
 File: images/wrinkle_andes_t0_65.png Graphic file (type png)
 
 <use images/wrinkle_andes_t0_65.png>
-Package pdftex.def Info: images/wrinkle_andes_t0_65.png used on input line 210.
+Package pdftex.def Info: images/wrinkle_andes_t0_65.png used on input line 226.
 
 (pdftex.def)             Requested size: 199.16928pt x 52.90631pt.
 
-<images/wrinkle_andes_t0_7.png, id=4460, 552.0625pt x 145.54375pt>
+<images/wrinkle_andes_t0_7.png, id=4463, 552.0625pt x 145.54375pt>
 File: images/wrinkle_andes_t0_7.png Graphic file (type png)
 
 <use images/wrinkle_andes_t0_7.png>
-Package pdftex.def Info: images/wrinkle_andes_t0_7.png used on input line 215.
+Package pdftex.def Info: images/wrinkle_andes_t0_7.png used on input line 231.
 (pdftex.def)             Requested size: 199.16928pt x 52.50896pt.
 
-<images/wrinkle_andes_t1_0.png, id=4461, 551.56062pt x 146.5475pt>
+<images/wrinkle_andes_t1_0.png, id=4464, 551.56062pt x 146.5475pt>
 File: images/wrinkle_andes_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_andes_t1_0.png>
-Package pdftex.def Info: images/wrinkle_andes_t1_0.png used on input line 219.
+Package pdftex.def Info: images/wrinkle_andes_t1_0.png used on input line 235.
 (pdftex.def)             Requested size: 199.16928pt x 52.91805pt.
  [124 <./images/stability_wrinkle_pointtrans_disp.pdf>] [125 <./images/wrinkle_
 andes_NLgraph.png> <./images/wrink_andes_scale.png> <./images/wrinkle_andes_t0_
 1.png> <./images/wrinkle_andes_t0_15.png> <./images/wrinkle_andes_t0_6.png> <./
 images/wrinkle_andes_t0_65.png> <./images/wrinkle_andes_t0_7.png> <./images/wri
 nkle_andes_t1_0.png>]
-<images/wrinkle_kratosT3_t0_15.png, id=4528, 551.56062pt x 146.04562pt>
+<images/wrinkle_kratosT3_t0_15.png, id=4531, 551.56062pt x 146.04562pt>
 File: images/wrinkle_kratosT3_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_kratosT3_t0_15.png>
 Package pdftex.def Info: images/wrinkle_kratosT3_t0_15.png used on input line 2
-32.
+48.
 (pdftex.def)             Requested size: 177.82971pt x 47.08763pt.
 
-<images/wrinkle_dsg_t0_15.png, id=4529, 550.055pt x 145.54375pt>
+<images/wrinkle_dsg_t0_15.png, id=4532, 550.055pt x 145.54375pt>
 File: images/wrinkle_dsg_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_dsg_t0_15.png>
-Package pdftex.def Info: images/wrinkle_dsg_t0_15.png used on input line 236.
+Package pdftex.def Info: images/wrinkle_dsg_t0_15.png used on input line 252.
 (pdftex.def)             Requested size: 177.82971pt x 47.05241pt.
 
-<images/wrinkle_dsg_scale_t0_15.png, id=4530, 90.83937pt x 154.07562pt>
+<images/wrinkle_dsg_scale_t0_15.png, id=4533, 90.83937pt x 154.07562pt>
 File: images/wrinkle_dsg_scale_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_dsg_scale_t0_15.png>
 Package pdftex.def Info: images/wrinkle_dsg_scale_t0_15.png used on input line 
-240.
+256.
 (pdftex.def)             Requested size: 42.67912pt x 72.38968pt.
 
-<images/wrinkle_kratosT3_t1_0.png, id=4531, 552.56438pt x 145.54375pt>
+<images/wrinkle_kratosT3_t1_0.png, id=4534, 552.56438pt x 145.54375pt>
 File: images/wrinkle_kratosT3_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_kratosT3_t1_0.png>
-Package pdftex.def Info: images/wrinkle_kratosT3_t1_0.png used on input line 24
-5.
+Package pdftex.def Info: images/wrinkle_kratosT3_t1_0.png used on input line 26
+1.
 (pdftex.def)             Requested size: 177.82971pt x 46.83922pt.
 
-<images/wrinkle_dsg_t1_0.png, id=4532, 549.55313pt x 142.5325pt>
+<images/wrinkle_dsg_t1_0.png, id=4535, 549.55313pt x 142.5325pt>
 File: images/wrinkle_dsg_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_dsg_t1_0.png>
-Package pdftex.def Info: images/wrinkle_dsg_t1_0.png used on input line 249.
+Package pdftex.def Info: images/wrinkle_dsg_t1_0.png used on input line 265.
 (pdftex.def)             Requested size: 177.82971pt x 46.1224pt.
 
-<images/wrinkle_dsg_scale_t1_0.png, id=4533, 91.84312pt x 157.58875pt>
+<images/wrinkle_dsg_scale_t1_0.png, id=4536, 91.84312pt x 157.58875pt>
 File: images/wrinkle_dsg_scale_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_dsg_scale_t1_0.png>
 Package pdftex.def Info: images/wrinkle_dsg_scale_t1_0.png used on input line 2
-53.
+69.
 (pdftex.def)             Requested size: 42.67912pt x 73.23232pt.
 
-<images/wrinkle_andes_comp_t0_15.png, id=4535, 552.0625pt x 143.03438pt>
+<images/wrinkle_andes_comp_t0_15.png, id=4538, 552.0625pt x 143.03438pt>
 File: images/wrinkle_andes_comp_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_andes_comp_t0_15.png>
 Package pdftex.def Info: images/wrinkle_andes_comp_t0_15.png used on input line
- 266.
+ 282.
 (pdftex.def)             Requested size: 177.82971pt x 46.0731pt.
 
-<images/wrinkle_basic_andes_t0_15.png, id=4536, 550.055pt x 144.54pt>
+<images/wrinkle_basic_andes_t0_15.png, id=4539, 550.055pt x 144.54pt>
 File: images/wrinkle_basic_andes_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_basic_andes_t0_15.png>
 Package pdftex.def Info: images/wrinkle_basic_andes_t0_15.png used on input lin
-e 270.
+e 286.
 (pdftex.def)             Requested size: 177.82971pt x 46.72792pt.
 
-<images/wrinkle_andes_comp_scale_t0_15.png, id=4537, 95.35625pt x 153.57375pt>
+<images/wrinkle_andes_comp_scale_t0_15.png, id=4540, 95.35625pt x 153.57375pt>
 File: images/wrinkle_andes_comp_scale_t0_15.png Graphic file (type png)
 
 <use images/wrinkle_andes_comp_scale_t0_15.png>
 Package pdftex.def Info: images/wrinkle_andes_comp_scale_t0_15.png used on inpu
-t line 274.
+t line 290.
 (pdftex.def)             Requested size: 42.67912pt x 68.73494pt.
 
-<images/wrinkle_andes_comp_t1_0.png, id=4538, 551.05875pt x 143.03438pt>
+<images/wrinkle_andes_comp_t1_0.png, id=4541, 551.05875pt x 143.03438pt>
 File: images/wrinkle_andes_comp_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_andes_comp_t1_0.png>
 Package pdftex.def Info: images/wrinkle_andes_comp_t1_0.png used on input line 
-279.
+295.
 (pdftex.def)             Requested size: 177.82971pt x 46.15823pt.
 
-<images/wrinkle_basic_andes_t1_0.png, id=4539, 548.54938pt x 144.03813pt>
+<images/wrinkle_basic_andes_t1_0.png, id=4542, 548.54938pt x 144.03813pt>
 File: images/wrinkle_basic_andes_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_basic_andes_t1_0.png>
 Package pdftex.def Info: images/wrinkle_basic_andes_t1_0.png used on input line
- 283.
+ 299.
 (pdftex.def)             Requested size: 177.82971pt x 46.69315pt.
 
-<images/wrinkle_andes_comp_scale_t1_0.png, id=4540, 95.35625pt x 153.07187pt>
+<images/wrinkle_andes_comp_scale_t1_0.png, id=4543, 95.35625pt x 153.07187pt>
 File: images/wrinkle_andes_comp_scale_t1_0.png Graphic file (type png)
 
 <use images/wrinkle_andes_comp_scale_t1_0.png>
 Package pdftex.def Info: images/wrinkle_andes_comp_scale_t1_0.png used on input
- line 287.
+ line 303.
 (pdftex.def)             Requested size: 42.67912pt x 68.51031pt.
  [126 <./images/wrinkle_kratosT3_t0_15.png> <./images/wrinkle_dsg_t0_15.png> <.
 /images/wrinkle_dsg_scale_t0_15.png> <./images/wrinkle_kratosT3_t1_0.png> <./im
 ages/wrinkle_dsg_t1_0.png> <./images/wrinkle_dsg_scale_t1_0.png>]
-<images/stability_wrinkle_abstrans_disp.pdf, id=4552, 546.53716pt x 460.76108pt
+<images/stability_wrinkle_abstrans_disp.pdf, id=4555, 546.53716pt x 460.76108pt
 >
 File: images/stability_wrinkle_abstrans_disp.pdf Graphic file (type pdf)
  <use images/stability_wrinkle_abstrans_disp.pdf>
 Package pdftex.def Info: images/stability_wrinkle_abstrans_disp.pdf used on inp
-ut line 298.
+ut line 314.
 (pdftex.def)             Requested size: 341.43306pt x 287.8484pt.
  [127 <./images/wrinkle_andes_comp_t0_15.png> <./images/wrinkle_basic_andes_t0_
 15.png> <./images/wrinkle_andes_comp_scale_t0_15.png> <./images/wrinkle_andes_c
 omp_t1_0.png> <./images/wrinkle_basic_andes_t1_0.png> <./images/wrinkle_andes_c
 omp_scale_t1_0.png>] [128 <./images/stability_wrinkle_abstrans_disp.pdf>] [129]
 
-<images/MODELLING_2.pdf, id=4625, 722.7pt x 542.025pt>
+<images/MODELLING_2.pdf, id=4628, 722.7pt x 542.025pt>
 File: images/MODELLING_2.pdf Graphic file (type pdf)
 
 <use images/MODELLING_2.pdf>
-Package pdftex.def Info: images/MODELLING_2.pdf used on input line 327.
+Package pdftex.def Info: images/MODELLING_2.pdf used on input line 343.
 (pdftex.def)             Requested size: 341.43306pt x 256.07507pt.
  [130 <./images/MODELLING_2.pdf>]
-<images/MODELLING_1.pdf, id=4641, 722.7pt x 542.025pt>
+<images/MODELLING_1.pdf, id=4644, 722.7pt x 542.025pt>
 File: images/MODELLING_1.pdf Graphic file (type pdf)
 
 <use images/MODELLING_1.pdf>
-Package pdftex.def Info: images/MODELLING_1.pdf used on input line 339.
+Package pdftex.def Info: images/MODELLING_1.pdf used on input line 355.
 (pdftex.def)             Requested size: 341.43306pt x 256.07507pt.
 ) (chapters/Chapter_DSG_extensions.tex [131 <./images/MODELLING_1.pdf>]
 chapter 10.
@@ -5427,7 +5436,7 @@ OT1/lmr/m/n/10.95 (-20) (1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 (-20) 0)\OML
 n/10.95 (-20) 1)$
  []
 
-<images/parametric_unit_triangle.png, id=4667, 277.035pt x 238.8925pt>
+<images/parametric_unit_triangle.png, id=4670, 277.035pt x 238.8925pt>
 File: images/parametric_unit_triangle.png Graphic file (type png)
 
 <use images/parametric_unit_triangle.png>
@@ -5437,7 +5446,7 @@ Package pdftex.def Info: images/parametric_unit_triangle.png used on input line
  [132
 
 ] [133 <./images/parametric_unit_triangle.png>] [134] [135]
-<images/displacement_gap_field.pdf, id=4710, 431.86656pt x 361.35pt>
+<images/displacement_gap_field.pdf, id=4713, 431.86656pt x 361.35pt>
 File: images/displacement_gap_field.pdf Graphic file (type pdf)
 
 <use images/displacement_gap_field.pdf>
@@ -5445,7 +5454,7 @@ Package pdftex.def Info: images/displacement_gap_field.pdf used on input line 2
 18.
 (pdftex.def)             Requested size: 207.7052pt x 173.78787pt.
 
-<images/displacement_gap_field_90.pdf, id=4711, 431.86656pt x 361.35pt>
+<images/displacement_gap_field_90.pdf, id=4714, 431.86656pt x 361.35pt>
 File: images/displacement_gap_field_90.pdf Graphic file (type pdf)
 
 <use images/displacement_gap_field_90.pdf>
@@ -5453,7 +5462,7 @@ Package pdftex.def Info: images/displacement_gap_field_90.pdf used on input lin
 e 222.
 (pdftex.def)             Requested size: 207.7052pt x 173.78787pt.
 
-<images/kt_displacement_field.pdf, id=4712, 440.06908pt x 361.35pt>
+<images/kt_displacement_field.pdf, id=4715, 440.06908pt x 361.35pt>
 File: images/kt_displacement_field.pdf Graphic file (type pdf)
 
 <use images/kt_displacement_field.pdf>
@@ -5461,7 +5470,7 @@ Package pdftex.def Info: images/kt_displacement_field.pdf used on input line 22
 7.
 (pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
-<images/kt_displacement_field_90.pdf, id=4713, 440.06908pt x 361.35pt>
+<images/kt_displacement_field_90.pdf, id=4716, 440.06908pt x 361.35pt>
 File: images/kt_displacement_field_90.pdf Graphic file (type pdf)
 
 <use images/kt_displacement_field_90.pdf>
@@ -5469,7 +5478,7 @@ Package pdftex.def Info: images/kt_displacement_field_90.pdf used on input line
  231.
 (pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
-<images/rm_shear_disp_field.pdf, id=4714, 440.06908pt x 361.35pt>
+<images/rm_shear_disp_field.pdf, id=4717, 440.06908pt x 361.35pt>
 File: images/rm_shear_disp_field.pdf Graphic file (type pdf)
 
 <use images/rm_shear_disp_field.pdf>
@@ -5477,7 +5486,7 @@ Package pdftex.def Info: images/rm_shear_disp_field.pdf used on input line 236.
 
 (pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
-<images/sum.pdf, id=4715, 446.77634pt x 361.35pt>
+<images/sum.pdf, id=4718, 446.77634pt x 361.35pt>
 File: images/sum.pdf Graphic file (type pdf)
  <use images/sum.pdf>
 Package pdftex.def Info: images/sum.pdf used on input line 240.
@@ -5508,28 +5517,28 @@ sion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./images/sum.pdf): PDF inclusion: multiple p
 dfs with page group included in a single page
->] <images/rotation_xi.pdf, id=4954, 440.06908pt x 361.35pt>
+>] <images/rotation_xi.pdf, id=4957, 440.06908pt x 361.35pt>
 File: images/rotation_xi.pdf Graphic file (type pdf)
 
 <use images/rotation_xi.pdf>
 Package pdftex.def Info: images/rotation_xi.pdf used on input line 252.
 (pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
-<images/rotation_xi_90.pdf, id=4955, 440.06908pt x 361.35pt>
+<images/rotation_xi_90.pdf, id=4958, 440.06908pt x 361.35pt>
 File: images/rotation_xi_90.pdf Graphic file (type pdf)
 
 <use images/rotation_xi_90.pdf>
 Package pdftex.def Info: images/rotation_xi_90.pdf used on input line 256.
 (pdftex.def)             Requested size: 207.7052pt x 170.55132pt.
 
-<images/rotation_eta.pdf, id=4956, 447.87952pt x 361.35pt>
+<images/rotation_eta.pdf, id=4959, 447.87952pt x 361.35pt>
 File: images/rotation_eta.pdf Graphic file (type pdf)
 
 <use images/rotation_eta.pdf>
 Package pdftex.def Info: images/rotation_eta.pdf used on input line 261.
 (pdftex.def)             Requested size: 207.7052pt x 167.57388pt.
 
-<images/rotation_eta_90.pdf, id=4957, 447.87952pt x 361.35pt>
+<images/rotation_eta_90.pdf, id=4960, 447.87952pt x 361.35pt>
 File: images/rotation_eta_90.pdf Graphic file (type pdf)
 
 <use images/rotation_eta_90.pdf>
@@ -5552,7 +5561,7 @@ ultiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./images/rotation_eta_90.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
->] <images/CSDSG3_subtriangles.png, id=5090, 483.30562pt x 289.08pt>
+>] <images/CSDSG3_subtriangles.png, id=5093, 483.30562pt x 289.08pt>
 File: images/CSDSG3_subtriangles.png Graphic file (type png)
 
 <use images/CSDSG3_subtriangles.png>
@@ -5565,7 +5574,7 @@ Overfull \hbox (28.98079pt too wide) detected at line 355
  []
 
 [140] [141]
-<images/csdsg_single_tri_setup.png, id=5123, 919.435pt x 734.745pt>
+<images/csdsg_single_tri_setup.png, id=5126, 919.435pt x 734.745pt>
 File: images/csdsg_single_tri_setup.png Graphic file (type png)
 
 <use images/csdsg_single_tri_setup.png>
@@ -5573,7 +5582,7 @@ Package pdftex.def Info: images/csdsg_single_tri_setup.png used on input line 5
 08.
 (pdftex.def)             Requested size: 207.7052pt x 165.98315pt.
 
-<images/node_ordering_study_single_tri.pdf, id=5124, 517.73424pt x 438.03554pt>
+<images/node_ordering_study_single_tri.pdf, id=5127, 517.73424pt x 438.03554pt>
 File: images/node_ordering_study_single_tri.pdf Graphic file (type pdf)
 <use images/node_ordering_study_single_tri.pdf>
 Package pdftex.def Info: images/node_ordering_study_single_tri.pdf used on inpu
@@ -5585,7 +5594,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 508--513
  []
 
 
-<images/scordelis_structured_tri_results_csdsg.pdf, id=5126, 533.3551pt x 438.0
+<images/scordelis_structured_tri_results_csdsg.pdf, id=5129, 533.3551pt x 438.0
 3554pt>
 File: images/scordelis_structured_tri_results_csdsg.pdf Graphic file (type pdf)
 
@@ -5594,7 +5603,7 @@ Package pdftex.def Info: images/scordelis_structured_tri_results_csdsg.pdf used
  on input line 525.
 (pdftex.def)             Requested size: 207.7052pt x 170.58586pt.
 
-<images/pinched_cyl_structured_tri_results_csdsg.pdf, id=5127, 525.54466pt x 44
+<images/pinched_cyl_structured_tri_results_csdsg.pdf, id=5130, 525.54466pt x 44
 4.67755pt>
 File: images/pinched_cyl_structured_tri_results_csdsg.pdf Graphic file (type pd
 f)
@@ -5603,7 +5612,7 @@ Package pdftex.def Info: images/pinched_cyl_structured_tri_results_csdsg.pdf us
 ed on input line 529.
 (pdftex.def)             Requested size: 207.7052pt x 175.74408pt.
 
-<images/pinched_hemi_tri_results_CSDSG.pdf, id=5128, 533.3551pt x 438.03554pt>
+<images/pinched_hemi_tri_results_CSDSG.pdf, id=5131, 533.3551pt x 438.03554pt>
 File: images/pinched_hemi_tri_results_CSDSG.pdf Graphic file (type pdf)
 
 <use images/pinched_hemi_tri_results_CSDSG.pdf>
@@ -5622,7 +5631,7 @@ age
 pdfTeX warning: pdflatex.exe (file ./images/pinched_hemi_tri_results_CSDSG.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/csdsg_nodal_dissipation_setup.png, id=5305, 704.6325pt x 643.90562pt>
+<images/csdsg_nodal_dissipation_setup.png, id=5308, 704.6325pt x 643.90562pt>
 File: images/csdsg_nodal_dissipation_setup.png Graphic file (type png)
 
 <use images/csdsg_nodal_dissipation_setup.png>
@@ -5630,7 +5639,7 @@ Package pdftex.def Info: images/csdsg_nodal_dissipation_setup.png used on input
  line 559.
 (pdftex.def)             Requested size: 207.7052pt x 189.80313pt.
 
-<images/csdsg_nodal_dissipation_setup1.png, id=5306, 713.66624pt x 639.89063pt>
+<images/csdsg_nodal_dissipation_setup1.png, id=5309, 713.66624pt x 639.89063pt>
 File: images/csdsg_nodal_dissipation_setup1.png Graphic file (type png)
 <use images/csdsg_nodal_dissipation_setup1.png>
 Package pdftex.def Info: images/csdsg_nodal_dissipation_setup1.png used on inpu
@@ -5641,7 +5650,7 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 559--564
 [][][][] 
  []
 
-<images/node_ordering_study.pdf, id=5307, 517.73424pt x 461.54526pt>
+<images/node_ordering_study.pdf, id=5310, 517.73424pt x 461.54526pt>
 File: images/node_ordering_study.pdf Graphic file (type pdf)
 
 <use images/node_ordering_study.pdf>
@@ -5650,7 +5659,7 @@ Package pdftex.def Info: images/node_ordering_study.pdf used on input line 571.
 (pdftex.def)             Requested size: 284.52756pt x 253.65347pt.
  [144 <./images/csdsg_nodal_dissipation_setup.png> <./images/csdsg_nodal_dissip
 ation_setup1.png>] [145 <./images/node_ordering_study.pdf>]
-<images/node_ordering_study_error.pdf, id=5371, 589.91325pt x 439.53333pt>
+<images/node_ordering_study_error.pdf, id=5374, 589.91325pt x 439.53333pt>
 File: images/node_ordering_study_error.pdf Graphic file (type pdf)
 
 <use images/node_ordering_study_error.pdf>
@@ -5689,7 +5698,7 @@ File: images/DSG.png Graphic file (type png)
 <use images/DSG.png>
 Package pdftex.def Info: images/DSG.png used on input line 18.
 (pdftex.def)             Requested size: 207.7052pt x 103.84496pt.
- <images/DSG_2.png, id=5490, 627.84563pt x 242.40562pt>
+ <images/DSG_2.png, id=5493, 627.84563pt x 242.40562pt>
 File: images/DSG_2.png Graphic file (type png)
 
 <use images/DSG_2.png>
@@ -5705,14 +5714,14 @@ Overfull \hbox (7.65031pt too wide) in paragraph at lines 18--22
 
 
  <./images/DSG_2.png>]
-<images/DSG_element1.png, id=5503, 354.32375pt x 320.19624pt>
+<images/DSG_element1.png, id=5506, 354.32375pt x 320.19624pt>
 File: images/DSG_element1.png Graphic file (type png)
 
 <use images/DSG_element1.png>
 Package pdftex.def Info: images/DSG_element1.png used on input line 71.
 (pdftex.def)             Requested size: 184.9429pt x 167.13326pt.
 
-<images/DSG_element2.png, id=5504, 496.35437pt x 233.37187pt>
+<images/DSG_element2.png, id=5507, 496.35437pt x 233.37187pt>
 File: images/DSG_element2.png Graphic file (type png)
 
 <use images/DSG_element2.png>
@@ -5742,14 +5751,14 @@ chapter D.
 
  (chapters/Appendix_3.tex
 chapter E.
-<images/dome_geom.png, id=5581, 451.08525pt x 275.22826pt>
+<images/dome_geom.png, id=5584, 451.08525pt x 275.22826pt>
 File: images/dome_geom.png Graphic file (type png)
 
 <use images/dome_geom.png>
 Package pdftex.def Info: images/dome_geom.png used on input line 20.
 (pdftex.def)             Requested size: 207.7052pt x 126.72832pt.
 
-<images/dome_self_weight.png, id=5582, 588.39825pt x 314.3745pt>
+<images/dome_self_weight.png, id=5585, 588.39825pt x 314.3745pt>
 File: images/dome_self_weight.png Graphic file (type png)
 
 <use images/dome_self_weight.png>
@@ -5925,10 +5934,10 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56718 strings out of 493333
- 1219572 string characters out of 3139194
+ 56724 strings out of 493333
+ 1219771 string characters out of 3139194
  1868021 words of memory out of 3000000
- 57743 multiletter control sequences out of 15000+200000
+ 57747 multiletter control sequences out of 15000+200000
  149207 words of font info for 316 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,23n,108p,8958b,2113s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -5955,9 +5964,9 @@ X 2.9/fonts/type1/public/txfonts/txsyc.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helve
 tic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pf
 b>
-Output written on WissenschaftlicheArbeit.pdf (192 pages, 20398854 bytes).
+Output written on WissenschaftlicheArbeit.pdf (192 pages, 20518089 bytes).
 PDF statistics:
- 6129 PDF objects out of 6186 (max. 8388607)
- 909 named destinations out of 1000 (max. 500000)
- 49072 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 6133 PDF objects out of 6186 (max. 8388607)
+ 910 named destinations out of 1000 (max. 500000)
+ 49077 words of extra memory for PDF output out of 51595 (max. 10000000)
 
