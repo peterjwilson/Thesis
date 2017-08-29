@@ -20,7 +20,7 @@
 
 \renewcommand{\Thema}{Composite shells}
 
-\lettrine[lines=2]{A}{s} is the case with shell structures, anisotropic structures are widely encountered throughout the natural and man-made environment. Truly isotropic materials are but a subset of naturally occurring structures, with the phenotypical material often being anisotropic due to varying environmental pressure in different directions. Intuitively, inspecting the ongoing genetic optimization of constructions forming the natural environment suggests that the best mechanical behaviour for a structure subject to spatially non-uniform requirements will be non-uniform itself. This same philosophy has recently began to dominate the cutting edge of man-made engineering structures where specialized high-performance is demanded, often in the midst of contradictory objectives, leading to greater adoption of composite materials. The increasing proportion of composite materials in the aerospace industry is but one example of their increasing traction.
+\lettrine[lines=2]{A}{s} is the case with shell structures, anisotropic structures are widely encountered throughout the natural and man-made environment. Truly isotropic materials are but a subset of naturally occurring structures, with the phenotypical material often being anisotropic due to varying environmental pressure in different directions. Intuitively, inspecting the ongoing genetic optimization of constructions forming the natural environment suggests that the best mechanical behaviour for a structure subject to spatially non-uniform requirements will be non-uniform itself. This same philosophy has recently began to dominate the cutting edge of man-made engineering structures where specialised high-performance is demanded, often in the midst of contradictory objectives, leading to greater adoption of composite materials. The increasing proportion of composite materials in the aerospace industry is but one example of their increasing traction.
 
 \begin{figure}[H]
 	\centering
@@ -38,7 +38,7 @@ Composite materials are typically the combination of a high strength/stiffness f
 
 \subsection{Laminae and laminates}
 
-Laminae are individual layers or plies of composite materials, which, when stacked together, form a laminate. Each lamina consists of a volume percentage of reinforcement fibres embedded within a matrix material, aligned at a particular orientation to some coordinate system. Common fibre reinforcement materials are various glass fibres (including E-glass and S-glass), carbon/graphite fibres and boron fibres while common matrix materials are thermosetting polymers such as polyester and epoxy resins and metals including aluminium and titanium. The reinforcement fibres may be arranged in the lamina matrix in a variety of patterns and orientations, either continuous or discontinuous \cite{agarwal2006analysis}. 
+Laminae are individual layers or plies of composite materials, which, when stacked together, form a laminate. Each lamina consists of a volume percentage of reinforcement fibres embedded within a matrix material, aligned at a particular orientation to some coordinate system. Common fibre reinforcement materials are various glass fibres (including E-glass and S-glass), carbon/graphite fibres and boron fibres, while common matrix materials are thermosetting polymers such as polyester and epoxy resins and metals including aluminium and titanium. The reinforcement fibres may be arranged in the lamina matrix in a variety of patterns and orientations, either continuous or discontinuous \cite{agarwal2006analysis}. 
 \begin{figure}[H]
 	\subfloat[Various composite laminae]
 	{\label{ref_label2}
@@ -51,7 +51,7 @@ Laminae are individual layers or plies of composite materials, which, when stack
 	\caption{\label{composite_laminates}Components of composite laminates \cite{reddy2004mechanics}}
 \end{figure}
 
-Considering the four laminae in figure \ref{composite_laminates}(a) examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, individual lamina makeup forms a critical determinant of the total laminate's structural behaviour. Another important factor of laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation as per figure \ref{composite_laminates}(b). The control that these two determinants offer designers facilitate highly optimized structures for well defined structural requirements.
+Considering the four laminae in figure \ref{composite_laminates}(a) examples of anisotropy to varying degrees can be intuited. The unidirectional continuous fibre pattern is incredibly stiff and strong in the fibre direction while being relatively compliant and weak  perpendicular to this fibre direction. Contrasting this, a practically in-plane isotropic lamina may be achieved with very fine discontinuous fibres randomly oriented within the matrix substrate. Thus, individual lamina makeup forms a critical determinant of the total laminate's structural behaviour. Another important factor of laminate behaviour is the stacking sequence of the laminate, which prescribes the number of laminae, their vertical order and their orientation as per figure \ref{composite_laminates}(b). The control that these two determinants offer designers facilitate highly optimised structures for well defined structural requirements.
 
 An industrial example of this is spoolable Glass Reinforced Epoxy (GRE) oil piping, which has a central GRE structural lamina sandwiched between two non-structural Polyethylene (PE) laminae intended to provide the structural layer chemical and environmental protection. Furthermore, the fibre alignment of the GRE structural lamina is often orientated at an optimal pressure-capacity angle since the stress field of the pipe operating under internal pressure is well defined.
 
@@ -61,10 +61,10 @@ A pre-requisite of modelling complex laminates is the characterisation of each l
 
 \begin{equation} 
 \sigma^{ij} = C_0^{ijkl} \epsilon_{kl}
-\label{eqscomp1}\ ,
+\label{eqscomp1}\ .
 \end{equation}
 
-equivalently, adopting Reddy's \cite{reddy2004mechanics} notation:
+By assuming a symmetric constitutive tensor and adopting Voigt notation, as in Reddy's composite work \cite{reddy2004mechanics}, one can write:
 
 \begin{equation} 
 \begin{pmatrix}
@@ -206,7 +206,7 @@ G_{12} = \frac{G_f G_m}{G_f v_m + G_m v_f}
 \label{eqscomp8}\ .
 \end{equation}
 
-The example of continuous unidirectional fibre laminae highlight that the material description of laminae can be shifted from a micro-mechanical level to a macro-mechanical level characterised by equivalent parameters. These are related to the entries $Q_{ij}$ of the reduced plane stress orthotropic lamina constitutive tensor in equation \ref{eqscomp_plane_stress_tensor_unrotated} as follows:
+The example of continuous unidirectional fibre laminae highlight that the material description of laminae can be shifted from a micro-mechanical level to a macro-mechanical level characterised by equivalent parameters. These are related to the entries $Q_{ij}$ of the reduced plane stress orthotropic lamina constitutive tensor in equation (\ref{eqscomp_plane_stress_tensor_unrotated}) as follows:
 
 \begin{equation} 
 Q_{11} = \frac{E_1}{1-\nu_{12} \nu_{21}}\ ,
@@ -458,7 +458,7 @@ dz
 \label{eqscomp_laminate_constitutive1}\ .
 \end{equation}
 
-Invoking the laminae constitutive properties previously established in equation \ref{eqscomp_plane_stress_tensor_rotated} leads to the 'mathematical assemblage' of the laminae into the laminate via the following integral:
+Invoking the laminae constitutive properties previously established in equation (\ref{eqscomp_plane_stress_tensor_rotated}) leads to the 'mathematical assemblage' of the laminae into the laminate via the following integral:
 \begin{gather} 
 	\begin{aligned}
 		\begin{pmatrix}
@@ -547,8 +547,8 @@ Similarly, the moment resultants can be related to strains:
 		\begin{pmatrix}
 			\kappa_{xx}\\
 			\kappa_{yy}\\
-			2\kappa_{xy}\ ,
-		\end{pmatrix}
+			2\kappa_{xy}
+		\end{pmatrix}\ ,
 		\label{eqscomp_laminate_constitutive4}
 	\end{aligned}
 \end{gather}
@@ -602,7 +602,7 @@ The three introduced matrices represent the extensional stiffnesses $A_{ij}$, th
 	\label{eqscomp_laminate_constitutive6}\ .
 \end{equation}
 
-By organising the resultants into a generalised resultant vector $\bar{\mathbf{N}}$ and the strains into a generalized strain vector $\bar{\boldsymbol{\epsilon}}$, the following summary is produced:
+By organising the resultants into a generalised resultant vector $\bar{\mathbf{N}}$ and the strains into a generalised strain vector $\bar{\boldsymbol{\epsilon}}$, the following summary is produced:
 
 \begin{equation} 
 \bar{\mathbf{N}} = \bar{\mathbf{C}} \bar{\boldsymbol{\epsilon}} =
@@ -638,7 +638,7 @@ Q_{y}
 \label{eqscomp_laminate_constitutive7}\ .
 \end{equation}
 
-In light of the above work, the internal virtual work of the 5 parameter shell model presented in equation \ref{eqsrm4_in_composite3} can therefore be parsimoniously expressed as:
+In light of the above work, the internal virtual work of the 5 parameter shell model presented in equation (\ref{eqsrm4_in_composite3}) can therefore be parsimoniously expressed as:
 
 \begin{equation} 
 -\delta\Pi_{int} =
@@ -656,7 +656,7 @@ Critical to the practical design of laminates is the evaluation of stresses and 
 
 \subsection{Laminate strain recovery}
 
-Owing to the dimensional reduction from 3D to 2D, the generalized shell strains $\bar{\boldsymbol{\epsilon}}$ of equation \ref{eqscomp_laminate_constitutive7} are referred to the mid-plane $(z=0)$ of the laminate. Thus, within a local convective laminate coordinate system describing the z-axis orientation as per figure \ref{fig:compositelayersystem}:
+Owing to the dimensional reduction from 3D to 2D, the generalised shell strains $\bar{\boldsymbol{\epsilon}}$ of equation (\ref{eqscomp_laminate_constitutive7}) are referred to the mid-plane $(z=0)$ of the laminate. Thus, within a local convective laminate coordinate system describing the z-axis orientation as per figure \ref{fig:compositelayersystem}:
 
 \begin{equation} 
 \bar{\boldsymbol{\epsilon}} (x,\ y) = \boldsymbol{\epsilon} (x,\ y,\ 0)
@@ -698,7 +698,7 @@ z
 
 The in-plane strains of a surface in any lamina within the laminate can be determined by appropriately setting the corresponding $z$ value.
 
-Applicable only to 5 parameter shell models is the recovery of transverse shear strains. A perusal of Kreja's literature review on composite models \cite{kreja2011literature} indicates the amount of academic effort dedicated to accurately modelling transverse shear strains in first order shear deformation theories. The contradiction driving this effort is that 5 parameter models are limited to expressing constant transverse shear strain over the shell thickness, while it is known that for an isotropic material they are actually distributed parabolically. This is the reason behind the shear correction factor of $\alpha = \frac{5}{6}$ which is actually the ratio of internal transverse shear strain energy in a 5 parameter plate to that of 3D elasticity. Without delving into exotic laminate shell theories, two options for simply recovering the transverse shear strain avail themselves: (1) accept the limitations of the 5 parameter model and consider the transverse shear strain constant across the section, or; (2) reconstruct a parabolic strain profile from the mid-plane values, as is often done for isotropic materials.
+Applicable only to 5 parameter shell models is the recovery of transverse shear strains. A perusal of Kreja's literature review on composite models \cite{kreja2011literature} indicates the amount of academic effort dedicated to accurately modelling transverse shear strains in first order shear deformation theories. The contradiction driving this effort is that 5 parameter models are limited to expressing constant transverse shear strain over the shell thickness, while it is known that for an isotropic material they are actually distributed parabolically. This is the reason behind the shear correction factor of $\alpha = \frac{5}{6}$, which is actually the ratio of internal transverse shear strain energy in a 5 parameter plate to that of 3D elasticity. Without delving into exotic laminate shell theories, two options for simply recovering the transverse shear strain avail themselves: (1) accept the limitations of the 5 parameter model and consider the transverse shear strain constant across the section, or; (2) reconstruct a parabolic strain profile from the mid-plane values, as is often done for isotropic materials.
 
 The first approach of accepting constant transverse shear stress is expressed as follows:
 
@@ -908,4 +908,4 @@ b = \sum_{i=1}^{6} F_i \sigma_i
 \end{equation}
 
 \section{Chapter summary}
-A background to composite shells was provided in this chapter, commencing with a discussion of composite material basics elucidating the relevant nomenclature and the basic constitutive equations. Following this, development of the 5-parameter orthotropic laminate shell internal virtual work lead to expressions for the integrated laminate constitutive matrix and resultant forces. The recovery of laminate stress and strains from resultant forces was subsequently detailed, while the laminate Tsai-Wu failure criterion formulation finalized the necessary composite background pertinent to this work.
+A background to composite shells was provided in this chapter, commencing with a discussion of composite material basics elucidating the relevant nomenclature and the basic constitutive equations. Following this, development of the 5-parameter orthotropic laminate shell internal virtual work lead to expressions for the integrated laminate constitutive matrix and resultant forces. The recovery of laminate stress and strains from resultant forces was subsequently detailed, while the laminate Tsai-Wu failure criterion formulation finalised the necessary composite background pertinent to this work.

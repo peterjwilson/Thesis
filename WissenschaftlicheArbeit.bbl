@@ -471,6 +471,45 @@
     \field{year}{2017}
   \endentry
 
+  \entry{dadvand2010object}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DP}{%
+         family={Dadvand},
+         familyi={D\bibinitperiod},
+         given={Pooyan},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Rossi},
+         familyi={R\bibinitperiod},
+         given={Riccardo},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=OE}{%
+         family={O{\~n}ate},
+         familyi={O\bibinitperiod},
+         given={Eugenio},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DPRROE1}
+    \strng{fullhash}{DPRROE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{3}
+    \field{pages}{253\bibrangedash 297}
+    \field{title}{An object-oriented environment for developing finite element
+  codes for multi-disciplinary applications}
+    \field{volume}{17}
+    \field{journaltitle}{Archives of computational methods in engineering}
+    \field{year}{2010}
+  \endentry
+
   \entry{Dvorkin84}{article}{}
     \name{author}{2}{}{%
       {{hash=DEN}{%
@@ -1585,6 +1624,28 @@
   conditioning problem}
     \field{volume}{99}
     \field{year}{2000}
+  \endentry
+
+  \entry{Wuchner2016}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=WR}{%
+         family={Wüchner},
+         familyi={W\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Chair of Structural Analysis, Technical University of Munich}%
+    }
+    \strng{namehash}{WR1}
+    \strng{fullhash}{WR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Lecture: Advanced Finite Element Methods}
+    \field{year}{2016}
   \endentry
 
   \entry{Yang2000}{article}{}

@@ -22,7 +22,7 @@ The DSG element is implemented in Kratos under the class \texttt{ShellThickEleme
 
 \texttt{GetIntegrationMethod()}: Returns currently assigned integration method.
 
-\texttt{Initialize()}: Initializes element with material properties, sets up isotropic or orthotropic cross section, initializes coordinate transformation and sets section orientation.
+\texttt{Initialize()}: Initialises element with material properties, sets up isotropic or orthotropic cross section, initialises coordinate transformation and sets section orientation.
 
 \texttt{ResetConstitutiveLaw()}: Resets the cross section by calling \\ \texttt{ShellCrossSection::ResetCrossSection()}. 
 
@@ -42,9 +42,9 @@ The DSG element is implemented in Kratos under the class \texttt{ShellThickEleme
 
 \texttt{FinalizeNonLinearIteration()}: Accessibility function to access \\ \texttt{ShellCrossSection::FinalizeNonLinearIteration()}.
 
-\texttt{InitializeSolutionStep()}: Accessibility function to access \\ \texttt{ShellCrossSection::InitializeSolutionStep()}. Initializes coordinate transformation for the current timestep.
+\texttt{InitializeSolutionStep()}: Accessibility function to access \\ \texttt{ShellCrossSection::InitializeSolutionStep()}. Initialises coordinate transformation for the current timestep.
 
-\texttt{FinalizeSolutionStep()}: Accessibility function to access \\ \texttt{ShellCrossSection::FinalizeSolutionStep()}. Finalizes coordinate transformation for the current timestep.
+\texttt{FinalizeSolutionStep()}: Accessibility function to access \\ \texttt{ShellCrossSection::FinalizeSolutionStep()}. Finalises coordinate transformation for the current timestep.
 
 \texttt{CalculateMassMatrix()}: Calculates element mass matrix. Default is lumped.
 
@@ -81,7 +81,7 @@ The DSG element is implemented in Kratos under the class \texttt{ShellThickEleme
 
 \texttt{CalculateSectionResponse()}: Calculates section response, including stress computation from availible strains, according to the constitutive law assigned. Also implements stabilization of shear constitutive entries as per equation \ref{eqt14}.
 
-\texttt{InitializeCalculationData()}: Initializes element data invariant throughout the gauss loop necessary for the computation of the element stiffness matrix.
+\texttt{InitializeCalculationData()}: Initialises element data invariant throughout the gauss loop necessary for the computation of the element stiffness matrix.
 
 \texttt{CalculateDSGc3Contribution()}: Calculates the shear B-matrix as per the developmental DSGc3 formulation in equation \ref{eqDSGc3_26}.
 

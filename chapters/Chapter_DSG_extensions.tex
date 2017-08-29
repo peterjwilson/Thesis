@@ -20,10 +20,10 @@
 
 \renewcommand{\Thema}{Extension of DSG linear triangle element technology}
 
-\lettrine[lines=2]{A}{lthough} the DSG element technology drastically enhances the performance of the basic constant strain triangle (Basic-T3) formulation in a very computationally efficient package, the drawback of nodal numbering dependency in coarse linear triangular meshes has tempted academics since it's original publication to extend the elegant underlying discrete shear gap concept into a formulation invariant of nodal ordering. This chapter concerns itself with: one such formulation under development with promising initial results, another approach successfully published and gaining traction and illuminating the severity of the DSG nodal numbering sensitivity in order to ascertain whether remedies are actually worthwhile in practical scenarios.
+\lettrine[lines=2]{A}{lthough} the DSG element technology drastically enhances the performance of the basic constant strain triangle (Basic-T3) formulation in a very computationally efficient package, the drawback of nodal numbering dependency in coarse linear triangular meshes has tempted academics since its original publication to extend the elegant underlying discrete shear gap concept into a formulation invariant of nodal ordering. This chapter concerns itself with: one such formulation under development with promising initial results, another approach successfully published and gaining traction and illuminating the severity of the DSG nodal numbering sensitivity in order to ascertain whether remedies are actually worthwhile in practical scenarios.
 
 \section{DSGc3 approach}
-The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's chair of structural engineering aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In it's current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric unit triangle formulation, with the next stage in development being the extension into arbitrary Cartesian triangles. 
+The DSGc3 approach is a method under development lead by Prof. Bletzinger at TUM's Chair of Structural Analysis aimed at addressing the aforementioned nodal numbering dependency of Bletzinger's original DSG formulation. In its current stage, the DSGc3 approach offers a successful proof of concept in the form of a parametric unit triangle formulation, with the next stage in development being the extension into arbitrary Cartesian triangles. 
 
 \subsection{DSGc3 unit triangle parametric formulation}
 Consider the following parametric unit triangle with nodal coordinates $(\xi_i,\eta_i)$ = $(0,0),\ (1,0),\ (0,1)$ as per the figure below:
@@ -65,7 +65,7 @@ w_{KL \eta} = w_{KL} - w_{MOD} = a_1 + \xi a_2 + \eta a_3 + \xi^2 a_4 +a_6 \xi \
 \label{eqDSGc3_5}\ .
 \end{equation}
 
-According to it's definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field:
+According to its definition, differentiating the modified Kirchhoff-Love displacement field yields a pure rotation field:
 
 \begin{equation} 
 \beta_{KL \xi} = \frac{\partial w_{KL \xi}}{\partial \xi}  = a_2 + 2 \xi a_4 +a_5 \eta
@@ -241,7 +241,7 @@ In order to illustrate the locking-free performance of the DSGc3 proof of concep
 	\caption{\label{csdsgc3_result}DSGc3 example problem displacement field results}
 \end{figure}
 
-The displacement gap field in sub-figures (a) and (b) illustrate the fulfilment of nodal transverse displacement as per equations \ref{eqDSGc3_11} through \ref{eqDSGc3_13}, while the Kirchhoff displacement field in sub-figures (c) and (d) fulfils the nodal rotations of equations \ref{eqDSGc3_14} through \ref{eqDSGc3_19}. The locking-free performance of the element is confirmed in (e) with the RM shear-displacement field having a value of zero throughout. Sub-figure (f) highlights the relationship between these three fields, as per equation \ref{eqDSGc3_10}, with the displacement gap and Kirchhoff fields essentially nullifying each other to mitigate locking effects.
+The displacement gap field in sub-figures (a) and (b) illustrate the fulfilment of nodal transverse displacement as per equations (\ref{eqDSGc3_11}) through (\ref{eqDSGc3_13}), while the Kirchhoff displacement field in sub-figures (c) and (d) fulfils the nodal rotations of equations (\ref{eqDSGc3_14}) through (\ref{eqDSGc3_19}). The locking-free performance of the element is confirmed in (e) with the RM shear-displacement field having a value of zero throughout. Sub-figure (f) highlights the relationship between these three fields, as per equation (\ref{eqDSGc3_10}), with the displacement gap and Kirchhoff fields essentially nullifying each other to mitigate locking effects.
 
 The rotation fields of the formulation are presented below:
 
@@ -266,7 +266,7 @@ The rotation fields of the formulation are presented below:
 	\caption{\label{csdsgc3_resul1t}DSGc3 example problem rotation field results}
 \end{figure}
 
-As per equations \ref{eqDSGc3_8} and \ref{eqDSGc3_9}, both rotation fields exhibit linear interpolation of nodal values, themselves corresponding to the solution values due to the constraints of equations \ref{eqDSGc3_14} though \ref{eqDSGc3_19}.
+As per equations (\ref{eqDSGc3_8}) and (\ref{eqDSGc3_9}), both rotation fields exhibit linear interpolation of nodal values, themselves corresponding to the solution values due to the constraints of equations (\ref{eqDSGc3_14}) though (\ref{eqDSGc3_19}).
 
 \subsection{DSGc3 summary}
 As an emerging formulation, the DSGc3 offers a promising proof of concept for a locking-free linear triangle element. Further steps to generalise the current unit-triangle parametric formulation to an arbitrarily skewed Cartesian formulation are necessary to effectively use the element in general FEM code, such as Kratos. Thus, given the current state of the DSGc3 formulation, the remaining discussion of extended DSG formulations is limited to the CS-DSG element.
@@ -340,7 +340,7 @@ Critical to the CS-DSG formulation is the relation of $\mathbf{u}_0$ to the exte
  \label{eqCSDSG2}\ .
  \end{equation}
  
- For each of the sub-triangles $\Delta_i$ the original DSG formulation according to equation \ref{eqt10} is performed, with $x_i,\ y_i$ and $A$ updated to match the nodal positions and area of the current sub-triangle respectively. For illustrative purposes, the first sub-triangle shear B-matrix $\mathbf{B}^{\gamma\Delta 1}$ is written explicitly:
+ For each of the sub-triangles $\Delta_i$ the original DSG formulation according to equation (\ref{eqt10}) is performed, with $x_i,\ y_i$ and $A$ updated to match the nodal positions and area of the current sub-triangle respectively. For illustrative purposes, the first sub-triangle shear B-matrix $\mathbf{B}^{\gamma\Delta 1}$ is written explicitly:
  
 \begin{equation}
 	\delimitershortfall=0pt
@@ -430,7 +430,7 @@ Thus, the shear strains for sub-triangle 1 can be summarised as:
 \label{eqCSDSG7}\ .
 \end{equation}
 
-Recalling equation \ref{eqCSDSG2}, which expresses the central point's displacement vector $\mathbf{u}_0$ in terms of the 3 external node displacement vectors, the shear B-matrix above can similarly be rearranged and expressed in terms of the 3 exterior nodes:
+Recalling equation (\ref{eqCSDSG2}), which expresses the central point's displacement vector $\mathbf{u}_0$ in terms of the 3 external node displacement vectors, the shear B-matrix above can similarly be rearranged and expressed in terms of the 3 exterior nodes:
 
   \begin{equation} 
 \boldsymbol{\gamma}^{\Delta 1} =
@@ -499,7 +499,7 @@ A_{\Delta i}
 \end{equation}
 
 \subsection{Invariance of CS-DSG to nodal ordering}
-The feature of the CS-DSG formulation is the removal of the original DSG formulation's nodal ordering dependency. The nodal ordering invariance of the CS-DSG formulation is verified with the following example of an equilateral triangle (side lengths $L = 1$, thickness $h = 0.05$) of material properties $E = 1000,\ \nu = 0.29$ fully clamped on it's left side (as per the figure below) subject to a surface pressure of $P_z = -0.01$. The displacement of interest is $u_z$ of point 2 as circled below. 3 tests were performed corresponding to 3 different node ordering arrangements of the triangle: the first being [p1, p3, p2], the second [p3, p2, p1] and the last [p2, p1, p3]. The results of the analysis are presented below.
+The feature of the CS-DSG formulation is the removal of the original DSG formulation's nodal ordering dependency. The nodal ordering invariance of the CS-DSG formulation is verified with the following example of an equilateral triangle (side lengths $L = 1$, thickness $h = 0.05$) of material properties $E = 1000,\ \nu = 0.29$ fully clamped on its left side (as per the figure below) subject to a surface pressure of $P_z = -0.01$. The displacement of interest is $u_z$ of point 2 as circled below. 3 tests were performed corresponding to 3 different node ordering arrangements of the triangle: the first being [p1, p3, p2], the second [p3, p2, p1] and the last [p2, p1, p3]. The results of the analysis are presented below.
 
 \begin{figure}[H]
 	\subfloat[Nodal ordering sensitivity study setup]
@@ -573,7 +573,7 @@ These two boundary conditions are imposed separately, with the minimum z-displac
 	\label{fig:Nodal ordering sensitivity study}
 \end{figure}
 
-As expected, the coarsest 2 element mesh reveals a high level of nodal numbering dependency in the DSG element, with the 2 boundary conditions producing considerably different displacement results. The CS-DSG element produced identical displacement results for this coarse mesh across both boundary conditions, as well as for all other meshes studied. The 2 element mesh also reveals that although the CS-DSG has no node-numbering dependency, this doesn't necessarily mean it is more accurate than the DSG mesh. Indeed, the left clamped DSG case is closer to the reference solution, however, the bottom clamped DSG case is quite inaccurate. It seems apparent that in this 2 element mesh, and most likely for other very coarse meshes, the CS-DSG element guarantees a result better than the worst possible DSG result but not necessarily better than the best DSG node ordering sensitive result. Despite this caveat, it's clear that the CS-DSG element produces reliably more accurate results than the DSG element for the coarsest mesh.
+As expected, the coarsest two element mesh reveals a high level of nodal numbering dependency in the DSG element, with the two boundary conditions producing considerably different displacement results. The CS-DSG element produced identical displacement results for this coarse mesh across both boundary conditions, as well as for all other meshes studied. The two element mesh also reveals that although the CS-DSG has no node-numbering dependency, this does not necessarily mean it is more accurate than the DSG mesh. Indeed, the left clamped DSG case is closer to the reference solution, however, the bottom clamped DSG case is quite inaccurate. It seems apparent that in this two element mesh, and most likely for other very coarse meshes, the CS-DSG element guarantees a result better than the worst possible DSG result but not necessarily better than the best DSG node ordering sensitive result. Despite this caveat, it is clear that the CS-DSG element produces reliably more accurate results than the DSG element for the coarsest mesh.
 
 Progressing with mesh refinement, the 8 element mesh DSG results demonstrate almost complete convergence between the two boundary conditions, indicating negligible nodal numbering dependency. Additionally, the DSG and CS-DSG results essentially coalesce after this single level of refinement. As the mesh is refined further, differences between the 3 result cases continue to evaporate and they converge to the same reference solution of $min(u_z) = -0.22058$ calculated with an 'overkill' mesh of 11, 250 elements.
 
@@ -589,7 +589,7 @@ Since the shear B-matrix is the only point of difference between the two formula
 	\label{fig:Computational cost vs error of DSG formulations}
 \end{figure}
 
-Practical FEA is often driven by the tension of obtaining accurate results in a timely manner, with minor differences in element speeds magnified into substantial time delays when a large number of iterations are necessary (such as fine dynamic analysis and highly non-linear analysis). The above graph highlights that the DSG element actually reaches a lower percentage error level 'before' (in the sense of time) the CS-DSG element for all meshes except the first. That is, for typical practical meshes (indeed 2 element meshes, especially linear triangles, are ill-advised in practise), the DSG element offers comparable accuracy to the CS-DSG element at a lower computational cost. Exceptional cases will no doubt arise where the CS-DSG element is more suitable, a possible example being the analysis of an I-beam where flange meshes are often naturally coarse due to the size difference between the flanges and the web, however this merely reinforces the importance of correct structural modelling of the system at hand and knowledge concerning the interplay of assumptions, element choices and potential deleterious consequences: a central theme of this thesis.
+Practical FEA is often driven by the tension of obtaining accurate results in a timely manner, with minor differences in element speeds magnified into substantial time delays when a large number of iterations are necessary (such as fine dynamic analysis and highly non-linear analysis). The above graph highlights that the DSG element actually reaches a lower percentage error level 'before' (in the sense of time) the CS-DSG element for all meshes except the first. That is, for typical practical meshes (indeed two element meshes, especially linear triangles, are ill-advised in practise), the DSG element offers comparable accuracy to the CS-DSG element at a lower computational cost. Exceptional cases will no doubt arise where the CS-DSG element is more suitable, a possible example being the analysis of an I-beam where flange meshes are often naturally coarse due to the size difference between the flanges and the web, however this merely reinforces the importance of correct structural modelling of the system at hand and knowledge concerning the interplay of assumptions, element choices and potential deleterious consequences: a central theme of this thesis.
 
 \section{Chapter summary}
 Despite the DSG element technology significantly improving the pure displacement-based constant strain triangle, it possesses artificially introduced nodal numbering dependency. The DSGc3 proof of concept parametric unit triangle formulation developed by Prof. Bletzinger effectively addresses this but is yet to be extended to general skew Cartesian triangles. Another approach, the CS-DSG element, has been implemented in Kratos and eliminates the nodal numbering dependency apparent in coarse meshes while converging to the original DSG results in the fine mesh limit. A study of the dissipation rate of DSG nodal ordering dependency against the additional cost of mitigating it with the CS-DSG was presented. In light of the DSG nodal ordering dependency diminishing quickly, the DSG element appears to be the preferred element for general analysis, while fringe cases involving very coarse meshes would benefit from employing the CS-DSG element.

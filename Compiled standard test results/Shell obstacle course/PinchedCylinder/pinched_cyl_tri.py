@@ -75,7 +75,7 @@ plt.plot(dofs,disp_kratos_tri, color = KRATOSTRI, linewidth=2.0,
 plt.axhline(y=ref[0],color = 'grey', linestyle='--', linewidth=2.0, 
          label = 'Ref',antialiased=True)
 
-plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=3, frameon=False,fontsize=labelfontsize+2)
+plt.legend(loc=9,bbox_to_anchor=(0.5, -0.1), ncol=2, frameon=False,fontsize=labelfontsize+2)
 
 plt.xlabel('Elements',fontsize=myfontsize)
 plt.ylabel('|Displacement| [m]',fontsize=myfontsize)

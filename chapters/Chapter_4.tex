@@ -18,7 +18,7 @@
 %\captionsetup{justification=centering}
 
 \chapter[ANDES-DKQ linear quadrilateral shell element]{ANDES-DKQ linear \\ quadrilateral shell element}
-\renewcommand{\Thema}{ANDES-DKT linear quadrilateral shell element}
+\renewcommand{\Thema}{ANDES-DKQ linear quadrilateral shell element}
 
 This chapter concerns itself with the ANDES-DKQ linear quadrilateral shell element formulation and implementation in Kratos. The stiffness matrix formulation and implementation, lumped and consistent mass matrix details and stress and strain recovery are subsequently presented.
 
@@ -38,7 +38,7 @@ Only the membrane portion of the total shell element is considered in this secti
 \mathbf{u}_1 & \mathbf{u}_2 & \mathbf{u}_3 & \mathbf{u}_4
 \end{pmatrix} 
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \mathbf{u}{_i}^T = 
 \begin{pmatrix}
@@ -63,7 +63,7 @@ The membrane basic stiffness is driven by assuming a constant stress field withi
 \begin{equation} 
 \mathbf{f} = \boldsymbol{L\sigma}
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \boldsymbol{\sigma}^T =
 \begin{pmatrix}
@@ -80,7 +80,7 @@ The structure of the above expression is resolved as such:
 \mathbf{L}_1 & \mathbf{L}_2 & \mathbf{L}_3 & \mathbf{L}_4
 \end{pmatrix}
 \hspace{10mm}
-and
+\text{and}
 \hspace{10mm}
 \mathbf{f} =
 \begin{pmatrix}
@@ -90,7 +90,7 @@ and
 \mathbf{f}_4
 \end{pmatrix}
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \mathbf{f}_i =
 \begin{pmatrix}
@@ -113,8 +113,8 @@ y_{ki} & 0 & -x_{ki} \\
 \label{equation07}\ .
 \end{equation}
 
-Throughout this formulation the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\ y_j$ holds. Furthermore, the value of $\alpha$ is taken as 1.5 \cite{Fel91}.
-
+Throughout this formulation the notation of $x_{ij} = x_i - x_j$ and $y_{ij} = y_i\ -\ y_j$ holds. Furthermore, the value of $\alpha$ is taken as $\frac{3}{2}$ \cite{Fel91}.
+\newpage
 \textit{Membrane higher order stiffness}
 
 The membrane higher order stiffness considers a set of higher order DOFs expressed in terms of the visible DOFs. To improve readability and allow easier code checking, the visible membrane DOFs for the membrane higher order stiffness are arranged as per Haugen's original formulation \cite{Hau94} (denoted $\mathbf{u}_H$) in a component-wise fashion:
@@ -127,7 +127,7 @@ The membrane higher order stiffness considers a set of higher order DOFs express
 \boldsymbol{\theta}_z
 \end{pmatrix} 
 \hspace{5mm}
-where
+\text{where}
 \hspace{5mm}
 \mathbf{u}_x = 
 \begin{pmatrix}
@@ -160,7 +160,7 @@ The higher order rotational DOFs are related to the visible DOFs as described be
 \begin{equation} 
 \boldsymbol{\theta}_h = \mathbf{H}_{\theta u} \mathbf{u}_H
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \boldsymbol{\theta}_{h}^T = 
 \begin{pmatrix}
@@ -179,11 +179,11 @@ with
 			0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{-1}{4} & \frac{-1}{4} & \frac{-1}{4} & \frac{3}{4} \\
 			\frac{x_{42}}{f} & \frac{x_{13}}{f} & \frac{x_{24}}{f} & \frac{x_{31}}{f} & \frac{y_{42}}{f} & \frac{y_{13}}{f} & \frac{x_{24}}{f} & \frac{y_{31}}{f} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}
 		\end{pmatrix}\\
-		&where 
+		&\text{where}
 		\hspace{10mm} 
 		f = 16{|}\mathbf{J}{|}\\
 		\hspace{10mm}
-		&and
+		&\text{and}
 		\hspace{10mm}
 		{|}\mathbf{J}{|} = \frac{1}{8}[ (x_1 y_2 - x_2 y_1) + (x_2 y_3 - x_3 y_2) + (x_3 y_4 - x_4 y_3) + (x_4 y_1 - x_1 y_4)]
 		\label{equation09}\ .
@@ -193,7 +193,7 @@ The higher order translational DOFs are related to the visible DOFs as described
 \begin{equation} 
 \widetilde{\mathbf{u}}_t = \mathbf{H}_{tu} \mathbf{u}_H
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \widetilde{\mathbf{u}}_t^T = 
 \begin{pmatrix}
@@ -213,7 +213,7 @@ The translational mapping matrix $ \mathbf{H}_{tu}$ was originally prescribed by
 
 where $\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the Cartesian unit vectors in the $\xi$ and $\eta$ directions respectively.
 
-However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes the general translational mapping matrix from Reference \cite{felippa2006supernatural} is utilised and incorporated into Haugen's original approach in equation \ref{equation10}, as outlined below:
+However, it is noted after consulting Felippa's work on supernatural quadrilateral elements \cite{felippa2006supernatural}, that the above mapping matrix is limited to strictly structured rectangular elements. To extend element functionality to unstructured meshes the general translational mapping matrix from reference \cite{felippa2006supernatural} is utilised and incorporated into Haugen's original approach in equation (\ref{equation10}), as outlined below:
 \begin{equation} 
 \mathbf{H}_{tu} =
 \begin{pmatrix}
@@ -240,7 +240,7 @@ H_4
 \frac{-A_0 - A_1 + A_2}{2A_0}
 \end{pmatrix}
 \hspace{5mm}
-with
+\text{with}
 \hspace{5mm}
 \begin{pmatrix}
 A_0 = A \\
@@ -254,7 +254,7 @@ Combining both rotational and translational mapping matrices together expresses 
 \begin{equation} 
 \widetilde{\mathbf{u}} = \mathbf{H} \mathbf{u}_H
 \hspace{5mm}
-where
+\text{where}
 \hspace{5mm}
 \mathbf{H} =
 \begin{pmatrix}
@@ -262,7 +262,7 @@ where
 \mathbf{H}_{ut}
 \end{pmatrix}
 \hspace{5mm}
-and
+\text{and}
 \hspace{5mm}
 \widetilde{\mathbf{u}}^T = 
 \begin{pmatrix}
@@ -271,7 +271,7 @@ and
 \label{equation11}\ .
 \end{equation}
 
-As discussed prior to equation \ref{equation07_2} the higher order membrane stiffness thus far is relative to Haugen's DOF ordering $\mathbf{u}_H$ which does not coincide with Kratos ordering $\mathbf{u}_K = \mathbf{u}$. Since the combined mapping matrix $\mathbf{H}$ is the only link between the visible and higher order DOFs, it is possible to "re-route" it via an additional filter operation to the Kratos DOF arrangement. The Kratos and Haugen DOF ordering can be related with a filter matrix $\mathbf{Z}$:
+As discussed prior to equation (\ref{equation07_2}) the higher order membrane stiffness thus far is relative to Haugen's DOF ordering $\mathbf{u}_H$, which does not coincide with Kratos ordering $\mathbf{u}_K = \mathbf{u}$. Since the combined mapping matrix $\mathbf{H}$ is the only link between the visible and higher order DOFs, it is possible to "re-route" it via an additional filter operation to the Kratos DOF arrangement. The Kratos and Haugen DOF ordering can be related with a filter matrix $\mathbf{Z}$:
 
 \begin{equation} 
 \mathbf{u}_{K} = \mathbf{Z} \mathbf{u}_{H} 
@@ -403,7 +403,7 @@ where the quantities in figure \ref{fig:andes_dims} are calculated as follows:
 	\mathbf{r_\eta} = \frac{1}{2} ( \mathbf{r}_2 + \mathbf{r}_3 - \mathbf{r}_1 - \mathbf{r}_4 )\ .
 \end{align*}
 
-$\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the normalized parametric base vectors in Cartesian coordinates, while $\mathbf{r}_i$ are the nodal position vectors in Cartesian coordinates.
+$\mathbf{s}_\xi$ and $\mathbf{s}_\eta$ are the normalised parametric base vectors in Cartesian coordinates, while $\mathbf{r}_i$ are the nodal position vectors in Cartesian coordinates.
 
 The diagonal strain components of the higher order bending field are also assumed as to be proportional to the distance and curvature along the diagonal, thus yielding:  
 
@@ -416,7 +416,8 @@ The diagonal strain components of the higher order bending field are also assume
 where
 \begin{align*} 
 \begin{split}
-	d_{24} = d_{13} = & \sqrt{(\mathbf{r}_{31} \times \mathbf{e}_{24}) \cdot (\mathbf{r}_{31} \times \mathbf{e}_{24})} \hspace{10mm}
+	d_{24} = d_{13} = & \sqrt{(\mathbf{r}_{31} \times \mathbf{e}_{24}) \cdot (\mathbf{r}_{31} \times \mathbf{e}_{24})}\ ,
+	\hspace{10mm}
 	l_{24} = \sqrt{\mathbf{r}_{24} \cdot \mathbf{r}_{24}}\ ,
 	\hspace{10mm}
 	\mathbf{r}_{24} = \mathbf{r}_2 - \mathbf{r}_4\ ,
@@ -442,7 +443,7 @@ The higher order torsional field is associated with the $\bar{\theta}$ higher or
 	\label{fig:AndesTorsional}
 \end{figure}
 
-Under this torsional regime, $\epsilon_\xi$ is positive in the 1st and 3rd quadrants and negative in the 2nd and 4th quadrants, while $\epsilon_\eta$ has the opposite signs. Furthermore, with a unit rotation at each node the maximum displacement $v_\xi$ will be proportional to $l_\eta$. Recalling that $\epsilon_{\xi}$ is the gradient of $v_\xi$ in the $\xi$ direction, one can suppose that $\epsilon_{\xi}$ is proportional to $\frac{1}{l_\xi}$. Considering this approach for $\epsilon_{\xi}$ and $\epsilon_{\eta}$, the following torsional strain field terms are determined:
+Under this torsional regime, $\epsilon_\xi$ is positive in the 1\textsuperscript{st} and 3\textsuperscript{rd} quadrants and negative in the 2\textsuperscript{nd} and 4\textsuperscript{th} quadrants, while $\epsilon_\eta$ has the opposite signs. Furthermore, with a unit rotation at each node the maximum displacement $v_\xi$ will be proportional to $l_\eta$. Recalling that $\epsilon_{\xi}$ is the gradient of $v_\xi$ in the $\xi$ direction, one can suppose that $\epsilon_{\xi}$ is proportional to $\frac{1}{l_\xi}$. Considering this approach for $\epsilon_{\xi}$ and $\epsilon_{\eta}$, the following torsional strain field terms are determined:
 
 \begin{equation} 
 \chi_{\xi t} = \frac{l_\eta}{l_\xi}\ ,
@@ -450,6 +451,8 @@ Under this torsional regime, $\epsilon_\xi$ is positive in the 1st and 3rd quadr
 \chi_{\eta t} = \frac{l_\xi}{l_\eta}\ .
 \label{equation13}
 \end{equation}
+
+\pagebreak
 
 \textit{Higher order nodal strain templates}
 
@@ -540,7 +543,7 @@ The Cartesian strain displacement matrices at the nodes $\mathbf{B}_{hi}$ are re
 		\mathbf{B}_{h3} = \mathbf{T}_{13}  \mathbf{Q}_{3}\ ,
 		\\
 		\\
-		&where 
+		&\text{where}
 		\hspace{10mm} 
 		\mathbf{T}_{13}^{-1} =
 		\begin{pmatrix}
@@ -559,7 +562,7 @@ and:
 		\mathbf{B}_{h4} = \mathbf{T}_{24}  \mathbf{Q}_{4}\ ,
 		\\
 		\\
-		&where 
+		&\text{where} 
 		\hspace{10mm} 
 		\mathbf{T}_{24}^{-1} =
 		\begin{pmatrix}
@@ -582,7 +585,7 @@ A requirement of the underlying FF is energy orthogonality between the basic and
 \begin{equation} 
 \mathbf{B}_d(\xi,\eta) = \mathbf{B}_h(\xi,\eta) - \bar{\mathbf{B}}_h
 \hspace{10mm}
-with
+\text{with}
 \hspace{10mm}
 \bar{\mathbf{B}}_h = \int_A \mathbf{B}_h(\xi,\eta) \ dA
 \label{eqnAndesDevB}\ .
@@ -592,7 +595,7 @@ with
 
 The following summary looks back over the ANDES membrane stiffness formulation and provides a high-level overview.
 
-Equation \ref{equationMEM} is repeated, describing the assembly of the ANDES membrane stiffness:
+Equation (\ref{equationMEM}) is repeated, describing the assembly of the ANDES membrane stiffness:
 
 \begin{equation} 
 \mathbf{K}_{mem} = \mathbf{K}_{b} + \mathbf{K}_{h} = \int_A (\mathbf{L} + \mathbf{B}_d  \mathbf{H}_K)^T \mathbf{C}_{mem} (\mathbf{L} + \mathbf{B}_d \mathbf{H}_K)\ dA
@@ -601,12 +604,12 @@ Equation \ref{equationMEM} is repeated, describing the assembly of the ANDES mem
 
 The basic strain displacement matrix $\mathbf{L}$ that ensures a constant stress field is presented in equation \ref{equation07}.
 
-The higher order strain displacement matrix $\mathbf{B}_d$ enforces the element enhancements, which are the expression of higher order bending and torsional fields via higher order DOFs. These higher order DOFs are related back to the visible DOFs via the transformed filter matrix $\mathbf{H}_K$ described in equation \ref{equation11_3}.
+The higher order strain displacement matrix $\mathbf{B}_d$ enforces the element enhancements, which are the expression of higher order bending and torsional fields via higher order DOFs. These higher order DOFs are related back to the visible DOFs via the transformed filter matrix $\mathbf{H}_K$ described in equation (\ref{equation11_3}).
 
 \subsection{DKQ bending formulation}
 \label{section:DKQ bending formulation}
 
-The bending formulation is responsible for providing the bending stiffness of the element, with an enhanced formulation selected to pre-empt transverse shear locking. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD dissertation of Barrales \cite{Bar12}. A full theoretical derivation of the DKQ approach falls outside the scope of this document, refer \cite{Bat82}. As described in section \ref{dkqtheory}, the DKQ formulation's transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
+The bending formulation is responsible for providing the bending stiffness of the element, with an enhanced formulation selected to pre-empt transverse shear locking. The bending formulation chosen was the Discrete Kirchhoff Quadrilateral (DKQ) formulation  originally presented by Batoz \cite{Bat82}, presented in a most readable fashion in the PhD thesis of Barrales \cite{Bar12}. A full theoretical derivation of the DKQ approach falls outside the scope of this document, with the reader referred to reference \cite{Bat82} for complete details. As described in section \ref{dkqtheory}, the DKQ formulation's transverse shear strain energy is neglected which prohibits element performance deterioration as the ratio $\frac{l}{t}$ encroaches into thin and very thin plate territories.
 
 Only the bending portion of the total shell element is considered in this section, in which there are three nodal DOFs per node $(w_i$ corresponds to $u_{zi}$ in the figure below).
 
@@ -624,7 +627,7 @@ Only the bending portion of the total shell element is considered in this sectio
 \mathbf{u}_1 & \mathbf{u}_2 & \mathbf{u}_3 & \mathbf{u}_4
 \end{pmatrix} 
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \mathbf{u}{_i}^T = 
 \begin{pmatrix}
@@ -716,7 +719,7 @@ The elements of the mapping matrix are arranged as such:
 \Psi_{12}^x
 \end{pmatrix}\ ,
 \hspace{5mm}
-and
+\text{and}
 \hspace{5mm}
 \mathbf{\Psi}^y = 
 \begin{pmatrix}
@@ -859,7 +862,7 @@ and
 %\end{multline}
 \section{Stiffness matrix implementation}
 
-With the formulation of the ANDES-DKQ shell element established, a high level overview of it's implementation in KRATOS is discussed in this section.
+With the formulation of the ANDES-DKQ shell element established, a high level overview of its implementation in KRATOS is discussed in this section.
 
 The new linear quad element is implemented in the files $\texttt{shell\_thin\_element\_3D4N.hpp}$ and\break$\texttt{shell\_thin\_element\_3D4N.cpp}$, which are compiled into the 'StructuralMechanicsApplication' module of Kratos. Similar to the DSG triangle element, the new ANDES-DKQ element class $\texttt{ShellThinElement3D4N}$ is inherited from the Kratos base class $\texttt{Element}$ and also leverages the existing capabilities other Kratos classes offer. The general workflow of calculating the ANDES-DKQ stiffness matrix is as follows:
 
@@ -888,7 +891,7 @@ The new linear quad element is implemented in the files $\texttt{shell\_thin\_el
 	\label{andesworkflow}
 \end{figure}
 
-As per the DSG triangle element, the re-implemented virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition. This method simply calls $\texttt{CalculateAll()}$, which initializes calculating the stiffness matrix by calling $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$.
+As per the DSG triangle element, the re-implemented virtual method $\texttt{CalculateLocalSystem()}$ is called by the KRATOS framework automatically for every $\texttt{ShellThinElement3D4N}$ in the job definition. This method simply calls $\texttt{CalculateAll()}$, which initialises calculating the stiffness matrix by calling $\texttt{InitializeCalculationData(),\ CalculateGaussPointContribution()}$ and $\texttt{FinalizeCalculations()}$.
 
 $\texttt{InitializeCalculationData()}$ is called first, and pre-calculates quantities so they can be removed from the Gauss loop. These quantities include the ANDES basic lumping matrix $\textbf{L}$, the ANDES higher order strain-displacement matrices $\textbf{B}_{hi}$ and all DKQ coefficients in equation  \eqref{equation23}.
 
@@ -932,7 +935,7 @@ The following pseudocode summarises the key calls and operations involved in cal
 The mass matrix is necessary to facilitate dynamic analysis with the ANDES-DKQ linear quadrilateral shell element. Both lumped and consistent options have been implemented.
 
 \subsection{Lumped mass matrix}
-The lumped mass matrix is the default option used due to it's speed of construction without significant loss of accuracy. The general form of the ANDES-DKQ lumped matrix is similar to the DSG lumped matrix.
+The lumped mass matrix is the default option used due to its speed of construction without significant loss of accuracy. The general form of the ANDES-DKQ lumped matrix is similar to the DSG lumped matrix.
 \begin{equation} 
 \mathbf{M} =  
 \begin{pmatrix}
@@ -942,7 +945,7 @@ The lumped mass matrix is the default option used due to it's speed of construct
 \mathbf{0} &\mathbf{0} & \mathbf{0} & \mathbf{M}_4
 \end{pmatrix}
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \mathbf{M}_i =  
 \begin{pmatrix}
@@ -1033,7 +1036,7 @@ N_i & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 \label{eqqmass5_1}\ .
 \end{equation}
 
-Unlike the DSG element which could be evaluated directly, the consistent mass matrix of the ANDES-DKQ is evaluated with numerical 2x2 Gauss integration. Thus, equation \ref{eqqmass4} can be equivalently written in parametric space:
+Unlike the DSG element which could be evaluated directly, the consistent mass matrix of the ANDES-DKQ is evaluated with numerical 2x2 Gauss integration. Thus, equation (\ref{eqqmass4}) can be equivalently written in parametric space:
 
 \begin{equation} 
 \mathbf{M}_C
@@ -1086,7 +1089,7 @@ The non-zero local strains ($\epsilon_{zz},\ \epsilon_{xz},\ \epsilon_{yz} = 0$)
 \boldsymbol{\epsilon}_1 & \boldsymbol{\epsilon}_2 & \boldsymbol{\epsilon}_3 & \boldsymbol{\epsilon}_4
 \end{pmatrix}
 \hspace{5mm}
-with
+\text{with}
 \hspace{5mm}
 \boldsymbol{\epsilon}^T_i = \begin{pmatrix}
 \epsilon_{xx} & \epsilon_{xx} & 2\epsilon_{xy} & \epsilon_{xx} & \kappa_{xx} & \kappa_{yy} & 2\kappa_{xy} 
@@ -1115,11 +1118,13 @@ With the strains determined, the stresses at each Gauss point are recovered with
 \label{eqqrec4}\ .
 \end{equation}
 
-The general implementation of the stress and strain recovery described above is illustrated in pseudocode algorithm \ref{ANDES-DKT quadrilateral element stress and strain recovery}.
+As per the DSG recovery, the stresses and strains calculated above are referred to the natural material orientation, which, generally, may not align with either the defined section orientation or the global orientation. Thus, depending on whether local or global variants of stress and strain results are required, these natural quantities need to be rotated to align with the local or global orientation.
 
+The general implementation of the stress and strain recovery described above is illustrated in pseudocode algorithm \ref{ANDES-DKT quadrilateral element stress and strain recovery}.
+\newpage
 \begin{algorithm}[tbh]
 	\onehalfspacing
-	\caption{ANDES-DKT quadrilateral element stress and strain recovery}
+	\caption{ANDES-DKQ quadrilateral element stress and strain recovery}
 	\label{ANDES-DKT quadrilateral element stress and strain recovery}
 	\begin{algorithmic}[1]
 		\Require $requestedQuantity$, calculation of nodal displacements
@@ -1131,13 +1136,13 @@ The general implementation of the stress and strain recovery described above is 
 		\State \textbf{call} $\texttt{CalculateGaussPointContribution}(data)$
 		\State \hspace{\algorithmicindent}\textbf{call} $\texttt{CalculateBMatrix}(data)$
 		\State \hspace{\algorithmicindent}\hspace{\algorithmicindent} Calculate combined $B$ at current $gaussPoint$
-		\State $generalizedStrains$ = product$(B,\ localDisplacements)$
+		\State $generalisedStrains$ = product$(B,\ localDisplacements)$
 		\If{$requestedQuantity$ requires stress} 
 		\State \textbf{call} $\texttt{CalculateSectionResponse}(data)$
-		\State $generalizedStresses$ = product $(C,\ generalizedStrains)$
-		\State Decimal correction of $generalizedStresses$
+		\State $generalisedStresses$ = product $(C,\ generalisedStrains)$
+		\State Decimal correction of $generalisedStresses$
 		\EndIf
-		\State Decimal correction of $generalizedStrains$ 
+		\State Decimal correction of $generalisedStrains$ 
 		\If{$requestedQuantity$ requires local orientation} 
 		\State Rotate $requestedQuantity$ to local orientation
 		\EndIf
@@ -1179,4 +1184,4 @@ Corresponding to the underlying 3 parameter model of the ANDES-DKQ in which $\si
 \end{equation}
 
 \section{Chapter summary}
-The various aspects of the ANDES-DKQ linear quadrilateral element required for implementation in Kratos were covered in this chapter. Initially, the ANDES membrane and DKQ bending formulations, which, together, form the stiffness matrix formulation, were presented followed by their implementation. Catering for dynamics, the element lumped and consistent mass matrices were detailed. Lastly, the stress and strain recovery aspects of the element were considered which are of critical importance to it's practical analysis use.
+The various aspects of the ANDES-DKQ linear quadrilateral element required for implementation in Kratos were covered in this chapter. Initially, the ANDES membrane and DKQ bending formulations, which, together, form the stiffness matrix formulation, were presented followed by their implementation. Catering for dynamics, the element lumped and consistent mass matrices were detailed. Lastly, the stress and strain recovery aspects of the element were considered which are of critical importance to its practical analysis use.

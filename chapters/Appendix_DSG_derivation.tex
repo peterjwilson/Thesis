@@ -34,7 +34,7 @@ The Bernoulli beam, being the 2D analogue of the Kirchhoff plate, fulfills the c
 \label{DSG_derivation_1}\ .
 \end{equation}
 
-The shear deformation field (equation \ref{DSG_derivation_0}) can be discretized into nodal values interpolated with shape functions, typical of the general FEM approach, however, if the same shape functions are used for rotations and transverse displacements, as discussed in section \ref{locking in shell finite elements}, this generally introduces deleterious locking effects. Thus, the novelty of the DSG method, the shear gap, is introduced, which aims to formulate the shear deformation via an integral approach. Considering the 5-parameter formulation analogous Timoshenko beam, the shear gap field $\Delta v_\gamma$ can be recovered by integrating the shear distribution over the element:
+The shear deformation field (equation (\ref{DSG_derivation_0})) can be discretised into nodal values interpolated with shape functions, typical of the general FEM approach, however, if the same shape functions are used for rotations and transverse displacements, as discussed in section \ref{locking in shell finite elements}, this generally introduces deleterious locking effects. Thus, the novelty of the DSG method, the shear gap, is introduced, which aims to formulate the shear deformation via an integral approach. Considering the 5-parameter formulation analogous Timoshenko beam, the shear gap field $\Delta v_\gamma$ can be recovered by integrating the shear distribution over the element:
 
 \begin{equation} 
 \Delta v_\gamma(x) 
@@ -75,7 +75,7 @@ With the basic DSG concept established for a simple beam example, the focus can 
 	\caption{\label{DSG_derivation_pic2}DSG triangle local coordinates and DOFs \cite{Ngu13}}
 \end{figure}
 
-At this point it is important to note the current rotation DOF definitions are consistent with plate theory and therefore don't match global Cartesian rotations that follow the right hand rule. The plate theory DOF definitions express shear deformation similar to equation \ref{DSG_derivation_0}:
+At this point it is important to note the current rotation DOF definitions are consistent with plate theory and therefore do not match global Cartesian rotations that follow the right hand rule. The plate theory DOF definitions express shear deformation similar to equation (\ref{DSG_derivation_0}):
 
 \begin{equation} 
 \begin{pmatrix}
@@ -90,7 +90,7 @@ At this point it is important to note the current rotation DOF definitions are c
 \label{DSG_derivation_5}\ .
 \end{equation}
 
-According to the general form of equation \ref{DSG_derivation_3}, the shear gaps of the triangular element can be determined in parametric space to be:
+According to the general form of equation (\ref{DSG_derivation_3}), the shear gaps of the triangular element can be determined in parametric space to be:
 
 \begin{equation} 
 \Delta v_{\gamma1}^i 
@@ -140,7 +140,7 @@ w_3 - w_1 + \frac{d(\beta_x^1 + \beta_x^3)}{2} + \frac{c(\beta_y^1 + \beta_y^3)}
 \label{DSG_derivation_11}\ .
 \end{equation}
 
-The shear gap field can be constructed with the discrete nodal shear gaps interpolating shape functions (as per equation \ref{DSG_derivation_8}):
+The shear gap field can be constructed with the discrete nodal shear gaps interpolating shape functions (as per equation (\ref{DSG_derivation_8})):
 
 \begin{equation} 
 \Delta v_{\gamma \alpha} (\xi,\eta) 
@@ -188,7 +188,7 @@ c & -b \\
 \label{DSG_derivation_14}\ .
 \end{equation}
 
-The combination of the above equations leads to Bletzinger's \cite{Ble00} linear triangle DSG B matrix:
+The combination of the above equations leads to Bletzinger's \cite{Ble00} linear triangle DSG B-matrix:
 
 \begin{equation} 
 \begin{pmatrix}
@@ -223,7 +223,7 @@ As noted in figure \ref{DSG_derivation_pic2}, the current B matrix is formulated
 \label{DSG_derivation_16}\ .
 \end{equation}
 
-If the preceding equivalents are substituted into equations \ref{DSG_derivation_5} through \ref{DSG_derivation_13} the following B matrix, expressed in terms of Cartesian rotations, is obtained, which matches that of Rama et al. \cite{Ram16}:
+If the preceding equivalents are substituted into equations (\ref{DSG_derivation_5}) through (\ref{DSG_derivation_13}) the following B-matrix, expressed in terms of Cartesian rotations, is obtained, which matches that of Rama et al. \cite{Ram16}:
 
 \begin{equation} 
 \begin{pmatrix}

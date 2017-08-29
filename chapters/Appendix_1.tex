@@ -10,7 +10,7 @@
 \label{sec:Basic-DKQ quadrilateral formulation}
 \renewcommand{\Thema}{Basic-DKQ quadrilateral formulation}
 
-Introduced in section \ref{section:shell obstacle course}, the Basic-DKQ quadrilateral element represents the ANDES-DKQ formulation with it's membrane ANDES element technology replaced with an un-enhanced displacement based membrane formulation. The DKQ bending formulation is used as per section \ref{section:DKQ bending formulation}.
+Introduced in section \ref{section:shell obstacle course}, the Basic-DKQ quadrilateral element represents the ANDES-DKQ formulation with its membrane ANDES element technology replaced with an un-enhanced displacement based membrane formulation. The DKQ bending formulation is used as per section \ref{section:DKQ bending formulation}.
 
 The membrane stiffness of the Basic-DKQ formulation is purely displacement based and employs the standard bi-linear quadrilateral shape functions:
 \begin{gather} 
@@ -108,7 +108,7 @@ applied to the shape function parametric derivatives yields
 \label{eqApp1_7}\ .
 \end{equation}
 
-The above strain displacement matrix doesn't cover drilling stiffnesses, so an artificial drilling stiffness as per the DSG element formulation equation \ref{eqtdrilling} was added for each node after the construction of the element stiffness matrix:
+The above strain displacement matrix does not cover drilling stiffnesses, so an artificial drilling stiffness as per the DSG element formulation equation (\ref{eqtdrilling}) was added for each node after the construction of the element stiffness matrix:
 
 \begin{equation} 
 K_{\beta_z} =  \frac{max(K_{ij}\delta_{ij})}{1000}

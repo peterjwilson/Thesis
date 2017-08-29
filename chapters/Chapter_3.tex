@@ -40,7 +40,7 @@ Based on the 5 parameter Reissner-Mindlin shell theory, the thick shell consider
 \mathbf{u_1} & \mathbf{u_2} & \mathbf{u_3}
 \end{pmatrix} 
 \hspace{10mm}
-where
+\text{where}
 \hspace{10mm}
 \mathbf{u}_i^T = 
 \begin{pmatrix}
@@ -138,23 +138,25 @@ with individual entries detailed as:
 \end{equation}
 
 Finally, the shear strain displacement matrix, which implements the DSG element enhancement technology fully derived in Appendix \ref{app:DSG technology derivation} and mitigates shear locking, is summarily expressed as follows:
-
-\begin{gather} 
-	\begin{aligned}
-		& \mathbf{B}_{shear} =  \frac{1}{2 A}
+\begin{equation} 
+		\mathbf{B}_{shear} =  \frac{1}{2 A}
 		\begin{pmatrix}
 			0 & 0 & b-c & 0 & A & 0 & 0 & 0 & c & \frac{-bc}{2} & \frac{ac}{2} & 0 & 0 & 0 & -b & \frac{bc}{2} & \frac{bd}{2} & 0 \\
 			0 & 0 & d-a & -A & 0 & 0 & 0 & 0 & -d & \frac{bd}{2} & \frac{-ad}{2} & 0 & 0 & 0 & a & \frac{-ac}{2} & \frac{ad}{2} & 0
 		\end{pmatrix}
-		\\
-		& with:\ 
-		a = x_2-x_1,\ 
-		b = y_2-y_1,\ 
-		c = y_3-y_1,\ 
-		d = x_3 - x_1
 		\label{eqt10}\ .
-	\end{aligned}
-\end{gather}
+\end{equation}
+
+Parameters $a,\ b,\ c$ and $d$ are defined in figure \ref{dsg_pic_1}:
+
+\begin{figure}[H]
+	\centering
+	\def\svgwidth{\columnwidth}
+	\includegraphics[width=8cm]{images/bletzy_dsg_tri.png}
+	\caption{DSG triangle geometry \cite{Ble00}}
+	\label{dsg_pic_1}
+\end{figure}
+
 The standard isotropic material matrices for the membrane and bending components are presented below:
 
 \begin{equation} 
@@ -206,7 +208,7 @@ K_{\theta_{zi}} =  \frac{max(K_{ij}\delta_{ij})}{1000}
 \end{equation}
 
 \section{Stiffness matrix implementation}
-Despite the relatively simple decoupled stiffness formulation presented, the practical programming of it invariably introduces it's own complexities. Furthermore, leveraging the existing functionality that the Kratos code possesses not only prevents re-inventing the wheel, but also makes the code more readable and functionally cohesive. A full manifest of the element's methods and variables as implemented in Kratos are presented in \ref{app:DSG element as programmed in Kratos}.
+Despite the relatively simple decoupled stiffness formulation presented, the practical programming of it invariably introduces its own complexities. Furthermore, leveraging the existing functionality that the Kratos code possesses not only prevents re-inventing the wheel, but also makes the code more readable and functionally cohesive. A full manifest of the element's methods and variables as implemented in Kratos are presented in \ref{app:DSG element as programmed in Kratos}.
 
 The new DSG triangle element is implemented in the files $\texttt{shell\_thick\_element\_3D3N.hpp}$ and $\texttt{shell\_thick\_element\_3D3N.cpp}$, which are compiled into the  'StructuralMechanicsApplication' module of Kratos. Without extending into extraneous details, the DSG triangle element is derived from the Kratos $\texttt{element}$ class and makes extensive use of other existing Kratos utility classes including those offering: coordinate transformations, material properties and pre-defined stiffness matrix and residual vector data types. Correspondingly, it is also subject to the constraints associated with each of these. From a high level view, however, the element stiffness matrix follows the subsequent workflow:
 
@@ -234,7 +236,7 @@ The new DSG triangle element is implemented in the files $\texttt{shell\_thick\_
 
 Initially, the re-implemented virtual method $\texttt{CalculateLocalSystem()}$ is called by the Kratos framework automatically for every $\texttt{ShellThickElement3D3N}$ in the job definition. This method redirects to $\texttt{CalculateAll()}$, which is the main pipeline of the element stiffness calculation, itself calling three key methods: $\texttt{InitializeCalculationData()},$ \break$\texttt{CalculateSectionResponse()}$ and $\texttt{FinalizeCalculations()}$.
 
-Following the general form of the existing shell elements in Kratos, all the data which remains constant through the Gauss Integration loop is calculated beforehand in the function $\texttt{InitializeCalculationData()}$. The DSG element follows this tradition for consistency, although it isn't strictly necessary because it only requires one Gauss point for the numerical integration. Following $\texttt{InitializeCalculationData()}$, $\texttt{CalculateSectionResponse()}$ is called and the material matrix is populated with existing Kratos material classes. It must be noted here that a single 8$\times$8 material matrix $\mathbf{C}$ is returned which is structured as follows (for the setting of 'thick' shell kinematics):
+Following the general form of the existing shell elements in Kratos, all the data which remains constant through the Gauss Integration loop is calculated beforehand in the function $\texttt{InitializeCalculationData()}$. The DSG element follows this tradition for consistency, although it is not strictly necessary because it only requires one Gauss point for the numerical integration. Following $\texttt{InitializeCalculationData()}$, $\texttt{CalculateSectionResponse()}$ is called and the material matrix is populated with existing Kratos material classes. It must be noted here that a single 8$\times$8 material matrix $\mathbf{C}$ is returned, which is structured as follows (for the setting of 'thick' shell kinematics):
 
 \begin{equation} 
 \mathbf{C}_{Kratos} =  
@@ -246,7 +248,7 @@ Following the general form of the existing shell elements in Kratos, all the dat
 \label{eqtCkratos}
 \end{equation} 
 
-At this stage the shear component of the material matrix is currently unmodified, thus it is subsequently corrected with $\tau$ as per equation \eqref{eqt14}. The DOF arrangement of the material matrix also motivates a slight departure from the strain displacement matrices as presented above. Although the element stiffness matrix can certainly be programmed in it's constitutive parts, as per equation \eqref{eqt5}, it is more concise to calculate it as follows:
+At this stage the shear component of the material matrix is currently unmodified, thus it is subsequently corrected with $\tau$ as per equation \eqref{eqt14}. The DOF arrangement of the material matrix also motivates a slight departure from the strain displacement matrices as presented above. Although the element stiffness matrix can certainly be programmed in its constitutive parts, as per equation \eqref{eqt5}, it is more concise to calculate it as follows:
 
 \begin{equation} 
 \mathbf{K} = \int_A  (\mathbf{B}_{comb}^T \mathbf{C}_{Kratos} \mathbf{B}_{comb} )\ dA
@@ -359,9 +361,9 @@ The volume integral can be split into area and thickness integrals and referred 
 		&(\dot{w_0} + z\dot{\theta_3})  (\delta \dot{w_0} + z\delta\dot{\theta_3})
 		\Big]
 		\ dz
-		\ d\Omega
+		\ d\Omega\ .
 		\label{eqt17_3}
-	\end{aligned}\ .
+	\end{aligned}
 \end{gather}
 
 The through-thickness integration can be simplified with the help of defining the following translational and rotational inertias under the assumption of constant density throughout the shell thickness:
@@ -383,7 +385,7 @@ The through-thickness integration can be simplified with the help of defining th
 	\end{aligned}
 \end{gather}
 
-Substituting the inertias into equation \ref{eqt17_3} yields:
+Substituting the inertias into equation (\ref{eqt17_3}) yields:
 
 \begin{equation} 
 	\delta K = \int_{\Omega} 
@@ -402,7 +404,7 @@ Substituting the inertias into equation \ref{eqt17_3} yields:
 	\label{eqt17_5}\ .
 \end{equation}
 
-Analogous to the method of discretized displacement field, the Cartesian velocity and acceleration field can be expressed in terms of shape functions and discrete nodal quantities for both translational and rotational DOFs, ordered as per equation \ref{eqt1}:
+Analogous to the method of discretised displacement field, the Cartesian velocity and acceleration field can be expressed in terms of shape functions and discrete nodal quantities for both translational and rotational DOFs, ordered as per equation (\ref{eqt1}):
 
 \begin{equation} 
 \dot{\mathbf{u}} (x,y)
@@ -417,7 +419,7 @@ Analogous to the method of discretized displacement field, the Cartesian velocit
 \label{eqt17_6}
 \end{equation}
 
-Approached from this discretized perspective, equation \ref{eqt17_5} can be developed into:
+Approached from this spatially-discretised perspective, equation (\ref{eqt17_5}) can be developed into:
 
 \begin{equation} 
 \delta K = \mathbf{M}_C \hat{\ddot{\mathbf{{u}}}} \delta \hat{\mathbf{u}}
@@ -617,7 +619,9 @@ With the strains determined, the stresses at the centre Gauss point can be recov
 \label{eqt21}\ .
 \end{equation}
 
-The general implementation of the stress and strain recovery described above is illustrated in the following pseudocode.
+The stresses and strains calculated above are referred to the natural material orientation, which, generally, may not align with either the defined section orientation or the global orientation. Thus, depending on whether local or global variants of stress and strain results are required, these natural quantities need to be rotated to align with the local or global orientation.
+
+The general implementation of the stress and strain recovery described above is illustrated in pseudocode algorithm \ref{DSG triangle element stress and strain recovery}.
 
 \begin{algorithm}
 	\caption{DSG triangle element stress and strain recovery}
@@ -627,13 +631,13 @@ The general implementation of the stress and strain recovery described above is 
 		\State \textbf{call} $\texttt{InitializeCalculationData}(data)$
 		\State \hspace{\algorithmicindent}Calculate strain-displacement matrix $B$
 		\State \hspace{\algorithmicindent}Retrieve element $localDisplacements$
-		\State $generalizedStrains$ = product$(B,\ localDisplacements)$
+		\State $generalisedStrains$ = product$(B,\ localDisplacements)$
 		\If{$requestedQuantity$ requires stress} 
 				\State \textbf{call} $\texttt{CalculateSectionResponse}(data)$
-				\State $generalizedStresses$ = product $(C,\ generalizedStrains)$
-				\State Decimal correction of $generalizedStresses$
+				\State $generalisedStresses$ = product $(C,\ generalisedStrains)$
+				\State Decimal correction of $generalisedStresses$
 		\EndIf
-		\State Decimal correction of $generalizedStrains$ 
+		\State Decimal correction of $generalisedStrains$ 
 		\If{$requestedQuantity$ requires local orientation} 
 				\State Rotate $requestedQuantity$ to local orientation
 		\EndIf
@@ -644,10 +648,11 @@ The general implementation of the stress and strain recovery described above is 
 		\State Interpolate $outputMatrix$ to standard Gauss points for visualisation
 	\end{algorithmic}
 \end{algorithm}
+\newpage
 
 \subsection{Von Mises equivalent stress}
 
-The Von Mises equivalent stress is a convenient method to translate a complex 3 dimensional stress state into an equivalent scalar value. As such, it's computation requires element stresses to be recovered, the tensor of which is:
+The Von Mises equivalent stress is a convenient method to translate a complex 3 dimensional stress state into an equivalent scalar value. As such, its computation requires element stresses to be recovered, the tensor of which is:
 
 \begin{equation} 
 \boldsymbol{\sigma} = 
@@ -674,13 +679,12 @@ Limiting the tensor to plane stress states, the deviatoric stress tensor $\bolds
 \end{equation}
 
 The Von Mises equivalent stress is a scaling of the second deviatoric stress invariant $J_2$ related by:
-
 \begin{equation} 
 \sigma_{VM} = \sqrt{3J_2} = \sqrt{\frac{3}{2}\boldsymbol{\sigma}' : \boldsymbol{\sigma}'}
 \label{eqt24}\ .
 \end{equation}
 
-Expanding the above expression in conjunction with equation \ref{eqt23}, the Von Mises equivalent stress for the 5 parameter shell model is simplified to:
+Expanding the above expression in conjunction with equation (\ref{eqt23}), the Von Mises equivalent stress for the 5 parameter shell model is simplified to:
 
 \begin{equation} 
 \sigma_{VM} = 
@@ -694,4 +698,4 @@ Expanding the above expression in conjunction with equation \ref{eqt23}, the Von
 \end{equation}
 
 \section{Chapter summary}
-The different points of the DSG linear triangle element implementated in Kratos were covered in this chapter. Firstly, the stiffness matrix formulation which features the DSG element technology was presented followed by it's implementation. The element lumped and consistent mass matrices were detailed rendering it suitable for dynamic analysis. Finally, the stress and strain recovery details of the element were considered.
+The different points of the DSG linear triangle element implementated in Kratos were covered in this chapter. Firstly, the stiffness matrix formulation which features the DSG element technology was presented followed by its implementation. The element lumped and consistent mass matrices were detailed rendering it suitable for dynamic analysis. Finally, the stress and strain recovery details of the element were considered.

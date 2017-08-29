@@ -14,9 +14,9 @@
 
 
 
-\chapter{Validation of elements}
+\chapter{Validation of the elements}
 
-\renewcommand{\Thema}{Validation of elements}
+\renewcommand{\Thema}{Validation of the elements}
 
 \lettrine[lines=2]{V}{alidation} is as important to proper engineering analysis as the calculations performed. The following tests across linear statics, geometrically non-linear statics, linear and non-linear dynamics, quantity recovery and composites interrogate the correct implementation of the element formulations and also gives an initial indication of their performance. 
 
@@ -41,7 +41,7 @@ Furthermore, context of element performance is provided by including results fro
 %	\caption{Definition of the Scordelis-Lo roof benchmark\cite{Bou13}}
 %\end{wrapfigure}
 
-The first problem of the shell obstacle course is the Scordelis-Lo roof, which is part of a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading is a pseudo-gravity distributed load that has a magnitude of 90. Due to symmetry, only a quarter of the shell is modelled. The key result is the vertical displacement of the lateral side at the midpoint, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} = 0.3024$.
+The first problem of the shell obstacle course is the Scordelis-Lo roof, which is part of a cylindrical shell fixed by rigid diaphragms at its axial ends. The loading is a pseudo-gravity distributed load that has a magnitude of 90. Due to symmetry, only a quarter of the shell is modelled with a structured mesh. The key result is the vertical displacement of the lateral side at the midpoint, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} = 0.3024$.
  
   \begin{figure}[H]
  	\centering
@@ -62,7 +62,7 @@ The first problem of the shell obstacle course is the Scordelis-Lo roof, which i
 	\caption{\label{ref_label_overall}Scordelis-Lo roof benchmark results}
 \end{figure}
 
-The convergence graphs above indicate the ANDES-DKQ and DSG elements agree with the reference solution. Conversely, the Basic-T3 element shows very poor performance. Given that the Basic-DKQ performs well (which is immune to transverse shear locking), it's suspected that transverse shear locking is crippling the Basic-T3 element, while the DSG element technology effectively mitigates this for the DSG element. 
+The convergence graphs above indicate the ANDES-DKQ and DSG elements agree with the reference solution. Conversely, the Basic-T3 element shows very poor performance. Given that the Basic-DKQ performs well (which is immune to transverse shear locking), it is suspected that transverse shear locking is crippling the Basic-T3 element, while the DSG element technology effectively mitigates this for the DSG element. 
 \newpage
 \subsection{Pinched cylinder}
 %
@@ -72,7 +72,7 @@ The convergence graphs above indicate the ANDES-DKQ and DSG elements agree with 
 %	\caption{Definition of the pinched cylinder benchmark\cite{Bou13}}
 %\end{wrapfigure}
 
-The second problem of the shell obstacle course is the pinched cylinder, which considers a cylindrical shell fixed by rigid diaphragms at it's axial ends. The loading consists of two opposing compressive point loads at the centre of the shell. Due to symmetry only an eighth of the shell is modelled. The key result is the vertical displacement under the point load, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  1.8248\ \times\ 10^{-5}$. 
+The second problem of the shell obstacle course is the pinched cylinder, which considers a cylindrical shell fixed by rigid diaphragms at its axial ends. The loading consists of two opposing compressive point loads at the centre of the shell. Due to symmetry only an eighth of the shell is modelled with a structured mesh. The key result is the vertical displacement under the point load, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  1.8248\ \times\ 10^{-5}$. 
  
  \begin{figure}[H]
  	\centering
@@ -103,7 +103,7 @@ The second problem of the shell obstacle course is the pinched cylinder, which c
 %	\caption{Definition of the pinched hemisphere benchmark \cite{Bou13}}
 %\end{wrapfigure}
 
-The last test in the shell obstacle course is the pinched hemisphere, which considers a hemispherical shell loaded with opposing point loads along it's equator. Due to symmetry only a quarter of the shell is modelled. The key result is the 'x' displacement along one of the point loads, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  0.0924$. 
+The last test in the shell obstacle course is the pinched hemisphere, which considers a hemispherical shell loaded with opposing point loads along its equator. Due to symmetry only a quarter of the shell is modelled with an unstructured mesh. The key result is the 'x' displacement along one of the point loads, denoted by $\textcolor{red}{u}$ in the following diagram. The reference value is $u_{ref} =  0.0924$. 
 
 \begin{figure}[H]
 	\centering
@@ -145,7 +145,7 @@ The first geometrically non-linear benchmark is the snap-through of a hinged cyl
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{Load_displacement_curve_hinged_cylindrical_roof.pdf}}
-	\caption{\label{ref_label_overall}Hinged cylindrical roof benchmark}
+	\caption{\label{ref_label_overall}Hinged cylindrical roof validation test}
 \end{figure}
 
  
@@ -167,7 +167,7 @@ The second geometrically non-linear benchmark is the pull-out of an open cylinde
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{Load_displacement_curve_open_cylinder_pullout.pdf}}
-	\caption{\label{ref_label_overall}Open cylinder pull-out benchmark}
+	\caption{\label{ref_label_overall}Open cylinder pull-out validation test}
 \end{figure}
 
  The load-displacement curve above plots the equilibrium path for the ANDES-DKQ and DSG elements against the reference solution \cite{Sze2004}. Both elements closely follow the reference path, which demonstrates the structure gradually activating membrane stiffness before suddenly straightening out and becoming entirely membrane dominated.
@@ -184,7 +184,7 @@ The first dynamic benchmark is a simple shell pendulum allowed to freely rotate 
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=7.3cm]{images/swinging_plate_problem.png}
-	\caption{Shell pendulum definition}
+	\caption{Shell pendulum validation test definition}
 \end{figure}
 \begin{figure}[H]
 	%\centering
@@ -196,7 +196,7 @@ The first dynamic benchmark is a simple shell pendulum allowed to freely rotate 
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/shell_pendulum_consistent.pdf}}
-	\caption{\label{ref_label_overall}Vertical displacement over time of the shell pendulum analysis}
+	\caption{\label{ref_label_overall}Vertical displacement over time of the shell pendulum validation test}
 \end{figure}
 
 The plot of displacement over time demonstrates the ability of both elements to handle large displacements and rotations, agreeing with the reference solution of the existing Kratos quadrilateral shell element. As expected, the minimum vertical displacement of $u_z=-1m$ corresponds to the position of bottom dead centre of the plate, while the maximum vertical displacement of $u_z=0m$ corresponds to a fully horizontal plate orientation
@@ -209,7 +209,7 @@ The oscillating clamped plate benchmark subjects a clamped cantilever square pla
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=7.3cm]{images/quad_bend_problem.png}
-	\caption{Oscillating clamped plate definition}
+	\caption{Oscillating clamped plate validation test definition}
 \end{figure}
 \begin{figure}[H]
 	%\centering
@@ -221,7 +221,7 @@ The oscillating clamped plate benchmark subjects a clamped cantilever square pla
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/oscillating_plate_consistent.pdf}}
-	\caption{\label{ref_label_overall}Vertical displacement over time of the oscillating clamped plate analysis}
+	\caption{\label{ref_label_overall}Vertical displacement over time of the oscillating clamped plate validation test}
 \end{figure}
 
  The plot of vertical displacement over time demonstrates both elements agree with the reference solution, which is the existing Kratos quadrilateral element. The overall results correctly correspond to structural dynamics theory by oscillating with the base natural frequency about the static displacement of $u_z=-0.006m$.
@@ -263,7 +263,7 @@ A simply supported dome with an oculus under self weight is considered to evalua
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/simply_support_dome_dsg_vm_plot.png}}
-	\caption{\label{Shell_force_dome_benchmark_shell_force}Results of the simply supported dome analysis}
+	\caption{\label{Shell_force_dome_benchmark_shell_force}Results of the simply supported dome validation test}
 \end{figure}
 
 The results of both elements for circumferential and meridional shell forces demonstrate excellent agreement with the analytical membrane analysis. Minor deviations occur at both ends of the dome due to the strict assumptions of the analytical membrane theory and mesh effects. The mid-surface Von Mises stress results also agree with the ANSYS solution quite closely, with the ANDES-DKQ slightly out-performing the DSG element. The contour plots (with all limits set to $[1.4\times 10^5,\ 7.5\times10^5]$) further exhibit the similarities between the three solution methods.
@@ -276,7 +276,7 @@ A Navier supported square plate subject to a sinusoidal load is considered to ex
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=7.3cm]{images/navier_plate_def.png}
-	\caption{Definition of the Navier supported plate test \cite{reddy2004mechanics}}
+	\caption{Definition of the Navier supported plate validation test \cite{reddy2004mechanics}}
 	\label{validation:pic navier plate}
 \end{figure}
 
@@ -353,11 +353,11 @@ Graphs plotted along an X coordinate follow the same path as the preceding tests
 	\caption{\label{Navier_tri_s_xx_yy}Stresses of the Navier supported plate under uniformly distributed load}
 \end{figure}
 
-The DSG element shows good agreement with the ANSYS results across all stress quantities considered. The transverse shear stress results have additional result cases of the mesh rotated 90 degrees and an unstructured mesh of similar element size to evaluate if the DSG nodal numbering dependency affects the results. One notes that $\sigma_{yz}$ of the DSG result is essentially the same as $\sigma_{xz}$ of the DSG mesh rotated 90 degrees, as is the case of the reverse too. Furthermore, the unstructured results appear to generally follow the ANSYS results regardless. Thus, it's suspected that the DSG nodal ordering may be affecting the transverse shear stress accuracy, although acceptable accuracy is still achieved when one considers that derived quantities are in general less accurate than displacements.
+The DSG element shows good agreement with the ANSYS results across all stress quantities considered. The transverse shear stress results have additional result cases of the mesh rotated 90 degrees and an unstructured mesh of similar element size to evaluate if the DSG nodal numbering dependency affects the results. One notes that $\sigma_{yz}$ of the DSG result is essentially the same as $\sigma_{xz}$ of the DSG mesh rotated 90 degrees, as is the case of the reverse too. Furthermore, the unstructured mesh results appear to generally follow the ANSYS results regardless. Thus, it is suspected that the DSG nodal ordering may be affecting the transverse shear stress accuracy, although acceptable accuracy is still achieved when one considers that derived quantities are generally less accurate than displacements.
 
 \section{Composite tests}
 
-The extension of both shell elements to handle composite laminates requires it's own validation across the range of tests considered for isotropic shells. The following tests consider the performance of both elements in cases which all employ composite materials. As per the preceding isotropic element tests, cases across linear/non-linear statics, linear/non-linear dynamics, and quantity recovery are examined.
+The extension of both shell elements to handle composite laminates requires its own validation across the range of tests considered for isotropic shells. The following tests consider the performance of both elements in cases which all employ composite materials. As per the preceding isotropic element tests, cases across linear/non-linear statics, linear/non-linear dynamics, and quantity recovery are examined.
 
 \subsection{Composite linear statics: composite barrel vault}
 \label{validation:composite barrel vault}
@@ -367,7 +367,7 @@ The composite barrel vault is an extension of the Scordelis-Lo roof obstacle cou
 	\centering
 	\def\svgwidth{\columnwidth}
 	\includegraphics[width=7.3cm]{images/composite_barrel_vault_def.png}
-	\caption{Definition of the composite barrel vault test \cite{reddy2004mechanics}}
+	\caption{Definition of the composite barrel vault validation test \cite{reddy2004mechanics}}
 \end{figure}
 
 The composite material is considered with cross-ply [0/90/0/90...] and angle-ply [-45/45/-45/45/...] lamina stacking arrangements, with each ply having the following material properties: $E_1 = 25 E_2,\ E_2 = 1.2 \times 10^5,\ G_{12} = G_{13} = 0.5 E_2,\ G_{23} = 0.2 E_2$ and $\nu_{12} = 0.25$. Furthermore, the tests are carried out over slenderness ratios of $S = \frac{R}{h} = 20,\ 50,\ 100$ which correspond to total laminate thicknesses of $h = 15,\ 6,\ 3$.
@@ -390,7 +390,7 @@ The composite material is considered with cross-ply [0/90/0/90...] and angle-ply
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/angle10ply.pdf}}
-\caption{\label{Composite barrel vault benchmark: cross layup}Composite barrel vault test results}
+\caption{\label{Composite barrel vault benchmark: cross layup}Composite barrel vault validation test results}
 \end{figure}
 
 %\begin{figure}[H]
@@ -409,7 +409,7 @@ Across the wide range of testing considered both elements exhibit excellent agre
 
 \subsection{Composite linear static: clamped cylinder}
 
-Another test for the composite shell elements in the realm of linear statics is a cylinder clamped at both ends subject to internal pressure. A cylinder of length $a = 20$, radius $R = 20$ and total laminate thickness of $h = 1$ is subject to a uniform internal pressure of $p_0 = \frac{6410}{\pi}$ \cite{reddy2004mechanics}. The key quantity of interest is the maximum radial displacement of the cylinder, with the reference solution taken from Reference \cite{reddy2004mechanics}.
+Another test for the composite shell elements in the realm of linear statics is a cylinder clamped at both ends subject to internal pressure. A cylinder of length $a = 20$, radius $R = 20$ and total laminate thickness of $h = 1$ is subject to a uniform internal pressure of $p_0 = \frac{6410}{\pi}$ \cite{reddy2004mechanics}. The key quantity of interest is the maximum radial displacement of the cylinder, with the reference solution taken from reference \cite{reddy2004mechanics}.
 
 \begin{figure}[H]
 	\centering
@@ -429,7 +429,7 @@ The laminate is considered in both single and double layer arrangements, with th
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/composite_clamped_cyl_090layup.pdf}}
-	\caption{\label{Composite_clamped_cylinder_test}Composite clamped cylinder analysis convergence}
+	\caption{\label{Composite_clamped_cylinder_test}Composite clamped cylinder validation test convergence}
 \end{figure}
 
 Both elements quickly converge to the reference solution and maintain good performance as the mesh is refined further. The reference solution source \cite{reddy2004mechanics} notes that minor differences are expected between 3-parameter and 5-parameter shell models, however, the vagaries between the ANDES-DKQ and DSG elements are negligible compared to their excellent accuracy.
@@ -448,7 +448,7 @@ To consider the non-linear static performance of composite shells, the hinged cy
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/Load_displacement_curve_composite_hinged_cylindrical_roof.pdf}}
-	\caption{\label{ref_label_overall}Composite hinged cylindrical roof test}
+	\caption{\label{ref_label_overall}Composite hinged cylindrical roof validation test}
 \end{figure}
 
 The load displacement curve above clearly shows the ability of both elements to accurately resolve the equilibrium path of the composite roof through the pre and post-critical ranges.
@@ -487,7 +487,7 @@ A second composite dynamic test considers the square Navier supported plate desc
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/composite_vibrating_square.pdf}}
-	\caption{\label{Composite dynamic benchmarks}Composite dynamic tests}
+	\caption{\label{Composite dynamic benchmarks}Composite dynamic validation tests}
 \end{figure}
 
 As per the isotropic dynamic tests, the composite tests agree very well with the reference Strand7 solutions. Figure \ref{Composite dynamic benchmarks}(b) reveals that the DSG element slightly deviates as the simulated time accumulates, however, the error in period is less than 1.3\%.
@@ -502,7 +502,7 @@ The first test to interrogate the stress recovery accuracy of the composite shel
 	\caption{Definition of the composite tensile stress recovery test}
 \end{figure}
 
- The token laminate layup is [0/90/90/0] while the material properties of each lamina are defined as: $E_1 = 200.1\times10^5,\ E_2 = 130.1\times10^4,\ G_{12} = G_{13} = G_{23} = 100.1\times10^4$ and $\nu_{12} = 0.3$. Results of the analysis are taken from the mid-length $(x=5)$ of the test token and are averaged across the width. The reference solution for the stresses is from Reference \cite{nasanettles1994} with a Strand7 analysis of the problem providing the Tsai-Wu reference. 
+ The token laminate layup is [0/90/90/0] while the material properties of each lamina are defined as: $E_1 = 200.1\times10^5,\ E_2 = 130.1\times10^4,\ G_{12} = G_{13} = G_{23} = 100.1\times10^4$ and $\nu_{12} = 0.3$. Results of the analysis are taken from the mid-length $(x=5)$ of the test token and are averaged across the width. The reference solution for the stresses is from reference \cite{nasanettles1994} with a Strand7 analysis of the problem providing the Tsai-Wu reference. 
 %Example from Nasa composite doc, example 3. Tensile test token was 10x2x0.02 total thickness. Layup was [0,45,45,0].
 %Reference tsai-wu results are "Modified tsai-wu" of the same problem on Strand7 FEA software.
 %Material was :
@@ -527,10 +527,10 @@ The first test to interrogate the stress recovery accuracy of the composite shel
 	{\label{ref_label2}
 		\includegraphics[width=7.3cm]
 		{images/nasa3_thru_tsai.pdf}}
-	\caption{\label{Nasa3_stresses}Stresses and Tsai-Wu results of the composite tensile test}
+	\caption{\label{Nasa3_stresses}Stresses and Tsai-Wu results of the composite tensile validation test}
 \end{figure}
 
-The four figures above, illustrating various stresses and Tsai-Wu reserve factor throughout the laminate thickness, confirm the accurate stress recovery of both elements. Although the recovery of Stress\_YY may initially not seem as accurate as the others, it's scale is 3 orders of magnitude less than the primary stress mode Stress\_XX. It's expected with stress values so low that much of this acceptable deviation is due to rounding errors, both in the implemented elements and the reference literature itself. The Tsai-Wu reserve factor results of both elements are in excellent agreement with the reference values.
+The four figures above, illustrating various stresses and Tsai-Wu reserve factor throughout the laminate thickness, confirm the accurate stress recovery of both elements. Although the recovery of Stress\_YY may initially not seem as accurate as the others, its scale is three orders of magnitude less than the primary stress mode Stress\_XX. It is expected with stress values so low that much of this acceptable deviation is due to rounding errors, both in the implemented elements and the reference literature itself. The Tsai-Wu reserve factor results of both elements are in excellent agreement with the reference values.
 
 \subsection{Composite stress recovery: Navier supported laminate under sinusoidal load}
 The second composite stress recovery test considers the bending dominated scenario of a Navier supported square laminate subject to a sinusoidal load \cite{reddy2004mechanics}. As per the isotropic stress recovery testing, separate tests were carried out for the two elements: the ANDES-DKQ composite test is based off of section \ref{validation:navier plate under sinusoidal load} and the DSG from section \ref{validation:DSG navier unifom}. Both analyses have a transverse sinusoidally distributed transverse pressure defined as $q = -100 sin(\frac{x\pi}{200})sin(\frac{y\pi}{200})$ and consider a $h = 10$ thick [0/90/90/0] laminate with individual lamina properties as per those defined in \ref{validation:composite barrel vault}.

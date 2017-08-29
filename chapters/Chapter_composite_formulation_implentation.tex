@@ -27,7 +27,7 @@
 \section{Composite constitutive matrix formulation}
 The formulation of orthotropic laminate composite is developed further by recalling the key results presented in chapter \ref{chap:chapter_2_1} and approaching from a programming perspective.
 
-The general laminate shell stress resultants are related to the generalized mid-plane strains via the total combined constitutive matrix $\bar{\mathbf{C}}$ as follows:
+The general laminate shell stress resultants are related to the generalised mid-plane strains via the total combined constitutive matrix $\bar{\mathbf{C}}$ as follows:
 
 \begin{equation} 
 \bar{\mathbf{N}} = \bar{\mathbf{C}} \bar{\boldsymbol{\epsilon}} =
@@ -83,9 +83,9 @@ D_{ij} =
 \label{eqscomp_laminate_form2}\ .
 \end{equation}
 
-The entries $\bar{Q}_{ij}^{(k)}$ are rotated lamina stiffness's as per equation \ref{eqscomp_plane_stress_tensor_rotated}, related to the pure lamina-aligned stiffness's through the transformation matrix $\mathbf{T}$ of equation \ref{eqscomp11}.
+The entries $\bar{Q}_{ij}^{(k)}$ are rotated lamina stiffnesses as per equation (\ref{eqscomp_plane_stress_tensor_rotated}), related to the pure lamina-aligned stiffnesses through the transformation matrix $\mathbf{T}$ of equation (\ref{eqscomp11}).
 
-By shifting perspective from abstract formulation to a more programmable approach, the total combined constitutive matrix $\bar{\mathbf{C}}$ of a laminate with $n$ laminae and total thickness $h$ can be decomposed into lamina contributions. Furthermore, the rotation of the lamina stiffness's can be postponed until each lamina constitutive matrix is assembled:
+By shifting perspective from abstract formulation to a more programmable approach, the total combined constitutive matrix $\bar{\mathbf{C}}$ of a laminate with $n$ laminae and total thickness $h$ can be decomposed into lamina contributions. Furthermore, the rotation of the lamina stiffnesses can be postponed until each lamina constitutive matrix is assembled:
 
 \begin{equation} 
  \bar{\mathbf{C}} = \sum_{k=1}^{n}  \mathbf{T}^{T(k)} {\mathbf{C}}^{(k)}  \mathbf{T}^{(k)}
@@ -112,10 +112,10 @@ D_{ij}^{(k)} =
 \label{eqscomp_laminate_form4}\ .
 \end{equation} 
 
-The above formulation details concern themselves with determining the stiffness matrix of a composite laminate shell. Recovery of lamina stresses also departs from the isotropic formulation, however, the details presented in \ref{Laminate strain and stress recovery} need little further development to be programmable, and are not reproduced here.
+The above formulation details concern themselves with determining the stiffness matrix of a composite laminate shell. Recovery of lamina stresses also departs from the isotropic formulation, however, the details presented in section \ref{Laminate strain and stress recovery} need little further development to be programmable, and are not reproduced here.
 
 \section{Composite constitutive matrix implementation}
-The general approach of extending both shell elements to composite laminate materials in a sensible and efficient manner is to abstract the composite specifics from the individual element formulation level as much as possible. This approach reduces duplicate coding and provides a centralized platform to develop and modify the composite capabilities of the elements in the future. Almost all of the composite laminate implementation is achieved by modifying the existing \texttt{ShellCrossSection} class, common to all Kratos structural shell elements, and adding a new constitutive law class \texttt{LinearElasticOrthotropic2DLaw}. Naturally, access to the new functionality required minor modifications to the code of each shell element. With a view to illustrate the relationship between the individual elements and the \texttt{ShellCrossSection} and \texttt{LinearElasticOrthotropic2DLaw} classes, a generalized workflow of both elements is outlined in the following flowchart, highlighting only methods relevant to composites:
+The general approach of extending both shell elements to composite laminate materials in a sensible and efficient manner is to abstract the composite specifics from the individual element formulation level as much as possible. This approach reduces duplicate coding and provides a centralised platform to develop and modify the composite capabilities of the elements in the future. Almost all of the composite laminate implementation is achieved by modifying the existing \texttt{ShellCrossSection} class, common to all Kratos structural shell elements, and adding a new constitutive law class \texttt{LinearElasticOrthotropic2DLaw}. Naturally, access to the new functionality required minor modifications to the code of each shell element. With a view to illustrate the relationship between the individual elements and the \texttt{ShellCrossSection} and \texttt{LinearElasticOrthotropic2DLaw} classes, a generalised workflow of both elements is outlined in the following flowchart, highlighting only methods relevant to composites:
 
 \begin{figure}[H]
 	% Define block styles
@@ -147,15 +147,15 @@ The key differences in the workflow presented above, compared to those previousl
 
 $\texttt{Initialize()}$ is called upon element creation, completely separate from \linebreak$\texttt{CalculateLocalSystem()}$, and is responsible for reading in element material properties. Upon reading material data specified with the Kratos variable $\texttt{SHELL\_ORTHOTROPIC\_LAYERS}$, an instance of $\texttt{LinearElasticOrthotropic2DLaw}$ is created and assigned to the \linebreak$\texttt{ShellCrossSection}$, followed by a call to the $\texttt{ShellCrossSection}$ method \linebreak$\texttt{ShellCrossSection::ParseOrthotropicPropertyMatrix()}$ is called which parses and stores the orthotropic material data for all laminae. The checking and parsing of \linebreak$\texttt{SHELL\_ORTHOTROPIC\_LAYERS}$ material data is performed entirely within the \linebreak $\texttt{ShellCrossSection}$ class, which facilitates non-invasive integration into shell elements and also provides centralization for further composite development should the need arise.
 
-Following the call of $\texttt{Initialize()}$, $\texttt{CalculateLocalSystem()}$ is called to compute the element-specific stiffness matrix. The ANDES-DKQ and DSG specifics of \linebreak $\texttt{CalculateLocalSystem()}$ and it's subsequent calls are detailed in their respective chapters, the focus here are specifics relating to composite laminates. Logically, the call of $\texttt{CalculateSectionResponse()}$ is relevant, itself calling the $\texttt{ShellCrossSection}$ function \linebreak$\texttt{ShellCrossSection::CalculateSectionResponse()}$.
+Following the call of $\texttt{Initialize()}$, $\texttt{CalculateLocalSystem()}$ is called to compute the element-specific stiffness matrix. The ANDES-DKQ and DSG specifics of \linebreak $\texttt{CalculateLocalSystem()}$ and its subsequent calls are detailed in their respective chapters, the focus here are specifics relating to composite laminates. Logically, the call of $\texttt{CalculateSectionResponse()}$ is relevant, itself calling the $\texttt{ShellCrossSection}$ function \linebreak$\texttt{ShellCrossSection::CalculateSectionResponse()}$.
 
 The $\texttt{ShellCrossSection}$ method $\texttt{ShellCrossSection::CalculateSectionResponse()}$ \linebreak serves to calculate the total laminate constitutive matrix $\bar{\mathbf{C}}$ by 'stacking' the results of each lamina together. A loop is established over all laminae $k$, with each iteration retrieving the raw laminae stiffnesses $\mathbf{Q}^{(k)}$, integrating and assembling them into a lamina constitutive matrix $\mathbf{C}^{(k)}$ and then transforming them according to the stacking sequence of the lamina in the laminate. At the end of this method, the total laminate constitutive matrix $\bar{\mathbf{C}}$ is assembled and suitable for use in element-specific methods to determine the stiffness matrix. 
 
-A summary of the above flowchart and commentary is presented in the generalized composite shell element stiffness matrix pseudocode below:
+A summary of the above flowchart and commentary is presented in the generalised composite shell element stiffness matrix pseudocode below:
 
 \begin{algorithm}
 	\onehalfspacing
-	\caption{Generalized composite shell element stiffness matrix pseudocode}\label{general composite shell pseudocode}
+	\caption{Generalised composite shell element stiffness matrix pseudocode}\label{general composite shell pseudocode}
 	\begin{algorithmic}[1]
 		\Require Orthotropic laminate material data specified
 		\State \textbf{call} $\texttt{Initialize()}$
@@ -175,26 +175,26 @@ A summary of the above flowchart and commentary is presented in the generalized 
 		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent} \hspace{\algorithmicindent} \hspace{\algorithmicindent}\textbf{end if}
 		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent} \hspace{\algorithmicindent} \hspace{\algorithmicindent}Add lamina $\bar{\mathbf{C}}^{(k)}$ to laminate $\bar{\mathbf{C}}$
 		\State \hspace{\algorithmicindent} \hspace{\algorithmicindent} \hspace{\algorithmicindent} \textbf{end while}
-		\State \hspace{\algorithmicindent}Assemble element-specific stiffness matrix and finalize calculations
+		\State \hspace{\algorithmicindent}Assemble element-specific stiffness matrix and finalise calculations
 	\end{algorithmic}
 \end{algorithm}
 
 \section{Composite stress recovery}
 \label{composite stress recovery}
-The extension of both shell elements to compute composites naturally entails additional functionality to calculate composite stresses. As described in section \ref{Laminate strain and stress recovery}, the laminate stresses and strains require the generalized shell mid-plane strains be determined (refer to the stress and strain recovery sections of each element for details). With the mid-surface strains available, the new element method $\texttt{CalculateLaminaStrains()}$, implemented in both elements, calculates and assembles the in-plane strains (as per equation \ref{eqscomp_strain_recovery2}) for the top and bottom surface of each lamina into a vector of vectors. It should be noted that a constant transverse shear strain is assumed across the laminate thickness, as per equation \ref{eqscomp_strain_recovery3}. Stresses of the top and bottom surfaces of each lamina are determined in the new element method $\texttt{CalculateLaminaStresses()}$ from the rotated raw lamina stiffnesses and the lamina strains according to equation \ref{eqscomp_stress_recovery1}. Similar to the isotropic stress recovery implemented, the lamina stresses can be output either locally or globally oriented.
+The extension of both shell elements to compute composites naturally entails additional functionality to calculate composite stresses. As described in section \ref{Laminate strain and stress recovery}, the laminate stresses and strains require the generalised shell mid-plane strains be determined (refer to the stress and strain recovery sections of each element for details). With the mid-surface strains available, the new element method $\texttt{CalculateLaminaStrains()}$, implemented in both elements, calculates and assembles the in-plane strains (as per equation (\ref{eqscomp_strain_recovery2})) for the top and bottom surface of each lamina into a vector of vectors. It should be noted that a constant transverse shear strain is assumed across the laminate thickness, as per equation (\ref{eqscomp_strain_recovery3}). Stresses of the top and bottom surfaces of each lamina are determined in the new element method $\texttt{CalculateLaminaStresses()}$ from the rotated raw lamina stiffnesses and the lamina strains according to equation (\ref{eqscomp_stress_recovery1}). Similar to the isotropic stress recovery implemented, the lamina stresses can be output either locally or globally oriented.
 
 The following pseudocode provides an overview of recovering stresses from the shell elements.
 
 \begin{algorithm}
 	\onehalfspacing
-	\caption{Generalized composite shell element stress and strain recovery}
+	\caption{Generalised composite shell element stress and strain recovery}
 	\label{general composite shell stress pseudocode}
 	\begin{algorithmic}[1]
 		\Require $requestedQuantity = laminateStresses$, calculation of nodal displacements
-		\State Perform all preliminary operations necessary to determine mid-plane $generalizedStrains$
+		\State Perform all preliminary operations necessary to determine mid-plane $generalisedStrains$
 		\While{Gauss loop}
 		\State Calculate $B$ matrix at current $gaussPoint$
-		\State $generalizedStrains$ = product$(B,\ localDisplacements)$
+		\State $generalisedStrains$ = product$(B,\ localDisplacements)$
 		\State \textbf{call} $\texttt{CalculateLaminaStrains}(data)$
 		\State \hspace{\algorithmicindent}Determine $laminateStrains$ at top and bottom surface of each lamina 
 		\State \textbf{call} $\texttt{CalculateLaminaStresses}(data)$
@@ -216,13 +216,13 @@ The following pseudocode provides an overview of recovering stresses from the sh
 \end{algorithm}
 
 \section{Tsai-Wu failure criterion}
-The Tsai-Wu failure criterion described in section \ref{tsai wu background} is also implemented for both shell elements. Extending functionality to include the Tsai-Wu failure criterion requires that the lamina material strengths outlined in \ref{eqscomp_tsai2} be specified in the Kratos input file. Correspondingly, the $\texttt{ShellCrossSection}$ parsing method \linebreak$\texttt{ShellCrossSection::ParseOrthotropicPropertyMatrix()}$ has been modified to discern and properly parse the inclusion of material strengths. The actual calculation of the Tsai-Wu reserve factor can be seen as an extension of calculating the lamina stresses and subsequently interacting with the aforementioned lamina material strengths. After calculation of the lamina stresses, as per the previous section \ref{composite stress recovery}, the stresses of each lamina are rotated to that lamina's natural orientation with the transformation matrix described in equation \ref{eqscomp_stress_recovery2}. A loop over all laminate laminae is established in which each iteration determines the minimum Tsai-Wu reserve factor (refer equation \ref{eqscomp_stress_recovery3}) of the $k^{th}$ lamina, considering top and bottom surfaces, with the method $\texttt{CalculateTsaiWuPlaneStress()}$. The final output is the minimum Tsai-Wu reserve factor across all the whole laminate.
+The Tsai-Wu failure criterion described in section \ref{tsai wu background} is also implemented for both shell elements. Extending functionality to include the Tsai-Wu failure criterion requires that the lamina material strengths outlined in section \ref{eqscomp_tsai2} be specified in the Kratos input file. Correspondingly, the $\texttt{ShellCrossSection}$ parsing method $\texttt{ShellCrossSection::}$- \linebreak$\texttt{ParseOrthotropicPropertyMatrix()}$ has been modified to discern and properly parse the inclusion of material strengths. The actual calculation of the Tsai-Wu reserve factor can be seen as an extension of calculating the lamina stresses and subsequently interacting with the aforementioned lamina material strengths. After calculation of the lamina stresses, as per the previous section \ref{composite stress recovery}, the stresses of each lamina are rotated to that lamina's natural orientation with the transformation matrix described in equation (\ref{eqscomp_stress_recovery2}). A loop over all laminate laminae is established in which each iteration determines the minimum Tsai-Wu reserve factor (refer equation (\ref{eqscomp_stress_recovery3})) of the $k^{th}$ lamina, considering top and bottom surfaces, with the method $\texttt{CalculateTsaiWuPlaneStress()}$. The final output is the minimum Tsai-Wu reserve factor across all the whole laminate.
 
 The following pseudocode provides an overview of determining the Tsai-Wu reserve factor of the shell elements.
 
 \begin{algorithm}
 	\onehalfspacing
-	\caption{Generalized composite shell element Tsai-Wu reserve factor calculation}
+	\caption{Generalised composite shell element Tsai-Wu reserve factor calculation}
 	\label{general composite shell tsai pseudocode}
 	\begin{algorithmic}[1]
 		\Require $requestedQuantity = tsaiWuReserveFactor$, calculation of nodal displacements
@@ -241,4 +241,4 @@ The following pseudocode provides an overview of determining the Tsai-Wu reserve
 \end{algorithm}
 
 \section{Chapter summary}
-The extension from elements limited to isotropic materials to orthotropic laminates has been detailed by briefly recalling the relevant composite theory and outlining it's implementation in Kratos. After covering the composite constitutive matrix formulation and implementation, composite stress recovery across the laminate was presented. The Tsai-Wu failure criterion implementation finalized the extension of elements limited to isotropic materials to orthotropic composite laminates.
+The extension from elements limited to isotropic materials to orthotropic laminates has been detailed by briefly recalling the relevant composite theory and outlining its implementation in Kratos. After covering the composite constitutive matrix formulation and implementation, composite stress recovery across the laminate was presented. The Tsai-Wu failure criterion implementation finalised the extension of elements limited to isotropic materials to orthotropic composite laminates.

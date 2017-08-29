@@ -38,7 +38,7 @@
 \BOOKMARK [1][-]{section.7.3}{Composite stress recovery}{chapter.7}% 38
 \BOOKMARK [1][-]{section.7.4}{Tsai-Wu failure criterion}{chapter.7}% 39
 \BOOKMARK [1][-]{section.7.5}{Chapter summary}{chapter.7}% 40
-\BOOKMARK [0][-]{chapter.8}{Validation of elements}{}% 41
+\BOOKMARK [0][-]{chapter.8}{Validation of the elements}{}% 41
 \BOOKMARK [1][-]{section.8.1}{Linear static tests: shell obstacle course}{chapter.8}% 42
 \BOOKMARK [1][-]{section.8.2}{Geometrically non-linear static tests}{chapter.8}% 43
 \BOOKMARK [1][-]{section.8.3}{Geometrically linear and non-linear dynamic tests}{chapter.8}% 44
@@ -56,12 +56,12 @@
 \BOOKMARK [1][-]{section.10.4}{Chapter summary}{chapter.10}% 56
 \BOOKMARK [0][-]{chapter.11}{Conclusions and outlook}{}% 57
 \BOOKMARK [1][-]{section.11.1}{Future opportunities}{chapter.11}% 58
-\BOOKMARK [1][-]{section.11.2}{Concluding remark}{chapter.11}% 59
+\BOOKMARK [1][-]{section.11.2}{Concluding remarks}{chapter.11}% 59
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix Analytical stability analysis of Mises truss}{}% 60
 \BOOKMARK [0][-]{Appendix.a.B}{Appendix DSG technology derivation}{}% 61
 \BOOKMARK [0][-]{Appendix.a.C}{Appendix Basic-DKQ formulation}{}% 62
 \BOOKMARK [0][-]{Appendix.a.D}{Appendix Basic-T3 formulation}{}% 63
-\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical membrane analysis of dome}{}% 64
+\BOOKMARK [0][-]{Appendix.a.E}{Appendix Analytical membrane analysis of a dome}{}% 64
 \BOOKMARK [0][-]{Appendix.a.F}{Appendix Derivation of Euler buckling load}{}% 65
 \BOOKMARK [0][-]{Appendix.a.G}{Appendix DSG element class in Kratos}{}% 66
 \BOOKMARK [1][-]{section.a.G.1}{ShellThickElement3D3N methods}{Appendix.a.G}% 67

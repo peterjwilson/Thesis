@@ -10,14 +10,14 @@
 \label{sec:Basic-T3 quadrilateral formulation}
 \renewcommand{\Thema}{Basic-T3 quadrilateral formulation}
 
-Introduced in section \ref{section:shell obstacle course}, the Basic-T3 quadrilateral element corresponds to a basic constant strain triangle element without any DSG enhancements. It shares the same membrane and bending strain displacement matrices as the DSG triangle element (refer equations \ref{eqt6} and \ref{eqt8}), but has a different transverse shear make-up and no correction of the material matrix (as per equation \ref{eqt14}). 
+Introduced in section \ref{section:shell obstacle course}, the Basic-T3 quadrilateral element corresponds to a basic constant strain triangle element without any DSG enhancements. It shares the same membrane and bending strain displacement matrices as the DSG triangle element (refer equations (\ref{eqt6}) and (\ref{eqt8})), but has a different transverse shear make-up and no correction of the material matrix (as per equation (\ref{eqt14})). 
 
 The transverse shear stiffness of the Basic-T3 formulation is purely displacement based and employs the standard linear triangle shape functions as per the DSG element, repeated here:
 \begin{gather} 
 \begin{aligned}
 &N_1 (x , y) = \frac{1}{2 A} \big[ (x_2 y_3 - x_3 y_2) + x(y_2 - y_3) + y(x_3 - x_2) \big]\ ,
 \\
-&N_2 (x , y) = \frac{1}{2 A} \big[ (x_3 y_1 - x_1 y_3) + x(y_3 - y_1) + y(x_1 - x_3) \big]\  and
+&N_2 (x , y) = \frac{1}{2 A} \big[ (x_3 y_1 - x_1 y_3) + x(y_3 - y_1) + y(x_1 - x_3) \big]\  \text{and}
 \\
 &N_3 (x , y) = \frac{1}{2 A} \big[ (x_1 y_2 - x_2 y_1) + x(y_1 - y_2) + y(x_2 - x_1) \big]
 \label{eqApp2_1}\ .
