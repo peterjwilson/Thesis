@@ -17,12 +17,3 @@ Things to study:
 	
 Report:
 
-	
-	- (Up next)
-	- Stresses on the bottom surface of compsites should be positive under bending!?!?!?!
-	- 
-	- (Soon)
-	- 3 param background - figure out why Gotta figure out lamda - G = lamda (eq 2.8)
-
-
-
