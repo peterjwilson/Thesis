@@ -602,7 +602,7 @@ Equation (\ref{equationMEM}) is repeated, describing the assembly of the ANDES m
 \label{equationMEM_1}\ .
 \end{equation}
 
-The basic strain displacement matrix $\mathbf{L}$ that ensures a constant stress field is presented in equation \ref{equation07}.
+The basic strain displacement matrix $\mathbf{L}$ that ensures a constant stress field is presented in equation (\ref{equation07}).
 
 The higher order strain displacement matrix $\mathbf{B}_d$ enforces the element enhancements, which are the expression of higher order bending and torsional fields via higher order DOFs. These higher order DOFs are related back to the visible DOFs via the transformed filter matrix $\mathbf{H}_K$ described in equation (\ref{equation11_3}).
 
@@ -1081,7 +1081,7 @@ w_i
 
 \section{Stress and strain recovery}
 
-The stresses and strains of the ANDES-DKT linear quadrilateral element are recovered in a similar way to the DSG triangle, with the added complication of the multiple Gauss points.
+The stresses and strains of the ANDES-DKQ linear quadrilateral element are recovered in a similar way to the DSG triangle, with the added complication of the multiple Gauss points.
 
 The non-zero local strains ($\epsilon_{zz},\ \epsilon_{xz},\ \epsilon_{yz} = 0$) of the 4 node 3 parameter element can be arranged in a vector form:
 \begin{equation} 
@@ -1104,7 +1104,7 @@ The nodal strain vector is recovered from the displacement field by applying the
 \label{eqqrec2}\ .
 \end{equation}
 
-As per the DSG triangle, the strains and stresses are calculated at the Gauss points of the element, with the ANDES-DKT element having four Gauss points ($j = 1,\ 2,\ 3,\ 4$). Thus, the strain vector at each Gauss point $j$ is recovered from the discrete nodal displacements $\hat{\mathbf{u}}_i$ as follows:
+As per the DSG triangle, the strains and stresses are calculated at the Gauss points of the element, with the ANDES-DKQ element having four Gauss points ($j = 1,\ 2,\ 3,\ 4$). Thus, the strain vector at each Gauss point $j$ is recovered from the discrete nodal displacements $\hat{\mathbf{u}}_i$ as follows:
 
 \begin{equation} 
 \boldsymbol{\epsilon}_{GP_j} = \mathbf{B}(\xi_j,\ \eta_j) \sum_{i=1}^{4\ nodes} N_i(\xi_j,\ \eta_j) \hat{\mathbf{u}}_i

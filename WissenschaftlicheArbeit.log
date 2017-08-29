@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  29 AUG 2017 08:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.12)  29 AUG 2017 09:28
 entering extended mode
 **./WissenschaftlicheArbeit.tex
 (WissenschaftlicheArbeit.tex
@@ -5933,11 +5933,11 @@ Package logreq Info: Writing requests to 'WissenschaftlicheArbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56741 strings out of 493333
- 1220177 string characters out of 3139194
+ 56739 strings out of 493333
+ 1220157 string characters out of 3139194
  1866033 words of memory out of 3000000
  57756 multiletter control sequences out of 15000+200000
- 149290 words of font info for 317 fonts, out of 3000000 for 9000
+ 149207 words of font info for 316 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  69i,23n,108p,8958b,2113s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -5963,7 +5963,7 @@ X 2.9/fonts/type1/public/txfonts/txsyc.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helve
 tic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pf
 b>
-Output written on WissenschaftlicheArbeit.pdf (194 pages, 20563025 bytes).
+Output written on WissenschaftlicheArbeit.pdf (194 pages, 20571961 bytes).
 PDF statistics:
  6158 PDF objects out of 6186 (max. 8388607)
  915 named destinations out of 1000 (max. 500000)

@@ -20,7 +20,7 @@
 
 \renewcommand{\Thema}{Composite shells}
 
-\lettrine[lines=2]{A}{s} is the case with shell structures, anisotropic structures are widely encountered throughout the natural and man-made environment. Truly isotropic materials are but a subset of naturally occurring structures, with the phenotypical material often being anisotropic due to varying environmental pressure in different directions. Intuitively, inspecting the ongoing genetic optimization of constructions forming the natural environment suggests that the best mechanical behaviour for a structure subject to spatially non-uniform requirements will be non-uniform itself. This same philosophy has recently began to dominate the cutting edge of man-made engineering structures where specialised high-performance is demanded, often in the midst of contradictory objectives, leading to greater adoption of composite materials. The increasing proportion of composite materials in the aerospace industry is but one example of their increasing traction.
+\lettrine[lines=2]{A}{s} is the case with shell structures, anisotropic structures are widely encountered throughout the natural and man-made environment. Truly isotropic materials are but a subset of naturally occurring structures, with the phenotypical material often being anisotropic due to varying environmental pressure in different directions. Intuitively, inspecting the ongoing genetic optimisation of constructions forming the natural environment suggests that the best mechanical behaviour for a structure subject to spatially non-uniform requirements will be non-uniform itself. This same philosophy has recently began to dominate the cutting edge of man-made engineering structures where specialised high-performance is demanded, often in the midst of contradictory objectives, leading to greater adoption of composite materials. The increasing proportion of composite materials in the aerospace industry is but one example of their increasing traction.
 
 \begin{figure}[H]
 	\centering
@@ -773,7 +773,7 @@ s^2 & c^2 & -sc & 0 & 0 \\
 
 \subsection{Laminate stress recovery}
 
-With the laminate strains across the thickness described, the stresses can be recovered by simply applying the considered lamina constitutive law as per equation \ref{eqscomp_plane_stress_tensor_rotated}. Naturally, the material coefficients $Q_{ij}$ should correspond to the $k^{th}$ lamina considered at the height of inspection $z$:
+With the laminate strains across the thickness described, the stresses can be recovered by simply applying the considered lamina constitutive law as per equation (\ref{eqscomp_plane_stress_tensor_rotated}). Naturally, the material coefficients $Q_{ij}$ should correspond to the $k^{th}$ lamina considered at the height of inspection $z$:
 
 \begin{equation} 
 {\begin{pmatrix}
@@ -894,9 +894,9 @@ By considering the tensile $(X_T,\ Y_T,\ Z_T)$ and compressive $(X_C,\ Y_C,\ Z_C
 	\end{aligned}
 \end{gather}
 
-The strength parameter $F_{12}$ is termed the in-plane interaction factor and is generally difficult to determine experimentally. Thus, it is often approximated from other more readily available strengths, as per equation \ref{eqscomp_tsai2} or set to zero entirely. Further information regarding $F_{12}$ can be found in Reference \cite{tsai12}. In the scope of this work $F_{12}$ is determined as per equation \ref{eqscomp_tsai2}.
+The strength parameter $F_{12}$ is termed the in-plane interaction factor and is generally difficult to determine experimentally. Thus, it is often approximated from other more readily available strengths, as per equation (\ref{eqscomp_tsai2}) or set to zero entirely. Further information regarding $F_{12}$ can be found in reference \cite{tsai12}. In the scope of this work $F_{12}$ is determined as per equation (\ref{eqscomp_tsai2}).
 
-Although equation \ref{eqscomp_tsai1} describes the Tsai-Wu criterion, it does so in terms of a Failure Index (FI): that is, if the calculated FI is greater than 1.0, failure occurs. Contrasting this, engineers are often interested in safety factors, or more specifically, the ratio with which to increase loads to just achieve failure. This parameter is commonly referred to as either the Reserve Factor (RF) or Strength Ratio (SR), with values less than 1.0 indicating failure while those above 1.0 correspond to safety. The Tsai-Wu RF can be determined as follows \cite{kolios2012evaluation}:
+Although equation (\ref{eqscomp_tsai1}) describes the Tsai-Wu criterion, it does so in terms of a Failure Index (FI): that is, if the calculated FI is greater than 1.0, failure occurs. Contrasting this, engineers are often interested in safety factors, or more specifically, the ratio with which to increase loads to just achieve failure. This parameter is commonly referred to as either the Reserve Factor (RF) or Strength Ratio (SR), with values less than 1.0 indicating failure while those above 1.0 correspond to safety. The Tsai-Wu RF can be determined as follows \cite{kolios2012evaluation}:
 
 \begin{equation} 
 RF = \frac{-b + \sqrt{b^2 + 4a}}{2a}

@@ -128,11 +128,11 @@ The ANDES-DKQ and DSG elements both perform well in the final statics test, as p
 \newpage
 \section{Geometrically non-linear static tests}
 
-Large rotations and displacements mark the departure from geometrically linear to non-linear analyses. By employing the already implemented EICR CE formulation as described in section \ref{EICR overview}, both shell elements can be extended from linear geometry limitations to handle large displacements, provided deformational strains remain small. The performance of the elements in geometrically non-linear problems are considered with two benchmarks.
+Large rotations and displacements mark the departure from geometrically linear to non-linear analyses. By employing the already implemented EICR CE formulation as described in section \ref{EICR overview}, both shell elements can be extended from linear geometry limitations to handle large displacements, provided deformational strains remain small. The performance of the elements in geometrically non-linear problems are considered with two validation tests.
 
 \subsection{Hinged cylindrical roof}
 \label{validation:hinged cyl roof}
-The first geometrically non-linear benchmark is the snap-through of a hinged cylindrical roof under a central point load $P_{max} = 3000$ \cite{Sze2004}. As per the diagram below, the roof geometry is defined with the parameters: $L = 254,\ R = 2540,\ \theta=0.1\ rad$ and $h = 12.7$. The material is defined with a Young's modulus $E = 3102.75$ and Poisson's ratio of $\nu = 0.3$.
+The first geometrically non-linear validation test is the snap-through of a hinged cylindrical roof under a central point load $P_{max} = 3000$ \cite{Sze2004}. As per the diagram below, the roof geometry is defined with the parameters: $L = 254,\ R = 2540,\ \theta=0.1\ rad$ and $h = 12.7$. The material is defined with a Young's modulus $E = 3102.75$ and Poisson's ratio of $\nu = 0.3$.
 
  
 \begin{figure}[H]
@@ -154,7 +154,7 @@ The load displacement curve plots the equilibrium path for the ANDES-DKQ and DSG
 \newpage
 \subsection{Open cylinder pull-out}
 
-The second geometrically non-linear benchmark is the pull-out of an open cylinder with a load $P_{max} = 40\ 000$. The geometry of the cylinder is $L= 10.35,\ R = 4.953$ and $h = 0.094$ while the linear elastic material is characterised by $E = 10.5\times10^6$ and $\nu = 0.3125$. The measured displacement is the vertical deformation $u_z$ at the point of load application.
+The second geometrically non-linear validation test is the pull-out of an open cylinder with a load $P_{max} = 40\ 000$. The geometry of the cylinder is $L= 10.35,\ R = 4.953$ and $h = 0.094$ while the linear elastic material is characterised by $E = 10.5\times10^6$ and $\nu = 0.3125$. The measured displacement is the vertical deformation $u_z$ at the point of load application.
 
  
 \begin{figure}[H]
@@ -178,7 +178,7 @@ Dynamic problems introduce inertial effects into the array of phenomena analysed
 
 \subsection{Non-linear dynamic shell pendulum}
 \label{validation:shell pendulum}
-The first dynamic benchmark is a simple shell pendulum allowed to freely rotate along one hinged edge. The initial horizontal configuration of the $1m\times1m\times0.1m$ thick square plate is subject to gravity $g = 9.8\ m/s^2$ acting in the vertical $Z$ direction. The material of the plate is described by $E = 1\times 10^9 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as drawn below.
+The first dynamic validation test is a simple shell pendulum allowed to freely rotate along one hinged edge. The initial horizontal configuration of the $1m\times1m\times0.1m$ thick square plate is subject to gravity $g = 9.8\ m/s^2$ acting in the vertical $Z$ direction. The material of the plate is described by $E = 1\times 10^9 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as drawn below.
 
 \begin{figure}[H]
 	\centering
@@ -203,7 +203,7 @@ The plot of displacement over time demonstrates the ability of both elements to 
 
 \subsection{Linear dynamic oscillating clamped plate}
 
-The oscillating clamped plate benchmark subjects a clamped cantilever square plate $2m\times2m\times0.1m$ thick to a uniform globally oriented surface pressure of $P_z = -0.25 Pa$. The plate material is linear elastic characterised by $E = 1\times 10^6 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as illustrated below.
+The oscillating clamped plate validation test subjects a clamped cantilever square plate $2m\times2m\times0.1m$ thick to a uniform globally oriented surface pressure of $P_z = -0.25 Pa$. The plate material is linear elastic characterised by $E = 1\times 10^6 Pa,\ \nu = 0.0$ and $\rho = 7850 kg/m^3$. The key result is the vertical displacement component of the free corner node as illustrated below.
 
 \begin{figure}[H]
 	\centering
@@ -535,7 +535,7 @@ The four figures above, illustrating various stresses and Tsai-Wu reserve factor
 \subsection{Composite stress recovery: Navier supported laminate under sinusoidal load}
 The second composite stress recovery test considers the bending dominated scenario of a Navier supported square laminate subject to a sinusoidal load \cite{reddy2004mechanics}. As per the isotropic stress recovery testing, separate tests were carried out for the two elements: the ANDES-DKQ composite test is based off of section \ref{validation:navier plate under sinusoidal load} and the DSG from section \ref{validation:DSG navier unifom}. Both analyses have a transverse sinusoidally distributed transverse pressure defined as $q = -100 sin(\frac{x\pi}{200})sin(\frac{y\pi}{200})$ and consider a $h = 10$ thick [0/90/90/0] laminate with individual lamina properties as per those defined in \ref{validation:composite barrel vault}.
 
-The reference solutions are taken from Reference \cite{reddy2004mechanics}, with the ANDES-DKQ element compared to a classical plate theory solution and the DSG element compared to a Navier plate closed form solution. As per the reference solutions, results for different quantities are sampled at different positions in the square plate. Referring to figure \ref{validation:pic navier plate} (repeated below for clarity), the stress and strains are recovered throughout the thickness of the laminate at the following positions:
+The reference solutions are taken from reference \cite{reddy2004mechanics}, with the ANDES-DKQ element compared to a classical plate theory solution and the DSG element compared to a Navier plate closed form solution. As per the reference solutions, results for different quantities are sampled at different positions in the square plate. Referring to figure \ref{validation:pic navier plate} (repeated below for clarity), the stress and strains are recovered throughout the thickness of the laminate at the following positions:
 \begin{align*} 
 \sigma_{xx} = \sigma_{xx}(\frac{a}{2},\ \frac{b}{2},\ z)
 \hspace{10mm}
@@ -661,7 +661,7 @@ The following set of graphs compare the DSG element results with those of the re
 
 The results of the ANDES-DKQ and DSG elements demonstrate the excellent composite stress recovery accuracy across all stresses considered. It also highlights the ability to resolve discontinuous stress distributions from smooth linear strains by considering properly rotated individual lamina material properties. As expected, the in-plane shear stresses (Stress\_XY) are smoothly linear because the in-plane shear modulus is invariant under planar rotation. The transverse shear stresses of the DSG are slightly less accurate than other stresses recovered, which is likely due to a combination of mild node-numbering dependency (as per the transverse shear stresses of section \ref{validation:DSG navier unifom}) and rounding having a pronounced effect on the comparatively low order-of-magnitude values.
 
-In addition to the stresses and strains considered, the Tsai-Wu reserve factor was also calculated in the centre of the plate $(\frac{a}{2},\ \frac{b}{2},\ z)$ and compared against Tsai-Wu results from a Strand7 analysis of the problem. It must be noted that the Strand7 analysis software approximates the Tsai-Wu in-plane interaction coefficient $F_{12}$ (refer section \ref{tsai wu background}) as zero. Thus, to enable a proper comparison, results marked with an asterisk '*' have $F_{12} = 0$, while those without calculate $F_{12}$ as per equation \ref{eqscomp_tsai2}.
+In addition to the stresses and strains considered, the Tsai-Wu reserve factor was also calculated in the centre of the plate $(\frac{a}{2},\ \frac{b}{2},\ z)$ and compared against Tsai-Wu results from a Strand7 analysis of the problem. It must be noted that the Strand7 analysis software approximates the Tsai-Wu in-plane interaction coefficient $F_{12}$ (refer section \ref{tsai wu background}) as zero. Thus, to enable a proper comparison, results marked with an asterisk '*' have $F_{12} = 0$, while those without calculate $F_{12}$ as per equation (\ref{eqscomp_tsai2}).
 
 \begin{figure}[H]
 	%\centering
